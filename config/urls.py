@@ -34,3 +34,7 @@ urlpatterns = [
     path('progress/', learning_views.progress, name='progress'),
     path('tutor/', learning_views.tutor, name='tutor'),
 ]
+
+from django.conf import settings
+if settings.SOCIAL_AUTH_ENABLED:
+    urlpatterns += [path("social/", include("config.social_urls"))]

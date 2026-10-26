@@ -63,7 +63,7 @@ def register(request):
         with transaction.atomic():
             user = form.save()
             LearnerProfile.objects.create(user=user)
-        login(request, user)
+        login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         messages.success(request, 'Tài khoản đã sẵn sàng. Hãy bắt đầu với mục tiêu học của bạn.')
         return redirect('learning_goal')
     return render(request, 'registration/register.html', {'form': form})

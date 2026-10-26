@@ -234,3 +234,28 @@ AI_TUTOR_GLOBAL_MINUTE_LIMIT = int(os.environ.get('AI_TUTOR_GLOBAL_MINUTE_LIMIT'
 # separately at deployment and must not capture learner prompts or credentials.
 from .observability import observation_logging_config  # noqa: E402
 LOGGING = observation_logging_config()
+
+# Explicit rollout flag: configure provider applications before enabling OAuth.
+SOCIAL_AUTH_ENABLED = env_bool('SOCIAL_AUTH_ENABLED', False)
+SOCIALACCOUNT_PROVIDERS = {}
+for _provider, _prefix in [('google', 'GOOGLE'), ('facebook', 'FACEBOOK')]:
+    _client_id = os.environ.get(_prefix + '_CLIENT_ID', '').strip()
+    _secret = os.environ.get(_prefix + '_CLIENT_SECRET', '').strip()
+    if _client_id and _secret:
+        SOCIALACCOUNT_PROVIDERS[_provider] = {'APP': {'client_id': _client_id, 'secret': _secret}}
+if SOCIAL_AUTH_ENABLED:
+    INSTALLED_APPS += ['allauth', 'allauth.account', 'allauth.socialaccount',
+        'allauth.socialaccount.providers.google', 'allauth.socialaccount.providers.facebook']
+    MIDDLEWARE += ['allauth.account.middleware.AccountMiddleware']
+    AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend',
+        'allauth.account.auth_backends.AuthenticationBackend']
+    SOCIALACCOUNT_LOGIN_ON_GET = False
+    SOCIALACCOUNT_EMAIL_AUTHENTICATION = False
+    SOCIALACCOUNT_EMAIL_AUTHENTICATION_AUTO_CONNECT = False
+    SOCIALACCOUNT_STORE_TOKENS = False
+    SOCIALACCOUNT_AUTO_SIGNUP = True
+    ACCOUNT_EMAIL_VERIFICATION = 'none'
+    SOCIALACCOUNT_ADAPTER = 'config.social_auth.SocialAdapter'
+    ACCOUNT_LOGIN_METHODS = {'username'}
+    ACCOUNT_SIGNUP_FIELDS = ['username*', 'email', 'password1*', 'password2*']
+TEMPLATES[0]['OPTIONS']['context_processors'].append('config.social_auth.provider_buttons')

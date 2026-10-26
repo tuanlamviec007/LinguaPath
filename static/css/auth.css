@@ -27,3 +27,11 @@
 .auth-story>small {display:block;font-size:12px;color:#6b7d6d;line-height:1.8;max-width:400px;}
 @media(max-width:800px) {.auth-layout {grid-template-columns:1fr;gap:24px;max-width:500px;margin:12px auto 30px;}.auth-story {padding:0;}.auth-story h2 {font-size:30px;margin:13px 0;}.auth-story>p {font-size:14px;max-width:none;}.auth-story-card,.auth-story-steps,.auth-story>small,.auth-story>a {display:none;}.auth-layout .auth-card {padding:28px;}}
 @media(max-width:400px) {.auth-layout .auth-card {padding:24px 20px;}.auth-layout .auth-card h1 {font-size:28px;}}
+.social-login {display:grid;gap:10px;margin:0 0 20px;}
+.social-login form {margin:0;}
+.social-login-button {display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:47px;padding:11px;border:1px solid #8393b1;border-radius:11px;background:#fff;color:#3f567f;font:650 14px Inter,"Segoe UI",sans-serif;cursor:pointer;}
+.social-login-button>span {font-size:19px;font-weight:800;color:#4162d9;}
+.social-login-button:hover:not(:disabled) {background:#f0f5ff;border-color:#4162d9;}
+.social-login-button:disabled {cursor:not-allowed;background:#f7f9ff;color:#66748d;}
+.social-login p {margin:0;font-size:11px;line-height:1.7;color:#62718a;}
+.social-login-divider {font-size:11px;text-align:center;color:#63718a;margin:5px 0;}

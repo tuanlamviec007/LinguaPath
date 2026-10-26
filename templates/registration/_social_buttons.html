@@ -1,0 +1,6 @@
+<div class="social-login" aria-label="Đăng nhập bằng tài khoản khác">
+  {% if google_login_ready %}<form method="post" action="/social/google/login/">{% csrf_token %}<button class="social-login-button" type="submit"><span aria-hidden="true">G</span>Tiếp tục với Google</button></form>{% else %}<button class="social-login-button" type="button" disabled aria-describedby="social-setup-note"><span aria-hidden="true">G</span>Google · Chưa kích hoạt</button>{% endif %}
+  {% if facebook_login_ready %}<form method="post" action="/social/facebook/login/">{% csrf_token %}<button class="social-login-button social-facebook" type="submit"><span aria-hidden="true">f</span>Tiếp tục với Facebook</button></form>{% else %}<button class="social-login-button social-facebook" type="button" disabled aria-describedby="social-setup-note"><span aria-hidden="true">f</span>Facebook · Chưa kích hoạt</button>{% endif %}
+  {% if not google_login_ready or not facebook_login_ready %}<p id="social-setup-note">Đăng nhập mạng xã hội đang chờ cấu hình. Bạn vẫn có thể dùng tài khoản LinguaPath bên dưới.</p>{% endif %}
+  <div class="social-login-divider">hoặc dùng tài khoản LinguaPath</div>
+</div>
