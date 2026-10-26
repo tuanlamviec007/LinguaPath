@@ -1,0 +1,24 @@
+{% extends 'admin/base_site.html' %}
+{% load static %}
+{% block extrahead %}{{ block.super }}<link rel="stylesheet" href="{% static 'css/content-review.css' %}">{% endblock %}
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">Trang quản trị</a> › <a href="{% url 'admin:learning_learningcontent_review_workspace' %}">Chuẩn bị duyệt pilot</a> › Đối chiếu phiếu</div>{% endblock %}
+{% block content %}
+<div class="review-workspace">
+  <div class="review-intro"><span class="review-eyebrow">KIỂM TRA TRƯỚC KHI TIẾP TỤC</span><h2>Phiếu đã điền còn khớp nguồn?</h2><p>Đối chiếu đề, đáp án, lời giải và mã phiên bản với kho hiện tại. Kết quả chỉ cho biết tính nhất quán dữ liệu và mức điền nhận xét; không xác thực danh tính, chuyên môn hoặc thay quyết định phê duyệt.</p></div>
+  <section class="review-panel" aria-labelledby="review-upload-title"><h2 id="review-upload-title">Chọn phiếu đã lưu</h2>
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+      {% if form.errors %}<div class="review-errors" role="alert">{{ form.non_field_errors }}{{ form.packet.errors }}</div>{% endif %}
+      <p><label for="{{ form.packet.id_for_label }}">{{ form.packet.label }}</label><br>{{ form.packet }}<br><small id="review-upload-help">{{ form.packet.help_text }}</small></p>
+      <p class="review-note">Phiếu chỉ được đọc để đối chiếu trong yêu cầu này; không nhập nhận xét vào database. Nếu cần chọn lại file sau khi xem kết quả, hãy chọn đúng bản bạn vừa tải xuống.</p>
+      <div class="review-export"><button type="submit" name="action" value="check">Kiểm tra phiếu</button><button type="submit" name="action" value="reopen">Kiểm tra và mở để điền tiếp</button><button type="submit" name="action" value="report">Tải báo cáo đối chiếu · JSON</button></div>
+    </form>
+  </section>
+  {% if report %}<section class="review-panel" aria-labelledby="review-result-title"><h2 id="review-result-title">Kết quả đối chiếu</h2>
+    {% if report.status == 'current' %}<p><strong>Khớp nguồn hiện tại.</strong> Có thể mở phiếu để tiếp tục điền. Học liệu vẫn cần được giữ ổn định và đối chiếu lại trước quyết định duyệt.</p>{% elif report.status == 'stale' %}<p role="alert"><strong>Nguồn hoặc phiên bản đã thay đổi.</strong> Hãy xuất phiếu mới và rà lại phần liên quan; phiếu này chưa thể mở để điền tiếp trên nguồn hiện tại.</p>{% else %}<p role="alert"><strong>Phiếu chưa hợp lệ.</strong> Kiểm tra danh sách bên dưới hoặc xuất phiếu mới. Không sử dụng kết quả này để duyệt học liệu.</p>{% endif %}
+    <div class="review-stats"><article><strong>{{ report.summary.items_total|default:0 }}</strong><span>mục trong mẫu</span></article><article><strong>{{ report.summary.items_complete|default:0 }}</strong><span>mục đã đủ trường nhận xét</span></article><article><strong>{{ report.summary.items_pending|default:0 }}</strong><span>mục còn thiếu nhận xét</span></article><article><strong>{{ report.summary.conclusions.needs_changes|default:0 }}</strong><span>mục có kết luận cần sửa</span></article></div>
+    <p>Mức điền biểu mẫu không chứng minh chất lượng chuyên môn. Mẫu cũng không chứng nhận các mục chưa được lấy mẫu trong cùng bộ học liệu.</p>
+    {% if report.problems %}<div class="review-table-wrap" role="region" aria-label="Vấn đề trong phiếu" tabindex="0"><table><thead><tr><th scope="col">Vị trí</th><th scope="col">Ghi nhận</th></tr></thead><tbody>{% for problem in report.problems %}<tr><th scope="row">{{ problem.path }}</th><td>{{ problem.display_message }}</td></tr>{% endfor %}</tbody></table></div>{% endif %}
+    {% if report.problems_truncated %}<p>Danh sách vấn đề đã được giới hạn. Sửa các mục được ghi nhận rồi đối chiếu lại để xem phần còn lại.</p>{% endif %}
+  </section>{% endif %}
+</div>
+{% endblock %}

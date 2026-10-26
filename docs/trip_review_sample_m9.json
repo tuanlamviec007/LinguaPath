@@ -1,0 +1,2800 @@
+{
+  "schema_version": "linguapath-content-review-v2",
+  "scope": "sample_for_human_review",
+  "approval_allowed": false,
+  "authority_notice": "Phiếu mẫu để người có chuyên môn rà soát; không phê duyệt hoặc xác nhận toàn bộ bộ học liệu.",
+  "selection": {
+    "content_ids": [
+      3,
+      45
+    ],
+    "max_items_per_kind_per_content": 20,
+    "order": "content ID; held cards first then order and ID; questions by order and ID; options by label and ID"
+  },
+  "checklist_template": {
+    "sense_and_context": {
+      "result": null,
+      "notes": ""
+    },
+    "answer_key": {
+      "result": null,
+      "notes": ""
+    },
+    "distractors_and_explanations": {
+      "result": null,
+      "notes": ""
+    },
+    "cefr_reference": {
+      "result": null,
+      "notes": ""
+    },
+    "source_and_rights": {
+      "result": null,
+      "notes": ""
+    },
+    "audio_and_accessibility": {
+      "result": null,
+      "notes": ""
+    }
+  },
+  "human_review": {
+    "reviewer_name": "",
+    "qualifications": "",
+    "reviewed_at": null,
+    "conclusion": null,
+    "notes": ""
+  },
+  "contents": [
+    {
+      "content": {
+        "cefr_level": "",
+        "content_type": "vocabulary",
+        "description": "1000 thẻ A1–C1: 152 thẻ nền tảng tự biên soạn và 848 mục mở rộng AI hỗ trợ soạn thảo. Nghĩa, ví dụ và mức CEFR cần giảng viên rà soát; đây không phải danh sách Cambridge hoặc bộ đề thi chuẩn.",
+        "difficulty": 1,
+        "estimated_minutes": 16,
+        "exam_type": "TOEIC",
+        "id": 3,
+        "is_published": true,
+        "question_type": "",
+        "review_status": "language_checked",
+        "reviewed_at": "2026-10-19T14:07:13.625692+00:00",
+        "reviewer": "AI language QA (chưa được giáo viên duyệt)",
+        "rights_note": "Bộ gồm 152 thẻ tự biên soạn và 848 mục AI hỗ trợ soạn thảo; nghĩa, ví dụ và mức CEFR cần giảng viên rà soát trước khi dùng làm học liệu chính thức. Không sao chép Cambridge/ETS.",
+        "skill": "vocabulary",
+        "source_checked_on": null,
+        "source_name": "Tự biên soạn; mức từ đối chiếu sơ bộ với English Vocabulary Profile",
+        "source_url": "https://englishprofile.org/?menu=english-vocabulary-profile",
+        "title": "Ngân hàng từ vựng A1–C1: Học tập và đời sống",
+        "topic": "Everyday English"
+      },
+      "flashcards": [
+        {
+          "id": 778,
+          "content_id": 3,
+          "order": 609,
+          "term": "trip",
+          "cefr_level": "B1",
+          "topic": "Travel",
+          "part_of_speech": "noun",
+          "meaning_vi": "chuyến đi",
+          "example_en": "We took a short trip to the coast last weekend.",
+          "example_vi": "Cuối tuần trước, chúng tôi đã có chuyến đi ngắn đến bờ biển.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "AI hỗ trợ soạn thảo; cần giảng viên rà soát",
+          "source_url": "",
+          "rights_note": "Nội dung gốc, không sao chép Cambridge/ETS; CEFR tạm thời, cần rà soát ngôn ngữ.",
+          "is_available": false,
+          "availability_note": "Đã sửa lỗi lệch cột CSV của trip; tạm giữ riêng thẻ để người có chuyên môn rà lại trước khi sử dụng.",
+          "version_hash": "00839a90093906b7ea12311cd4c498d935d69fa5e50b3de4fc83bfa004d893f9",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 16,
+          "content_id": 3,
+          "order": 1,
+          "term": "address",
+          "cefr_level": "A1",
+          "topic": "Personal information",
+          "part_of_speech": "noun",
+          "meaning_vi": "địa chỉ",
+          "example_en": "What is your new address?",
+          "example_vi": "Địa chỉ mới của bạn là gì?",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "edfbcea838043eed748442759d8ab534fe299662f8c7c4e1cc400271f7a1c806",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 17,
+          "content_id": 3,
+          "order": 2,
+          "term": "afternoon",
+          "cefr_level": "A1",
+          "topic": "Time",
+          "part_of_speech": "noun",
+          "meaning_vi": "buổi chiều",
+          "example_en": "The library is open in the afternoon.",
+          "example_vi": "Thư viện mở cửa vào buổi chiều.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "9cb1c2e751757fbe754ff916e54b039001ce815700d1c48e557aad724268f927",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 18,
+          "content_id": 3,
+          "order": 3,
+          "term": "answer",
+          "cefr_level": "A1",
+          "topic": "Study",
+          "part_of_speech": "noun",
+          "meaning_vi": "câu trả lời",
+          "example_en": "Please write your answer here.",
+          "example_vi": "Vui lòng viết câu trả lời ở đây.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "fdde64eaaa93ae8e84037e5ec244f9857fe53a50b169d108de200111a451a9ad",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 19,
+          "content_id": 3,
+          "order": 4,
+          "term": "arrive",
+          "cefr_level": "A1",
+          "topic": "Travel",
+          "part_of_speech": "verb",
+          "meaning_vi": "đến nơi",
+          "example_en": "The bus arrives at eight.",
+          "example_vi": "Xe buýt đến lúc tám giờ.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "f26225ba08ee51aa8046842e08648dab6e7f1a17b9a08f84f7ef88b369f0d927",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 20,
+          "content_id": 3,
+          "order": 5,
+          "term": "breakfast",
+          "cefr_level": "A1",
+          "topic": "Food",
+          "part_of_speech": "noun",
+          "meaning_vi": "bữa sáng",
+          "example_en": "I have breakfast before class.",
+          "example_vi": "Tôi ăn sáng trước giờ học.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "f995b5c84e708e24425595110125026be924d381b7898239c19f4a15403f41e9",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 21,
+          "content_id": 3,
+          "order": 6,
+          "term": "building",
+          "cefr_level": "A1",
+          "topic": "Places",
+          "part_of_speech": "noun",
+          "meaning_vi": "tòa nhà",
+          "example_en": "The computer lab is in this building.",
+          "example_vi": "Phòng máy tính ở trong tòa nhà này.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "59142a5661ed54d90b29ea825a12f938a844eb973ea3e3b32b29d2d91220e73f",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 22,
+          "content_id": 3,
+          "order": 7,
+          "term": "busy",
+          "cefr_level": "A1",
+          "topic": "People",
+          "part_of_speech": "adjective",
+          "meaning_vi": "bận rộn",
+          "example_en": "My teacher is busy this morning.",
+          "example_vi": "Giáo viên của tôi bận sáng nay.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "9eb6813382db7078808ee95213530991a541ece5f21220f44520948890b9272d",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 23,
+          "content_id": 3,
+          "order": 8,
+          "term": "careful",
+          "cefr_level": "A1",
+          "topic": "Daily life",
+          "part_of_speech": "adjective",
+          "meaning_vi": "cẩn thận",
+          "example_en": "Be careful with the hot tea.",
+          "example_vi": "Hãy cẩn thận với trà nóng.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "ae8e569c72201eb303b5498eaa1e812c8ef1550ebeff56574950965af469d666",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 24,
+          "content_id": 3,
+          "order": 9,
+          "term": "classmate",
+          "cefr_level": "A1",
+          "topic": "Study",
+          "part_of_speech": "noun",
+          "meaning_vi": "bạn cùng lớp",
+          "example_en": "My classmate helped me with the exercise.",
+          "example_vi": "Bạn cùng lớp đã giúp tôi làm bài tập.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "fd42c8ab2643792f7d2a1638b69dc8305220ae735b260a664b1b06421b151cd8",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 25,
+          "content_id": 3,
+          "order": 10,
+          "term": "close",
+          "cefr_level": "A1",
+          "topic": "Daily life",
+          "part_of_speech": "verb",
+          "meaning_vi": "đóng cửa",
+          "example_en": "The shop closes at six.",
+          "example_vi": "Cửa hàng đóng cửa lúc sáu giờ.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "f4ed89c8174c4987bebb3061b8a5b9dc935c6de4c10c0e0b7f5eb3f13642d180",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 26,
+          "content_id": 3,
+          "order": 11,
+          "term": "comfortable",
+          "cefr_level": "A1",
+          "topic": "Shopping",
+          "part_of_speech": "adjective",
+          "meaning_vi": "thoải mái",
+          "example_en": "These shoes are comfortable for walking.",
+          "example_vi": "Đôi giày này thoải mái để đi bộ.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "16135c70e62a477cbe4fe8939926d35dbbbe4b96ebaaf47dce75e488db5d48e7",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 27,
+          "content_id": 3,
+          "order": 12,
+          "term": "delicious",
+          "cefr_level": "A1",
+          "topic": "Food",
+          "part_of_speech": "adjective",
+          "meaning_vi": "ngon",
+          "example_en": "The soup is delicious.",
+          "example_vi": "Món súp rất ngon.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "1594fc6cdea13087813d609b4ddeedeaf1dcc91922646879391c7d8da8f1cac3",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 28,
+          "content_id": 3,
+          "order": 13,
+          "term": "early",
+          "cefr_level": "A1",
+          "topic": "Time",
+          "part_of_speech": "adverb",
+          "meaning_vi": "sớm",
+          "example_en": "We arrived early for the exam.",
+          "example_vi": "Chúng tôi đến sớm để dự thi.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "aaa313cbe80016c5c5693c838ddefd480b4349f867acb7c74abc546e6e063da2",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 29,
+          "content_id": 3,
+          "order": 14,
+          "term": "email",
+          "cefr_level": "A1",
+          "topic": "Communication",
+          "part_of_speech": "verb",
+          "meaning_vi": "gửi email",
+          "example_en": "I will email you the notes.",
+          "example_vi": "Tôi sẽ gửi ghi chú cho bạn qua email.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "57756e57f298bcca1b949cf5e1acb853b01d8e0fadfde0426765f599e1612618",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 30,
+          "content_id": 3,
+          "order": 15,
+          "term": "exercise",
+          "cefr_level": "A1",
+          "topic": "Study",
+          "part_of_speech": "noun",
+          "meaning_vi": "bài tập học tập",
+          "example_en": "Complete exercise three at home.",
+          "example_vi": "Hãy hoàn thành bài tập số ba ở nhà.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "eb2abed5861df407917e747c7a049b9faf1c30448395678a954a86877e18cda5",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 31,
+          "content_id": 3,
+          "order": 16,
+          "term": "family",
+          "cefr_level": "A1",
+          "topic": "People",
+          "part_of_speech": "noun",
+          "meaning_vi": "gia đình",
+          "example_en": "Her family lives in Thai Nguyen.",
+          "example_vi": "Gia đình cô ấy sống ở Thái Nguyên.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "d7eb547a3a5d9cdc022f786032d1a8067a8f1fe71c3fe6f5ee276d67e7effed2",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 32,
+          "content_id": 3,
+          "order": 17,
+          "term": "free",
+          "cefr_level": "A1",
+          "topic": "Time",
+          "part_of_speech": "adjective",
+          "meaning_vi": "rảnh",
+          "example_en": "Are you free after class?",
+          "example_vi": "Bạn có rảnh sau giờ học không?",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "1d5afd52ddf58204d2d011d3871e6473ce79b1ebe016c1560a05a6fd5dbb9d3e",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 33,
+          "content_id": 3,
+          "order": 18,
+          "term": "help",
+          "cefr_level": "A1",
+          "topic": "Communication",
+          "part_of_speech": "verb",
+          "meaning_vi": "giúp đỡ",
+          "example_en": "Could you help me find the room?",
+          "example_vi": "Bạn có thể giúp tôi tìm phòng không?",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "d27d1e7d458b3a6ccea83eb0d6c4d3b99a6202867165196b3c89ad4a68868e27",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 34,
+          "content_id": 3,
+          "order": 19,
+          "term": "homework",
+          "cefr_level": "A1",
+          "topic": "Study",
+          "part_of_speech": "noun",
+          "meaning_vi": "bài tập về nhà",
+          "example_en": "I finished my English homework.",
+          "example_vi": "Tôi đã làm xong bài tập tiếng Anh.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "Tự biên soạn",
+          "source_url": "",
+          "rights_note": "Từ, nghĩa tiếng Việt và câu ví dụ do nhóm đồ án tự biên soạn; không sao chép danh sách Cambridge.",
+          "is_available": true,
+          "availability_note": "",
+          "version_hash": "66bc2958c27defbe67c12638b60823bd977b500c2ac0b2c5a3cc2f77cd759f50",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        }
+      ],
+      "questions": [],
+      "coverage": {
+        "flashcards": {
+          "total": 1000,
+          "exported": 20,
+          "complete": false
+        },
+        "questions": {
+          "total": 0,
+          "exported": 0,
+          "complete": true
+        }
+      },
+      "content_hash": "01730b7932467b406e1d6585dbabae54fe379018ed9b04368594beeeb741833d",
+      "structural_findings": [
+        {
+          "kind": "flashcard",
+          "object_id": 778,
+          "code": "temporarily_held",
+          "message": "Thẻ đang tạm giữ, chưa được đưa vào phiên học mới."
+        }
+      ],
+      "findings_scope": "Structural checks of exported samples only; no linguistic or professional approval."
+    },
+    {
+      "content": {
+        "cefr_level": "B1",
+        "content_type": "vocabulary",
+        "description": "20 câu ôn nghĩa từ vựng B1, được tạo từ các flashcard cùng mức.",
+        "difficulty": 2,
+        "estimated_minutes": 7,
+        "exam_type": "TOEIC",
+        "id": 45,
+        "is_published": false,
+        "question_type": "",
+        "review_status": "draft",
+        "reviewed_at": null,
+        "reviewer": "",
+        "rights_note": "Câu hỏi và phương án được tạo từ nghĩa tiếng Việt tự biên soạn trong bộ flashcard; CEFR chỉ là nhãn tham khảo.",
+        "skill": "vocabulary",
+        "source_checked_on": null,
+        "source_name": "Tự biên soạn từ bộ flashcard starter",
+        "source_url": "",
+        "title": "Vocabulary B1: Chọn nghĩa đúng · Bộ 11",
+        "topic": "Vocabulary practice"
+      },
+      "flashcards": [],
+      "questions": [
+        {
+          "id": 693,
+          "content_id": 45,
+          "order": 1,
+          "prompt": "“hostel” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "hostel: nhà nghỉ tập thể. Ví dụ: We asked the travel agent about the hostel before the trip.",
+          "explanation_vi": "hostel nghĩa là “nhà nghỉ tập thể”. Ví dụ: We asked the travel agent about the hostel before the trip. — Chúng tôi đã hỏi đại lý du lịch về nhà nghỉ tập thể trước chuyến đi.",
+          "options": [
+            {
+              "id": 2769,
+              "question_id": 693,
+              "label": "A",
+              "text": "nhà nghỉ tập thể",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2770,
+              "question_id": 693,
+              "label": "B",
+              "text": "lần đăng nhập",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2771,
+              "question_id": 693,
+              "label": "C",
+              "text": "mạng máy tính",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2772,
+              "question_id": 693,
+              "label": "D",
+              "text": "ngành du lịch",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "be6faccaa5fe6b0fd6841d6bf3300fb1d462a4b291ae5682472f9da64ef7d592",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 694,
+          "content_id": 45,
+          "order": 2,
+          "prompt": "“landmark” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "landmark: địa danh nổi bật. Ví dụ: We asked the travel agent about the landmark before the trip.",
+          "explanation_vi": "landmark nghĩa là “địa danh nổi bật”. Ví dụ: We asked the travel agent about the landmark before the trip. — Chúng tôi đã hỏi đại lý du lịch về địa danh nổi bật trước chuyến đi.",
+          "options": [
+            {
+              "id": 2773,
+              "question_id": 694,
+              "label": "A",
+              "text": "tiêu đề chính",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2774,
+              "question_id": 694,
+              "label": "B",
+              "text": "địa danh nổi bật",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2775,
+              "question_id": 694,
+              "label": "C",
+              "text": "sự thăng bằng",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2776,
+              "question_id": 694,
+              "label": "D",
+              "text": "sự thăng chức",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "15cb389793e0b6b97df646532e4f6c72e85ac1cc97d05498677913c2a2aebd3f",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 695,
+          "content_id": 45,
+          "order": 3,
+          "prompt": "“luggage” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "luggage: hành lý. Ví dụ: We asked the travel agent about the luggage before the trip.",
+          "explanation_vi": "luggage nghĩa là “hành lý”. Ví dụ: We asked the travel agent about the luggage before the trip. — Chúng tôi đã hỏi đại lý du lịch về hành lý trước chuyến đi.",
+          "options": [
+            {
+              "id": 2777,
+              "question_id": 695,
+              "label": "A",
+              "text": "tờ giới thiệu",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2778,
+              "question_id": 695,
+              "label": "B",
+              "text": "việc đánh giá",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2779,
+              "question_id": 695,
+              "label": "C",
+              "text": "hành lý",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2780,
+              "question_id": 695,
+              "label": "D",
+              "text": "tàu điện ngầm",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "26e18c7f235d6c66ebac8a1ba1c6d70156c25a4cbdbebe2c6360371330996e1c",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 696,
+          "content_id": 45,
+          "order": 4,
+          "prompt": "“map” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "map: bản đồ. Ví dụ: We asked the travel agent about the map before the trip.",
+          "explanation_vi": "map nghĩa là “bản đồ”. Ví dụ: We asked the travel agent about the map before the trip. — Chúng tôi đã hỏi đại lý du lịch về bản đồ trước chuyến đi.",
+          "options": [
+            {
+              "id": 2781,
+              "question_id": 696,
+              "label": "A",
+              "text": "bộ nhớ lưu trữ",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2782,
+              "question_id": 696,
+              "label": "B",
+              "text": "cuộc thảo luận",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2783,
+              "question_id": 696,
+              "label": "C",
+              "text": "cơ sở vật chất",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2784,
+              "question_id": 696,
+              "label": "D",
+              "text": "bản đồ",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            }
+          ],
+          "version_hash": "bb73012f15e23543eb7c94aa0a69126543553973e3d46fc14305f93c092e2da2",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 697,
+          "content_id": 45,
+          "order": 5,
+          "prompt": "“passenger” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "passenger: hành khách. Ví dụ: Each passenger must show a ticket before boarding.",
+          "explanation_vi": "passenger nghĩa là “hành khách”. Ví dụ: Each passenger must show a ticket before boarding. — Mỗi hành khách phải xuất trình vé trước khi lên tàu.",
+          "options": [
+            {
+              "id": 2785,
+              "question_id": 697,
+              "label": "A",
+              "text": "hành khách",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2786,
+              "question_id": 697,
+              "label": "B",
+              "text": "dữ liệu đầu ra",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2787,
+              "question_id": 697,
+              "label": "C",
+              "text": "hàng người chờ",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2788,
+              "question_id": 697,
+              "label": "D",
+              "text": "hướng dẫn viên",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "1bd922eb0b2d1ea2e442f80018833bb2380cd07d7b64635c8002eb65b68140f4",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 698,
+          "content_id": 45,
+          "order": 6,
+          "prompt": "“passport” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "passport: hộ chiếu. Ví dụ: We asked the travel agent about the passport before the trip.",
+          "explanation_vi": "passport nghĩa là “hộ chiếu”. Ví dụ: We asked the travel agent about the passport before the trip. — Chúng tôi đã hỏi đại lý du lịch về hộ chiếu trước chuyến đi.",
+          "options": [
+            {
+              "id": 2789,
+              "question_id": 698,
+              "label": "A",
+              "text": "lập trình viên",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2790,
+              "question_id": 698,
+              "label": "B",
+              "text": "hộ chiếu",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2791,
+              "question_id": 698,
+              "label": "C",
+              "text": "khoản tín dụng",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2792,
+              "question_id": 698,
+              "label": "D",
+              "text": "lập luận logic",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "2f69b58101de5695d339c00b974cf4c0201968bbca5a4010b64f4d14ae8ae3cb",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 699,
+          "content_id": 45,
+          "order": 7,
+          "prompt": "“railway” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "railway: đường sắt. Ví dụ: We asked the travel agent about the railway before the trip.",
+          "explanation_vi": "railway nghĩa là “đường sắt”. Ví dụ: We asked the travel agent about the railway before the trip. — Chúng tôi đã hỏi đại lý du lịch về đường sắt trước chuyến đi.",
+          "options": [
+            {
+              "id": 2793,
+              "question_id": 699,
+              "label": "A",
+              "text": "người tìm việc",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2794,
+              "question_id": 699,
+              "label": "B",
+              "text": "thời gian biểu",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2795,
+              "question_id": 699,
+              "label": "C",
+              "text": "đường sắt",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2796,
+              "question_id": 699,
+              "label": "D",
+              "text": "người giám sát",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "c2496bdd221c52ef3464900d0cc2122722261a9351a9f6622522fae7f02880b9",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 700,
+          "content_id": 45,
+          "order": 8,
+          "prompt": "“reservation” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "reservation: việc đặt chỗ. Ví dụ: We asked the travel agent about the reservation before the trip.",
+          "explanation_vi": "reservation nghĩa là “việc đặt chỗ”. Ví dụ: We asked the travel agent about the reservation before the trip. — Chúng tôi đã hỏi đại lý du lịch về việc đặt chỗ trước chuyến đi.",
+          "options": [
+            {
+              "id": 2797,
+              "question_id": 700,
+              "label": "A",
+              "text": "xét nghiệm máu",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2798,
+              "question_id": 700,
+              "label": "B",
+              "text": "đường liên kết",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2799,
+              "question_id": 700,
+              "label": "C",
+              "text": "cuộc tranh luận",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2800,
+              "question_id": 700,
+              "label": "D",
+              "text": "việc đặt chỗ",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            }
+          ],
+          "version_hash": "fc8e0208c0175253a38e0e9562276e8d72f6aaf92492bb3b3aa18171d5b15275",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 701,
+          "content_id": 45,
+          "order": 9,
+          "prompt": "“route” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "route: tuyến đường. Ví dụ: We asked the travel agent about the route before the trip.",
+          "explanation_vi": "route nghĩa là “tuyến đường”. Ví dụ: We asked the travel agent about the route before the trip. — Chúng tôi đã hỏi đại lý du lịch về tuyến đường trước chuyến đi.",
+          "options": [
+            {
+              "id": 2801,
+              "question_id": 701,
+              "label": "A",
+              "text": "tuyến đường",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2802,
+              "question_id": 701,
+              "label": "B",
+              "text": "dữ liệu đầu vào",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2803,
+              "question_id": 701,
+              "label": "C",
+              "text": "hãng hàng không",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2804,
+              "question_id": 701,
+              "label": "D",
+              "text": "khoa, phòng ban",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "68237a47da8d9878a71b3d6373e745e4c5111ef56ae0417a15c60feed8009258",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 702,
+          "content_id": 45,
+          "order": 10,
+          "prompt": "“seat” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "seat: chỗ ngồi. Ví dụ: We asked the travel agent about the seat before the trip.",
+          "explanation_vi": "seat nghĩa là “chỗ ngồi”. Ví dụ: We asked the travel agent about the seat before the trip. — Chúng tôi đã hỏi đại lý du lịch về chỗ ngồi trước chuyến đi.",
+          "options": [
+            {
+              "id": 2805,
+              "question_id": 702,
+              "label": "A",
+              "text": "nghề chuyên môn",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2806,
+              "question_id": 702,
+              "label": "B",
+              "text": "chỗ ngồi",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2807,
+              "question_id": 702,
+              "label": "C",
+              "text": "khoản hoàn tiền",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2808,
+              "question_id": 702,
+              "label": "D",
+              "text": "máy tính để bàn",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "636c70afd4f9484bb49ed0719384210c4a39d9014051b25cdb8a0de808f6f43c",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 703,
+          "content_id": 45,
+          "order": 11,
+          "prompt": "“tourism” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "tourism: ngành du lịch. Ví dụ: Tourism provides jobs for many people in the coastal town.",
+          "explanation_vi": "tourism nghĩa là “ngành du lịch”. Ví dụ: Tourism provides jobs for many people in the coastal town. — Ngành du lịch tạo việc làm cho nhiều người ở thị trấn ven biển.",
+          "options": [
+            {
+              "id": 2809,
+              "question_id": 703,
+              "label": "A",
+              "text": "quầy, gian hàng",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2810,
+              "question_id": 703,
+              "label": "B",
+              "text": "thiếu kiên nhẫn",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2811,
+              "question_id": 703,
+              "label": "C",
+              "text": "ngành du lịch",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2812,
+              "question_id": 703,
+              "label": "D",
+              "text": "người tiêu dùng",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "e0d4162e8cc407dbffd1c369620ddaf45929053d4d4298acb30a0dd2d69542fe",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 704,
+          "content_id": 45,
+          "order": 12,
+          "prompt": "“tourist” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "tourist: khách du lịch. Ví dụ: A tourist asked us how to reach the museum.",
+          "explanation_vi": "tourist nghĩa là “khách du lịch”. Ví dụ: A tourist asked us how to reach the museum. — Một khách du lịch hỏi chúng tôi đường đến bảo tàng.",
+          "options": [
+            {
+              "id": 2813,
+              "question_id": 704,
+              "label": "A",
+              "text": "thẻ lên máy bay",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2814,
+              "question_id": 704,
+              "label": "B",
+              "text": "việc tuyển dụng",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2815,
+              "question_id": 704,
+              "label": "C",
+              "text": "ôn tập, xem lại",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2816,
+              "question_id": 704,
+              "label": "D",
+              "text": "khách du lịch",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            }
+          ],
+          "version_hash": "f81aeec5ce53f33dee2ebd87cefcd5397528ef37f3c7478f80543a9ae9f6cd7c",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 705,
+          "content_id": 45,
+          "order": 13,
+          "prompt": "“transport” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "transport: phương tiện giao thông. Ví dụ: We asked the travel agent about the transport before the trip.",
+          "explanation_vi": "transport nghĩa là “phương tiện giao thông”. Ví dụ: We asked the travel agent about the transport before the trip. — Chúng tôi đã hỏi đại lý du lịch về phương tiện giao thông trước chuyến đi.",
+          "options": [
+            {
+              "id": 2817,
+              "question_id": 705,
+              "label": "A",
+              "text": "phương tiện giao thông",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2818,
+              "question_id": 705,
+              "label": "B",
+              "text": "ôn tập, xem lại",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2819,
+              "question_id": 705,
+              "label": "C",
+              "text": "ứng dụng bản đồ",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2820,
+              "question_id": 705,
+              "label": "D",
+              "text": "cam kết bảo hành",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "ee85af26c8f2011e7a34af39cc47ca4904582ef435753e7cbb621a30c999a178",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 706,
+          "content_id": 45,
+          "order": 14,
+          "prompt": "“trip” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "trip: chuyến đi. Ví dụ: We took a short trip to the coast last weekend.",
+          "explanation_vi": "trip nghĩa là “chuyến đi”. Ví dụ: We took a short trip to the coast last weekend. — Cuối tuần trước, chúng tôi đã có chuyến đi ngắn đến bờ biển.",
+          "options": [
+            {
+              "id": 2821,
+              "question_id": 706,
+              "label": "A",
+              "text": "địa danh nổi bật",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2822,
+              "question_id": 706,
+              "label": "B",
+              "text": "chuyến đi",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2823,
+              "question_id": 706,
+              "label": "C",
+              "text": "nhân viên lễ tân",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2824,
+              "question_id": 706,
+              "label": "D",
+              "text": "tài liệu điện tử",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "e1343a776b2a16c7bb78da2aa9fae03f59574af823b36fa379aef612e3bcf3c9",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 707,
+          "content_id": 45,
+          "order": 15,
+          "prompt": "“vacation” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "vacation: kỳ nghỉ. Ví dụ: We asked the travel agent about the vacation before the trip.",
+          "explanation_vi": "vacation nghĩa là “kỳ nghỉ”. Ví dụ: We asked the travel agent about the vacation before the trip. — Chúng tôi đã hỏi đại lý du lịch về kỳ nghỉ trước chuyến đi.",
+          "options": [
+            {
+              "id": 2825,
+              "question_id": 707,
+              "label": "A",
+              "text": "khoang hành khách",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2826,
+              "question_id": 707,
+              "label": "B",
+              "text": "kế hoạch vận động",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2827,
+              "question_id": 707,
+              "label": "C",
+              "text": "kỳ nghỉ",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2828,
+              "question_id": 707,
+              "label": "D",
+              "text": "bảo hành, cam kết",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "bc150c9cc966d43cae639af2563672a92955fafdb05268333adc80a7ac5a609f",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 708,
+          "content_id": 45,
+          "order": 16,
+          "prompt": "“visa” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "visa: thị thực. Ví dụ: We asked the travel agent about the visa before the trip.",
+          "explanation_vi": "visa nghĩa là “thị thực”. Ví dụ: We asked the travel agent about the visa before the trip. — Chúng tôi đã hỏi đại lý du lịch về thị thực trước chuyến đi.",
+          "options": [
+            {
+              "id": 2829,
+              "question_id": 708,
+              "label": "A",
+              "text": "lần khám sức khỏe",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2830,
+              "question_id": 708,
+              "label": "B",
+              "text": "màn hình hiển thị",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2831,
+              "question_id": 708,
+              "label": "C",
+              "text": "quá trình cài đặt",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2832,
+              "question_id": 708,
+              "label": "D",
+              "text": "thị thực",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            }
+          ],
+          "version_hash": "0cdd65e1ad3fd134a44e9a3d7e714d51b69d68a1c895c832630ac1732d3c8dcb",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 709,
+          "content_id": 45,
+          "order": 17,
+          "prompt": "“journey” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "journey: hành trình. Ví dụ: We asked the travel agent about the journey before the trip.",
+          "explanation_vi": "journey nghĩa là “hành trình”. Ví dụ: We asked the travel agent about the journey before the trip. — Chúng tôi đã hỏi đại lý du lịch về hành trình trước chuyến đi.",
+          "options": [
+            {
+              "id": 2833,
+              "question_id": 709,
+              "label": "A",
+              "text": "hành trình",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2834,
+              "question_id": 709,
+              "label": "B",
+              "text": "thiết bị gia dụng",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2835,
+              "question_id": 709,
+              "label": "C",
+              "text": "thủ tục trả phòng",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2836,
+              "question_id": 709,
+              "label": "D",
+              "text": "tạp chí học thuật",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "6bcd4cb25573b625290d5f3fb91b732980a934099344d6dbcab50b4bd387a55f",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 710,
+          "content_id": 45,
+          "order": 18,
+          "prompt": "“check-in” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "check-in: thủ tục nhận phòng hoặc làm thủ tục bay. Ví dụ: We asked the travel agent about the check-in before the trip.",
+          "explanation_vi": "check-in nghĩa là “thủ tục nhận phòng hoặc làm thủ tục bay”. Ví dụ: We asked the travel agent about the check-in before the trip. — Chúng tôi đã hỏi đại lý du lịch về thủ tục nhận phòng hoặc làm thủ tục bay trước chuyến đi.",
+          "options": [
+            {
+              "id": 2837,
+              "question_id": 710,
+              "label": "A",
+              "text": "đám mây điện toán",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2838,
+              "question_id": 710,
+              "label": "B",
+              "text": "thủ tục nhận phòng hoặc làm thủ tục bay",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2839,
+              "question_id": 710,
+              "label": "C",
+              "text": "tạp chí học thuật",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2840,
+              "question_id": 710,
+              "label": "D",
+              "text": "vị trí đang tuyển",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "f293b630a2c90dadaf240fada393c4b81d4c9326d795b3bb7bdcb5aab13c8fa1",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 711,
+          "content_id": 45,
+          "order": 19,
+          "prompt": "“check-out” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "check-out: thủ tục trả phòng. Ví dụ: We asked the travel agent about the check-out before the trip.",
+          "explanation_vi": "check-out nghĩa là “thủ tục trả phòng”. Ví dụ: We asked the travel agent about the check-out before the trip. — Chúng tôi đã hỏi đại lý du lịch về thủ tục trả phòng trước chuyến đi.",
+          "options": [
+            {
+              "id": 2841,
+              "question_id": 711,
+              "label": "A",
+              "text": "dịch vụ khách hàng",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2842,
+              "question_id": 711,
+              "label": "B",
+              "text": "thuộc về học thuật",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2843,
+              "question_id": 711,
+              "label": "C",
+              "text": "thủ tục trả phòng",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            },
+            {
+              "id": 2844,
+              "question_id": 711,
+              "label": "D",
+              "text": "bác sĩ chuyên khoa",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            }
+          ],
+          "version_hash": "558fe46072bfc92306cbcfe2f33fd702d0d4c2c6e19ca71b9fd8a302274ba7ca",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 712,
+          "content_id": 45,
+          "order": 20,
+          "prompt": "“currency” có nghĩa gần nhất là gì?",
+          "passage": "",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "currency: tiền tệ. Ví dụ: We asked the travel agent about the currency before the trip.",
+          "explanation_vi": "currency nghĩa là “tiền tệ”. Ví dụ: We asked the travel agent about the currency before the trip. — Chúng tôi đã hỏi đại lý du lịch về tiền tệ trước chuyến đi.",
+          "options": [
+            {
+              "id": 2845,
+              "question_id": 712,
+              "label": "A",
+              "text": "thuộc về tinh thần",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2846,
+              "question_id": 712,
+              "label": "B",
+              "text": "thông báo hệ thống",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2847,
+              "question_id": 712,
+              "label": "C",
+              "text": "thời gian nhàn rỗi",
+              "is_correct": false,
+              "explanation_vi": "Thử đối chiếu lại mặt sau của flashcard."
+            },
+            {
+              "id": 2848,
+              "question_id": 712,
+              "label": "D",
+              "text": "tiền tệ",
+              "is_correct": true,
+              "explanation_vi": "Đúng, đây là nghĩa của từ cần ôn."
+            }
+          ],
+          "version_hash": "ca2a2aa8fc903f5fe4e589807eb96b6cf2287f11117f420d6b2067aad70a44f2",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        }
+      ],
+      "coverage": {
+        "flashcards": {
+          "total": 0,
+          "exported": 0,
+          "complete": true
+        },
+        "questions": {
+          "total": 20,
+          "exported": 20,
+          "complete": true
+        }
+      },
+      "content_hash": "11fb5ffe59531912b40c5d76db3d5189b28a5f2fe7f1b896f8b6ddbe9e03ea94",
+      "structural_findings": [],
+      "findings_scope": "Structural checks of exported samples only; no linguistic or professional approval."
+    }
+  ],
+  "fingerprint": "61a2c25a2b45655953b1ef48d774dc9f2500ed8f690ec4d08342788a9f5e4180",
+  "generated_at": "2026-10-25T08:37:40.518574+00:00"
+}

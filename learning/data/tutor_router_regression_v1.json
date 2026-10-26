@@ -1,0 +1,22 @@
+{
+  "version": "tutor-router-regression-v1",
+  "provenance": "AI-editorial regression; not independent holdout. Authored against the known router and current TOEIC bank; not human adjudication or model answer-quality evidence.",
+  "cases": [
+    {"id": "despite", "category": "grammar", "query": "Giải thích despite và although", "expected": [{"kind": "knowledge", "knowledge_id": "despite-although"}]},
+    {"id": "responsible", "category": "grammar", "query": "Be responsible for dùng thế nào?", "expected": [{"kind": "knowledge", "knowledge_id": "responsible-for"}]},
+    {"id": "subject-verb", "category": "grammar", "query": "Hòa hợp chủ ngữ và động từ", "expected": [{"kind": "knowledge", "knowledge_id": "subject-verb"}]},
+    {"id": "present-perfect", "category": "grammar", "query": "Giải thích thì hiện tại hoàn thành", "expected": [{"kind": "knowledge", "knowledge_id": "present-perfect"}]},
+    {"id": "passive", "category": "grammar", "query": "Giải thích câu bị động", "expected": [{"kind": "knowledge", "knowledge_id": "passive"}]},
+    {"id": "word-forms", "category": "grammar", "query": "Cách chọn từ loại trong TOEIC", "expected": [{"kind": "knowledge", "knowledge_id": "word-forms"}]},
+    {"id": "listening", "category": "study_strategy", "query": "Cách luyện Listening hiệu quả", "expected": [{"kind": "knowledge", "knowledge_id": "listening-strategy"}]},
+    {"id": "reading", "category": "study_strategy", "query": "Cách luyện Reading hiệu quả", "expected": [{"kind": "knowledge", "knowledge_id": "reading-strategy"}]},
+    {"id": "compare-perfect-passive", "category": "multiple_notes", "query": "So sánh present perfect và passive voice", "expected": [{"kind": "knowledge", "knowledge_id": "present-perfect"}, {"kind": "knowledge", "knowledge_id": "passive"}]},
+    {"id": "both-skills", "category": "multiple_notes", "query": "Cách luyện listening và reading", "expected": [{"kind": "knowledge", "knowledge_id": "listening-strategy"}, {"kind": "knowledge", "knowledge_id": "reading-strategy"}]},
+    {"id": "thermometer", "category": "incidental_skill_word", "query": "Why is the thermometer reading inaccurate?", "expected": []},
+    {"id": "quoted-reading-absent-bank", "category": "lexical_missing", "query": "Define the word “reading”", "expected": [], "note": "The current bank has no reading headword. A separate isolated test adds one and verifies lexical routing."},
+    {"id": "quoted-deadline", "category": "lexical", "query": "Giải thích từ “deadline”", "expected": [{"kind": "flashcard", "term": "deadline"}]},
+    {"id": "quoted-invoice", "category": "lexical", "query": "Define “invoice”", "expected": [{"kind": "flashcard", "term": "invoice"}]},
+    {"id": "off-topic", "category": "no_match", "query": "Why do quasars emit X-rays?", "expected": []},
+    {"id": "unknown-headword", "category": "no_match", "query": "Define “xyzzynonexistenttoken”", "expected": []}
+  ]
+}

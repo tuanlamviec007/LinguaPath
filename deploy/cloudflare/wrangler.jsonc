@@ -1,0 +1,38 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "linguapath",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-20",
+  "workers_dev": true,
+  "ai": {"binding": "AI"},
+  "containers": [{
+    "class_name": "LinguaPathContainer",
+    "image": "../../Dockerfile",
+    "image_build_context": "../..",
+    "instance_type": "basic",
+    "max_instances": 1
+  }],
+  "durable_objects": {
+    "bindings": [
+      { "name": "APP", "class_name": "LinguaPathContainer" },
+      { "name": "AI_BUDGET", "class_name": "TutorAIBudget" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["LinguaPathContainer"] },
+    { "tag": "v2", "new_sqlite_classes": ["TutorAIBudget"] }
+  ],
+  "vars": {
+    "DJANGO_ALLOWED_HOSTS": "linguapath.REPLACE_WITH_YOUR_SUBDOMAIN.workers.dev",
+    "DJANGO_CSRF_TRUSTED_ORIGINS": "https://linguapath.REPLACE_WITH_YOUR_SUBDOMAIN.workers.dev",
+    "DJANGO_SECURE_HSTS_SECONDS": "0",
+    "AI_TUTOR_ENABLED": "false",
+    "CLOUDFLARE_AI_ENDPOINT": "https://linguapath.REPLACE_WITH_YOUR_SUBDOMAIN.workers.dev/internal/tutor/infer",
+    "AI_TUTOR_MODEL": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    "AI_TUTOR_DAILY_LIMIT": "20",
+    "AI_TUTOR_MINUTE_LIMIT": "3",
+    "AI_TUTOR_GLOBAL_DAILY_LIMIT": "200",
+    "AI_TUTOR_GLOBAL_MINUTE_LIMIT": "20"
+  },
+  "observability": { "enabled": false }
+}

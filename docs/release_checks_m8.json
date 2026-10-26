@@ -1,0 +1,121 @@
+{
+  "local": {
+    "version": "linguapath-release-check-v1",
+    "checked_at": "2026-10-25T08:11:21.293904+00:00",
+    "mode": "local",
+    "ready": true,
+    "blocked": [],
+    "checks": [
+      {
+        "id": "production_configuration",
+        "status": "skipped",
+        "message": "Local mode does not assess production settings or infrastructure."
+      },
+      {
+        "id": "database_schema",
+        "status": "pass",
+        "message": "Database connectivity, migrations and required tables are ready."
+      },
+      {
+        "id": "weak_word_projection",
+        "status": "pass",
+        "message": "Submitted quiz history has ready projection metadata and receipts."
+      }
+    ],
+    "release_approval": false,
+    "scope": "Read-only configuration/schema/projection prerequisites only; not evidence of ingress, PostgreSQL concurrency/restore, Docker, professional content approval or complete audit acceptance."
+  },
+  "production": {
+    "version": "linguapath-release-check-v1",
+    "checked_at": "2026-10-25T08:11:22.641580+00:00",
+    "mode": "production",
+    "ready": false,
+    "blocked": [
+      "debug_disabled",
+      "postgresql_backend",
+      "secret_key",
+      "secure_cookies",
+      "https_redirect",
+      "ai_configuration"
+    ],
+    "checks": [
+      {
+        "id": "debug_disabled",
+        "status": "fail",
+        "message": "Production requires DEBUG=false."
+      },
+      {
+        "id": "postgresql_backend",
+        "status": "fail",
+        "message": "Production requires PostgreSQL."
+      },
+      {
+        "id": "secret_key",
+        "status": "fail",
+        "message": "Configure a non-default production secret of at least 50 characters."
+      },
+      {
+        "id": "secure_cookies",
+        "status": "fail",
+        "message": "Session and CSRF cookies must require HTTPS."
+      },
+      {
+        "id": "https_redirect",
+        "status": "fail",
+        "message": "Production requires HTTPS redirects."
+      },
+      {
+        "id": "allowed_hosts",
+        "status": "pass",
+        "message": "Host configuration has explicit valid entries."
+      },
+      {
+        "id": "csrf_origins",
+        "status": "pass",
+        "message": "Trusted CSRF origins are explicit HTTPS origins, or same-origin defaults apply."
+      },
+      {
+        "id": "proxy_ssl_header",
+        "status": "pass",
+        "message": "TLS proxy header configuration matches the supported contract."
+      },
+      {
+        "id": "auth_proxy_configuration",
+        "status": "pass",
+        "message": "Client-IP forwarding is disabled or constrained to explicit trusted peers."
+      },
+      {
+        "id": "ingress_verification",
+        "status": "warning",
+        "message": "Actual ingress peers and forwarded-header behavior require staging verification; configuration is not proof of trust."
+      },
+      {
+        "id": "auth_peer_fallback",
+        "status": "warning",
+        "message": "Authentication quotas currently use the socket peer; verify client separation behind the deployed proxy."
+      },
+      {
+        "id": "hsts",
+        "status": "warning",
+        "message": "HSTS is not enabled; choose the rollout policy before public deployment."
+      },
+      {
+        "id": "ai_configuration",
+        "status": "fail",
+        "message": "Enabled Tutor inference requires valid provider configuration and bounded integer quotas."
+      },
+      {
+        "id": "database_schema",
+        "status": "pass",
+        "message": "Database connectivity, migrations and required tables are ready."
+      },
+      {
+        "id": "weak_word_projection",
+        "status": "pass",
+        "message": "Submitted quiz history has ready projection metadata and receipts."
+      }
+    ],
+    "release_approval": false,
+    "scope": "Read-only configuration/schema/projection prerequisites only; not evidence of ingress, PostgreSQL concurrency/restore, Docker, professional content approval or complete audit acceptance."
+  }
+}

@@ -1,0 +1,1435 @@
+{
+  "version": "linguapath-tutor-evaluation-v1",
+  "generated_at": "2026-10-25T01:43:27.150014+00:00",
+  "exam": "TOEIC",
+  "scope": "Public-context answer-pipeline evaluation. Source identity checks are structural, not semantic quality, sense accuracy, injection resistance or independent human adjudication. The default fixture is a known AI-editorial regression, not an independent holdout.",
+  "public_context_only": true,
+  "fixture": {
+    "version": "tutor-router-regression-v1",
+    "provenance": "AI-editorial regression; not independent holdout. Authored against the known router and current TOEIC bank; not human adjudication or model answer-quality evidence.",
+    "sha256": "8968fc4be9a14da00f06174a73b8626263f89eec6e8164efbcba195f42a82cd4"
+  },
+  "execution": {
+    "mode": "offline",
+    "public_context_only": true,
+    "max_live_calls": 0,
+    "use_ai_requests": 0,
+    "model_attempts_inferred_from_mode": 0,
+    "model_answers": 0,
+    "notice": "Mode-derived counts are not provider usage or cost. Local elapsed time includes retrieval and quota work; offline times are not model inference latency."
+  },
+  "summary": {
+    "cases": 16,
+    "errors": 0,
+    "mode_counts": {
+      "no_match": 4,
+      "retrieval_only": 12
+    },
+    "source_exact_matches": 16,
+    "source_exact_match_rate": 1.0,
+    "expected_sources": 14,
+    "covered_expected_sources": 14,
+    "source_coverage": 1.0,
+    "negative_cases": 4,
+    "negative_abstentions": 4,
+    "negative_abstention_rate": 1.0,
+    "latency_ms": {
+      "all": {
+        "count": 16,
+        "median": 0.699,
+        "p95": 209.738
+      },
+      "model_answers": {
+        "count": 0,
+        "median": null,
+        "p95": null
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "despite",
+      "category": "grammar",
+      "query": "Giải thích despite và although",
+      "expected": [
+        [
+          "knowledge",
+          "despite-although"
+        ]
+      ],
+      "actual": [
+        [
+          "knowledge",
+          "despite-although"
+        ]
+      ],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 1.962,
+      "error": null,
+      "result": {
+        "answer": "Despite / in spite of + danh từ, cụm danh từ hoặc V-ing. Although + mệnh đề có chủ ngữ và động từ.\nVí dụ: Despite the rain, the delivery arrived on time. → Mặc dù trời mưa, đơn hàng vẫn đến đúng giờ.\nAlthough it was raining, the delivery arrived on time. → Mặc dù trời đang mưa, đơn hàng vẫn đến đúng giờ.\nKhông dùng “despite of”. Có thể dùng “despite the fact that + mệnh đề”. Trong văn viết chuẩn, tránh dùng although và but để nối cùng một quan hệ nhượng bộ.\nÁp dụng: ___ the delay, the team finished the report. A. Although B. Despite. Chọn B vì “the delay” là cụm danh từ.",
+        "evidence_sources": [
+          {
+            "href": "/tutor/#knowledge-despite-although",
+            "kind": "knowledge",
+            "label": "Kiến thức TOEIC",
+            "meaning_vi": "",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "despite-although",
+              "review_status": "language_checked",
+              "version": "5dcfaeeee9ae0c66e8ff533dd27b2059576cf0881dae6a61045de55cca70b129"
+            },
+            "title": "Despite và although"
+          }
+        ],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.114856+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "retrieval_only",
+        "sources": [
+          "Despite và although"
+        ]
+      },
+      "evidence_snapshot": {
+        "packed": {
+          "sources": [
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": null,
+                "exam_type": "TOEIC",
+                "kind": "knowledge",
+                "object_id": "despite-although",
+                "review_status": "language_checked",
+                "version": "5dcfaeeee9ae0c66e8ff533dd27b2059576cf0881dae6a61045de55cca70b129"
+              }
+            }
+          ],
+          "sufficient": true,
+          "text": "Legacy source (unstructured):\nDespite / in spite of + danh từ, cụm danh từ hoặc V-ing. Although + mệnh đề có chủ ngữ và động từ.\nVí dụ: Despite the rain, the delivery arrived on time. → Mặc dù trời mưa, đơn hàng vẫn đến đúng giờ.\nAlthough it was raining, the delivery arrived on time. → Mặc dù trời đang mưa, đơn hàng vẫn đến đúng giờ.\nKhông dùng “despite of”. Có thể dùng “despite the fact that + mệnh đề”. Trong văn viết chuẩn, tránh dùng although và but để nối cùng một quan hệ nhượng bộ.\nÁp dụng: ___ the delay, the team finished the report. A. Although B. Despite. Chọn B vì “the delay” là cụm danh từ."
+        },
+        "retrieved": [
+          {
+            "href": "/tutor/#knowledge-despite-although",
+            "kind": "knowledge",
+            "review_status": "language_checked",
+            "source": "Despite và although",
+            "source_id": "despite-although",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "despite-although",
+              "review_status": "language_checked",
+              "version": "5dcfaeeee9ae0c66e8ff533dd27b2059576cf0881dae6a61045de55cca70b129"
+            },
+            "text": "Despite / in spite of + danh từ, cụm danh từ hoặc V-ing. Although + mệnh đề có chủ ngữ và động từ.\nVí dụ: Despite the rain, the delivery arrived on time. → Mặc dù trời mưa, đơn hàng vẫn đến đúng giờ.\nAlthough it was raining, the delivery arrived on time. → Mặc dù trời đang mưa, đơn hàng vẫn đến đúng giờ.\nKhông dùng “despite of”. Có thể dùng “despite the fact that + mệnh đề”. Trong văn viết chuẩn, tránh dùng although và but để nối cùng một quan hệ nhượng bộ.\nÁp dụng: ___ the delay, the team finished the report. A. Although B. Despite. Chọn B vì “the delay” là cụm danh từ."
+          }
+        ],
+        "sha256": "9a675bb16c04b6a484693e27c8abfc075a4ab104ecac2125615a0a3407eda89d"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "responsible",
+      "category": "grammar",
+      "query": "Be responsible for dùng thế nào?",
+      "expected": [
+        [
+          "knowledge",
+          "responsible-for"
+        ]
+      ],
+      "actual": [
+        [
+          "knowledge",
+          "responsible-for"
+        ]
+      ],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 0.29,
+      "error": null,
+      "result": {
+        "answer": "Be responsible for + danh từ / V-ing: chịu trách nhiệm về việc gì.\nThe manager is responsible for hiring new employees. → Người quản lý chịu trách nhiệm tuyển nhân viên mới.\nVới “responsible ___ hiring”, chọn for; “at”, “on”, “with” không tạo cấu trúc phù hợp trong câu này.\nResponsible to + người/cấp quản lý có nghĩa chịu trách nhiệm trước người đó; đây là quan hệ khác với responsible for + nhiệm vụ.",
+        "evidence_sources": [
+          {
+            "href": "/tutor/#knowledge-responsible-for",
+            "kind": "knowledge",
+            "label": "Kiến thức TOEIC",
+            "meaning_vi": "",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "responsible-for",
+              "review_status": "language_checked",
+              "version": "7a2eb9f8987700b63ebdb1f6da591e6b01b0119ed8654661b0516f5837ac062a"
+            },
+            "title": "Be responsible for"
+          }
+        ],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.115182+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "retrieval_only",
+        "sources": [
+          "Be responsible for"
+        ]
+      },
+      "evidence_snapshot": {
+        "packed": {
+          "sources": [
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": null,
+                "exam_type": "TOEIC",
+                "kind": "knowledge",
+                "object_id": "responsible-for",
+                "review_status": "language_checked",
+                "version": "7a2eb9f8987700b63ebdb1f6da591e6b01b0119ed8654661b0516f5837ac062a"
+              }
+            }
+          ],
+          "sufficient": true,
+          "text": "Legacy source (unstructured):\nBe responsible for + danh từ / V-ing: chịu trách nhiệm về việc gì.\nThe manager is responsible for hiring new employees. → Người quản lý chịu trách nhiệm tuyển nhân viên mới.\nVới “responsible ___ hiring”, chọn for; “at”, “on”, “with” không tạo cấu trúc phù hợp trong câu này.\nResponsible to + người/cấp quản lý có nghĩa chịu trách nhiệm trước người đó; đây là quan hệ khác với responsible for + nhiệm vụ."
+        },
+        "retrieved": [
+          {
+            "href": "/tutor/#knowledge-responsible-for",
+            "kind": "knowledge",
+            "review_status": "language_checked",
+            "source": "Be responsible for",
+            "source_id": "responsible-for",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "responsible-for",
+              "review_status": "language_checked",
+              "version": "7a2eb9f8987700b63ebdb1f6da591e6b01b0119ed8654661b0516f5837ac062a"
+            },
+            "text": "Be responsible for + danh từ / V-ing: chịu trách nhiệm về việc gì.\nThe manager is responsible for hiring new employees. → Người quản lý chịu trách nhiệm tuyển nhân viên mới.\nVới “responsible ___ hiring”, chọn for; “at”, “on”, “with” không tạo cấu trúc phù hợp trong câu này.\nResponsible to + người/cấp quản lý có nghĩa chịu trách nhiệm trước người đó; đây là quan hệ khác với responsible for + nhiệm vụ."
+          }
+        ],
+        "sha256": "1dbed0fa1bb97eadda088c174917e85aa8f44b10f84890e6bb816ed90e14501a"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "subject-verb",
+      "category": "grammar",
+      "query": "Hòa hợp chủ ngữ và động từ",
+      "expected": [
+        [
+          "knowledge",
+          "subject-verb"
+        ]
+      ],
+      "actual": [
+        [
+          "knowledge",
+          "subject-verb"
+        ]
+      ],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 0.256,
+      "error": null,
+      "result": {
+        "answer": "Ở hiện tại đơn, chủ ngữ ngôi thứ ba số ít thường đi với động từ thêm -s/-es; chủ ngữ số nhiều dùng dạng cơ bản.\nThe list of available rooms is on the desk. → Danh sách phòng còn trống nằm trên bàn. Chủ ngữ chính là “the list”, không phải “rooms”.\nKhi làm câu điền động từ, xác định cụm chủ ngữ chính trước, sau đó kiểm tra thì và thể. Không chỉ nhìn danh từ đứng gần chỗ trống nhất.",
+        "evidence_sources": [
+          {
+            "href": "/tutor/#knowledge-subject-verb",
+            "kind": "knowledge",
+            "label": "Kiến thức TOEIC",
+            "meaning_vi": "",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "subject-verb",
+              "review_status": "language_checked",
+              "version": "4d8f69b959f09cc007c178b59448af0fb8ac78e3b1a5a6b3e4382b4331b17211"
+            },
+            "title": "Hòa hợp chủ ngữ và động từ"
+          }
+        ],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.115453+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "retrieval_only",
+        "sources": [
+          "Hòa hợp chủ ngữ và động từ"
+        ]
+      },
+      "evidence_snapshot": {
+        "packed": {
+          "sources": [
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": null,
+                "exam_type": "TOEIC",
+                "kind": "knowledge",
+                "object_id": "subject-verb",
+                "review_status": "language_checked",
+                "version": "4d8f69b959f09cc007c178b59448af0fb8ac78e3b1a5a6b3e4382b4331b17211"
+              }
+            }
+          ],
+          "sufficient": true,
+          "text": "Legacy source (unstructured):\nỞ hiện tại đơn, chủ ngữ ngôi thứ ba số ít thường đi với động từ thêm -s/-es; chủ ngữ số nhiều dùng dạng cơ bản.\nThe list of available rooms is on the desk. → Danh sách phòng còn trống nằm trên bàn. Chủ ngữ chính là “the list”, không phải “rooms”.\nKhi làm câu điền động từ, xác định cụm chủ ngữ chính trước, sau đó kiểm tra thì và thể. Không chỉ nhìn danh từ đứng gần chỗ trống nhất."
+        },
+        "retrieved": [
+          {
+            "href": "/tutor/#knowledge-subject-verb",
+            "kind": "knowledge",
+            "review_status": "language_checked",
+            "source": "Hòa hợp chủ ngữ và động từ",
+            "source_id": "subject-verb",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "subject-verb",
+              "review_status": "language_checked",
+              "version": "4d8f69b959f09cc007c178b59448af0fb8ac78e3b1a5a6b3e4382b4331b17211"
+            },
+            "text": "Ở hiện tại đơn, chủ ngữ ngôi thứ ba số ít thường đi với động từ thêm -s/-es; chủ ngữ số nhiều dùng dạng cơ bản.\nThe list of available rooms is on the desk. → Danh sách phòng còn trống nằm trên bàn. Chủ ngữ chính là “the list”, không phải “rooms”.\nKhi làm câu điền động từ, xác định cụm chủ ngữ chính trước, sau đó kiểm tra thì và thể. Không chỉ nhìn danh từ đứng gần chỗ trống nhất."
+          }
+        ],
+        "sha256": "0e900cbdf7f687f02e84795fd4191848034e3e3c6278784e6026025eb940d505"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "present-perfect",
+      "category": "grammar",
+      "query": "Giải thích thì hiện tại hoàn thành",
+      "expected": [
+        [
+          "knowledge",
+          "present-perfect"
+        ]
+      ],
+      "actual": [
+        [
+          "knowledge",
+          "present-perfect"
+        ]
+      ],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 0.188,
+      "error": null,
+      "result": {
+        "answer": "Hiện tại hoàn thành: have/has + quá khứ phân từ, thường diễn tả trải nghiệm, kết quả liên quan hiện tại hoặc trạng thái kéo dài tới hiện tại.\nShe has worked here for three years. → Cô ấy đã làm việc ở đây được ba năm (và hiện vẫn làm).\nFor + khoảng thời gian; since + mốc bắt đầu. “Yesterday” hoặc một thời điểm quá khứ đã kết thúc thường đi với quá khứ đơn. Dấu hiệu thời gian chỉ là gợi ý; cần đọc nghĩa cả câu.",
+        "evidence_sources": [
+          {
+            "href": "/tutor/#knowledge-present-perfect",
+            "kind": "knowledge",
+            "label": "Kiến thức TOEIC",
+            "meaning_vi": "",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "present-perfect",
+              "review_status": "language_checked",
+              "version": "390639fb4c18aba68de006421bcacb8d480ed81510c9a3de988118c31d846263"
+            },
+            "title": "Hiện tại hoàn thành"
+          }
+        ],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.115656+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "retrieval_only",
+        "sources": [
+          "Hiện tại hoàn thành"
+        ]
+      },
+      "evidence_snapshot": {
+        "packed": {
+          "sources": [
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": null,
+                "exam_type": "TOEIC",
+                "kind": "knowledge",
+                "object_id": "present-perfect",
+                "review_status": "language_checked",
+                "version": "390639fb4c18aba68de006421bcacb8d480ed81510c9a3de988118c31d846263"
+              }
+            }
+          ],
+          "sufficient": true,
+          "text": "Legacy source (unstructured):\nHiện tại hoàn thành: have/has + quá khứ phân từ, thường diễn tả trải nghiệm, kết quả liên quan hiện tại hoặc trạng thái kéo dài tới hiện tại.\nShe has worked here for three years. → Cô ấy đã làm việc ở đây được ba năm (và hiện vẫn làm).\nFor + khoảng thời gian; since + mốc bắt đầu. “Yesterday” hoặc một thời điểm quá khứ đã kết thúc thường đi với quá khứ đơn. Dấu hiệu thời gian chỉ là gợi ý; cần đọc nghĩa cả câu."
+        },
+        "retrieved": [
+          {
+            "href": "/tutor/#knowledge-present-perfect",
+            "kind": "knowledge",
+            "review_status": "language_checked",
+            "source": "Hiện tại hoàn thành",
+            "source_id": "present-perfect",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "present-perfect",
+              "review_status": "language_checked",
+              "version": "390639fb4c18aba68de006421bcacb8d480ed81510c9a3de988118c31d846263"
+            },
+            "text": "Hiện tại hoàn thành: have/has + quá khứ phân từ, thường diễn tả trải nghiệm, kết quả liên quan hiện tại hoặc trạng thái kéo dài tới hiện tại.\nShe has worked here for three years. → Cô ấy đã làm việc ở đây được ba năm (và hiện vẫn làm).\nFor + khoảng thời gian; since + mốc bắt đầu. “Yesterday” hoặc một thời điểm quá khứ đã kết thúc thường đi với quá khứ đơn. Dấu hiệu thời gian chỉ là gợi ý; cần đọc nghĩa cả câu."
+          }
+        ],
+        "sha256": "5b1f090a005edd665ab432acf1af9dc963f128ea7588201b339dfb614ae6c905"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "passive",
+      "category": "grammar",
+      "query": "Giải thích câu bị động",
+      "expected": [
+        [
+          "knowledge",
+          "passive"
+        ]
+      ],
+      "actual": [
+        [
+          "knowledge",
+          "passive"
+        ]
+      ],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 0.174,
+      "error": null,
+      "result": {
+        "answer": "Cấu trúc bị động cơ bản: be (chia theo thì) + quá khứ phân từ. Chủ ngữ nhận tác động của hành động.\nThe invoices were sent yesterday. → Các hóa đơn đã được gửi hôm qua.\n“Invoices” không tự gửi chính nó nên cần bị động; “yesterday” đặt sự việc ở quá khứ. Với động từ khuyết thiếu: modal + be + quá khứ phân từ, như “must be signed”.",
+        "evidence_sources": [
+          {
+            "href": "/tutor/#knowledge-passive",
+            "kind": "knowledge",
+            "label": "Kiến thức TOEIC",
+            "meaning_vi": "",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "passive",
+              "review_status": "language_checked",
+              "version": "0a518840c7287046c5eca719c5baebd694dad1d5828f67b0324a66e038af9be8"
+            },
+            "title": "Câu bị động"
+          }
+        ],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.115838+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "retrieval_only",
+        "sources": [
+          "Câu bị động"
+        ]
+      },
+      "evidence_snapshot": {
+        "packed": {
+          "sources": [
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": null,
+                "exam_type": "TOEIC",
+                "kind": "knowledge",
+                "object_id": "passive",
+                "review_status": "language_checked",
+                "version": "0a518840c7287046c5eca719c5baebd694dad1d5828f67b0324a66e038af9be8"
+              }
+            }
+          ],
+          "sufficient": true,
+          "text": "Legacy source (unstructured):\nCấu trúc bị động cơ bản: be (chia theo thì) + quá khứ phân từ. Chủ ngữ nhận tác động của hành động.\nThe invoices were sent yesterday. → Các hóa đơn đã được gửi hôm qua.\n“Invoices” không tự gửi chính nó nên cần bị động; “yesterday” đặt sự việc ở quá khứ. Với động từ khuyết thiếu: modal + be + quá khứ phân từ, như “must be signed”."
+        },
+        "retrieved": [
+          {
+            "href": "/tutor/#knowledge-passive",
+            "kind": "knowledge",
+            "review_status": "language_checked",
+            "source": "Câu bị động",
+            "source_id": "passive",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "passive",
+              "review_status": "language_checked",
+              "version": "0a518840c7287046c5eca719c5baebd694dad1d5828f67b0324a66e038af9be8"
+            },
+            "text": "Cấu trúc bị động cơ bản: be (chia theo thì) + quá khứ phân từ. Chủ ngữ nhận tác động của hành động.\nThe invoices were sent yesterday. → Các hóa đơn đã được gửi hôm qua.\n“Invoices” không tự gửi chính nó nên cần bị động; “yesterday” đặt sự việc ở quá khứ. Với động từ khuyết thiếu: modal + be + quá khứ phân từ, như “must be signed”."
+          }
+        ],
+        "sha256": "f3970addcac7f5f18b2e592b175fa7a8b55830106e83c519412802508b9c4fdc"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "word-forms",
+      "category": "grammar",
+      "query": "Cách chọn từ loại trong TOEIC",
+      "expected": [
+        [
+          "knowledge",
+          "word-forms"
+        ]
+      ],
+      "actual": [
+        [
+          "knowledge",
+          "word-forms"
+        ]
+      ],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 0.17,
+      "error": null,
+      "result": {
+        "answer": "Đọc cấu trúc quanh chỗ trống để xác định chức năng cần có, sau đó kiểm tra nghĩa và kết hợp từ. Hậu tố chỉ là gợi ý, có ngoại lệ.\nThe team completed the project successfully. → Nhóm đã hoàn thành dự án một cách thành công. “Successfully” là trạng từ bổ nghĩa cho cách hoàn thành.\nSo sánh: a successful project (tính từ trước danh từ), the success of the project (danh từ), the team succeeded (động từ).",
+        "evidence_sources": [
+          {
+            "href": "/tutor/#knowledge-word-forms",
+            "kind": "knowledge",
+            "label": "Kiến thức TOEIC",
+            "meaning_vi": "",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "word-forms",
+              "review_status": "language_checked",
+              "version": "37091a6207691dac9b1bac44079654b12ba318bd184098fc150d8434e005b527"
+            },
+            "title": "Chọn từ loại trong câu điền từ"
+          }
+        ],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.116017+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "retrieval_only",
+        "sources": [
+          "Chọn từ loại trong câu điền từ"
+        ]
+      },
+      "evidence_snapshot": {
+        "packed": {
+          "sources": [
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": null,
+                "exam_type": "TOEIC",
+                "kind": "knowledge",
+                "object_id": "word-forms",
+                "review_status": "language_checked",
+                "version": "37091a6207691dac9b1bac44079654b12ba318bd184098fc150d8434e005b527"
+              }
+            }
+          ],
+          "sufficient": true,
+          "text": "Legacy source (unstructured):\nĐọc cấu trúc quanh chỗ trống để xác định chức năng cần có, sau đó kiểm tra nghĩa và kết hợp từ. Hậu tố chỉ là gợi ý, có ngoại lệ.\nThe team completed the project successfully. → Nhóm đã hoàn thành dự án một cách thành công. “Successfully” là trạng từ bổ nghĩa cho cách hoàn thành.\nSo sánh: a successful project (tính từ trước danh từ), the success of the project (danh từ), the team succeeded (động từ)."
+        },
+        "retrieved": [
+          {
+            "href": "/tutor/#knowledge-word-forms",
+            "kind": "knowledge",
+            "review_status": "language_checked",
+            "source": "Chọn từ loại trong câu điền từ",
+            "source_id": "word-forms",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "word-forms",
+              "review_status": "language_checked",
+              "version": "37091a6207691dac9b1bac44079654b12ba318bd184098fc150d8434e005b527"
+            },
+            "text": "Đọc cấu trúc quanh chỗ trống để xác định chức năng cần có, sau đó kiểm tra nghĩa và kết hợp từ. Hậu tố chỉ là gợi ý, có ngoại lệ.\nThe team completed the project successfully. → Nhóm đã hoàn thành dự án một cách thành công. “Successfully” là trạng từ bổ nghĩa cho cách hoàn thành.\nSo sánh: a successful project (tính từ trước danh từ), the success of the project (danh từ), the team succeeded (động từ)."
+          }
+        ],
+        "sha256": "89e8235729da9b409b5cfb685ad970eb8aa7ac20d850891546314893dd4e1982"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "listening",
+      "category": "study_strategy",
+      "query": "Cách luyện Listening hiệu quả",
+      "expected": [
+        [
+          "knowledge",
+          "listening-strategy"
+        ]
+      ],
+      "actual": [
+        [
+          "knowledge",
+          "listening-strategy"
+        ]
+      ],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 1.108,
+      "error": null,
+      "result": {
+        "answer": "Khi luyện nghe, làm lần đầu trong điều kiện không xem lời thoại. Đọc yêu cầu và phương án khi phần hướng dẫn cho phép, dự đoán bối cảnh và thông tin cần tìm.\nSau khi nộp: đối chiếu lời thoại, xác định đoạn chứa bằng chứng và cách diễn đạt tương đương. Nghe lại câu bị bỏ lỡ, rồi luyện nhắc lại một đoạn ngắn.\nĐừng chọn một phương án chỉ vì nó lặp lại từ bạn vừa nghe. Luyện phát âm/nhắc lại hỗ trợ học, nhưng không phải phần chấm nói của TOEIC Listening & Reading.",
+        "evidence_sources": [
+          {
+            "href": "/tutor/#knowledge-listening-strategy",
+            "kind": "knowledge",
+            "label": "Kiến thức TOEIC",
+            "meaning_vi": "",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "listening-strategy",
+              "review_status": "language_checked",
+              "version": "11ca6abd7dd89a87ddb628b1fa5cd19051853f98e7ac011ae45c842414d8f7e5"
+            },
+            "title": "Cách luyện Listening"
+          }
+        ],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.117123+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "retrieval_only",
+        "sources": [
+          "Cách luyện Listening"
+        ]
+      },
+      "evidence_snapshot": {
+        "packed": {
+          "sources": [
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": null,
+                "exam_type": "TOEIC",
+                "kind": "knowledge",
+                "object_id": "listening-strategy",
+                "review_status": "language_checked",
+                "version": "11ca6abd7dd89a87ddb628b1fa5cd19051853f98e7ac011ae45c842414d8f7e5"
+              }
+            }
+          ],
+          "sufficient": true,
+          "text": "Legacy source (unstructured):\nKhi luyện nghe, làm lần đầu trong điều kiện không xem lời thoại. Đọc yêu cầu và phương án khi phần hướng dẫn cho phép, dự đoán bối cảnh và thông tin cần tìm.\nSau khi nộp: đối chiếu lời thoại, xác định đoạn chứa bằng chứng và cách diễn đạt tương đương. Nghe lại câu bị bỏ lỡ, rồi luyện nhắc lại một đoạn ngắn.\nĐừng chọn một phương án chỉ vì nó lặp lại từ bạn vừa nghe. Luyện phát âm/nhắc lại hỗ trợ học, nhưng không phải phần chấm nói của TOEIC Listening & Reading."
+        },
+        "retrieved": [
+          {
+            "href": "/tutor/#knowledge-listening-strategy",
+            "kind": "knowledge",
+            "review_status": "language_checked",
+            "source": "Cách luyện Listening",
+            "source_id": "listening-strategy",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "listening-strategy",
+              "review_status": "language_checked",
+              "version": "11ca6abd7dd89a87ddb628b1fa5cd19051853f98e7ac011ae45c842414d8f7e5"
+            },
+            "text": "Khi luyện nghe, làm lần đầu trong điều kiện không xem lời thoại. Đọc yêu cầu và phương án khi phần hướng dẫn cho phép, dự đoán bối cảnh và thông tin cần tìm.\nSau khi nộp: đối chiếu lời thoại, xác định đoạn chứa bằng chứng và cách diễn đạt tương đương. Nghe lại câu bị bỏ lỡ, rồi luyện nhắc lại một đoạn ngắn.\nĐừng chọn một phương án chỉ vì nó lặp lại từ bạn vừa nghe. Luyện phát âm/nhắc lại hỗ trợ học, nhưng không phải phần chấm nói của TOEIC Listening & Reading."
+          }
+        ],
+        "sha256": "16d52bc889854b39ac37ac5a4d6e6e9ae5c68fcebc2968bf515ec23a0c34e16c"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "reading",
+      "category": "study_strategy",
+      "query": "Cách luyện Reading hiệu quả",
+      "expected": [
+        [
+          "knowledge",
+          "reading-strategy"
+        ]
+      ],
+      "actual": [
+        [
+          "knowledge",
+          "reading-strategy"
+        ]
+      ],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 0.216,
+      "error": null,
+      "result": {
+        "answer": "Khi luyện đọc hiểu, xác định loại câu hỏi: thông tin cụ thể, mục đích, suy luận hay diễn đạt tương đương. Đọc lướt để nắm người viết, người nhận và bối cảnh, rồi quay lại tìm bằng chứng.\nVới câu hỏi chi tiết, kiểm tra thông tin trong văn bản thay vì dùng hiểu biết ngoài bài. Với nhiều văn bản, có thể cần kết hợp thông tin giữa các đoạn.\nSau khi nộp, ghi lại vì sao bạn chọn sai: bỏ sót phủ định, nhầm người, nhầm thời gian hoặc hiểu sai cách diễn đạt.",
+        "evidence_sources": [
+          {
+            "href": "/tutor/#knowledge-reading-strategy",
+            "kind": "knowledge",
+            "label": "Kiến thức TOEIC",
+            "meaning_vi": "",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "reading-strategy",
+              "review_status": "language_checked",
+              "version": "df270ddfd04e2ea6a4e4a47550c02713b41547a48472d7a4d648976397914ba4"
+            },
+            "title": "Cách luyện Reading"
+          }
+        ],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.117353+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "retrieval_only",
+        "sources": [
+          "Cách luyện Reading"
+        ]
+      },
+      "evidence_snapshot": {
+        "packed": {
+          "sources": [
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": null,
+                "exam_type": "TOEIC",
+                "kind": "knowledge",
+                "object_id": "reading-strategy",
+                "review_status": "language_checked",
+                "version": "df270ddfd04e2ea6a4e4a47550c02713b41547a48472d7a4d648976397914ba4"
+              }
+            }
+          ],
+          "sufficient": true,
+          "text": "Legacy source (unstructured):\nKhi luyện đọc hiểu, xác định loại câu hỏi: thông tin cụ thể, mục đích, suy luận hay diễn đạt tương đương. Đọc lướt để nắm người viết, người nhận và bối cảnh, rồi quay lại tìm bằng chứng.\nVới câu hỏi chi tiết, kiểm tra thông tin trong văn bản thay vì dùng hiểu biết ngoài bài. Với nhiều văn bản, có thể cần kết hợp thông tin giữa các đoạn.\nSau khi nộp, ghi lại vì sao bạn chọn sai: bỏ sót phủ định, nhầm người, nhầm thời gian hoặc hiểu sai cách diễn đạt."
+        },
+        "retrieved": [
+          {
+            "href": "/tutor/#knowledge-reading-strategy",
+            "kind": "knowledge",
+            "review_status": "language_checked",
+            "source": "Cách luyện Reading",
+            "source_id": "reading-strategy",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "reading-strategy",
+              "review_status": "language_checked",
+              "version": "df270ddfd04e2ea6a4e4a47550c02713b41547a48472d7a4d648976397914ba4"
+            },
+            "text": "Khi luyện đọc hiểu, xác định loại câu hỏi: thông tin cụ thể, mục đích, suy luận hay diễn đạt tương đương. Đọc lướt để nắm người viết, người nhận và bối cảnh, rồi quay lại tìm bằng chứng.\nVới câu hỏi chi tiết, kiểm tra thông tin trong văn bản thay vì dùng hiểu biết ngoài bài. Với nhiều văn bản, có thể cần kết hợp thông tin giữa các đoạn.\nSau khi nộp, ghi lại vì sao bạn chọn sai: bỏ sót phủ định, nhầm người, nhầm thời gian hoặc hiểu sai cách diễn đạt."
+          }
+        ],
+        "sha256": "5e14797fb8dda4615c268e31f35ebd7de2d392354e20b886f8200b9c15183599"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "compare-perfect-passive",
+      "category": "multiple_notes",
+      "query": "So sánh present perfect và passive voice",
+      "expected": [
+        [
+          "knowledge",
+          "passive"
+        ],
+        [
+          "knowledge",
+          "present-perfect"
+        ]
+      ],
+      "actual": [
+        [
+          "knowledge",
+          "passive"
+        ],
+        [
+          "knowledge",
+          "present-perfect"
+        ]
+      ],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 0.251,
+      "error": null,
+      "result": {
+        "answer": "Hiện tại hoàn thành: have/has + quá khứ phân từ, thường diễn tả trải nghiệm, kết quả liên quan hiện tại hoặc trạng thái kéo dài tới hiện tại.\nShe has worked here for three years. → Cô ấy đã làm việc ở đây được ba năm (và hiện vẫn làm).\nFor + khoảng thời gian; since + mốc bắt đầu. “Yesterday” hoặc một thời điểm quá khứ đã kết thúc thường đi với quá khứ đơn. Dấu hiệu thời gian chỉ là gợi ý; cần đọc nghĩa cả câu.\n\nCấu trúc bị động cơ bản: be (chia theo thì) + quá khứ phân từ. Chủ ngữ nhận tác động của hành động.\nThe invoices were sent yesterday. → Các hóa đơn đã được gửi hôm qua.\n“Invoices” không tự gửi chính nó nên cần bị động; “yesterday” đặt sự việc ở quá khứ. Với động từ khuyết thiếu: modal + be + quá khứ phân từ, như “must be signed”.",
+        "evidence_sources": [
+          {
+            "href": "/tutor/#knowledge-present-perfect",
+            "kind": "knowledge",
+            "label": "Kiến thức TOEIC",
+            "meaning_vi": "",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "present-perfect",
+              "review_status": "language_checked",
+              "version": "390639fb4c18aba68de006421bcacb8d480ed81510c9a3de988118c31d846263"
+            },
+            "title": "Hiện tại hoàn thành"
+          },
+          {
+            "href": "/tutor/#knowledge-passive",
+            "kind": "knowledge",
+            "label": "Kiến thức TOEIC",
+            "meaning_vi": "",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "passive",
+              "review_status": "language_checked",
+              "version": "0a518840c7287046c5eca719c5baebd694dad1d5828f67b0324a66e038af9be8"
+            },
+            "title": "Câu bị động"
+          }
+        ],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.117599+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "retrieval_only",
+        "sources": [
+          "Hiện tại hoàn thành",
+          "Câu bị động"
+        ]
+      },
+      "evidence_snapshot": {
+        "packed": {
+          "sources": [
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": null,
+                "exam_type": "TOEIC",
+                "kind": "knowledge",
+                "object_id": "present-perfect",
+                "review_status": "language_checked",
+                "version": "390639fb4c18aba68de006421bcacb8d480ed81510c9a3de988118c31d846263"
+              }
+            },
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": null,
+                "exam_type": "TOEIC",
+                "kind": "knowledge",
+                "object_id": "passive",
+                "review_status": "language_checked",
+                "version": "0a518840c7287046c5eca719c5baebd694dad1d5828f67b0324a66e038af9be8"
+              }
+            }
+          ],
+          "sufficient": true,
+          "text": "Legacy source (unstructured):\nHiện tại hoàn thành: have/has + quá khứ phân từ, thường diễn tả trải nghiệm, kết quả liên quan hiện tại hoặc trạng thái kéo dài tới hiện tại.\nShe has worked here for three years. → Cô ấy đã làm việc ở đây được ba năm (và hiện vẫn làm).\nFor + khoảng thời gian; since + mốc bắt đầu. “Yesterday” hoặc một thời điểm quá khứ đã kết thúc thường đi với quá khứ đơn. Dấu hiệu thời gian chỉ là gợi ý; cần đọc nghĩa cả câu.\n\n---\n\nLegacy source (unstructured):\nCấu trúc bị động cơ bản: be (chia theo thì) + quá khứ phân từ. Chủ ngữ nhận tác động của hành động.\nThe invoices were sent yesterday. → Các hóa đơn đã được gửi hôm qua.\n“Invoices” không tự gửi chính nó nên cần bị động; “yesterday” đặt sự việc ở quá khứ. Với động từ khuyết thiếu: modal + be + quá khứ phân từ, như “must be signed”."
+        },
+        "retrieved": [
+          {
+            "href": "/tutor/#knowledge-present-perfect",
+            "kind": "knowledge",
+            "review_status": "language_checked",
+            "source": "Hiện tại hoàn thành",
+            "source_id": "present-perfect",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "present-perfect",
+              "review_status": "language_checked",
+              "version": "390639fb4c18aba68de006421bcacb8d480ed81510c9a3de988118c31d846263"
+            },
+            "text": "Hiện tại hoàn thành: have/has + quá khứ phân từ, thường diễn tả trải nghiệm, kết quả liên quan hiện tại hoặc trạng thái kéo dài tới hiện tại.\nShe has worked here for three years. → Cô ấy đã làm việc ở đây được ba năm (và hiện vẫn làm).\nFor + khoảng thời gian; since + mốc bắt đầu. “Yesterday” hoặc một thời điểm quá khứ đã kết thúc thường đi với quá khứ đơn. Dấu hiệu thời gian chỉ là gợi ý; cần đọc nghĩa cả câu."
+          },
+          {
+            "href": "/tutor/#knowledge-passive",
+            "kind": "knowledge",
+            "review_status": "language_checked",
+            "source": "Câu bị động",
+            "source_id": "passive",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "passive",
+              "review_status": "language_checked",
+              "version": "0a518840c7287046c5eca719c5baebd694dad1d5828f67b0324a66e038af9be8"
+            },
+            "text": "Cấu trúc bị động cơ bản: be (chia theo thì) + quá khứ phân từ. Chủ ngữ nhận tác động của hành động.\nThe invoices were sent yesterday. → Các hóa đơn đã được gửi hôm qua.\n“Invoices” không tự gửi chính nó nên cần bị động; “yesterday” đặt sự việc ở quá khứ. Với động từ khuyết thiếu: modal + be + quá khứ phân từ, như “must be signed”."
+          }
+        ],
+        "sha256": "3a1a411e808ad66f2503ac6749c1bcea779b5961ed18abd5898b8f569f97a35b"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "both-skills",
+      "category": "multiple_notes",
+      "query": "Cách luyện listening và reading",
+      "expected": [
+        [
+          "knowledge",
+          "listening-strategy"
+        ],
+        [
+          "knowledge",
+          "reading-strategy"
+        ]
+      ],
+      "actual": [
+        [
+          "knowledge",
+          "listening-strategy"
+        ],
+        [
+          "knowledge",
+          "reading-strategy"
+        ]
+      ],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 0.248,
+      "error": null,
+      "result": {
+        "answer": "Khi luyện nghe, làm lần đầu trong điều kiện không xem lời thoại. Đọc yêu cầu và phương án khi phần hướng dẫn cho phép, dự đoán bối cảnh và thông tin cần tìm.\nSau khi nộp: đối chiếu lời thoại, xác định đoạn chứa bằng chứng và cách diễn đạt tương đương. Nghe lại câu bị bỏ lỡ, rồi luyện nhắc lại một đoạn ngắn.\nĐừng chọn một phương án chỉ vì nó lặp lại từ bạn vừa nghe. Luyện phát âm/nhắc lại hỗ trợ học, nhưng không phải phần chấm nói của TOEIC Listening & Reading.\n\nKhi luyện đọc hiểu, xác định loại câu hỏi: thông tin cụ thể, mục đích, suy luận hay diễn đạt tương đương. Đọc lướt để nắm người viết, người nhận và bối cảnh, rồi quay lại tìm bằng chứng.\nVới câu hỏi chi tiết, kiểm tra thông tin trong văn bản thay vì dùng hiểu biết ngoài bài. Với nhiều văn bản, có thể cần kết hợp thông tin giữa các đoạn.\nSau khi nộp, ghi lại vì sao bạn chọn sai: bỏ sót phủ định, nhầm người, nhầm thời gian hoặc hiểu sai cách diễn đạt.",
+        "evidence_sources": [
+          {
+            "href": "/tutor/#knowledge-listening-strategy",
+            "kind": "knowledge",
+            "label": "Kiến thức TOEIC",
+            "meaning_vi": "",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "listening-strategy",
+              "review_status": "language_checked",
+              "version": "11ca6abd7dd89a87ddb628b1fa5cd19051853f98e7ac011ae45c842414d8f7e5"
+            },
+            "title": "Cách luyện Listening"
+          },
+          {
+            "href": "/tutor/#knowledge-reading-strategy",
+            "kind": "knowledge",
+            "label": "Kiến thức TOEIC",
+            "meaning_vi": "",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "reading-strategy",
+              "review_status": "language_checked",
+              "version": "df270ddfd04e2ea6a4e4a47550c02713b41547a48472d7a4d648976397914ba4"
+            },
+            "title": "Cách luyện Reading"
+          }
+        ],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.117855+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "retrieval_only",
+        "sources": [
+          "Cách luyện Listening",
+          "Cách luyện Reading"
+        ]
+      },
+      "evidence_snapshot": {
+        "packed": {
+          "sources": [
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": null,
+                "exam_type": "TOEIC",
+                "kind": "knowledge",
+                "object_id": "listening-strategy",
+                "review_status": "language_checked",
+                "version": "11ca6abd7dd89a87ddb628b1fa5cd19051853f98e7ac011ae45c842414d8f7e5"
+              }
+            },
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": null,
+                "exam_type": "TOEIC",
+                "kind": "knowledge",
+                "object_id": "reading-strategy",
+                "review_status": "language_checked",
+                "version": "df270ddfd04e2ea6a4e4a47550c02713b41547a48472d7a4d648976397914ba4"
+              }
+            }
+          ],
+          "sufficient": true,
+          "text": "Legacy source (unstructured):\nKhi luyện nghe, làm lần đầu trong điều kiện không xem lời thoại. Đọc yêu cầu và phương án khi phần hướng dẫn cho phép, dự đoán bối cảnh và thông tin cần tìm.\nSau khi nộp: đối chiếu lời thoại, xác định đoạn chứa bằng chứng và cách diễn đạt tương đương. Nghe lại câu bị bỏ lỡ, rồi luyện nhắc lại một đoạn ngắn.\nĐừng chọn một phương án chỉ vì nó lặp lại từ bạn vừa nghe. Luyện phát âm/nhắc lại hỗ trợ học, nhưng không phải phần chấm nói của TOEIC Listening & Reading.\n\n---\n\nLegacy source (unstructured):\nKhi luyện đọc hiểu, xác định loại câu hỏi: thông tin cụ thể, mục đích, suy luận hay diễn đạt tương đương. Đọc lướt để nắm người viết, người nhận và bối cảnh, rồi quay lại tìm bằng chứng.\nVới câu hỏi chi tiết, kiểm tra thông tin trong văn bản thay vì dùng hiểu biết ngoài bài. Với nhiều văn bản, có thể cần kết hợp thông tin giữa các đoạn.\nSau khi nộp, ghi lại vì sao bạn chọn sai: bỏ sót phủ định, nhầm người, nhầm thời gian hoặc hiểu sai cách diễn đạt."
+        },
+        "retrieved": [
+          {
+            "href": "/tutor/#knowledge-listening-strategy",
+            "kind": "knowledge",
+            "review_status": "language_checked",
+            "source": "Cách luyện Listening",
+            "source_id": "listening-strategy",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "listening-strategy",
+              "review_status": "language_checked",
+              "version": "11ca6abd7dd89a87ddb628b1fa5cd19051853f98e7ac011ae45c842414d8f7e5"
+            },
+            "text": "Khi luyện nghe, làm lần đầu trong điều kiện không xem lời thoại. Đọc yêu cầu và phương án khi phần hướng dẫn cho phép, dự đoán bối cảnh và thông tin cần tìm.\nSau khi nộp: đối chiếu lời thoại, xác định đoạn chứa bằng chứng và cách diễn đạt tương đương. Nghe lại câu bị bỏ lỡ, rồi luyện nhắc lại một đoạn ngắn.\nĐừng chọn một phương án chỉ vì nó lặp lại từ bạn vừa nghe. Luyện phát âm/nhắc lại hỗ trợ học, nhưng không phải phần chấm nói của TOEIC Listening & Reading."
+          },
+          {
+            "href": "/tutor/#knowledge-reading-strategy",
+            "kind": "knowledge",
+            "review_status": "language_checked",
+            "source": "Cách luyện Reading",
+            "source_id": "reading-strategy",
+            "source_ref": {
+              "content_id": null,
+              "exam_type": "TOEIC",
+              "kind": "knowledge",
+              "object_id": "reading-strategy",
+              "review_status": "language_checked",
+              "version": "df270ddfd04e2ea6a4e4a47550c02713b41547a48472d7a4d648976397914ba4"
+            },
+            "text": "Khi luyện đọc hiểu, xác định loại câu hỏi: thông tin cụ thể, mục đích, suy luận hay diễn đạt tương đương. Đọc lướt để nắm người viết, người nhận và bối cảnh, rồi quay lại tìm bằng chứng.\nVới câu hỏi chi tiết, kiểm tra thông tin trong văn bản thay vì dùng hiểu biết ngoài bài. Với nhiều văn bản, có thể cần kết hợp thông tin giữa các đoạn.\nSau khi nộp, ghi lại vì sao bạn chọn sai: bỏ sót phủ định, nhầm người, nhầm thời gian hoặc hiểu sai cách diễn đạt."
+          }
+        ],
+        "sha256": "b8b91803bb1a2a51e9aa094bbf2003907c8c279911053dcfaa782dedae848845"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "thermometer",
+      "category": "incidental_skill_word",
+      "query": "Why is the thermometer reading inaccurate?",
+      "expected": [],
+      "actual": [],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 161.592,
+      "error": null,
+      "result": {
+        "answer": "Mình chưa tìm thấy bài học đủ liên quan để giải thích chắc chắn. Hãy nêu từ vựng, câu hỏi hoặc chủ đề cụ thể trong kho TOEIC.",
+        "evidence_sources": [],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.279447+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "no_match",
+        "sources": []
+      },
+      "evidence_snapshot": {
+        "packed": null,
+        "retrieved": [],
+        "sha256": "f5b6cdf11422e67377df89014925d1748ac59c8f74183f7bb2cdf6ecf84ad05f"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "quoted-reading-absent-bank",
+      "category": "lexical_missing",
+      "query": "Define the word “reading”",
+      "expected": [],
+      "actual": [],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 162.693,
+      "error": null,
+      "result": {
+        "answer": "Mình chưa tìm thấy bài học đủ liên quan để giải thích chắc chắn. Hãy nêu từ vựng, câu hỏi hoặc chủ đề cụ thể trong kho TOEIC.",
+        "evidence_sources": [],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.442163+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "no_match",
+        "sources": []
+      },
+      "evidence_snapshot": {
+        "packed": null,
+        "retrieved": [],
+        "sha256": "f5b6cdf11422e67377df89014925d1748ac59c8f74183f7bb2cdf6ecf84ad05f"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "quoted-deadline",
+      "category": "lexical",
+      "query": "Giải thích từ “deadline”",
+      "expected": [
+        [
+          "flashcard",
+          "deadline"
+        ]
+      ],
+      "actual": [
+        [
+          "flashcard",
+          "deadline"
+        ]
+      ],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 171.582,
+      "error": null,
+      "result": {
+        "answer": "Bài: Từ vựng: Meetings and schedules\nTừ: deadline (noun)\nNghĩa: thời hạn cuối để hoàn thành việc gì\nVí dụ: Please submit the expense report before the deadline.\nDịch: Vui lòng nộp báo cáo chi phí trước thời hạn.",
+        "evidence_sources": [
+          {
+            "href": "/learn/flashcards/?q=deadline&all=1",
+            "kind": "flashcard",
+            "label": "deadline",
+            "meaning_vi": "thời hạn cuối để hoàn thành việc gì",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": 1,
+              "exam_type": "TOEIC",
+              "kind": "flashcard",
+              "object_id": 11,
+              "review_status": "language_checked",
+              "version": "51e418efbdea97b52cfcc4f612c378b436c951b18bcb65c5a71e9ad827effa10"
+            },
+            "title": "Từ vựng: Meetings and schedules"
+          }
+        ],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.613757+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "retrieval_only",
+        "sources": [
+          "Từ vựng: Meetings and schedules"
+        ]
+      },
+      "evidence_snapshot": {
+        "packed": {
+          "sources": [
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": 1,
+                "exam_type": "TOEIC",
+                "kind": "flashcard",
+                "object_id": 11,
+                "review_status": "language_checked",
+                "version": "51e418efbdea97b52cfcc4f612c378b436c951b18bcb65c5a71e9ad827effa10"
+              }
+            }
+          ],
+          "sufficient": true,
+          "text": "Legacy source (unstructured):\nBài: Từ vựng: Meetings and schedules\nTừ: deadline (noun)\nNghĩa: thời hạn cuối để hoàn thành việc gì\nVí dụ: Please submit the expense report before the deadline.\nDịch: Vui lòng nộp báo cáo chi phí trước thời hạn."
+        },
+        "retrieved": [
+          {
+            "ambiguous": false,
+            "href": "/learn/flashcards/?q=deadline&all=1",
+            "kind": "flashcard",
+            "match_type": "exact_term",
+            "meaning_vi": "thời hạn cuối để hoàn thành việc gì",
+            "review_status": "language_checked",
+            "score": 140.0,
+            "sense_count": 1,
+            "source": "Từ vựng: Meetings and schedules",
+            "source_id": 11,
+            "source_ref": {
+              "content_id": 1,
+              "exam_type": "TOEIC",
+              "kind": "flashcard",
+              "object_id": 11,
+              "review_status": "language_checked",
+              "version": "51e418efbdea97b52cfcc4f612c378b436c951b18bcb65c5a71e9ad827effa10"
+            },
+            "term": "deadline",
+            "text": "Bài: Từ vựng: Meetings and schedules\nTừ: deadline (noun)\nNghĩa: thời hạn cuối để hoàn thành việc gì\nVí dụ: Please submit the expense report before the deadline.\nDịch: Vui lòng nộp báo cáo chi phí trước thời hạn.",
+            "topic": "Workplace and schedules"
+          }
+        ],
+        "sha256": "79386581c07d6b1071a2dc47add6e698485a1690373971213b95afbfa44851d3"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "quoted-invoice",
+      "category": "lexical",
+      "query": "Define “invoice”",
+      "expected": [
+        [
+          "flashcard",
+          "invoice"
+        ]
+      ],
+      "actual": [
+        [
+          "flashcard",
+          "invoice"
+        ]
+      ],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 209.738,
+      "error": null,
+      "result": {
+        "answer": "Bài: Bổ sung B2 · Công việc và dịch vụ · Thẻ từ 04\nTừ: invoice (noun)\nNghĩa: hóa đơn thương mại yêu cầu thanh toán\nVí dụ: The supplier sent an invoice listing the goods and the amount due.\nDịch: Nhà cung cấp gửi hóa đơn liệt kê hàng và số tiền phải trả.",
+        "evidence_sources": [
+          {
+            "href": "/learn/flashcards/?q=invoice&all=1",
+            "kind": "flashcard",
+            "label": "invoice",
+            "meaning_vi": "hóa đơn thương mại yêu cầu thanh toán",
+            "review_status": "language_checked",
+            "source_ref": {
+              "content_id": 310,
+              "exam_type": "TOEIC",
+              "kind": "flashcard",
+              "object_id": 2578,
+              "review_status": "language_checked",
+              "version": "99cf6e1994b5ea027b3299fd3136bb653e4c85a3ce2907d9b611aed6294a6ccf"
+            },
+            "title": "Bổ sung B2 · Công việc và dịch vụ · Thẻ từ 04"
+          }
+        ],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.823521+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "retrieval_only",
+        "sources": [
+          "Bổ sung B2 · Công việc và dịch vụ · Thẻ từ 04"
+        ]
+      },
+      "evidence_snapshot": {
+        "packed": {
+          "sources": [
+            {
+              "context_complete": false,
+              "context_format": "legacy_text",
+              "source_ref": {
+                "content_id": 310,
+                "exam_type": "TOEIC",
+                "kind": "flashcard",
+                "object_id": 2578,
+                "review_status": "language_checked",
+                "version": "99cf6e1994b5ea027b3299fd3136bb653e4c85a3ce2907d9b611aed6294a6ccf"
+              }
+            }
+          ],
+          "sufficient": true,
+          "text": "Legacy source (unstructured):\nBài: Bổ sung B2 · Công việc và dịch vụ · Thẻ từ 04\nTừ: invoice (noun)\nNghĩa: hóa đơn thương mại yêu cầu thanh toán\nVí dụ: The supplier sent an invoice listing the goods and the amount due.\nDịch: Nhà cung cấp gửi hóa đơn liệt kê hàng và số tiền phải trả."
+        },
+        "retrieved": [
+          {
+            "ambiguous": false,
+            "href": "/learn/flashcards/?q=invoice&all=1",
+            "kind": "flashcard",
+            "match_type": "exact_term",
+            "meaning_vi": "hóa đơn thương mại yêu cầu thanh toán",
+            "review_status": "language_checked",
+            "score": 140.0,
+            "sense_count": 1,
+            "source": "Bổ sung B2 · Công việc và dịch vụ · Thẻ từ 04",
+            "source_id": 2578,
+            "source_ref": {
+              "content_id": 310,
+              "exam_type": "TOEIC",
+              "kind": "flashcard",
+              "object_id": 2578,
+              "review_status": "language_checked",
+              "version": "99cf6e1994b5ea027b3299fd3136bb653e4c85a3ce2907d9b611aed6294a6ccf"
+            },
+            "term": "invoice",
+            "text": "Bài: Bổ sung B2 · Công việc và dịch vụ · Thẻ từ 04\nTừ: invoice (noun)\nNghĩa: hóa đơn thương mại yêu cầu thanh toán\nVí dụ: The supplier sent an invoice listing the goods and the amount due.\nDịch: Nhà cung cấp gửi hóa đơn liệt kê hàng và số tiền phải trả.",
+            "topic": "Finance"
+          }
+        ],
+        "sha256": "0690fc50c10df9597d1c484277822ba47a90d253a00963bf80c6fc3b74e94807"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "off-topic",
+      "category": "no_match",
+      "query": "Why do quasars emit X-rays?",
+      "expected": [],
+      "actual": [],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 161.481,
+      "error": null,
+      "result": {
+        "answer": "Mình chưa tìm thấy bài học đủ liên quan để giải thích chắc chắn. Hãy nêu từ vựng, câu hỏi hoặc chủ đề cụ thể trong kho TOEIC.",
+        "evidence_sources": [],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:26.985036+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "no_match",
+        "sources": []
+      },
+      "evidence_snapshot": {
+        "packed": null,
+        "retrieved": [],
+        "sha256": "f5b6cdf11422e67377df89014925d1748ac59c8f74183f7bb2cdf6ecf84ad05f"
+      },
+      "snapshot_notice": "observed"
+    },
+    {
+      "id": "unknown-headword",
+      "category": "no_match",
+      "query": "Define “xyzzynonexistenttoken”",
+      "expected": [],
+      "actual": [],
+      "source_exact_match": true,
+      "omissions": [],
+      "false_positives": [],
+      "elapsed_ms": 164.886,
+      "error": null,
+      "result": {
+        "answer": "Mình chưa tìm thấy bài học đủ liên quan để giải thích chắc chắn. Hãy nêu từ vựng, câu hỏi hoặc chủ đề cụ thể trong kho TOEIC.",
+        "evidence_sources": [],
+        "generation": {
+          "context_version": "question-essentials-v1",
+          "generated_at": "2026-10-25T01:43:27.149942+00:00",
+          "model": null,
+          "prompt_version": "toeic-evidence-v3",
+          "provider": "none"
+        },
+        "mode": "no_match",
+        "sources": []
+      },
+      "evidence_snapshot": {
+        "packed": null,
+        "retrieved": [],
+        "sha256": "f5b6cdf11422e67377df89014925d1748ac59c8f74183f7bb2cdf6ecf84ad05f"
+      },
+      "snapshot_notice": "observed"
+    }
+  ],
+  "run_provenance": {
+    "fixture_file_sha256": "dd29a1a571fa0b95e26d897e0011d497830bf51e59fdfb811719f95827cc3d47",
+    "code_sha256": {
+      "learning/ai.py": "55dae5e7b0fe9231b40f2609222720e847fa254a1841ae899c6c6e3346fcb072",
+      "learning/ai_context.py": "14ba3b547177aea11b604282eeb93c358701b194b5f5fb62e70c32567088c514",
+      "learning/ai_provider.py": "b01a58112397bf6e716da2523703a0a9c3a637811effa1cf999b3efadc1e6ebf",
+      "learning/retrieval.py": "fcbebd402d71de1e9cc656e1f078270119abd574c29e32816b2f6c2c7c2324c8",
+      "learning/tutor_knowledge.py": "57ba3042a959dced8267eccae8fa8d1f76234c66f2402bb5ccb81a1369fc01b2",
+      "learning/tutor_evaluation.py": "1c90cfb6395b8865ef43628bcc44ffc0e6ddb09be4e267dfcbd2777bdb88a9bd",
+      "learning/management/commands/evaluate_tutor_answers.py": "ccbe852081d64f57e966bdd660c2eb81ff163fa319a1027944256188b5da86b6"
+    }
+  }
+}

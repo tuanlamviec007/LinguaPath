@@ -1,0 +1,52 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Lịch sử quiz · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/quiz-archive.css' %}">
+<link rel="stylesheet" href="{% static 'css/quiz-recall.css' %}">
+<link rel="stylesheet" href="{% static 'css/quiz-due.css' %}">
+<div class="lp-archive">
+  <a class="lp-archive-back" href="{% url 'learning:quiz_hub' %}">← Khu thử thách</a>
+  <section class="lp-archive-hero" aria-labelledby="archive-title">
+    <div><span class="eyebrow">MỖI LẦN HỌC, MỘT DẤU NHỚ</span><h1 id="archive-title">Nhìn lại từng quiz.<br><em>Chọn bước tiếp theo.</em></h1><p>Tìm lại kết quả, xem lời giải và tiếp tục ôn những từ còn nhầm. Hành trình {{ profile.exam_goal }} của bạn được giữ ở đây.</p><div class="lp-archive-actions"><a class="button primary" href="{% url 'learning:quiz_hub' %}">Bắt đầu quiz mới <span aria-hidden="true">↗</span></a><a href="{% url 'learning:weak_words' %}">Gặp lại từ cần ôn <span aria-hidden="true">↻</span></a></div></div>
+    <div class="lp-archive-art" aria-hidden="true"><span class="lp-archive-art-spark">✦</span><div class="lp-archive-art-card archive-card-back"></div><div class="lp-archive-art-card archive-card-front"><span>LITTLE STEPS</span><b>✓</b><span>keep going</span></div><span class="lp-archive-art-dot"></span></div>
+  </section>
+
+  <section class="lp-archive-summary" aria-label="Thống kê quiz trong bộ lọc hiện tại">
+    <article><span class="lp-archive-stat-icon" aria-hidden="true">✦</span><div><strong>{{ summary.new_count }}</strong><span>quiz mới đã nộp</span></div></article>
+    <article><span class="lp-archive-stat-icon stat-review" aria-hidden="true">↻</span><div><strong>{{ summary.review_count }}</strong><span>lượt luyện lại</span></div></article>
+    <article><span class="lp-archive-stat-icon stat-score" aria-hidden="true">◎</span><div><strong>{% if summary.accuracy != None %}{{ summary.accuracy }}<small>%</small>{% else %}—{% endif %}</strong><span>{% if summary.questions %}{{ summary.correct }}/{{ summary.questions }} câu đúng ở quiz mới{% else %}Chưa có câu hỏi ở quiz mới{% endif %}</span></div></article>
+  </section>
+  <p class="lp-archive-summary-note">Thống kê theo bộ lọc bên dưới. Tỷ lệ đúng chỉ tính quiz mới, không gộp lượt luyện lại và không quy đổi thành điểm TOEIC hoặc CEFR. Chọn “Cách luyện” để xem riêng từng dạng bài.</p>
+
+  <section class="lp-archive-filters-panel" aria-labelledby="archive-filters-title">
+    <div class="lp-archive-section-heading"><div><span class="eyebrow">TÌM LẠI MỘT LẦN CỐ GẮNG</span><h2 id="archive-filters-title">Lọc lịch sử của bạn</h2></div><span class="lp-archive-exam">{{ profile.exam_goal }}</span></div>
+    <form method="get" class="lp-archive-filters">
+      <label for="archive-period">Thời gian<select name="period" id="archive-period"><option value="7"{% if selected_period == '7' %} selected{% endif %}>7 ngày gần nhất</option><option value="30"{% if selected_period == '30' %} selected{% endif %}>30 ngày gần nhất</option><option value="all"{% if selected_period == 'all' %} selected{% endif %}>Toàn bộ thời gian</option></select></label>
+      <label for="archive-source">Nguồn từ<select name="source" id="archive-source"><option value="">Mọi nguồn từ</option><option value="all"{% if selected_source == 'all' %} selected{% endif %}>Thư viện từ vựng</option><option value="saved"{% if selected_source == 'saved' %} selected{% endif %}>Sổ từ cá nhân</option><option value="weak"{% if selected_source == 'weak' %} selected{% endif %}>Từ cần ôn</option><option value="due"{% if selected_source == 'due' %} selected{% endif %}>Gõ từ đến lịch ôn</option></select></label>
+      <label for="archive-kind">Loại lượt làm<select name="kind" id="archive-kind"><option value="">Quiz mới và luyện lại</option><option value="new"{% if selected_kind == 'new' %} selected{% endif %}>Chỉ quiz mới</option><option value="review"{% if selected_kind == 'review' %} selected{% endif %}>Chỉ luyện lại</option></select></label>
+      <label for="archive-mode">Cách luyện<select name="mode" id="archive-mode"><option value="">Mọi cách luyện</option><option value="meaning"{% if selected_mode == 'meaning' %} selected{% endif %}>Chọn nghĩa</option><option value="recall"{% if selected_mode == 'recall' %} selected{% endif %}>Gõ từ tiếng Anh</option></select></label>
+      <label for="archive-level">Mức đã chọn<select name="level" id="archive-level"><option value="">Mọi mức đã chọn</option>{% for level in levels %}<option value="{{ level }}"{% if selected_level == level %} selected{% endif %}>{{ level }}</option>{% endfor %}</select></label>
+      <label for="archive-topic">Chủ đề đã chọn<select name="topic" id="archive-topic"><option value="">Mọi chủ đề</option>{% for topic in topics %}<option value="{{ topic }}"{% if selected_topic == topic %} selected{% endif %}>{{ topic }}</option>{% endfor %}</select></label>
+      <div class="lp-archive-filter-actions"><button class="button secondary" type="submit">Áp dụng bộ lọc</button>{% if has_filters %}<a href="{% url 'learning:quiz_history' %}">Đặt lại</a>{% endif %}</div>
+    </form>
+    <p class="lp-archive-filter-note">Mức và chủ đề là bộ lọc đã chọn khi tạo quiz; “mọi cấp độ” có thể chứa từ ở nhiều mức. Lịch sử chỉ gồm các lượt đã nộp cho mục tiêu hiện tại.</p>
+  </section>
+
+  <section class="lp-archive-results" aria-labelledby="archive-results-title">
+    <div class="lp-archive-section-heading"><div><span class="eyebrow">{{ period_label }}</span><h2 id="archive-results-title">{{ filtered_count }} lượt{% if has_filters %} phù hợp{% else %} trong lịch sử{% endif %}</h2></div><span class="lp-archive-total">{{ history_count }} lượt đã nộp · {{ profile.exam_goal }}</span></div>
+    {% if quizzes %}
+    <div class="lp-archive-list">{% for quiz in quizzes %}
+      <a class="lp-archive-item{% if quiz.is_retry %} is-review{% endif %}" href="{% url 'learning:quiz_result' quiz.pk %}">
+        <span class="lp-archive-item-symbol" aria-hidden="true">{% if quiz.is_retry %}↻{% else %}✦{% endif %}</span>
+        <div class="lp-archive-item-copy"><div class="lp-archive-item-tags"><span class="lp-archive-kind">{% if quiz.is_retry %}Luyện lại{% else %}Quiz mới{% endif %}</span><span class="lp-quiz-mode-badge{% if quiz.mode == 'recall' %} is-recall{% endif %}">{% if quiz.mode == 'recall' %}Gõ từ{% else %}Chọn nghĩa{% endif %}</span><span class="lp-archive-source{% if quiz.vocabulary_source == 'saved' %} source-saved{% elif quiz.vocabulary_source == 'due' %} source-due{% elif quiz.vocabulary_source == 'weak' %} source-weak{% endif %}">{% if quiz.vocabulary_source == 'saved' %}☆ Sổ cá nhân{% elif quiz.vocabulary_source == 'due' %}◷ Gõ từ đến lịch ôn{% elif quiz.vocabulary_source == 'weak' %}↺ Từ cần ôn{% else %}Aa Thư viện{% endif %}</span></div><h3>{% if quiz.vocabulary_source == 'due' %}{% if quiz.is_retry %}Luyện lại từ đến lịch ôn{% else %}Gõ từ đến lịch ôn{% endif %}{% if quiz.topic %} · {{ quiz.topic }}{% endif %}{% else %}{{ quiz.topic|default:'Khám phá từ vựng' }}{% endif %}</h3><p><time datetime="{{ quiz.submitted_at|date:'c' }}">{{ quiz.submitted_at|date:'d/m/Y · H:i' }}</time><span aria-hidden="true"> · </span>{{ quiz.cefr_level|default:'Mọi cấp độ' }}<span aria-hidden="true"> · </span>{{ quiz.question_count }} câu</p></div>
+        <div class="lp-archive-item-result"><strong>{{ quiz.correct_count }}<small>/{{ quiz.question_count }}</small></strong><span>câu đúng · {{ quiz.accuracy }}%</span><span class="lp-archive-item-xp">{% if quiz.is_retry %}Không cộng XP{% else %}+{{ quiz.xp_earned }} XP{% endif %}</span></div><span class="lp-archive-item-arrow" aria-hidden="true">↗</span>
+      </a>
+    {% endfor %}</div>
+    {% if page_obj.has_other_pages %}<nav class="lp-archive-pagination" aria-label="Trang lịch sử quiz">{% if page_obj.has_previous %}<a href="?{{ pagination_query }}&amp;page={{ page_obj.previous_page_number }}">← Trang trước</a>{% endif %}<span>Trang {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>{% if page_obj.has_next %}<a href="?{{ pagination_query }}&amp;page={{ page_obj.next_page_number }}">Trang sau →</a>{% endif %}</nav>{% endif %}
+    {% else %}
+    <div class="lp-archive-empty"><span aria-hidden="true">{% if history_count %}⌕{% else %}✧{% endif %}</span><h3>{% if history_count %}Chưa có lượt phù hợp{% else %}Lịch sử bắt đầu từ một quiz nhỏ{% endif %}</h3><p>{% if history_count %}Thử đổi thời gian, nguồn từ, cách luyện hoặc loại lượt làm để tìm lại kết quả của bạn.{% else %}Hoàn thành quiz đầu tiên cho {{ profile.exam_goal }}. Kết quả và những từ đã gặp sẽ luôn có chỗ để bạn quay lại.{% endif %}</p>{% if history_count %}<a class="button secondary" href="{% url 'learning:quiz_history' %}?period=all">Xem toàn bộ lịch sử</a>{% else %}<a class="button primary" href="{% url 'learning:quiz_hub' %}">Chọn quiz đầu tiên →</a>{% endif %}</div>
+    {% endif %}
+  </section>
+</div>
+{% endblock %}

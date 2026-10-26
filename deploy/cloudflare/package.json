@@ -1,0 +1,11 @@
+{
+  "name": "linguapath-cloudflare",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "wrangler deploy --dry-run --outdir .worker-build",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": { "@cloudflare/containers": "0.3.7" },
+  "devDependencies": { "wrangler": "4.151.2" }
+}

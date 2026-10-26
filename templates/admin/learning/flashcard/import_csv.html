@@ -1,0 +1,15 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% block content %}
+<div id="content-main">
+  <p>CSV phải mã hóa UTF-8. Cột bắt buộc: <code>term, meaning_vi, cefr_level</code>.</p>
+  <p>Cột tùy chọn: <code>{{ expected_columns }}</code>. Từ vựng cần là nội dung tự biên soạn hoặc có quyền sử dụng; khai báo nguồn và quyền bên dưới.</p>
+  <p><strong>Chế độ nhập là gộp/cập nhật:</strong> thẻ có trong CSV sẽ được thêm mới hoặc cập nhật theo từ; thẻ cũ không có trong tệp vẫn được giữ lại. Tệp rỗng hoặc thiếu cột sẽ bị từ chối.</p>
+  <p>Mỗi lần nhập đều gỡ xuất bản và xóa thông tin rà soát cũ. Bộ học liệu trở về trạng thái nháp; hãy rà soát lại toàn bộ bộ từ trước khi xuất bản.</p>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="submit-row"><input type="submit" value="Kiểm tra và nhập CSV" class="default"></div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,75 @@
+{
+  "version": "linguapath-controlled-trip-repair-v1",
+  "migration": "0022_flashcard_availability",
+  "scope": "Known CSV-shift repair and temporary quarantine; no professional approval or republishing.",
+  "backup_sha256": "6e399fcaba0e827df179f80d4884ce1822cccc0e1fea2749f4ef04993cd11008",
+  "changed_original_fields": {
+    "learning_flashcard": [
+      {
+        "id": 778,
+        "fields": {
+          "example_vi": {
+            "before": "Cuối tuần trước",
+            "after": "Cuối tuần trước, chúng tôi đã có chuyến đi ngắn đến bờ biển."
+          },
+          "topic": {
+            "before": "chúng tôi đã có chuyến đi ngắn đến bờ biển.",
+            "after": "Travel"
+          }
+        }
+      }
+    ],
+    "learning_learningcontent": [
+      {
+        "id": 45,
+        "fields": {
+          "is_published": {
+            "before": 1,
+            "after": 0
+          },
+          "updated_at": {
+            "before": "2026-10-19 14:07:25.080153",
+            "after": "2026-10-25 08:36:38.283718"
+          },
+          "review_note": {
+            "before": "Câu hỏi trắc nghiệm sinh trực tiếp từ từng thẻ; cần giáo viên kiểm tra nội dung từ và mức CEFR trước khi dùng như bài đánh giá chính thức.",
+            "after": ""
+          },
+          "review_status": {
+            "before": "language_checked",
+            "after": "draft"
+          },
+          "reviewed_at": {
+            "before": "2026-10-19 14:07:25.079200",
+            "after": null
+          },
+          "reviewer": {
+            "before": "AI language QA (chưa được giáo viên duyệt)",
+            "after": ""
+          }
+        }
+      }
+    ],
+    "learning_question": [
+      {
+        "id": 706,
+        "fields": {
+          "explanation_vi": {
+            "before": "trip nghĩa là “chuyến đi”. Ví dụ: We took a short trip to the coast last weekend. — Cuối tuần trước",
+            "after": "trip nghĩa là “chuyến đi”. Ví dụ: We took a short trip to the coast last weekend. — Cuối tuần trước, chúng tôi đã có chuyến đi ngắn đến bờ biển."
+          }
+        }
+      }
+    ]
+  },
+  "held_cards": [
+    {
+      "id": 778,
+      "is_available": 0,
+      "availability_note": "Đã sửa lỗi lệch cột CSV của trip; tạm giữ riêng thẻ để người có chuyên môn rà lại trước khi sử dụng."
+    }
+  ],
+  "other_original_rows_unchanged": true,
+  "database_integrity": "ok",
+  "teacher_approval_added": false
+}

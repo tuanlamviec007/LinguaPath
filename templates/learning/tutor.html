@@ -1,0 +1,187 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Trợ lý học tập · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/tutor-workspace.css' %}">
+<div class="tutor-workspace">
+  <section class="tutor-hero" aria-labelledby="tutor-title">
+    <div class="tutor-hero-copy">
+      <span class="tutor-eyebrow">TRỢ LÝ HỌC TOEIC</span>
+      <h1 id="tutor-title">Trợ lý <em>học TOEIC</em></h1>
+      <p>Từ một câu chưa hiểu đến việc cần học hôm nay. Tra kiến thức, xem lời giải và chọn bài luyện phù hợp với bạn.</p>
+    </div>
+    <div class="tutor-hero-mark" aria-hidden="true"><span>✦</span><small>HỎI · HIỂU · ÔN TẬP</small></div>
+  </section>
+
+  <nav class="tutor-launchpad" aria-label="Công cụ học tập">
+    <a href="#compose-title" class="tutor-tool"><span class="tutor-tool-icon" aria-hidden="true">Aa</span><strong>Hỏi kiến thức</strong><small>Từ vựng, ngữ pháp, cách làm bài</small></a>
+    <a href="#tutor-practice" class="tutor-tool"><span class="tutor-tool-icon" aria-hidden="true">01</span><strong>Luyện tập phù hợp</strong><small>Bộ câu hỏi có sẵn và lời giải</small></a>
+    <form method="post">{% csrf_token %}<button type="submit" name="action" value="progress" class="tutor-tool"><span class="tutor-tool-icon" aria-hidden="true">↗</span><strong>Tiến độ của tôi</strong><small>Kết quả thật và nhóm lỗi đang chờ ôn</small></button></form>
+    <form method="post">{% csrf_token %}<button type="submit" name="action" value="plan" class="tutor-tool"><span class="tutor-tool-icon" aria-hidden="true">✓</span><strong>Nhiệm vụ hôm nay</strong><small>Kế hoạch theo thời gian và mục tiêu</small></button></form>
+  </nav>
+
+  <div class="tutor-layout">
+    <section class="tutor-compose-card" aria-labelledby="compose-title">
+      <div class="tutor-compose-heading">
+        <div><span class="tutor-eyebrow">BẮT ĐẦU TỪ CÂU HỎI</span><h2 id="compose-title">Bạn muốn tìm hiểu điều gì?</h2></div>
+        {% if llm_enabled %}<div class="tutor-quota" role="note"><strong>{{ ai_calls_remaining }}<span>/{{ ai_daily_limit }}</span></strong><small>lượt AI cá nhân còn hôm nay</small></div>{% endif %}
+      </div>
+
+      {% if suggested_prompts %}
+        <div class="tutor-suggestions" aria-label="Gợi ý câu hỏi">
+          <span>Gợi ý để bắt đầu</span>
+          {% for suggestion in suggested_prompts %}<button type="button" class="tutor-suggestion" data-prompt="{{ suggestion }}">{{ suggestion }}</button>{% endfor %}
+        </div>
+      {% endif %}
+
+      <form method="post" class="tutor-form" data-tutor-form>
+        {% csrf_token %}
+        <input type="hidden" name="question_id" value="{{ context_question_id }}">
+        <fieldset class="tutor-query-mode" aria-describedby="description-mode-note">
+          <legend>Bạn muốn tìm gì?</legend>
+          <div class="tutor-query-mode-grid">
+            <label class="tutor-mode-option">
+              <input type="radio" name="query_mode" value="auto"{% if query_mode != 'description' %} checked{% endif %}>
+              <span><strong>Hỏi từ / kiến thức</strong><small>Nêu mục từ, ngữ pháp hoặc câu hỏi đã nộp.</small></span>
+            </label>
+            <label class="tutor-mode-option">
+              <input type="radio" name="query_mode" value="description"{% if query_mode == 'description' %} checked{% endif %}>
+              <span><strong>Tìm từ theo mô tả</strong><small>Nhớ nghĩa nhưng chưa nhớ từ tiếng Anh? Thử mô tả bằng tiếng Việt.</small></span>
+            </label>
+          </div>
+          <p id="description-mode-note" class="tutor-description-note">Tìm theo mô tả chỉ đối chiếu từ ngữ trong học liệu đã xuất bản, không gửi câu hỏi tới AI. Kết quả là các từ gợi ý; hệ thống chưa hiểu mọi cách diễn đạt hoặc từ đồng nghĩa. Hãy chọn đúng từ trước khi xem giải thích.</p>
+        </fieldset>
+        <fieldset class="tutor-response-mode">
+          <legend>Cách trả lời</legend>
+          <label class="tutor-mode-option">
+            <input type="radio" name="response_mode" value="lookup"{% if tutor_mode != 'ai' or query_mode == 'description' %} checked{% endif %}>
+            <span><strong>Tra cứu học liệu</strong><small>Miễn phí, chỉ tìm trong học liệu đã xuất bản; câu hỏi không gửi tới dịch vụ AI.</small></span>
+          </label>
+          {% if llm_enabled %}
+            <label class="tutor-mode-option">
+              <input type="radio" name="response_mode" value="ai"{% if query_mode == 'description' %} disabled{% elif tutor_mode == 'ai' %} checked{% endif %}>
+              <span><strong>AI hỗ trợ</strong><small>Dùng lượt AI cá nhân để giải thích dựa trên học liệu liên quan. Câu trả lời cần được đối chiếu với nguồn.</small></span>
+            </label>
+          {% endif %}
+        </fieldset>
+        {% if llm_enabled %}<p class="tutor-capacity-note" role="note">Lượt AI còn lại là hạn mức cá nhân. Hệ thống còn áp dụng hạn mức dùng chung và giới hạn yêu cầu trong thời gian ngắn; đôi khi bạn cần thử lại sau. Tra cứu học liệu vẫn dùng được.</p>{% else %}<p class="tutor-availability-note" role="note">AI hỗ trợ hiện chưa sẵn sàng. Bạn vẫn có thể tra cứu học liệu, xem tiến độ và kế hoạch học.</p>{% endif %}
+        <label for="question">Câu hỏi học tập</label>
+        <textarea id="question" name="question" rows="5" maxlength="500" required placeholder="Ví dụ: Khi nào dùng despite và although?">{{ prompt }}</textarea>
+        <div class="tutor-form-meta"><span>Chỉ gửi câu hỏi bạn muốn được giải đáp. Tránh nhập thông tin cá nhân.</span><span class="tutor-char-count"><b data-char-count>0</b>/500 ký tự</span></div>
+        <div class="tutor-form-actions">
+          <button class="button primary tutor-submit" type="submit" data-submit-question>{% if query_mode == 'description' %}Tìm từ gợi ý{% else %}Gửi câu hỏi{% endif %} <span aria-hidden="true">→</span></button>
+          <span class="tutor-submit-status" role="status" aria-live="polite" data-submit-status></span>
+        </div>
+      </form>
+      <p class="tutor-privacy-note">Tra cứu, tiến độ và kế hoạch không tiêu hao lượt AI. Khi chọn “AI hỗ trợ”, câu hỏi và nguồn liên quan được gửi tới dịch vụ AI. Hệ thống lưu tối đa 50 lượt hỏi gần nhất để bạn mở lại hoặc xóa; lịch sử này chưa được gửi làm bộ nhớ hội thoại cho AI.</p>
+    </section>
+
+    <aside class="tutor-side-card" aria-labelledby="tutor-help-title">
+      <span class="tutor-side-icon" aria-hidden="true">Aa</span>
+      <h2 id="tutor-help-title">Cách hỏi hiệu quả</h2>
+      <ul>
+        <li>Nêu từ, cấu trúc hoặc câu hỏi cụ thể.</li>
+        <li>Hỏi vì sao một đáp án đúng hoặc sai.</li>
+        <li>Yêu cầu ví dụ ngắn theo ngữ cảnh TOEIC.</li>
+      </ul>
+      {% if llm_enabled %}<p class="tutor-side-quota">Tra cứu trong học liệu không tiêu hao lượt AI cá nhân. Lượt diễn giải còn phụ thuộc vào giới hạn chung và tình trạng phục vụ của hệ thống.</p>{% endif %}
+      <div class="tutor-profile"><span>LỘ TRÌNH CỦA BẠN</span><strong>{{ profile.current_cefr }} → {{ profile.target_cefr }}</strong><p>{{ profile.daily_minutes }} phút mỗi ngày{% if profile.target_score %} · TOEIC mục tiêu {{ profile.target_score }}{% endif %}</p><a href="{% url 'learning_goal' %}">Điều chỉnh mục tiêu →</a></div>
+      <p class="tutor-side-quota">Muốn hỏi về đáp án? Mở kết quả bài đã nộp và chọn trợ lý để giữ đúng ngữ cảnh câu hỏi.</p>
+    </aside>
+  </div>
+
+  {% if answer or mode == 'context_insufficient' %}
+    <section class="tutor-response{% if mode == 'context_insufficient' %} is-context-insufficient{% endif %}" aria-labelledby="answer-title">
+      <div class="tutor-response-heading">
+        <div><span class="tutor-eyebrow">PHẢN HỒI</span><h2 id="answer-title">{% if query_mode == 'description' %}Từ gợi ý theo mô tả{% else %}Câu trả lời{% endif %}</h2></div>
+        <span class="tutor-mode-badge{% if mode == 'llm_rag' %} is-ai{% elif mode == 'context_insufficient' %} is-context-insufficient{% endif %}">
+          {% if mode == 'llm_rag' %}AI hỗ trợ{% elif mode == 'learning_data' %}Dữ liệu học của bạn{% elif mode == 'daily_plan' %}Kế hoạch theo quy tắc{% elif mode == 'context_insufficient' %}Chưa đủ ngữ cảnh{% elif mode == 'needs_context' and query_mode == 'description' %}Chọn từ để tiếp tục{% elif mode == 'needs_context' %}Cần thêm ngữ cảnh{% elif mode == 'no_match' %}Chưa tìm thấy nguồn phù hợp{% else %}Tra cứu{% endif %}
+        </span>
+      </div>
+      {% if history_notice %}
+        <aside class="tutor-history-notice{% if history_notice.severity == 'warning' %} is-warning{% endif %}" aria-labelledby="tutor-history-notice-title" role="note">
+          <h3 id="tutor-history-notice-title">Câu trả lời đã lưu{% if history_notice.created_at %} · <time datetime="{{ history_notice.created_at|date:'c' }}">{{ history_notice.created_at|date:'d/m/Y H:i' }}</time>{% endif %}</h3>
+          <p>{{ history_notice.message }}</p>
+          {% if history_notice.state == 'stale' or history_notice.state == 'withdrawn' or history_notice.state == 'legacy' %}<p>Nội dung trả lời bên dưới được giữ theo thời điểm bạn đã hỏi. Trạng thái duyệt cũ không xác nhận chất lượng của nguồn hiện tại.</p>{% endif %}
+        </aside>
+      {% endif %}
+      {% if mode == 'context_insufficient' %}
+        <div class="tutor-context-note" role="status" aria-live="polite"><h3>Chưa đủ ngữ cảnh để AI hỗ trợ</h3><p>Yêu cầu này chưa có đủ phần học liệu cần thiết để gửi tới AI. Hãy tập trung vào một từ hoặc một câu hỏi, hoặc mở học liệu liên quan để xem đầy đủ nội dung.</p></div>
+      {% endif %}
+      {% if answer %}<div class="tutor-answer-copy">{{ answer|linebreaksbr }}</div>{% endif %}
+      {% if query_mode == 'description' %}<p class="tutor-description-result-note" role="note">Các gợi ý bên dưới dựa vào phần từ ngữ trùng với mô tả. Chọn một mục từ để mở phần tra cứu; thao tác chọn này không dùng lượt AI.</p>{% endif %}
+      {% if tutor_actions %}<div class="tutor-action-links">{% for action in tutor_actions %}{% if action.href and action.link_available != False %}<a class="button secondary" href="{{ action.href }}">{{ action.title }} →</a>{% else %}<span class="tutor-source-unavailable">{{ action.title }} · liên kết chưa xác minh</span>{% endif %}{% endfor %}</div>{% endif %}
+
+      {% if evidence_sources %}
+        <div class="tutor-evidence" aria-labelledby="evidence-title">
+          <div class="tutor-evidence-heading"><h3 id="evidence-title">{% if query_mode == 'description' %}Bạn đang muốn tìm từ nào?{% else %}Học liệu liên quan{% endif %}</h3><span>{{ evidence_sources|length }} nguồn</span></div>
+          <div class="tutor-source-grid">
+            {% for source in evidence_sources %}
+              <article class="tutor-source-card">
+                <div class="tutor-source-top">
+                  <span class="tutor-source-kind">{% if source.label %}{{ source.label }}{% elif source.kind %}{{ source.kind }}{% else %}Học liệu{% endif %}</span>
+                  {% if history_notice %}
+                    <span class="tutor-review-status is-historical">{% if source.review_status_as_of == 'teacher_approved' %}Lúc trả lời: đã duyệt chuyên môn{% elif source.review_status_as_of == 'language_checked' %}Lúc trả lời: AI rà soát sơ bộ · chưa giảng viên duyệt{% else %}Trạng thái duyệt lúc trả lời: chưa xác minh{% endif %}</span>
+                  {% else %}
+                    <span class="tutor-review-status{% if source.review_status == 'teacher_approved' %} is-approved{% endif %}">{% if source.review_status == 'teacher_approved' %}Đã duyệt chuyên môn{% elif source.review_status == 'language_checked' %}AI rà soát sơ bộ · chưa giảng viên duyệt{% else %}Học liệu tham khảo{% endif %}</span>
+                  {% endif %}
+                </div>
+                <h4>{{ source.title }}</h4>
+                {% if source.meaning_vi %}<p class="tutor-source-meaning">{{ source.meaning_vi }}</p>{% endif %}
+                {% if source.provenance_state %}
+                  <div class="tutor-source-provenance{% if source.provenance_state != 'current' %} is-warning{% endif %}">
+                    <strong>{% if source.provenance_state == 'stale' %}Nguồn đã thay đổi{% elif source.provenance_state == 'withdrawn' %}Nguồn hiện không còn truy cập được{% elif source.provenance_state == 'legacy' %}Chưa xác minh được nguồn cũ{% else %}Nguồn hiện vẫn khớp{% endif %}</strong>
+                    {% if source.provenance_message %}<p>{{ source.provenance_message }}</p>{% endif %}
+                    {% if source.provenance_state == 'current' and source.current_review_status %}<p>Hiện tại: {% if source.current_review_status == 'teacher_approved' %}đã duyệt chuyên môn{% elif source.current_review_status == 'language_checked' %}AI rà soát sơ bộ · chưa giảng viên duyệt{% else %}học liệu tham khảo{% endif %}.</p>{% endif %}
+                  </div>
+                {% endif %}
+                {% if source.href and source.link_available != False %}<a href="{{ source.href }}">{% if source.provenance_state == 'stale' %}Mở bản học liệu hiện tại{% else %}Mở học liệu{% endif %} <span aria-hidden="true">↗</span></a>{% elif source.link_available == False or source.provenance_state == 'withdrawn' or source.provenance_state == 'legacy' %}<span class="tutor-source-unavailable">Không thể mở nguồn hiện tại</span>{% endif %}
+                {% if query_mode == 'description' and source.kind == 'flashcard' and source.label and source.meaning_vi and source.href and source.link_available != False and source.source_ref.kind == 'flashcard' and source.source_ref.object_id and source.source_ref.version %}
+                  {% if not source.provenance_state or source.provenance_state == 'current' %}
+                    <form method="post" class="tutor-candidate-choice">
+                      {% csrf_token %}
+                      <input type="hidden" name="action" value="select_candidate">
+                      <input type="hidden" name="candidate_id" value="{{ source.source_ref.object_id }}">
+                      <input type="hidden" name="candidate_version" value="{{ source.source_ref.version }}">
+                      <input type="hidden" name="query_mode" value="auto">
+                      <input type="hidden" name="response_mode" value="lookup">
+                      <input type="hidden" name="question" value="Giải thích từ “{{ source.label }}” trong ngữ cảnh: {{ source.meaning_vi }}.">
+                      <button type="submit" class="button secondary">Chọn {{ source.label }} <span aria-hidden="true">→</span></button>
+                    </form>
+                  {% endif %}
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if mode == 'context_insufficient' %}
+        <div class="tutor-next-step"><p>Bạn có thể tiếp tục với Tra cứu hoặc chọn bài luyện để đặt câu hỏi cụ thể hơn.</p><a class="button secondary" href="#compose-title">Trở lại câu hỏi →</a></div>
+      {% elif mode == 'no_match' %}
+        <div class="tutor-next-step"><p>Thử hỏi bằng từ khóa khác hoặc chọn một bài luyện để xem thêm nội dung liên quan.</p><a class="button secondary" href="{% url 'learning:practice_list' %}">Mở thư viện bài luyện →</a></div>
+      {% elif not evidence_sources and mode != 'learning_data' and mode != 'daily_plan' %}
+        <p class="tutor-no-sources">Chưa có nguồn học liệu đính kèm cho câu trả lời này.</p>
+      {% endif %}
+    </section>
+  {% else %}
+    <section class="tutor-welcome" aria-label="Bắt đầu sử dụng trợ lý">
+      <span class="tutor-welcome-mark" aria-hidden="true">✦</span>
+      <div><h2>Học liệu trước, câu trả lời rõ ràng</h2><p>Hãy hỏi về một từ, câu hỏi Reading/Listening hoặc phần giải thích trong bài luyện. Các gợi ý phía trên chỉ điền nội dung, không tự gửi câu hỏi.</p></div>
+    </section>
+  {% endif %}
+
+  <section id="tutor-practice" class="tutor-practice-panel" aria-labelledby="tutor-practice-title">
+    <div class="tutor-section-heading"><div><span class="tutor-eyebrow">THỰC HÀNH SAU KHI HỎI</span><h2 id="tutor-practice-title">Bài luyện mức {{ profile.current_cefr }}</h2></div><a href="{% url 'learning:practice_list' %}?level={{ profile.current_cefr }}">Xem tất cả →</a></div>
+    <p class="tutor-panel-note">Chọn từ kho bài tập hiện có, chấm bằng đáp án lưu sẵn. Bản nháp do AI soạn cần được biên tập và duyệt trong admin trước khi xuất bản cho người học.</p>
+    <div class="tutor-practice-grid">{% for item in recommended_practice %}<a class="tutor-practice-item" href="{% url 'learning:practice' item.id %}"><span>{{ item.get_skill_display }} · {{ item.cefr_level }}</span><h3>{{ item.title }}</h3><small>{{ item.question_total }} câu · khoảng {{ item.estimated_minutes }} phút <b aria-hidden="true">→</b></small></a>{% empty %}<p class="tutor-panel-note">Chưa có bộ luyện được xuất bản ở mức này. Hãy mở thư viện để chọn kỹ năng và cấp độ khác.</p>{% endfor %}</div>
+    <div class="tutor-library-links"><a href="{% url 'learning:flashcards' %}?level={{ profile.current_cefr }}">Flashcard</a><a href="{% url 'learning:practice_list' %}?skill=vocabulary&amp;mode=cloze&amp;level={{ profile.current_cefr }}">Điền từ</a><a href="{% url 'learning:practice_list' %}?skill=listening">Listening</a><a href="{% url 'learning:practice_list' %}?skill=reading">Reading</a></div>
+  </section>
+
+  <div class="tutor-reference-grid">
+    <section class="tutor-reference-panel" aria-labelledby="knowledge-title"><span class="tutor-eyebrow">SỔ TAY NHANH</span><h2 id="knowledge-title">Hiểu một điểm, áp dụng ngay</h2><p class="tutor-panel-note">Ghi chú tự biên soạn, AI rà soát sơ bộ; chưa được giảng viên duyệt chuyên môn.</p>{% for note in knowledge_notes %}<details id="knowledge-{{ note.id }}"><summary>{{ note.title }}</summary><p>{{ note.text|linebreaksbr }}</p><button type="button" class="tutor-suggestion" data-prompt="Giải thích {{ note.title }}.">Hỏi thêm về nội dung này →</button></details>{% endfor %}</section>
+    <section class="tutor-reference-panel" aria-labelledby="history-title"><div class="tutor-section-heading"><div><span class="tutor-eyebrow">TIẾP TỤC VIỆC HỌC</span><h2 id="history-title">Câu hỏi gần đây</h2></div></div><ol class="tutor-history">{% for turn in tutor_history %}<li><a href="{% url 'tutor' %}?turn={{ turn.pk }}#answer-title">{{ turn.question }}</a><time datetime="{{ turn.created_at|date:'c' }}">{{ turn.created_at|date:'H:i · d/m' }}</time></li>{% empty %}<li>Chưa có lịch sử. Bắt đầu bằng một câu hỏi ngắn phía trên.</li>{% endfor %}</ol>{% if tutor_history %}<form method="post" class="tutor-clear-history">{% csrf_token %}<button type="submit" name="action" value="clear_history">Xóa lịch sử trợ lý của tôi</button></form>{% endif %}<p class="tutor-panel-note">Hiển thị 8 lượt mới nhất. Lưu trữ tối đa 50 lượt; lịch sử riêng theo tài khoản.</p></section>
+  </div>
+</div>
+<script src="{% static 'js/tutor-workspace.js' %}" defer></script>
+{% endblock %}

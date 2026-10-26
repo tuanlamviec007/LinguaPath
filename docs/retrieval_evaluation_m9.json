@@ -1,0 +1,297 @@
+{
+  "generated_at": "2026-10-25T08:42:42.435567+00:00",
+  "benchmark_version": "2",
+  "benchmark_sha256": "e8bd2bb26e8336cb213b002ffaa7ce9e5445033ffb0088d99112c19b9c756fd6",
+  "visible_card_count": 3055,
+  "k": 3,
+  "corpus_sha256": "b9ad9abe20b63e467c82d169bc4873289959b853eb0cedd3357af034309f49db",
+  "includes_test": true,
+  "retriever_sha256": {
+    "baseline": "6e5e8556ac20a2c74f0943632fe184c3049ef1436d0f89c73d65d08c304eba25",
+    "previous": "ab09234dedfa308fa84e7326893c1d6e608f5b84d41b2c45482fa941dc7af159",
+    "improved": "ccc1bd6cccd625e914eb4d6413208c5df953a7319145d5f80e536cf437af5ecb"
+  },
+  "scope": "Vocabulary retrieval only; AI-editorial gold; no LLM answer-quality evaluation.",
+  "baseline": {
+    "overall": {
+      "queries": 96,
+      "positive_queries": 80,
+      "negative_queries": 16,
+      "recall_at_3": 0.275,
+      "hit_at_3": 0.275,
+      "mrr_at_3": 0.2313,
+      "negative_abstention_rate": 0.0,
+      "abstention_precision": 0.0,
+      "false_positive_negatives": 16
+    },
+    "by_split": {
+      "dev": {
+        "queries": 48,
+        "positive_queries": 40,
+        "negative_queries": 8,
+        "recall_at_3": 0.375,
+        "hit_at_3": 0.375,
+        "mrr_at_3": 0.2875,
+        "negative_abstention_rate": 0.0,
+        "abstention_precision": 0.0,
+        "false_positive_negatives": 8
+      },
+      "test": {
+        "queries": 48,
+        "positive_queries": 40,
+        "negative_queries": 8,
+        "recall_at_3": 0.175,
+        "hit_at_3": 0.175,
+        "mrr_at_3": 0.175,
+        "negative_abstention_rate": 0.0,
+        "abstention_precision": 0.0,
+        "false_positive_negatives": 8
+      }
+    },
+    "by_category": {
+      "english": {
+        "queries": 20,
+        "positive_queries": 20,
+        "negative_queries": 0,
+        "recall_at_3": 0.2,
+        "hit_at_3": 0.2,
+        "mrr_at_3": 0.2,
+        "negative_abstention_rate": null,
+        "abstention_precision": 0.0,
+        "false_positive_negatives": 0
+      },
+      "no_match": {
+        "queries": 16,
+        "positive_queries": 0,
+        "negative_queries": 16,
+        "recall_at_3": null,
+        "hit_at_3": null,
+        "mrr_at_3": null,
+        "negative_abstention_rate": 0.0,
+        "abstention_precision": null,
+        "false_positive_negatives": 16
+      },
+      "paraphrase": {
+        "queries": 20,
+        "positive_queries": 20,
+        "negative_queries": 0,
+        "recall_at_3": 0.15,
+        "hit_at_3": 0.15,
+        "mrr_at_3": 0.1167,
+        "negative_abstention_rate": null,
+        "abstention_precision": null,
+        "false_positive_negatives": 0
+      },
+      "unaccented": {
+        "queries": 20,
+        "positive_queries": 20,
+        "negative_queries": 0,
+        "recall_at_3": 0.4,
+        "hit_at_3": 0.4,
+        "mrr_at_3": 0.3417,
+        "negative_abstention_rate": null,
+        "abstention_precision": 0.0,
+        "false_positive_negatives": 0
+      },
+      "vietnamese": {
+        "queries": 20,
+        "positive_queries": 20,
+        "negative_queries": 0,
+        "recall_at_3": 0.35,
+        "hit_at_3": 0.35,
+        "mrr_at_3": 0.2667,
+        "negative_abstention_rate": null,
+        "abstention_precision": null,
+        "false_positive_negatives": 0
+      }
+    }
+  },
+  "previous": {
+    "overall": {
+      "queries": 96,
+      "positive_queries": 80,
+      "negative_queries": 16,
+      "recall_at_3": 0.775,
+      "hit_at_3": 0.775,
+      "mrr_at_3": 0.7688,
+      "negative_abstention_rate": 0.0,
+      "abstention_precision": null,
+      "false_positive_negatives": 16
+    },
+    "by_split": {
+      "dev": {
+        "queries": 48,
+        "positive_queries": 40,
+        "negative_queries": 8,
+        "recall_at_3": 0.8,
+        "hit_at_3": 0.8,
+        "mrr_at_3": 0.7875,
+        "negative_abstention_rate": 0.0,
+        "abstention_precision": null,
+        "false_positive_negatives": 8
+      },
+      "test": {
+        "queries": 48,
+        "positive_queries": 40,
+        "negative_queries": 8,
+        "recall_at_3": 0.75,
+        "hit_at_3": 0.75,
+        "mrr_at_3": 0.75,
+        "negative_abstention_rate": 0.0,
+        "abstention_precision": null,
+        "false_positive_negatives": 8
+      }
+    },
+    "by_category": {
+      "english": {
+        "queries": 20,
+        "positive_queries": 20,
+        "negative_queries": 0,
+        "recall_at_3": 1.0,
+        "hit_at_3": 1.0,
+        "mrr_at_3": 1.0,
+        "negative_abstention_rate": null,
+        "abstention_precision": null,
+        "false_positive_negatives": 0
+      },
+      "no_match": {
+        "queries": 16,
+        "positive_queries": 0,
+        "negative_queries": 16,
+        "recall_at_3": null,
+        "hit_at_3": null,
+        "mrr_at_3": null,
+        "negative_abstention_rate": 0.0,
+        "abstention_precision": null,
+        "false_positive_negatives": 16
+      },
+      "paraphrase": {
+        "queries": 20,
+        "positive_queries": 20,
+        "negative_queries": 0,
+        "recall_at_3": 0.1,
+        "hit_at_3": 0.1,
+        "mrr_at_3": 0.075,
+        "negative_abstention_rate": null,
+        "abstention_precision": null,
+        "false_positive_negatives": 0
+      },
+      "unaccented": {
+        "queries": 20,
+        "positive_queries": 20,
+        "negative_queries": 0,
+        "recall_at_3": 1.0,
+        "hit_at_3": 1.0,
+        "mrr_at_3": 1.0,
+        "negative_abstention_rate": null,
+        "abstention_precision": null,
+        "false_positive_negatives": 0
+      },
+      "vietnamese": {
+        "queries": 20,
+        "positive_queries": 20,
+        "negative_queries": 0,
+        "recall_at_3": 1.0,
+        "hit_at_3": 1.0,
+        "mrr_at_3": 1.0,
+        "negative_abstention_rate": null,
+        "abstention_precision": null,
+        "false_positive_negatives": 0
+      }
+    }
+  },
+  "improved": {
+    "overall": {
+      "queries": 96,
+      "positive_queries": 80,
+      "negative_queries": 16,
+      "recall_at_3": 0.7125,
+      "hit_at_3": 0.7125,
+      "mrr_at_3": 0.7,
+      "negative_abstention_rate": 0.3125,
+      "abstention_precision": 0.5,
+      "false_positive_negatives": 11
+    },
+    "by_split": {
+      "dev": {
+        "queries": 48,
+        "positive_queries": 40,
+        "negative_queries": 8,
+        "recall_at_3": 0.75,
+        "hit_at_3": 0.75,
+        "mrr_at_3": 0.725,
+        "negative_abstention_rate": 0.375,
+        "abstention_precision": 0.6,
+        "false_positive_negatives": 5
+      },
+      "test": {
+        "queries": 48,
+        "positive_queries": 40,
+        "negative_queries": 8,
+        "recall_at_3": 0.675,
+        "hit_at_3": 0.675,
+        "mrr_at_3": 0.675,
+        "negative_abstention_rate": 0.25,
+        "abstention_precision": 0.4,
+        "false_positive_negatives": 6
+      }
+    },
+    "by_category": {
+      "english": {
+        "queries": 20,
+        "positive_queries": 20,
+        "negative_queries": 0,
+        "recall_at_3": 0.75,
+        "hit_at_3": 0.75,
+        "mrr_at_3": 0.75,
+        "negative_abstention_rate": null,
+        "abstention_precision": 0.0,
+        "false_positive_negatives": 0
+      },
+      "no_match": {
+        "queries": 16,
+        "positive_queries": 0,
+        "negative_queries": 16,
+        "recall_at_3": null,
+        "hit_at_3": null,
+        "mrr_at_3": null,
+        "negative_abstention_rate": 0.3125,
+        "abstention_precision": 1.0,
+        "false_positive_negatives": 11
+      },
+      "paraphrase": {
+        "queries": 20,
+        "positive_queries": 20,
+        "negative_queries": 0,
+        "recall_at_3": 0.1,
+        "hit_at_3": 0.1,
+        "mrr_at_3": 0.05,
+        "negative_abstention_rate": null,
+        "abstention_precision": null,
+        "false_positive_negatives": 0
+      },
+      "unaccented": {
+        "queries": 20,
+        "positive_queries": 20,
+        "negative_queries": 0,
+        "recall_at_3": 1.0,
+        "hit_at_3": 1.0,
+        "mrr_at_3": 1.0,
+        "negative_abstention_rate": null,
+        "abstention_precision": null,
+        "false_positive_negatives": 0
+      },
+      "vietnamese": {
+        "queries": 20,
+        "positive_queries": 20,
+        "negative_queries": 0,
+        "recall_at_3": 1.0,
+        "hit_at_3": 1.0,
+        "mrr_at_3": 1.0,
+        "negative_abstention_rate": null,
+        "abstention_precision": null,
+        "false_positive_negatives": 0
+      }
+    }
+  }
+}

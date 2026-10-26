@@ -1,0 +1,409 @@
+{
+  "baseline_distinct": 1012,
+  "authored_rows": 2160,
+  "extension_rows": 2000,
+  "projected_distinct_at_least": 3012,
+  "cefr_provisional": {
+    "A1": 277,
+    "A2": 440,
+    "B1": 587,
+    "B2": 564,
+    "C1": 132
+  },
+  "topics": {
+    "Actions": 124,
+    "Animals": 90,
+    "Art": 36,
+    "Biology": 9,
+    "Body": 71,
+    "Business": 47,
+    "Certainty": 3,
+    "Chemistry": 13,
+    "Cinema": 17,
+    "Civic life": 40,
+    "Clothing": 57,
+    "Communication": 9,
+    "Computing": 52,
+    "Culture": 17,
+    "Cybersecurity": 5,
+    "Descriptions": 127,
+    "Education": 62,
+    "Energy": 1,
+    "Feelings": 29,
+    "Finance": 67,
+    "Food": 103,
+    "Frequency": 4,
+    "Geography": 9,
+    "Health": 49,
+    "Home": 106,
+    "Jobs": 39,
+    "Kitchen": 59,
+    "Language": 89,
+    "Law": 47,
+    "Literature": 22,
+    "Manner": 1,
+    "Materials": 17,
+    "Mathematics": 33,
+    "Measurement": 5,
+    "Media": 23,
+    "Media technology": 2,
+    "Music": 22,
+    "Nature": 58,
+    "Nutrition": 3,
+    "Office": 36,
+    "Performing arts": 28,
+    "Physics": 13,
+    "Place": 6,
+    "Places": 18,
+    "Plants": 21,
+    "Quantity": 1,
+    "Science": 24,
+    "Services": 6,
+    "Shopping": 33,
+    "Sport": 25,
+    "Student life": 14,
+    "Study": 26,
+    "Technology": 37,
+    "Time": 4,
+    "Transport": 69,
+    "Travel": 20,
+    "Weather": 24,
+    "Work": 28
+  },
+  "exclusions": [
+    {
+      "term": "chicken",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "fish",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "letter",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "notebook",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "mouse",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "pen",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "calculator",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "eraser",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "cold",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "ambulance",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "engineer",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "glass",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "calculator",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "brush",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "curtain",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "drawer",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "duck",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "microphone",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "branch",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "garage",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "note",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "gate",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "ruler",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "sell",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "scissors",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "attendance",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "stop",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "tap",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "clay",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "headset",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "tray",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "uniform",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "mechanic",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "district",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "product",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "internship",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "costume",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "projector",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "embassy",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "laboratory",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "crab",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "scanner",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "brush",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "burn",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "podcast",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "hedge",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "heel",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "palm",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "technician",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "earn",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "fine",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "stationery",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "trainer",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "plug",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "shower",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "apprenticeship",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "cast",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "clipboard",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "swallow",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "socket",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "circulation",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "conductor",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "press",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "turkey",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "share",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "depot",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "smell",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "clam",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "seal",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "sentence",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "beat",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "root",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "lobster",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "mussel",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "octopus",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "oyster",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "plaster",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "plain",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "squid",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "tear",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "consulate",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "municipality",
+      "reason": "duplicate_or_baseline"
+    },
+    {
+      "term": "settlement",
+      "reason": "duplicate_or_baseline"
+    }
+  ],
+  "human_approved": false,
+  "notes": "Structural validation and AI authoring only. Not an official Cambridge list. CEFR and distractors require expert review."
+}

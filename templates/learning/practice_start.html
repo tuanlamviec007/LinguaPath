@@ -1,0 +1,23 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}{{ content.title }} · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/practice-session.css' %}">
+<section class="practice-start panel">
+  <a class="session-dashboard-link" href="{% url 'dashboard' %}">← Về tổng quan</a>
+  <span class="eyebrow">{% if content.cefr_level %}Bài luyện nền tảng{% else %}{{ content.exam_type }}{% endif %} · {{ content.get_skill_display }}{% if content.cefr_level %} · CEFR {{ content.cefr_level }} (tham khảo){% endif %}</span>
+  <h1>{{ content.title }}</h1>
+  <p>{{ content.description }}</p>
+  <div class="start-details"><span>{{ question_count }} câu hỏi</span><span>{{ content.estimated_minutes }} phút</span><span>{{ content.get_difficulty_display }}</span></div>
+  <p class="muted">Kết quả chỉ phản ánh lượt luyện trên website, không phải điểm TOEIC chính thức.</p>
+  <p class="content-review-note" role="note">Một phần học liệu có thể được AI hỗ trợ tạo; nội dung dạng này chỉ để tham khảo và chưa được giáo viên duyệt.</p>
+  {% if active_attempt %}
+    <div class="draft-resume-panel">
+      <div><strong>Bạn có một lượt làm chưa hoàn thành</strong><span>{{ active_attempt.draft_count|default:0 }} câu đã trả lời</span></div>
+      <a class="button primary" href="{% url 'learning:take_attempt' active_attempt.id %}">Tiếp tục bài luyện →</a>
+    </div>
+  {% else %}
+    <form method="post">{% csrf_token %}<button class="button primary" type="submit">Bắt đầu bài luyện →</button></form>
+  {% endif %}
+</section>
+{% endblock %}

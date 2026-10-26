@@ -1,0 +1,51 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Từ cần ôn · LinguaPath{% endblock %}
+{% block content %}
+{% include 'learning/_weak_words_pending.html' %}
+<link rel="stylesheet" href="{% static 'css/weak-words.css' %}">
+<div class="lp-weak-words">
+  <section class="lp-weak-hero" aria-labelledby="weak-hero-title">
+    <div class="lp-weak-hero-copy">
+      <span class="eyebrow">GẶP LẠI ĐỂ NHỚ THÊM</span>
+      <h1 id="weak-hero-title">Từ từng nhầm.<br><em>Mình cùng nhớ lại.</em></h1>
+      <p>Gom những từ bạn trả lời sai qua các lượt quiz. Trả lời đúng trong quiz tiếp theo, từ đó sẽ rời danh sách này.</p>
+      <div class="lp-weak-actions"><a class="button primary" href="{% url 'learning:quiz_hub' %}?source=weak">Luyện từ cần ôn <span aria-hidden="true">↻</span></a><a href="{% url 'learning:saved_words' %}">Mở sổ cá nhân <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <div class="lp-weak-hero-art" aria-hidden="true"><span class="lp-weak-spark spark-one">✦</span><span class="lp-weak-spark spark-two">✧</span><div class="lp-weak-art-card card-back">Aa</div><div class="lp-weak-art-card card-front"><span>THÊM MỘT LẦN GẶP</span><b>remember</b><span class="lp-weak-art-smile">⌣</span></div><span class="lp-weak-art-tag">little by little</span></div>
+  </section>
+
+  <section class="lp-weak-overview" aria-label="Cách danh sách cần ôn hoạt động">
+    <div class="lp-weak-count"><span aria-hidden="true">↻</span><div><strong>{% if weak_words_ready == False %}—{% else %}{{ weak_word_count }}{% endif %}</strong><span>từ đang cần ôn</span></div></div>
+    <div class="lp-weak-method"><span class="lp-weak-method-mark" aria-hidden="true">01</span><div><strong>Nhìn lại từ từng nhầm</strong><p>Danh sách dựa trên câu trả lời gần nhất của bạn trong quiz.</p></div></div>
+    <div class="lp-weak-method"><span class="lp-weak-method-mark" aria-hidden="true">02</span><div><strong>Đúng một lần, rời danh sách</strong><p>Vẫn nên ôn định kỳ bằng flashcard để củng cố trí nhớ.</p></div></div>
+    <div class="lp-weak-quiet-note"><span aria-hidden="true">🌱</span><p>Lượt luyện này không cộng XP. Một từ cũng đủ để bắt đầu.</p></div>
+  </section>
+
+  <section class="lp-weak-library" aria-labelledby="weak-library-title">
+    <div class="lp-weak-library-heading"><div><span class="eyebrow">ÔN NHỎ, ĐỀU MỖI NGÀY</span><h2 id="weak-library-title">{% if weak_words_ready == False %}Đang chuẩn bị danh sách{% else %}{{ filtered_count }} từ{% if has_filters %} phù hợp{% else %} cho lần gặp lại{% endif %}{% endif %}</h2></div><a href="{% url 'learning:quiz_hub' %}?source=weak">Chọn lượt luyện <span aria-hidden="true">→</span></a></div>
+    <form method="get" class="lp-weak-filters" aria-label="Lọc từ cần ôn">
+      <label for="weak-query">Tìm từ<input id="weak-query" name="q" type="search" value="{{ search_term }}" maxlength="80" placeholder="Từ, nghĩa hoặc ví dụ"></label>
+      <label for="weak-level">Trình độ<select id="weak-level" name="level"><option value="">Mọi cấp độ</option>{% for key,label in levels %}<option value="{{ key }}"{% if selected_level == key %} selected{% endif %}>{{ label }}</option>{% endfor %}</select></label>
+      <label for="weak-topic">Chủ đề<select id="weak-topic" name="topic"><option value="">Tất cả chủ đề</option>{% for topic in topics %}<option value="{{ topic }}"{% if selected_topic == topic %} selected{% endif %}>{{ topic }}</option>{% endfor %}</select></label>
+      <button class="button secondary" type="submit">Lọc từ cần ôn</button>{% if has_filters %}<a href="{% url 'learning:weak_words' %}">Xóa bộ lọc</a>{% endif %}
+    </form>
+    {% if weak_words_ready == False %}<p class="muted">Danh sách sẽ hiển thị sau khi đồng bộ hoàn tất.</p>{% elif words %}
+    <div class="lp-weak-grid">{% for item in words %}
+      <article class="lp-weak-card">
+        <div class="lp-weak-card-top"><span>{{ item.topic|default:'Từ vựng' }}</span><b>{{ item.cefr_level }}</b></div>
+        <div class="lp-weak-card-heading"><span class="lp-weak-revisit-mark" aria-hidden="true">↻</span><div><h3 lang="en">{{ item.term }}</h3><span class="lp-weak-pos">{{ item.card.part_of_speech }}{% if item.card.pronunciation %} · {{ item.card.pronunciation }}{% endif %}</span></div></div>
+        <p class="lp-weak-meaning">{{ item.meaning_vi }}</p>
+        {% if item.card.example_en %}<div class="lp-weak-example"><p lang="en">{{ item.card.example_en }}</p>{% if item.card.example_vi %}<p>{{ item.card.example_vi }}</p>{% endif %}</div>{% endif %}
+        <div class="lp-weak-evidence"><span><b>{{ item.wrong_count }}</b> lần từng nhầm</span><span>Lần gần nhất {{ item.last_attempt_at|date:'d/m/Y H:i' }}</span></div>
+        <div class="lp-weak-card-links"><a href="{% url 'learning:quiz_result' item.last_quiz_id %}">Xem lượt quiz gần nhất <span aria-hidden="true">↗</span></a><a href="{% url 'learning:flashcards' %}?all=1&amp;q={{ item.term|urlencode }}">Ôn flashcard <span aria-hidden="true">↗</span></a></div>
+        {% include 'learning/_save_word_button.html' with card_id=item.card.pk is_saved=item.card.is_saved term=item.term %}
+      </article>
+    {% endfor %}</div>
+    {% if page_obj.has_other_pages %}<nav class="pagination" aria-label="Trang từ cần ôn">{% if page_obj.has_previous %}<a href="?page={{ page_obj.previous_page_number }}&amp;q={{ search_term|urlencode }}&amp;level={{ selected_level }}&amp;topic={{ selected_topic|urlencode }}">← Trước</a>{% endif %}<span>Trang {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>{% if page_obj.has_next %}<a href="?page={{ page_obj.next_page_number }}&amp;q={{ search_term|urlencode }}&amp;level={{ selected_level }}&amp;topic={{ selected_topic|urlencode }}">Tiếp →</a>{% endif %}</nav>{% endif %}
+    {% else %}
+    <section class="lp-weak-empty"><span aria-hidden="true">{% if has_filters %}⌕{% else %}✦{% endif %}</span><h3>{% if has_filters %}Chưa tìm thấy từ phù hợp{% else %}Chưa có từ nào đang cần ôn{% endif %}</h3><p>{% if has_filters %}Thử đổi từ khóa, chủ đề hoặc cấp độ để tìm những từ đang chờ bạn.{% else %}Từ trả lời sai trong quiz sẽ xuất hiện ở đây. Nếu đã luyện đúng, bạn có thể tiếp tục gặp lại từ qua flashcard.{% endif %}</p><a class="button primary" href="{% if has_filters %}{% url 'learning:weak_words' %}{% else %}{% url 'learning:quiz_hub' %}{% endif %}">{% if has_filters %}Xem toàn bộ từ cần ôn{% else %}Khám phá quiz từ vựng →{% endif %}</a></section>
+    {% endif %}
+  </section>
+</div>
+{% endblock %}

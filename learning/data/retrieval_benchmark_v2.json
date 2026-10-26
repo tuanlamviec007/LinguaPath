@@ -1,0 +1,838 @@
+{
+  "version": "2",
+  "description": "Independent editorial benchmark v2 for LinguaPath vocabulary retrieval. Contains 20 distinct headwords from the current 1,000-card vocabulary (four each at A1–C1), each with English explicit, accented Vietnamese explicit, unaccented Vietnamese explicit, and Vietnamese meaning-only queries. Sixteen off-topic advice/planning requests contain incidental vocabulary tokens but do not ask for a dictionary lookup. Ten complete target groups are in dev and ten in test; each split also has eight no-match cases. Gold labels are provisional AI/editorial judgments, not human-certified; CEFR levels are provisional, and no retrieval performance is claimed. The test cases and gold labels should remain hidden until evaluation is frozen.",
+  "cases": [
+    {
+      "id": "dev-a1-afternoon-en",
+      "split": "dev",
+      "category": "english",
+      "query": "In ‘The library is open in the afternoon’, what does ‘afternoon’ mean?",
+      "expected_terms": [
+        "afternoon"
+      ]
+    },
+    {
+      "id": "dev-a1-afternoon-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Trong câu ‘The library is open in the afternoon’, từ ‘afternoon’ nghĩa là gì?",
+      "expected_terms": [
+        "afternoon"
+      ]
+    },
+    {
+      "id": "dev-a1-afternoon-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Trong cau ‘The library is open in the afternoon’, tu ‘afternoon’ nghia la gi?",
+      "expected_terms": [
+        "afternoon"
+      ]
+    },
+    {
+      "id": "dev-a1-afternoon-meaning",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "Buổi nào trong ngày thường bắt đầu sau buổi trưa và kết thúc trước buổi tối?",
+      "expected_terms": [
+        "afternoon"
+      ]
+    },
+    {
+      "id": "dev-a1-classmate-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does ‘classmate’ mean at school?",
+      "expected_terms": [
+        "classmate"
+      ]
+    },
+    {
+      "id": "dev-a1-classmate-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Ở trường, ‘classmate’ nghĩa là gì?",
+      "expected_terms": [
+        "classmate"
+      ]
+    },
+    {
+      "id": "dev-a1-classmate-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "O truong, ‘classmate’ nghia la gi?",
+      "expected_terms": [
+        "classmate"
+      ]
+    },
+    {
+      "id": "dev-a1-classmate-meaning",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "Em gọi người học cùng lớp với mình là gì?",
+      "expected_terms": [
+        "classmate"
+      ]
+    },
+    {
+      "id": "dev-a1-weather-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does ‘weather’ mean in a daily forecast?",
+      "expected_terms": [
+        "weather"
+      ]
+    },
+    {
+      "id": "dev-a1-weather-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Trong bản tin dự báo hằng ngày, ‘weather’ nghĩa là gì?",
+      "expected_terms": [
+        "weather"
+      ]
+    },
+    {
+      "id": "dev-a1-weather-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Trong ban tin du bao hang ngay, ‘weather’ nghia la gi?",
+      "expected_terms": [
+        "weather"
+      ]
+    },
+    {
+      "id": "dev-a1-weather-meaning",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "Từ nào chỉ tình trạng nắng, mưa, gió hoặc nhiệt độ bên ngoài?",
+      "expected_terms": [
+        "weather"
+      ]
+    },
+    {
+      "id": "dev-a1-kitchen-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What is a ‘kitchen’ in a home?",
+      "expected_terms": [
+        "kitchen"
+      ]
+    },
+    {
+      "id": "dev-a1-kitchen-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Trong nhà ở, ‘kitchen’ là phòng nào?",
+      "expected_terms": [
+        "kitchen"
+      ]
+    },
+    {
+      "id": "dev-a1-kitchen-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Trong nha o, ‘kitchen’ la phong nao?",
+      "expected_terms": [
+        "kitchen"
+      ]
+    },
+    {
+      "id": "dev-a1-kitchen-meaning",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "Phòng nào trong nhà thường có bếp và dùng để nấu ăn?",
+      "expected_terms": [
+        "kitchen"
+      ]
+    },
+    {
+      "id": "dev-a2-airport-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does ‘airport’ mean when you travel by plane?",
+      "expected_terms": [
+        "airport"
+      ]
+    },
+    {
+      "id": "dev-a2-airport-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Khi đi máy bay, ‘airport’ nghĩa là gì?",
+      "expected_terms": [
+        "airport"
+      ]
+    },
+    {
+      "id": "dev-a2-airport-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Khi di may bay, ‘airport’ nghia la gi?",
+      "expected_terms": [
+        "airport"
+      ]
+    },
+    {
+      "id": "dev-a2-airport-meaning",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "Bạn đến địa điểm nào để làm thủ tục và lên máy bay?",
+      "expected_terms": [
+        "airport"
+      ]
+    },
+    {
+      "id": "dev-a2-electricity-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does ‘electricity’ mean when the power goes off?",
+      "expected_terms": [
+        "electricity"
+      ]
+    },
+    {
+      "id": "dev-a2-electricity-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Khi bị mất điện, ‘electricity’ nghĩa là gì?",
+      "expected_terms": [
+        "electricity"
+      ]
+    },
+    {
+      "id": "dev-a2-electricity-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Khi bi mat dien, ‘electricity’ nghia la gi?",
+      "expected_terms": [
+        "electricity"
+      ]
+    },
+    {
+      "id": "dev-a2-electricity-meaning",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "Năng lượng nào cung cấp điện cho đèn và thiết bị trong nhà?",
+      "expected_terms": [
+        "electricity"
+      ]
+    },
+    {
+      "id": "dev-a2-afraid-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does ‘afraid’ mean in ‘She is afraid of dogs’?",
+      "expected_terms": [
+        "afraid"
+      ]
+    },
+    {
+      "id": "dev-a2-afraid-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Trong câu ‘She is afraid of dogs’, ‘afraid’ nghĩa là gì?",
+      "expected_terms": [
+        "afraid"
+      ]
+    },
+    {
+      "id": "dev-a2-afraid-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Trong cau ‘She is afraid of dogs’, ‘afraid’ nghia la gi?",
+      "expected_terms": [
+        "afraid"
+      ]
+    },
+    {
+      "id": "dev-a2-afraid-meaning",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "Nếu ai đó cảm thấy sợ một con vật, ta mô tả cảm xúc ấy thế nào?",
+      "expected_terms": [
+        "afraid"
+      ]
+    },
+    {
+      "id": "dev-a2-repair-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does the verb ‘repair’ mean?",
+      "expected_terms": [
+        "repair"
+      ]
+    },
+    {
+      "id": "dev-a2-repair-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Động từ ‘repair’ có nghĩa là gì?",
+      "expected_terms": [
+        "repair"
+      ]
+    },
+    {
+      "id": "dev-a2-repair-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Dong tu ‘repair’ co nghia la gi?",
+      "expected_terms": [
+        "repair"
+      ]
+    },
+    {
+      "id": "dev-a2-repair-meaning",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "Bạn làm gì với một chiếc xe đạp bị hỏng để nó hoạt động lại?",
+      "expected_terms": [
+        "repair"
+      ]
+    },
+    {
+      "id": "dev-b1-budget-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does ‘budget’ mean when planning an event?",
+      "expected_terms": [
+        "budget"
+      ]
+    },
+    {
+      "id": "dev-b1-budget-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Khi lập kế hoạch cho một sự kiện, ‘budget’ nghĩa là gì?",
+      "expected_terms": [
+        "budget"
+      ]
+    },
+    {
+      "id": "dev-b1-budget-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Khi lap ke hoach cho mot su kien, ‘budget’ nghia la gi?",
+      "expected_terms": [
+        "budget"
+      ]
+    },
+    {
+      "id": "dev-b1-budget-meaning",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "Khoản tiền được dự kiến để chi cho một hoạt động gọi là gì?",
+      "expected_terms": [
+        "budget"
+      ]
+    },
+    {
+      "id": "dev-b1-ingredient-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What is an ‘ingredient’ in a recipe?",
+      "expected_terms": [
+        "ingredient"
+      ]
+    },
+    {
+      "id": "dev-b1-ingredient-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Trong công thức nấu ăn, ‘ingredient’ là gì?",
+      "expected_terms": [
+        "ingredient"
+      ]
+    },
+    {
+      "id": "dev-b1-ingredient-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Trong cong thuc nau an, ‘ingredient’ la gi?",
+      "expected_terms": [
+        "ingredient"
+      ]
+    },
+    {
+      "id": "dev-b1-ingredient-meaning",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "Mỗi loại thực phẩm được dùng để làm nên một món ăn được gọi là gì?",
+      "expected_terms": [
+        "ingredient"
+      ]
+    },
+    {
+      "id": "test-b1-commute-en",
+      "split": "test",
+      "category": "english",
+      "query": "What does the verb ‘commute’ mean in a work context?",
+      "expected_terms": [
+        "commute"
+      ]
+    },
+    {
+      "id": "test-b1-commute-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong ngữ cảnh đi làm, động từ ‘commute’ nghĩa là gì?",
+      "expected_terms": [
+        "commute"
+      ]
+    },
+    {
+      "id": "test-b1-commute-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong ngu canh di lam, dong tu ‘commute’ nghia la gi?",
+      "expected_terms": [
+        "commute"
+      ]
+    },
+    {
+      "id": "test-b1-commute-meaning",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "Hằng ngày đi từ nhà đến nơi làm việc rồi quay về được gọi là gì?",
+      "expected_terms": [
+        "commute"
+      ]
+    },
+    {
+      "id": "test-b1-confident-en",
+      "split": "test",
+      "category": "english",
+      "query": "What does ‘confident’ mean before giving a presentation?",
+      "expected_terms": [
+        "confident"
+      ]
+    },
+    {
+      "id": "test-b1-confident-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trước khi thuyết trình, ‘confident’ nghĩa là gì?",
+      "expected_terms": [
+        "confident"
+      ]
+    },
+    {
+      "id": "test-b1-confident-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Truoc khi thuyet trinh, ‘confident’ nghia la gi?",
+      "expected_terms": [
+        "confident"
+      ]
+    },
+    {
+      "id": "test-b1-confident-meaning",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "Người tin vào khả năng của mình thường được mô tả bằng tính từ nào?",
+      "expected_terms": [
+        "confident"
+      ]
+    },
+    {
+      "id": "test-b2-appendix-en",
+      "split": "test",
+      "category": "english",
+      "query": "What does ‘appendix’ mean in a report or book?",
+      "expected_terms": [
+        "appendix"
+      ]
+    },
+    {
+      "id": "test-b2-appendix-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong báo cáo hoặc sách, ‘appendix’ nghĩa là gì?",
+      "expected_terms": [
+        "appendix"
+      ]
+    },
+    {
+      "id": "test-b2-appendix-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong bao cao hoac sach, ‘appendix’ nghia la gi?",
+      "expected_terms": [
+        "appendix"
+      ]
+    },
+    {
+      "id": "test-b2-appendix-meaning",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "Phần ở cuối tài liệu chứa thông tin bổ sung hoặc tài liệu hỗ trợ được gọi là gì?",
+      "expected_terms": [
+        "appendix"
+      ]
+    },
+    {
+      "id": "test-b2-bandwidth-en",
+      "split": "test",
+      "category": "english",
+      "query": "What does ‘bandwidth’ mean in an internet connection?",
+      "expected_terms": [
+        "bandwidth"
+      ]
+    },
+    {
+      "id": "test-b2-bandwidth-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong kết nối Internet, ‘bandwidth’ nghĩa là gì?",
+      "expected_terms": [
+        "bandwidth"
+      ]
+    },
+    {
+      "id": "test-b2-bandwidth-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong ket noi Internet, ‘bandwidth’ nghia la gi?",
+      "expected_terms": [
+        "bandwidth"
+      ]
+    },
+    {
+      "id": "test-b2-bandwidth-meaning",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "Thuật ngữ nào chỉ dung lượng dữ liệu mà một kết nối mạng có thể truyền trong một khoảng thời gian?",
+      "expected_terms": [
+        "bandwidth"
+      ]
+    },
+    {
+      "id": "test-b2-clause-en",
+      "split": "test",
+      "category": "english",
+      "query": "In grammar, what does ‘clause’ mean?",
+      "expected_terms": [
+        "clause"
+      ]
+    },
+    {
+      "id": "test-b2-clause-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong ngữ pháp, ‘clause’ nghĩa là gì?",
+      "expected_terms": [
+        "clause"
+      ]
+    },
+    {
+      "id": "test-b2-clause-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong ngu phap, ‘clause’ nghia la gi?",
+      "expected_terms": [
+        "clause"
+      ]
+    },
+    {
+      "id": "test-b2-clause-meaning",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "Đơn vị ngữ pháp thường gồm một chủ ngữ và một vị ngữ được gọi là gì?",
+      "expected_terms": [
+        "clause"
+      ]
+    },
+    {
+      "id": "test-b2-algorithm-en",
+      "split": "test",
+      "category": "english",
+      "query": "What is an ‘algorithm’ in computing?",
+      "expected_terms": [
+        "algorithm"
+      ]
+    },
+    {
+      "id": "test-b2-algorithm-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong tin học, ‘algorithm’ là gì?",
+      "expected_terms": [
+        "algorithm"
+      ]
+    },
+    {
+      "id": "test-b2-algorithm-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong tin hoc, ‘algorithm’ la gi?",
+      "expected_terms": [
+        "algorithm"
+      ]
+    },
+    {
+      "id": "test-b2-algorithm-meaning",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "Tập hợp các bước có thứ tự để giải một bài toán được gọi là gì?",
+      "expected_terms": [
+        "algorithm"
+      ]
+    },
+    {
+      "id": "test-c1-consent-form-en",
+      "split": "test",
+      "category": "english",
+      "query": "What is a ‘consent form’ in a research study?",
+      "expected_terms": [
+        "consent form"
+      ]
+    },
+    {
+      "id": "test-c1-consent-form-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong một nghiên cứu, ‘consent form’ là gì?",
+      "expected_terms": [
+        "consent form"
+      ]
+    },
+    {
+      "id": "test-c1-consent-form-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong mot nghien cuu, ‘consent form’ la gi?",
+      "expected_terms": [
+        "consent form"
+      ]
+    },
+    {
+      "id": "test-c1-consent-form-meaning",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "Người tham gia ký loại giấy tờ nào để xác nhận họ đã đồng ý tham gia sau khi được cung cấp thông tin?",
+      "expected_terms": [
+        "consent form"
+      ]
+    },
+    {
+      "id": "test-c1-plagiarism-en",
+      "split": "test",
+      "category": "english",
+      "query": "What does ‘plagiarism’ mean in academic writing?",
+      "expected_terms": [
+        "plagiarism"
+      ]
+    },
+    {
+      "id": "test-c1-plagiarism-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong bài viết học thuật, ‘plagiarism’ nghĩa là gì?",
+      "expected_terms": [
+        "plagiarism"
+      ]
+    },
+    {
+      "id": "test-c1-plagiarism-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong bai viet hoc thuat, ‘plagiarism’ nghia la gi?",
+      "expected_terms": [
+        "plagiarism"
+      ]
+    },
+    {
+      "id": "test-c1-plagiarism-meaning",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "Hành vi dùng ý tưởng hoặc lời văn của người khác mà không ghi nhận nguồn được gọi là gì?",
+      "expected_terms": [
+        "plagiarism"
+      ]
+    },
+    {
+      "id": "test-c1-handout-en",
+      "split": "test",
+      "category": "english",
+      "query": "What is a ‘handout’ in a university class?",
+      "expected_terms": [
+        "handout"
+      ]
+    },
+    {
+      "id": "test-c1-handout-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong giờ học đại học, ‘handout’ là gì?",
+      "expected_terms": [
+        "handout"
+      ]
+    },
+    {
+      "id": "test-c1-handout-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong gio hoc dai hoc, ‘handout’ la gi?",
+      "expected_terms": [
+        "handout"
+      ]
+    },
+    {
+      "id": "test-c1-handout-meaning",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "Giảng viên thường phát loại tài liệu nào cho sinh viên để theo dõi hoặc tham khảo trong buổi học?",
+      "expected_terms": [
+        "handout"
+      ]
+    },
+    {
+      "id": "test-c1-academic-integrity-en",
+      "split": "test",
+      "category": "english",
+      "query": "What does “academic integrity” mean in a university course?",
+      "expected_terms": [
+        "academic integrity"
+      ]
+    },
+    {
+      "id": "test-c1-academic-integrity-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong một môn học đại học, “academic integrity” nghĩa là gì?",
+      "expected_terms": [
+        "academic integrity"
+      ]
+    },
+    {
+      "id": "test-c1-academic-integrity-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong mot mon hoc dai hoc, “academic integrity” nghia la gi?",
+      "expected_terms": [
+        "academic integrity"
+      ]
+    },
+    {
+      "id": "test-c1-academic-integrity-meaning",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "Nguyên tắc trung thực và có trách nhiệm trong học tập, nghiên cứu ở trường đại học được gọi là gì?",
+      "expected_terms": [
+        "academic integrity"
+      ]
+    },
+    {
+      "id": "dev-no-match-01",
+      "split": "dev",
+      "category": "no_match",
+      "query": "Can you suggest a weekly meal plan for a student with a small budget and only a microwave?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-02",
+      "split": "dev",
+      "category": "no_match",
+      "query": "My laptop needs repair before class. How should I organize the project files for my presentation?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-03",
+      "split": "dev",
+      "category": "no_match",
+      "query": "I have to commute to the airport tomorrow. What time should I leave if traffic is usually heavy?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-04",
+      "split": "dev",
+      "category": "no_match",
+      "query": "Could you help me prepare a shopping list using the ingredients I already have in my kitchen?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-05",
+      "split": "dev",
+      "category": "no_match",
+      "query": "My team has a limited budget for a student event. Which activities would give people the best experience?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-06",
+      "split": "dev",
+      "category": "no_match",
+      "query": "The electricity is off in my apartment, and my laptop battery is low. What should I do first?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-07",
+      "split": "dev",
+      "category": "no_match",
+      "query": "I feel afraid about speaking in class. Can you suggest a short practice routine?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-08",
+      "split": "dev",
+      "category": "no_match",
+      "query": "I'm travelling with my classmate and our flight is early. Can you help us plan what to pack?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-01",
+      "split": "test",
+      "category": "no_match",
+      "query": "Our project has too many new requests. How can we keep the work within the agreed schedule and budget?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-02",
+      "split": "test",
+      "category": "no_match",
+      "query": "I need to buy ingredients for lunch, but one person in my group has a nut allergy. What should I check?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-03",
+      "split": "test",
+      "category": "no_match",
+      "query": "The internet connection is slow during the afternoon. How can I check whether other devices are using it?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-04",
+      "split": "test",
+      "category": "no_match",
+      "query": "Can you suggest ways to make students feel more confident before a class presentation?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-05",
+      "split": "test",
+      "category": "no_match",
+      "query": "My train commute was delayed, and I missed my appointment. Help me write a polite message to the clinic.",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-06",
+      "split": "test",
+      "category": "no_match",
+      "query": "I need to repair a bike before the weekend. Which tools should I buy, and what safety steps should I follow?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-07",
+      "split": "test",
+      "category": "no_match",
+      "query": "The research team needs a better consent process. Can you draft a checklist for explaining risks to participants?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-08",
+      "split": "test",
+      "category": "no_match",
+      "query": "Our organization is planning procurement for new computers. What criteria should we compare across suppliers?",
+      "expected_terms": []
+    }
+  ]
+}

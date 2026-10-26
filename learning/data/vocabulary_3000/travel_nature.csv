@@ -1,0 +1,361 @@
+term,cefr_level,part_of_speech,meaning_vi,example_en,example_vi,topic,cloze_answer,distractor_1,distractor_2,distractor_3
+taxi,A1,noun,xe tắc xi,We called a taxi because the last bus had already left.,Chúng tôi gọi tắc xi vì chuyến xe buýt cuối đã rời đi.,Transport,taxi,canoe,tractor,glider
+truck,A2,noun,xe tải,The truck carried six tonnes of bricks to the construction site.,Chiếc xe tải chở sáu tấn gạch đến công trường.,Transport,truck,scooter,kayak,bicycle
+van,A2,noun,xe tải nhỏ,The delivery van has sliding doors and space for twenty parcels.,Chiếc xe tải nhỏ có cửa trượt và chỗ cho hai mươi bưu kiện.,Transport,van,yacht,tram,helicopter
+motorcycle,A2,noun,mô tô; xe máy,He wore protective gloves before riding his motorcycle along the highway.,Anh ấy đeo găng tay bảo hộ trước khi lái xe máy trên quốc lộ.,Transport,motorcycle,canoe,glider,ferry
+scooter,A2,noun,xe tay ga,Her scooter has a flat floor where she rests her feet.,Chiếc xe tay ga của cô ấy có sàn phẳng để đặt chân.,Transport,scooter,tanker,submarine,locomotive
+tram,A2,noun,xe điện chạy trên đường ray,The tram followed rails through the middle of the shopping street.,Xe điện chạy theo đường ray giữa phố mua sắm.,Transport,tram,raft,tractor,jet
+ferry,A2,noun,phà,The ferry carried cars and passengers across the narrow channel.,Chiếc phà chở ô tô và hành khách qua eo nước hẹp.,Transport,ferry,glider,moped,tram
+boat,A1,noun,thuyền,We rowed a small boat across the pond using two oars.,Chúng tôi chèo một chiếc thuyền nhỏ qua ao bằng hai mái chèo.,Transport,boat,truck,tram,aircraft
+ship,A2,noun,tàu thủy lớn,The cargo ship crossed the ocean with containers stacked on deck.,Tàu chở hàng vượt đại dương với những công ten nơ xếp trên boong.,Transport,ship,scooter,canoe,helicopter
+yacht,B1,noun,du thuyền,The wealthy couple sailed their private yacht around the Mediterranean.,Cặp đôi giàu có đi du thuyền riêng quanh Địa Trung Hải.,Transport,yacht,tractor,moped,tram
+canoe,B1,noun,xuồng chèo bằng mái chèo rời,They paddled a narrow canoe down the river without using an engine.,Họ dùng mái chèo đưa chiếc xuồng hẹp xuôi sông mà không dùng động cơ.,Transport,canoe,truck,airship,tanker
+kayak,B1,noun,thuyền kayak,She sat low in her kayak and used a double-bladed paddle.,Cô ấy ngồi thấp trong thuyền kayak và dùng mái chèo hai đầu.,Transport,kayak,locomotive,caravan,freighter
+raft,B1,noun,bè,The survivors tied logs together to build a raft that could float.,Những người sống sót buộc các khúc gỗ lại thành một chiếc bè nổi được.,Transport,raft,moped,jet,van
+submarine,B2,noun,tàu ngầm,The submarine stayed underwater while its crew studied the seabed.,Tàu ngầm ở dưới nước khi thủy thủ đoàn nghiên cứu đáy biển.,Transport,submarine,airship,taxi,tram
+helicopter,B1,noun,máy bay trực thăng,The rescue helicopter hovered above the roof before lowering a rope.,Trực thăng cứu hộ bay lơ lửng trên mái nhà trước khi thả dây xuống.,Transport,helicopter,ferry,caravan,submarine
+aircraft,B1,noun,phương tiện bay,The aircraft was cleared for takeoff after both wings were inspected.,Phương tiện bay được phép cất cánh sau khi cả hai cánh được kiểm tra.,Transport,aircraft,raft,trailer,tanker
+jet,B1,noun,máy bay phản lực,The passenger jet reached cruising altitude shortly after leaving the runway.,Máy bay phản lực chở khách đạt độ cao hành trình ngay sau khi rời đường băng.,Transport,jet,canoe,tractor,tugboat
+glider,B2,noun,tàu lượn không động cơ,The glider has no engine and rides rising currents of warm air.,Tàu lượn không có động cơ và bay nhờ các luồng khí nóng bốc lên.,Transport,glider,submarine,freighter,motorcycle
+balloon,A2,noun,khinh khí cầu,Our balloon rose as the pilot heated the air inside it.,Khinh khí cầu của chúng tôi bay lên khi phi công đốt nóng không khí bên trong.,Transport,balloon,tanker,tram,kayak
+ambulance,A2,noun,xe cứu thương,The ambulance carried the injured cyclist to hospital with its siren sounding.,Xe cứu thương chở người đi xe đạp bị thương đến bệnh viện trong tiếng còi báo.,Transport,ambulance,caravan,yacht,tractor
+tractor,B1,noun,máy kéo,The farmer used a tractor to pull the heavy plough across the field.,Người nông dân dùng máy kéo để kéo chiếc cày nặng qua cánh đồng.,Transport,tractor,kayak,jet,taxi
+skateboard,A2,noun,ván trượt,He balanced on his skateboard and pushed against the pavement with one foot.,Cậu ấy giữ thăng bằng trên ván trượt và đẩy một chân xuống vỉa hè.,Sport,skateboard,submarine,ferry,truck
+wheel,A2,noun,bánh xe,A nail punctured the tyre on the bicycle's front wheel.,Một chiếc đinh đâm thủng lốp ở bánh trước của xe đạp.,Transport,wheel,sail,wing,oar
+tyre,B1,noun,lốp xe,The mechanic pumped air into the flat tyre before checking for holes.,Thợ sửa xe bơm hơi vào chiếc lốp xẹp trước khi kiểm tra lỗ thủng.,Transport,tyre,saddle,bonnet,anchor
+brake,B1,noun,phanh xe,Press the brake gently to slow the car before the sharp bend.,Nhấn phanh nhẹ để giảm tốc độ ô tô trước khúc cua gấp.,Transport,brake,saddle,anchor,mast
+pedal,B1,noun,bàn đạp,Her foot slipped off the bicycle pedal while she was climbing uphill.,Chân cô ấy trượt khỏi bàn đạp xe đạp khi đang lên dốc.,Transport,pedal,rudder,wing,bonnet
+saddle,B1,noun,yên xe,He raised the bicycle saddle so his knees no longer felt cramped.,Anh ấy nâng yên xe đạp để đầu gối không còn bị gập chật.,Transport,saddle,anchor,propeller,headlight
+handlebar,B2,noun,tay lái xe đạp,The cyclist gripped the handlebar tightly while steering around the pothole.,Người đi xe đạp nắm chặt tay lái khi tránh ổ gà.,Transport,handlebar,mast,keel,bonnet
+helmet,A2,noun,mũ bảo hiểm,The cyclist fastened her helmet to protect her head during the ride.,Người đi xe đạp cài mũ bảo hiểm để bảo vệ đầu trong chuyến đi.,Transport,helmet,sail,rudder,tyre
+seatbelt,A2,noun,dây an toàn trên xe,Fasten your seatbelt before the driver starts the car.,Hãy thắt dây an toàn trước khi tài xế khởi động xe.,Transport,seatbelt,anchor,handlebar,mast
+windscreen,B1,noun,kính chắn gió ô tô,Rain covered the windscreen until the driver switched on the wipers.,Mưa phủ kín kính chắn gió cho đến khi tài xế bật cần gạt.,Transport,windscreen,saddle,propeller,keel
+headlight,B1,noun,đèn pha xe,One headlight stopped working so the driver could barely see the road.,Một đèn pha bị hỏng khiến tài xế khó nhìn rõ đường.,Transport,headlight,anchor,oar,sail
+indicator,B1,noun,đèn báo rẽ,Use the left indicator to tell other drivers you intend to turn.,Bật đèn báo rẽ trái để báo cho người lái xe khác biết bạn định rẽ.,Transport,indicator,mast,saddle,keel
+bonnet,B2,noun,nắp ca pô,The mechanic lifted the bonnet to examine the car's engine.,Thợ sửa xe nâng nắp ca pô để kiểm tra động cơ ô tô.,Transport,bonnet,rudder,pedal,sail
+fuel,A2,noun,nhiên liệu,The engine stopped because the tank had run out of fuel.,Động cơ dừng vì bình đã hết nhiên liệu.,Transport,fuel,gravel,canvas,compass
+petrol,A2,noun,xăng,This small car runs on petrol rather than diesel or electricity.,Chiếc ô tô nhỏ này chạy bằng xăng chứ không phải dầu diesel hay điện.,Transport,petrol,gravel,steam,canvas
+diesel,B1,noun,dầu diesel,The lorry driver filled the tank with diesel before the long journey.,Tài xế xe tải đổ dầu diesel đầy bình trước chuyến đi dài.,Transport,diesel,canvas,gravel,rope
+garage,A2,noun,nhà để xe,We park the car in the garage beside our house every night.,Chúng tôi đỗ ô tô trong nhà để xe cạnh nhà mỗi tối.,Transport,garage,lagoon,plateau,reef
+vehicle,A2,noun,phương tiện giao thông,Every vehicle entering the car park must display a valid permit.,Mọi phương tiện vào bãi đỗ xe đều phải trưng giấy phép hợp lệ.,Transport,vehicle,glacier,peninsula,orchid
+driver,A1,noun,người lái xe,The bus driver checked the mirrors before pulling away from the stop.,Người lái xe buýt kiểm tra gương trước khi rời điểm dừng.,Transport,driver,swimmer,climber,gardener
+pilot,A2,noun,phi công,The pilot guided the aircraft safely through the storm towards the airport.,Phi công điều khiển máy bay an toàn qua cơn bão về phía sân bay.,Transport,pilot,cyclist,porter,hiker
+sailor,B1,noun,thủy thủ,The sailor climbed the mast to repair a torn sail.,Thủy thủ trèo lên cột buồm để sửa cánh buồm bị rách.,Transport,sailor,cyclist,skater,pedestrian
+captain,B1,noun,thuyền trưởng,The ship's captain ordered the crew to remain in port during the storm.,Thuyền trưởng ra lệnh cho thủy thủ đoàn ở lại cảng trong cơn bão.,Transport,captain,pedestrian,cyclist,backpacker
+crew,B1,noun,đội ngũ vận hành tàu hoặc máy bay,The cabin crew demonstrated how to put on a life jacket.,Đội tiếp viên trên máy bay hướng dẫn cách mặc áo phao.,Transport,crew,herd,flock,swarm
+conductor,B1,noun,nhân viên kiểm vé trên tàu,The train conductor walked through each carriage checking passengers' tickets.,Nhân viên kiểm vé đi qua từng toa tàu để kiểm tra vé của hành khách.,Transport,conductor,sailor,skier,diver
+pedestrian,B1,noun,người đi bộ,The driver stopped at the crossing to let a pedestrian walk across.,Tài xế dừng ở vạch qua đường để một người đi bộ sang đường.,Transport,pedestrian,pilot,sailor,diver
+cyclist,A2,noun,người đi xe đạp,The cyclist rang her bell before overtaking us on the bike path.,Người đi xe đạp rung chuông trước khi vượt chúng tôi trên đường dành cho xe đạp.,Transport,cyclist,sailor,pilot,swimmer
+rider,B1,noun,người cưỡi ngựa,The rider held the reins as her horse approached the wooden fence.,Người cưỡi ngựa cầm dây cương khi ngựa tiến đến hàng rào gỗ.,Sport,rider,sailor,diver,swimmer
+hiker,B1,noun,người đi bộ đường dài,The hiker followed the mountain trail with a backpack and walking poles.,Người đi bộ đường dài theo lối mòn trên núi với ba lô và gậy đi bộ.,Travel,hiker,sailor,pilot,conductor
+backpacker,B1,noun,du khách đi du lịch ba lô,The backpacker stayed in cheap hostels while travelling between several countries.,Du khách ba lô ở trong những nhà trọ giá rẻ khi đi qua nhiều nước.,Travel,backpacker,conductor,pilot,porter
+visitor,A1,noun,khách đến thăm,Each visitor to the museum received a map at the entrance.,Mỗi khách đến thăm bảo tàng nhận một tấm bản đồ ở lối vào.,Travel,visitor,volcano,canyon,glacier
+explorer,B1,noun,nhà thám hiểm,The explorer crossed the unmapped desert with a small team of researchers.,Nhà thám hiểm băng qua sa mạc chưa được lập bản đồ cùng một nhóm nghiên cứu nhỏ.,Travel,explorer,conductor,porter,referee
+locomotive,B2,noun,đầu máy xe lửa,The steam locomotive pulled twelve carriages along the old railway line.,Đầu máy hơi nước kéo mười hai toa trên tuyến đường sắt cũ.,Transport,locomotive,kayak,caravan,submarine
+caravan,B1,noun,nhà lưu động được kéo bằng xe,We towed our caravan to the campsite and slept inside it.,Chúng tôi kéo nhà lưu động đến khu cắm trại rồi ngủ bên trong.,Travel,caravan,glider,tugboat,moped
+campervan,B1,noun,xe cắm trại có chỗ ngủ,Their campervan has a small bed behind the driver's seat.,Xe cắm trại của họ có một chiếc giường nhỏ phía sau ghế lái.,Travel,campervan,tanker,tram,glider
+moped,B1,noun,xe máy nhỏ công suất thấp,His moped has a small engine and cannot travel very fast.,Chiếc xe máy nhỏ của anh ấy có động cơ nhỏ và không chạy quá nhanh.,Transport,moped,freighter,airship,submarine
+trailer,B1,noun,rơ moóc,The car pulled a trailer loaded with camping equipment.,Chiếc ô tô kéo theo rơ moóc chất đầy đồ cắm trại.,Transport,trailer,propeller,mast,rudder
+freighter,C1,noun,tàu chở hàng,The ocean freighter carried thousands of containers rather than holiday passengers.,Tàu chở hàng trên đại dương chở hàng nghìn công ten nơ thay vì khách du lịch.,Transport,freighter,glider,kayak,moped
+airship,B2,noun,khí cầu có động cơ,The airship used engines to steer its long balloon-shaped body through the sky.,Khí cầu có động cơ dùng máy để điều khiển thân dài hình bóng bay trên trời.,Transport,airship,submarine,tram,raft
+tanker,B2,noun,tàu chở chất lỏng số lượng lớn,The oil tanker waited offshore before unloading its liquid cargo.,Tàu chở dầu chờ ngoài khơi trước khi dỡ hàng lỏng.,Transport,tanker,glider,moped,kayak
+hovercraft,B2,noun,tàu đệm khí,The hovercraft travelled over shallow water on a cushion of air.,Tàu đệm khí di chuyển trên vùng nước nông nhờ lớp đệm không khí.,Transport,hovercraft,locomotive,bicycle,glider
+tugboat,C1,noun,tàu kéo,A tugboat pulled the large ship away from the harbour wall.,Một tàu kéo đưa con tàu lớn ra xa tường cảng.,Transport,tugboat,glider,moped,caravan
+speedboat,B1,noun,xuồng cao tốc,The speedboat raced across the bay leaving a long white wake.,Xuồng cao tốc lao qua vịnh và để lại vệt nước trắng dài.,Transport,speedboat,locomotive,tram,tractor
+sail,B1,noun,cánh buồm,The wind filled the sail and pushed our boat towards the island.,Gió căng cánh buồm và đẩy thuyền chúng tôi về phía đảo.,Transport,sail,tyre,bonnet,pedal
+mast,B2,noun,cột buồm,The flag flew from the top of the ship's tallest mast.,Lá cờ bay trên đỉnh cột buồm cao nhất của tàu.,Transport,mast,saddle,brake,tyre
+anchor,B1,noun,mỏ neo,The crew lowered the anchor to keep the boat in one place.,Thủy thủ đoàn thả mỏ neo để giữ thuyền ở nguyên một chỗ.,Transport,anchor,wing,pedal,headlight
+rudder,C1,noun,bánh lái tàu thuyền,The sailor turned the rudder to change the boat's direction.,Thủy thủ xoay bánh lái để đổi hướng thuyền.,Transport,rudder,tyre,bonnet,saddle
+propeller,B2,noun,chân vịt,The boat's propeller spun underwater and pushed water backwards.,Chân vịt của thuyền quay dưới nước và đẩy nước về phía sau.,Transport,propeller,saddle,bonnet,tyre
+oar,B2,noun,mái chèo,He pulled the oar through the water to move the rowing boat.,Anh ấy kéo mái chèo qua nước để di chuyển chiếc thuyền chèo.,Transport,oar,headlight,brake,bonnet
+keel,C1,noun,sống đáy tàu,The boat's heavy keel runs along its bottom and helps prevent capsizing.,Sống đáy nặng chạy dọc đáy thuyền và giúp ngăn thuyền bị lật.,Transport,keel,headlight,handlebar,seatbelt
+city,A1,noun,thành phố,The city has over a million residents and several busy railway stations.,Thành phố có hơn một triệu cư dân và vài nhà ga đông đúc.,Places,city,pond,cave,reef
+town,A1,noun,thị trấn,Our small town has one cinema and a weekly outdoor market.,Thị trấn nhỏ của chúng tôi có một rạp phim và phiên chợ ngoài trời hằng tuần.,Places,town,reef,glacier,lagoon
+country,A1,noun,quốc gia,You need a passport to enter another country at the border.,Bạn cần hộ chiếu để nhập cảnh vào một quốc gia khác ở biên giới.,Geography,country,pond,cliff,dune
+continent,A2,noun,châu lục,Africa is a continent containing many different countries and languages.,Châu Phi là một châu lục gồm nhiều quốc gia và ngôn ngữ khác nhau.,Geography,continent,pond,cave,dock
+province,B1,noun,tỉnh,The northern province contains six districts and several large tea-growing areas.,Tỉnh phía bắc có sáu huyện và một số vùng trồng chè rộng lớn.,Geography,province,lagoon,glacier,reef
+district,B1,noun,quận hoặc huyện,This administrative district includes twenty villages and one central town.,Huyện hành chính này gồm hai mươi ngôi làng và một thị trấn trung tâm.,Geography,district,peninsula,crater,iceberg
+region,B1,noun,vùng,Rice farming is common throughout this warm coastal region of the country.,Trồng lúa phổ biến khắp vùng ven biển ấm áp này của đất nước.,Geography,region,bonnet,pedal,saddle
+county,B2,noun,hạt hành chính,The county council maintains roads in the villages around the city.,Hội đồng hạt bảo trì đường sá ở các làng quanh thành phố.,Geography,county,reef,dune,glacier
+suburb,B1,noun,khu ngoại ô,They moved to a quiet suburb and commute to the city centre.,Họ chuyển đến khu ngoại ô yên tĩnh và đi làm vào trung tâm thành phố.,Places,suburb,crater,canyon,lagoon
+hamlet,C1,noun,xóm nhỏ,The tiny hamlet has only six houses and no shop.,Xóm nhỏ chỉ có sáu ngôi nhà và không có cửa hàng.,Places,hamlet,metropolis,ocean,continent
+settlement,B2,noun,khu định cư,Archaeologists found the remains of an ancient settlement beside the river.,Các nhà khảo cổ tìm thấy di tích của một khu định cư cổ bên sông.,Places,settlement,headlight,propeller,tyre
+metropolis,C1,noun,đô thị lớn,The crowded metropolis stretches for kilometres beyond its original city walls.,Đô thị lớn đông đúc trải dài nhiều ki lô mét ngoài tường thành ban đầu.,Places,metropolis,hamlet,cabin,cottage
+municipality,C1,noun,đô thị tự quản,The municipality collects local taxes to maintain streets and public parks.,Đô thị tự quản thu thuế địa phương để bảo trì đường phố và công viên.,Geography,municipality,glacier,reef,estuary
+avenue,B1,noun,đại lộ,The broad avenue has four traffic lanes and trees on both sides.,Đại lộ rộng có bốn làn xe và cây ở hai bên.,Places,avenue,canoe,cave,reef
+boulevard,B2,noun,đại lộ rộng có hàng cây,We walked along a tree-lined boulevard with a wide central strip.,Chúng tôi đi dọc đại lộ có hàng cây và dải phân cách rộng.,Places,boulevard,crevice,footpath,brook
+alley,B1,noun,ngõ hẹp,The narrow alley between the shops was too small for cars.,Con ngõ hẹp giữa các cửa hàng quá nhỏ cho ô tô đi vào.,Places,alley,plateau,continent,glacier
+lane,A2,noun,làn đường,Stay in the left lane until you reach the traffic lights.,Hãy ở làn đường bên trái cho đến khi tới đèn giao thông.,Transport,lane,reef,glacier,harbour
+pavement,A2,noun,vỉa hè,Pedestrians walked on the pavement while cars passed on the road.,Người đi bộ đi trên vỉa hè khi ô tô chạy trên đường.,Places,pavement,crater,lagoon,reef
+roundabout,B1,noun,vòng xuyến,Take the second exit at the roundabout where four roads meet.,Ra ở lối thứ hai tại vòng xuyến nơi bốn con đường gặp nhau.,Transport,roundabout,glacier,waterfall,peninsula
+crossroads,B1,noun,ngã tư,Turn left at the crossroads where two roads cross each other.,Rẽ trái ở ngã tư nơi hai con đường cắt nhau.,Transport,crossroads,lagoon,reef,plateau
+junction,B1,noun,điểm giao đường,Traffic slowed near the junction where the side road joins the highway.,Xe cộ chậm lại gần điểm giao nơi đường nhánh nối vào quốc lộ.,Transport,junction,glacier,meadow,cliff
+highway,B1,noun,đường quốc lộ,The highway connects the two provinces and carries heavy long-distance traffic.,Đường quốc lộ nối hai tỉnh và có lưu lượng xe đường dài lớn.,Transport,highway,brook,lagoon,footpath
+road,A1,noun,con đường cho xe đi,The road was closed to cars while workers repaired its damaged surface.,Con đường bị chặn ô tô khi công nhân sửa mặt đường hư hỏng.,Places,road,reef,pond,glacier
+street,A1,noun,đường phố,Their shop stands on a busy street lined with restaurants.,Cửa hàng của họ nằm trên một đường phố đông đúc có nhiều nhà hàng.,Places,street,crater,lagoon,waterfall
+tunnel,A2,noun,đường hầm,The train entered a tunnel and disappeared beneath the mountain.,Đoàn tàu đi vào đường hầm và khuất dưới ngọn núi.,Transport,tunnel,reef,peninsula,plateau
+underpass,B2,noun,đường chui,We used the underpass to walk safely beneath the busy road.,Chúng tôi đi đường chui để qua bên dưới con đường đông xe an toàn.,Transport,underpass,summit,lagoon,plateau
+overpass,B2,noun,cầu vượt,Cars crossed the railway on an overpass instead of stopping at the tracks.,Ô tô vượt qua đường sắt trên cầu vượt thay vì dừng ở đường ray.,Transport,overpass,crater,lagoon,reef
+footbridge,B1,noun,cầu dành cho người đi bộ,Only walkers may use the narrow footbridge across the stream.,Chỉ người đi bộ được sử dụng cây cầu hẹp bắc qua suối.,Places,footbridge,runway,motorway,highway
+canal,B1,noun,kênh đào,Workers dug the canal to carry water between the two rivers.,Công nhân đào con kênh để dẫn nước giữa hai con sông.,Geography,canal,mountain,cliff,plateau
+quay,C1,noun,bến cảng có tường xây,The ship tied up beside the stone quay to unload its cargo.,Con tàu cập bên bến cảng xây đá để dỡ hàng.,Travel,quay,glacier,dune,summit
+pier,B1,noun,cầu tàu nhô ra mặt nước,We walked to the end of the pier above the sea.,Chúng tôi đi đến cuối cầu tàu phía trên mặt biển.,Travel,pier,glacier,crater,plateau
+jetty,B2,noun,cầu tàu nhỏ,The fisherman tied his boat to the small wooden jetty.,Người đánh cá buộc thuyền vào cầu tàu gỗ nhỏ.,Travel,jetty,glacier,crater,dune
+dock,B1,noun,khu bến tàu,The fishing boats returned to the dock to unload their catch.,Các tàu cá trở về khu bến tàu để dỡ cá đánh bắt.,Travel,dock,summit,plateau,crater
+marina,B2,noun,bến du thuyền,Dozens of private yachts were moored in the sheltered marina.,Hàng chục du thuyền tư nhân neo trong bến du thuyền kín gió.,Travel,marina,glacier,canyon,crater
+wharf,C1,noun,cầu cảng,Workers moved crates from the ship onto the wooden wharf.,Công nhân chuyển các thùng hàng từ tàu lên cầu cảng gỗ.,Travel,wharf,glacier,volcano,dune
+embankment,C1,noun,bờ kè,A raised embankment protects the riverside road from floodwater.,Một bờ kè cao bảo vệ đường ven sông khỏi nước lũ.,Geography,embankment,lagoon,reef,crater
+station,A1,noun,nhà ga,The train stopped at the station so passengers could get off.,Tàu dừng ở nhà ga để hành khách xuống tàu.,Transport,station,glacier,reef,dune
+depot,B2,noun,bãi tập kết phương tiện,Buses return to the depot every night for cleaning and repairs.,Xe buýt trở về bãi tập kết mỗi tối để được làm sạch và sửa chữa.,Transport,depot,glacier,reef,dune
+stop,A1,noun,điểm dừng xe buýt,Wait at the bus stop beside the school for the number seven.,Đợi xe số bảy ở điểm dừng xe buýt cạnh trường.,Transport,stop,reef,cave,crater
+gate,A1,noun,cổng,The guard opened the metal gate to let our car into the campsite.,Bảo vệ mở cổng kim loại để ô tô của chúng tôi vào khu cắm trại.,Places,gate,valley,meadow,glacier
+barrier,B1,noun,thanh chắn,The barrier rose after the driver paid the parking fee.,Thanh chắn nâng lên sau khi tài xế trả phí đỗ xe.,Transport,barrier,lagoon,canyon,reef
+checkpoint,B2,noun,trạm kiểm soát,Police checked every vehicle at the checkpoint near the border.,Cảnh sát kiểm tra mọi phương tiện tại trạm kiểm soát gần biên giới.,Travel,checkpoint,glacier,lagoon,summit
+embassy,B1,noun,đại sứ quán,She contacted her country's embassy after losing her passport overseas.,Cô ấy liên hệ đại sứ quán nước mình sau khi mất hộ chiếu ở nước ngoài.,Travel,embassy,campsite,reef,meadow
+consulate,C1,noun,lãnh sự quán,The consulate issued an emergency travel document for the stranded tourist.,Lãnh sự quán cấp giấy thông hành khẩn cấp cho du khách bị mắc kẹt.,Travel,consulate,glacier,lagoon,campsite
+frontier,B2,noun,vùng biên giới,Soldiers patrolled the remote frontier between the two neighbouring countries.,Binh lính tuần tra vùng biên giới xa xôi giữa hai nước láng giềng.,Geography,frontier,bonnet,propeller,saddle
+territory,B2,noun,lãnh thổ,The island forms part of the country's territory under international agreements.,Hòn đảo là một phần lãnh thổ của đất nước theo các thỏa thuận quốc tế.,Geography,territory,headlight,pedal,anchor
+zone,B1,noun,khu vực có quy định riêng,No cars are allowed in the pedestrian zone around the old square.,Ô tô không được vào khu vực đi bộ quanh quảng trường cổ.,Places,zone,glacier,tyre,propeller
+site,B1,noun,địa điểm,The ancient burial site is protected from construction and treasure hunters.,Địa điểm chôn cất cổ được bảo vệ khỏi hoạt động xây dựng và săn kho báu.,Places,site,pedal,bonnet,tyre
+venue,B2,noun,địa điểm tổ chức sự kiện,The concert venue has seats for two thousand people.,Địa điểm tổ chức hòa nhạc có chỗ ngồi cho hai nghìn người.,Places,venue,propeller,bonnet,tyre
+resort,B1,noun,khu nghỉ dưỡng,The beach resort offers guest rooms and a private swimming pool.,Khu nghỉ dưỡng ven biển cung cấp phòng khách và bể bơi riêng.,Travel,resort,glacier,reef,crater
+hotel,A1,noun,khách sạn,Our hotel provides breakfast and a private bathroom in every guest room.,Khách sạn của chúng tôi phục vụ bữa sáng và có phòng tắm riêng trong mỗi phòng nghỉ.,Travel,hotel,glacier,reef,plateau
+motel,B1,noun,nhà nghỉ ven đường cho người đi ô tô,The roadside motel offers rooms with parking spaces directly outside their doors.,Nhà nghỉ ven đường cung cấp phòng có chỗ đỗ xe ngay ngoài cửa.,Travel,motel,glacier,reef,lagoon
+inn,B1,noun,quán trọ nhỏ,We spent the night at a small country inn with six guest rooms.,Chúng tôi nghỉ đêm tại một quán trọ nhỏ ở nông thôn có sáu phòng khách.,Travel,inn,glacier,reef,crater
+guesthouse,A2,noun,nhà khách,The family-run guesthouse provides simple rooms and a shared breakfast table.,Nhà khách do gia đình quản lý cung cấp phòng đơn giản và bàn ăn sáng chung.,Travel,guesthouse,glacier,reef,canyon
+campsite,B1,noun,khu cắm trại,We pitched our tent at a campsite with toilets and running water.,Chúng tôi dựng lều ở khu cắm trại có nhà vệ sinh và nước máy.,Travel,campsite,glacier,reef,crater
+lodge,B2,noun,nhà nghỉ nhỏ ở vùng thiên nhiên,The mountain lodge offers walkers a warm bed after a day on the trails.,Nhà nghỉ trên núi cung cấp chỗ ngủ ấm áp cho người đi bộ sau một ngày trên đường mòn.,Travel,lodge,reef,lagoon,crater
+chalet,B2,noun,nhà gỗ vùng núi,Their wooden chalet stands beside the ski slope in the Alpine village.,Căn nhà gỗ của họ nằm cạnh sườn trượt tuyết trong ngôi làng vùng An pơ.,Travel,chalet,reef,lagoon,glacier
+bungalow,B1,noun,nhà một tầng,The bungalow has every room on the ground floor with no stairs.,Ngôi nhà một tầng có tất cả các phòng ở tầng trệt và không có cầu thang.,Places,bungalow,glacier,reef,canyon
+villa,B1,noun,biệt thự,They rented a spacious villa with a garden and a private pool.,Họ thuê một biệt thự rộng có vườn và bể bơi riêng.,Travel,villa,glacier,reef,crater
+palace,A2,noun,cung điện,The royal family once lived in this palace with hundreds of rooms.,Hoàng gia từng sống trong cung điện có hàng trăm phòng này.,Places,palace,reef,glacier,lagoon
+mountain,A1,noun,núi,The mountain rises two thousand metres above the surrounding valley.,Ngọn núi cao hai nghìn mét so với thung lũng xung quanh.,Nature,mountain,pond,reef,lagoon
+hill,A1,noun,đồi,We climbed the grassy hill behind the village in ten minutes.,Chúng tôi leo lên ngọn đồi cỏ sau làng trong mười phút.,Nature,hill,reef,lagoon,pond
+valley,A2,noun,thung lũng,A river flows through the valley between the two mountain ranges.,Một con sông chảy qua thung lũng giữa hai dãy núi.,Nature,valley,summit,peak,ridge
+plain,B1,noun,đồng bằng,The broad plain is flat enough for farmers to grow rice over large areas.,Đồng bằng rộng và bằng phẳng đủ để nông dân trồng lúa trên diện tích lớn.,Nature,plain,cliff,crater,glacier
+plateau,B2,noun,cao nguyên,The plateau is a large flat area high above the surrounding lowlands.,Cao nguyên là vùng đất phẳng rộng cao hơn các vùng đất thấp xung quanh.,Nature,plateau,lagoon,pond,reef
+cliff,B1,noun,vách đá dựng đứng,We kept away from the cliff because its edge drops straight into the sea.,Chúng tôi tránh xa vách đá vì mép của nó đổ thẳng xuống biển.,Nature,cliff,meadow,prairie,pond
+canyon,B2,noun,hẻm núi sâu,The river cut a deep canyon through the layers of red rock.,Con sông xẻ một hẻm núi sâu qua các lớp đá đỏ.,Nature,canyon,lagoon,reef,meadow
+gorge,B2,noun,hẻm núi hẹp,The narrow gorge has steep rock walls and a fast-flowing river below.,Hẻm núi hẹp có những vách đá dốc và dòng sông chảy xiết bên dưới.,Nature,gorge,prairie,reef,lagoon
+cave,A2,noun,hang động,We entered the dark cave through an opening in the rock face.,Chúng tôi vào hang động tối qua một cửa mở trên vách đá.,Nature,cave,meadow,plateau,reef
+peak,B1,noun,đỉnh núi nhọn,Snow still covered the sharp peak long after the lower slopes turned green.,Tuyết vẫn phủ đỉnh núi nhọn rất lâu sau khi các sườn thấp đã xanh trở lại.,Nature,peak,pond,lagoon,reef
+summit,B2,noun,điểm cao nhất của núi,The climbers reached the summit and could go no higher.,Những người leo núi đạt tới điểm cao nhất và không thể lên cao hơn.,Nature,summit,valley,estuary,lagoon
+ridge,B2,noun,sống núi,We followed the narrow ridge with steep valleys on both sides.,Chúng tôi men theo sống núi hẹp với thung lũng dốc ở hai bên.,Nature,ridge,lagoon,pond,reef
+slope,B1,noun,sườn dốc,Rainwater ran down the grassy slope towards the road below.,Nước mưa chảy xuống sườn dốc phủ cỏ về phía con đường bên dưới.,Nature,slope,reef,lagoon,iceberg
+volcano,B1,noun,núi lửa,The volcano erupted and sent hot lava down its sides.,Núi lửa phun trào và đẩy dung nham nóng xuống các sườn.,Nature,volcano,glacier,lagoon,reef
+crater,B2,noun,miệng núi lửa,A circular crater remained at the top of the volcano after the eruption.,Một miệng núi lửa tròn vẫn còn trên đỉnh sau đợt phun trào.,Nature,crater,meadow,reef,prairie
+glacier,B2,noun,sông băng,The slow-moving glacier carries huge masses of ice down the mountain.,Sông băng chuyển động chậm mang những khối băng lớn xuống núi.,Nature,glacier,reef,prairie,desert
+iceberg,B1,noun,tảng băng trôi,Only a small part of the floating iceberg appeared above the sea.,Chỉ một phần nhỏ của tảng băng trôi nổi lên trên mặt biển.,Nature,iceberg,volcano,meadow,canyon
+waterfall,A2,noun,thác nước,The river drops over a high rock ledge to form a waterfall.,Con sông đổ qua một bậc đá cao tạo thành thác nước.,Nature,waterfall,desert,plateau,reef
+stream,A2,noun,suối,We stepped across the shallow stream on a line of flat stones.,Chúng tôi bước qua con suối nông trên một hàng đá phẳng.,Nature,stream,glacier,volcano,desert
+brook,B2,noun,dòng suối nhỏ,A little brook runs behind the cottage and joins the larger river.,Một dòng suối nhỏ chảy sau ngôi nhà rồi đổ vào con sông lớn hơn.,Nature,brook,reef,plateau,dune
+lake,A1,noun,hồ,We sailed across the large freshwater lake surrounded by mountains.,Chúng tôi đi thuyền qua hồ nước ngọt rộng được bao quanh bởi núi.,Nature,lake,cliff,dune,canyon
+pond,A2,noun,ao,The garden pond is small enough to walk around in a minute.,Ao trong vườn nhỏ đến mức có thể đi vòng quanh trong một phút.,Nature,pond,ocean,continent,mountain
+swamp,B2,noun,đầm lầy có cây,The trees in the swamp grow in ground that stays flooded most of the year.,Cây trong đầm lầy mọc trên đất ngập nước gần như quanh năm.,Nature,swamp,glacier,desert,plateau
+marsh,B2,noun,đầm lầy có cỏ,Reeds and grasses cover the marsh where the ground is always wet.,Sậy và cỏ phủ đầm lầy nơi mặt đất luôn ẩm ướt.,Nature,marsh,glacier,desert,canyon
+wetland,B2,noun,vùng đất ngập nước,The protected wetland provides shallow water where migrating birds can feed.,Vùng đất ngập nước được bảo vệ cung cấp nước nông cho chim di cư kiếm ăn.,Nature,wetland,glacier,desert,plateau
+delta,B2,noun,châu thổ,The river divides into many channels across its delta before reaching the sea.,Con sông chia thành nhiều nhánh qua châu thổ trước khi ra biển.,Nature,delta,summit,glacier,ridge
+estuary,C1,noun,cửa sông có thủy triều,Fresh river water mixes with salty seawater in the tidal estuary.,Nước sông ngọt hòa với nước biển mặn ở cửa sông có thủy triều.,Nature,estuary,summit,glacier,ridge
+bay,B1,noun,vịnh,The curved bay provides a sheltered place for small boats to anchor.,Vịnh cong tạo chỗ kín gió cho thuyền nhỏ thả neo.,Nature,bay,plateau,glacier,desert
+gulf,B2,noun,vịnh biển lớn,The ships crossed the wide gulf between the peninsula and the mainland.,Những con tàu băng qua vịnh lớn giữa bán đảo và đất liền.,Nature,gulf,meadow,glacier,crater
+peninsula,B2,noun,bán đảo,The peninsula is surrounded by water on three sides but joins the mainland.,Bán đảo được nước bao quanh ba mặt nhưng vẫn nối với đất liền.,Nature,peninsula,iceberg,lagoon,pond
+cape,C1,noun,mũi đất nhô ra biển,The lighthouse stands on a cape projecting far into the sea.,Ngọn hải đăng nằm trên một mũi đất nhô xa ra biển.,Nature,cape,pond,glacier,lagoon
+beach,A1,noun,bãi biển,The children built sandcastles on the beach beside the sea.,Bọn trẻ xây lâu đài cát trên bãi biển cạnh biển.,Nature,beach,glacier,plateau,canyon
+shore,B1,noun,bờ biển hoặc bờ hồ,We pulled the boat onto the shore where water met dry land.,Chúng tôi kéo thuyền lên bờ nơi nước tiếp giáp đất khô.,Nature,shore,summit,crater,ridge
+ocean,A2,noun,đại dương,The Pacific is the largest ocean and covers a vast area of Earth.,Thái Bình Dương là đại dương lớn nhất và bao phủ diện tích rộng lớn của Trái Đất.,Nature,ocean,pond,brook,stream
+sea,A1,noun,biển,The fishing boat returned from the sea carrying a basket of fresh fish.,Thuyền đánh cá trở về từ biển với một giỏ cá tươi.,Nature,sea,desert,glacier,plateau
+tide,B1,noun,thủy triều,The rising tide covered the beach twice during the day.,Thủy triều dâng phủ bãi biển hai lần trong ngày.,Nature,tide,drought,heatwave,frost
+wave,A2,noun,sóng nước,A large wave broke against the boat and splashed everyone on deck.,Một con sóng lớn đập vào thuyền và làm nước bắn lên mọi người trên boong.,Nature,wave,drought,rainbow,frost
+current,B2,noun,dòng nước chảy,The strong ocean current carried the drifting boat away from the coast.,Dòng hải lưu mạnh cuốn chiếc thuyền trôi xa bờ.,Nature,current,drought,thunder,frost
+reef,B2,noun,rạn đá hoặc san hô,Divers avoided touching the reef that shelters hundreds of colourful fish.,Thợ lặn tránh chạm vào rạn san hô nơi hàng trăm loài cá sặc sỡ trú ngụ.,Nature,reef,glacier,dune,plateau
+coral,B2,noun,san hô,Living coral builds hard underwater structures that provide homes for many sea creatures.,San hô sống tạo nên những cấu trúc cứng dưới nước làm nơi ở cho nhiều sinh vật biển.,Nature,coral,gravel,snow,canvas
+lagoon,B2,noun,đầm phá ven biển,A narrow strip of sand separates the shallow lagoon from the open sea.,Một dải cát hẹp ngăn đầm phá nông với biển khơi.,Nature,lagoon,summit,glacier,canyon
+atoll,C1,noun,đảo san hô hình vòng,The ring-shaped atoll surrounds a lagoon in the tropical ocean.,Đảo san hô hình vòng bao quanh một đầm nước ở đại dương nhiệt đới.,Nature,atoll,glacier,volcano,plateau
+dune,B2,noun,cồn cát,The wind shaped a high dune from loose sand near the beach.,Gió tạo nên một cồn cát cao từ cát rời gần bãi biển.,Nature,dune,glacier,reef,lagoon
+desert,A2,noun,sa mạc,Very little rain falls in the desert so few plants grow there.,Sa mạc có rất ít mưa nên chỉ có ít thực vật mọc ở đó.,Nature,desert,rainforest,swamp,marsh
+oasis,B2,noun,ốc đảo,The travellers found an oasis with fresh water in the middle of the desert.,Những người lữ hành tìm thấy một ốc đảo có nước ngọt giữa sa mạc.,Nature,oasis,glacier,iceberg,crater
+meadow,B2,noun,đồng cỏ,Wild flowers grew across the meadow where sheep grazed in spring.,Hoa dại mọc khắp đồng cỏ nơi cừu gặm cỏ vào mùa xuân.,Nature,meadow,glacier,reef,lagoon
+prairie,C1,noun,thảo nguyên Bắc Mỹ,Tall grasses covered the open prairie stretching across the North American plains.,Cỏ cao phủ thảo nguyên rộng trải dài trên những đồng bằng Bắc Mỹ.,Nature,prairie,glacier,reef,lagoon
+jungle,B1,noun,rừng rậm nhiệt đới,The dense tropical jungle was full of vines and loud bird calls.,Rừng rậm nhiệt đới dày đặc đầy dây leo và tiếng chim kêu vang.,Nature,jungle,glacier,desert,plateau
+rainforest,B1,noun,rừng mưa nhiệt đới,Warm rain falls throughout the year in this thick tropical rainforest.,Mưa ấm rơi quanh năm trong khu rừng mưa nhiệt đới rậm rạp này.,Nature,rainforest,desert,glacier,tundra
+woodland,B2,noun,vùng cây rừng,The woodland path winds between oak trees and patches of wild flowers.,Lối đi trong vùng cây rừng uốn lượn giữa những cây sồi và đám hoa dại.,Nature,woodland,glacier,reef,lagoon
+grove,C1,noun,lùm cây,We rested in a small grove of olive trees beside the road.,Chúng tôi nghỉ trong một lùm ô liu nhỏ cạnh đường.,Nature,grove,glacier,reef,lagoon
+hedge,B1,noun,hàng rào cây,The farmer trimmed the hedge that separates the two fields.,Người nông dân tỉa hàng rào cây ngăn hai cánh đồng.,Nature,hedge,glacier,reef,lagoon
+field,A1,noun,cánh đồng,The farmer planted a field of corn behind the village.,Người nông dân trồng một cánh đồng ngô sau làng.,Nature,field,glacier,reef,lagoon
+rain,A1,noun,mưa,Heavy rain soaked our coats before we could find shelter.,Mưa lớn làm áo khoác của chúng tôi ướt sũng trước khi tìm được chỗ trú.,Weather,rain,sunshine,drought,heatwave
+snow,A1,noun,tuyết,Fresh snow covered the mountain with a soft white layer.,Tuyết mới phủ lên núi một lớp trắng mềm.,Weather,snow,sunshine,drought,heatwave
+hail,B1,noun,mưa đá,Hard balls of hail hit the car roof during the storm.,Những viên mưa đá cứng đập vào nóc ô tô trong cơn bão.,Weather,hail,sunshine,drought,heatwave
+sleet,B2,noun,mưa tuyết lẫn mưa,Wet sleet fell as a mixture of rain and partly melted snow.,Mưa tuyết ướt rơi xuống dưới dạng hỗn hợp mưa và tuyết tan một phần.,Weather,sleet,sunshine,drought,heatwave
+frost,B1,noun,sương giá,A thin white frost formed on the grass during the freezing night.,Một lớp sương giá trắng mỏng hình thành trên cỏ trong đêm lạnh dưới không độ.,Weather,frost,sunshine,drought,heatwave
+ice,A1,noun,băng,The lake's surface turned to solid ice after several freezing nights.,Mặt hồ trở thành băng rắn sau nhiều đêm lạnh dưới không độ.,Weather,ice,steam,sand,mud
+fog,A2,noun,sương mù dày,Thick fog reduced visibility so much that we could barely see the road.,Sương mù dày giảm tầm nhìn đến mức chúng tôi khó thấy đường.,Weather,fog,sunshine,drought,heatwave
+mist,B1,noun,sương mù nhẹ,A light mist hung over the lake but we could still see the far bank.,Sương mù nhẹ phủ trên hồ nhưng chúng tôi vẫn nhìn thấy bờ bên kia.,Weather,mist,sunshine,drought,heatwave
+dew,B2,noun,sương đọng,Drops of dew covered the grass before the morning sun rose.,Những giọt sương đọng phủ trên cỏ trước khi mặt trời buổi sáng mọc.,Weather,dew,sunshine,drought,heatwave
+drizzle,B2,noun,mưa phùn,Fine drizzle fell gently and slowly dampened our clothes.,Mưa phùn mỏng rơi nhẹ và từ từ làm ẩm quần áo chúng tôi.,Weather,drizzle,sunshine,drought,heatwave
+downpour,B2,noun,trận mưa lớn,A sudden downpour filled the gutters with water in minutes.,Một trận mưa lớn bất chợt làm đầy nước các máng xối trong vài phút.,Weather,downpour,rainbow,heatwave,drought
+shower,B1,noun,cơn mưa rào,A brief shower of rain interrupted our picnic before the sun returned.,Một cơn mưa rào ngắn làm gián đoạn buổi dã ngoại trước khi nắng trở lại.,Weather,shower,drought,heatwave,frost
+thunder,A2,noun,tiếng sấm,We heard thunder rumbling after the bright flash of lightning.,Chúng tôi nghe tiếng sấm rền sau tia chớp sáng.,Weather,thunder,sunshine,drought,heatwave
+lightning,B1,noun,tia chớp,A flash of lightning lit the sky before we heard the thunder.,Một tia chớp làm sáng bầu trời trước khi chúng tôi nghe tiếng sấm.,Weather,lightning,sunshine,drought,heatwave
+breeze,B1,noun,gió nhẹ,A gentle breeze moved the leaves without bending the branches.,Gió nhẹ làm lá lay động mà không uốn cong cành.,Weather,breeze,blizzard,drought,frost
+wind,A1,noun,gió,Strong wind blew the loose papers across the open courtyard.,Gió mạnh thổi những tờ giấy rời bay qua sân trống.,Weather,wind,dew,snow,ice
+gale,B2,noun,gió rất mạnh,The fierce gale bent the trees and made walking difficult.,Gió rất mạnh làm cây cong xuống và khiến việc đi bộ khó khăn.,Weather,gale,dew,drought,frost
+hurricane,B2,noun,bão nhiệt đới mạnh,The Atlantic hurricane brought violent rotating winds and extremely heavy rain.,Cơn bão nhiệt đới Đại Tây Dương mang theo gió xoáy dữ dội và mưa cực lớn.,Weather,hurricane,rainbow,drought,frost
+cyclone,C1,noun,bão xoáy nhiệt đới,The tropical cyclone developed over warm ocean water and damaged coastal villages.,Bão xoáy nhiệt đới hình thành trên nước biển ấm và làm hư hại các làng ven biển.,Weather,cyclone,rainbow,drought,frost
+tornado,B2,noun,lốc xoáy hình phễu,A narrow tornado funnel touched the ground and lifted debris into the air.,Một cột lốc xoáy hình phễu hẹp chạm đất và cuốn mảnh vụn lên không trung.,Weather,tornado,rainbow,drought,frost
+blizzard,B2,noun,bão tuyết,The blizzard brought heavy snow and strong winds that blocked the mountain road.,Bão tuyết mang theo tuyết dày và gió mạnh làm tắc đường núi.,Weather,blizzard,rainbow,drought,heatwave
+drought,B2,noun,hạn hán,Months without rain caused a drought that dried up the village wells.,Nhiều tháng không mưa gây hạn hán làm các giếng làng cạn nước.,Weather,drought,blizzard,downpour,shower
+heatwave,B2,noun,đợt nắng nóng kéo dài,The summer heatwave kept daytime temperatures unusually high for two weeks.,Đợt nắng nóng mùa hè giữ nhiệt độ ban ngày cao bất thường trong hai tuần.,Weather,heatwave,blizzard,frost,sleet
+rainbow,A2,noun,cầu vồng,A colourful rainbow appeared when sunlight passed through raindrops after the storm.,Cầu vồng nhiều màu xuất hiện khi ánh nắng xuyên qua giọt mưa sau cơn bão.,Weather,rainbow,drought,blizzard,frost
+sunshine,A2,noun,ánh nắng mặt trời,Bright sunshine warmed the campsite after a week of cloudy weather.,Ánh nắng rực rỡ sưởi ấm khu cắm trại sau một tuần trời nhiều mây.,Weather,sunshine,sleet,hail,frost
+horizon,B1,noun,đường chân trời,We watched a distant ship disappear below the horizon where sea meets sky.,Chúng tôi nhìn con tàu xa biến mất dưới đường chân trời nơi biển gặp trời.,Nature,horizon,keel,tyre,bonnet
+sunrise,B1,noun,bình minh lúc mặt trời mọc,We woke before sunrise to watch the sun appear above the eastern hills.,Chúng tôi thức trước lúc mặt trời mọc để ngắm mặt trời xuất hiện trên đồi phía đông.,Nature,sunrise,sunset,dusk,midnight
+sunset,B1,noun,hoàng hôn lúc mặt trời lặn,The sky turned orange at sunset as the sun disappeared in the west.,Bầu trời chuyển màu cam lúc hoàng hôn khi mặt trời khuất ở phía tây.,Nature,sunset,sunrise,dawn,noon
+twilight,B2,noun,ánh sáng chạng vạng,Soft twilight remained after the sun had set but before complete darkness.,Ánh sáng chạng vạng dịu vẫn còn sau khi mặt trời lặn nhưng trước khi tối hẳn.,Nature,twilight,sunrise,noon,midday
+dawn,B1,noun,rạng đông,Birds began singing at dawn as the first daylight appeared.,Chim bắt đầu hót lúc rạng đông khi ánh sáng ban ngày đầu tiên xuất hiện.,Nature,dawn,sunset,dusk,midnight
+dusk,B2,noun,lúc chạng vạng tối,We returned at dusk when evening light was fading into darkness.,Chúng tôi trở về lúc chạng vạng tối khi ánh sáng chiều đang tắt dần.,Nature,dusk,dawn,sunrise,noon
+bird,A1,noun,chim,A bird built a nest in the tree and laid three eggs.,Một con chim làm tổ trên cây và đẻ ba quả trứng.,Animals,bird,fox,rabbit,goat
+fish,A1,noun,cá,The fish breathes through gills while swimming beneath the water.,Con cá thở bằng mang khi bơi dưới nước.,Animals,fish,rabbit,horse,goat
+horse,A1,noun,ngựa,The rider put a saddle on the horse before crossing the field.,Người cưỡi đặt yên lên ngựa trước khi băng qua cánh đồng.,Animals,horse,sparrow,snail,octopus
+cow,A1,noun,bò cái,The dairy farmer milked the cow early in the morning.,Người chăn nuôi bò sữa vắt sữa bò cái vào sáng sớm.,Animals,cow,robin,python,beetle
+sheep,A1,noun,cừu,The farmer sheared the sheep and collected its thick wool.,Người nông dân xén lông cừu và thu lấy lớp len dày.,Animals,sheep,snake,penguin,shark
+goat,A2,noun,dê,The goat climbed the rocky slope and chewed leaves from a bush.,Con dê leo sườn đá và nhai lá từ một bụi cây.,Animals,goat,dolphin,jellyfish,octopus
+pig,A1,noun,lợn,The pig rolled in cool mud to protect its skin from the heat.,Con lợn lăn trong bùn mát để bảo vệ da khỏi sức nóng.,Animals,pig,swallow,shark,python
+chicken,A1,noun,gà,The chicken scratched the soil with its feet to find seeds.,Con gà dùng chân bới đất để tìm hạt.,Animals,chicken,dolphin,octopus,seal
+duck,A1,noun,vịt,The duck paddled across the pond using its webbed feet.,Con vịt bơi qua ao bằng đôi chân có màng.,Animals,duck,wolf,hedgehog,python
+goose,A2,noun,ngỗng,The large goose honked loudly and stretched its long neck near the pond.,Con ngỗng lớn kêu to và vươn cổ dài gần ao.,Animals,goose,snail,fox,beaver
+turkey,A2,noun,gà tây,The male turkey spread its broad tail feathers during the display.,Con gà tây trống xòe bộ lông đuôi rộng khi phô diễn.,Animals,turkey,otter,python,frog
+pigeon,A2,noun,bồ câu,A grey pigeon landed in the city square and pecked at bread crumbs.,Một con bồ câu xám đậu xuống quảng trường thành phố và mổ vụn bánh mì.,Animals,pigeon,rabbit,seal,mouse
+sparrow,A2,noun,chim sẻ,A tiny sparrow chirped on the garden fence before flying away.,Một con chim sẻ nhỏ ríu rít trên hàng rào vườn rồi bay đi.,Animals,sparrow,mole,snail,otter
+swallow,B1,noun,chim én,The swallow built a cup-shaped mud nest under our roof.,Con chim én làm tổ bùn hình chiếc cốc dưới mái nhà chúng tôi.,Animals,swallow,hedgehog,shark,goat
+robin,B1,noun,chim cổ đỏ,A robin with an orange-red breast sang beside the garden path.,Một con chim cổ đỏ có ngực màu đỏ cam hót cạnh lối đi trong vườn.,Animals,robin,otter,beaver,whale
+crow,B1,noun,quạ,The black crow cawed from the fence and flapped its wings.,Con quạ đen kêu trên hàng rào rồi vỗ cánh.,Animals,crow,mole,seal,slug
+raven,B2,noun,quạ lớn,A large black raven flew above the castle making a deep croaking call.,Một con quạ lớn màu đen bay trên lâu đài và kêu trầm khàn.,Animals,raven,badger,ferret,whale
+eagle,B1,noun,đại bàng,The eagle spread its broad wings and soared above the mountain valley.,Đại bàng dang đôi cánh rộng và bay lượn trên thung lũng núi.,Animals,eagle,otter,hedgehog,rabbit
+hawk,B2,noun,diều hâu,The hawk circled overhead before swooping down on a field mouse.,Diều hâu bay vòng trên cao trước khi lao xuống bắt một con chuột đồng.,Animals,hawk,beaver,snail,seal
+falcon,B2,noun,chim cắt,The falcon folded its wings and dived at great speed towards its prey.,Chim cắt khép cánh và lao xuống con mồi với tốc độ cao.,Animals,falcon,beaver,hedgehog,clam
+owl,A2,noun,cú,An owl hunted at night and turned its head towards a faint sound.,Một con cú săn mồi ban đêm và quay đầu về phía tiếng động khẽ.,Animals,owl,dolphin,snail,earthworm
+parrot,A2,noun,vẹt,The green parrot copied a few words that its owner said every morning.,Con vẹt xanh bắt chước vài từ mà chủ nói mỗi sáng.,Animals,parrot,tortoise,clam,beaver
+penguin,A2,noun,chim cánh cụt,The penguin cannot fly but uses its flippers to swim underwater.,Chim cánh cụt không thể bay nhưng dùng cánh dạng vây để bơi dưới nước.,Animals,penguin,sparrow,robin,swallow
+ostrich,B1,noun,đà điểu,The ostrich ran across the plain on two long powerful legs.,Đà điểu chạy qua đồng bằng bằng hai chân dài khỏe.,Animals,ostrich,snail,octopus,whale
+swan,B1,noun,thiên nga,The white swan curved its long neck while gliding across the lake.,Thiên nga trắng uốn cổ dài khi lướt trên hồ.,Animals,swan,mole,boar,python
+peacock,B1,noun,công trống,The peacock opened its colourful tail into a huge fan.,Con công trống xòe đuôi sặc sỡ thành một chiếc quạt lớn.,Animals,peacock,otter,seal,mole
+flamingo,B2,noun,hồng hạc,The pink flamingo stood on one leg in the shallow lagoon.,Con hồng hạc màu hồng đứng một chân trong đầm phá nông.,Animals,flamingo,boar,mole,badger
+heron,B2,noun,diệc,The heron waited beside the river before spearing a fish with its long beak.,Con diệc chờ bên sông trước khi dùng mỏ dài đâm bắt một con cá.,Animals,heron,rabbit,hedgehog,beaver
+kingfisher,B2,noun,chim bói cá,The blue kingfisher dived from its branch into the stream to catch a fish.,Chim bói cá xanh lao từ cành xuống suối để bắt cá.,Animals,kingfisher,hedgehog,boar,goat
+woodpecker,B2,noun,chim gõ kiến,The woodpecker tapped its strong beak against the tree trunk.,Chim gõ kiến dùng mỏ khỏe gõ vào thân cây.,Animals,woodpecker,otter,whale,snail
+bat,A2,noun,dơi,The bat is a flying mammal that often hunts insects after dark.,Dơi là động vật có vú biết bay thường săn côn trùng sau khi trời tối.,Animals,bat,sparrow,robin,pigeon
+rabbit,A1,noun,thỏ,The rabbit twitched its long ears and hopped back into its burrow.,Con thỏ giật đôi tai dài rồi nhảy về hang.,Animals,rabbit,octopus,whale,eagle
+hare,B2,noun,thỏ rừng,The hare ran swiftly across the open field on its long hind legs.,Thỏ rừng chạy nhanh qua cánh đồng rộng bằng đôi chân sau dài.,Animals,hare,tortoise,snail,clam
+mouse,A1,noun,chuột nhắt,A small mouse squeezed through the crack and nibbled a grain of rice.,Một con chuột nhắt nhỏ luồn qua khe và gặm một hạt gạo.,Animals,mouse,whale,dolphin,eagle
+rat,A2,noun,chuột cống,The large rat disappeared into a drain carrying a scrap of food.,Con chuột cống lớn biến vào cống và mang theo một mẩu thức ăn.,Animals,rat,swan,whale,dolphin
+squirrel,B1,noun,sóc,The squirrel climbed the tree and hid a nut in its hollow trunk.,Con sóc trèo lên cây và giấu hạt trong thân cây rỗng.,Animals,squirrel,shark,octopus,whale
+hedgehog,B2,noun,nhím nhỏ có gai ngắn,The hedgehog curled into a ball with sharp spines facing outwards.,Con nhím nhỏ cuộn thành một quả bóng với gai nhọn hướng ra ngoài.,Animals,hedgehog,squirrel,rabbit,otter
+mole,B2,noun,chuột chũi,The mole dug underground tunnels and left small heaps of soil above them.,Chuột chũi đào đường hầm dưới đất và để lại những đụn đất nhỏ bên trên.,Animals,mole,eagle,dolphin,swan
+fox,A2,noun,cáo,The red fox slipped through the hedge with its bushy tail held low.,Con cáo đỏ luồn qua hàng rào cây và hạ thấp chiếc đuôi xù.,Animals,fox,whale,snail,pigeon
+wolf,B1,noun,sói,The wolf howled at night to communicate with other members of its pack.,Con sói hú vào ban đêm để liên lạc với các thành viên khác trong đàn.,Animals,wolf,snail,pigeon,clam
+bear,A2,noun,gấu,The brown bear stood on its hind legs beside the river.,Con gấu nâu đứng bằng hai chân sau bên sông.,Animals,bear,sparrow,clam,octopus
+deer,B1,noun,hươu,The deer moved quietly through the woodland with its antlers above the bushes.,Con hươu lặng lẽ đi qua rừng với cặp gạc nhô lên trên bụi cây.,Animals,deer,fox,rabbit,badger
+moose,B2,noun,nai sừng tấm,The huge moose had broad flat antlers and stood beside the northern lake.,Con nai sừng tấm khổng lồ có gạc rộng phẳng và đứng bên hồ phía bắc.,Animals,moose,otter,seal,fox
+reindeer,B1,noun,tuần lộc,The reindeer pulled a sled through the snowy northern landscape.,Con tuần lộc kéo xe trượt qua khung cảnh phủ tuyết ở phương bắc.,Animals,reindeer,dolphin,pigeon,clam
+boar,B2,noun,lợn rừng đực,The wild boar rooted through the forest floor with its strong snout.,Con lợn rừng đực dùng mõm khỏe đào bới nền rừng.,Animals,boar,pigeon,swan,octopus
+badger,B2,noun,lửng,The badger had black-and-white facial stripes and emerged from its underground sett.,Con lửng có các sọc đen trắng trên mặt và chui ra từ hang ngầm.,Animals,badger,swan,dolphin,clam
+otter,B2,noun,rái cá,The otter swam along the river and used its paws to hold a fish.,Rái cá bơi dọc sông và dùng chân trước giữ một con cá.,Animals,otter,eagle,hedgehog,sparrow
+beaver,B2,noun,hải ly,The beaver cut branches with its teeth to build a dam across the stream.,Hải ly dùng răng cắt cành để xây đập ngang suối.,Animals,beaver,dolphin,eagle,clam
+raccoon,B2,noun,gấu mèo,The raccoon had a striped tail and dark markings around its eyes.,Gấu mèo có đuôi sọc và những vệt sẫm quanh mắt.,Animals,raccoon,swan,whale,clam
+weasel,C1,noun,chồn nhỏ,The slender weasel slipped into a narrow hole while hunting a mouse.,Con chồn nhỏ thân thon luồn vào lỗ hẹp khi săn chuột nhắt.,Animals,weasel,whale,swan,octopus
+ferret,B2,noun,chồn sương,The pet ferret wriggled through a fabric tunnel and chased a toy.,Con chồn sương nuôi luồn qua đường ống vải rồi đuổi theo đồ chơi.,Animals,ferret,whale,swan,clam
+stoat,C1,noun,chồn ecmin,The small stoat has a black tail tip and hunts rabbits in the countryside.,Con chồn ecmin nhỏ có đầu đuôi đen và săn thỏ ở vùng nông thôn.,Animals,stoat,swan,dolphin,clam
+seal,B1,noun,hải cẩu,The seal rested on the rocks before using its flippers to enter the sea.,Hải cẩu nghỉ trên đá rồi dùng chân dạng vây để xuống biển.,Animals,seal,squirrel,fox,robin
+walrus,B2,noun,hải mã,The walrus rested on sea ice with two long tusks pointing downwards.,Hải mã nằm nghỉ trên băng biển với hai chiếc ngà dài hướng xuống.,Animals,walrus,dolphin,otter,penguin
+whale,A2,noun,cá voi,The whale surfaced to breathe air through a blowhole on its head.,Cá voi nổi lên để hít không khí qua lỗ thở trên đầu.,Animals,whale,shark,octopus,clam
+dolphin,A2,noun,cá heo,The dolphin leaped above the waves and breathed through its blowhole.,Cá heo nhảy lên trên sóng và thở qua lỗ thở.,Animals,dolphin,shark,octopus,clam
+shark,A2,noun,cá mập,The shark swam past the divers with its rows of sharp teeth visible.,Cá mập bơi qua các thợ lặn và để lộ những hàng răng nhọn.,Animals,shark,swan,rabbit,hedgehog
+octopus,B1,noun,bạch tuộc,The octopus used its eight arms to squeeze between the rocks.,Bạch tuộc dùng tám cánh tay để luồn qua những tảng đá.,Animals,octopus,seal,whale,dolphin
+squid,B2,noun,mực ống,The squid has a long body and releases ink when threatened.,Mực ống có thân dài và phun mực khi bị đe dọa.,Animals,squid,seal,whale,dolphin
+jellyfish,B1,noun,sứa,The transparent jellyfish drifted through the water with tentacles hanging below.,Con sứa trong suốt trôi trong nước với các xúc tu thả bên dưới.,Animals,jellyfish,seal,whale,dolphin
+starfish,B1,noun,sao biển,The starfish has five arms arranged around a central body on the seabed.,Sao biển có năm cánh tay xếp quanh phần thân giữa ở đáy biển.,Animals,starfish,seal,whale,dolphin
+crab,A2,noun,cua,The crab walked sideways across the sand and raised its two claws.,Con cua bò ngang trên cát và giơ hai càng lên.,Animals,crab,swan,whale,robin
+lobster,B1,noun,tôm hùm,The lobster has a hard shell and large claws at the front.,Tôm hùm có vỏ cứng và hai càng lớn phía trước.,Animals,lobster,swan,whale,robin
+mussel,B2,noun,vẹm,The mussel clung to a rock inside its dark elongated shell.,Con vẹm bám vào đá bên trong chiếc vỏ dài sẫm màu.,Animals,mussel,swan,whale,robin
+oyster,B2,noun,hàu,The oyster lay inside its rough hinged shell on the seabed.,Con hàu nằm trong chiếc vỏ sần có bản lề ở đáy biển.,Animals,oyster,swan,whale,robin
+clam,B2,noun,ngao,The clam buried itself in wet sand and closed its two shells.,Con ngao vùi mình trong cát ướt và khép hai mảnh vỏ.,Animals,clam,swan,whale,robin
+snail,A2,noun,ốc sên,The snail carried its spiral shell as it moved slowly over a leaf.,Ốc sên mang chiếc vỏ xoắn khi chậm rãi bò trên lá.,Animals,snail,slug,earthworm,caterpillar
+slug,B2,noun,sên trần,The slug left a shiny trail but had no visible shell on its back.,Sên trần để lại vệt bóng nhưng không có vỏ nhìn thấy trên lưng.,Animals,slug,snail,beetle,clam
+earthworm,B2,noun,giun đất,The earthworm moved through moist soil without legs or a hard shell.,Giun đất di chuyển qua đất ẩm mà không có chân hay vỏ cứng.,Animals,earthworm,snail,beetle,crab
+caterpillar,B1,noun,sâu bướm,The caterpillar ate leaves before forming a chrysalis and becoming a butterfly.,Sâu bướm ăn lá trước khi tạo nhộng và biến thành bướm.,Animals,caterpillar,earthworm,snail,clam
+butterfly,A2,noun,bướm,The butterfly rested on a flower with its colourful wings spread open.,Con bướm đậu trên hoa và xòe đôi cánh sặc sỡ.,Animals,butterfly,snail,earthworm,clam
+moth,B1,noun,bướm đêm,A moth flew towards the bright lamp after darkness fell.,Một con bướm đêm bay về phía bóng đèn sáng khi trời tối.,Animals,moth,snail,earthworm,clam
+bee,A2,noun,ong mật,The bee collected nectar from flowers and returned to its hive.,Ong mật hút mật hoa rồi trở về tổ.,Animals,bee,snail,earthworm,clam
+wasp,B1,noun,ong bắp cày,The wasp had a narrow waist and hovered around our sweet drinks.,Ong bắp cày có eo nhỏ và bay quanh đồ uống ngọt của chúng tôi.,Animals,wasp,snail,earthworm,clam
+ant,A2,noun,kiến,The ant carried a crumb towards the colony beneath the pavement.,Con kiến mang vụn thức ăn về phía đàn ở dưới vỉa hè.,Animals,ant,whale,seal,dolphin
+beetle,B1,noun,bọ cánh cứng,The beetle's hard wing covers protected the delicate wings underneath.,Cánh ngoài cứng của bọ cánh cứng bảo vệ đôi cánh mỏng bên dưới.,Animals,beetle,earthworm,slug,snail
+dragonfly,B2,noun,chuồn chuồn,The dragonfly hovered over the pond with two pairs of transparent wings.,Chuồn chuồn bay lơ lửng trên ao với hai đôi cánh trong suốt.,Animals,dragonfly,snail,earthworm,clam
+grasshopper,B1,noun,châu chấu,The grasshopper jumped between stems using its powerful hind legs.,Châu chấu nhảy giữa các thân cây bằng đôi chân sau khỏe.,Animals,grasshopper,snail,earthworm,clam
+cricket,B2,noun,dế,A cricket chirped repeatedly from the long grass after sunset.,Một con dế gáy liên tục trong đám cỏ dài sau hoàng hôn.,Animals,cricket,snail,earthworm,clam
+mosquito,A2,noun,muỗi,The mosquito bit my arm while we sat beside the pond.,Con muỗi đốt tay tôi khi chúng tôi ngồi cạnh ao.,Animals,mosquito,butterfly,snail,earthworm
+fly,A2,noun,ruồi,A fly landed on the fruit and rubbed its front legs together.,Một con ruồi đậu lên trái cây và chà hai chân trước vào nhau.,Animals,fly,snail,earthworm,clam
+flea,B2,noun,bọ chét,The tiny flea jumped from the dog's fur onto the blanket.,Con bọ chét nhỏ nhảy từ lông chó lên tấm chăn.,Animals,flea,tick,snail,earthworm
+tick,B2,noun,bọ ve,The tick attached itself to the dog's skin and fed on blood.,Bọ ve bám vào da chó và hút máu.,Animals,tick,butterfly,snail,earthworm
+spider,A2,noun,nhện,The spider spun a sticky web between the branches to catch insects.,Con nhện giăng mạng dính giữa các cành để bắt côn trùng.,Animals,spider,snail,earthworm,clam
+scorpion,B1,noun,bọ cạp,The scorpion raised its curved tail with a sting at the tip.,Bọ cạp giương chiếc đuôi cong có ngòi chích ở đầu.,Animals,scorpion,snail,earthworm,clam
+centipede,C1,noun,rết,The centipede moved quickly on many pairs of legs under the stone.,Con rết di chuyển nhanh bằng nhiều đôi chân dưới tảng đá.,Animals,centipede,earthworm,slug,snail
+snake,A2,noun,rắn,The snake moved through the grass without using any legs.,Con rắn di chuyển trong cỏ mà không dùng chân.,Animals,snake,spider,crab,lobster
+lizard,B1,noun,thằn lằn,A small lizard warmed its scaly body on a sunny wall.,Một con thằn lằn nhỏ sưởi thân đầy vảy trên bức tường có nắng.,Animals,lizard,sparrow,otter,rabbit
+crocodile,B1,noun,cá sấu,The crocodile waited at the river's edge with its long jaws partly open.,Cá sấu đợi ở mép sông với bộ hàm dài hé mở.,Animals,crocodile,hedgehog,rabbit,robin
+alligator,B2,noun,cá sấu mõm ngắn,The alligator floated in the swamp with its broad rounded snout above water.,Cá sấu mõm ngắn nổi trong đầm lầy với chiếc mõm rộng tròn nhô trên nước.,Animals,alligator,hedgehog,rabbit,robin
+turtle,B1,noun,rùa biển,The turtle used its flippers to swim through the clear seawater.,Rùa biển dùng chân dạng vây để bơi qua làn nước biển trong.,Animals,turtle,tortoise,rabbit,hedgehog
+tortoise,B1,noun,rùa cạn,The tortoise walked slowly across dry ground carrying its domed shell.,Rùa cạn chậm rãi đi trên đất khô và mang chiếc mai vòm.,Animals,tortoise,jellyfish,octopus,squid
+frog,A2,noun,ếch,The frog jumped from the bank into the pond on strong hind legs.,Con ếch dùng chân sau khỏe nhảy từ bờ xuống ao.,Animals,frog,snail,clam,earthworm
+toad,B2,noun,cóc,The toad has dry bumpy skin and usually walks rather than leaps.,Cóc có da khô sần và thường đi bộ thay vì nhảy xa.,Animals,toad,jellyfish,clam,octopus
+salamander,C1,noun,kỳ giông,The salamander has moist skin and a long tail throughout its adult life.,Kỳ giông có da ẩm và đuôi dài suốt thời kỳ trưởng thành.,Animals,salamander,hedgehog,robin,beaver
+newt,C1,noun,sa giông,The small newt returned to the pond to lay eggs among water plants.,Con sa giông nhỏ trở lại ao để đẻ trứng giữa các cây thủy sinh.,Animals,newt,hedgehog,rabbit,squirrel
+gecko,B2,noun,tắc kè,The gecko climbed the smooth wall using the pads on its toes.,Tắc kè leo bức tường nhẵn nhờ các đệm ở ngón chân.,Animals,gecko,tortoise,clam,earthworm
+iguana,C1,noun,cự đà,The green iguana rested on a branch with a crest along its back.,Con cự đà xanh nghỉ trên cành với hàng gai chạy dọc lưng.,Animals,iguana,whale,clam,robin
+chameleon,B2,noun,tắc kè hoa,The chameleon caught an insect with its long sticky tongue.,Tắc kè hoa bắt côn trùng bằng chiếc lưỡi dài dính.,Animals,chameleon,tortoise,clam,earthworm
+python,B2,noun,trăn,The python wrapped its muscular body around prey rather than injecting venom.,Con trăn quấn thân đầy cơ quanh con mồi thay vì tiêm nọc độc.,Animals,python,cobra,wasp,scorpion
+tree,A1,noun,cây thân gỗ,The old tree has a thick trunk and branches above our roof.,Cây thân gỗ lâu năm có thân dày và cành vươn trên mái nhà chúng tôi.,Plants,tree,mushroom,grass,moss
+flower,A1,noun,hoa,The yellow flower attracted a bee that collected nectar from its centre.,Bông hoa vàng thu hút một con ong hút mật ở giữa bông.,Plants,flower,trunk,root,thorn
+grass,A1,noun,cỏ,Short green grass covers the football pitch from one end to the other.,Cỏ xanh ngắn phủ sân bóng từ đầu này đến đầu kia.,Plants,grass,gravel,ice,sand
+root,A2,noun,rễ cây,The root absorbs water from the soil and anchors the plant.,Rễ cây hút nước từ đất và giữ cây đứng vững.,Plants,root,petal,thorn,blossom
+branch,A2,noun,cành cây,A thick branch extends from the trunk and supports several smaller twigs.,Một cành lớn mọc từ thân cây và đỡ vài cành nhỏ hơn.,Plants,branch,petal,seed,root
+seed,A2,noun,hạt giống,Plant each seed in moist soil and wait for it to germinate.,Gieo từng hạt giống vào đất ẩm và chờ nó nảy mầm.,Plants,seed,petal,thorn,blossom
+stem,B1,noun,thân cây nhỏ,The tulip's green stem supports its leaves and single flower.,Thân xanh của cây tulip đỡ các lá và một bông hoa.,Plants,stem,seed,petal,thorn
+bark,B1,noun,vỏ thân cây,The rough bark protects the tree's trunk from damage.,Lớp vỏ sần sùi bảo vệ thân cây khỏi tổn thương.,Plants,bark,petal,seed,pollen
+petal,B1,noun,cánh hoa,A pink petal fell from the rose onto the table.,Một cánh hoa hồng màu hồng rơi từ bông hoa xuống bàn.,Plants,petal,root,trunk,branch
+thorn,B2,noun,gai cây,A sharp thorn on the rose stem scratched my finger.,Một chiếc gai nhọn trên thân hoa hồng làm xước ngón tay tôi.,Plants,thorn,petal,seed,pollen
+bud,B1,noun,nụ hoa,The closed bud will open into a flower when the weather gets warmer.,Nụ hoa đang khép sẽ nở thành hoa khi thời tiết ấm hơn.,Plants,bud,root,trunk,thorn
+blossom,B1,noun,hoa trên cây ăn quả,Pink peach blossom appears on the trees before the fruit develops.,Hoa đào màu hồng xuất hiện trên cây trước khi quả phát triển.,Plants,blossom,bark,root,thorn
+oak,B2,noun,cây sồi,The oak produces acorns that squirrels collect for food.,Cây sồi tạo ra quả đấu mà sóc thu nhặt làm thức ăn.,Plants,oak,cactus,fern,orchid
+pine,B1,noun,cây thông,The pine keeps its needle-shaped leaves through winter and produces cones.,Cây thông giữ lá hình kim suốt mùa đông và tạo quả nón.,Plants,pine,fern,orchid,lotus
+bamboo,B1,noun,tre,The tall bamboo has hollow jointed stems that bend easily in the wind.,Cây tre cao có thân rỗng chia đốt và dễ uốn trong gió.,Plants,bamboo,orchid,fern,moss
+willow,B2,noun,cây liễu,The willow's long flexible branches hang down towards the river.,Những cành dài mềm của cây liễu rủ xuống phía dòng sông.,Plants,willow,cactus,moss,lichen
+palm,B1,noun,cây cọ,The palm has a tall trunk topped with a crown of large leaves.,Cây cọ có thân cao với tán lá lớn ở ngọn.,Plants,palm,moss,lichen,fern
+cactus,B1,noun,xương rồng,The cactus stores water in its thick stem and has spines instead of ordinary leaves.,Xương rồng tích nước trong thân dày và có gai thay cho lá thông thường.,Plants,cactus,willow,lotus,orchid
+fern,B2,noun,dương xỉ,The fern has divided green fronds but produces no flowers or seeds.,Dương xỉ có lá xanh chia thùy nhưng không tạo hoa hay hạt.,Plants,fern,oak,rose,lotus
+moss,B2,noun,rêu,Soft green moss forms a low carpet on the damp stones.,Rêu xanh mềm tạo thành lớp thảm thấp trên những viên đá ẩm.,Plants,moss,bamboo,palm,pine
+lichen,C1,noun,địa y,The pale lichen growing on the rock combines a fungus with a photosynthetic partner.,Địa y nhạt màu mọc trên đá kết hợp nấm với một sinh vật cộng sinh quang hợp.,Plants,lichen,oak,pine,bamboo
+orchid,B2,noun,hoa lan,The orchid has delicate flowers and grows attached to a tree in this forest.,Cây lan có hoa mỏng manh và mọc bám vào cây trong khu rừng này.,Plants,orchid,moss,lichen,fern
+lotus,B2,noun,hoa sen,The lotus raises its round leaves and flowers above the muddy pond.,Cây sen vươn lá tròn và hoa lên trên ao bùn.,Plants,lotus,pine,oak,bamboo
+football,A1,noun,bóng đá,"In football, players try to kick the ball into the opposing team's goal.","Trong bóng đá, cầu thủ cố đá bóng vào khung thành đối phương.",Sport,football,golf,archery,rowing
+basketball,A2,noun,bóng rổ,"In basketball, players score by throwing the ball through a high hoop.","Trong bóng rổ, người chơi ghi điểm bằng cách ném bóng qua vòng rổ cao.",Sport,basketball,golf,archery,rowing
+volleyball,A2,noun,bóng chuyền,"In volleyball, players use their hands to send the ball over a high net.","Trong bóng chuyền, người chơi dùng tay đưa bóng qua lưới cao.",Sport,volleyball,golf,boxing,rowing
+tennis,A2,noun,quần vợt,"In tennis, each player uses a racket to hit a ball over the net.","Trong quần vợt, mỗi người dùng vợt đánh bóng qua lưới.",Sport,tennis,rugby,boxing,rowing
+baseball,B1,noun,bóng chày,"In baseball, a batter hits the pitched ball and runs around four bases.","Trong bóng chày, người đánh dùng gậy đánh bóng được ném đến rồi chạy quanh bốn gôn.",Sport,baseball,rugby,boxing,rowing
+rugby,B1,noun,bóng bầu dục kiểu rugby,"In rugby, players may carry an oval ball and tackle their opponents.","Trong rugby, người chơi có thể ôm bóng bầu dục và vật cản đối phương.",Sport,rugby,golf,tennis,archery
+hockey,B1,noun,khúc côn cầu,"In ice hockey, players use sticks to move a puck towards the goal.","Trong khúc côn cầu trên băng, người chơi dùng gậy đưa đĩa cao su về khung thành.",Sport,hockey,rugby,boxing,rowing
+golf,A2,noun,gôn,"In golf, players use clubs to hit a small ball into distant holes.","Trong gôn, người chơi dùng gậy đánh một quả bóng nhỏ vào các lỗ ở xa.",Sport,golf,rugby,boxing,rowing
+boxing,B1,noun,quyền Anh,"In boxing, two opponents wear padded gloves and punch inside a ring.","Trong quyền Anh, hai đối thủ đeo găng có đệm và đấm nhau trong võ đài.",Sport,boxing,golf,archery,rowing
+wrestling,B2,noun,đấu vật,"In wrestling, competitors grapple and try to pin their opponent to the mat.","Trong đấu vật, các đấu thủ ghì nhau và cố ép đối phương xuống thảm.",Sport,wrestling,golf,archery,rowing
+fencing,B2,noun,đấu kiếm,"In fencing, competitors wear protective masks and score touches with thin swords.","Trong đấu kiếm, các đấu thủ đeo mặt nạ bảo hộ và ghi điểm bằng kiếm mảnh.",Sport,fencing,golf,rowing,jogging
+archery,B2,noun,bắn cung,"In archery, competitors use a bow to shoot arrows at a distant target.","Trong bắn cung, các đấu thủ dùng cung bắn tên vào bia ở xa.",Sport,archery,golf,rowing,jogging
+rowing,B1,noun,môn chèo thuyền bằng mái chèo,"In rowing, athletes sit facing backwards and pull oars through the water.","Trong môn chèo thuyền bằng mái chèo, vận động viên ngồi quay lưng và kéo mái chèo qua nước.",Sport,rowing,archery,boxing,jogging
+sailing,B1,noun,môn đi thuyền buồm,"In sailing, athletes steer boats whose sails use the wind for power.","Trong môn đi thuyền buồm, vận động viên lái thuyền có buồm dùng sức gió.",Sport,sailing,archery,boxing,jogging
+skiing,A2,noun,trượt tuyết bằng hai ván,"In skiing, athletes glide down snowy slopes with one long ski on each foot.","Trong trượt tuyết bằng hai ván, vận động viên trượt xuống dốc tuyết với một ván dài ở mỗi chân.",Sport,skiing,surfing,diving,rowing
+snowboarding,B1,noun,trượt tuyết bằng một ván,"In snowboarding, both feet are attached to one board on the snow.","Trong trượt tuyết bằng một ván, cả hai chân được gắn trên một tấm ván trên tuyết.",Sport,snowboarding,surfing,diving,rowing
+surfing,B1,noun,lướt sóng,"In surfing, riders stand on a board and travel along breaking ocean waves.","Trong lướt sóng, người chơi đứng trên ván và di chuyển theo những con sóng đang vỡ.",Sport,surfing,skiing,boxing,archery
+diving,B1,noun,lặn,"During scuba diving, we breathed from air tanks while exploring the coral reef.","Trong lúc lặn với bình khí, chúng tôi thở bằng bình khí khi khám phá rạn san hô.",Sport,diving,skiing,boxing,archery
+skating,B1,noun,trượt băng,"For ice skating, she wore boots with narrow metal blades beneath them.","Để trượt băng, cô ấy mang giày có lưỡi kim loại hẹp ở bên dưới.",Sport,skating,diving,boxing,archery
+hiking,B1,noun,đi bộ đường dài,We went hiking along a mountain trail carrying water and walking poles.,Chúng tôi đi bộ đường dài theo lối mòn trên núi và mang nước cùng gậy đi bộ.,Sport,hiking,diving,boxing,archery
+jogging,A2,noun,chạy bộ chậm,He goes jogging at a steady gentle pace around the park every morning.,Anh ấy chạy bộ chậm với nhịp đều nhẹ quanh công viên mỗi sáng.,Sport,jogging,diving,boxing,archery
+marathon,B1,noun,"cuộc chạy đua 42,195 km",She completed her first marathon after running just over forty-two kilometres.,Cô ấy hoàn thành cuộc marathon đầu tiên sau khi chạy hơn bốn mươi hai ki lô mét.,Sport,marathon,triathlon,sprint,relay
+triathlon,B2,noun,ba môn phối hợp bơi đạp chạy,"The triathlon combines swimming, cycling and running in one continuous race.","Ba môn phối hợp kết hợp bơi, đạp xe và chạy trong một cuộc đua liên tục.",Sport,triathlon,marathon,sprint,relay

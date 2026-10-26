@@ -1,0 +1,849 @@
+﻿term,cefr_level,part_of_speech,meaning_vi,example_en,example_vi,topic
+borrower,B1,noun,người vay,The borrower must sign the agreement before receiving the money.,Người vay phải ký thỏa thuận trước khi nhận tiền.,Money and services
+budget,B1,noun,ngân sách,We have a small budget for the student event.,Chúng tôi có ngân sách nhỏ cho sự kiện sinh viên.,Money and services
+charge,A2,verb,tính phí,The hotel will charge guests for breakfast.,Khách sạn sẽ tính phí bữa sáng của khách.,Money and services
+coin,A2,noun,đồng xu,I found a coin under the table.,Tôi tìm thấy một đồng xu dưới gầm bàn.,Money and services
+cost,A2,noun,chi phí,The cost of the course includes the textbook.,Chi phí khóa học đã bao gồm sách giáo khoa.,Money and services
+credit,B1,noun,khoản tín dụng,The bank offered the small business credit to buy new equipment.,Ngân hàng cấp tín dụng cho doanh nghiệp nhỏ để mua thiết bị mới.,Money and services
+deposit,B1,noun,tiền đặt cọc,We paid a deposit to reserve the meeting room.,Chúng tôi đã trả tiền đặt cọc để giữ phòng họp.,Money and services
+fee,A2,noun,lệ phí,There is no fee to join the study club.,Không mất phí để tham gia câu lạc bộ học tập.,Money and services
+income,B1,noun,thu nhập,She uses part of her income to pay for evening classes.,Cô ấy dùng một phần thu nhập để trả học phí lớp buổi tối.,Money and services
+invest,B1,verb,đầu tư,The company plans to invest in staff training.,Công ty dự định đầu tư vào việc đào tạo nhân viên.,Money and services
+owe,A2,verb,"nợ, còn phải trả",I still owe the library a late fee.,Tôi vẫn còn nợ thư viện một khoản phí trả muộn.,Money and services
+payment,A2,noun,khoản thanh toán,Your payment will appear on the account tomorrow.,Khoản thanh toán của bạn sẽ xuất hiện trong tài khoản vào ngày mai.,Money and services
+price,A2,noun,giá,The price includes delivery to the campus.,Giá đã bao gồm giao hàng đến khuôn viên trường.,Money and services
+profit,B1,noun,lợi nhuận,The small business made a profit last year.,Doanh nghiệp nhỏ đó đã có lợi nhuận vào năm ngoái.,Money and services
+rent,A2,verb,thuê,They rent a room near the university.,Họ thuê một phòng gần trường đại học.,Money and services
+save,A2,verb,tiết kiệm,I save a little money each month for books.,Mỗi tháng tôi tiết kiệm một ít tiền để mua sách.,Money and services
+spend,A2,verb,tiêu tiền,He spends too much money on online games.,Cậu ấy tiêu quá nhiều tiền vào trò chơi trực tuyến.,Money and services
+value,B1,noun,giá trị,This used laptop offers good value for the price.,Chiếc laptop đã qua sử dụng này có giá trị tốt so với mức giá.,Money and services
+advertise,B1,verb,quảng cáo,The café advertises its new lunch menu online.,Quán cà phê quảng cáo thực đơn bữa trưa mới trên mạng.,Shopping and business
+brand,A2,noun,thương hiệu,This brand makes affordable sports shoes.,Thương hiệu này sản xuất giày thể thao giá phải chăng.,Shopping and business
+cart,A2,noun,giỏ hàng,Add the notebook to your online cart.,Hãy thêm quyển sổ vào giỏ hàng trực tuyến của bạn.,Shopping and business
+complaint,B1,noun,lời phàn nàn,The manager answered the customer's complaint politely.,Người quản lý lịch sự trả lời lời phàn nàn của khách hàng.,Shopping and business
+consumer,B1,noun,người tiêu dùng,Consumers can compare prices before they buy.,Người tiêu dùng có thể so sánh giá trước khi mua.,Shopping and business
+exchange,A2,verb,đổi hàng,You may exchange the shirt if you keep the label.,Bạn có thể đổi chiếc áo nếu vẫn giữ nhãn mác.,Shopping and business
+expense,B1,noun,chi phí,Travel expenses must be reported by Monday.,Các chi phí đi lại phải được báo cáo trước thứ Hai.,Shopping and business
+guarantee,B1,noun,"bảo hành, cam kết",The phone comes with a one-year guarantee.,Điện thoại được bảo hành một năm.,Shopping and business
+mall,A2,noun,trung tâm mua sắm,We met at the mall after class.,Chúng tôi gặp nhau ở trung tâm mua sắm sau giờ học.,Shopping and business
+purchase,B1,verb,mua hàng,You can purchase the course online.,Bạn có thể mua khóa học trực tuyến.,Shopping and business
+quality,B1,noun,chất lượng,The store checks the quality of every product.,Cửa hàng kiểm tra chất lượng của từng sản phẩm.,Shopping and business
+seller,A2,noun,người bán,The seller answered my questions about the camera.,Người bán đã trả lời các câu hỏi của tôi về chiếc máy ảnh.,Shopping and business
+service,A2,noun,dịch vụ,The hotel offers a free shuttle service.,Khách sạn cung cấp dịch vụ xe đưa đón miễn phí.,Shopping and business
+size,A2,noun,kích cỡ,This jacket is available in a larger size.,Chiếc áo khoác này có cỡ lớn hơn.,Shopping and business
+stock,B1,noun,hàng tồn kho,The shop has the book in stock again.,Cửa hàng đã có lại quyển sách trong kho.,Shopping and business
+store,A2,noun,cửa hàng,The store closes later during the holiday season.,Cửa hàng đóng cửa muộn hơn trong mùa nghỉ lễ.,Shopping and business
+supply,B1,noun,nguồn cung,The school ordered a new supply of paper.,Trường đã đặt một đợt giấy mới.,Shopping and business
+trade,B1,noun,thương mại,International trade connects businesses in many countries.,Thương mại quốc tế kết nối doanh nghiệp ở nhiều quốc gia.,Shopping and business
+warranty,B1,noun,cam kết bảo hành,Keep the receipt and warranty for your tablet.,Hãy giữ hóa đơn và giấy bảo hành máy tính bảng.,Shopping and business
+wholesale,B1,adjective,bán buôn,The restaurant buys rice at a wholesale price.,Nhà hàng mua gạo với giá bán buôn.,Shopping and business
+worth,B1,adjective,đáng giá,The language course is worth the time and effort.,Khóa học ngôn ngữ xứng đáng với thời gian và công sức bỏ ra.,Shopping and business
+bakery,A2,noun,tiệm bánh,The bakery sells fresh bread every morning.,Tiệm bánh bán bánh mì mới mỗi sáng.,Food and daily life
+beverage,B1,noun,đồ uống,The café serves hot and cold beverages.,Quán cà phê phục vụ đồ uống nóng và lạnh.,Food and daily life
+boil,A2,verb,"luộc, đun sôi",Boil the water before you make the tea.,Hãy đun sôi nước trước khi pha trà.,Food and daily life
+bowl,A2,noun,cái bát,She put the fruit in a large bowl.,Cô ấy đặt trái cây vào một chiếc bát lớn.,Food and daily life
+cereal,A2,noun,ngũ cốc ăn sáng,He eats cereal with milk before work.,Anh ấy ăn ngũ cốc với sữa trước giờ làm.,Food and daily life
+chop,A2,verb,"băm, thái nhỏ",Chop the onions before adding them to the soup.,Hãy thái nhỏ hành tây trước khi cho vào súp.,Food and daily life
+cuisine,B1,noun,ẩm thực,The restaurant serves traditional Thai cuisine.,Nhà hàng phục vụ ẩm thực Thái truyền thống.,Food and daily life
+dairy,B1,adjective,thuộc về sữa,The shop has a separate section for dairy products.,Cửa hàng có khu riêng dành cho các sản phẩm từ sữa.,Food and daily life
+dessert,A2,noun,món tráng miệng,We shared a fruit dessert after dinner.,Chúng tôi cùng ăn món tráng miệng từ trái cây sau bữa tối.,Food and daily life
+ingredient,B1,noun,nguyên liệu,Please list every ingredient on the menu card.,Vui lòng liệt kê mọi nguyên liệu trên thực đơn.,Food and daily life
+meal,A2,noun,bữa ăn,The students prepared a simple meal together.,Các sinh viên cùng chuẩn bị một bữa ăn đơn giản.,Food and daily life
+recipe,A2,noun,công thức nấu ăn,My aunt gave me a recipe for vegetable soup.,Dì/cô tôi đưa cho tôi công thức nấu súp rau.,Food and daily life
+salad,A2,noun,món rau trộn,I ordered a salad with grilled chicken.,Tôi gọi món rau trộn với thịt gà nướng.,Food and daily life
+slice,A2,noun,lát,Would you like a slice of bread with your soup?,Bạn có muốn ăn một lát bánh mì cùng món súp không?,Food and daily life
+spicy,A2,adjective,cay,This curry is too spicy for my younger brother.,Món cà ri này quá cay đối với em trai tôi.,Food and daily life
+stir,A2,verb,khuấy,Stir the soup slowly while it heats.,Hãy khuấy súp từ từ trong khi đun nóng.,Food and daily life
+taste,A2,verb,"nếm, có vị",Taste the sauce before you add more salt.,Hãy nếm nước sốt trước khi cho thêm muối.,Food and daily life
+vegetarian,A2,noun,người ăn chay,Our vegetarian guest ordered the bean soup.,Vị khách ăn chay của chúng tôi gọi món súp đậu.,Food and daily life
+breathe,A2,verb,thở,Take a moment to breathe slowly before the presentation.,Hãy dành một chút thời gian để thở chậm trước buổi thuyết trình.,Health and wellbeing
+cure,B1,verb,chữa khỏi,The medicine may help cure the infection.,Thuốc có thể giúp chữa khỏi tình trạng nhiễm trùng.,Health and wellbeing
+drug,B1,noun,thuốc,Ask a pharmacist before taking a new drug.,Hãy hỏi dược sĩ trước khi dùng một loại thuốc mới.,Health and wellbeing
+recover,B1,verb,hồi phục,She needs a few days to recover from the flu.,Cô ấy cần vài ngày để hồi phục sau khi bị cúm.,Health and wellbeing
+rest,A2,noun,sự nghỉ ngơi,A short rest helped him feel more alert.,Một khoảng nghỉ ngắn giúp anh ấy tỉnh táo hơn.,Health and wellbeing
+temperature,A2,noun,nhiệt độ cơ thể,The nurse checked the child's temperature.,Y tá kiểm tra nhiệt độ cơ thể của đứa trẻ.,Health and wellbeing
+appointment card,A2,noun,phiếu hẹn,Please bring your appointment card to the clinic.,Vui lòng mang phiếu hẹn đến phòng khám.,Health and wellbeing
+ankle,A2,noun,mắt cá chân,He twisted his ankle while playing basketball.,Anh ấy bị trẹo mắt cá chân khi chơi bóng rổ.,Health and wellbeing
+anxious,B1,adjective,lo lắng,He felt anxious before speaking in front of the class.,Cậu ấy cảm thấy lo lắng trước khi nói trước lớp.,Feelings and relationships
+confident,B1,adjective,tự tin,She became more confident after practicing the speech.,Cô ấy trở nên tự tin hơn sau khi luyện bài phát biểu.,Feelings and relationships
+embarrassed,B1,adjective,"xấu hổ, ngượng ngùng",I felt embarrassed when I forgot the speaker's name.,Tôi thấy ngượng khi quên tên người nói.,Feelings and relationships
+excited,A2,adjective,hào hứng,The students are excited about the science fair.,Các sinh viên hào hứng với hội chợ khoa học.,Feelings and relationships
+fear,A2,noun,nỗi sợ,Her fear of flying became smaller after the first trip.,Nỗi sợ đi máy bay của cô ấy giảm đi sau chuyến đi đầu tiên.,Feelings and relationships
+forgive,B1,verb,tha thứ,He decided to forgive his friend for the mistake.,Anh ấy quyết định tha thứ cho bạn mình vì lỗi lầm đó.,Feelings and relationships
+generous,B1,adjective,hào phóng,Our neighbor was generous with her time and advice.,Người hàng xóm hào phóng dành thời gian và lời khuyên cho chúng tôi.,Feelings and relationships
+grateful,B1,adjective,biết ơn,I am grateful for your help with the project.,Tôi biết ơn vì bạn đã giúp tôi trong dự án.,Feelings and relationships
+impatient,B1,adjective,thiếu kiên nhẫn,The passenger became impatient during the long delay.,Hành khách trở nên thiếu kiên nhẫn trong lúc chậm trễ kéo dài.,Feelings and relationships
+kindness,B1,noun,lòng tốt,Her kindness made the new student feel welcome.,Lòng tốt của cô ấy khiến sinh viên mới cảm thấy được chào đón.,Feelings and relationships
+lonely,A2,adjective,cô đơn,He felt lonely during his first week in the new city.,Cậu ấy cảm thấy cô đơn trong tuần đầu tiên ở thành phố mới.,Feelings and relationships
+mood,B1,noun,tâm trạng,Music can affect my mood while I study.,Âm nhạc có thể ảnh hưởng đến tâm trạng của tôi khi học.,Feelings and relationships
+nervous,A2,adjective,"lo lắng, hồi hộp",She was nervous before her job interview.,Cô ấy hồi hộp trước buổi phỏng vấn xin việc.,Feelings and relationships
+polite,A2,adjective,lịch sự,It is polite to thank the host before leaving.,Lịch sự là cảm ơn chủ nhà trước khi rời đi.,Feelings and relationships
+proud,A2,adjective,tự hào,His parents were proud of his graduation project.,Bố mẹ cậu ấy tự hào về đồ án tốt nghiệp của cậu ấy.,Feelings and relationships
+respect,B1,noun,sự tôn trọng,Students should show respect for different opinions.,Sinh viên nên thể hiện sự tôn trọng với những ý kiến khác nhau.,Feelings and relationships
+shy,A2,adjective,rụt rè,The shy child spoke more during the small group activity.,Đứa trẻ rụt rè nói nhiều hơn trong hoạt động nhóm nhỏ.,Feelings and relationships
+upset,A2,adjective,"buồn bực, khó chịu",She was upset when the event was canceled.,Cô ấy buồn bực khi sự kiện bị hủy.,Feelings and relationships
+relationship,B1,noun,mối quan hệ,Trust is important in a working relationship.,Sự tin tưởng rất quan trọng trong mối quan hệ công việc.,Feelings and relationships
+apologize,A2,verb,xin lỗi,I apologized for arriving late to the discussion.,Tôi xin lỗi vì đến muộn buổi thảo luận.,Feelings and relationships
+advice,A2,noun,lời khuyên,The tutor gave me useful advice about note-taking.,Gia sư cho tôi lời khuyên hữu ích về cách ghi chú.,Communication and study
+announce,B1,verb,thông báo,The school will announce the exam results on Friday.,Trường sẽ thông báo kết quả thi vào thứ Sáu.,Communication and study
+article,A2,noun,bài báo,I read an article about renewable energy for class.,Tôi đọc một bài báo về năng lượng tái tạo cho giờ học.,Communication and study
+brief,B1,adjective,ngắn gọn,Please give a brief introduction to your research topic.,Hãy giới thiệu ngắn gọn về chủ đề nghiên cứu của bạn.,Communication and study
+comment,A2,noun,lời nhận xét,The teacher wrote a helpful comment on my draft.,Giảng viên viết một lời nhận xét hữu ích vào bản nháp của tôi.,Communication and study
+contact,A2,verb,liên hệ,Contact the course office if you have a question.,Hãy liên hệ văn phòng khóa học nếu bạn có câu hỏi.,Communication and study
+explain,A2,verb,giải thích,Could you explain how this grammar rule works?,Bạn có thể giải thích quy tắc ngữ pháp này hoạt động thế nào không?,Communication and study
+headline,B1,noun,tiêu đề chính,The headline summarizes the main news story.,Tiêu đề chính tóm tắt tin tức quan trọng nhất.,Communication and study
+interview,A2,noun,buổi phỏng vấn,She has an interview for a part-time job tomorrow.,Ngày mai cô ấy có buổi phỏng vấn cho công việc bán thời gian.,Communication and study
+mention,A2,verb,đề cập,The lecturer mentioned two useful websites.,Giảng viên đề cập đến hai trang web hữu ích.,Communication and study
+opinion,A2,noun,ý kiến,"In my opinion, the second plan is easier to follow.","Theo ý kiến của tôi, kế hoạch thứ hai dễ làm theo hơn.",Communication and study
+permission,B1,noun,sự cho phép,You need permission to record the lecture.,Bạn cần được cho phép để ghi âm bài giảng.,Communication and study
+reply,A2,verb,trả lời,Please reply to the message by the end of the day.,Vui lòng trả lời tin nhắn trước cuối ngày.,Communication and study
+report,A2,noun,báo cáo,Our group submitted the report before the deadline.,Nhóm chúng tôi đã nộp báo cáo trước hạn chót.,Communication and study
+request,B1,noun,lời yêu cầu,The office received a request for more study space.,Văn phòng nhận được yêu cầu bổ sung không gian học tập.,Communication and study
+research,B1,noun,nghiên cứu,The students conducted research on public transport.,Các sinh viên thực hiện nghiên cứu về giao thông công cộng.,Communication and study
+review,B1,verb,"ôn tập, xem lại",I review my notes after each lesson.,Tôi xem lại ghi chú sau mỗi buổi học.,Communication and study
+silent,A2,adjective,im lặng,The room became silent when the exam began.,Căn phòng trở nên im lặng khi kỳ thi bắt đầu.,Communication and study
+statement,B1,noun,"phát biểu, lời tuyên bố",The director made a statement about the new course.,Giám đốc đưa ra một tuyên bố về khóa học mới.,Communication and study
+translate,A2,verb,dịch,We used the dictionary to translate the instructions.,Chúng tôi dùng từ điển để dịch hướng dẫn.,Communication and study
+warn,B1,verb,cảnh báo,The teacher warned us about the change in room number.,Giảng viên cảnh báo chúng tôi về việc đổi số phòng.,Communication and study
+whisper,A2,verb,thì thầm,They whispered so they would not disturb the class.,Họ thì thầm để không làm phiền lớp học.,Communication and study
+academic,B1,adjective,thuộc về học thuật,The library has several academic journals online.,Thư viện có một số tạp chí học thuật trực tuyến.,Communication and study
+assignment,A2,noun,bài tập được giao,The assignment is due next Wednesday.,Bài tập được giao phải nộp vào thứ Tư tuần tới.,Communication and study
+calculate,A2,verb,tính toán,Use a calculator to calculate the total cost.,Hãy dùng máy tính để tính tổng chi phí.,Communication and study
+certificate,B1,noun,chứng chỉ,She received a certificate after finishing the course.,Cô ấy nhận được chứng chỉ sau khi hoàn thành khóa học.,Communication and study
+chapter,A2,noun,chương sách,Read chapter four before the next class.,Hãy đọc chương bốn trước buổi học tiếp theo.,Communication and study
+concentrate,B1,verb,tập trung,I find it easier to concentrate in a quiet place.,Tôi thấy dễ tập trung hơn ở nơi yên tĩnh.,Communication and study
+course,A2,noun,khóa học,The online course lasts for eight weeks.,Khóa học trực tuyến kéo dài tám tuần.,Communication and study
+abroad,A2,adverb,ở nước ngoài,Her brother is studying abroad this year.,Anh/em trai cô ấy đang học ở nước ngoài trong năm nay.,Travel and places
+arrival,A2,noun,sự đến nơi,Please wait for the guide near the arrival gate.,Vui lòng đợi hướng dẫn viên gần cổng đến.,Travel and places
+capital,A2,noun,thủ đô,Hanoi is the capital of Vietnam.,Hà Nội là thủ đô của Việt Nam.,Travel and places
+coast,A2,noun,bờ biển,We walked along the coast before sunset.,Chúng tôi đi dọc bờ biển trước khi mặt trời lặn.,Travel and places
+commute,B1,verb,đi lại giữa nhà và nơi học/làm,She commutes to the city by train.,Cô ấy đi tàu vào thành phố mỗi ngày.,Travel and places
+foreign,A2,adjective,nước ngoài,The library has newspapers in several foreign languages.,Thư viện có báo bằng một số ngoại ngữ.,Travel and places
+view,A2,noun,quang cảnh,The café has a beautiful view of the river.,Quán cà phê có quang cảnh đẹp nhìn ra sông.,Travel and places
+ancient,B1,adjective,cổ xưa,The museum displays ancient tools from the region.,Bảo tàng trưng bày những công cụ cổ xưa của vùng này.,Travel and places
+attraction,A2,noun,điểm tham quan,The old bridge is a popular tourist attraction.,Cây cầu cũ là một điểm tham quan nổi tiếng.,Travel and places
+accomplish,B1,verb,"hoàn thành, đạt được",Our team accomplished the main goal before the end of the term.,Nhóm chúng tôi hoàn thành mục tiêu chính trước khi học kỳ kết thúc.,Work and projects
+appoint,B1,verb,bổ nhiệm,The company appointed a new project leader.,Công ty bổ nhiệm một trưởng dự án mới.,Work and projects
+approve,B1,verb,phê duyệt,The supervisor approved our request for new equipment.,Người giám sát phê duyệt đề nghị mua thiết bị mới của chúng tôi.,Work and projects
+assistant,A2,noun,trợ lý,The assistant prepared the documents for the meeting.,Trợ lý chuẩn bị tài liệu cho cuộc họp.,Work and projects
+benefit,B1,noun,lợi ích,Flexible hours are a benefit of this position.,Giờ làm linh hoạt là một lợi ích của vị trí này.,Work and projects
+career,A2,noun,sự nghiệp,He wants a career in data analysis.,Cậu ấy muốn theo đuổi sự nghiệp trong lĩnh vực phân tích dữ liệu.,Work and projects
+career path,B1,noun,lộ trình nghề nghiệp,The advisor helped her plan a career path in design.,Cố vấn giúp cô ấy lên lộ trình nghề nghiệp trong lĩnh vực thiết kế.,Work and projects
+client,B1,noun,khách hàng,The designer shared the first draft with the client.,Nhà thiết kế chia sẻ bản nháp đầu tiên với khách hàng.,Work and projects
+contract,B1,noun,hợp đồng,Both sides signed the contract on Monday.,Hai bên ký hợp đồng vào thứ Hai.,Work and projects
+coworker,A2,noun,đồng nghiệp,A coworker showed me where to find the meeting room.,Một đồng nghiệp chỉ cho tôi chỗ tìm phòng họp.,Work and projects
+director,B1,noun,giám đốc,The director will speak at the opening event.,Giám đốc sẽ phát biểu tại sự kiện khai mạc.,Work and projects
+duty,A2,noun,nhiệm vụ,One of my duties is to answer customer questions.,Một trong những nhiệm vụ của tôi là trả lời câu hỏi của khách hàng.,Work and projects
+employer,A2,noun,người sử dụng lao động,The employer provides training for new staff.,Người sử dụng lao động cung cấp khóa đào tạo cho nhân viên mới.,Work and projects
+employment,B1,noun,việc làm,The program helps graduates find employment.,Chương trình giúp sinh viên tốt nghiệp tìm việc làm.,Work and projects
+firm,B1,noun,công ty,She works for a small engineering firm.,Cô ấy làm việc cho một công ty kỹ thuật nhỏ.,Work and projects
+hire,A2,verb,tuyển dụng,The company plans to hire two junior developers.,Công ty dự định tuyển hai lập trình viên cấp độ đầu vào.,Work and projects
+jobseeker,B1,noun,người tìm việc,The website offers career tips for every jobseeker.,Trang web cung cấp mẹo nghề nghiệp cho mọi người tìm việc.,Work and projects
+manager,A2,noun,người quản lý,The manager divided the project into smaller tasks.,Người quản lý chia dự án thành các nhiệm vụ nhỏ hơn.,Work and projects
+occupation,B1,noun,nghề nghiệp,Please write your current occupation on the form.,Vui lòng ghi nghề nghiệp hiện tại vào biểu mẫu.,Work and projects
+position,A2,noun,vị trí công việc,She applied for a position in the design team.,Cô ấy ứng tuyển vào một vị trí trong nhóm thiết kế.,Work and projects
+profession,B1,noun,nghề chuyên môn,Teaching is a profession that requires patience.,Giảng dạy là một nghề chuyên môn đòi hỏi sự kiên nhẫn.,Work and projects
+promotion,B1,noun,sự thăng chức,He received a promotion after leading the project successfully.,Anh ấy được thăng chức sau khi lãnh đạo dự án thành công.,Work and projects
+recruit,B1,verb,tuyển người,The organization will recruit volunteers for the summer program.,Tổ chức sẽ tuyển tình nguyện viên cho chương trình mùa hè.,Work and projects
+recruitment,B1,noun,việc tuyển dụng,The recruitment process includes an online test.,Quy trình tuyển dụng có một bài kiểm tra trực tuyến.,Work and projects
+salary,A2,noun,mức lương,The job advertisement lists the monthly salary.,Tin tuyển dụng ghi mức lương hằng tháng.,Work and projects
+staff,A2,noun,nhân viên,All staff must attend the safety meeting.,Toàn bộ nhân viên phải tham dự cuộc họp an toàn.,Work and projects
+supervisor,B1,noun,người giám sát,Ask your supervisor before changing the work schedule.,Hãy hỏi người giám sát trước khi thay đổi lịch làm việc.,Work and projects
+teamwork,B1,noun,tinh thần làm việc nhóm,Good teamwork helped us finish the presentation early.,Tinh thần làm việc nhóm tốt giúp chúng tôi hoàn thành bài thuyết trình sớm.,Work and projects
+training,A2,noun,sự đào tạo,New employees receive computer training in their first week.,Nhân viên mới được đào tạo máy tính trong tuần đầu tiên.,Work and projects
+vacancy,B1,noun,vị trí đang tuyển,The company posted a vacancy for a customer assistant.,Công ty đăng một vị trí tuyển nhân viên hỗ trợ khách hàng.,Work and projects
+workplace,A2,noun,nơi làm việc,The workplace has a quiet room for focused tasks.,Nơi làm việc có một phòng yên tĩnh dành cho các nhiệm vụ cần tập trung.,Work and projects
+achievement,B1,noun,thành tựu,Completing the project was a major achievement for the students.,Hoàn thành dự án là một thành tựu lớn đối với các sinh viên.,Work and projects
+application,A2,noun,"đơn đăng ký, hồ sơ ứng tuyển",Please send your application before 30 June.,Vui lòng gửi hồ sơ ứng tuyển trước ngày 30 tháng Sáu.,Work and projects
+analyze,B1,verb,phân tích,We analysed the survey results before writing the report.,Chúng tôi phân tích kết quả khảo sát trước khi viết báo cáo.,Technology and information
+button,A2,noun,nút bấm,Press the green button to save your changes.,Nhấn nút màu xanh lá để lưu các thay đổi.,Technology and information
+click,A2,verb,nhấp chuột,Click the picture to open the larger version.,Nhấp vào hình ảnh để mở phiên bản lớn hơn.,Technology and information
+connect,A2,verb,kết nối,The tablet connects to the campus Wi-Fi automatically.,Máy tính bảng tự động kết nối với Wi-Fi trong trường.,Technology and information
+device,A2,noun,thiết bị,Each student can borrow one device from the lab.,Mỗi sinh viên có thể mượn một thiết bị từ phòng máy.,Technology and information
+digital,A2,adjective,thuộc kỹ thuật số,The library keeps a digital copy of every lecture.,Thư viện lưu bản kỹ thuật số của mỗi bài giảng.,Technology and information
+download,A2,verb,tải xuống,You can download the reading guide from the course page.,Bạn có thể tải hướng dẫn đọc từ trang khóa học.,Technology and information
+edit,A2,verb,chỉnh sửa,Please edit the document before the group meeting.,Vui lòng chỉnh sửa tài liệu trước cuộc họp nhóm.,Technology and information
+file,A2,noun,tệp,Save the file with a clear name.,Hãy lưu tệp với một tên dễ hiểu.,Technology and information
+internet,A2,noun,mạng Internet,The internet connection is slow in this room.,Kết nối Internet trong phòng này chậm.,Technology and information
+online,A2,adjective,trực tuyến,The college offers an online course in business English.,Trường cao đẳng cung cấp khóa học tiếng Anh thương mại trực tuyến.,Technology and information
+printer,A2,noun,máy in,The printer is out of paper again.,Máy in lại hết giấy.,Technology and information
+climate,B1,noun,khí hậu,The climate in the mountains is cooler than in the city.,Khí hậu vùng núi mát hơn trong thành phố.,Nature and environment
+coastal,B1,adjective,ven biển,Coastal towns often depend on fishing and tourism.,Các thị trấn ven biển thường phụ thuộc vào đánh bắt cá và du lịch.,Nature and environment
+energy,A2,noun,năng lượng,The new lights use less energy than the old ones.,Đèn mới sử dụng ít năng lượng hơn loại cũ.,Nature and environment
+environment,A2,noun,môi trường,Students collected rubbish to protect the local environment.,Sinh viên thu gom rác để bảo vệ môi trường địa phương.,Nature and environment
+flood,A2,noun,lũ lụt,The heavy rain caused a flood near the river.,Mưa lớn gây ra lũ lụt gần con sông.,Nature and environment
+forest,A2,noun,rừng,The forest is home to many kinds of birds.,Khu rừng là nơi sinh sống của nhiều loài chim.,Nature and environment
+garbage,A2,noun,rác,Please put the garbage in the large container outside.,Vui lòng bỏ rác vào thùng lớn ở bên ngoài.,Nature and environment
+garden,A2,noun,khu vườn,The students planted herbs in the college garden.,Sinh viên trồng rau thơm trong khu vườn của trường.,Nature and environment
+gas,A2,noun,khí đốt,The family uses gas to cook dinner.,Gia đình dùng khí đốt để nấu bữa tối.,Nature and environment
+insect,A2,noun,côn trùng,A small insect landed on the window.,Một con côn trùng nhỏ đậu lên cửa sổ.,Nature and environment
+leaf,A2,noun,chiếc lá,A yellow leaf fell onto the path.,Một chiếc lá vàng rơi xuống lối đi.,Nature and environment
+nature,A2,noun,thiên nhiên,The park gives city residents a chance to enjoy nature.,Công viên tạo cơ hội cho cư dân thành phố tận hưởng thiên nhiên.,Nature and environment
+pollution,B1,noun,ô nhiễm,Air pollution is a serious problem in many large cities.,Ô nhiễm không khí là vấn đề nghiêm trọng ở nhiều thành phố lớn.,Nature and environment
+recycle,A2,verb,tái chế,Our school recycles paper and plastic bottles.,Trường chúng tôi tái chế giấy và chai nhựa.,Nature and environment
+resource,B1,noun,tài nguyên,Water is an important resource for every community.,Nước là tài nguyên quan trọng đối với mọi cộng đồng.,Nature and environment
+river,A2,noun,sông,The village is located beside a wide river.,Ngôi làng nằm cạnh một con sông rộng.,Nature and environment
+soil,B1,noun,đất,The plants grow well in rich soil.,Cây phát triển tốt trong đất màu mỡ.,Nature and environment
+ballet,B1,noun,múa ba lê,The children watched a ballet at the city theater.,Bọn trẻ xem một buổi múa ba lê tại nhà hát thành phố.,Free time and culture
+band,A2,noun,ban nhạc,A local band played at the college festival.,Một ban nhạc địa phương biểu diễn tại lễ hội của trường.,Free time and culture
+cartoon,A2,noun,phim hoạt hình,My nephew watches a cartoon after lunch.,Cháu trai tôi xem phim hoạt hình sau bữa trưa.,Free time and culture
+collection,A2,noun,bộ sưu tập,The museum has a collection of old photographs.,Bảo tàng có một bộ sưu tập ảnh cũ.,Free time and culture
+concert,A2,noun,buổi hòa nhạc,We bought tickets for the outdoor concert.,Chúng tôi mua vé xem buổi hòa nhạc ngoài trời.,Free time and culture
+craft,B1,noun,đồ thủ công,The workshop teaches students how to make paper crafts.,Buổi hội thảo dạy sinh viên cách làm đồ thủ công bằng giấy.,Free time and culture
+festival,A2,noun,lễ hội,The town holds a music festival every summer.,Thị trấn tổ chức lễ hội âm nhạc vào mỗi mùa hè.,Free time and culture
+fiction,B1,noun,truyện hư cấu,She prefers reading fiction on the train.,Cô ấy thích đọc truyện hư cấu trên tàu hơn.,Free time and culture
+instrument,A2,noun,nhạc cụ,He plays a musical instrument in the school orchestra.,Cậu ấy chơi một nhạc cụ trong dàn nhạc của trường.,Free time and culture
+leisure,B1,noun,thời gian nhàn rỗi,The park offers activities for leisure and exercise.,Công viên có các hoạt động giải trí và rèn luyện sức khỏe.,Free time and culture
+photograph,A2,noun,bức ảnh,I took a photograph of the old bridge.,Tôi chụp một bức ảnh cây cầu cũ.,Free time and culture
+photographer,A2,noun,nhiếp ảnh gia,The photographer arrived before the ceremony began.,Nhiếp ảnh gia đến trước khi buổi lễ bắt đầu.,Free time and culture
+poem,A2,noun,bài thơ,The student wrote a poem about the rainy season.,Sinh viên viết một bài thơ về mùa mưa.,Free time and culture
+poet,B1,noun,nhà thơ,The poet read her work at the library event.,Nhà thơ đọc tác phẩm của mình tại sự kiện ở thư viện.,Free time and culture
+portrait,B1,noun,chân dung,The artist painted a portrait of her grandfather.,Nghệ sĩ vẽ chân dung ông của cô ấy.,Free time and culture
+scene,A2,noun,cảnh,The final scene takes place at a train station.,Cảnh cuối diễn ra tại một nhà ga.,Free time and culture
+sculpture,B1,noun,tác phẩm điêu khắc,A stone sculpture stands outside the museum.,Một tác phẩm điêu khắc bằng đá đặt bên ngoài bảo tàng.,Free time and culture
+athlete,A2,noun,vận động viên,The athlete trains at the sports center every morning.,Vận động viên tập luyện tại trung tâm thể thao mỗi sáng.,Sports and activities
+badminton,A2,noun,cầu lông,We play badminton in the gym on Thursday evenings.,Chúng tôi chơi cầu lông trong nhà thi đấu vào tối thứ Năm.,Sports and activities
+champion,A2,noun,nhà vô địch,The young champion thanked her coach after the race.,Nhà vô địch trẻ cảm ơn huấn luyện viên sau cuộc đua.,Sports and activities
+championship,B1,noun,giải vô địch,The school will host a regional swimming championship.,Trường sẽ tổ chức giải vô địch bơi cấp vùng.,Sports and activities
+coach,A2,noun,huấn luyện viên,The coach gave the team a short break.,Huấn luyện viên cho đội nghỉ giải lao ngắn.,Sports and activities
+cycling,A2,noun,môn đạp xe,Cycling is a popular way to explore the countryside.,Đạp xe là cách phổ biến để khám phá vùng nông thôn.,Sports and activities
+defeat,B1,verb,đánh bại,Our team defeated the visitors by two points.,Đội chúng tôi đánh bại đội khách với cách biệt hai điểm.,Sports and activities
+draw,A2,noun,trận hòa,The match ended in a draw.,Trận đấu kết thúc với tỷ số hòa.,Sports and activities
+gym,A2,noun,phòng tập thể dục,The gym is busiest after five in the afternoon.,Phòng tập đông nhất sau năm giờ chiều.,Sports and activities
+match,A2,noun,trận đấu,The football match was moved to Sunday.,Trận bóng đá được chuyển sang Chủ nhật.,Sports and activities
+opponent,B1,noun,đối thủ,The player shook hands with her opponent after the match.,Vận động viên bắt tay đối thủ sau trận đấu.,Sports and activities
+race,A2,noun,cuộc đua,More than one hundred runners joined the race.,Hơn một trăm vận động viên chạy tham gia cuộc đua.,Sports and activities
+score,A2,noun,tỷ số,The final score was three to two.,Tỷ số cuối cùng là ba hai.,Sports and activities
+stadium,A2,noun,sân vận động,The stadium can hold twenty thousand people.,Sân vận động có thể chứa hai mươi nghìn người.,Sports and activities
+swimming,A2,noun,môn bơi,Swimming is part of the summer sports program.,Bơi lội là một phần của chương trình thể thao mùa hè.,Sports and activities
+tournament,B1,noun,giải đấu,Our college entered a table tennis tournament.,Trường cao đẳng của chúng tôi tham gia một giải đấu bóng bàn.,Sports and activities
+workout,A2,noun,buổi tập thể dục,I do a short workout before breakfast.,Tôi tập thể dục một buổi ngắn trước bữa sáng.,Sports and activities
+wallet,A2,noun,ví tiền,She left her wallet on the bus.,Cô ấy để quên ví trên xe buýt.,Money and services
+withdraw,B1,verb,rút tiền,You can withdraw cash from the machine outside the bank.,Bạn có thể rút tiền ở máy bên ngoài ngân hàng.,Money and services
+account,A2,noun,tài khoản,I check my bank account on my phone.,Tôi kiểm tra tài khoản ngân hàng trên điện thoại.,Money and services
+appliance,B1,noun,thiết bị gia dụng,The store repairs household appliances.,Cửa hàng sửa chữa các thiết bị gia dụng.,Shopping and business
+checkout,A2,noun,quầy thanh toán,Please pay at the checkout near the entrance.,Vui lòng thanh toán tại quầy gần lối vào.,Shopping and business
+vitamin,B1,noun,vitamin,Oranges contain vitamin C.,Cam có chứa vitamin C.,Food and daily life
+booth,B1,noun,"quầy, gian hàng",The university club set up a booth near the entrance.,Câu lạc bộ của trường dựng một gian hàng gần lối vào.,Food and daily life
+portion,B1,noun,khẩu phần,The lunch portion was large enough to share.,Khẩu phần bữa trưa đủ lớn để chia sẻ.,Food and daily life
+snack,A2,noun,đồ ăn nhẹ,I packed a snack for the long bus ride.,Tôi chuẩn bị đồ ăn nhẹ cho chuyến xe buýt dài.,Food and daily life
+sour,A2,adjective,chua,The lemon juice tastes sour without sugar.,Nước chanh có vị chua khi không có đường.,Food and daily life
+fit,A2,adjective,"khỏe mạnh, cân đối",She walks every day to stay fit.,Cô ấy đi bộ mỗi ngày để giữ sức khỏe.,Health and wellbeing
+habit,A2,noun,thói quen,Drinking water in the morning is a healthy habit.,Uống nước vào buổi sáng là một thói quen lành mạnh.,Health and wellbeing
+mental,B1,adjective,thuộc về tinh thần,The course includes a session about mental health.,Khóa học có một buổi về sức khỏe tinh thần.,Health and wellbeing
+muscle,A2,noun,cơ bắp,Stretching can relax a tight muscle.,Giãn cơ có thể làm thư giãn một cơ đang bị căng.,Health and wellbeing
+pressure,B1,noun,áp lực,Too much pressure can make it hard to concentrate.,Quá nhiều áp lực có thể khiến việc tập trung trở nên khó khăn.,Health and wellbeing
+attitude,B1,noun,thái độ,A positive attitude can help a team solve problems.,Thái độ tích cực có thể giúp một nhóm giải quyết vấn đề.,Feelings and relationships
+belong,A2,verb,"thuộc về, cảm thấy hòa nhập",The new member quickly felt that she belonged to the club.,Thành viên mới nhanh chóng cảm thấy mình hòa nhập với câu lạc bộ.,Feelings and relationships
+colleague,B1,noun,đồng nghiệp,My colleague showed me how to use the new system.,Đồng nghiệp chỉ cho tôi cách sử dụng hệ thống mới.,Feelings and relationships
+communicate,B1,verb,giao tiếp,Team members communicate through a shared online channel.,Các thành viên nhóm giao tiếp qua một kênh trực tuyến chung.,Feelings and relationships
+encourage,B1,verb,"động viên, khuyến khích",The coach encouraged everyone to keep trying.,Huấn luyện viên động viên mọi người tiếp tục cố gắng.,Feelings and relationships
+degree,B1,noun,bằng cấp,He hopes to earn a degree in computer science.,Anh ấy hy vọng lấy được bằng khoa học máy tính.,Communication and study
+discuss,A2,verb,thảo luận,We will discuss the results in our next meeting.,Chúng ta sẽ thảo luận kết quả trong cuộc họp tiếp theo.,Communication and study
+educate,B1,verb,giáo dục,The program aims to educate young people about online safety.,Chương trình nhằm giáo dục người trẻ về an toàn trực tuyến.,Communication and study
+exam,A2,noun,kỳ thi,The final exam begins at nine in the morning.,Bài thi cuối kỳ bắt đầu lúc chín giờ sáng.,Communication and study
+fail,A2,verb,"trượt, không đạt",He failed the first quiz but passed the next one.,Cậu ấy trượt bài kiểm tra đầu tiên nhưng vượt qua bài tiếp theo.,Communication and study
+graduate,B1,verb,tốt nghiệp,She plans to graduate from college next year.,Cô ấy dự định tốt nghiệp cao đẳng vào năm tới.,Communication and study
+lecture,A2,noun,bài giảng,The lecture begins with a short review of last week.,Bài giảng bắt đầu bằng phần ôn tập ngắn về tuần trước.,Communication and study
+lesson,A2,noun,bài học,Today's lesson focuses on question forms.,Bài học hôm nay tập trung vào các dạng câu hỏi.,Communication and study
+countryside,A2,noun,vùng nông thôn,They spent the weekend in the countryside.,Họ dành cuối tuần ở vùng nông thôn.,Travel and places
+crowd,A2,noun,đám đông,A large crowd gathered outside the concert hall.,Một đám đông lớn tụ tập bên ngoài nhà hát.,Travel and places
+exit,A2,noun,lối ra,Follow the signs to the nearest exit.,Hãy đi theo biển chỉ dẫn đến lối ra gần nhất.,Travel and places
+facility,B1,noun,cơ sở vật chất,The sports facility is open to students after class.,Cơ sở thể thao mở cửa cho sinh viên sau giờ học.,Travel and places
+island,A2,noun,hòn đảo,The family visited a small island during their holiday.,Gia đình đến thăm một hòn đảo nhỏ trong kỳ nghỉ.,Travel and places
+location,A2,noun,vị trí,The map shows the location of the bus station.,Bản đồ cho thấy vị trí của bến xe buýt.,Travel and places
+neighborhood,A2,noun,khu dân cư,There is a quiet park in our neighborhood.,Có một công viên yên tĩnh trong khu dân cư của chúng tôi.,Travel and places
+path,A2,noun,"lối đi, con đường nhỏ",A narrow path leads to the lake.,Một lối đi hẹp dẫn đến hồ.,Travel and places
+candidate,B1,noun,ứng viên,Each candidate will meet the team leader.,Mỗi ứng viên sẽ gặp trưởng nhóm.,Work and projects
+cooperation,B1,noun,sự hợp tác,The project depends on cooperation between three departments.,Dự án phụ thuộc vào sự hợp tác giữa ba phòng ban.,Work and projects
+customer service,B1,noun,dịch vụ khách hàng,She works in customer service at an online store.,Cô ấy làm việc trong bộ phận dịch vụ khách hàng của một cửa hàng trực tuyến.,Work and projects
+full-time,A2,adjective,toàn thời gian,He is looking for a full-time job after graduation.,Cậu ấy đang tìm một công việc toàn thời gian sau khi tốt nghiệp.,Work and projects
+part-time,A2,adjective,bán thời gian,She has a part-time job at a bookstore.,Cô ấy có công việc bán thời gian tại một hiệu sách.,Work and projects
+responsibility,B1,noun,trách nhiệm,Managing the team calendar is one of his responsibilities.,Quản lý lịch của nhóm là một trong những trách nhiệm của anh ấy.,Work and projects
+shift,A2,noun,ca làm việc,I work the evening shift twice a week.,Tôi làm ca tối hai lần mỗi tuần.,Work and projects
+sick leave,B1,noun,nghỉ ốm,He took sick leave to recover at home.,Anh ấy xin nghỉ ốm để hồi phục ở nhà.,Work and projects
+wireless,B1,adjective,không dây,The library provides wireless internet access.,Thư viện cung cấp truy cập Internet không dây.,Technology and information
+screen,A2,noun,màn hình,Reduce the screen brightness to save battery power.,Giảm độ sáng màn hình để tiết kiệm pin.,Technology and information
+search,A2,verb,tìm kiếm,Search the website for the latest course schedule.,Hãy tìm lịch học mới nhất trên website.,Technology and information
+software,B1,noun,phần mềm,The software helps students organize their study plans.,Phần mềm giúp sinh viên sắp xếp kế hoạch học tập.,Technology and information
+spreadsheet,B1,noun,bảng tính,We used a spreadsheet to track the weekly expenses.,Chúng tôi dùng bảng tính để theo dõi chi phí hằng tuần.,Technology and information
+storage,B1,noun,bộ nhớ lưu trữ,The photos take up too much storage on my phone.,Ảnh chiếm quá nhiều dung lượng lưu trữ trên điện thoại của tôi.,Technology and information
+technology,A2,noun,công nghệ,Technology has changed the way people study.,Công nghệ đã thay đổi cách mọi người học tập.,Technology and information
+storm,A2,noun,cơn bão,The storm forced the boat to return to the harbor.,Cơn bão buộc con thuyền phải quay về bến cảng.,Nature and environment
+waste,A2,noun,rác thải,The project aims to reduce food waste on campus.,Dự án nhằm giảm lãng phí thực phẩm trong khuôn viên trường.,Nature and environment
+wildlife,B1,noun,động vật hoang dã,The reserve protects wildlife in the valley.,Khu bảo tồn bảo vệ động vật hoang dã trong thung lũng.,Nature and environment
+wood,A2,noun,gỗ,The table is made of recycled wood.,Chiếc bàn được làm từ gỗ tái chế.,Nature and environment
+bloom,B1,verb,nở hoa,The flowers bloom in early spring.,Hoa nở vào đầu mùa xuân.,Nature and environment
+stage,A2,noun,sân khấu,The speakers walked onto the stage together.,Các diễn giả cùng bước lên sân khấu.,Free time and culture
+talent,B1,noun,tài năng,Her talent for drawing became clear at an early age.,Tài năng vẽ của cô ấy bộc lộ rõ từ khi còn nhỏ.,Free time and culture
+theater,A2,noun,nhà hát,The theater is showing a new family comedy.,Nhà hát đang trình chiếu một bộ phim hài mới dành cho gia đình.,Free time and culture
+viewer,B1,noun,khán giả,The program attracted viewers from many countries.,Chương trình thu hút khán giả từ nhiều quốc gia.,Free time and culture
+adventure,A2,noun,cuộc phiêu lưu,Their cycling trip became an exciting adventure.,Chuyến đi xe đạp của họ trở thành một cuộc phiêu lưu thú vị.,Free time and culture
+abstract,B2,noun,tóm tắt nghiên cứu,The lecturer discussed the abstract during the seminar.,Giảng viên đã thảo luận về tóm tắt nghiên cứu trong buổi hội thảo.,Academic study
+accuracy,B2,noun,độ chính xác,The lecturer discussed the accuracy during the seminar.,Giảng viên đã thảo luận về độ chính xác trong buổi hội thảo.,Academic study
+analysis,B1,noun,sự phân tích,The lecturer discussed the analysis during the seminar.,Giảng viên đã thảo luận về sự phân tích trong buổi hội thảo.,Academic study
+appendix,B2,noun,phụ lục,The lecturer discussed the appendix during the seminar.,Giảng viên đã thảo luận về phụ lục trong buổi hội thảo.,Academic study
+argument,B2,noun,lập luận,The lecturer discussed the argument during the seminar.,Giảng viên đã thảo luận về lập luận trong buổi hội thảo.,Academic study
+assessment,B1,noun,việc đánh giá,The lecturer discussed the assessment during the seminar.,Giảng viên đã thảo luận về việc đánh giá trong buổi hội thảo.,Academic study
+assumption,B2,noun,giả định,The lecturer discussed the assumption during the seminar.,Giảng viên đã thảo luận về giả định trong buổi hội thảo.,Academic study
+bibliography,B2,noun,danh mục tài liệu tham khảo,The lecturer discussed the bibliography during the seminar.,Giảng viên đã thảo luận về danh mục tài liệu tham khảo trong buổi hội thảo.,Academic study
+calculation,B1,noun,phép tính,The lecturer discussed the calculation during the seminar.,Giảng viên đã thảo luận về phép tính trong buổi hội thảo.,Academic study
+category,B1,noun,phân loại,The lecturer discussed the category during the seminar.,Giảng viên đã thảo luận về phân loại trong buổi hội thảo.,Academic study
+citation,B2,noun,trích dẫn,The lecturer discussed the citation during the seminar.,Giảng viên đã thảo luận về trích dẫn trong buổi hội thảo.,Academic study
+claim,B2,noun,luận điểm,The lecturer discussed the claim during the seminar.,Giảng viên đã thảo luận về luận điểm trong buổi hội thảo.,Academic study
+clause,B2,noun,mệnh đề,The lecturer discussed the clause during the seminar.,Giảng viên đã thảo luận về mệnh đề trong buổi hội thảo.,Academic study
+comparison,B1,noun,sự so sánh,The lecturer discussed the comparison during the seminar.,Giảng viên đã thảo luận về sự so sánh trong buổi hội thảo.,Academic study
+concept,B1,noun,khái niệm,The lecturer discussed the concept during the seminar.,Giảng viên đã thảo luận về khái niệm trong buổi hội thảo.,Academic study
+conference,B1,noun,hội nghị,The lecturer discussed the conference during the seminar.,Giảng viên đã thảo luận về hội nghị trong buổi hội thảo.,Academic study
+conclusion,B1,noun,kết luận,The lecturer discussed the conclusion during the seminar.,Giảng viên đã thảo luận về kết luận trong buổi hội thảo.,Academic study
+consequence,B2,noun,hệ quả,The lecturer discussed the consequence during the seminar.,Giảng viên đã thảo luận về hệ quả trong buổi hội thảo.,Academic study
+context,B1,noun,ngữ cảnh,The lecturer discussed the context during the seminar.,Giảng viên đã thảo luận về ngữ cảnh trong buổi hội thảo.,Academic study
+contribution,B2,noun,đóng góp,The lecturer discussed the contribution during the seminar.,Giảng viên đã thảo luận về đóng góp trong buổi hội thảo.,Academic study
+criterion,B2,noun,tiêu chí,The lecturer discussed the criterion during the seminar.,Giảng viên đã thảo luận về tiêu chí trong buổi hội thảo.,Academic study
+curriculum,B2,noun,chương trình học,The lecturer discussed the curriculum during the seminar.,Giảng viên đã thảo luận về chương trình học trong buổi hội thảo.,Academic study
+debate,B1,noun,cuộc tranh luận,The lecturer discussed the debate during the seminar.,Giảng viên đã thảo luận về cuộc tranh luận trong buổi hội thảo.,Academic study
+deduction,B2,noun,sự suy luận,The lecturer discussed the deduction during the seminar.,Giảng viên đã thảo luận về sự suy luận trong buổi hội thảo.,Academic study
+definition,B1,noun,định nghĩa,The lecturer discussed the definition during the seminar.,Giảng viên đã thảo luận về định nghĩa trong buổi hội thảo.,Academic study
+department,B1,noun,"khoa, phòng ban",The lecturer discussed the department during the seminar.,"Giảng viên đã thảo luận về khoa, phòng ban trong buổi hội thảo.",Academic study
+discipline,B2,noun,ngành học,The lecturer discussed the discipline during the seminar.,Giảng viên đã thảo luận về ngành học trong buổi hội thảo.,Academic study
+discussion,B1,noun,cuộc thảo luận,The lecturer discussed the discussion during the seminar.,Giảng viên đã thảo luận về cuộc thảo luận trong buổi hội thảo.,Academic study
+distinction,B2,noun,sự khác biệt,The lecturer discussed the distinction during the seminar.,Giảng viên đã thảo luận về sự khác biệt trong buổi hội thảo.,Academic study
+draft,B1,noun,bản nháp,The lecturer discussed the draft during the seminar.,Giảng viên đã thảo luận về bản nháp trong buổi hội thảo.,Academic study
+edition,B1,noun,ấn bản,The lecturer discussed the edition during the seminar.,Giảng viên đã thảo luận về ấn bản trong buổi hội thảo.,Academic study
+emphasis,B2,noun,sự nhấn mạnh,The lecturer discussed the emphasis during the seminar.,Giảng viên đã thảo luận về sự nhấn mạnh trong buổi hội thảo.,Academic study
+estimate,B1,noun,ước tính,The lecturer discussed the estimate during the seminar.,Giảng viên đã thảo luận về ước tính trong buổi hội thảo.,Academic study
+evidence,B2,noun,bằng chứng,The lecturer discussed the evidence during the seminar.,Giảng viên đã thảo luận về bằng chứng trong buổi hội thảo.,Academic study
+examination,B1,noun,bài kiểm tra,The lecturer discussed the examination during the seminar.,Giảng viên đã thảo luận về bài kiểm tra trong buổi hội thảo.,Academic study
+factor,B1,noun,yếu tố,The lecturer discussed the factor during the seminar.,Giảng viên đã thảo luận về yếu tố trong buổi hội thảo.,Academic study
+figure,B1,noun,"hình, biểu đồ",The lecturer discussed the figure during the seminar.,"Giảng viên đã thảo luận về hình, biểu đồ trong buổi hội thảo.",Academic study
+framework,B2,noun,khuôn khổ,The lecturer discussed the framework during the seminar.,Giảng viên đã thảo luận về khuôn khổ trong buổi hội thảo.,Academic study
+function,B1,noun,chức năng,The lecturer discussed the function during the seminar.,Giảng viên đã thảo luận về chức năng trong buổi hội thảo.,Academic study
+guideline,B2,noun,hướng dẫn,The lecturer discussed the guideline during the seminar.,Giảng viên đã thảo luận về hướng dẫn trong buổi hội thảo.,Academic study
+hypothesis,B2,noun,giả thuyết,The lecturer discussed the hypothesis during the seminar.,Giảng viên đã thảo luận về giả thuyết trong buổi hội thảo.,Academic study
+implication,B2,noun,hàm ý,The lecturer discussed the implication during the seminar.,Giảng viên đã thảo luận về hàm ý trong buổi hội thảo.,Academic study
+interpretation,B2,noun,cách diễn giải,The lecturer discussed the interpretation during the seminar.,Giảng viên đã thảo luận về cách diễn giải trong buổi hội thảo.,Academic study
+introduction,B1,noun,phần mở đầu,The lecturer discussed the introduction during the seminar.,Giảng viên đã thảo luận về phần mở đầu trong buổi hội thảo.,Academic study
+issue,B1,noun,vấn đề,The lecturer discussed the issue during the seminar.,Giảng viên đã thảo luận về vấn đề trong buổi hội thảo.,Academic study
+journal,B1,noun,tạp chí học thuật,The lecturer discussed the journal during the seminar.,Giảng viên đã thảo luận về tạp chí học thuật trong buổi hội thảo.,Academic study
+literature,B2,noun,các công trình nghiên cứu,The lecturer discussed the literature during the seminar.,Giảng viên đã thảo luận về các công trình nghiên cứu trong buổi hội thảo.,Academic study
+logic,B1,noun,lập luận logic,The lecturer discussed the logic during the seminar.,Giảng viên đã thảo luận về lập luận logic trong buổi hội thảo.,Academic study
+method,B1,noun,phương pháp,The lecturer discussed the method during the seminar.,Giảng viên đã thảo luận về phương pháp trong buổi hội thảo.,Academic study
+objective,B1,noun,mục tiêu,The lecturer discussed the objective during the seminar.,Giảng viên đã thảo luận về mục tiêu trong buổi hội thảo.,Academic study
+outcome,B1,noun,kết quả,The lecturer discussed the outcome during the seminar.,Giảng viên đã thảo luận về kết quả trong buổi hội thảo.,Academic study
+paragraph,B1,noun,đoạn văn,The lecturer discussed the paragraph during the seminar.,Giảng viên đã thảo luận về đoạn văn trong buổi hội thảo.,Academic study
+perspective,B2,noun,góc nhìn,The lecturer discussed the perspective during the seminar.,Giảng viên đã thảo luận về góc nhìn trong buổi hội thảo.,Academic study
+phenomenon,B2,noun,hiện tượng,The lecturer discussed the phenomenon during the seminar.,Giảng viên đã thảo luận về hiện tượng trong buổi hội thảo.,Academic study
+principle,B2,noun,nguyên lý,The lecturer discussed the principle during the seminar.,Giảng viên đã thảo luận về nguyên lý trong buổi hội thảo.,Academic study
+procedure,B1,noun,quy trình,The lecturer discussed the procedure during the seminar.,Giảng viên đã thảo luận về quy trình trong buổi hội thảo.,Academic study
+publication,B2,noun,ấn phẩm,The lecturer discussed the publication during the seminar.,Giảng viên đã thảo luận về ấn phẩm trong buổi hội thảo.,Academic study
+qualification,B2,noun,bằng cấp,The lecturer discussed the qualification during the seminar.,Giảng viên đã thảo luận về bằng cấp trong buổi hội thảo.,Academic study
+questionnaire,B2,noun,bảng câu hỏi,The lecturer discussed the questionnaire during the seminar.,Giảng viên đã thảo luận về bảng câu hỏi trong buổi hội thảo.,Academic study
+quotation,B2,noun,câu trích dẫn,The lecturer discussed the quotation during the seminar.,Giảng viên đã thảo luận về câu trích dẫn trong buổi hội thảo.,Academic study
+reference,B1,noun,tài liệu tham khảo,The lecturer discussed the reference during the seminar.,Giảng viên đã thảo luận về tài liệu tham khảo trong buổi hội thảo.,Academic study
+relevance,B2,noun,mức độ liên quan,The lecturer discussed the relevance during the seminar.,Giảng viên đã thảo luận về mức độ liên quan trong buổi hội thảo.,Academic study
+requirement,B1,noun,yêu cầu,The lecturer discussed the requirement during the seminar.,Giảng viên đã thảo luận về yêu cầu trong buổi hội thảo.,Academic study
+response,B1,noun,phản hồi,The lecturer discussed the response during the seminar.,Giảng viên đã thảo luận về phản hồi trong buổi hội thảo.,Academic study
+section,B1,noun,mục,The lecturer discussed the section during the seminar.,Giảng viên đã thảo luận về mục trong buổi hội thảo.,Academic study
+sequence,B2,noun,trình tự,The lecturer discussed the sequence during the seminar.,Giảng viên đã thảo luận về trình tự trong buổi hội thảo.,Academic study
+significance,B2,noun,ý nghĩa,The lecturer discussed the significance during the seminar.,Giảng viên đã thảo luận về ý nghĩa trong buổi hội thảo.,Academic study
+statistic,B2,noun,số liệu thống kê,The lecturer discussed the statistic during the seminar.,Giảng viên đã thảo luận về số liệu thống kê trong buổi hội thảo.,Academic study
+structure,B1,noun,cấu trúc,The lecturer discussed the structure during the seminar.,Giảng viên đã thảo luận về cấu trúc trong buổi hội thảo.,Academic study
+summary,B1,noun,bản tóm tắt,The lecturer discussed the summary during the seminar.,Giảng viên đã thảo luận về bản tóm tắt trong buổi hội thảo.,Academic study
+algorithm,B2,noun,thuật toán,The team checked the algorithm before the software release.,Nhóm đã kiểm tra thuật toán trước khi phát hành phần mềm.,Technology
+analytics,B2,noun,phân tích dữ liệu,The team checked the analytics before the software release.,Nhóm đã kiểm tra phân tích dữ liệu trước khi phát hành phần mềm.,Technology
+antivirus,B1,noun,phần mềm diệt vi-rút,The team checked the antivirus before the software release.,Nhóm đã kiểm tra phần mềm diệt vi-rút trước khi phát hành phần mềm.,Technology
+archive,B2,noun,tệp lưu trữ,The team checked the archive before the software release.,Nhóm đã kiểm tra tệp lưu trữ trước khi phát hành phần mềm.,Technology
+attachment,B1,noun,tệp đính kèm,The team checked the attachment before the software release.,Nhóm đã kiểm tra tệp đính kèm trước khi phát hành phần mềm.,Technology
+authentication,B2,noun,xác thực,The team checked the authentication before the software release.,Nhóm đã kiểm tra xác thực trước khi phát hành phần mềm.,Technology
+automation,B2,noun,tự động hóa,The team checked the automation before the software release.,Nhóm đã kiểm tra tự động hóa trước khi phát hành phần mềm.,Technology
+backup,B1,noun,bản sao lưu,The team checked the backup before the software release.,Nhóm đã kiểm tra bản sao lưu trước khi phát hành phần mềm.,Technology
+bandwidth,B2,noun,băng thông,The team checked the bandwidth before the software release.,Nhóm đã kiểm tra băng thông trước khi phát hành phần mềm.,Technology
+browser,B1,noun,trình duyệt,The team checked the browser before the software release.,Nhóm đã kiểm tra trình duyệt trước khi phát hành phần mềm.,Technology
+cable,B1,noun,dây cáp,The team checked the cable before the software release.,Nhóm đã kiểm tra dây cáp trước khi phát hành phần mềm.,Technology
+capacity,B1,noun,dung lượng,The team checked the capacity before the software release.,Nhóm đã kiểm tra dung lượng trước khi phát hành phần mềm.,Technology
+charger,B1,noun,bộ sạc,The team checked the charger before the software release.,Nhóm đã kiểm tra bộ sạc trước khi phát hành phần mềm.,Technology
+chip,B2,noun,vi mạch,The team checked the chip before the software release.,Nhóm đã kiểm tra vi mạch trước khi phát hành phần mềm.,Technology
+cloud,B1,noun,đám mây điện toán,The team checked the cloud before the software release.,Nhóm đã kiểm tra đám mây điện toán trước khi phát hành phần mềm.,Technology
+command,B1,noun,lệnh,The team checked the command before the software release.,Nhóm đã kiểm tra lệnh trước khi phát hành phần mềm.,Technology
+compatibility,B2,noun,khả năng tương thích,The team checked the compatibility before the software release.,Nhóm đã kiểm tra khả năng tương thích trước khi phát hành phần mềm.,Technology
+configuration,B2,noun,cấu hình,The team checked the configuration before the software release.,Nhóm đã kiểm tra cấu hình trước khi phát hành phần mềm.,Technology
+connectivity,B2,noun,khả năng kết nối,The team checked the connectivity before the software release.,Nhóm đã kiểm tra khả năng kết nối trước khi phát hành phần mềm.,Technology
+console,B2,noun,bảng điều khiển,The team checked the console before the software release.,Nhóm đã kiểm tra bảng điều khiển trước khi phát hành phần mềm.,Technology
+controller,B2,noun,bộ điều khiển,The team checked the controller before the software release.,Nhóm đã kiểm tra bộ điều khiển trước khi phát hành phần mềm.,Technology
+cookie,B2,noun,cookie trình duyệt,The team checked the cookie before the software release.,Nhóm đã kiểm tra cookie trình duyệt trước khi phát hành phần mềm.,Technology
+cybersecurity,B2,noun,an ninh mạng,The team checked the cybersecurity before the software release.,Nhóm đã kiểm tra an ninh mạng trước khi phát hành phần mềm.,Technology
+dashboard,B1,noun,bảng điều khiển dữ liệu,The team checked the dashboard before the software release.,Nhóm đã kiểm tra bảng điều khiển dữ liệu trước khi phát hành phần mềm.,Technology
+data,B1,noun,dữ liệu,The team checked the data before the software release.,Nhóm đã kiểm tra dữ liệu trước khi phát hành phần mềm.,Technology
+dataset,B2,noun,bộ dữ liệu,The team checked the dataset before the software release.,Nhóm đã kiểm tra bộ dữ liệu trước khi phát hành phần mềm.,Technology
+debugging,B2,noun,quá trình gỡ lỗi,The team checked the debugging before the software release.,Nhóm đã kiểm tra quá trình gỡ lỗi trước khi phát hành phần mềm.,Technology
+default,B2,noun,thiết lập mặc định,The app uses the default setting until a user changes it.,Ứng dụng dùng thiết lập mặc định cho đến khi người dùng thay đổi.,Technology
+deletion,B2,noun,việc xóa dữ liệu,The team checked the deletion before the software release.,Nhóm đã kiểm tra việc xóa dữ liệu trước khi phát hành phần mềm.,Technology
+desktop,B1,noun,máy tính để bàn,The team checked the desktop before the software release.,Nhóm đã kiểm tra máy tính để bàn trước khi phát hành phần mềm.,Technology
+detection,B2,noun,việc phát hiện,The team checked the detection before the software release.,Nhóm đã kiểm tra việc phát hiện trước khi phát hành phần mềm.,Technology
+developer,B1,noun,lập trình viên,A developer fixed the bug before the release.,Một lập trình viên đã sửa lỗi trước khi phát hành.,Technology
+directory,B2,noun,thư mục,The team checked the directory before the software release.,Nhóm đã kiểm tra thư mục trước khi phát hành phần mềm.,Technology
+display,B1,noun,màn hình hiển thị,The team checked the display before the software release.,Nhóm đã kiểm tra màn hình hiển thị trước khi phát hành phần mềm.,Technology
+document,B1,noun,tài liệu điện tử,The team checked the document before the software release.,Nhóm đã kiểm tra tài liệu điện tử trước khi phát hành phần mềm.,Technology
+domain,B2,noun,tên miền,The team checked the domain before the software release.,Nhóm đã kiểm tra tên miền trước khi phát hành phần mềm.,Technology
+encryption,B2,noun,mã hóa,The team checked the encryption before the software release.,Nhóm đã kiểm tra mã hóa trước khi phát hành phần mềm.,Technology
+engine,B1,noun,công cụ xử lý,The team checked the engine before the software release.,Nhóm đã kiểm tra công cụ xử lý trước khi phát hành phần mềm.,Technology
+error,B1,noun,lỗi,The team checked the error before the software release.,Nhóm đã kiểm tra lỗi trước khi phát hành phần mềm.,Technology
+feature,B1,noun,tính năng,The team checked the feature before the software release.,Nhóm đã kiểm tra tính năng trước khi phát hành phần mềm.,Technology
+feedback,B1,noun,phản hồi,The team checked the feedback before the software release.,Nhóm đã kiểm tra phản hồi trước khi phát hành phần mềm.,Technology
+filter,B1,noun,bộ lọc,The team checked the filter before the software release.,Nhóm đã kiểm tra bộ lọc trước khi phát hành phần mềm.,Technology
+firmware,B2,noun,phần mềm nhúng,The team checked the firmware before the software release.,Nhóm đã kiểm tra phần mềm nhúng trước khi phát hành phần mềm.,Technology
+folder,B1,noun,thư mục,The team checked the folder before the software release.,Nhóm đã kiểm tra thư mục trước khi phát hành phần mềm.,Technology
+format,B1,noun,định dạng,The team checked the format before the software release.,Nhóm đã kiểm tra định dạng trước khi phát hành phần mềm.,Technology
+gateway,B2,noun,cổng kết nối,The team checked the gateway before the software release.,Nhóm đã kiểm tra cổng kết nối trước khi phát hành phần mềm.,Technology
+graphic,B2,noun,hình ảnh đồ họa,The team checked the graphic before the software release.,Nhóm đã kiểm tra hình ảnh đồ họa trước khi phát hành phần mềm.,Technology
+hardware,B1,noun,phần cứng,The team checked the hardware before the software release.,Nhóm đã kiểm tra phần cứng trước khi phát hành phần mềm.,Technology
+host,B2,noun,máy chủ lưu trữ,The team checked the host before the software release.,Nhóm đã kiểm tra máy chủ lưu trữ trước khi phát hành phần mềm.,Technology
+identity,B2,noun,danh tính số,The team checked the identity before the software release.,Nhóm đã kiểm tra danh tính số trước khi phát hành phần mềm.,Technology
+input,B1,noun,dữ liệu đầu vào,The team checked the input before the software release.,Nhóm đã kiểm tra dữ liệu đầu vào trước khi phát hành phần mềm.,Technology
+installation,B1,noun,quá trình cài đặt,The team checked the installation before the software release.,Nhóm đã kiểm tra quá trình cài đặt trước khi phát hành phần mềm.,Technology
+interface,B2,noun,giao diện,The team checked the interface before the software release.,Nhóm đã kiểm tra giao diện trước khi phát hành phần mềm.,Technology
+keyboard,B1,noun,bàn phím,The team checked the keyboard before the software release.,Nhóm đã kiểm tra bàn phím trước khi phát hành phần mềm.,Technology
+latency,B2,noun,độ trễ,The team checked the latency before the software release.,Nhóm đã kiểm tra độ trễ trước khi phát hành phần mềm.,Technology
+license,B2,noun,giấy phép phần mềm,The team checked the license before the software release.,Nhóm đã kiểm tra giấy phép phần mềm trước khi phát hành phần mềm.,Technology
+link,B1,noun,đường liên kết,The team checked the link before the software release.,Nhóm đã kiểm tra đường liên kết trước khi phát hành phần mềm.,Technology
+login,B1,noun,lần đăng nhập,The team checked the login before the software release.,Nhóm đã kiểm tra lần đăng nhập trước khi phát hành phần mềm.,Technology
+malware,B2,noun,phần mềm độc hại,The team checked the malware before the software release.,Nhóm đã kiểm tra phần mềm độc hại trước khi phát hành phần mềm.,Technology
+memory,B1,noun,bộ nhớ,The team checked the memory before the software release.,Nhóm đã kiểm tra bộ nhớ trước khi phát hành phần mềm.,Technology
+menu,B1,noun,trình đơn,The team checked the menu before the software release.,Nhóm đã kiểm tra trình đơn trước khi phát hành phần mềm.,Technology
+monitor,B1,noun,màn hình,The team checked the monitor before the software release.,Nhóm đã kiểm tra màn hình trước khi phát hành phần mềm.,Technology
+motherboard,B2,noun,bo mạch chủ,The team checked the motherboard before the software release.,Nhóm đã kiểm tra bo mạch chủ trước khi phát hành phần mềm.,Technology
+network,B1,noun,mạng máy tính,The team checked the network before the software release.,Nhóm đã kiểm tra mạng máy tính trước khi phát hành phần mềm.,Technology
+notification,B1,noun,thông báo hệ thống,The team checked the notification before the software release.,Nhóm đã kiểm tra thông báo hệ thống trước khi phát hành phần mềm.,Technology
+operating system,B2,noun,hệ điều hành,The team checked the operating system before the software release.,Nhóm đã kiểm tra hệ điều hành trước khi phát hành phần mềm.,Technology
+output,B1,noun,dữ liệu đầu ra,The team checked the output before the software release.,Nhóm đã kiểm tra dữ liệu đầu ra trước khi phát hành phần mềm.,Technology
+package,B2,noun,gói phần mềm,The team checked the package before the software release.,Nhóm đã kiểm tra gói phần mềm trước khi phát hành phần mềm.,Technology
+patch,B2,noun,bản vá phần mềm,The team checked the patch before the software release.,Nhóm đã kiểm tra bản vá phần mềm trước khi phát hành phần mềm.,Technology
+password,B1,noun,mật khẩu,The team checked the password before the software release.,Nhóm đã kiểm tra mật khẩu trước khi phát hành phần mềm.,Technology
+accommodation,B1,noun,chỗ ở,We booked our accommodation near the station before the trip.,Chúng tôi đã đặt chỗ ở gần ga trước chuyến đi.,Travel
+airline,B1,noun,hãng hàng không,We asked the travel agent about the airline before the trip.,Chúng tôi đã hỏi đại lý du lịch về hãng hàng không trước chuyến đi.,Travel
+aisle,B2,noun,lối đi giữa các hàng ghế,I requested an aisle seat when I checked in.,Tôi yêu cầu ghế cạnh lối đi khi làm thủ tục lên máy bay.,Travel
+baggage,B1,noun,hành lý,We asked the travel agent about the baggage before the trip.,Chúng tôi đã hỏi đại lý du lịch về hành lý trước chuyến đi.,Travel
+boarding pass,B1,noun,thẻ lên máy bay,We asked the travel agent about the boarding pass before the trip.,Chúng tôi đã hỏi đại lý du lịch về thẻ lên máy bay trước chuyến đi.,Travel
+border,B1,noun,biên giới,We asked the travel agent about the border before the trip.,Chúng tôi đã hỏi đại lý du lịch về biên giới trước chuyến đi.,Travel
+brochure,B1,noun,tờ giới thiệu,We asked the travel agent about the brochure before the trip.,Chúng tôi đã hỏi đại lý du lịch về tờ giới thiệu trước chuyến đi.,Travel
+cabin,B1,noun,khoang hành khách,We asked the travel agent about the cabin before the trip.,Chúng tôi đã hỏi đại lý du lịch về khoang hành khách trước chuyến đi.,Travel
+carriage,B2,noun,toa tàu,We asked the travel agent about the carriage before the trip.,Chúng tôi đã hỏi đại lý du lịch về toa tàu trước chuyến đi.,Travel
+cash,B1,noun,tiền mặt,We asked the travel agent whether we would need cash.,Chúng tôi hỏi đại lý du lịch liệu mình có cần tiền mặt không.,Travel
+commuter,B2,noun,người đi làm bằng phương tiện công cộng,The commuter takes the first train into the city.,Người đi làm bằng tàu bắt chuyến đầu tiên vào thành phố.,Travel
+connection,B1,noun,chuyến nối,We asked the travel agent about the connection before the trip.,Chúng tôi đã hỏi đại lý du lịch về chuyến nối trước chuyến đi.,Travel
+customs,B2,noun,hải quan,We asked the travel agent about customs rules before leaving.,Chúng tôi hỏi đại lý du lịch về quy định hải quan trước khi đi.,Travel
+departure,B1,noun,sự khởi hành,We asked the travel agent about the departure before the trip.,Chúng tôi đã hỏi đại lý du lịch về sự khởi hành trước chuyến đi.,Travel
+destination,B1,noun,điểm đến,We asked the travel agent about the destination before the trip.,Chúng tôi đã hỏi đại lý du lịch về điểm đến trước chuyến đi.,Travel
+fare,B2,noun,giá vé,We asked the travel agent about the fare before the trip.,Chúng tôi đã hỏi đại lý du lịch về giá vé trước chuyến đi.,Travel
+flight,B1,noun,chuyến bay,We asked the travel agent about the flight before the trip.,Chúng tôi đã hỏi đại lý du lịch về chuyến bay trước chuyến đi.,Travel
+guidebook,B2,noun,sách hướng dẫn du lịch,I used a guidebook to find a quiet restaurant.,Tôi dùng sách hướng dẫn du lịch để tìm một nhà hàng yên tĩnh.,Travel
+hostel,B1,noun,nhà nghỉ tập thể,We asked the travel agent about the hostel before the trip.,Chúng tôi đã hỏi đại lý du lịch về nhà nghỉ tập thể trước chuyến đi.,Travel
+itinerary,B2,noun,lịch trình chuyến đi,We asked the travel agent about the itinerary before the trip.,Chúng tôi đã hỏi đại lý du lịch về lịch trình chuyến đi trước chuyến đi.,Travel
+landmark,B1,noun,địa danh nổi bật,We asked the travel agent about the landmark before the trip.,Chúng tôi đã hỏi đại lý du lịch về địa danh nổi bật trước chuyến đi.,Travel
+luggage,B1,noun,hành lý,We asked the travel agent about the luggage before the trip.,Chúng tôi đã hỏi đại lý du lịch về hành lý trước chuyến đi.,Travel
+map,B1,noun,bản đồ,We asked the travel agent about the map before the trip.,Chúng tôi đã hỏi đại lý du lịch về bản đồ trước chuyến đi.,Travel
+passenger,B1,noun,hành khách,Each passenger must show a ticket before boarding.,Mỗi hành khách phải xuất trình vé trước khi lên tàu.,Travel
+passport,B1,noun,hộ chiếu,We asked the travel agent about the passport before the trip.,Chúng tôi đã hỏi đại lý du lịch về hộ chiếu trước chuyến đi.,Travel
+railway,B1,noun,đường sắt,We asked the travel agent about the railway before the trip.,Chúng tôi đã hỏi đại lý du lịch về đường sắt trước chuyến đi.,Travel
+reservation,B1,noun,việc đặt chỗ,We asked the travel agent about the reservation before the trip.,Chúng tôi đã hỏi đại lý du lịch về việc đặt chỗ trước chuyến đi.,Travel
+route,B1,noun,tuyến đường,We asked the travel agent about the route before the trip.,Chúng tôi đã hỏi đại lý du lịch về tuyến đường trước chuyến đi.,Travel
+runway,B2,noun,đường băng,We asked the travel agent about the runway before the trip.,Chúng tôi đã hỏi đại lý du lịch về đường băng trước chuyến đi.,Travel
+seat,B1,noun,chỗ ngồi,We asked the travel agent about the seat before the trip.,Chúng tôi đã hỏi đại lý du lịch về chỗ ngồi trước chuyến đi.,Travel
+terminal,B2,noun,nhà ga sân bay,We asked the travel agent about the terminal before the trip.,Chúng tôi đã hỏi đại lý du lịch về nhà ga sân bay trước chuyến đi.,Travel
+tourism,B1,noun,ngành du lịch,Tourism provides jobs for many people in the coastal town.,Ngành du lịch tạo việc làm cho nhiều người ở thị trấn ven biển.,Travel
+tourist,B1,noun,khách du lịch,A tourist asked us how to reach the museum.,Một khách du lịch hỏi chúng tôi đường đến bảo tàng.,Travel
+transfer,B2,noun,việc chuyển phương tiện,We asked the travel agent about the transfer before the trip.,Chúng tôi đã hỏi đại lý du lịch về việc chuyển phương tiện trước chuyến đi.,Travel
+transit,B2,noun,việc quá cảnh,We asked the travel agent about the transit before the trip.,Chúng tôi đã hỏi đại lý du lịch về việc quá cảnh trước chuyến đi.,Travel
+transport,B1,noun,phương tiện giao thông,We asked the travel agent about the transport before the trip.,Chúng tôi đã hỏi đại lý du lịch về phương tiện giao thông trước chuyến đi.,Travel
+trip,B1,noun,chuyến đi,We took a short trip to the coast last weekend.,"Cuối tuần trước, chúng tôi đã có chuyến đi ngắn đến bờ biển.",Travel
+vacation,B1,noun,kỳ nghỉ,We asked the travel agent about the vacation before the trip.,Chúng tôi đã hỏi đại lý du lịch về kỳ nghỉ trước chuyến đi.,Travel
+visa,B1,noun,thị thực,We asked the travel agent about the visa before the trip.,Chúng tôi đã hỏi đại lý du lịch về thị thực trước chuyến đi.,Travel
+voyage,B2,noun,hành trình đường biển,We asked the travel agent about the voyage before the trip.,Chúng tôi đã hỏi đại lý du lịch về hành trình đường biển trước chuyến đi.,Travel
+journey,B1,noun,hành trình,We asked the travel agent about the journey before the trip.,Chúng tôi đã hỏi đại lý du lịch về hành trình trước chuyến đi.,Travel
+excursion,B2,noun,chuyến tham quan ngắn,We asked the travel agent about the excursion before the trip.,Chúng tôi đã hỏi đại lý du lịch về chuyến tham quan ngắn trước chuyến đi.,Travel
+check-in,B1,noun,thủ tục nhận phòng hoặc làm thủ tục bay,We asked the travel agent about the check-in before the trip.,Chúng tôi đã hỏi đại lý du lịch về thủ tục nhận phòng hoặc làm thủ tục bay trước chuyến đi.,Travel
+check-out,B1,noun,thủ tục trả phòng,We asked the travel agent about the check-out before the trip.,Chúng tôi đã hỏi đại lý du lịch về thủ tục trả phòng trước chuyến đi.,Travel
+currency,B1,noun,tiền tệ,We asked the travel agent about the currency before the trip.,Chúng tôi đã hỏi đại lý du lịch về tiền tệ trước chuyến đi.,Travel
+customs officer,B2,noun,nhân viên hải quan,We asked the travel agent about the customs officer before the trip.,Chúng tôi đã hỏi đại lý du lịch về nhân viên hải quan trước chuyến đi.,Travel
+delay,B1,noun,sự chậm trễ,We asked the travel agent about the delay before the trip.,Chúng tôi đã hỏi đại lý du lịch về sự chậm trễ trước chuyến đi.,Travel
+departure lounge,B2,noun,phòng chờ khởi hành,We asked the travel agent about the departure lounge before the trip.,Chúng tôi đã hỏi đại lý du lịch về phòng chờ khởi hành trước chuyến đi.,Travel
+discount,B1,noun,mức giảm giá,We asked the travel agent about the discount before the trip.,Chúng tôi đã hỏi đại lý du lịch về mức giảm giá trước chuyến đi.,Travel
+duty-free shop,B2,noun,cửa hàng miễn thuế,We asked the travel agent about the duty-free shop before the trip.,Chúng tôi đã hỏi đại lý du lịch về cửa hàng miễn thuế trước chuyến đi.,Travel
+entrance,B1,noun,lối vào,We asked the travel agent about the entrance before the trip.,Chúng tôi đã hỏi đại lý du lịch về lối vào trước chuyến đi.,Travel
+exhibition,B1,noun,triển lãm,We asked the travel agent about the exhibition before the trip.,Chúng tôi đã hỏi đại lý du lịch về triển lãm trước chuyến đi.,Travel
+guide,B1,noun,hướng dẫn viên,Our guide led us through the old town.,Hướng dẫn viên đưa chúng tôi đi qua khu phố cổ.,Travel
+harbor,B2,noun,bến cảng,We asked the travel agent about the harbor before the trip.,Chúng tôi đã hỏi đại lý du lịch về bến cảng trước chuyến đi.,Travel
+insurance,B1,noun,bảo hiểm,We asked the travel agent about the insurance before the trip.,Chúng tôi đã hỏi đại lý du lịch về bảo hiểm trước chuyến đi.,Travel
+intersection,B1,noun,ngã tư,We asked the travel agent about the intersection before the trip.,Chúng tôi đã hỏi đại lý du lịch về ngã tư trước chuyến đi.,Travel
+map app,B1,noun,ứng dụng bản đồ,We asked the travel agent about the map app before the trip.,Chúng tôi đã hỏi đại lý du lịch về ứng dụng bản đồ trước chuyến đi.,Travel
+metro,B1,noun,tàu điện ngầm,We asked the travel agent about the metro before the trip.,Chúng tôi đã hỏi đại lý du lịch về tàu điện ngầm trước chuyến đi.,Travel
+motorway,B2,noun,đường cao tốc,We asked the travel agent about the motorway before the trip.,Chúng tôi đã hỏi đại lý du lịch về đường cao tốc trước chuyến đi.,Travel
+platform,B1,noun,sân ga,We asked the travel agent about the platform before the trip.,Chúng tôi đã hỏi đại lý du lịch về sân ga trước chuyến đi.,Travel
+port,B1,noun,cảng,We asked the travel agent about the port before the trip.,Chúng tôi đã hỏi đại lý du lịch về cảng trước chuyến đi.,Travel
+queue,B1,noun,hàng người chờ,We asked the travel agent about the queue before the trip.,Chúng tôi đã hỏi đại lý du lịch về hàng người chờ trước chuyến đi.,Travel
+reception,B1,noun,quầy lễ tân,We asked the travel agent about the reception before the trip.,Chúng tôi đã hỏi đại lý du lịch về quầy lễ tân trước chuyến đi.,Travel
+refund,B1,noun,khoản hoàn tiền,We asked the travel agent about the refund before the trip.,Chúng tôi đã hỏi đại lý du lịch về khoản hoàn tiền trước chuyến đi.,Travel
+sightseeing,B1,noun,hoạt động tham quan,We asked the travel agent about the sightseeing before the trip.,Chúng tôi đã hỏi đại lý du lịch về hoạt động tham quan trước chuyến đi.,Travel
+souvenir,B1,noun,quà lưu niệm,We asked the travel agent about the souvenir before the trip.,Chúng tôi đã hỏi đại lý du lịch về quà lưu niệm trước chuyến đi.,Travel
+suitcase,B1,noun,va li,We asked the travel agent about the suitcase before the trip.,Chúng tôi đã hỏi đại lý du lịch về va li trước chuyến đi.,Travel
+subway,B1,noun,tàu điện ngầm,We asked the travel agent about the subway before the trip.,Chúng tôi đã hỏi đại lý du lịch về tàu điện ngầm trước chuyến đi.,Travel
+timetable,B1,noun,thời gian biểu,We asked the travel agent about the timetable before the trip.,Chúng tôi đã hỏi đại lý du lịch về thời gian biểu trước chuyến đi.,Travel
+traffic jam,B1,noun,tình trạng tắc đường,We asked the travel agent about the traffic jam before the trip.,Chúng tôi đã hỏi đại lý du lịch về tình trạng tắc đường trước chuyến đi.,Travel
+allergy,B1,noun,dị ứng,The doctor asked about my allergy to peanuts.,Bác sĩ hỏi về dị ứng đậu phộng của tôi.,Health
+appetite,B2,noun,cảm giác thèm ăn,A fever can reduce your appetite.,Sốt có thể làm giảm cảm giác thèm ăn.,Health
+balance,B1,noun,sự thăng bằng,The therapist checked my balance after the injury.,Nhà trị liệu kiểm tra khả năng thăng bằng của tôi sau chấn thương.,Health
+blood pressure,B1,noun,huyết áp,The nurse measured my blood pressure before the visit.,Y tá đo huyết áp trước buổi khám.,Health
+clinic,B1,noun,phòng khám,The clinic opens at eight on weekdays.,Phòng khám mở cửa lúc tám giờ vào các ngày trong tuần.,Health
+cough,B1,noun,cơn ho,A persistent cough can make it hard to sleep.,Cơn ho dai dẳng có thể khiến bạn khó ngủ.,Health
+diagnosis,B2,noun,chẩn đoán,The doctor explained the diagnosis in simple terms.,Bác sĩ giải thích chẩn đoán bằng những từ ngữ đơn giản.,Health
+diet,B1,noun,chế độ ăn,My doctor recommended a balanced diet.,Bác sĩ khuyên tôi nên ăn uống cân bằng.,Health
+disease,B1,noun,bệnh tật,Early treatment can limit the spread of the disease.,Điều trị sớm có thể hạn chế bệnh lây lan.,Health
+dose,B1,noun,liều thuốc,Take the next dose with water.,Hãy uống liều tiếp theo với nước.,Health
+emergency,B1,noun,trường hợp khẩn cấp,Call the clinic if the problem becomes an emergency.,Hãy gọi phòng khám nếu tình trạng trở nên khẩn cấp.,Health
+fatigue,B2,noun,mệt mỏi kéo dài,Fatigue made it difficult for him to concentrate.,Tình trạng mệt mỏi khiến anh ấy khó tập trung.,Health
+fever,B1,noun,cơn sốt,She stayed home because she had a fever.,Cô ấy ở nhà vì bị sốt.,Health
+fitness,B1,noun,thể lực,Walking regularly can improve your fitness.,Đi bộ thường xuyên có thể cải thiện thể lực.,Health
+flu,B1,noun,bệnh cúm,He missed class because he had the flu.,Anh ấy nghỉ học vì bị cúm.,Health
+fracture,B2,noun,chỗ gãy xương,The X-ray showed a small fracture in her wrist.,Ảnh chụp X-quang cho thấy một vết gãy nhỏ ở cổ tay cô ấy.,Health
+headache,B1,noun,cơn đau đầu,Drinking water helped ease my headache.,Uống nước giúp làm dịu cơn đau đầu của tôi.,Health
+healthcare,B2,noun,dịch vụ chăm sóc sức khỏe,Many rural areas have limited access to healthcare.,Nhiều vùng nông thôn khó tiếp cận dịch vụ chăm sóc sức khỏe.,Health
+injury,B1,noun,chấn thương,The player rested for a week after the injury.,Cầu thủ nghỉ ngơi một tuần sau chấn thương.,Health
+insomnia,B2,noun,chứng mất ngủ,She spoke to a doctor about her insomnia.,Cô ấy trao đổi với bác sĩ về chứng mất ngủ của mình.,Health
+infection,B2,noun,nhiễm trùng,The doctor prescribed medicine for the infection.,Bác sĩ kê thuốc điều trị nhiễm trùng.,Health
+medicine,B1,noun,thuốc,Store this medicine away from children.,Hãy cất thuốc này xa tầm tay trẻ em.,Health
+mental health,B2,noun,sức khỏe tinh thần,Regular sleep can support good mental health.,Ngủ đủ giấc có thể hỗ trợ sức khỏe tinh thần.,Health
+nutrition,B2,noun,dinh dưỡng,The class discussed nutrition and healthy meals.,Lớp học thảo luận về dinh dưỡng và bữa ăn lành mạnh.,Health
+pain,B1,noun,cơn đau,The medicine reduced the pain in his knee.,Thuốc làm giảm cơn đau ở đầu gối anh ấy.,Health
+patient,B1,noun,bệnh nhân,The patient waited quietly for the test results.,Bệnh nhân yên lặng chờ kết quả xét nghiệm.,Health
+pharmacy,B1,noun,hiệu thuốc,I picked up my prescription at the pharmacy.,Tôi lấy thuốc theo đơn tại hiệu thuốc.,Health
+prescription,B2,noun,đơn thuốc,The doctor gave me a prescription for the medicine.,Bác sĩ kê cho tôi một đơn thuốc.,Health
+recovery,B2,noun,sự hồi phục,Rest is an important part of recovery.,Nghỉ ngơi là một phần quan trọng của quá trình hồi phục.,Health
+symptom,B1,noun,triệu chứng,A high temperature can be a symptom of infection.,Thân nhiệt cao có thể là một triệu chứng nhiễm trùng.,Health
+treatment,B1,noun,phương pháp điều trị,The treatment helped reduce the swelling.,Phương pháp điều trị giúp giảm sưng.,Health
+vaccine,B1,noun,vắc-xin,The vaccine is given in two doses.,Vắc-xin được tiêm thành hai liều.,Health
+wound,B1,noun,vết thương,Clean the wound gently with water.,Hãy nhẹ nhàng rửa vết thương bằng nước.,Health
+anxiety,B2,noun,lo âu,Deep breathing helped her manage anxiety.,Hít thở sâu giúp cô ấy kiểm soát lo âu.,Health
+consultation,B1,noun,buổi tư vấn khám bệnh,The consultation lasted about twenty minutes.,Buổi tư vấn khám bệnh kéo dài khoảng hai mươi phút.,Health
+asthma,B2,noun,bệnh hen suyễn,Cold air can trigger asthma for some people.,Không khí lạnh có thể kích hoạt cơn hen suyễn ở một số người.,Health
+bandage,B1,noun,băng gạc,The nurse wrapped a bandage around his hand.,Y tá quấn băng quanh bàn tay anh ấy.,Health
+blood test,B1,noun,xét nghiệm máu,The doctor ordered a blood test to check iron levels.,Bác sĩ chỉ định xét nghiệm máu để kiểm tra nồng độ sắt.,Health
+body temperature,B1,noun,thân nhiệt,The nurse checked my body temperature.,Y tá kiểm tra thân nhiệt của tôi.,Health
+breathing,B1,noun,hô hấp,Slow breathing helped me relax before the test.,Hít thở chậm giúp tôi thư giãn trước bài kiểm tra.,Health
+calorie,B1,noun,calo,This snack contains about 100 calories.,Món ăn nhẹ này chứa khoảng 100 calo.,Health
+check-up,B1,noun,lần khám sức khỏe,I go for a check-up once a year.,Tôi đi khám sức khỏe tổng quát mỗi năm một lần.,Health
+cholesterol,B2,noun,cholesterol,The blood test showed that his cholesterol was high.,Xét nghiệm máu cho thấy cholesterol của anh ấy cao.,Health
+chronic condition,B2,noun,bệnh mạn tính,She manages a chronic condition with regular care.,Cô ấy kiểm soát bệnh mạn tính bằng cách chăm sóc thường xuyên.,Health
+counseling,B2,noun,tư vấn tâm lý,Counseling helped him cope with stress.,Tư vấn tâm lý giúp anh ấy đối phó với căng thẳng.,Health
+dehydration,B2,noun,mất nước,Drinking water can prevent dehydration.,Uống nước có thể ngăn tình trạng mất nước.,Health
+exercise plan,B1,noun,kế hoạch vận động,The doctor suggested an exercise plan for my recovery.,Bác sĩ gợi ý một kế hoạch vận động để hỗ trợ hồi phục.,Health
+health insurance,B1,noun,bảo hiểm y tế,Her health insurance covers the clinic visit.,Bảo hiểm y tế của cô ấy chi trả cho lần khám tại phòng khám.,Health
+hearing,B1,noun,thính giác,The test measured hearing in both ears.,Bài kiểm tra đo thính giác ở cả hai tai.,Health
+heart rate,B1,noun,nhịp tim,The nurse checked my heart rate after exercise.,Y tá kiểm tra nhịp tim của tôi sau khi tập thể dục.,Health
+hygiene,B1,noun,vệ sinh,Good hygiene helps prevent some infections.,Giữ vệ sinh tốt giúp ngăn ngừa một số bệnh nhiễm trùng.,Health
+immunity,B2,noun,khả năng miễn dịch,The vaccine helps build immunity to the disease.,Vắc-xin giúp xây dựng khả năng miễn dịch với căn bệnh này.,Health
+medical record,B1,noun,hồ sơ y tế,The doctor updated my medical record after the visit.,Bác sĩ cập nhật hồ sơ y tế của tôi sau buổi khám.,Health
+nurse,B1,noun,y tá,The nurse explained how to take the medicine.,Y tá giải thích cách uống thuốc.,Health
+operation,B1,noun,ca phẫu thuật,He needed an operation on his knee.,Anh ấy cần phẫu thuật đầu gối.,Health
+outbreak,B2,noun,đợt bùng phát dịch,The clinic reported an outbreak of flu in the area.,Phòng khám báo cáo một đợt bùng phát cúm trong khu vực.,Health
+oxygen,B1,noun,ô-xy,The monitor shows the oxygen level in her blood.,Màn hình hiển thị nồng độ ô-xy trong máu cô ấy.,Health
+physical therapy,B2,noun,vật lý trị liệu,She attends physical therapy twice a week.,Cô ấy tham gia vật lý trị liệu hai lần mỗi tuần.,Health
+receptionist,B1,noun,nhân viên lễ tân,The receptionist booked my next visit.,Nhân viên lễ tân đặt lịch cho lần khám tiếp theo của tôi.,Health
+referral,B2,noun,giấy giới thiệu khám chuyên khoa,My doctor gave me a referral to a heart specialist.,Bác sĩ đưa tôi giấy giới thiệu đến bác sĩ chuyên khoa tim mạch.,Health
+screening,B2,noun,việc sàng lọc,The clinic offers free screening for diabetes.,Phòng khám cung cấp dịch vụ sàng lọc bệnh tiểu đường miễn phí.,Health
+side effect,B2,noun,tác dụng phụ,Drowsiness is a possible side effect of this medicine.,Buồn ngủ là một tác dụng phụ có thể xảy ra của thuốc này.,Health
+skin,B1,noun,da,This cream can soothe dry skin.,Loại kem này có thể làm dịu vùng da khô.,Health
+sore throat,B1,noun,đau họng,Warm tea eased my sore throat.,Trà ấm làm dịu cơn đau họng của tôi.,Health
+specialist,B1,noun,bác sĩ chuyên khoa,My doctor referred me to a specialist.,Bác sĩ giới thiệu tôi đến một bác sĩ chuyên khoa.,Health
+stomachache,B1,noun,đau bụng,He went home early because of a stomachache.,Anh ấy về nhà sớm vì đau bụng.,Health
+stress,B1,noun,căng thẳng,She uses exercise to manage stress.,Cô ấy dùng việc tập thể dục để kiểm soát căng thẳng.,Health
+surgery,B2,noun,phẫu thuật,He is recovering from surgery on his shoulder.,Anh ấy đang hồi phục sau ca phẫu thuật vai.,Health
+therapist,B2,noun,chuyên viên trị liệu,The therapist showed me a gentle stretching exercise.,Nhà trị liệu hướng dẫn tôi một bài tập giãn cơ nhẹ nhàng.,Health
+thermometer,B1,noun,nhiệt kế,Use a thermometer to check your temperature.,Hãy dùng nhiệt kế để đo thân nhiệt.,Health
+accreditation,B2,noun,kiểm định và công nhận chất lượng,The university renewed its accreditation after an external review.,Trường đại học được tái kiểm định sau một đợt đánh giá bên ngoài.,university
+admission,B2,noun,việc được nhận vào học,Admission to the graduate program requires a completed application.,"Muốn được nhận vào chương trình sau đại học, ứng viên cần hoàn thành hồ sơ đăng ký.",university
+alumni,C1,plural noun,cựu sinh viên,The university invited alumni to a career networking event.,Trường đại học mời các cựu sinh viên tham dự sự kiện kết nối nghề nghiệp.,university
+academic integrity,C1,noun,liêm chính học thuật,Students are expected to follow the academic integrity policy in every course.,Sinh viên cần tuân thủ chính sách liêm chính học thuật trong mọi môn học.,university
+course catalog,B2,noun,danh mục khóa học,The course catalog lists the classes available next semester.,Danh mục khóa học liệt kê các môn có thể đăng ký vào học kỳ tới.,university
+coursework,C1,noun,bài tập trong khóa học,Coursework accounts for 40 percent of the final grade.,Bài tập trong khóa học chiếm 40 phần trăm điểm cuối kỳ.,university
+academic calendar,B1,noun,lịch năm học,The academic calendar shows when classes and exams begin.,Lịch năm học cho biết thời điểm bắt đầu các lớp học và kỳ thi.,university
+dissertation,B2,noun,luận án,She submitted her dissertation before the university deadline.,Cô ấy nộp luận án trước hạn chót của trường.,university
+elective,C1,noun,môn tự chọn,Students can choose one elective in their second year.,Sinh viên có thể chọn một môn tự chọn vào năm thứ hai.,university
+enrollment,B2,noun,việc ghi danh,Online enrollment opens in July.,Việc ghi danh trực tuyến bắt đầu vào tháng Bảy.,university
+faculty,B2,noun,đội ngũ giảng viên,Faculty members hold office hours twice a week.,Các giảng viên dành giờ tiếp sinh viên hai lần mỗi tuần.,university
+fellowship,C1,noun,học bổng nghiên cứu,She received a research fellowship to study coastal communities.,Cô ấy nhận được học bổng nghiên cứu để tìm hiểu các cộng đồng ven biển.,university
+grading rubric,B2,noun,bảng tiêu chí chấm điểm,The instructor shared the grading rubric before students began the assignment.,Giảng viên chia sẻ bảng tiêu chí chấm điểm trước khi sinh viên bắt đầu bài tập.,university
+graduate program,C1,noun,chương trình sau đại học,He applied to a graduate program in public health.,Anh ấy nộp đơn vào chương trình sau đại học về y tế công cộng.,university
+handout,C1,noun,tài liệu phát tay,The lecturer gave each student a handout at the start of class.,Giảng viên phát cho mỗi sinh viên một tài liệu vào đầu giờ học.,university
+higher education,C1,noun,giáo dục đại học,Higher education can open up new career opportunities.,Giáo dục đại học có thể mở ra những cơ hội nghề nghiệp mới.,university
+interdisciplinary,B2,adjective,liên ngành,The project used an interdisciplinary approach to combine methods from several fields.,Dự án áp dụng cách tiếp cận liên ngành để kết hợp phương pháp từ nhiều lĩnh vực.,university
+lecture hall,C1,noun,giảng đường,The lecture hall can seat 300 students.,Giảng đường có thể chứa 300 sinh viên.,university
+literature review,B2,noun,tổng quan tài liệu,The literature review summarizes earlier studies on the topic.,Phần tổng quan tài liệu tóm tắt các nghiên cứu trước đây về chủ đề này.,university
+major,B2,noun,chuyên ngành chính,Her major is environmental science.,Chuyên ngành chính của cô ấy là khoa học môi trường.,university
+mentor,C1,noun,người cố vấn,Each first-year student is paired with a mentor.,Mỗi sinh viên năm nhất được ghép với một người cố vấn.,university
+minor,B2,noun,chuyên ngành phụ,He chose economics as a minor.,Anh ấy chọn kinh tế học làm chuyên ngành phụ.,university
+peer review,B2,noun,phản biện đồng cấp,Peer review helps researchers check the quality of a paper.,Phản biện đồng cấp giúp các nhà nghiên cứu kiểm tra chất lượng bài báo.,university
+plagiarism,C1,noun,đạo văn,The course teaches students how to avoid plagiarism.,Môn học hướng dẫn sinh viên cách tránh đạo văn.,university
+prerequisite,B2,noun,điều kiện tiên quyết,Statistics is a prerequisite for this research methods course.,Thống kê là môn tiên quyết của học phần phương pháp nghiên cứu này.,university
+scholarship,B2,noun,học bổng,The scholarship covers tuition and accommodation.,Học bổng chi trả học phí và chỗ ở.,university
+semester,C1,noun,học kỳ,The new semester begins in September.,Học kỳ mới bắt đầu vào tháng Chín.,university
+seminar,B2,noun,hội thảo chuyên đề,The seminar begins at 10 a.m. in Room 4.,Hội thảo chuyên đề bắt đầu lúc 10 giờ sáng tại Phòng 4.,university
+student affairs,B2,noun,công tác sinh viên,The student affairs office organizes orientation week.,Phòng công tác sinh viên tổ chức tuần sinh hoạt công dân đầu khóa.,university
+syllabus,C1,noun,đề cương môn học,The syllabus lists the topics students will study.,Đề cương môn học liệt kê các chủ đề sinh viên sẽ học.,university
+tenure,B2,noun,chế độ bổ nhiệm lâu dài cho giảng viên,The university granted her tenure after reviewing her teaching and research.,Trường trao cho cô ấy chế độ bổ nhiệm lâu dài sau khi đánh giá hoạt động giảng dạy và nghiên cứu.,university
+thesis defense,C1,noun,buổi bảo vệ luận văn,She presented her findings at her thesis defense.,Cô ấy trình bày các phát hiện trong buổi bảo vệ luận văn.,university
+transcript,C1,noun,bảng điểm,Please send an official transcript with your application.,Vui lòng gửi bảng điểm chính thức kèm hồ sơ đăng ký.,university
+tuition,B2,noun,học phí,Tuition is due before the first week of classes.,Học phí cần được đóng trước tuần học đầu tiên.,university
+undergraduate student,B2,noun,sinh viên bậc đại học,Undergraduate students can use the computer lab until 8 p.m.,Sinh viên bậc đại học có thể sử dụng phòng máy tính đến 8 giờ tối.,university
+course load,B2,noun,khối lượng môn học,My course load is heavier this semester than it was last term.,Khối lượng môn học của tôi trong học kỳ này nhiều hơn học kỳ trước.,university
+research question,B2,noun,câu hỏi nghiên cứu,The study was designed to answer a clear research question.,Nghiên cứu được thiết kế để trả lời một câu hỏi nghiên cứu rõ ràng.,research
+acknowledgment,B2,noun,lời cảm ơn,The research team documented the acknowledgment in its final report.,Nhóm nghiên cứu ghi lại lời cảm ơn trong báo cáo cuối cùng.,research
+anonymity,C1,noun,tính ẩn danh,The researchers protected participants’ anonymity throughout the study.,Các nhà nghiên cứu bảo vệ tính ẩn danh của người tham gia trong suốt nghiên cứu.,research
+research ethics,C1,noun,đạo đức nghiên cứu,The research ethics committee approved the study before recruitment began.,Hội đồng đạo đức nghiên cứu phê duyệt nghiên cứu trước khi bắt đầu tuyển người tham gia.,research
+baseline,B2,noun,mốc đối chiếu ban đầu,The research team documented the baseline in its final report.,Nhóm nghiên cứu ghi lại mốc đối chiếu ban đầu trong báo cáo cuối cùng.,research
+case study,C1,noun,nghiên cứu tình huống,The team published a case study of how the program worked in one school.,Nhóm công bố một nghiên cứu tình huống về cách chương trình hoạt động tại một trường học.,research
+cohort,B2,noun,nhóm đối tượng theo dõi,Researchers followed the cohort for three years.,Các nhà nghiên cứu theo dõi nhóm đối tượng trong ba năm.,research
+consent form,C1,noun,phiếu đồng thuận,Each participant signed a consent form before the interview.,Mỗi người tham gia ký phiếu đồng thuận trước buổi phỏng vấn.,research
+control group,C1,noun,nhóm đối chứng,Participants in the control group did not receive the new treatment.,Những người tham gia trong nhóm đối chứng không nhận phương pháp điều trị mới.,research
+corpus,B2,noun,ngữ liệu,The linguists built a corpus from interviews with local residents.,Các nhà ngôn ngữ học xây dựng một ngữ liệu từ những cuộc phỏng vấn cư dân địa phương.,research
+data collection,B2,noun,quá trình thu thập dữ liệu,The research team documented the data collection in its final report.,Nhóm nghiên cứu ghi lại quá trình thu thập dữ liệu trong báo cáo cuối cùng.,research
+data point,C1,noun,điểm dữ liệu,The researchers checked each data point before analysis.,Các nhà nghiên cứu kiểm tra từng điểm dữ liệu trước khi phân tích.,research
+fieldwork,B2,noun,nghiên cứu thực địa,The team conducted fieldwork in three rural communities.,Nhóm tiến hành nghiên cứu thực địa tại ba cộng đồng nông thôn.,research
+conceptual model,C1,noun,mô hình khái niệm,The research team documented the conceptual model in its final report.,Nhóm nghiên cứu ghi lại mô hình khái niệm trong báo cáo cuối cùng.,research
+operational definition,B2,noun,định nghĩa thao tác,The paper gives an operational definition of academic engagement.,Bài báo đưa ra định nghĩa thao tác về mức độ tham gia học tập.,research
+informed consent,C1,noun,đồng thuận có hiểu biết,Participants gave informed consent before joining the study.,Người tham gia đưa ra sự đồng thuận có hiểu biết trước khi tham gia nghiên cứu.,research
+interview protocol,B2,noun,quy trình phỏng vấn,The research team documented the interview protocol in its final report.,Nhóm nghiên cứu ghi lại quy trình phỏng vấn trong báo cáo cuối cùng.,research
+longitudinal study,C1,noun,nghiên cứu dọc,The longitudinal study tracked changes in health over ten years.,Nghiên cứu dọc theo dõi những thay đổi về sức khỏe trong mười năm.,research
+manuscript,B2,noun,bản thảo,The authors submitted the manuscript to an academic journal.,Các tác giả gửi bản thảo đến một tạp chí học thuật.,research
+mixed methods,C1,noun,phương pháp hỗn hợp,The project used mixed methods to combine interviews with survey data.,Dự án sử dụng phương pháp hỗn hợp để kết hợp phỏng vấn với dữ liệu khảo sát.,research
+observation,C1,noun,quan sát,The observation was recorded immediately after the classroom session.,Quan sát được ghi lại ngay sau buổi học trên lớp.,research
+participant,B2,noun,người tham gia nghiên cứu,Each participant received a clear explanation of the study.,Mỗi người tham gia được giải thích rõ về nghiên cứu.,research
+pilot study,B2,noun,nghiên cứu thí điểm,The research team documented the pilot study in its final report.,Nhóm nghiên cứu ghi lại nghiên cứu thí điểm trong báo cáo cuối cùng.,research
+population,C1,noun,tổng thể nghiên cứu,The study examined a population of 500 adults.,Nghiên cứu xem xét một tổng thể gồm 500 người trưởng thành.,research
+survey instrument,B2,noun,công cụ khảo sát,The team tested the survey instrument with ten volunteers before the main study.,Nhóm thử công cụ khảo sát với mười tình nguyện viên trước nghiên cứu chính.,research
+randomization,B2,noun,phân nhóm ngẫu nhiên,Randomization assigned participants to one of the two groups.,Việc phân nhóm ngẫu nhiên xếp người tham gia vào một trong hai nhóm.,research
+research gap,C1,noun,khoảng trống nghiên cứu,The research team documented the research gap in its final report.,Nhóm nghiên cứu ghi lại khoảng trống nghiên cứu trong báo cáo cuối cùng.,research
+research proposal,C1,noun,đề xuất nghiên cứu,The supervisor approved the research proposal after reviewing its methods.,Người hướng dẫn phê duyệt đề xuất nghiên cứu sau khi xem xét phương pháp.,research
+sample size,B2,noun,cỡ mẫu,The team increased the sample size to improve the precision of its results.,Nhóm tăng cỡ mẫu để cải thiện độ chính xác của kết quả.,research
+sampling,C1,noun,lấy mẫu,The researchers used random sampling to select households.,Các nhà nghiên cứu sử dụng phương pháp lấy mẫu ngẫu nhiên để chọn các hộ gia đình.,research
+study design,B2,noun,thiết kế nghiên cứu,The research team documented the study design in its final report.,Nhóm nghiên cứu ghi lại thiết kế nghiên cứu trong báo cáo cuối cùng.,research
+systematic review,C1,noun,tổng quan hệ thống,The research team documented the systematic review in its final report.,Nhóm nghiên cứu ghi lại tổng quan hệ thống trong báo cáo cuối cùng.,research
+theoretical framework,C1,noun,khung lý thuyết,The research team documented the theoretical framework in its final report.,Nhóm nghiên cứu ghi lại khung lý thuyết trong báo cáo cuối cùng.,research
+validity,B2,noun,tính giá trị,The researchers tested the validity of the survey before using it.,Các nhà nghiên cứu kiểm tra tính hợp lệ của khảo sát trước khi sử dụng.,research
+variable,B2,noun,biến số,The research team documented the variable in its final report.,Nhóm nghiên cứu ghi lại biến số trong báo cáo cuối cùng.,research
+replication,C1,noun,lặp lại nghiên cứu,A replication of the experiment produced similar results.,Một lần tái lập thí nghiệm cho kết quả tương tự.,research
+reproducibility,C1,noun,khả năng tái lập kết quả,The team checked reproducibility by repeating the analysis with the same data.,Nhóm kiểm tra khả năng tái lập kết quả bằng cách chạy lại phân tích trên cùng dữ liệu.,evidence
+anomaly,B2,noun,điểm bất thường,The analyst reviewed the anomaly before interpreting the results.,Nhà phân tích xem xét điểm bất thường trước khi diễn giải kết quả.,evidence
+association,C1,noun,mối liên hệ,The analyst reviewed the association before interpreting the results.,Nhà phân tích xem xét mối liên hệ trước khi diễn giải kết quả.,evidence
+benchmark,B2,noun,mốc chuẩn để so sánh,The analyst reviewed the benchmark before interpreting the results.,Nhà phân tích xem xét bộ chuẩn đánh giá trước khi diễn giải kết quả.,evidence
+confidence interval,B2,noun,khoảng tin cậy,The analyst reviewed the confidence interval before interpreting the results.,Nhà phân tích xem xét khoảng tin cậy trước khi diễn giải kết quả.,evidence
+confounding factor,C1,noun,yếu tố gây nhiễu,The analyst reviewed the confounding factor before interpreting the results.,Nhà phân tích xem xét yếu tố gây nhiễu trước khi diễn giải kết quả.,evidence
+correlation,B2,noun,tương quan,The analyst reviewed the correlation before interpreting the results.,Nhà phân tích xem xét tương quan trước khi diễn giải kết quả.,evidence
+counterargument,B2,noun,luận điểm phản bác,The analyst reviewed the counterargument before interpreting the results.,Nhà phân tích xem xét luận điểm phản bác trước khi diễn giải kết quả.,evidence
+credibility,C1,noun,độ đáng tin cậy,The analyst reviewed the credibility before interpreting the results.,Nhà phân tích xem xét độ đáng tin cậy trước khi diễn giải kết quả.,evidence
+decision rule,B2,noun,quy tắc ra quyết định,The researchers set a decision rule before examining the results.,Các nhà nghiên cứu đặt ra quy tắc ra quyết định trước khi xem kết quả.,evidence
+data integrity,B2,noun,tính toàn vẹn dữ liệu,The analyst reviewed the data integrity before interpreting the results.,Nhà phân tích xem xét tính toàn vẹn dữ liệu trước khi diễn giải kết quả.,evidence
+dependency,C1,noun,mối phụ thuộc,The analyst reviewed the dependency before interpreting the results.,Nhà phân tích xem xét mối phụ thuộc trước khi diễn giải kết quả.,evidence
+discrepancy,B2,noun,sự sai lệch,The analyst reviewed the discrepancy before interpreting the results.,Nhà phân tích xem xét sự sai lệch trước khi diễn giải kết quả.,evidence
+distribution,B2,noun,phân phối,The analyst reviewed the distribution before interpreting the results.,Nhà phân tích xem xét phân phối trước khi diễn giải kết quả.,evidence
+effect size,C1,noun,kích thước ảnh hưởng,The analyst reviewed the effect size before interpreting the results.,Nhà phân tích xem xét kích thước ảnh hưởng trước khi diễn giải kết quả.,evidence
+empirical evidence,C1,noun,bằng chứng thực nghiệm,The analyst reviewed the empirical evidence before interpreting the results.,Nhà phân tích xem xét bằng chứng thực nghiệm trước khi diễn giải kết quả.,evidence
+sample statistic,B2,noun,thống kê mẫu,The sample statistic was compared with the value expected for the population.,Thống kê mẫu được so sánh với giá trị dự kiến của tổng thể.,evidence
+extrapolation,C1,noun,suy rộng,The analyst reviewed the extrapolation before interpreting the results.,Nhà phân tích xem xét suy rộng trước khi diễn giải kết quả.,evidence
+false positive,B2,noun,dương tính giả,The analyst reviewed the false positive before interpreting the results.,Nhà phân tích xem xét dương tính giả trước khi diễn giải kết quả.,evidence
+finding,B2,noun,phát hiện nghiên cứu,The analyst reviewed the finding before interpreting the results.,Nhà phân tích xem xét phát hiện nghiên cứu trước khi diễn giải kết quả.,evidence
+inference,C1,noun,suy luận,The analyst reviewed the inference before interpreting the results.,Nhà phân tích xem xét suy luận trước khi diễn giải kết quả.,evidence
+inter-rater reliability,C1,noun,độ tin cậy giữa người đánh giá,The analyst reviewed the inter-rater reliability before interpreting the results.,Nhà phân tích xem xét độ tin cậy giữa người đánh giá trước khi diễn giải kết quả.,evidence
+margin of error,B2,noun,biên độ sai số,The analyst reviewed the margin of error before interpreting the results.,Nhà phân tích xem xét biên độ sai số trước khi diễn giải kết quả.,evidence
+measurement,C1,noun,phép đo,The analyst reviewed the measurement before interpreting the results.,Nhà phân tích xem xét phép đo trước khi diễn giải kết quả.,evidence
+median,B2,noun,trung vị,The analyst reviewed the median before interpreting the results.,Nhà phân tích xem xét trung vị trước khi diễn giải kết quả.,evidence
+outlier,B2,noun,giá trị ngoại lệ,The analyst reviewed the outlier before interpreting the results.,Nhà phân tích xem xét giá trị ngoại lệ trước khi diễn giải kết quả.,evidence
+p-value,C1,noun,giá trị p,The analyst reviewed the p-value before interpreting the results.,Nhà phân tích xem xét giá trị p trước khi diễn giải kết quả.,evidence
+precision,B2,noun,độ chuẩn xác,The analyst reviewed the precision before interpreting the results.,Nhà phân tích xem xét độ chuẩn xác trước khi diễn giải kết quả.,evidence
+reliability,B2,noun,độ tin cậy,The analyst reviewed the reliability before interpreting the results.,Nhà phân tích xem xét độ tin cậy trước khi diễn giải kết quả.,evidence
+replicability,C1,noun,khả năng tái lập,The analyst reviewed the replicability before interpreting the results.,Nhà phân tích xem xét khả năng tái lập trước khi diễn giải kết quả.,evidence
+response rate,B2,noun,tỷ lệ phản hồi,The analyst reviewed the response rate before interpreting the results.,Nhà phân tích xem xét tỷ lệ phản hồi trước khi diễn giải kết quả.,evidence
+standard deviation,C1,noun,độ lệch chuẩn,The analyst reviewed the standard deviation before interpreting the results.,Nhà phân tích xem xét độ lệch chuẩn trước khi diễn giải kết quả.,evidence
+statistical significance,C1,noun,ý nghĩa thống kê,The analyst reviewed the statistical significance before interpreting the results.,Nhà phân tích xem xét ý nghĩa thống kê trước khi diễn giải kết quả.,evidence
+trend,B2,noun,xu hướng,The analyst reviewed the trend before interpreting the results.,Nhà phân tích xem xét xu hướng trước khi diễn giải kết quả.,evidence
+uncertainty,B2,noun,độ bất định,The analyst reviewed the uncertainty before interpreting the results.,Nhà phân tích xem xét độ bất định trước khi diễn giải kết quả.,evidence
+variance,C1,noun,phương sai,The analyst reviewed the variance before interpreting the results.,Nhà phân tích xem xét phương sai trước khi diễn giải kết quả.,evidence
+abstraction,B2,noun,tính trừu tượng hóa,The developers used abstraction to keep repeated code in one place.,Các lập trình viên dùng tính trừu tượng hóa để gom mã lặp lại vào một chỗ.,software
+accessibility,B2,noun,khả năng tiếp cận,The team checked accessibility by testing the site with a keyboard.,Nhóm kiểm tra khả năng tiếp cận bằng cách thử trang web chỉ với bàn phím.,software
+API endpoint,C1,noun,điểm cuối API,The app sends a request to an API endpoint to retrieve account details.,Ứng dụng gửi yêu cầu đến một điểm cuối API để lấy thông tin tài khoản.,software
+application layer,C1,noun,lớp ứng dụng,The application layer handles requests between the user interface and the database.,Lớp ứng dụng xử lý các yêu cầu giữa giao diện người dùng và cơ sở dữ liệu.,software
+system design,B2,noun,thiết kế hệ thống,The team reviewed the system design before development began.,Nhóm xem xét thiết kế hệ thống trước khi bắt đầu phát triển.,software
+backward compatibility,C1,noun,tương thích ngược,Backward compatibility lets older clients keep working after an update.,Tính tương thích ngược giúp các ứng dụng khách cũ tiếp tục hoạt động sau bản cập nhật.,software
+codebase,B2,noun,cơ sở mã nguồn,The developer searched the codebase for the outdated function.,Lập trình viên tìm trong cơ sở mã nguồn để xác định hàm đã lỗi thời.,software
+code review,C1,noun,đánh giá mã nguồn,A second developer found the issue during code review.,Một lập trình viên khác phát hiện vấn đề trong lúc đánh giá mã nguồn.,software
+build pipeline,B2,noun,quy trình xây dựng phần mềm,The build pipeline runs tests before creating a release package.,Quy trình xây dựng phần mềm chạy kiểm thử trước khi tạo gói phát hành.,software
+containerization,B2,noun,đóng gói bằng container,Containerization packages an application with the software it needs to run.,Đóng gói bằng container tạo gói ứng dụng cùng các phần mềm cần thiết để chạy.,software
+database schema,B2,noun,lược đồ cơ sở dữ liệu,The database schema defines how records are organized.,Lược đồ cơ sở dữ liệu xác định cách sắp xếp các bản ghi.,software
+dependency injection,C1,noun,tiêm phụ thuộc,Dependency injection makes the service easier to test.,Tiêm phụ thuộc giúp dịch vụ dễ được kiểm thử hơn.,software
+deprecated feature,B2,noun,tính năng bị khuyến nghị ngừng dùng,The engineering team documented the deprecated feature in the design notes.,Nhóm kỹ thuật mô tả tính năng bị khuyến nghị ngừng dùng trong tài liệu thiết kế.,software
+distributed system,C1,noun,hệ thống phân tán,A distributed system runs across several connected computers.,Hệ thống phân tán hoạt động trên nhiều máy tính được kết nối với nhau.,software
+event-driven architecture,C1,noun,kiến trúc hướng sự kiện,An event-driven architecture responds to events such as a new order.,Kiến trúc hướng sự kiện phản hồi các sự kiện như một đơn hàng mới.,software
+feature flag,C1,noun,cờ bật tắt tính năng,The team used a feature flag to enable the new option for testers.,Nhóm dùng cờ tính năng để bật tùy chọn mới cho người kiểm thử.,software
+software framework,B2,noun,bộ khung phần mềm,The engineering team documented the software framework in the design notes.,Nhóm kỹ thuật mô tả bộ khung phần mềm trong tài liệu thiết kế.,software
+integration,C1,noun,tích hợp,The engineering team documented the integration in the design notes.,Nhóm kỹ thuật mô tả tích hợp trong tài liệu thiết kế.,software
+interaction model,B2,noun,mô hình tương tác,The interaction model shows how users move between screens.,Mô hình tương tác cho thấy cách người dùng di chuyển giữa các màn hình.,software
+response delay,B2,noun,độ trễ phản hồi,The team measured response delay under heavy traffic.,Nhóm đo độ trễ phản hồi khi lưu lượng truy cập cao.,software
+microservice,C1,noun,dịch vụ vi mô,The engineering team documented the microservice in the design notes.,Nhóm kỹ thuật mô tả dịch vụ vi mô trong tài liệu thiết kế.,software
+middleware,B2,noun,phần mềm trung gian,The engineering team documented the middleware in the design notes.,Nhóm kỹ thuật mô tả phần mềm trung gian trong tài liệu thiết kế.,software
+monolith,B2,noun,ứng dụng nguyên khối,The engineering team documented the monolith in the design notes.,Nhóm kỹ thuật mô tả ứng dụng nguyên khối trong tài liệu thiết kế.,software
+observability,C1,noun,khả năng quan sát hệ thống,Observability helps engineers understand what is happening inside a running system.,Khả năng quan sát hệ thống giúp kỹ sư hiểu điều gì đang diễn ra bên trong hệ thống khi vận hành.,software
+open-source license,B2,noun,giấy phép mã nguồn mở,The engineering team documented the open-source license in the design notes.,Nhóm kỹ thuật mô tả giấy phép mã nguồn mở trong tài liệu thiết kế.,software
+orchestration,B2,noun,điều phối hệ thống,The engineering team documented the orchestration in the design notes.,Nhóm kỹ thuật mô tả điều phối hệ thống trong tài liệu thiết kế.,software
+payload,C1,noun,phần dữ liệu tải trọng,The engineering team documented the payload in the design notes.,Nhóm kỹ thuật mô tả phần dữ liệu tải trọng trong tài liệu thiết kế.,software
+protocol,B2,noun,giao thức,The engineering team documented the protocol in the design notes.,Nhóm kỹ thuật mô tả giao thức trong tài liệu thiết kế.,software
+query optimization,B2,noun,tối ưu hóa truy vấn,The engineering team documented the query optimization in the design notes.,Nhóm kỹ thuật mô tả tối ưu hóa truy vấn trong tài liệu thiết kế.,software
+runtime,C1,noun,môi trường thực thi,The engineering team documented the runtime in the design notes.,Nhóm kỹ thuật mô tả môi trường thực thi trong tài liệu thiết kế.,software
+scalability,B2,noun,khả năng mở rộng quy mô,The engineering team documented the scalability in the design notes.,Nhóm kỹ thuật mô tả khả năng mở rộng quy mô trong tài liệu thiết kế.,software
+serialization,B2,noun,tuần tự hóa dữ liệu,The engineering team documented the serialization in the design notes.,Nhóm kỹ thuật mô tả tuần tự hóa dữ liệu trong tài liệu thiết kế.,software
+service layer,C1,noun,lớp dịch vụ,The engineering team documented the service layer in the design notes.,Nhóm kỹ thuật mô tả lớp dịch vụ trong tài liệu thiết kế.,software
+software dependency,C1,noun,phụ thuộc phần mềm,The engineering team documented the software dependency in the design notes.,Nhóm kỹ thuật mô tả phụ thuộc phần mềm trong tài liệu thiết kế.,software
+technical debt,B2,noun,nợ kỹ thuật,The engineering team documented the technical debt in the design notes.,Nhóm kỹ thuật mô tả nợ kỹ thuật trong tài liệu thiết kế.,software
+version control,C1,noun,quản lý phiên bản,The developers use version control to track changes to the code.,Các lập trình viên dùng hệ thống quản lý phiên bản để theo dõi thay đổi trong mã nguồn.,software
+acceptance criteria,B2,noun,tiêu chí nghiệm thu,The release team checked the acceptance criteria before deployment.,Nhóm phát hành kiểm tra tiêu chí nghiệm thu trước khi triển khai.,quality
+access control,C1,noun,kiểm soát truy cập,Access control limits who can view each record.,Kiểm soát truy cập giới hạn những ai có thể xem từng bản ghi.,quality
+audit trail,C1,noun,nhật ký kiểm toán,The audit trail shows who changed the record and when.,Nhật ký kiểm toán cho biết ai đã thay đổi bản ghi và vào thời điểm nào.,quality
+identity verification,B2,noun,xác minh danh tính,Identity verification protects an account from unauthorized access.,Xác minh danh tính giúp bảo vệ tài khoản khỏi truy cập trái phép.,quality
+authorization,B2,noun,phân quyền,The release team checked the authorization before deployment.,Nhóm phát hành kiểm tra phân quyền trước khi triển khai.,quality
+availability,C1,noun,tính sẵn sàng,The team monitored service availability throughout the launch.,Nhóm theo dõi tính sẵn sàng của dịch vụ trong suốt đợt ra mắt.,quality
+backup policy,B2,noun,chính sách sao lưu,The backup policy requires a copy to be stored off-site.,Chính sách sao lưu yêu cầu lưu một bản sao ở địa điểm khác.,quality
+bottleneck,B2,noun,nút thắt hiệu năng,Slow database queries became a bottleneck during testing.,Các truy vấn cơ sở dữ liệu chậm trở thành nút thắt trong quá trình kiểm thử.,quality
+bug triage,C1,noun,phân loại và ưu tiên lỗi,The team used bug triage to decide which issue to fix first.,Nhóm phân loại và ưu tiên lỗi để quyết định vấn đề nào cần sửa trước.,quality
+code coverage,C1,noun,độ bao phủ mã,The report shows code coverage for the automated tests.,Báo cáo cho biết độ bao phủ mã của các bài kiểm thử tự động.,quality
+compliance,B2,noun,sự tuân thủ,The audit checked compliance with the privacy rules.,Cuộc kiểm toán kiểm tra việc tuân thủ các quy định về quyền riêng tư.,quality
+concurrency,C1,noun,tính đồng thời,The service handles concurrency by processing several requests at once.,Dịch vụ xử lý tính đồng thời bằng cách xử lý nhiều yêu cầu cùng lúc.,quality
+threat model,B2,noun,mô hình mối đe dọa,The security team created a threat model before launch.,Nhóm bảo mật lập mô hình mối đe dọa trước khi ra mắt.,quality
+data breach,C1,noun,sự cố rò rỉ dữ liệu,The company notified users after the data breach.,Công ty thông báo cho người dùng sau sự cố rò rỉ dữ liệu.,quality
+data retention,C1,noun,thời hạn lưu dữ liệu,The policy sets a time limit for data retention.,Chính sách đặt ra thời hạn lưu trữ dữ liệu.,quality
+incident response,C1,noun,ứng phó sự cố,The incident response team restored the service after the outage.,Nhóm ứng phó sự cố khôi phục dịch vụ sau lần gián đoạn.,quality
+disaster recovery plan,B2,noun,kế hoạch khôi phục sau thảm họa,The disaster recovery plan was tested during last month’s outage drill.,Kế hoạch khôi phục sau thảm họa được thử nghiệm trong buổi diễn tập gián đoạn dịch vụ tháng trước.,quality
+key management,B2,noun,quản lý khóa mã hóa,Key management controls how encryption keys are stored and used.,Quản lý khóa kiểm soát cách lưu trữ và sử dụng các khóa mã hóa.,quality
+error handling,B2,noun,xử lý lỗi,Good error handling helps users recover from incorrect input.,Xử lý lỗi tốt giúp người dùng khắc phục dữ liệu nhập sai.,quality
+fallback,B2,noun,phương án dự phòng,The system uses a fallback if the main service is unavailable.,Hệ thống dùng phương án dự phòng nếu dịch vụ chính không hoạt động.,quality
+fault tolerance,C1,noun,khả năng chịu lỗi,Fault tolerance keeps the service running when one component fails.,Khả năng chịu lỗi giúp dịch vụ tiếp tục chạy khi một thành phần gặp sự cố.,quality
+load balancing,C1,noun,cân bằng tải,Load balancing distributes requests across several servers.,Cân bằng tải phân phối yêu cầu đến nhiều máy chủ.,quality
+maintenance window,B2,noun,khung thời gian bảo trì,The service will be unavailable during the scheduled maintenance window.,Dịch vụ sẽ không khả dụng trong khung thời gian bảo trì đã được lên lịch.,quality
+monitoring,C1,noun,giám sát,Monitoring alerts the team when the service slows down.,Hoạt động giám sát cảnh báo nhóm khi dịch vụ chậm lại.,quality
+performance regression,B2,noun,sự suy giảm hiệu năng,The latest test found a performance regression after the update.,Bài kiểm thử mới nhất phát hiện hiệu năng suy giảm sau bản cập nhật.,quality
+privacy policy,C1,noun,chính sách quyền riêng tư,The privacy policy explains how the service uses personal data.,Chính sách quyền riêng tư giải thích cách dịch vụ sử dụng dữ liệu cá nhân.,quality
+release candidate,C1,noun,bản ứng viên phát hành,The team tested the release candidate before making it public.,Nhóm kiểm thử bản ứng viên phát hành trước khi công bố.,quality
+rollback,B2,noun,hoàn tác phiên bản,The operator initiated a rollback after the update caused errors.,Người vận hành bắt đầu hoàn tác phiên bản sau khi bản cập nhật gây lỗi.,quality
+sandbox environment,B2,noun,môi trường cô lập thử nghiệm,Developers tested the change in a sandbox environment first.,Các lập trình viên thử thay đổi trong môi trường cô lập trước.,quality
+security patch,C1,noun,bản vá bảo mật,The administrator installed a security patch to fix the vulnerability.,Quản trị viên cài bản vá bảo mật để khắc phục lỗ hổng.,quality
+service outage,B2,noun,sự cố gián đoạn dịch vụ,The status page reported a service outage at noon.,Trang trạng thái thông báo dịch vụ bị gián đoạn vào buổi trưa.,quality
+smoke test,C1,noun,kiểm thử nhanh chức năng chính,A smoke test checks that the main features still work after a build.,Kiểm thử nhanh xác nhận các chức năng chính vẫn hoạt động sau khi tạo bản dựng.,quality
+test coverage,C1,noun,độ bao phủ kiểm thử,The team increased test coverage for the payment module.,Nhóm tăng độ bao phủ kiểm thử cho mô-đun thanh toán.,quality
+test suite,C1,noun,bộ kiểm thử,The test suite checks the login flow and payment process.,Bộ kiểm thử kiểm tra quy trình đăng nhập và thanh toán.,quality
+throughput,B2,noun,thông lượng xử lý,The new server increased throughput during peak hours.,Máy chủ mới tăng thông lượng xử lý trong giờ cao điểm.,quality
+vulnerability,C1,noun,lỗ hổng bảo mật,The security scan found a vulnerability in the old version.,Quét bảo mật phát hiện một lỗ hổng trong phiên bản cũ.,quality
+accessibility audit,B2,noun,đánh giá khả năng tiếp cận,The team completed an accessibility audit before launching the new site.,Nhóm hoàn thành đánh giá khả năng tiếp cận trước khi ra mắt trang web mới.,product
+adoption rate,C1,noun,tỷ lệ người dùng tiếp nhận,The adoption rate increased after the team simplified onboarding.,Tỷ lệ người dùng tiếp nhận tăng sau khi nhóm đơn giản hóa quy trình làm quen.,product
+affinity map,C1,noun,bản đồ nhóm chủ đề nghiên cứu người dùng,The researcher grouped interview notes in an affinity map.,Nhà nghiên cứu nhóm các ghi chú phỏng vấn vào một bản đồ chủ đề.,product
+beta release,C1,noun,bản phát hành thử nghiệm,A small group of users tested the beta release.,Một nhóm nhỏ người dùng thử bản phát hành beta.,product
+churn rate,B2,noun,tỷ lệ người dùng rời bỏ,The churn rate fell after the company improved customer support.,Tỷ lệ người dùng rời bỏ giảm sau khi công ty cải thiện hỗ trợ khách hàng.,product
+conversion funnel,C1,noun,phễu chuyển đổi,The team studied where visitors left the conversion funnel.,Nhóm nghiên cứu vị trí khách truy cập rời khỏi phễu chuyển đổi.,product
+customer journey,B2,noun,hành trình khách hàng,The workshop mapped the customer journey from search to purchase.,Buổi hội thảo vẽ lại hành trình khách hàng từ lúc tìm kiếm đến khi mua hàng.,product
+customer retention,C1,noun,khả năng giữ chân khách hàng,Better support can improve customer retention.,Dịch vụ hỗ trợ tốt hơn có thể cải thiện khả năng giữ chân khách hàng.,product
+design system,C1,noun,hệ thống thiết kế,The designers used a shared design system to keep pages consistent.,Các nhà thiết kế dùng chung một hệ thống thiết kế để giữ các trang nhất quán.,product
+discovery phase,C1,noun,giai đoạn khám phá nhu cầu,The team interviewed students during the discovery phase.,Nhóm phỏng vấn sinh viên trong giai đoạn khám phá nhu cầu.,product
+engagement,B2,noun,mức độ tương tác,Short quizzes increased learner engagement with the course.,Các bài trắc nghiệm ngắn tăng mức độ tương tác của người học với khóa học.,product
+feature request,C1,noun,yêu cầu tính năng,Several users submitted a feature request for offline access.,Một số người dùng gửi yêu cầu tính năng truy cập ngoại tuyến.,product
+friction point,B2,noun,điểm gây trở ngại cho người dùng,Long registration forms were a friction point for new users.,Biểu mẫu đăng ký dài là một trở ngại đối với người dùng mới.,product
+growth experiment,C1,noun,thử nghiệm tăng trưởng,The team ran a growth experiment by testing two signup pages.,Nhóm thực hiện thử nghiệm tăng trưởng bằng cách thử hai trang đăng ký.,product
+human-centered design,C1,noun,thiết kế lấy con người làm trung tâm,Human-centered design starts with the needs of the people using a product.,Thiết kế lấy con người làm trung tâm bắt đầu từ nhu cầu của người sử dụng sản phẩm.,product
+impact assessment,C1,noun,đánh giá tác động,The team completed an impact assessment before changing the service.,Nhóm hoàn thành đánh giá tác động trước khi thay đổi dịch vụ.,product
+iteration,B2,noun,vòng lặp cải tiến,Each iteration included feedback from student testers.,Mỗi vòng cải tiến đều bao gồm phản hồi từ sinh viên thử nghiệm.,product
+key result,C1,noun,kết quả then chốt,The team chose one measurable key result for the quarter.,Nhóm chọn một kết quả then chốt có thể đo lường cho quý này.,product
+market fit,B2,noun,mức độ phù hợp thị trường,Early sales gave the team evidence of market fit.,Doanh số ban đầu cung cấp cho nhóm bằng chứng về mức độ phù hợp với thị trường.,product
+metric,B2,noun,chỉ số đo lường,The team selected one metric to track weekly signups.,Nhóm chọn một chỉ số để theo dõi số lượt đăng ký hằng tuần.,product
+minimum viable product,C1,noun,sản phẩm khả dụng tối thiểu,The team released a minimum viable product to test its main idea.,Nhóm phát hành một sản phẩm khả dụng tối thiểu để thử nghiệm ý tưởng chính.,product
+onboarding,B2,noun,hướng dẫn người dùng mới,Clear onboarding helps new users learn the main features.,Quy trình hướng dẫn rõ ràng giúp người dùng mới làm quen với các tính năng chính.,product
+pain point,B2,noun,vấn đề gây khó chịu,Students said that finding the right lesson was a major pain point.,Sinh viên cho biết việc tìm đúng bài học là một vấn đề gây khó chịu lớn.,product
+product backlog,C1,noun,danh sách công việc sản phẩm,The team prioritized the highest-value tasks in the product backlog.,Nhóm ưu tiên các công việc có giá trị cao nhất trong danh sách công việc sản phẩm.,product
+product discovery,B2,noun,quá trình khám phá sản phẩm,Product discovery helped the team understand what learners needed.,Quá trình khám phá sản phẩm giúp nhóm hiểu người học cần gì.,product
+product roadmap,C1,noun,lộ trình sản phẩm,The product roadmap shows the features planned for the next six months.,Lộ trình sản phẩm cho biết các tính năng dự kiến trong sáu tháng tới.,product
+prototype,C1,noun,bản mẫu thử nghiệm,Students tested the prototype before the developers built the full site.,Sinh viên thử bản mẫu trước khi lập trình viên xây dựng trang web hoàn chỉnh.,product
+qualitative feedback,C1,noun,phản hồi định tính,Interviews provided qualitative feedback about the new lesson page.,Các cuộc phỏng vấn cung cấp phản hồi định tính về trang bài học mới.,product
+quantitative feedback,B2,noun,phản hồi định lượng,The survey provided quantitative feedback on how often students used the feature.,Khảo sát cung cấp phản hồi định lượng về tần suất sinh viên sử dụng tính năng.,product
+user retention,C1,noun,tỷ lệ duy trì người dùng,Weekly reminders helped improve user retention.,Lời nhắc hằng tuần giúp cải thiện tỷ lệ duy trì người dùng.,product
+roadmap,B2,noun,lộ trình phát triển,The roadmap sets out the planned work for the next quarter.,Lộ trình nêu các công việc dự kiến cho quý tiếp theo.,product
+stakeholder,B2,noun,bên liên quan,The project lead shared the plan with each stakeholder.,Trưởng dự án chia sẻ kế hoạch với từng bên liên quan.,product
+usability,C1,noun,tính dễ sử dụng,A short usability test revealed where users got confused.,Một bài kiểm tra tính dễ sử dụng ngắn cho thấy người dùng bối rối ở đâu.,product
+user research,C1,noun,nghiên cứu người dùng,User research showed that learners wanted shorter daily tasks.,Nghiên cứu người dùng cho thấy người học muốn các nhiệm vụ hằng ngày ngắn hơn.,product
+value proposition,B2,noun,đề xuất giá trị,The value proposition explains why customers might choose the service.,Đề xuất giá trị giải thích vì sao khách hàng có thể chọn dịch vụ.,product
+wireframe,C1,noun,bản phác thảo khung giao diện,The designer shared a wireframe before building the page.,Nhà thiết kế chia sẻ bản phác thảo khung giao diện trước khi dựng trang.,product
+action item,B2,noun,đầu việc cần thực hiện,The team discussed the action item during the client meeting.,Nhóm thảo luận về đầu việc cần thực hiện trong cuộc họp với khách hàng.,communication
+alignment,B2,noun,sự thống nhất,The team discussed the alignment during the client meeting.,Nhóm thảo luận về sự thống nhất trong cuộc họp với khách hàng.,communication
+meeting notice,B2,noun,thông báo cuộc họp,The team discussed the meeting notice during the client meeting.,Nhóm thảo luận về thông báo cuộc họp trong cuộc họp với khách hàng.,communication
+assertiveness,B2,noun,sự quyết đoán trong giao tiếp,Her assertiveness helped the team discuss the delay openly.,Sự quyết đoán trong giao tiếp của cô ấy giúp nhóm thảo luận cởi mở về việc chậm trễ.,communication
+network capacity,B2,noun,dung lượng mạng,The team discussed the network capacity during the client meeting.,Nhóm thảo luận về dung lượng mạng trong cuộc họp với khách hàng.,communication
+briefing,C1,noun,buổi phổ biến thông tin,The team discussed the briefing during the client meeting.,Nhóm thảo luận về buổi phổ biến thông tin trong cuộc họp với khách hàng.,communication
+clarification,B2,noun,sự làm rõ,The team discussed the clarification during the client meeting.,Nhóm thảo luận về sự làm rõ trong cuộc họp với khách hàng.,communication
+collaboration,B2,noun,sự cộng tác,The team discussed the collaboration during the client meeting.,Nhóm thảo luận về sự cộng tác trong cuộc họp với khách hàng.,communication
+confidentiality,C1,noun,tính bảo mật,The team discussed the confidentiality during the client meeting.,Nhóm thảo luận về tính bảo mật trong cuộc họp với khách hàng.,communication
+consensus,B2,noun,sự đồng thuận,The team discussed the consensus during the client meeting.,Nhóm thảo luận về sự đồng thuận trong cuộc họp với khách hàng.,communication
+constructive feedback,B2,noun,phản hồi mang tính xây dựng,The team discussed the constructive feedback during the client meeting.,Nhóm thảo luận về phản hồi mang tính xây dựng trong cuộc họp với khách hàng.,communication
+project output,C1,noun,sản phẩm bàn giao,The team discussed the project output during the client meeting.,Nhóm thảo luận về sản phẩm bàn giao trong cuộc họp với khách hàng.,communication
+diplomacy,B2,noun,sự khéo léo trong ứng xử,The team discussed the diplomacy during the client meeting.,Nhóm thảo luận về sự khéo léo trong ứng xử trong cuộc họp với khách hàng.,communication
+disclosure,B2,noun,sự công khai thông tin,The team discussed the disclosure during the client meeting.,Nhóm thảo luận về sự công khai thông tin trong cuộc họp với khách hàng.,communication
+escalation,C1,noun,chuyển vấn đề lên cấp cao hơn,The team discussed the escalation during the client meeting.,Nhóm thảo luận về chuyển vấn đề lên cấp cao hơn trong cuộc họp với khách hàng.,communication
+facilitation,B2,noun,điều phối thảo luận,The team discussed the facilitation during the client meeting.,Nhóm thảo luận về điều phối thảo luận trong cuộc họp với khách hàng.,communication
+follow-up,B2,noun,việc theo dõi tiếp sau,The team discussed the follow-up during the client meeting.,Nhóm thảo luận về việc theo dõi tiếp sau trong cuộc họp với khách hàng.,communication
+handover,C1,noun,việc bàn giao,The team discussed the handover during the client meeting.,Nhóm thảo luận về việc bàn giao trong cuộc họp với khách hàng.,communication
+subtext,C1,noun,ý nghĩa ngầm,The team discussed the subtext during the client meeting.,Nhóm thảo luận về ý nghĩa ngầm trong cuộc họp với khách hàng.,communication
+interpersonal,B2,adjective,thuộc giao tiếp và quan hệ giữa người với người,Strong interpersonal skills helped her resolve a disagreement between colleagues.,Kỹ năng giao tiếp tốt giúp cô ấy giải quyết bất đồng giữa các đồng nghiệp.,communication
+liaison,C1,noun,đầu mối liên lạc,The team discussed the liaison during the client meeting.,Nhóm thảo luận về đầu mối liên lạc trong cuộc họp với khách hàng.,communication
+minutes,B2,plural noun,biên bản cuộc họp,The secretary circulated the meeting minutes to everyone who attended.,Thư ký gửi biên bản cuộc họp cho tất cả những người tham dự.,communication
+negotiation,B2,noun,đàm phán,The team discussed the negotiation during the client meeting.,Nhóm thảo luận về đàm phán trong cuộc họp với khách hàng.,communication
+objection,C1,noun,ý kiến phản đối,The team discussed the objection during the client meeting.,Nhóm thảo luận về ý kiến phản đối trong cuộc họp với khách hàng.,communication
+persuasive,B2,adjective,có sức thuyết phục,She gave a persuasive explanation for changing the project timeline.,Cô ấy đưa ra lời giải thích có sức thuyết phục cho việc thay đổi tiến độ dự án.,communication
+rapport,B2,noun,mối quan hệ thân thiện,The team discussed the rapport during the client meeting.,Nhóm thảo luận về mối quan hệ thân thiện trong cuộc họp với khách hàng.,communication
+reconciliation,C1,noun,sự đối chiếu,The finance team completed a reconciliation of the two account records.,Nhóm tài chính hoàn thành việc đối chiếu hai hồ sơ tài khoản.,communication
+response time,C1,noun,thời gian phản hồi,The team discussed the response time during the client meeting.,Nhóm thảo luận về thời gian phản hồi trong cuộc họp với khách hàng.,communication
+stakeholder engagement,B2,noun,sự tham gia của các bên liên quan,The team discussed the stakeholder engagement during the client meeting.,Nhóm thảo luận về sự tham gia của các bên liên quan trong cuộc họp với khách hàng.,communication
+succinct,C1,adjective,"súc tích, ngắn gọn",Please write a succinct summary of the meeting’s main decisions.,Hãy viết bản tóm tắt súc tích về các quyết định chính của cuộc họp.,communication
+tactful,B2,adjective,"khéo léo, tế nhị",He gave a tactful response to the client’s criticism.,Anh ấy đưa ra phản hồi khéo léo trước lời phê bình của khách hàng.,communication
+team alignment,C1,noun,sự thống nhất trong nhóm,The weekly meeting helped improve alignment across the team.,Cuộc họp hằng tuần giúp cải thiện sự phối hợp trong nhóm.,communication
+transparency,C1,noun,tính minh bạch,The team discussed the transparency during the client meeting.,Nhóm thảo luận về tính minh bạch trong cuộc họp với khách hàng.,communication
+turnaround time,C1,noun,thời gian hoàn thành phản hồi,The team discussed the turnaround time during the client meeting.,Nhóm thảo luận về thời gian hoàn thành phản hồi trong cuộc họp với khách hàng.,communication
+verbal agreement,B2,noun,thỏa thuận bằng lời nói,The team discussed the verbal agreement during the client meeting.,Nhóm thảo luận về thỏa thuận bằng lời nói trong cuộc họp với khách hàng.,communication
+written record,C1,noun,hồ sơ ghi chép bằng văn bản,The team discussed the written record during the client meeting.,Nhóm thảo luận về hồ sơ ghi chép bằng văn bản trong cuộc họp với khách hàng.,communication
+accountability,B2,noun,trách nhiệm giải trình,The project manager clarified who had accountability for each task.,Quản lý dự án làm rõ ai chịu trách nhiệm giải trình cho từng nhiệm vụ.,delivery
+allocation,B2,noun,sự phân bổ,The budget allocation gives more funding to the testing phase.,Việc phân bổ ngân sách dành thêm kinh phí cho giai đoạn kiểm thử.,delivery
+amendment,C1,noun,bản sửa đổi,Both parties signed an amendment to the original contract.,Hai bên ký bản sửa đổi hợp đồng ban đầu.,delivery
+approval process,C1,noun,quy trình phê duyệt,The approval process usually takes five working days.,Quy trình phê duyệt thường mất năm ngày làm việc.,delivery
+contingency plan,B2,noun,kế hoạch dự phòng,The team prepared a contingency plan in case the supplier was late.,Nhóm chuẩn bị kế hoạch dự phòng phòng trường hợp nhà cung cấp giao trễ.,delivery
+contractual obligation,C1,noun,nghĩa vụ theo hợp đồng,The company met its contractual obligation to provide support.,Công ty hoàn thành nghĩa vụ hỗ trợ theo hợp đồng.,delivery
+cost estimate,B2,noun,ước tính chi phí,The contractor sent a cost estimate before starting the work.,Nhà thầu gửi ước tính chi phí trước khi bắt đầu công việc.,delivery
+critical path,C1,noun,đường găng,The project manager identified the critical path for the launch.,Quản lý dự án xác định đường găng cho đợt ra mắt.,delivery
+deadline extension,C1,noun,việc gia hạn thời hạn,The client approved a deadline extension after reviewing the new requirements.,Khách hàng chấp thuận gia hạn thời hạn sau khi xem xét các yêu cầu mới.,delivery
+handoff package,C1,noun,gói tài liệu bàn giao,The team prepared a handoff package for the support staff.,Nhóm chuẩn bị gói tài liệu bàn giao cho nhân viên hỗ trợ.,delivery
+departmental,B2,adjective,thuộc về phòng ban,The change requires approval from the relevant department before implementation.,Thay đổi này cần được phòng ban liên quan phê duyệt trước khi triển khai.,delivery
+dependency mapping,C1,noun,lập bản đồ phụ thuộc,Dependency mapping showed which tasks had to be completed first.,Việc lập bản đồ phụ thuộc cho thấy những nhiệm vụ nào cần hoàn thành trước.,delivery
+feasibility,B2,noun,tính khả thi,The team assessed the feasibility of the proposal before investing.,Nhóm đánh giá tính khả thi của đề xuất trước khi đầu tư.,delivery
+governance,B2,noun,cơ chế quản trị,The policy describes governance for the shared project.,Chính sách mô tả cơ chế quản trị của dự án chung.,delivery
+implementation plan,C1,noun,kế hoạch triển khai,The implementation plan sets out each stage of the rollout.,Kế hoạch triển khai nêu từng giai đoạn đưa hệ thống vào sử dụng.,delivery
+incentive,B2,noun,khoản khuyến khích,The company offered an incentive to employees who completed the training.,Công ty đưa ra một khoản khuyến khích cho nhân viên hoàn thành khóa đào tạo.,delivery
+initiative,B2,noun,sáng kiến,She led an initiative to reduce paper use in the office.,Cô ấy dẫn dắt một sáng kiến nhằm giảm sử dụng giấy trong văn phòng.,delivery
+milestone,C1,noun,cột mốc,Completing the first prototype was an important project milestone.,Hoàn thành bản mẫu đầu tiên là một cột mốc quan trọng của dự án.,delivery
+mitigation,B2,noun,biện pháp giảm thiểu,The team chose mitigation measures to reduce the risk of delay.,Nhóm chọn các biện pháp giảm thiểu để giảm nguy cơ chậm trễ.,delivery
+operational,B2,adjective,thuộc hoạt động vận hành,The team documented the operational risks before launching the service.,Nhóm ghi lại các rủi ro vận hành trước khi đưa dịch vụ vào hoạt động.,delivery
+optimization,C1,noun,sự tối ưu hóa,The latest optimization reduced the database query time.,Lần tối ưu hóa mới nhất giảm thời gian truy vấn cơ sở dữ liệu.,delivery
+oversight,B2,noun,sự giám sát,An oversight committee reviewed the project’s spending.,Một hội đồng giám sát xem xét chi tiêu của dự án.,delivery
+procurement,B2,noun,việc mua sắm,Procurement selected a supplier after comparing three bids.,Bộ phận mua sắm chọn nhà cung cấp sau khi so sánh ba hồ sơ dự thầu.,delivery
+prioritization,C1,noun,sắp xếp thứ tự ưu tiên,Prioritization helped the team focus on urgent tasks first.,Việc sắp xếp thứ tự ưu tiên giúp nhóm tập trung vào nhiệm vụ khẩn cấp trước.,delivery
+project scope,B2,noun,phạm vi dự án,The project scope defines what the team will deliver.,Phạm vi dự án xác định những gì nhóm sẽ bàn giao.,delivery
+resource constraint,C1,noun,giới hạn nguồn lực,A resource constraint forced the team to reduce the project scope.,Giới hạn nguồn lực buộc nhóm phải thu hẹp phạm vi dự án.,delivery
+risk assessment,C1,noun,đánh giá rủi ro,The risk assessment identified two possible causes of delay.,Đánh giá rủi ro xác định hai nguyên nhân có thể gây chậm trễ.,delivery
+scope creep,C1,noun,tình trạng phạm vi dự án phình to,The project lead documented each new request to prevent scope creep.,Trưởng dự án ghi lại từng yêu cầu mới để ngăn phạm vi dự án phình to.,delivery
+service-level agreement,B2,noun,thỏa thuận mức dịch vụ,The service-level agreement specifies the expected response time.,Thỏa thuận mức dịch vụ nêu thời gian phản hồi dự kiến.,delivery
+sprint planning,C1,noun,lập kế hoạch sprint,"During sprint planning, the team selected tasks for the next two weeks.","Trong buổi lập kế hoạch sprint, nhóm chọn nhiệm vụ cho hai tuần tiếp theo.",delivery
+sustainability,B2,noun,tính bền vững,The company included sustainability goals in its annual plan.,Công ty đưa các mục tiêu phát triển bền vững vào kế hoạch năm.,delivery
+supplier,B2,noun,nhà cung cấp,The supplier confirmed that the materials would arrive on Monday.,Nhà cung cấp xác nhận vật liệu sẽ đến vào thứ Hai.,delivery
+workstream,C1,noun,luồng công việc,Each workstream has a lead who reports progress every Friday.,Mỗi luồng công việc có một trưởng nhóm báo cáo tiến độ vào thứ Sáu hằng tuần.,delivery
+workaround,B2,noun,cách xử lý tạm thời,The team used a workaround while waiting for the permanent fix.,Nhóm dùng cách xử lý tạm thời trong khi chờ giải pháp khắc phục lâu dài.,delivery
+workflow,B2,noun,quy trình công việc,The revised workflow removes an unnecessary approval step.,Quy trình công việc đã sửa bỏ một bước phê duyệt không cần thiết.,delivery
+business continuity,C1,noun,tính liên tục hoạt động kinh doanh,The business continuity plan explains how essential services will continue during an outage.,Kế hoạch duy trì hoạt động kinh doanh giải thích cách các dịch vụ thiết yếu tiếp tục hoạt động khi có sự cố.,delivery

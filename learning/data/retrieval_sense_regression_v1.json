@@ -1,0 +1,179 @@
+{
+  "version": "literal-sense-regression-v1",
+  "provenance": "AI/editorial known regression; not independent holdout; no human language review or production approval.",
+  "description": "Literal source variants in the current visible TOEIC corpus, not linguistically certified distinct senses. Includes exact clarification choices and four negative requests. All cases are dev; no independent test split is claimed. Synthetic bank/charge and accent distinctions are tested separately in isolated Django tests.",
+  "cases": [
+    {
+      "id": "arrive-variants",
+      "split": "dev",
+      "category": "literal_variants",
+      "query": "arrive",
+      "expected_terms": [
+        "arrive"
+      ],
+      "expected_senses": [
+        {
+          "term": "arrive",
+          "meaning_vi": "đến một địa điểm"
+        },
+        {
+          "term": "arrive",
+          "meaning_vi": "đến nơi"
+        }
+      ],
+      "ambiguity_required": true
+    },
+    {
+      "id": "arrive-choice",
+      "split": "dev",
+      "category": "literal_choice",
+      "query": "Giải thích từ “arrive” trong ngữ cảnh: đến nơi.",
+      "expected_terms": [
+        "arrive"
+      ],
+      "expected_senses": [
+        {
+          "term": "arrive",
+          "meaning_vi": "đến nơi"
+        }
+      ],
+      "ambiguity_required": false
+    },
+    {
+      "id": "available-variants",
+      "split": "dev",
+      "category": "literal_variants",
+      "query": "available",
+      "expected_terms": [
+        "available"
+      ],
+      "expected_senses": [
+        {
+          "term": "available",
+          "meaning_vi": "có thời gian rảnh; có thể tham gia hoặc thực hiện việc gì"
+        },
+        {
+          "term": "available",
+          "meaning_vi": "còn trống"
+        }
+      ],
+      "ambiguity_required": true
+    },
+    {
+      "id": "available-choice",
+      "split": "dev",
+      "category": "literal_choice",
+      "query": "Giải thích từ “available” trong ngữ cảnh: còn trống.",
+      "expected_terms": [
+        "available"
+      ],
+      "expected_senses": [
+        {
+          "term": "available",
+          "meaning_vi": "còn trống"
+        }
+      ],
+      "ambiguity_required": false
+    },
+    {
+      "id": "invite-variants",
+      "split": "dev",
+      "category": "literal_variants",
+      "query": "invite",
+      "expected_terms": [
+        "invite"
+      ],
+      "expected_senses": [
+        {
+          "term": "invite",
+          "meaning_vi": "mời ai đó tham gia một sự kiện"
+        },
+        {
+          "term": "invite",
+          "meaning_vi": "mời"
+        }
+      ],
+      "ambiguity_required": true
+    },
+    {
+      "id": "invite-choice",
+      "split": "dev",
+      "category": "literal_choice",
+      "query": "Giải thích từ “invite” trong ngữ cảnh: mời.",
+      "expected_terms": [
+        "invite"
+      ],
+      "expected_senses": [
+        {
+          "term": "invite",
+          "meaning_vi": "mời"
+        }
+      ],
+      "ambiguity_required": false
+    },
+    {
+      "id": "repair-variants",
+      "split": "dev",
+      "category": "literal_variants",
+      "query": "repair",
+      "expected_terms": [
+        "repair"
+      ],
+      "expected_senses": [
+        {
+          "term": "repair",
+          "meaning_vi": "sửa chữa thứ bị hỏng"
+        },
+        {
+          "term": "repair",
+          "meaning_vi": "sửa chữa"
+        }
+      ],
+      "ambiguity_required": true
+    },
+    {
+      "id": "repair-choice",
+      "split": "dev",
+      "category": "literal_choice",
+      "query": "Giải thích từ “repair” trong ngữ cảnh: sửa chữa.",
+      "expected_terms": [
+        "repair"
+      ],
+      "expected_senses": [
+        {
+          "term": "repair",
+          "meaning_vi": "sửa chữa"
+        }
+      ],
+      "ambiguity_required": false
+    },
+    {
+      "id": "negative-1",
+      "split": "dev",
+      "category": "no_match",
+      "query": "My laptop needs repair for a school project. Suggest a schedule for getting it ready.",
+      "expected_terms": []
+    },
+    {
+      "id": "negative-2",
+      "split": "dev",
+      "category": "no_match",
+      "query": "I want to invite colleagues to a party. Help me plan the catering and seating.",
+      "expected_terms": []
+    },
+    {
+      "id": "negative-3",
+      "split": "dev",
+      "category": "no_match",
+      "query": "What does “unlistedtechnicalword” mean in the context of repair?",
+      "expected_terms": []
+    },
+    {
+      "id": "negative-4",
+      "split": "dev",
+      "category": "no_match",
+      "query": "The meeting room is available tomorrow. Help me plan the event.",
+      "expected_terms": []
+    }
+  ]
+}

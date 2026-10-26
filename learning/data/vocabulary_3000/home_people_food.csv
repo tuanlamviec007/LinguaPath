@@ -1,0 +1,361 @@
+term,cefr_level,part_of_speech,meaning_vi,example_en,example_vi,topic,cloze_answer,distractor_1,distractor_2,distractor_3
+wall,A1,noun,bức tường,Hang the family photograph on the wall above the sofa.,Hãy treo ảnh gia đình lên bức tường phía trên ghế sofa.,Home,wall,carpet,drawer,ceiling
+roof,A2,noun,mái nhà,Rain leaked through a broken tile on the roof.,Nước mưa rò qua một viên ngói vỡ trên mái nhà.,Home,roof,basement,fence,pavement
+ceiling,A2,noun,trần nhà,A lamp hung from the ceiling above our heads.,Một chiếc đèn treo từ trần nhà phía trên đầu chúng tôi.,Home,ceiling,floorboard,cupboard,doorstep
+window,A1,noun,cửa sổ,Open the window to let fresh air into this room.,Hãy mở cửa sổ để không khí trong lành vào phòng này.,Home,window,drawer,wardrobe,cupboard
+curtain,A2,noun,rèm cửa,Pull the curtain across the window to block sunlight.,Hãy kéo rèm cửa che cửa sổ để chắn ánh nắng.,Home,curtain,carpet,blanket,tablecloth
+sofa,A2,noun,ghế sofa,Three guests sat together on the sofa in our lounge.,Ba vị khách ngồi cùng nhau trên ghế sofa trong phòng khách.,Home,sofa,stool,armchair,ladder
+armchair,A2,noun,ghế bành,Grandfather reads in an armchair with soft padded arms.,Ông đọc sách trên chiếc ghế bành có tay vịn đệm mềm.,Home,armchair,bench,shelf,stool
+stool,B1,noun,ghế đẩu,The stool had no backrest and fitted beneath the counter.,Chiếc ghế đẩu không có tựa lưng và vừa bên dưới quầy.,Home,stool,armchair,sofa,wardrobe
+table,A1,noun,cái bàn,We laid four plates on the table before dinner.,Chúng tôi đặt bốn chiếc đĩa lên bàn trước bữa tối.,Home,table,chimney,wardrobe,roof
+shelf,A2,noun,kệ,She placed the novels on a shelf above her desk.,Cô ấy đặt những cuốn tiểu thuyết lên kệ phía trên bàn học.,Home,shelf,pillow,sink,doormat
+cupboard,A2,noun,tủ đựng đồ,Keep the clean plates inside the cupboard beside the sink.,Hãy cất những chiếc đĩa sạch trong tủ cạnh bồn rửa.,Home,cupboard,chimney,mattress,balcony
+wardrobe,A2,noun,tủ quần áo,My wardrobe has a rail for hanging coats and dresses.,Tủ quần áo của tôi có thanh treo áo khoác và váy.,Home,wardrobe,bookcase,sink,staircase
+drawer,A2,noun,ngăn kéo,Pull out the top drawer to find the spare keys.,Hãy kéo ngăn kéo trên cùng ra để tìm chìa khóa dự phòng.,Home,drawer,chimney,ceiling,attic
+bookcase,A2,noun,tủ sách,Our bookcase has five shelves filled with novels and dictionaries.,Tủ sách của chúng tôi có năm tầng đầy tiểu thuyết và từ điển.,Home,bookcase,wardrobe,freezer,dresser
+mirror,A1,noun,gương,She checked her reflection in the mirror before leaving.,Cô ấy kiểm tra hình ảnh của mình trong gương trước khi đi.,Home,mirror,curtain,carpet,pillow
+carpet,A2,noun,thảm trải sàn,The thick carpet covered almost the entire bedroom floor.,Tấm thảm dày phủ gần hết sàn phòng ngủ.,Home,carpet,curtain,quilt,tablecloth
+rug,B1,noun,tấm thảm nhỏ,A small rug lay beside the bed on the wooden floor.,Một tấm thảm nhỏ nằm cạnh giường trên sàn gỗ.,Home,rug,ceiling,curtain,shelf
+pillow,A2,noun,gối,I rested my head on a soft pillow and fell asleep.,Tôi đặt đầu lên chiếc gối mềm rồi ngủ thiếp đi.,Home,pillow,towel,carpet,curtain
+blanket,A2,noun,chăn,She wrapped a warm blanket around herself on the cold night.,Cô ấy quấn một chiếc chăn ấm quanh người trong đêm lạnh.,Home,blanket,doormat,napkin,curtain
+sheet,A2,noun,ga trải giường,Put a clean sheet over the mattress before making the bed.,Hãy trải ga sạch lên nệm trước khi dọn giường.,Home,sheet,napkin,towel,tablecloth
+mattress,B1,noun,nệm,The mattress beneath my bedsheet felt too soft for my back.,Chiếc nệm bên dưới ga giường quá mềm đối với lưng tôi.,Home,mattress,curtain,wardrobe,shelf
+quilt,B1,noun,chăn bông,This quilt contains warm padding stitched between two fabric layers.,Chiếc chăn bông này có lớp đệm ấm được khâu giữa hai lớp vải.,Home,quilt,napkin,towel,doormat
+cushion,B1,noun,gối tựa,Place a cushion behind your back while sitting on the sofa.,Hãy đặt gối tựa sau lưng khi ngồi trên ghế sofa.,Home,cushion,carpet,curtain,sheet
+bedside,B1,noun,khu vực cạnh giường,The nurse left a glass of water at his bedside.,Y tá để một cốc nước ở cạnh giường anh ấy.,Home,bedside,rooftop,doorway,attic
+headboard,B2,noun,tấm đầu giường,She leaned against the padded headboard behind her pillow.,Cô ấy tựa vào tấm đầu giường bọc đệm phía sau gối.,Home,headboard,footstool,doorstep,windowsill
+bedspread,B2,noun,khăn phủ giường,The decorative bedspread covered the pillows and the whole bed.,Tấm khăn phủ giường trang trí che cả gối và toàn bộ giường.,Home,bedspread,doormat,napkin,dishcloth
+bunk,B2,noun,giường tầng,My younger brother sleeps in the upper bunk above mine.,Em trai tôi ngủ ở tầng trên của chiếc giường tầng phía trên tôi.,Home,bunk,stool,drawer,shelf
+cot,B1,noun,giường cũi,The infant slept safely in a cot with high sides.,Em bé ngủ an toàn trong chiếc giường cũi có thành cao.,Home,cot,bookcase,stool,sink
+crib,B2,noun,cũi trẻ em,They lowered the crib mattress as their baby began standing.,Họ hạ nệm cũi xuống khi em bé bắt đầu biết đứng.,Home,crib,wardrobe,armchair,shelf
+hammock,B1,noun,võng,We tied a hammock between two trees for an afternoon rest.,Chúng tôi buộc một chiếc võng giữa hai cây để nghỉ trưa.,Home,hammock,staircase,wardrobe,rug
+lamp,A2,noun,đèn bàn,Switch on the lamp beside your book before reading.,Hãy bật đèn bàn cạnh cuốn sách trước khi đọc.,Home,lamp,curtain,carpet,cushion
+lampshade,B2,noun,chao đèn,The lampshade softened the bright light from the bare bulb.,Chao đèn làm dịu ánh sáng mạnh từ bóng đèn trần.,Home,lampshade,doormat,doorstep,drawer
+bulb,B1,noun,bóng đèn,Replace the burnt-out bulb before switching the light on again.,Hãy thay bóng đèn cháy trước khi bật đèn trở lại.,Home,bulb,curtain,tile,hinge
+socket,B1,noun,ổ cắm điện,Unplug the kettle from the socket before cleaning it.,Hãy rút phích ấm khỏi ổ cắm điện trước khi vệ sinh.,Home,socket,shelf,drawer,curtain
+plug,B1,noun,phích cắm điện,Pull the plug by its body rather than the wire.,Hãy kéo phần thân phích cắm thay vì giật dây điện.,Home,plug,tile,hinge,latch
+switch,A2,noun,công tắc,Press the switch on the wall to turn the light off.,Hãy nhấn công tắc trên tường để tắt đèn.,Home,switch,curtain,pillow,hinge
+fuse,B2,noun,cầu chì,A blown fuse cut the electrical supply to the upstairs lights.,Cầu chì bị đứt làm ngắt nguồn điện cấp cho đèn tầng trên.,Home,fuse,tile,hinge,latch
+radiator,B1,noun,bộ tản nhiệt sưởi phòng,Hot water flows through the radiator to warm the bedroom.,Nước nóng chảy qua bộ tản nhiệt để sưởi ấm phòng ngủ.,Home,radiator,freezer,cupboard,chimney
+fireplace,B1,noun,lò sưởi,We burned dry logs in the fireplace on winter evenings.,Chúng tôi đốt củi khô trong lò sưởi vào những tối mùa đông.,Home,fireplace,freezer,sink,attic
+chimney,B1,noun,ống khói,Smoke rose through the chimney above the wood-burning stove.,Khói bay qua ống khói phía trên bếp đốt củi.,Home,chimney,doorstep,wardrobe,floorboard
+hearth,C1,noun,bệ lò sưởi,The iron kettle stood on the hearth beside the open fire.,Chiếc ấm sắt nằm trên bệ lò sưởi cạnh ngọn lửa đang cháy.,Home,hearth,windowsill,doorway,attic
+boiler,B2,noun,nồi hơi,The boiler heats water for the house and its radiators.,Nồi hơi làm nóng nước cho ngôi nhà và các bộ tản nhiệt.,Home,boiler,freezer,dishwasher,wardrobe
+thermostat,B2,noun,bộ điều nhiệt,Set the thermostat to twenty degrees to control room heating.,Hãy đặt bộ điều nhiệt ở hai mươi độ để điều khiển việc sưởi phòng.,Home,thermostat,doorbell,latch,hinge
+fan,A2,noun,quạt,The ceiling fan circulated air above the crowded dining table.,Chiếc quạt trần luân chuyển không khí phía trên bàn ăn đông người.,Home,fan,heater,freezer,boiler
+heater,B1,noun,máy sưởi,We switched on the electric heater to warm the cold room.,Chúng tôi bật máy sưởi điện để làm ấm căn phòng lạnh.,Home,heater,freezer,fan,dishwasher
+vent,B2,noun,lỗ thông gió,Keep the air vent clear so fresh air can enter.,Hãy giữ lỗ thông gió thông thoáng để không khí mới có thể vào.,Home,vent,drawer,mattress,pillow
+shutter,B2,noun,cửa chớp,Close the wooden shutter outside the window before the storm.,Hãy đóng cửa chớp gỗ bên ngoài cửa sổ trước cơn bão.,Home,shutter,wardrobe,quilt,carpet
+windowsill,B2,noun,bậu cửa sổ,A flowerpot stood on the windowsill beneath the open window.,Một chậu hoa nằm trên bậu bên dưới cửa sổ đang mở.,Home,windowsill,chimney,hearth,attic
+hinge,B2,noun,bản lề,Oil the metal hinge so the door opens without squeaking.,Hãy tra dầu vào bản lề kim loại để cửa mở không kêu cót két.,Home,hinge,socket,tile,bulb
+latch,B2,noun,chốt cửa,Lift the latch to release the garden gate without a key.,Hãy nâng chốt để mở cổng vườn mà không cần chìa khóa.,Home,latch,hinge,tile,socket
+doorbell,A2,noun,chuông cửa,Press the doorbell outside the entrance to announce your arrival.,Hãy nhấn chuông cửa bên ngoài lối vào để báo bạn đã đến.,Home,doorbell,thermostat,radiator,hinge
+doorstep,B1,noun,bậc cửa,The courier left a parcel on the doorstep outside our door.,Người giao hàng để một gói đồ trên bậc bên ngoài cửa nhà.,Home,doorstep,windowsill,ceiling,attic
+doorway,B1,noun,ô cửa ra vào,The doorway was too narrow for the large sofa to pass.,Ô cửa ra vào quá hẹp để chiếc sofa lớn đi qua.,Home,doorway,chimney,drawer,shelf
+hallway,B1,noun,hành lang trong nhà,Leave your muddy shoes in the hallway beside the front door.,Hãy để giày dính bùn ở hành lang cạnh cửa chính.,Home,hallway,chimney,attic,roof
+staircase,B1,noun,cầu thang,The wooden staircase connects the ground floor to the bedrooms above.,Cầu thang gỗ nối tầng trệt với các phòng ngủ phía trên.,Home,staircase,chimney,cupboard,wardrobe
+banister,B2,noun,tay vịn cầu thang,Hold the banister while walking down the steep stairs.,Hãy giữ tay vịn khi đi xuống cầu thang dốc.,Home,banister,windowsill,doormat,shelf
+landing,B2,noun,chiếu nghỉ cầu thang,The stairs ended at a small landing outside two bedrooms.,Cầu thang kết thúc ở một chiếu nghỉ nhỏ bên ngoài hai phòng ngủ.,Home,landing,chimney,cellar,roof
+attic,B1,noun,gác mái,We store old suitcases in the attic just below the roof.,Chúng tôi cất vali cũ trên gác mái ngay bên dưới mái nhà.,Home,attic,cellar,hallway,porch
+basement,B1,noun,tầng hầm,The basement lies below street level and contains the laundry room.,Tầng hầm nằm dưới mặt đường và có phòng giặt.,Home,basement,attic,rooftop,balcony
+cellar,B2,noun,hầm chứa đồ,They kept bottles of wine in a cool underground cellar.,Họ cất những chai rượu vang trong một hầm ngầm mát mẻ.,Home,cellar,attic,porch,rooftop
+porch,B1,noun,hiên có mái che,We sheltered on the covered porch while rain soaked the garden.,Chúng tôi trú dưới hiên có mái che khi mưa làm ướt khu vườn.,Home,porch,cellar,attic,chimney
+patio,B1,noun,sân lát ngoài nhà,We arranged outdoor chairs on the paved patio behind the house.,Chúng tôi xếp ghế ngoài trời trên sân lát phía sau nhà.,Home,patio,attic,cellar,ceiling
+veranda,B2,noun,hiên rộng có mái che,A covered veranda ran along the front of the farmhouse.,Một hiên rộng có mái che chạy dọc phía trước ngôi nhà nông trại.,Home,veranda,cellar,attic,chimney
+courtyard,B2,noun,sân trong,The rooms faced a courtyard enclosed by four building walls.,Các phòng hướng ra một sân trong được bốn bức tường bao quanh.,Home,courtyard,attic,basement,roof
+fence,A2,noun,hàng rào,A wooden fence separates our garden from the neighbor's lawn.,Một hàng rào gỗ ngăn khu vườn của chúng tôi với bãi cỏ nhà bên.,Home,fence,ceiling,carpet,chimney
+hedge,B1,noun,hàng cây bụi,Trim the hedge so its thick bushes stay below the window.,Hãy tỉa hàng cây bụi để chúng không cao quá cửa sổ.,Home,hedge,fence,gate,railing
+railing,B2,noun,lan can,A metal railing along the balcony prevents people from falling.,Lan can kim loại dọc ban công ngăn người ta bị ngã.,Home,railing,mattress,curtain,chimney
+gate,A2,noun,cổng,Close the garden gate so the dog cannot reach the street.,Hãy đóng cổng vườn để con chó không thể ra đường.,Home,gate,ceiling,radiator,shelf
+shed,B1,noun,nhà kho nhỏ,We keep the lawnmower in a small wooden shed outside.,Chúng tôi cất máy cắt cỏ trong nhà kho nhỏ bằng gỗ bên ngoài.,Home,shed,bedroom,kitchen,bathroom
+garage,A2,noun,nhà để xe,Park the car inside the garage before closing its wide door.,Hãy đỗ xe trong nhà để xe trước khi đóng cánh cửa rộng.,Home,garage,attic,pantry,nursery
+lawn,B1,noun,bãi cỏ,The children played on the freshly mown lawn behind our house.,Bọn trẻ chơi trên bãi cỏ vừa cắt phía sau nhà chúng tôi.,Home,lawn,patio,driveway,roof
+driveway,B1,noun,lối xe vào nhà,The driveway leads from the street directly to our garage.,Lối xe vào nhà dẫn thẳng từ đường đến nhà để xe.,Home,driveway,chimney,hallway,staircase
+mailbox,B1,noun,hòm thư,The postman pushed our letters through the slot in the mailbox.,Người đưa thư đẩy thư của chúng tôi qua khe hòm thư.,Home,mailbox,wardrobe,freezer,cupboard
+doormat,B1,noun,thảm chùi chân,Wipe your muddy shoes on the doormat before coming inside.,Hãy lau giày dính bùn lên thảm chùi chân trước khi vào nhà.,Home,doormat,curtain,quilt,pillow
+keyhole,B1,noun,lỗ khóa,She inserted the small metal key into the keyhole.,Cô ấy đưa chiếc chìa khóa kim loại nhỏ vào lỗ khóa.,Home,keyhole,socket,vent,drain
+padlock,B2,noun,ổ khóa rời,We secured the shed with a padlock attached to a chain.,Chúng tôi khóa nhà kho bằng một ổ khóa rời gắn với dây xích.,Home,padlock,hinge,socket,latch
+deadbolt,C1,noun,khóa chốt ngang,Turn the deadbolt to slide its heavy bar into the doorframe.,Hãy xoay khóa chốt ngang để đẩy thanh chốt nặng vào khung cửa.,Home,deadbolt,hinge,doorbell,thermostat
+doorframe,B2,noun,khung cửa,The carpenter fitted a new door inside the wooden doorframe.,Người thợ mộc lắp một cánh cửa mới vào khung cửa gỗ.,Home,doorframe,doormat,chimney,banister
+skirting,C1,noun,ván chân tường,The skirting protects the wall where it meets the floor.,Ván chân tường bảo vệ phần tường tiếp giáp với sàn.,Home,skirting,ceiling,chimney,windowsill
+floorboard,B2,noun,ván sàn,A loose floorboard creaked beneath my feet in the bedroom.,Một tấm ván sàn lỏng kêu cót két dưới chân tôi trong phòng ngủ.,Home,floorboard,roof,curtain,window
+tile,B1,noun,gạch lát,Replace the cracked tile on the bathroom floor before someone trips.,Hãy thay viên gạch lát bị nứt trên sàn phòng tắm trước khi ai đó vấp.,Home,tile,bulb,hinge,socket
+grout,C1,noun,vữa chít mạch,The white grout fills the narrow gaps between bathroom tiles.,Vữa chít mạch màu trắng lấp các khe hẹp giữa những viên gạch phòng tắm.,Home,grout,varnish,wallpaper,detergent
+wallpaper,B1,noun,giấy dán tường,We covered the bedroom walls with wallpaper patterned with flowers.,Chúng tôi phủ tường phòng ngủ bằng giấy dán có hoa văn hoa.,Home,wallpaper,carpet,curtain,quilt
+plaster,B2,noun,thạch cao trát tường,The builder spread wet plaster over the rough interior wall.,Người thợ xây trát thạch cao ướt lên bức tường thô bên trong.,Home,plaster,wallpaper,carpet,varnish
+varnish,B2,noun,sơn bóng,A clear coat of varnish protected the wooden table from stains.,Một lớp sơn bóng trong suốt bảo vệ bàn gỗ khỏi vết bẩn.,Home,varnish,detergent,grout,plaster
+leak,B1,noun,chỗ rò rỉ,A leak under the sink left water dripping onto the floor.,Một chỗ rò bên dưới bồn rửa khiến nước nhỏ xuống sàn.,Home,leak,stain,scratch,dent
+drain,B1,noun,lỗ thoát nước,Remove the hair blocking the shower drain so water flows away.,Hãy lấy tóc làm tắc lỗ thoát nước vòi sen để nước chảy đi.,Home,drain,socket,keyhole,vent
+pipe,B1,noun,ống dẫn,A copper pipe carries hot water from the boiler to the sink.,Một ống đồng dẫn nước nóng từ nồi hơi đến bồn rửa.,Home,pipe,wire,hinge,railing
+tap,A2,noun,vòi nước,Turn the tap clockwise to stop water flowing into the basin.,Hãy xoay vòi nước theo chiều kim đồng hồ để ngăn nước chảy vào chậu.,Home,tap,switch,hinge,latch
+faucet,B1,noun,vòi nước,The dripping faucet wasted water until we replaced its washer.,Vòi nước nhỏ giọt làm lãng phí nước cho đến khi chúng tôi thay vòng đệm.,Home,faucet,socket,bulb,handle
+basin,B1,noun,chậu rửa,Wash your hands in the basin beneath the bathroom mirror.,Hãy rửa tay trong chậu rửa bên dưới gương phòng tắm.,Home,basin,bathtub,toilet,wardrobe
+sink,A2,noun,bồn rửa bát,Rinse the dirty plates in the kitchen sink after dinner.,Hãy tráng những chiếc đĩa bẩn trong bồn rửa bếp sau bữa tối.,Home,sink,bathtub,wardrobe,radiator
+bathtub,A2,noun,bồn tắm,Fill the bathtub with warm water for a relaxing soak.,Hãy đổ nước ấm vào bồn tắm để ngâm mình thư giãn.,Home,bathtub,cupboard,basin,toilet
+shower,A1,noun,vòi sen,Water sprayed from the shower above my head while I washed.,Nước phun từ vòi sen phía trên đầu khi tôi tắm.,Home,shower,toilet,radiator,freezer
+toilet,A1,noun,bồn cầu,Flush the toilet after using it and then wash your hands.,Hãy xả bồn cầu sau khi sử dụng rồi rửa tay.,Home,toilet,shower,radiator,freezer
+towel,A2,noun,khăn lau,Dry your wet hands with the clean towel beside the sink.,Hãy lau khô tay ướt bằng chiếc khăn sạch cạnh bồn rửa.,Home,towel,curtain,carpet,quilt
+washcloth,B2,noun,khăn mặt nhỏ,She wiped her face with a warm damp washcloth.,Cô ấy lau mặt bằng một chiếc khăn mặt nhỏ ẩm và ấm.,Home,washcloth,curtain,carpet,tablecloth
+sponge,B1,noun,miếng bọt biển,The sponge absorbed water into its many tiny open pores.,Miếng bọt biển hút nước vào nhiều lỗ nhỏ thông nhau.,Home,sponge,towel,curtain,quilt
+brush,A2,noun,bàn chải,Use the soft bristles to brush dust from the delicate model.,Dùng những sợi lông mềm để quét bụi khỏi mô hình tinh xảo.,Home,brush,sponge,towel,napkin
+broom,A2,noun,chổi,Sweep the dry crumbs into a pile with the broom.,Hãy dùng chổi quét vụn bánh khô thành một đống.,Home,broom,mop,towel,sponge
+dustpan,B1,noun,cái hót rác,Sweep the dust into the dustpan and empty it outside.,Hãy quét bụi vào cái hót rác rồi đổ ra ngoài.,Home,dustpan,bucket,basin,kettle
+mop,B1,noun,cây lau nhà,The mop has a long handle and absorbent strands for washing floors.,Cây lau nhà có cán dài và những sợi hút nước để lau sàn.,Home,mop,broom,brush,towel
+bucket,A2,noun,xô,Fill the bucket with water and carry it by its handle.,Hãy đổ nước vào xô rồi xách bằng quai.,Home,bucket,dustpan,sieve,colander
+detergent,B1,noun,chất tẩy rửa,Add laundry detergent to the machine before washing dirty clothes.,Hãy thêm chất giặt tẩy vào máy trước khi giặt quần áo bẩn.,Home,detergent,vinegar,flour,varnish
+bleach,B2,noun,thuốc tẩy,Wear gloves when using bleach to whiten the stained cloth.,Hãy đeo găng khi dùng thuốc tẩy để làm trắng tấm vải bị ố.,Home,bleach,shampoo,toothpaste,soap
+soap,A2,noun,xà phòng,Rub your hands with soap before rinsing away the foam.,Hãy xoa tay với xà phòng trước khi rửa sạch bọt.,Home,soap,toothpaste,shampoo,polish
+shampoo,A2,noun,dầu gội,Massage the shampoo into wet hair before rinsing thoroughly.,Hãy xoa dầu gội vào tóc ướt trước khi xả kỹ.,Home,shampoo,toothpaste,polish,detergent
+toothpaste,A2,noun,kem đánh răng,Squeeze some toothpaste onto the brush before cleaning your teeth.,Hãy bóp một ít kem đánh răng lên bàn chải trước khi chải răng.,Home,toothpaste,shampoo,detergent,bleach
+toothbrush,A2,noun,bàn chải đánh răng,Replace your toothbrush when its bristles become worn and bent.,Hãy thay bàn chải đánh răng khi lông bàn chải bị mòn và cong.,Home,toothbrush,comb,razor,sponge
+comb,A2,noun,lược,Pull the comb gently through your hair to remove tangles.,Hãy kéo lược nhẹ nhàng qua tóc để gỡ rối.,Home,comb,razor,toothbrush,sponge
+razor,B1,noun,dao cạo râu,He shaved his chin carefully with a sharp razor.,Anh ấy cạo cằm cẩn thận bằng dao cạo sắc.,Home,razor,comb,toothbrush,sponge
+scissors,A2,plural noun,kéo,Use sharp scissors to cut the wrapping paper neatly.,Hãy dùng kéo sắc để cắt giấy gói cho gọn.,Home,scissors,pliers,tongs,tweezers
+laundry,B1,noun,quần áo cần giặt,Put your dirty laundry in the basket beside the washing machine.,Hãy bỏ quần áo bẩn vào giỏ cạnh máy giặt.,Home,laundry,luggage,cutlery,crockery
+hamper,B2,noun,giỏ đựng quần áo,The laundry hamper held dirty socks waiting to be washed.,Giỏ đựng quần áo chứa những đôi tất bẩn chờ giặt.,Home,hamper,sieve,colander,dustpan
+clothesline,B1,noun,dây phơi quần áo,Hang the wet shirts on the clothesline stretched across the yard.,Hãy treo áo sơ mi ướt lên dây phơi căng ngang sân.,Home,clothesline,railing,banister,pipe
+peg,B1,noun,kẹp phơi quần áo,Fasten each sock to the washing line with a wooden peg.,Hãy gắn mỗi chiếc tất vào dây phơi bằng một kẹp gỗ.,Home,peg,hinge,latch,plug
+ironing,B1,noun,việc là quần áo,The ironing removed the deep wrinkles from my cotton shirts.,Việc là quần áo làm phẳng những nếp nhăn sâu trên áo sơ mi cotton của tôi.,Home,ironing,washing,drying,folding
+iron,A2,noun,bàn là,Move the hot iron across the shirt to smooth its wrinkles.,Hãy đưa bàn là nóng trên áo sơ mi để làm phẳng nếp nhăn.,Home,iron,kettle,toaster,blender
+vacuum,B1,noun,máy hút bụi,The vacuum sucked crumbs and dust out of the thick carpet.,Máy hút bụi hút vụn bánh và bụi khỏi tấm thảm dày.,Home,vacuum,mop,broom,radiator
+polish,B2,noun,chất đánh bóng,Rub furniture polish into the wood to give it a shine.,Hãy xoa chất đánh bóng đồ nội thất lên gỗ để làm nó sáng bóng.,Home,polish,bleach,shampoo,detergent
+cup,A1,noun,tách,She poured hot tea into a cup with a small handle.,Cô ấy rót trà nóng vào một chiếc tách có quai nhỏ.,Kitchen,cup,fork,plate,tray
+mug,A2,noun,ca uống nước,He drank cocoa from a large mug with a thick handle.,Anh ấy uống ca cao bằng một chiếc ca lớn có quai dày.,Kitchen,mug,saucer,fork,colander
+glass,A1,noun,cốc thủy tinh,The transparent glass was filled with cold drinking water.,Chiếc cốc thủy tinh trong suốt được đổ đầy nước uống lạnh.,Kitchen,glass,plate,fork,sieve
+plate,A1,noun,đĩa ăn,Put the fried eggs on a flat dinner plate.,Hãy đặt trứng rán lên một chiếc đĩa ăn phẳng.,Kitchen,plate,mug,kettle,jug
+saucer,B1,noun,đĩa lót tách,Place the teacup on its saucer to catch small spills.,Hãy đặt tách trà lên đĩa lót để hứng nước đổ ra.,Kitchen,saucer,colander,kettle,jug
+spoon,A1,noun,thìa,Eat the soup with a spoon instead of a fork.,Hãy dùng thìa ăn súp thay vì dùng nĩa.,Kitchen,spoon,knife,skewer,chopstick
+fork,A1,noun,nĩa,Use the four prongs of the fork to lift the pasta.,Hãy dùng bốn răng nĩa để nhấc mì lên.,Kitchen,fork,spoon,knife,ladle
+knife,A1,noun,dao,Slice the bread with a sharp knife on a board.,Hãy cắt bánh mì bằng dao sắc trên một tấm thớt.,Kitchen,knife,whisk,ladle,spoon
+chopstick,A2,noun,đũa,A single chopstick fell from the pair beside my bowl.,Một chiếc đũa rơi ra khỏi đôi đũa cạnh bát tôi.,Kitchen,chopstick,fork,knife,ladle
+cutlery,B1,noun,dao thìa nĩa ăn uống,Put the knives and forks in the cutlery drawer.,Hãy để dao và nĩa vào ngăn kéo đựng dụng cụ ăn uống.,Kitchen,cutlery,crockery,linen,laundry
+crockery,B2,noun,đồ bát đĩa bằng sứ,Wrap the china plates carefully because the crockery breaks easily.,Hãy gói đĩa sứ cẩn thận vì đồ bát đĩa rất dễ vỡ.,Kitchen,crockery,cutlery,linen,laundry
+jug,B1,noun,bình có quai và vòi rót,Pour lemonade from the jug using its handle and spout.,Hãy rót nước chanh từ bình bằng quai và vòi rót của nó.,Kitchen,jug,plate,fork,sieve
+pitcher,B2,noun,bình rót nước,The pitcher had a wide handle and held enough juice for everyone.,Chiếc bình rót có quai rộng và chứa đủ nước ép cho mọi người.,Kitchen,pitcher,saucer,colander,tray
+kettle,A2,noun,ấm đun nước,Boil water in the kettle before making a pot of tea.,Hãy đun nước trong ấm trước khi pha một ấm trà.,Kitchen,kettle,toaster,freezer,blender
+teapot,B1,noun,ấm pha trà,Let the leaves steep inside the teapot before pouring the tea.,Hãy để lá trà ngấm trong ấm pha trước khi rót trà.,Kitchen,teapot,toaster,freezer,grater
+teaspoon,B1,noun,thìa cà phê,Add one small teaspoon of sugar to your coffee.,Hãy thêm một thìa cà phê đường nhỏ vào cà phê của bạn.,Kitchen,teaspoon,ladle,spatula,skewer
+tablespoon,B1,noun,thìa canh,The recipe needs one tablespoon of oil rather than a teaspoon.,Công thức cần một thìa canh dầu thay vì một thìa cà phê.,Kitchen,tablespoon,ladle,skewer,whisk
+ladle,B1,noun,muôi múc canh,Serve the soup with a deep ladle from the large pot.,Hãy dùng muôi sâu để múc súp từ chiếc nồi lớn.,Kitchen,ladle,whisk,grater,sieve
+spatula,B2,noun,xẻng nấu ăn,Slide the flat spatula under the pancake before turning it over.,Hãy đưa xẻng nấu ăn phẳng xuống dưới bánh kếp trước khi lật.,Kitchen,spatula,ladle,whisk,sieve
+whisk,B2,noun,phới đánh trứng,Beat the eggs with a wire whisk until they become foamy.,Hãy dùng phới dây đánh trứng cho đến khi nổi bọt.,Kitchen,whisk,ladle,colander,skewer
+tongs,B2,plural noun,kẹp gắp thức ăn,Use the tongs to grip and turn the hot sausages.,Hãy dùng kẹp để gắp và lật những chiếc xúc xích nóng.,Kitchen,tongs,sieve,whisk,ladle
+sieve,B2,noun,rây,Pass the flour through a fine sieve to remove lumps.,Hãy cho bột qua một chiếc rây mịn để loại bỏ các cục vón.,Kitchen,sieve,ladle,spatula,jug
+colander,B2,noun,rổ lọc,Drain the cooked pasta through a colander with large holes.,Hãy đổ mì đã nấu qua rổ lọc có lỗ lớn để ráo nước.,Kitchen,colander,ladle,whisk,tray
+grater,B2,noun,dụng cụ bào,Rub the cheese against the sharp holes of the grater.,Hãy chà phô mai vào các lỗ sắc của dụng cụ bào.,Kitchen,grater,sieve,ladle,whisk
+peeler,B1,noun,dao bào vỏ,Remove the thin potato skin with a vegetable peeler.,Hãy bỏ lớp vỏ khoai tây mỏng bằng dao bào vỏ rau củ.,Kitchen,peeler,ladle,sieve,whisk
+skewer,B2,noun,xiên nướng,Push the meat cubes onto a long metal skewer before grilling.,Hãy xiên các miếng thịt vào xiên kim loại dài trước khi nướng.,Kitchen,skewer,whisk,ladle,sieve
+tray,A2,noun,khay,Carry all six cups together on a large serving tray.,Hãy mang cả sáu chiếc tách cùng lúc trên một khay phục vụ lớn.,Kitchen,tray,saucer,teaspoon,jug
+napkin,A2,noun,khăn ăn,Place a napkin on your lap before the meal begins.,Hãy đặt khăn ăn lên đùi trước khi bắt đầu bữa ăn.,Kitchen,napkin,curtain,quilt,doormat
+tablecloth,B1,noun,khăn trải bàn,Spread the tablecloth over the dining table before setting the plates.,Hãy trải khăn lên bàn ăn trước khi bày đĩa.,Kitchen,tablecloth,curtain,quilt,pillow
+placemat,B2,noun,tấm lót đĩa,Put a placemat beneath each plate to protect the table.,Hãy đặt tấm lót dưới mỗi đĩa để bảo vệ bàn.,Kitchen,placemat,curtain,quilt,dishcloth
+coaster,B2,noun,đế lót cốc,The round cork coaster fits under one cup to protect the table.,Đế lót cốc tròn bằng bần vừa dưới một chiếc cốc để bảo vệ bàn.,Kitchen,coaster,napkin,curtain,apron
+apron,B1,noun,tạp dề,Tie an apron over your clothes before mixing the cake batter.,Hãy buộc tạp dề bên ngoài quần áo trước khi trộn bột bánh.,Kitchen,apron,tablecloth,curtain,doormat
+dishcloth,B2,noun,khăn lau bát đĩa,Use a damp dishcloth to wipe food from the worktop.,Hãy dùng khăn lau bát đĩa ẩm để lau thức ăn trên mặt bếp.,Kitchen,dishcloth,quilt,curtain,doormat
+oven,A2,noun,lò nướng,Bake the bread in a hot oven for thirty minutes.,Hãy nướng bánh mì trong lò nóng khoảng ba mươi phút.,Kitchen,oven,freezer,blender,sink
+stove,B1,noun,bếp nấu,Put the saucepan on the stove and turn on the heat.,Hãy đặt nồi lên bếp rồi bật lửa.,Kitchen,stove,freezer,cupboard,dishwasher
+hob,B2,noun,mặt bếp nấu,The induction hob heats the pan without an open flame.,Mặt bếp từ làm nóng chảo mà không có ngọn lửa trần.,Kitchen,hob,freezer,cupboard,sink
+microwave,A2,noun,lò vi sóng,Heat yesterday's rice in the microwave for two minutes.,Hãy hâm cơm hôm qua trong lò vi sóng khoảng hai phút.,Kitchen,microwave,freezer,blender,toaster
+toaster,A2,noun,máy nướng bánh mì,Put two bread slices into the toaster until they turn golden.,Hãy cho hai lát bánh mì vào máy nướng cho đến khi vàng.,Kitchen,toaster,blender,freezer,kettle
+blender,B1,noun,máy xay sinh tố,The blender crushed the fruit into a smooth breakfast drink.,Máy xay sinh tố nghiền trái cây thành một thức uống sáng mịn.,Kitchen,blender,toaster,kettle,oven
+mixer,B1,noun,máy trộn,The electric mixer beat the cake batter with two rotating beaters.,Máy trộn điện đánh bột bánh bằng hai que đánh xoay.,Kitchen,mixer,toaster,freezer,kettle
+fridge,A2,noun,tủ lạnh,Keep the milk in the fridge so it stays cold.,Hãy giữ sữa trong tủ lạnh để sữa luôn lạnh.,Kitchen,fridge,oven,toaster,cupboard
+refrigerator,B1,noun,tủ lạnh,The refrigerator keeps fresh vegetables cool without freezing them solid.,Tủ lạnh giữ rau tươi mát mà không làm chúng đông cứng.,Kitchen,refrigerator,oven,toaster,dishwasher
+freezer,A2,noun,tủ đông,Store the frozen peas in the freezer below zero degrees.,Hãy cất đậu Hà Lan đông lạnh trong tủ đông dưới không độ.,Kitchen,freezer,oven,dishwasher,cupboard
+dishwasher,A2,noun,máy rửa bát,Load the dirty plates into the dishwasher before starting its cycle.,Hãy xếp đĩa bẩn vào máy rửa bát trước khi khởi động chu trình.,Kitchen,dishwasher,freezer,toaster,blender
+saucepan,B1,noun,nồi có cán,Warm the milk in a small saucepan with a long handle.,Hãy hâm sữa trong chiếc nồi nhỏ có cán dài.,Kitchen,saucepan,sieve,colander,tray
+frying pan,A2,noun,chảo rán,Cook the omelette in a shallow frying pan with hot oil.,Hãy rán trứng tráng trong chảo nông có dầu nóng.,Kitchen,frying pan,teapot,colander,sieve
+wok,B2,noun,chảo lòng sâu,Toss the vegetables quickly in a hot round-bottomed wok.,Hãy đảo nhanh rau trong chiếc chảo lòng sâu đáy tròn đang nóng.,Kitchen,wok,teapot,colander,sieve
+casserole,B2,noun,nồi hầm chịu nhiệt,Place the covered casserole in the oven for slow cooking.,Hãy đặt nồi hầm có nắp vào lò để nấu chậm.,Kitchen,casserole,colander,sieve,pitcher
+lid,B1,noun,nắp,Put the lid on the saucepan to keep the steam inside.,Hãy đậy nắp nồi để giữ hơi nước bên trong.,Kitchen,lid,handle,spout,base
+handle,A2,noun,tay cầm,Hold the saucepan by its insulated handle to avoid burns.,Hãy cầm nồi bằng tay cầm cách nhiệt để tránh bị bỏng.,Kitchen,handle,spout,lid,rim
+spout,B2,noun,vòi rót,Tea flows through the teapot's narrow spout when you tilt it.,Trà chảy qua vòi rót hẹp của ấm khi bạn nghiêng ấm.,Kitchen,spout,handle,lid,base
+rim,B2,noun,miệng viền,A small chip on the cup's rim scratched my lip.,Một vết mẻ nhỏ ở viền miệng tách làm xước môi tôi.,Kitchen,rim,handle,base,spout
+pantry,B2,noun,phòng chứa thực phẩm,The pantry was a small room reserved for storing dry food.,Phòng chứa thực phẩm là một phòng nhỏ dành riêng để cất đồ ăn khô.,Kitchen,pantry,bathroom,bedroom,garage
+worktop,B2,noun,mặt bàn bếp,Chop the vegetables on a board placed on the kitchen worktop.,Hãy thái rau trên tấm thớt đặt trên mặt bàn bếp.,Kitchen,worktop,ceiling,chimney,doorstep
+countertop,B2,noun,mặt bàn quầy bếp,Wipe the countertop around the sink after preparing raw chicken.,Hãy lau mặt bàn quầy quanh bồn rửa sau khi sơ chế thịt gà sống.,Kitchen,countertop,ceiling,chimney,doorstep
+jar,A2,noun,lọ có nắp,Screw the lid onto the jam jar to keep insects out.,Hãy vặn nắp lọ mứt để ngăn côn trùng vào.,Kitchen,jar,plate,saucer,fork
+can,A2,noun,lon,Open the metal can of beans with a tin opener.,Hãy mở lon đậu kim loại bằng dụng cụ mở hộp.,Kitchen,can,carton,packet,bag
+carton,B1,noun,hộp giấy đựng thực phẩm,Pour milk from the cardboard carton into your breakfast bowl.,Hãy rót sữa từ hộp giấy vào bát ăn sáng.,Kitchen,carton,jar,can,saucer
+packet,A2,noun,gói,Tear open the sealed packet of biscuits before sharing them.,Hãy xé gói bánh quy kín trước khi chia cho mọi người.,Kitchen,packet,jug,plate,mug
+corkscrew,B2,noun,dụng cụ mở nút chai,Twist the corkscrew into the cork before pulling it from the bottle.,Hãy xoắn dụng cụ mở nút vào nút bần trước khi kéo khỏi chai.,Kitchen,corkscrew,peeler,whisk,grater
+shirt,A1,noun,áo sơ mi,Fasten the buttons down the front of your shirt.,Hãy cài các nút dọc phía trước áo sơ mi.,Clothing,shirt,skirt,scarf,sock
+blouse,A2,noun,áo kiểu nữ,Her silk blouse had delicate buttons and long flowing sleeves.,Áo kiểu lụa của cô ấy có nút nhỏ tinh tế và tay áo dài mềm mại.,Clothing,blouse,skirt,scarf,sock
+trousers,A1,plural noun,quần dài,These trousers cover both legs down to the ankles.,Chiếc quần dài này che cả hai chân đến mắt cá.,Clothing,trousers,gloves,earrings,scarves
+jeans,A1,plural noun,quần bò,His blue denim jeans had pockets reinforced with metal rivets.,Chiếc quần bò bằng vải denim xanh của anh ấy có túi được gia cố bằng đinh tán.,Clothing,jeans,gloves,earrings,sandals
+shorts,A1,plural noun,quần đùi,Wear shorts that end above your knees for the beach game.,Hãy mặc quần đùi trên đầu gối để chơi trên bãi biển.,Clothing,shorts,gloves,scarves,stockings
+skirt,A1,noun,chân váy,Her skirt hung from the waist without separate trouser legs.,Chiếc chân váy của cô ấy buông từ eo và không có hai ống quần riêng.,Clothing,skirt,blouse,scarf,jacket
+dress,A1,noun,váy liền,The sleeveless dress was one piece reaching from shoulders to knees.,Chiếc váy liền không tay là một mảnh từ vai xuống đầu gối.,Clothing,dress,skirt,blouse,scarf
+jacket,A1,noun,áo khoác ngắn,Zip up your jacket before going outside in the wind.,Hãy kéo khóa áo khoác trước khi ra ngoài trời gió.,Clothing,jacket,skirt,sock,belt
+coat,A1,noun,áo khoác dài,She wore a thick winter coat over her indoor clothes.,Cô ấy mặc áo khoác mùa đông dày bên ngoài quần áo trong nhà.,Clothing,coat,skirt,sock,belt
+sweater,A2,noun,áo len,Grandmother knitted me a woolen sweater with long sleeves.,Bà đan cho tôi một chiếc áo len tay dài.,Clothing,sweater,skirt,sock,scarf
+cardigan,B1,noun,áo len cài khuy,Her knitted cardigan has long sleeves and buttons down the front.,Chiếc áo len cài khuy của cô ấy có tay dài và hàng khuy phía trước.,Clothing,cardigan,poncho,waistcoat,scarf
+hoodie,B1,noun,áo có mũ,Pull up the hood of your hoodie when the wind gets cold.,Hãy kéo mũ áo lên khi gió trở lạnh.,Clothing,hoodie,skirt,sock,belt
+sweatshirt,B1,noun,áo nỉ chui đầu,The thick sweatshirt kept my upper body warm during training.,Chiếc áo nỉ dày giữ ấm phần thân trên của tôi khi tập luyện.,Clothing,sweatshirt,skirt,sock,belt
+waistcoat,B2,noun,áo ghi lê,He wore a sleeveless waistcoat between his shirt and suit jacket.,Anh ấy mặc áo ghi lê không tay giữa sơ mi và áo vest.,Clothing,waistcoat,cardigan,poncho,scarf
+suit,A2,noun,bộ com lê,His formal suit included matching trousers and a tailored jacket.,Bộ com lê trang trọng của anh ấy gồm quần và áo khoác đồng bộ.,Clothing,suit,apron,poncho,scarf
+blazer,B2,noun,áo khoác kiểu vest,The navy blazer has tailored lapels and a single row of front buttons.,Chiếc áo khoác kiểu vest màu xanh hải quân có ve áo và một hàng khuy phía trước.,Clothing,blazer,apron,poncho,scarf
+uniform,A2,noun,đồng phục,All school pupils wore the same blue uniform every Monday.,Tất cả học sinh mặc cùng bộ đồng phục xanh vào mỗi thứ Hai.,Clothing,uniform,apron,costume,pajamas
+costume,B1,noun,trang phục hóa trang,The actor's pirate costume included an eye patch and a sword.,Trang phục cướp biển của diễn viên gồm miếng che mắt và thanh kiếm.,Clothing,costume,uniform,pajamas,overalls
+pajamas,A2,plural noun,đồ ngủ,Change into your soft pajamas before getting into bed.,Hãy thay đồ ngủ mềm trước khi lên giường.,Clothing,pajamas,overalls,uniforms,costumes
+nightdress,B1,noun,váy ngủ,She put on a loose nightdress before going to sleep.,Cô ấy mặc chiếc váy ngủ rộng trước khi đi ngủ.,Clothing,nightdress,raincoat,waistcoat,blazer
+robe,B2,noun,áo choàng,He wrapped a warm bath robe around himself after showering.,Anh ấy quấn áo choàng tắm ấm quanh người sau khi tắm vòi sen.,Clothing,robe,waistcoat,blazer,apron
+underwear,A2,noun,đồ lót,Pack clean underwear to wear beneath your outer clothes each day.,Hãy mang đồ lót sạch để mặc bên dưới quần áo ngoài mỗi ngày.,Clothing,underwear,outerwear,jewelry,headwear
+vest,B1,noun,áo lót không tay,He wore a cotton vest under his shirt for extra warmth.,Anh ấy mặc áo lót cotton không tay dưới sơ mi để thêm ấm.,Clothing,vest,blazer,coat,apron
+bra,B1,noun,áo ngực,This supportive bra has adjustable straps and a secure back fastening.,Chiếc áo ngực nâng đỡ này có dây điều chỉnh và móc sau chắc chắn.,Clothing,bra,vest,waistcoat,scarf
+sock,A1,noun,tất,One woolen sock had a hole near the heel.,Một chiếc tất len bị thủng gần gót.,Clothing,sock,glove,scarf,hat
+stockings,B2,plural noun,tất dài,Her thin stockings covered her feet and legs above the knees.,Đôi tất mỏng của cô ấy che bàn chân và chân lên quá đầu gối.,Clothing,stockings,gloves,scarves,earrings
+tights,B1,plural noun,quần tất,These tights cover the legs and continue up to the waist.,Chiếc quần tất này che chân và kéo lên tận eo.,Clothing,tights,gloves,scarves,sandals
+shoe,A1,noun,giày,He tied the laces of his left shoe before running.,Anh ấy buộc dây chiếc giày trái trước khi chạy.,Clothing,shoe,glove,hat,scarf
+boot,A2,noun,ủng,A waterproof boot kept my foot dry in the muddy field.,Một chiếc ủng chống nước giữ chân tôi khô giữa cánh đồng lầy.,Clothing,boot,slipper,sandal,sock
+sandal,A2,noun,dép quai,The open sandal had straps but left my toes uncovered.,Chiếc dép quai có dây nhưng để hở ngón chân.,Clothing,sandal,boot,sock,glove
+slipper,A2,noun,dép đi trong nhà,He put on a soft slipper before walking across the bedroom.,Anh ấy xỏ dép mềm đi trong nhà trước khi bước qua phòng ngủ.,Clothing,slipper,boot,helmet,glove
+trainer,A2,noun,giày thể thao,The lightweight trainer cushioned my foot during the morning run.,Chiếc giày thể thao nhẹ đệm cho bàn chân tôi khi chạy buổi sáng.,Clothing,trainer,slipper,sandal,glove
+heel,B1,noun,gót giày,The high heel on her right shoe broke on the stairs.,Gót cao của chiếc giày phải bị gãy trên cầu thang.,Clothing,heel,lace,sole,buckle
+sole,B2,noun,đế giày,The rubber sole under my shoe stopped me slipping on wet tiles.,Đế cao su dưới giày giúp tôi không trượt trên gạch ướt.,Clothing,sole,lace,heel,buckle
+lace,B1,noun,dây giày,Thread the lace through the shoe's eyelets before tying a bow.,Hãy luồn dây giày qua các lỗ xỏ trước khi thắt nơ.,Clothing,lace,zipper,buckle,button
+hat,A1,noun,mũ,A wide-brimmed hat shaded her head and face from sunlight.,Một chiếc mũ vành rộng che đầu và mặt cô ấy khỏi nắng.,Clothing,hat,scarf,glove,belt
+cap,A2,noun,mũ lưỡi trai,The front peak of his cap shaded his eyes.,Phần lưỡi trai phía trước mũ che nắng cho mắt anh ấy.,Clothing,cap,scarf,glove,belt
+beanie,B2,noun,mũ len ôm đầu,She pulled a knitted beanie over her ears in winter.,Cô ấy kéo chiếc mũ len ôm đầu xuống che tai vào mùa đông.,Clothing,beanie,helmet,visor,crown
+scarf,A2,noun,khăn quàng,Wrap a woolen scarf around your neck before going out.,Hãy quấn khăn len quanh cổ trước khi ra ngoài.,Clothing,scarf,belt,glove,sock
+glove,A2,noun,găng tay,Each finger fitted into a separate part of the leather glove.,Mỗi ngón tay nằm trong một phần riêng của chiếc găng da.,Clothing,glove,mitten,sock,scarf
+mitten,B1,noun,găng tay một ngón,The mitten kept four fingers together and separated only the thumb.,Chiếc găng tay một ngón giữ bốn ngón cùng nhau và chỉ tách ngón cái.,Clothing,mitten,glove,sock,scarf
+belt,A2,noun,thắt lưng,Tighten your belt around the waist to hold the trousers up.,Hãy siết thắt lưng quanh eo để giữ quần không tụt.,Clothing,belt,scarf,glove,sock
+buckle,B1,noun,khóa thắt lưng,Fasten the metal buckle at the front of your belt.,Hãy cài khóa kim loại phía trước thắt lưng.,Clothing,buckle,zipper,button,lace
+zipper,B1,noun,khóa kéo,Pull the zipper upward to close the front of the jacket.,Hãy kéo khóa lên để đóng phía trước áo khoác.,Clothing,zipper,button,buckle,lace
+collar,A2,noun,cổ áo,Turn up the shirt collar to protect your neck from sunlight.,Hãy dựng cổ áo sơ mi để bảo vệ cổ khỏi nắng.,Clothing,collar,cuff,hem,pocket
+cuff,B2,noun,cổ tay áo,The cuff at the end of his sleeve covered his wrist.,Phần cổ tay ở cuối tay áo che cổ tay anh ấy.,Clothing,cuff,collar,hem,pocket
+sleeve,A2,noun,tay áo,Roll up each sleeve to keep your arms clear of the water.,Hãy xắn từng tay áo để cánh tay không chạm nước.,Clothing,sleeve,collar,hem,pocket
+hem,B2,noun,gấu áo hoặc váy,She shortened the skirt by sewing its bottom hem higher.,Cô ấy làm ngắn váy bằng cách may gấu dưới cao hơn.,Clothing,hem,collar,cuff,pocket
+seam,B2,noun,đường may nối,The seam joining the two pieces of fabric began to split.,Đường may nối hai mảnh vải bắt đầu bị bục.,Clothing,seam,zipper,buckle,pocket
+pocket,A2,noun,túi áo quần,Keep your small keys in the zipped pocket of your coat.,Hãy cất chìa khóa nhỏ trong túi có khóa kéo của áo khoác.,Clothing,pocket,collar,cuff,hem
+hood,B1,noun,mũ liền áo,Pull the attached hood over your head when it rains.,Hãy kéo phần mũ liền áo lên đầu khi trời mưa.,Clothing,hood,collar,cuff,hem
+lining,B2,noun,lớp lót quần áo,The coat's silky lining felt smooth against my arms.,Lớp lót lụa của áo khoác tạo cảm giác mịn trên cánh tay tôi.,Clothing,lining,zipper,buckle,hem
+fabric,B1,noun,vải,This soft fabric can be cut and sewn into curtains.,Loại vải mềm này có thể được cắt và may thành rèm.,Clothing,fabric,buckle,zipper,button
+cotton,A2,noun,bông vải,The shirt is made of cotton grown from fluffy white fibers.,Chiếc áo được làm từ bông với những sợi trắng mềm.,Clothing,cotton,leather,wool,silk
+wool,A2,noun,len,This warm wool comes from the fleece of sheep.,Loại len ấm này được lấy từ bộ lông cừu.,Clothing,wool,cotton,leather,silk
+silk,B1,noun,lụa,The delicate silk thread was produced by silkworms.,Sợi lụa mảnh được tạo ra bởi tằm.,Clothing,silk,cotton,leather,wool
+leather,B1,noun,da thuộc,The belt uses leather made from treated animal skin.,Chiếc thắt lưng dùng da thuộc được làm từ da động vật đã xử lý.,Clothing,leather,cotton,wool,silk
+denim,B1,noun,vải bò,Strong blue denim is commonly used to make jeans.,Vải bò xanh bền thường được dùng để may quần bò.,Clothing,denim,silk,velvet,lacework
+velvet,B2,noun,nhung,The velvet cushion had a thick soft surface of short fibers.,Chiếc gối nhung có bề mặt dày mềm gồm các sợi ngắn.,Clothing,velvet,denim,leather,canvas
+linen,B2,noun,vải lanh,This light linen shirt is woven from flax fibers.,Chiếc áo vải lanh nhẹ này được dệt từ sợi cây lanh.,Clothing,linen,cotton,wool,silk
+bread,A1,noun,bánh mì,The baker sliced a fresh loaf of bread for breakfast.,Người thợ cắt một ổ bánh mì mới cho bữa sáng.,Food,bread,butter,rice,cheese
+rice,A1,noun,gạo,Wash the uncooked rice before boiling its white grains.,Hãy vo gạo sống trước khi đun những hạt trắng.,Food,rice,butter,cheese,yogurt
+pasta,A2,noun,mì Ý,Boil the dried pasta until the long strands become tender.,Hãy luộc mì Ý khô cho đến khi các sợi dài mềm.,Food,pasta,butter,cheese,yogurt
+noodle,A2,noun,sợi mì,One long noodle slipped from my chopsticks into the soup.,Một sợi mì dài trượt khỏi đũa tôi xuống bát súp.,Food,noodle,dumpling,sausage,meatball
+flour,A2,noun,bột mì,Mix flour with water to make dough for bread.,Hãy trộn bột mì với nước để làm bột nhào bánh mì.,Food,flour,rice,sugar,salt
+dough,B1,noun,bột nhào,Knead the sticky dough before shaping it into a loaf.,Hãy nhào khối bột dính trước khi tạo thành ổ bánh.,Food,dough,batter,broth,gravy
+batter,B2,noun,bột bánh dạng lỏng,Pour the pancake batter into a hot frying pan.,Hãy đổ bột bánh kếp dạng lỏng vào chảo nóng.,Food,batter,dough,pastry,crumb
+yeast,B2,noun,men nở,The yeast made the bread dough rise by producing gas.,Men nở tạo khí khiến khối bột bánh mì phồng lên.,Food,yeast,salt,flour,butter
+loaf,B1,noun,ổ bánh mì,Slice the whole loaf after the bread has cooled.,Hãy cắt cả ổ bánh sau khi bánh mì đã nguội.,Food,loaf,crumb,crust,filling
+crust,B1,noun,vỏ bánh,The bread's brown crust was crisp around its soft center.,Lớp vỏ nâu của bánh giòn bao quanh ruột mềm.,Food,crust,crumb,filling,dough
+crumb,B1,noun,vụn bánh,A tiny crumb of bread fell onto the tablecloth.,Một vụn bánh mì nhỏ rơi xuống khăn trải bàn.,Food,crumb,loaf,crust,filling
+pastry,B1,noun,bánh ngọt làm từ bột nhiều bơ,The flaky pastry broke into delicate layers when I bit it.,Chiếc bánh ngọt giòn tách thành những lớp mỏng khi tôi cắn.,Food,pastry,porridge,broth,custard
+bun,B1,noun,bánh mì tròn nhỏ,The small round bun was split and filled with cheese.,Chiếc bánh mì tròn nhỏ được bổ ra và kẹp phô mai.,Food,bun,crumb,noodle,steak
+roll,A2,noun,bánh mì cuộn nhỏ,Each guest received a small bread roll beside the soup.,Mỗi vị khách nhận một chiếc bánh mì cuộn nhỏ cạnh bát súp.,Food,roll,crumb,crust,grain
+bagel,B2,noun,bánh mì vòng,The chewy bagel had a round hole through its center.,Chiếc bánh mì vòng dai có một lỗ tròn ở giữa.,Food,bagel,baguette,croissant,scone
+baguette,B1,noun,bánh mì dài kiểu Pháp,The long narrow baguette barely fitted inside the shopping bag.,Ổ bánh mì dài hẹp kiểu Pháp gần như không vừa túi mua hàng.,Food,baguette,bagel,scone,bun
+croissant,B1,noun,bánh sừng bò,The buttery croissant curved into a crescent on my breakfast plate.,Chiếc bánh sừng bò nhiều bơ cong hình trăng lưỡi liềm trên đĩa sáng.,Food,croissant,bagel,baguette,scone
+scone,B2,noun,bánh nướng nhỏ kiểu Anh,We split a small baked scone and added cream and jam.,Chúng tôi tách chiếc bánh nướng nhỏ rồi thêm kem và mứt.,Food,scone,bagel,baguette,croissant
+pancake,A2,noun,bánh kếp,Flip the thin pancake when bubbles appear on its surface.,Hãy lật chiếc bánh kếp mỏng khi bọt xuất hiện trên bề mặt.,Food,pancake,dumpling,meatball,sausage
+waffle,B1,noun,bánh quế ô vuông,The waffle had a grid of square pockets holding syrup.,Chiếc bánh quế có mạng ô vuông chứa xi rô.,Food,waffle,pancake,scone,croissant
+biscuit,A2,noun,bánh quy,She dunked a crisp sweet biscuit into her tea.,Cô ấy nhúng một chiếc bánh quy ngọt giòn vào trà.,Food,biscuit,dumpling,sausage,meatball
+cracker,B1,noun,bánh quy mặn,Spread cheese over the thin salty cracker before eating it.,Hãy phết phô mai lên chiếc bánh quy mặn mỏng trước khi ăn.,Food,cracker,pancake,muffin,dumpling
+muffin,B1,noun,bánh nướng xốp nhỏ,Each blueberry muffin rose in its own small paper case.,Mỗi chiếc bánh xốp việt quất nở trong một khuôn giấy nhỏ riêng.,Food,muffin,pancake,waffle,cracker
+cake,A1,noun,bánh ngọt,They cut the birthday cake into slices after blowing out the candles.,Họ cắt bánh sinh nhật thành lát sau khi thổi tắt nến.,Food,cake,bread,rice,pasta
+icing,B2,noun,lớp kem phủ bánh,She piped pink icing around the edge of the cake.,Cô ấy bắt lớp kem phủ màu hồng quanh mép bánh.,Food,icing,gravy,broth,dough
+filling,B1,noun,nhân bánh,The dumpling's savory filling contained minced pork and chopped mushrooms.,Phần nhân mặn của bánh bao có thịt lợn băm và nấm thái nhỏ.,Food,filling,crust,crumb,icing
+sandwich,A1,noun,bánh mì kẹp,Place the cheese between two bread slices to make a sandwich.,Hãy đặt phô mai giữa hai lát bánh mì để làm bánh kẹp.,Food,sandwich,dumpling,pancake,waffle
+burger,A2,noun,bánh mì kẹp thịt tròn,The burger contained a beef patty inside a round bread bun.,Chiếc bánh mì tròn kẹp một miếng thịt bò bên trong.,Food,burger,dumpling,pancake,waffle
+pizza,A1,noun,bánh pizza,The round pizza had tomato sauce and melted cheese on its base.,Chiếc pizza tròn có sốt cà chua và phô mai chảy trên đế.,Food,pizza,sandwich,pancake,dumpling
+sausage,A2,noun,xúc xích,The sausage contained seasoned meat packed inside a thin casing.,Xúc xích chứa thịt tẩm gia vị bên trong một lớp vỏ mỏng.,Food,sausage,steak,meatball,fillet
+bacon,B1,noun,thịt ba chỉ xông khói,The bacon came in thin smoked strips cut from pork belly.,Thịt ba chỉ xông khói được cắt thành các dải mỏng từ phần bụng lợn.,Food,bacon,mince,fillet,sausage
+ham,A2,noun,giăm bông,The cured ham came from the hind leg of a pig.,Giăm bông đã được ướp từ phần đùi sau của lợn.,Food,ham,mince,fillet,sausage
+beef,A2,noun,thịt bò,The butcher sells beef from cattle raised on a nearby farm.,Người bán thịt bán thịt bò từ gia súc nuôi ở trang trại gần đó.,Food,beef,pork,lamb,chicken
+pork,A2,noun,thịt lợn,We bought pork from the pig farm for our dumpling filling.,Chúng tôi mua thịt lợn từ trại lợn để làm nhân bánh.,Food,pork,beef,lamb,chicken
+lamb,B1,noun,thịt cừu non,The restaurant serves lamb from young sheep raised in the hills.,Nhà hàng phục vụ thịt cừu non từ những con cừu nuôi trên đồi.,Food,lamb,beef,pork,chicken
+chicken,A1,noun,thịt gà,The roast chicken came from a bird raised on our farm.,Món thịt gà quay được làm từ con gà nuôi ở trang trại chúng tôi.,Food,chicken,beef,pork,lamb
+turkey,B1,noun,gà tây,The turkey was a large bird with a fleshy neck wattle.,Gà tây là một loài chim lớn có phần da thịt rủ dưới cổ.,Food,turkey,salmon,tuna,shrimp
+duck,A2,noun,vịt,The chef roasted a web-footed duck with its crisp skin intact.,Đầu bếp quay một con vịt có chân màng và giữ nguyên lớp da giòn.,Food,duck,tuna,salmon,shrimp
+steak,B1,noun,miếng bít tết,The thick beef steak was grilled whole rather than minced.,Miếng bít tết bò dày được nướng nguyên miếng thay vì băm.,Food,steak,meatball,sausage,dumpling
+mince,B2,noun,thịt băm,Cook the finely chopped beef mince before adding tomato sauce.,Hãy nấu thịt bò băm nhỏ trước khi thêm sốt cà chua.,Food,mince,steak,fillet,sausage
+meatball,B1,noun,viên thịt,She shaped the seasoned mince into a round meatball.,Cô ấy nặn thịt băm tẩm gia vị thành một viên tròn.,Food,meatball,steak,fillet,sausage
+fillet,B2,noun,miếng thịt hoặc cá lọc xương,The fish fillet had no bones left inside it.,Miếng phi lê cá đã được lọc hết xương bên trong.,Food,fillet,shell,scale,fin
+fish,A1,noun,cá làm thực phẩm,We baked fresh fish caught in the lake this morning.,Chúng tôi nướng cá tươi được bắt trong hồ sáng nay.,Food,fish,beef,pork,lamb
+salmon,B1,noun,cá hồi,The salmon had distinctive pink flesh and was served with lemon.,Cá hồi có thịt hồng đặc trưng và được ăn với chanh.,Food,salmon,tuna,cod,sardine
+tuna,B1,noun,cá ngừ,The tuna was a large sea fish with a streamlined body.,Cá ngừ là loài cá biển lớn có thân thuôn giúp bơi nhanh.,Food,tuna,shrimp,crab,lobster
+cod,B2,noun,cá tuyết,The cod had flaky white flesh under its crisp batter.,Cá tuyết có thịt trắng dễ tách lớp bên dưới lớp bột giòn.,Food,cod,salmon,tuna,sardine
+sardine,B2,noun,cá mòi,A small oily sardine lay beside others in the flat tin.,Một con cá mòi nhỏ nhiều dầu nằm cạnh những con khác trong hộp dẹt.,Food,sardine,lobster,crab,oyster
+shrimp,B1,noun,tôm,Peel the curved shrimp and remove its head before eating.,Hãy bóc vỏ con tôm cong rồi bỏ đầu trước khi ăn.,Food,shrimp,oyster,mussel,clam
+crab,B1,noun,cua,Crack the crab's broad shell and two large claws.,Hãy đập vỏ rộng và hai càng lớn của con cua.,Food,crab,shrimp,oyster,mussel
+lobster,B2,noun,tôm hùm,The large lobster had a long body and two heavy claws.,Con tôm hùm lớn có thân dài và hai càng nặng.,Food,lobster,shrimp,oyster,mussel
+oyster,B2,noun,hàu,The oyster was served raw inside one half of its rough shell.,Con hàu được ăn sống trong một nửa vỏ nhám của nó.,Food,oyster,shrimp,lobster,crab
+mussel,B2,noun,vẹm,The cooked mussel opened its long dark shell in the broth.,Con vẹm chín mở lớp vỏ dài sẫm màu trong nước dùng.,Food,mussel,shrimp,lobster,crab
+clam,B2,noun,nghêu,The clam closed its rounded shells tightly when we touched it.,Con nghêu khép chặt hai mảnh vỏ tròn khi chúng tôi chạm vào.,Food,clam,shrimp,lobster,crab
+squid,B2,noun,mực ống,The chef cut the squid's tubular body into rings.,Đầu bếp cắt phần thân hình ống của con mực thành khoanh.,Food,squid,oyster,mussel,clam
+octopus,B2,noun,bạch tuộc,The cooked octopus had eight arms covered with small suckers.,Con bạch tuộc đã nấu có tám tay với những giác hút nhỏ.,Food,octopus,squid,oyster,mussel
+egg,A1,noun,trứng,Crack the egg and separate its white from the yolk.,Hãy đập trứng rồi tách lòng trắng khỏi lòng đỏ.,Food,egg,potato,onion,lemon
+yolk,B1,noun,lòng đỏ trứng,The yellow yolk sat in the center of the egg white.,Lòng đỏ màu vàng nằm giữa lòng trắng trứng.,Food,yolk,shell,peel,rind
+shell,B1,noun,vỏ trứng,Crack the egg's hard shell without breaking the yolk.,Hãy đập lớp vỏ cứng của trứng mà không làm vỡ lòng đỏ.,Food,shell,yolk,filling,crumb
+omelette,A2,noun,trứng tráng,Fold the beaten-egg omelette around its cheese and mushroom filling.,Hãy gấp món trứng tráng từ trứng đánh quanh nhân phô mai và nấm.,Food,omelette,pancake,waffle,scone
+porridge,B1,noun,cháo yến mạch,Stir the oats into hot milk to make thick porridge.,Hãy khuấy yến mạch vào sữa nóng để nấu cháo đặc.,Food,porridge,gravy,broth,custard
+milk,A1,noun,sữa,The farmer collected fresh milk from the cows before sunrise.,Người nông dân lấy sữa tươi từ những con bò trước bình minh.,Food,milk,honey,juice,oil
+butter,A2,noun,bơ động vật,Spread the soft butter made from cream onto warm toast.,Hãy phết bơ mềm làm từ kem sữa lên bánh mì nướng ấm.,Food,butter,jam,honey,margarine
+cheese,A1,noun,phô mai,The cheese was made by pressing the curds from milk.,Phô mai được làm bằng cách ép phần sữa đông.,Food,cheese,butter,honey,cream
+yogurt,A2,noun,sữa chua,The yogurt tasted tangy because bacteria had fermented the milk.,Sữa chua có vị chua dịu vì vi khuẩn đã lên men sữa.,Food,yogurt,butter,cheese,cream
+cream,A2,noun,kem sữa,The rich cream was skimmed from the top of the milk.,Lớp kem béo được hớt từ mặt trên của sữa.,Food,cream,yogurt,cheese,butter
+custard,B2,noun,kem trứng,The custard thickened as we heated milk with egg yolks.,Kem trứng đặc lại khi chúng tôi đun sữa với lòng đỏ.,Food,custard,broth,gravy,dough
+curd,C1,noun,sữa đông,A soft white curd formed when acid separated the milk.,Một phần sữa đông trắng mềm hình thành khi axit làm sữa tách lớp.,Food,curd,crumb,rind,peel
+whey,C1,noun,nước sữa sau tách đông,The watery whey drained away from the solid cheese curds.,Phần nước sữa loãng chảy ra khỏi phần sữa đông rắn.,Food,whey,icing,gravy,batter
+margarine,B2,noun,bơ thực vật,This margarine uses vegetable oils instead of dairy cream.,Loại bơ thực vật này dùng dầu thực vật thay cho kem sữa.,Food,margarine,butter,cheese,yogurt
+sugar,A1,noun,đường,The white sugar dissolved into the tea and made it sweet.,Đường trắng tan vào trà và làm trà ngọt.,Food,sugar,salt,pepper,flour
+salt,A1,noun,muối,The white salt crystals came from seawater and tasted distinctly salty.,Những tinh thể muối trắng có nguồn gốc từ nước biển và có vị mặn rõ rệt.,Food,salt,sugar,flour,yeast
+pepper,A2,noun,hạt tiêu,Grind black pepper over the soup for a sharp spicy flavor.,Hãy xay hạt tiêu đen lên súp để có vị cay nồng.,Food,pepper,sugar,flour,yeast
+vinegar,B1,noun,giấm,The sour vinegar sharpened the flavor of our salad dressing.,Giấm chua làm vị sốt trộn salad đậm hơn.,Food,vinegar,honey,cream,syrup
+oil,A2,noun,dầu ăn,Heat a little cooking oil in the pan before frying.,Hãy làm nóng một ít dầu ăn trong chảo trước khi rán.,Food,oil,vinegar,honey,juice
+honey,A2,noun,mật ong,The bees stored golden honey in the wax cells.,Ong cất mật màu vàng trong những ô sáp.,Food,honey,syrup,jam,sugar
+jam,A2,noun,mứt nhuyễn,The strawberry jam contained crushed fruit cooked with sugar.,Mứt dâu chứa trái cây nghiền nấu với đường.,Food,jam,honey,cream,butter
+marmalade,B2,noun,mứt cam có vỏ,The orange marmalade contained thin strips of citrus peel.,Mứt cam chứa những dải vỏ quả có múi mỏng.,Food,marmalade,honey,cream,butter
+syrup,B1,noun,xi rô,Pour the sweet liquid syrup over the pancakes before serving.,Hãy rót xi rô lỏng ngọt lên bánh kếp trước khi ăn.,Food,syrup,vinegar,broth,gravy
+sauce,A2,noun,nước sốt,The chef poured a thick tomato sauce over the pasta.,Đầu bếp rưới sốt cà chua đặc lên mì Ý.,Food,sauce,dough,batter,icing
+gravy,B2,noun,nước sốt thịt,Make gravy by thickening the juices left from roasting meat.,Hãy làm sốt thịt bằng cách làm đặc phần nước còn lại sau khi quay thịt.,Food,gravy,custard,icing,jam
+broth,B2,noun,nước dùng,Simmer chicken bones to make a clear savory broth.,Hãy ninh xương gà để làm nước dùng trong có vị đậm đà.,Food,broth,custard,icing,jam
+ketchup,B1,noun,tương cà,The red ketchup combined tomatoes with sugar and vinegar.,Tương cà đỏ kết hợp cà chua với đường và giấm.,Food,ketchup,mustard,mayonnaise,pesto
+mustard,B2,noun,mù tạt,The sharp yellow mustard was made from ground spicy seeds.,Mù tạt vàng cay nồng được làm từ hạt gia vị nghiền.,Food,mustard,ketchup,mayonnaise,pesto
+mayonnaise,B2,noun,sốt mayonnaise,Whisk egg yolk and oil together to make smooth mayonnaise.,Hãy đánh lòng đỏ và dầu với nhau để làm sốt mayonnaise mịn.,Food,mayonnaise,ketchup,mustard,pesto
+pesto,C1,noun,sốt pesto,Blend basil with pine nuts and olive oil to make pesto.,Hãy xay húng quế với hạt thông và dầu ô liu để làm sốt pesto.,Food,pesto,ketchup,mustard,mayonnaise
+chutney,C1,noun,sốt trái cây gia vị,The spicy fruit chutney contained vinegar and chopped mango.,Sốt trái cây gia vị cay chứa giấm và xoài thái nhỏ.,Food,chutney,custard,icing,cream
+pickle,B1,noun,dưa ngâm giấm,The crunchy cucumber pickle had soaked in vinegar and spices.,Miếng dưa chuột giòn đã được ngâm trong giấm và gia vị.,Food,pickle,custard,icing,cream
+relish,C1,noun,sốt rau quả băm,A spoonful of chopped cucumber relish added crunch to the burger.,Một thìa sốt dưa chuột băm tạo độ giòn cho bánh mì kẹp thịt.,Food,relish,custard,icing,cream
+condiment,B2,noun,gia vị dùng trên bàn ăn,Salt is a condiment that diners add at the table.,Muối là gia vị mà người ăn thêm vào tại bàn.,Food,condiment,appliance,utensil,tablecloth
+seasoning,B2,noun,gia vị nêm nếm,Taste the soup and adjust its seasoning with salt and herbs.,Hãy nếm súp rồi điều chỉnh gia vị bằng muối và thảo mộc.,Food,seasoning,texture,temperature,portion
+cinnamon,B2,noun,quế,The warm brown cinnamon came from the inner bark of a tree.,Quế nâu có mùi ấm được lấy từ lớp vỏ trong của một loài cây.,Food,cinnamon,ginger,garlic,vanilla
+ginger,B1,noun,gừng,Slice the spicy ginger root thinly for the warming tea.,Hãy thái mỏng củ gừng cay để pha trà ấm.,Food,ginger,cinnamon,vanilla,clove
+garlic,A2,noun,tỏi,Peel a garlic clove and crush it before frying.,Hãy bóc một tép tỏi rồi đập dập trước khi phi.,Food,garlic,ginger,onion,leek
+clove,B2,noun,đinh hương,The dried clove looked like a tiny brown nail and smelled strong.,Nụ đinh hương khô trông như chiếc đinh nâu nhỏ và có mùi mạnh.,Food,clove,garlic,ginger,vanilla
+vanilla,B2,noun,vani,Flavor the custard with vanilla from a long fragrant pod.,Hãy tạo hương cho kem trứng bằng vani từ quả dài thơm.,Food,vanilla,garlic,ginger,mustard
+nutmeg,C1,noun,nhục đậu khấu,Grate a little nutmeg seed over the creamy potato dish.,Hãy bào một ít hạt nhục đậu khấu lên món khoai tây kem.,Food,nutmeg,vanilla,ginger,garlic
+cumin,C1,noun,thì là Ai Cập,The earthy cumin seeds gave the curry a warm distinctive flavor.,Hạt thì là Ai Cập có mùi đất tạo hương ấm đặc trưng cho cà ri.,Food,cumin,vanilla,sugar,cinnamon
+saffron,C1,noun,nghệ tây,A few red saffron threads turned the rice a golden color.,Vài sợi nghệ tây đỏ làm cơm chuyển sang màu vàng.,Food,saffron,pepper,vanilla,garlic
+paprika,B2,noun,ớt bột paprika,The red paprika was made by grinding dried sweet peppers.,Bột paprika đỏ được làm bằng cách nghiền ớt ngọt khô.,Food,paprika,cinnamon,nutmeg,cumin
+turmeric,B2,noun,nghệ,The yellow turmeric powder stained the white chopping board.,Bột nghệ vàng làm ố chiếc thớt trắng.,Food,turmeric,paprika,cinnamon,pepper
+parsley,B2,noun,mùi tây,The parsley garnish had flat green leaves with pointed edges.,Phần rau mùi tây trang trí có lá xanh phẳng với mép nhọn.,Food,parsley,cinnamon,nutmeg,clove
+basil,B2,noun,húng quế,Fresh basil leaves are a key ingredient in traditional green pesto.,Lá húng quế tươi là thành phần chính của sốt pesto xanh truyền thống.,Food,basil,parsley,mint,thyme
+mint,B1,noun,bạc hà,The fresh mint leaves gave the drink a cool menthol flavor.,Lá bạc hà tươi tạo cho đồ uống hương vị the mát của tinh dầu bạc hà.,Food,mint,basil,parsley,rosemary
+thyme,C1,noun,cỏ xạ hương,Tiny thyme leaves flavored the roast with their earthy fragrance.,Những lá cỏ xạ hương nhỏ tạo hương thơm mộc cho món quay.,Food,thyme,sugar,vanilla,ginger
+rosemary,B2,noun,hương thảo,The rosemary sprig had stiff needle-like leaves and a piney smell.,Nhánh hương thảo có lá cứng như kim và mùi giống thông.,Food,rosemary,parsley,mint,basil
+oregano,C1,noun,kinh giới cay,Dried oregano leaves added their pungent herbal flavor to the pizza.,Lá kinh giới cay khô tạo vị thảo mộc nồng cho bánh pizza.,Food,oregano,vanilla,cinnamon,nutmeg
+sesame,B2,noun,vừng,Small sesame seeds covered the surface of the bread bun.,Những hạt vừng nhỏ phủ trên mặt bánh mì tròn.,Food,sesame,garlic,ginger,vanilla
+peanut,A2,noun,lạc,The peanut grew underground inside a thin rough shell.,Hạt lạc mọc dưới đất trong một lớp vỏ mỏng nhám.,Food,peanut,walnut,almond,hazelnut
+almond,B2,noun,hạnh nhân,The almond is a pale nut traditionally ground to make marzipan.,Hạnh nhân là loại hạt có màu nhạt thường được nghiền để làm bánh hạnh nhân.,Food,almond,walnut,hazelnut,peanut
+walnut,B2,noun,óc chó,The walnut had a wrinkled kernel resembling a tiny brain.,Hạt óc chó có nhân nhăn trông giống một bộ não nhỏ.,Food,walnut,almond,hazelnut,peanut
+hazelnut,C1,noun,hạt phỉ,The small round hazelnut grew inside a leafy husk on a shrub.,Hạt phỉ nhỏ tròn mọc trong một lớp bao có lá trên cây bụi.,Food,hazelnut,walnut,almond,peanut
+cashew,B2,noun,hạt điều,The curved cashew nut was shaped like a small kidney.,Hạt điều cong có hình giống một quả thận nhỏ.,Food,cashew,walnut,hazelnut,peanut
+pistachio,C1,noun,hạt dẻ cười,The green pistachio kernel showed through its split pale shell.,Nhân dẻ cười xanh lộ qua lớp vỏ nhạt màu nứt đôi.,Food,pistachio,walnut,hazelnut,peanut
+raisin,B1,noun,nho khô,The small wrinkled raisin was a grape before being dried.,Quả nho khô nhỏ nhăn nheo vốn là nho tươi trước khi được sấy.,Food,raisin,prune,apricot,fig
+prune,B2,noun,mận khô,The dark wrinkled prune was made by drying a plum.,Quả mận khô sẫm màu nhăn nheo được làm bằng cách sấy mận.,Food,prune,raisin,apricot,fig
+nectarine,B2,noun,đào trơn,The nectarine resembled a peach but had smooth hairless skin.,Quả đào trơn giống đào thường nhưng có vỏ nhẵn không lông.,Food,nectarine,apricot,plum,pear
+apricot,B1,noun,mơ,The small orange apricot was velvety and smaller than a peach.,Quả mơ nhỏ màu cam có lớp lông mịn và nhỏ hơn quả đào.,Food,apricot,pear,apple,grape
+fig,B2,noun,sung ngọt,The ripe fig had soft purple skin and many tiny seeds inside.,Quả sung ngọt chín có vỏ tím mềm và nhiều hạt li ti bên trong.,Food,fig,pear,apple,plum
+pomegranate,B2,noun,lựu,Break the pomegranate open to reveal its clusters of juicy red seeds.,Hãy bổ quả lựu để lộ những cụm hạt đỏ mọng nước.,Food,pomegranate,pear,apple,plum
+persimmon,C1,noun,hồng,The orange persimmon had four broad green sepals around its stalk.,Quả hồng màu cam có bốn lá đài xanh rộng quanh cuống.,Food,persimmon,grape,fig,pear

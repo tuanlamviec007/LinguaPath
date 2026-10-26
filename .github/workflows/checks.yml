@@ -1,0 +1,88 @@
+name: Project checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  application:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: linguapath_ci
+          POSTGRES_USER: linguapath_ci
+          # Disposable CI service only, not a deployment credential.
+          POSTGRES_PASSWORD: linguapath_ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U linguapath_ci -d linguapath_ci"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    env:
+      DATABASE_URL: postgresql://linguapath_ci:linguapath_ci@127.0.0.1:5432/linguapath_ci
+      DJANGO_DEBUG: 'true'
+      AI_TUTOR_ENABLED: 'false'
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.lock
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: deploy/cloudflare/package-lock.json
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --require-hashes -r requirements.lock
+          python -m pip check
+      - name: Complete Django and Node checks on PostgreSQL
+        run: sh scripts/check-project.sh --require-postgresql
+      - name: Require a release gate on an empty database
+        run: |
+          if python manage.py check_schema; then
+            echo 'Empty CI database unexpectedly passed schema readiness.'
+            exit 1
+          fi
+      - name: Rehearse migrations on the disposable CI database
+        run: |
+          python manage.py migrate --noinput
+          python manage.py check_schema
+          python manage.py check_weak_word_outcomes
+      - name: Production settings and static assets
+        env:
+          DJANGO_DEBUG: 'false'
+          DJANGO_SECRET_KEY: ci-only-placeholder-key-never-for-production-012345678901234567890
+          DJANGO_ALLOWED_HOSTS: linguapath.example
+          DJANGO_CSRF_TRUSTED_ORIGINS: https://linguapath.example
+        run: |
+          python manage.py check --deploy --fail-level ERROR
+          python manage.py check_release --format json
+          python manage.py collectstatic --noinput
+      - name: Clean Worker dependencies and package validation
+        working-directory: deploy/cloudflare
+        run: |
+          npm ci --no-audit --no-fund
+          npx wrangler deploy --dry-run --containers-rollout=none --outdir "$RUNNER_TEMP/worker-build"
+      - name: Build production image without deployment
+        run: docker build --tag "linguapath-ci:$GITHUB_SHA" .
+      - name: Container runtime, CSRF and session persistence after restart
+        run: python scripts/smoke-production.py --image "linguapath-ci:$GITHUB_SHA"

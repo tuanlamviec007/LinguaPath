@@ -1,0 +1,42 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Đang làm quiz · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/quiz.css' %}">
+<link rel="stylesheet" href="{% static 'css/quiz-recall.css' %}">
+<link rel="stylesheet" href="{% static 'css/quiz-due.css' %}">
+<div class="lp-quiz-page lp-quiz-play-page">
+  {% if quiz.vocabulary_source == 'due' %}<aside class="lp-due-note" aria-label="Gõ từ đến lịch ôn"><strong>{% if quiz.is_retry %}Luyện lại từ đến lịch ôn{% else %}Gõ từ đến lịch ôn{% endif %}</strong><p>{% if quiz.is_retry %}Lượt luyện lại không tạo thêm bản ghi kiểm tra sau khoảng cách tự đánh giá.{% else %}Thẻ được chọn khi đến hạn và đã cách lần tự đánh giá gần nhất ít nhất 24 giờ.{% endif %} Vẫn có gợi ý chữ đầu và số từ; kết quả không xác nhận nhớ lâu hoặc CEFR. Quiz không thay đổi lịch ôn flashcard.</p></aside>{% elif quiz.vocabulary_source == 'saved' %}<p class="lp-quiz-source-note">☆ Quiz từ sổ cá nhân của bạn</p>{% elif quiz.vocabulary_source == 'weak' %}<p class="lp-quiz-source-note lp-quiz-source-weak">↺ Luyện từ cần ôn · Những từ từng nhầm qua các lượt quiz</p>{% endif %}
+  <header class="lp-quiz-play-header"><a class="lp-quiz-back" href="{% url 'learning:quiz_hub' %}">← Khu thử thách</a><span class="lp-quiz-session-tag">{% if quiz.mode == 'recall' %}Gõ từ tiếng Anh{% else %}Chọn nghĩa{% endif %} · {{ quiz.cefr_level|default:'Mọi cấp độ' }}{% if quiz.topic %} · {{ quiz.topic }}{% endif %}</span></header>
+  <div class="lp-quiz-play-heading"><span class="eyebrow">MỘT TỪ NỮA, MỘT BƯỚC TIẾN</span><h1>Để trí nhớ lên tiếng.</h1>{% if quiz.mode == 'recall' %}<p>Xem nghĩa tiếng Việt và gợi ý, rồi tự gõ từ hoặc cụm từ tiếng Anh đã học. Đáp án và ví dụ sẽ mở sau khi nộp bài.</p><p class="lp-recall-rule" id="recall-rule">Nhập đúng từ/cụm từ gốc; không phân biệt hoa thường, bỏ qua khoảng trắng thừa và chấp nhận dấu nháy cong tương đương. Chưa chấp nhận từ đồng nghĩa hoặc dạng biến đổi khác.</p>{% else %}<p>Chọn nghĩa phù hợp nhất của mỗi từ. Đáp án và bản dịch sẽ mở sau khi bạn nộp bài.</p>{% endif %}</div>
+  {% if quiz.is_retry %}<section class="lp-quiz-retry-note" aria-label="Lượt ôn lại"><span aria-hidden="true">↻</span><div><strong>Gặp lại những từ từng nhầm</strong><p>Lượt ôn này giúp bạn củng cố trí nhớ và không cộng thêm XP.</p>{% if quiz.parent_quiz_id %}<a href="{% url 'learning:quiz_result' quiz.parent_quiz_id %}">Xem kết quả trước →</a>{% endif %}</div></section>{% endif %}
+  {% if quiz_error %}<div class="message error" role="alert">{{ quiz_error }}{% if quiz_conflict %} <a href="{% url 'learning:quiz_take' quiz.pk %}">Mở lại bản đã lưu</a>{% endif %}</div>{% endif %}
+  <form method="post" action="{% url 'learning:quiz_submit' quiz.pk %}" class="lp-quiz-form" data-quiz-form data-quiz-mode="{{ quiz.mode|default:'meaning' }}" data-quiz-draft-url="{% url 'learning:quiz_draft' quiz.pk %}" data-quiz-resume-url="{% url 'learning:quiz_take' quiz.pk %}" data-quiz-draft-revision="{{ quiz.draft_revision|default:0 }}" data-quiz-draft-dirty="{% if quiz_has_unsaved %}true{% else %}false{% endif %}" data-quiz-draft-conflict="{% if quiz_conflict %}true{% else %}false{% endif %}">
+    {% csrf_token %}
+    <input type="hidden" name="draft_revision" value="{{ quiz.draft_revision|default:0 }}" data-quiz-revision>
+    <div class="lp-quiz-savebar" data-quiz-savebar hidden><span class="lp-quiz-save-status" data-quiz-save-status role="status" aria-live="polite" data-state="{% if quiz.last_saved_at %}saved{% else %}idle{% endif %}">{% if quiz.last_saved_at %}Đã lưu {{ quiz.saved_count }} câu · {{ quiz.last_saved_at|date:'H:i' }}{% else %}Câu trả lời sẽ tự động lưu khi bạn nhập hoặc chọn đáp án.{% endif %}</span><div><button class="lp-quiz-save-button" type="button" data-quiz-save>Lưu ngay</button><button class="lp-quiz-save-button lp-quiz-reload" type="button" data-quiz-reload hidden>Tải lại bản đã lưu</button></div></div>
+    <noscript><p class="lp-quiz-noscript">Bạn vẫn có thể trả lời tất cả câu hỏi và nộp bài. Tự lưu và chuyển từng câu cần bật JavaScript.</p></noscript>
+    <div class="lp-quiz-progress-head"><span data-quiz-position>Bộ quiz · {{ quiz.question_count }} câu</span><span data-quiz-answered aria-live="polite">Chưa trả lời câu nào</span></div>
+    <div class="lp-quiz-progress-track" role="progressbar" aria-label="Số câu đã trả lời" aria-valuemin="0" aria-valuemax="{{ quiz.question_count }}" aria-valuenow="0" data-quiz-progress><span></span></div>
+    <nav class="lp-quiz-question-nav" aria-label="Chuyển câu hỏi" data-quiz-nav hidden>{% for question in questions %}<button type="button" class="lp-quiz-number" data-quiz-goto="{{ forloop.counter0 }}" aria-label="Đến câu {{ question.number }}">{{ question.number }}</button>{% endfor %}</nav>
+    <div class="lp-quiz-question-stack">
+      {% for question in questions %}
+      <fieldset class="lp-quiz-question" data-quiz-question="{{ forloop.counter0 }}" tabindex="-1">
+        <legend class="lp-quiz-question-legend"><span id="quiz-number-{{ question.number }}">CÂU {{ question.number|stringformat:'02d' }}</span><span aria-hidden="true">✦</span></legend>
+        {% if quiz.mode == 'recall' %}
+        <div class="lp-quiz-word lp-recall-prompt"><span class="lp-quiz-word-level">{{ question.cefr_level }}{% if question.part_of_speech %} · {{ question.part_of_speech }}{% endif %}</span><p class="lp-recall-kicker">NHỚ LẠI TỪ ĐÃ HỌC</p><h2 id="recall-meaning-{{ question.number }}" lang="vi">{{ question.meaning_vi }}</h2>{% if question.recall_hint %}<p class="lp-recall-hint" id="recall-hint-{{ question.number }}"><span aria-hidden="true">✧</span> {{ question.recall_hint }}</p>{% endif %}</div>
+        <div class="lp-recall-answer"><label id="recall-label-{{ question.number }}" for="recall-answer-{{ question.number }}">Từ hoặc cụm từ tiếng Anh</label><input id="recall-answer-{{ question.number }}" type="text" name="answer_{{ question.number }}" data-quiz-text-answer value="{{ question.selected_answer }}" maxlength="240" autocomplete="off" autocapitalize="none" spellcheck="false" lang="en" placeholder="Gõ từ bạn nhớ…" aria-labelledby="quiz-number-{{ question.number }} recall-label-{{ question.number }}" aria-describedby="recall-meaning-{{ question.number }}{% if question.recall_hint %} recall-hint-{{ question.number }}{% endif %} recall-rule" required><span class="lp-recall-input-note">Bạn có thể sửa câu trả lời trước khi nộp.</span></div>
+        {% else %}
+        <div class="lp-quiz-word"><span class="lp-quiz-word-level">{{ question.cefr_level }}{% if question.part_of_speech %} · {{ question.part_of_speech }}{% endif %}</span><h2>{{ question.term }}</h2>{% if question.example_en %}<blockquote class="lp-quiz-context" lang="en">{{ question.example_en }}</blockquote>{% endif %}<p>Từ này có nghĩa là gì{% if question.example_en %} trong ngữ cảnh trên{% endif %}?</p></div>
+        <div class="lp-quiz-answer-grid">{% for option in question.options %}<label class="lp-quiz-answer"><input type="radio" name="answer_{{ question.number }}" value="{{ option.key }}"{% if option.key == question.selected_key %} checked{% endif %} required><span class="lp-quiz-option-key">{{ option.key }}</span><span class="lp-quiz-option-copy">{{ option.text }}</span><span class="lp-quiz-option-indicator" aria-hidden="true">✓</span></label>{% endfor %}</div>
+        {% endif %}
+      </fieldset>
+      {% endfor %}
+    </div>
+    <p class="lp-quiz-feedback" role="status" aria-live="polite" data-quiz-feedback></p>
+    <div class="lp-quiz-controls"><button class="button secondary" type="button" data-quiz-prev hidden>← Câu trước</button><span class="lp-quiz-controls-note">Bạn có thể sửa câu trả lời trước khi nộp.</span><button class="button primary" type="button" data-quiz-next hidden>Câu tiếp <span aria-hidden="true">→</span></button><button class="button primary lp-quiz-submit" type="submit" data-quiz-submit{% if quiz_conflict %} disabled{% endif %}>Nộp bài & xem kết quả <span aria-hidden="true">✦</span></button></div>
+  </form>
+  <p class="lp-quiz-footer-note">Không có giới hạn thời gian. Bản nháp không chấm điểm; hãy kiểm tra trạng thái lưu trước khi rời trang.</p>
+</div>
+<script src="{% static 'js/quiz.js' %}" defer></script>
+{% endblock %}

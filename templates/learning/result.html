@@ -1,0 +1,44 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Kết quả luyện tập · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/listening-workspace.css' %}">
+<section class="learning-result-head">
+  <div class="learning-result-score" aria-label="Tỷ lệ trả lời đúng {{ attempt.accuracy }} phần trăm">{{ attempt.accuracy }}<small>%</small></div>
+  <div>
+    <span class="eyebrow">LƯỢT LUYỆN ĐÃ HOÀN THÀNH</span>
+    <h1>{{ result.content_title }}</h1>
+    <p>Bạn trả lời đúng <strong>{{ attempt.correct_count }}/{{ attempt.question_count }} câu</strong>. Xem lại cách chọn đáp án và luyện tiếp những câu cần củng cố.</p>
+    <p>Kết quả luyện tập trên website, không phải điểm thi chính thức{% if result.skill == 'listening' %}; bài nghe cho phép sử dụng công cụ hỗ trợ{% endif %}.</p>
+    <div class="learning-result-actions">
+      {% if error_count %}<a class="button primary" href="{% url 'learning:mistake_notebook' %}">Ôn {{ error_count }} câu sai trong Sổ lỗi</a>{% endif %}
+      <a class="button {% if error_count %}secondary{% else %}primary{% endif %}" href="{% url 'learning:practice_list' %}">Chọn bài luyện tiếp</a>
+      <a class="button secondary" href="{% url 'progress' %}">Xem tiến độ học</a>
+    </div>
+  </div>
+</section>
+{% if legacy_result %}<p class="panel" role="note">Lượt luyện cũ chưa lưu bản gốc của câu hỏi và đáp án. Điểm đã nộp được giữ nguyên; nội dung giải thích bên dưới lấy từ học liệu hiện tại và có thể đã thay đổi.</p>{% endif %}
+{% if result_unavailable %}<p class="panel" role="alert">Không thể đọc bản kết quả gốc của lượt luyện này. Điểm đã nộp vẫn được giữ; vui lòng liên hệ người quản lý để kiểm tra dữ liệu.</p>{% endif %}
+<section class="explanation-list" aria-label="Đáp án và lời giải từng câu">
+  {% for answer in answers %}
+    <article class="explanation-card">
+      <div class="learning-result-question">
+        <span class="eyebrow">CÂU {{ forloop.counter }}</span>
+        <div class="explanation-status {% if answer.is_correct %}correct{% else %}incorrect{% endif %}">{% if answer.is_correct %}✓ Đúng{% else %}↻ Cần xem lại{% endif %}</div>
+      </div>
+      {% ifchanged answer.question.passage answer.question.audio_url answer.question.audio_script %}
+        {% if answer.question.passage %}<div class="passage">{{ answer.question.passage|linebreaks }}</div>{% endif %}
+        {% if answer.question.audio_url or answer.question.audio_script %}{% include 'learning/listening_audio.html' with question=answer.question only %}{% endif %}
+      {% endifchanged %}
+      <h2>{{ answer.question.prompt }}</h2>
+      <p><b>Đáp án đúng:</b> {% for option in answer.question.options %}{% if option.is_correct %}{{ option.label }}. {{ option.text }}{% endif %}{% endfor %}</p>
+      {% if answer.selected_option %}<p><b>Lựa chọn của bạn:</b> {{ answer.selected_option.label }}. {{ answer.selected_option.text }}</p>{% else %}<p><b>Lựa chọn của bạn:</b> Chưa trả lời</p>{% endif %}
+      <p class="explanation-text">{{ answer.question.explanation_vi|default:answer.question.explanation }}</p>
+      {% if answer.question.transcript and not answer.question.audio_url and not answer.question.audio_script %}<div class="transcript"><b>Bản chép lời</b><p lang="en">{{ answer.question.transcript }}</p></div>{% endif %}
+      <div class="rationale-list"><b>Phân tích phương án</b>{% for option in answer.question.options %}<p><strong>{{ option.label }}.</strong> {{ option.explanation_vi }}</p>{% endfor %}</div>
+      <a class="subtle-link" href="{% url 'tutor' %}?question_id={{ answer.question.id }}">Hỏi trợ lý về câu hiện tại →</a>
+    </article>
+  {% endfor %}
+</section>
+<script src="{% static 'js/listening-workspace.js' %}" defer></script>
+{% endblock %}

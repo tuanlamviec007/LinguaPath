@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-10-24T12:44:38.844657+00:00",
+  "database": "isolated SQLite :memory:",
+  "scope": "Synthetic local materialized read benchmark, not PostgreSQL/production latency or a before-after claim.",
+  "visible_cards": 3000,
+  "questions_per_session": 15,
+  "snapshot_bytes_per_session": 30687,
+  "read_repetitions": 3,
+  "measurements": [
+    {
+      "history_sessions": 10,
+      "logical_snapshot_bytes": 306870,
+      "outcome_groups": 15,
+      "weak_words": 15,
+      "read_samples_ms": [
+        46.65,
+        42.434,
+        85.007
+      ],
+      "median_read_ms": 46.65,
+      "read_query_counts": [
+        5,
+        5,
+        5
+      ],
+      "selected_history_payload_columns": 0,
+      "rebuild_ms": 9.284,
+      "rebuilt_quizzes": 10
+    },
+    {
+      "history_sessions": 1000,
+      "logical_snapshot_bytes": 30687000,
+      "outcome_groups": 15,
+      "weak_words": 15,
+      "read_samples_ms": [
+        60.101,
+        80.558,
+        56.945
+      ],
+      "median_read_ms": 60.101,
+      "read_query_counts": [
+        5,
+        5,
+        5
+      ],
+      "selected_history_payload_columns": 0,
+      "rebuild_ms": 412.008,
+      "rebuilt_quizzes": 1000
+    },
+    {
+      "history_sessions": 5000,
+      "logical_snapshot_bytes": 153435000,
+      "outcome_groups": 15,
+      "weak_words": 15,
+      "read_samples_ms": [
+        71.06,
+        53.606,
+        62.344
+      ],
+      "median_read_ms": 62.344,
+      "read_query_counts": [
+        5,
+        5,
+        5
+      ],
+      "selected_history_payload_columns": 0,
+      "rebuild_ms": 1760.158,
+      "rebuilt_quizzes": 5000
+    }
+  ],
+  "code_sha256": {
+    "learning/weak_word_outcomes.py": "f0f73d05eccb4086f8a2371cd147c2ea422918cb8aa4597b3a01441430be866e",
+    "learning/weak_word_models.py": "7cd82117a7acf28f75844991d78dbe1288d120b3ee75a2a4d758ea5c2b86b91f",
+    "learning/quiz_answers.py": "3f625ec09e055db6f2eac62eef8ccae589e414ef67831803b6a58606428e6bb9",
+    "learning/quiz_recall.py": "8cee124afe7aa704a60df3bcd349deb808de710ba8f894000cf16fda5d409b6b"
+  },
+  "malformed_history_policy": "Conflicting duplicate card identities/recall cues within one session are excluded for that card; exact duplicates keep first valid answer once. Canonical quizzes contain unique card IDs."
+}

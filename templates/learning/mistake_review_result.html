@@ -1,0 +1,62 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Kết quả lượt ôn · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/mistake-review.css' %}">
+<section class="mistake-result-hero" aria-labelledby="mistake-result-title">
+  <a class="subtle-link" href="{% url 'learning:mistake_notebook' %}">← Về sổ lỗi</a>
+  <span class="eyebrow">KẾT QUẢ LƯỢT ÔN · {{ result.exam_type }}</span>
+  <h1 id="mistake-result-title">Lượt ôn đã hoàn tất</h1>
+  <p>Đây là kết quả của lượt làm này, không phải đánh giá trình độ hay mức độ thành thạo.</p>
+  <div class="mistake-result-stats" aria-label="Tóm tắt kết quả">
+    <div><strong>{{ result.correct_count }} / {{ result.question_count }}</strong><span>câu đúng</span></div>
+    <div><strong>{{ result.wrong_count }}</strong><span>câu sai</span></div>
+    <div><strong>{{ result.blank_count }}</strong><span>câu bỏ trống</span></div>
+    <div><strong>{{ result.accuracy_percent }}%</strong><span>tỉ lệ đúng lượt này</span></div>
+  </div>
+  <div class="mistake-result-actions">
+    {% if result.wrong_count or result.blank_count %}
+      <form method="post" action="{% url 'learning:start_mistake_review' %}">
+        {% csrf_token %}
+        {% if review_session.category %}<input type="hidden" name="category" value="{{ review_session.category }}">{% endif %}
+        <button class="button primary" type="submit">Ôn tiếp câu cần luyện →</button>
+      </form>
+    {% endif %}
+    <a class="button secondary" href="{% url 'learning:mistake_notebook' %}">Mở sổ lỗi</a>
+  </div>
+</section>
+
+<section class="mistake-result-review" aria-labelledby="review-answers-title">
+  <div class="mistake-result-section-heading">
+    <div><span class="eyebrow">XEM LẠI TỪNG CÂU</span><h2 id="review-answers-title">Đáp án và giải thích</h2></div>
+    <span>{{ result.answers|length }} câu</span>
+  </div>
+  {% for row in result.answers %}
+    <article class="mistake-result-card">
+      <span class="eyebrow">CÂU {{ row.position }} · {{ row.content_title }}{% if row.skill %} · {{ row.skill }}{% endif %}</span>
+      {% if row.passage %}<div class="mistake-passage">{{ row.passage|linebreaks }}</div>{% endif %}
+      {% if row.transcript %}<details class="mistake-result-transcript"><summary>Mở transcript</summary><p lang="en">{{ row.transcript|linebreaksbr }}</p></details>{% endif %}
+      <h3>{{ row.prompt }}</h3>
+      <p class="mistake-result-outcome">
+        {% if row.is_correct %}<span class="is-correct">Trả lời đúng ở lượt ôn</span>
+        {% elif row.selected_option_id %}<span class="is-wrong">Cần ôn tiếp</span>
+        {% else %}<span class="is-blank">Bỏ trống · cần ôn tiếp</span>{% endif %}
+      </p>
+      <ul class="mistake-result-options" aria-label="Các lựa chọn và giải thích">
+        {% for option in row.options %}
+          <li class="{% if option.is_correct %}is-answer{% endif %}{% if option.id == row.selected_option_id %} is-selected{% endif %}">
+            <div class="mistake-result-option-heading"><strong>{{ option.label }}. {{ option.text }}</strong>
+              {% if option.is_correct %}<span>Đáp án đúng</span>{% endif %}
+              {% if option.id == row.selected_option_id %}<span>Bạn đã chọn</span>{% endif %}
+            </div>
+            {% if option.explanation_vi %}<p>{{ option.explanation_vi }}</p>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      {% if row.explanation_vi or row.explanation %}<div class="mistake-result-explanation"><strong>Giải thích chung</strong><p>{{ row.explanation_vi|default:row.explanation|linebreaksbr }}</p></div>{% endif %}
+    </article>
+  {% empty %}
+    <p class="mistake-result-empty">Chưa có câu trả lời trong lượt này.</p>
+  {% endfor %}
+</section>
+{% endblock %}

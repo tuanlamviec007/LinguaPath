@@ -1,0 +1,3409 @@
+{
+  "schema_version": "linguapath-content-review-v1",
+  "scope": "sample_for_human_review",
+  "approval_allowed": false,
+  "authority_notice": "Phiếu mẫu để người có chuyên môn rà soát; không phê duyệt hoặc xác nhận toàn bộ bộ học liệu.",
+  "selection": {
+    "content_ids": [
+      5,
+      7,
+      9,
+      11,
+      71,
+      72,
+      75,
+      76,
+      130,
+      205
+    ],
+    "max_items_per_kind_per_content": 10,
+    "order": "content ID; item order then ID; option label then ID"
+  },
+  "checklist_template": {
+    "sense_and_context": {
+      "result": null,
+      "notes": ""
+    },
+    "answer_key": {
+      "result": null,
+      "notes": ""
+    },
+    "distractors_and_explanations": {
+      "result": null,
+      "notes": ""
+    },
+    "cefr_reference": {
+      "result": null,
+      "notes": ""
+    },
+    "source_and_rights": {
+      "result": null,
+      "notes": ""
+    },
+    "audio_and_accessibility": {
+      "result": null,
+      "notes": ""
+    }
+  },
+  "human_review": {
+    "reviewer_name": "",
+    "qualifications": "",
+    "reviewed_at": null,
+    "conclusion": null,
+    "notes": ""
+  },
+  "contents": [
+    {
+      "content": {
+        "cefr_level": "A2",
+        "content_type": "reading",
+        "description": "Bài nền tảng CEFR A2 tự biên soạn cho người học có mục tiêu TOEIC. Đây là bài luyện kỹ năng ngắn, không phải đề TOEIC/IELTS hoặc mock test chính thức. Đọc tin nhắn và xác định thay đổi cùng hành động cần làm.",
+        "difficulty": 2,
+        "estimated_minutes": 5,
+        "exam_type": "TOEIC",
+        "id": 5,
+        "is_published": true,
+        "question_type": "",
+        "review_status": "language_checked",
+        "reviewed_at": "2026-10-19T14:07:28.354673+00:00",
+        "reviewer": "AI language QA (chưa được giáo viên duyệt)",
+        "rights_note": "Văn bản, câu hỏi và đáp án tự biên soạn; audio Listening tổng hợp bằng Flite. URL chỉ tham chiếu cấp độ/kỹ năng, không sao chép bài ETS/British Council.",
+        "skill": "reading",
+        "source_checked_on": null,
+        "source_name": "Tự biên soạn; British Council LearnEnglish chỉ dùng tham chiếu cấp độ/kỹ năng",
+        "source_url": "https://learnenglish.britishcouncil.org/free-resources/reading/a2",
+        "title": "Reading A2: A change to the English study group",
+        "topic": "A2"
+      },
+      "flashcards": [],
+      "questions": [
+        {
+          "id": 5,
+          "content_id": 5,
+          "order": 1,
+          "prompt": "Where will the group meet?",
+          "passage": "Hi everyone, our English study group will meet in Room 204 this Thursday, not Room 120. We will start at 5:30 p.m. Please bring your workbook. If you cannot come, send me a message before Wednesday evening. — Mai",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "Tin nhắn cập nhật địa điểm là Room 204.",
+          "explanation_vi": "Tin nhắn cập nhật địa điểm là Room 204.",
+          "options": [
+            {
+              "id": 17,
+              "question_id": 5,
+              "label": "A",
+              "text": "Room 120",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 18,
+              "question_id": 5,
+              "label": "B",
+              "text": "Room 204",
+              "is_correct": true,
+              "explanation_vi": "Đáp án đúng."
+            },
+            {
+              "id": 19,
+              "question_id": 5,
+              "label": "C",
+              "text": "The library",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 20,
+              "question_id": 5,
+              "label": "D",
+              "text": "The café",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            }
+          ],
+          "version_hash": "928d0d42301ccfb534ac47f0b4124cbf4eb5f1e30d379fd40dd9e12c41faad9b",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 6,
+          "content_id": 5,
+          "order": 2,
+          "prompt": "What should a student do if they cannot attend?",
+          "passage": "Hi everyone, our English study group will meet in Room 204 this Thursday, not Room 120. We will start at 5:30 p.m. Please bring your workbook. If you cannot come, send me a message before Wednesday evening. — Mai",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "Người không thể tham gia cần nhắn trước tối thứ Tư.",
+          "explanation_vi": "Người không thể tham gia cần nhắn trước tối thứ Tư.",
+          "options": [
+            {
+              "id": 21,
+              "question_id": 6,
+              "label": "A",
+              "text": "Call on Thursday",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 22,
+              "question_id": 6,
+              "label": "B",
+              "text": "Bring two workbooks",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 23,
+              "question_id": 6,
+              "label": "C",
+              "text": "Message Mai before Wednesday evening",
+              "is_correct": true,
+              "explanation_vi": "Đáp án đúng."
+            },
+            {
+              "id": 24,
+              "question_id": 6,
+              "label": "D",
+              "text": "Meet in Room 120",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            }
+          ],
+          "version_hash": "9bf3529cfb12f38b4f00f707d4b34f2ebdc8b22604e20ff08351057c8b3907d7",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        }
+      ],
+      "coverage": {
+        "flashcards": {
+          "total": 0,
+          "exported": 0,
+          "complete": true
+        },
+        "questions": {
+          "total": 2,
+          "exported": 2,
+          "complete": true
+        }
+      },
+      "content_hash": "3ab27e464ce420e1386c28b10f267c4c73913b3547690dcf2870ded627d69046",
+      "structural_findings": [],
+      "findings_scope": "Structural checks of exported samples only; no linguistic or professional approval."
+    },
+    {
+      "content": {
+        "cefr_level": "A2",
+        "content_type": "listening",
+        "description": "Bài nền tảng CEFR A2 tự biên soạn cho người học có mục tiêu TOEIC. Đây là bài luyện kỹ năng ngắn, không phải đề TOEIC/IELTS hoặc mock test chính thức. Bài nghe thông báo với giọng tổng hợp; transcript mở được khi cần.",
+        "difficulty": 2,
+        "estimated_minutes": 5,
+        "exam_type": "TOEIC",
+        "id": 7,
+        "is_published": true,
+        "question_type": "",
+        "review_status": "language_checked",
+        "reviewed_at": "2026-10-19T14:07:28.426147+00:00",
+        "reviewer": "AI language QA (chưa được giáo viên duyệt)",
+        "rights_note": "Văn bản, câu hỏi và đáp án tự biên soạn; audio Listening tổng hợp bằng Flite. URL chỉ tham chiếu cấp độ/kỹ năng, không sao chép bài ETS/British Council.",
+        "skill": "listening",
+        "source_checked_on": null,
+        "source_name": "Tự biên soạn; British Council LearnEnglish chỉ dùng tham chiếu cấp độ/kỹ năng",
+        "source_url": "https://learnenglish.britishcouncil.org/free-resources/listening/a2",
+        "title": "Listening A2: A delivery update",
+        "topic": "A2"
+      },
+      "flashcards": [],
+      "questions": [
+        {
+          "id": 9,
+          "content_id": 7,
+          "order": 1,
+          "prompt": "When will the order arrive?",
+          "passage": "",
+          "audio_url": "/static/audio/listening-a2-a-delivery-update.mp3",
+          "audio_script": "Hello, this is Green Market. Your order will arrive Friday afternoon, not Thursday. The driver will call you ten minutes before delivery. Please make sure someone is available to receive the package.",
+          "transcript": "Hello, this is Green Market. Your order will arrive Friday afternoon, not Thursday. The driver will call you ten minutes before delivery. Please make sure someone is available to receive the package.",
+          "explanation": "Đơn hàng sẽ đến vào chiều thứ Sáu.",
+          "explanation_vi": "Đơn hàng sẽ đến vào chiều thứ Sáu.",
+          "options": [
+            {
+              "id": 33,
+              "question_id": 9,
+              "label": "A",
+              "text": "Thursday morning",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 34,
+              "question_id": 9,
+              "label": "B",
+              "text": "Thursday afternoon",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 35,
+              "question_id": 9,
+              "label": "C",
+              "text": "Friday afternoon",
+              "is_correct": true,
+              "explanation_vi": "Đáp án đúng."
+            },
+            {
+              "id": 36,
+              "question_id": 9,
+              "label": "D",
+              "text": "Friday evening",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            }
+          ],
+          "version_hash": "d6c101f1efa27f845a78290f5aa54ecf22a300b439d226c80b037a6ea03285d2",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 10,
+          "content_id": 7,
+          "order": 2,
+          "prompt": "What will the driver do before delivery?",
+          "passage": "",
+          "audio_url": "/static/audio/listening-a2-a-delivery-update.mp3",
+          "audio_script": "Hello, this is Green Market. Your order will arrive Friday afternoon, not Thursday. The driver will call you ten minutes before delivery. Please make sure someone is available to receive the package.",
+          "transcript": "Hello, this is Green Market. Your order will arrive Friday afternoon, not Thursday. The driver will call you ten minutes before delivery. Please make sure someone is available to receive the package.",
+          "explanation": "Tài xế sẽ gọi trước 10 phút.",
+          "explanation_vi": "Tài xế sẽ gọi trước 10 phút.",
+          "options": [
+            {
+              "id": 37,
+              "question_id": 10,
+              "label": "A",
+              "text": "Send a letter",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 38,
+              "question_id": 10,
+              "label": "B",
+              "text": "Call the customer",
+              "is_correct": true,
+              "explanation_vi": "Đáp án đúng."
+            },
+            {
+              "id": 39,
+              "question_id": 10,
+              "label": "C",
+              "text": "Cancel the order",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 40,
+              "question_id": 10,
+              "label": "D",
+              "text": "Visit the market",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            }
+          ],
+          "version_hash": "5f332dec7682d9f6487ebb2eca5998619308e3c830242209816181bed8faaa7c",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        }
+      ],
+      "coverage": {
+        "flashcards": {
+          "total": 0,
+          "exported": 0,
+          "complete": true
+        },
+        "questions": {
+          "total": 2,
+          "exported": 2,
+          "complete": true
+        }
+      },
+      "content_hash": "58cfae847b313d0f7cec525c53440e612c2989239cce5a3a646b131d1ee68ef2",
+      "structural_findings": [],
+      "findings_scope": "Structural checks of exported samples only; no linguistic or professional approval."
+    },
+    {
+      "content": {
+        "cefr_level": "A2",
+        "content_type": "listening",
+        "description": "Bài nền tảng CEFR A2 tự biên soạn cho người học có mục tiêu TOEIC. Đây là bài luyện kỹ năng ngắn, không phải đề TOEIC/IELTS hoặc mock test chính thức. Bài nghe thông báo hoạt động sinh viên với audio giọng tổng hợp.",
+        "difficulty": 2,
+        "estimated_minutes": 5,
+        "exam_type": "TOEIC",
+        "id": 9,
+        "is_published": true,
+        "question_type": "",
+        "review_status": "language_checked",
+        "reviewed_at": "2026-10-19T14:07:28.440161+00:00",
+        "reviewer": "AI language QA (chưa được giáo viên duyệt)",
+        "rights_note": "Văn bản, câu hỏi và đáp án tự biên soạn; audio Listening tổng hợp bằng Flite. URL chỉ tham chiếu cấp độ/kỹ năng, không sao chép bài ETS/British Council.",
+        "skill": "listening",
+        "source_checked_on": null,
+        "source_name": "Tự biên soạn; British Council LearnEnglish chỉ dùng tham chiếu cấp độ/kỹ năng",
+        "source_url": "https://learnenglish.britishcouncil.org/free-resources/listening/a2",
+        "title": "Listening A2: A campus workshop announcement",
+        "topic": "A2"
+      },
+      "flashcards": [],
+      "questions": [
+        {
+          "id": 13,
+          "content_id": 9,
+          "order": 1,
+          "prompt": "When will the workshop take place?",
+          "passage": "",
+          "audio_url": "/static/audio/listening-a2-a-campus-workshop-announcement.mp3",
+          "audio_script": "Hi, this is the student office. The computer workshop has moved from Tuesday to Wednesday. It will start at 4:30 p.m. in Lab 3. Please register by email before Monday evening. You do not need to bring a laptop; the lab will provide one.",
+          "transcript": "Hi, this is the student office. The computer workshop has moved from Tuesday to Wednesday. It will start at 4:30 p.m. in Lab 3. Please register by email before Monday evening. You do not need to bring a laptop; the lab will provide one.",
+          "explanation": "Buổi workshop được chuyển sang thứ Tư và bắt đầu lúc 4:30 chiều.",
+          "explanation_vi": "Buổi workshop được chuyển sang thứ Tư và bắt đầu lúc 4:30 chiều.",
+          "options": [
+            {
+              "id": 49,
+              "question_id": 13,
+              "label": "A",
+              "text": "Tuesday at 4:30 p.m.",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 50,
+              "question_id": 13,
+              "label": "B",
+              "text": "Wednesday at 4:30 p.m.",
+              "is_correct": true,
+              "explanation_vi": "Đáp án đúng."
+            },
+            {
+              "id": 51,
+              "question_id": 13,
+              "label": "C",
+              "text": "Wednesday morning",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 52,
+              "question_id": 13,
+              "label": "D",
+              "text": "Monday evening",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            }
+          ],
+          "version_hash": "c501fab2ec3c73776e297d8f04215f79b7aa2eb755c4103f6bb010931dd580a6",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 14,
+          "content_id": 9,
+          "order": 2,
+          "prompt": "How should students register?",
+          "passage": "",
+          "audio_url": "/static/audio/listening-a2-a-campus-workshop-announcement.mp3",
+          "audio_script": "Hi, this is the student office. The computer workshop has moved from Tuesday to Wednesday. It will start at 4:30 p.m. in Lab 3. Please register by email before Monday evening. You do not need to bring a laptop; the lab will provide one.",
+          "transcript": "Hi, this is the student office. The computer workshop has moved from Tuesday to Wednesday. It will start at 4:30 p.m. in Lab 3. Please register by email before Monday evening. You do not need to bring a laptop; the lab will provide one.",
+          "explanation": "Thông báo yêu cầu đăng ký qua email trước tối thứ Hai.",
+          "explanation_vi": "Thông báo yêu cầu đăng ký qua email trước tối thứ Hai.",
+          "options": [
+            {
+              "id": 53,
+              "question_id": 14,
+              "label": "A",
+              "text": "By email before Monday evening",
+              "is_correct": true,
+              "explanation_vi": "Đáp án đúng."
+            },
+            {
+              "id": 54,
+              "question_id": 14,
+              "label": "B",
+              "text": "At Lab 3 on Tuesday",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 55,
+              "question_id": 14,
+              "label": "C",
+              "text": "By bringing a laptop",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 56,
+              "question_id": 14,
+              "label": "D",
+              "text": "By calling after the workshop",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            }
+          ],
+          "version_hash": "4f13034bf4ef5578a0915b65306917386544f8dd00f7c369ec1fb6f99b1cc040",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        }
+      ],
+      "coverage": {
+        "flashcards": {
+          "total": 0,
+          "exported": 0,
+          "complete": true
+        },
+        "questions": {
+          "total": 2,
+          "exported": 2,
+          "complete": true
+        }
+      },
+      "content_hash": "6094f5b6ccde2a40ac71c97c9f01cb046da603348208da00cef6a68cab002810",
+      "structural_findings": [],
+      "findings_scope": "Structural checks of exported samples only; no linguistic or professional approval."
+    },
+    {
+      "content": {
+        "cefr_level": "A2",
+        "content_type": "reading",
+        "description": "Bài nền tảng CEFR A2 tự biên soạn cho người học có mục tiêu TOEIC. Đây là bài luyện kỹ năng ngắn, không phải đề TOEIC/IELTS hoặc mock test chính thức. Đọc email và xác định hạn trả sách cùng cách gia hạn.",
+        "difficulty": 2,
+        "estimated_minutes": 5,
+        "exam_type": "TOEIC",
+        "id": 11,
+        "is_published": true,
+        "question_type": "",
+        "review_status": "language_checked",
+        "reviewed_at": "2026-10-19T14:07:28.466795+00:00",
+        "reviewer": "AI language QA (chưa được giáo viên duyệt)",
+        "rights_note": "Văn bản, câu hỏi và đáp án tự biên soạn; audio Listening tổng hợp bằng Flite. URL chỉ tham chiếu cấp độ/kỹ năng, không sao chép bài ETS/British Council.",
+        "skill": "reading",
+        "source_checked_on": null,
+        "source_name": "Tự biên soạn; British Council LearnEnglish chỉ dùng tham chiếu cấp độ/kỹ năng",
+        "source_url": "https://learnenglish.britishcouncil.org/free-resources/reading/a2",
+        "title": "Reading A2: Returning a library book",
+        "topic": "A2"
+      },
+      "flashcards": [],
+      "questions": [
+        {
+          "id": 17,
+          "content_id": 11,
+          "order": 1,
+          "prompt": "When is the book due?",
+          "passage": "Subject: Library book reminder\nHello Mai, your book is due on Wednesday. You can renew it online before 6 p.m. on Tuesday if nobody else has reserved it. If you return it, please use the book box beside the library entrance after 5 p.m. Best, Library Desk.",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "Email ghi sách đến hạn vào thứ Tư.",
+          "explanation_vi": "Email ghi sách đến hạn vào thứ Tư.",
+          "options": [
+            {
+              "id": 65,
+              "question_id": 17,
+              "label": "A",
+              "text": "Monday",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 66,
+              "question_id": 17,
+              "label": "B",
+              "text": "Tuesday",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 67,
+              "question_id": 17,
+              "label": "C",
+              "text": "Wednesday",
+              "is_correct": true,
+              "explanation_vi": "Đáp án đúng."
+            },
+            {
+              "id": 68,
+              "question_id": 17,
+              "label": "D",
+              "text": "Thursday",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            }
+          ],
+          "version_hash": "bc629ad7fac6b7bc081320f358e0a1f7ea6478a270094b0a95752856770a3807",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 18,
+          "content_id": 11,
+          "order": 2,
+          "prompt": "How can Mai renew the book?",
+          "passage": "Subject: Library book reminder\nHello Mai, your book is due on Wednesday. You can renew it online before 6 p.m. on Tuesday if nobody else has reserved it. If you return it, please use the book box beside the library entrance after 5 p.m. Best, Library Desk.",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "Người đọc có thể gia hạn trực tuyến trước 6 giờ tối thứ Ba.",
+          "explanation_vi": "Người đọc có thể gia hạn trực tuyến trước 6 giờ tối thứ Ba.",
+          "options": [
+            {
+              "id": 69,
+              "question_id": 18,
+              "label": "A",
+              "text": "By calling on Wednesday",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 70,
+              "question_id": 18,
+              "label": "B",
+              "text": "Online before Tuesday at 6 p.m.",
+              "is_correct": true,
+              "explanation_vi": "Đáp án đúng."
+            },
+            {
+              "id": 71,
+              "question_id": 18,
+              "label": "C",
+              "text": "At the entrance after 5 p.m.",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            },
+            {
+              "id": 72,
+              "question_id": 18,
+              "label": "D",
+              "text": "By asking another student",
+              "is_correct": false,
+              "explanation_vi": "Thông tin này không khớp với nội dung bài."
+            }
+          ],
+          "version_hash": "52700f54c7a5bf42f1fef18c7883491839cce64f00465a707640d63dc5b1cd86",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        }
+      ],
+      "coverage": {
+        "flashcards": {
+          "total": 0,
+          "exported": 0,
+          "complete": true
+        },
+        "questions": {
+          "total": 2,
+          "exported": 2,
+          "complete": true
+        }
+      },
+      "content_hash": "9a88db56b83b8660733954b3e51cac47d9a47bb89ab7b3de7b1368467b24e770",
+      "structural_findings": [],
+      "findings_scope": "Structural checks of exported samples only; no linguistic or professional approval."
+    },
+    {
+      "content": {
+        "cefr_level": "B1",
+        "content_type": "reading",
+        "description": "Bài đọc tự biên soạn ở mức B1 tham khảo; luyện tìm chi tiết, suy luận và mục đích. Không phải đề thi chính thức.",
+        "difficulty": 2,
+        "estimated_minutes": 10,
+        "exam_type": "TOEIC",
+        "id": 71,
+        "is_published": true,
+        "question_type": "foundation-advanced",
+        "review_status": "language_checked",
+        "reviewed_at": null,
+        "reviewer": "AI rà soát chéo; chưa giảng viên duyệt",
+        "rights_note": "Đoạn bài, câu hỏi và lời giải tự biên soạn; audio tổng hợp Flite. Không sao chép đề thi hoặc audio từ điển.",
+        "skill": "reading",
+        "source_checked_on": null,
+        "source_name": "Nội dung tự biên soạn có AI hỗ trợ",
+        "source_url": "",
+        "title": "Reading B1: A student-run repair café",
+        "topic": "Campus and community"
+      },
+      "flashcards": [],
+      "questions": [
+        {
+          "id": 1179,
+          "content_id": 71,
+          "order": 1,
+          "prompt": "Why are visitors asked to register online?",
+          "passage": "The student union will open a repair café in the old workshop next to the library on 12 October. The café is not a place to buy coffee. It is a monthly event where students and local residents can bring small household items that have stopped working. Volunteer repairers will help visitors examine lamps, radios, bicycles and clothing. Visitors are encouraged to stay and learn, although they do not have to do the repair themselves.\n\nThe event runs from 10 a.m. to 3 p.m. Entry is free, but visitors should register online because the workshop can safely hold only 30 people at a time. If all places are booked, a waiting list will open. People may bring one item each. Large appliances, phones with damaged batteries and anything containing fuel cannot be accepted. These restrictions help volunteers work safely with the tools and space available.\n\nA small table near the entrance will collect clean jars and fabric scraps for future projects. Donations are welcome but are not required. The organizers ask visitors to describe the problem when they register; this allows the team to prepare likely tools and check whether a repairer with suitable experience will attend. They cannot promise that every item can be fixed. If a repair is not possible, volunteers will explain why and suggest a local recycling point.\n\nThe student union hopes the café will reduce waste and give people a chance to share practical skills. It is also looking for two more volunteers to welcome visitors and record which items are repaired. No repair experience is needed for these roles, but volunteers must attend a short safety briefing on 8 October.",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "Manh mối là workshop “can safely hold only 30 people at a time”; đăng ký giúp kiểm soát số người.",
+          "explanation_vi": "Manh mối là workshop “can safely hold only 30 people at a time”; đăng ký giúp kiểm soát số người.",
+          "options": [
+            {
+              "id": 4713,
+              "question_id": 1179,
+              "label": "A",
+              "text": "The organizers need to charge an entry fee.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì bài nêu rõ vào cửa miễn phí; phí không phải lý do đăng ký."
+            },
+            {
+              "id": 4714,
+              "question_id": 1179,
+              "label": "B",
+              "text": "The workshop has a limited safe capacity.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: workshop chỉ chứa an toàn 30 người cùng lúc, nên cần đăng ký."
+            },
+            {
+              "id": 4715,
+              "question_id": 1179,
+              "label": "C",
+              "text": "Visitors must prove they can repair an item.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì người tham gia có thể quan sát và học, không cần tự sửa."
+            },
+            {
+              "id": 4716,
+              "question_id": 1179,
+              "label": "D",
+              "text": "The event is only for people who live near the library.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì sự kiện dành cho sinh viên và cư dân địa phương, không giới hạn theo khoảng cách."
+            }
+          ],
+          "version_hash": "34e08973eebedb7382ef276b005990137c7641139f4f462ad9a01214f50711af",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1180,
+          "content_id": 71,
+          "order": 2,
+          "prompt": "Which item would the café refuse?",
+          "passage": "The student union will open a repair café in the old workshop next to the library on 12 October. The café is not a place to buy coffee. It is a monthly event where students and local residents can bring small household items that have stopped working. Volunteer repairers will help visitors examine lamps, radios, bicycles and clothing. Visitors are encouraged to stay and learn, although they do not have to do the repair themselves.\n\nThe event runs from 10 a.m. to 3 p.m. Entry is free, but visitors should register online because the workshop can safely hold only 30 people at a time. If all places are booked, a waiting list will open. People may bring one item each. Large appliances, phones with damaged batteries and anything containing fuel cannot be accepted. These restrictions help volunteers work safely with the tools and space available.\n\nA small table near the entrance will collect clean jars and fabric scraps for future projects. Donations are welcome but are not required. The organizers ask visitors to describe the problem when they register; this allows the team to prepare likely tools and check whether a repairer with suitable experience will attend. They cannot promise that every item can be fixed. If a repair is not possible, volunteers will explain why and suggest a local recycling point.\n\nThe student union hopes the café will reduce waste and give people a chance to share practical skills. It is also looking for two more volunteers to welcome visitors and record which items are repaired. No repair experience is needed for these roles, but volunteers must attend a short safety briefing on 8 October.",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "Đối chiếu danh sách được nhận với ngoại lệ: “Large appliances” không được nhận.",
+          "explanation_vi": "Đối chiếu danh sách được nhận với ngoại lệ: “Large appliances” không được nhận.",
+          "options": [
+            {
+              "id": 4717,
+              "question_id": 1180,
+              "label": "A",
+              "text": "A shirt with a loose button.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì quần áo nằm trong nhóm đồ có thể mang đến."
+            },
+            {
+              "id": 4718,
+              "question_id": 1180,
+              "label": "B",
+              "text": "A bicycle with a loose brake cable.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì xe đạp được nêu là đồ được tiếp nhận."
+            },
+            {
+              "id": 4719,
+              "question_id": 1180,
+              "label": "C",
+              "text": "A radio that no longer turns on.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì radio được liệt kê trong các vật dụng phù hợp."
+            },
+            {
+              "id": 4720,
+              "question_id": 1180,
+              "label": "D",
+              "text": "A large washing machine.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: bài loại trừ rõ ràng các thiết bị gia dụng cỡ lớn."
+            }
+          ],
+          "version_hash": "ddb5e46f5ee9dc3ab9d7d5eccabee913f916b232449fbfc58de74c5fead7fc79",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1181,
+          "content_id": 71,
+          "order": 3,
+          "prompt": "Why do organizers ask people to describe an item's problem in advance?",
+          "passage": "The student union will open a repair café in the old workshop next to the library on 12 October. The café is not a place to buy coffee. It is a monthly event where students and local residents can bring small household items that have stopped working. Volunteer repairers will help visitors examine lamps, radios, bicycles and clothing. Visitors are encouraged to stay and learn, although they do not have to do the repair themselves.\n\nThe event runs from 10 a.m. to 3 p.m. Entry is free, but visitors should register online because the workshop can safely hold only 30 people at a time. If all places are booked, a waiting list will open. People may bring one item each. Large appliances, phones with damaged batteries and anything containing fuel cannot be accepted. These restrictions help volunteers work safely with the tools and space available.\n\nA small table near the entrance will collect clean jars and fabric scraps for future projects. Donations are welcome but are not required. The organizers ask visitors to describe the problem when they register; this allows the team to prepare likely tools and check whether a repairer with suitable experience will attend. They cannot promise that every item can be fixed. If a repair is not possible, volunteers will explain why and suggest a local recycling point.\n\nThe student union hopes the café will reduce waste and give people a chance to share practical skills. It is also looking for two more volunteers to welcome visitors and record which items are repaired. No repair experience is needed for these roles, but volunteers must attend a short safety briefing on 8 October.",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "Câu về đăng ký giải thích hai mục đích thực tế: chuẩn bị dụng cụ và bố trí người có kinh nghiệm phù hợp.",
+          "explanation_vi": "Câu về đăng ký giải thích hai mục đích thực tế: chuẩn bị dụng cụ và bố trí người có kinh nghiệm phù hợp.",
+          "options": [
+            {
+              "id": 4721,
+              "question_id": 1181,
+              "label": "A",
+              "text": "To help prepare tools and match the item with suitable experience.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: mô tả giúp chuẩn bị dụng cụ và kiểm tra có tình nguyện viên phù hợp hay không."
+            },
+            {
+              "id": 4722,
+              "question_id": 1181,
+              "label": "B",
+              "text": "To decide how much each visitor must donate.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì đóng góp chỉ được hoan nghênh, không bắt buộc hay tính theo mô tả."
+            },
+            {
+              "id": 4723,
+              "question_id": 1181,
+              "label": "C",
+              "text": "To guarantee that every item will be repaired.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì ban tổ chức nói không thể hứa sửa được mọi món đồ."
+            },
+            {
+              "id": 4724,
+              "question_id": 1181,
+              "label": "D",
+              "text": "To choose which visitor can enter the waiting list.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì danh sách chờ phụ thuộc việc đã hết chỗ, không phụ thuộc loại hỏng."
+            }
+          ],
+          "version_hash": "3c0c76ef52e5a2b3ee0f97392a102a88733fc426a9c8fda95085e6a1dec062af",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1182,
+          "content_id": 71,
+          "order": 4,
+          "prompt": "What is the main purpose of the final paragraph?",
+          "passage": "The student union will open a repair café in the old workshop next to the library on 12 October. The café is not a place to buy coffee. It is a monthly event where students and local residents can bring small household items that have stopped working. Volunteer repairers will help visitors examine lamps, radios, bicycles and clothing. Visitors are encouraged to stay and learn, although they do not have to do the repair themselves.\n\nThe event runs from 10 a.m. to 3 p.m. Entry is free, but visitors should register online because the workshop can safely hold only 30 people at a time. If all places are booked, a waiting list will open. People may bring one item each. Large appliances, phones with damaged batteries and anything containing fuel cannot be accepted. These restrictions help volunteers work safely with the tools and space available.\n\nA small table near the entrance will collect clean jars and fabric scraps for future projects. Donations are welcome but are not required. The organizers ask visitors to describe the problem when they register; this allows the team to prepare likely tools and check whether a repairer with suitable experience will attend. They cannot promise that every item can be fixed. If a repair is not possible, volunteers will explain why and suggest a local recycling point.\n\nThe student union hopes the café will reduce waste and give people a chance to share practical skills. It is also looking for two more volunteers to welcome visitors and record which items are repaired. No repair experience is needed for these roles, but volunteers must attend a short safety briefing on 8 October.",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "Đoạn cuối nêu mục tiêu của quán sửa chữa, rồi kêu gọi thêm tình nguyện viên và mô tả yêu cầu của vai trò.",
+          "explanation_vi": "Đoạn cuối nêu mục tiêu của quán sửa chữa, rồi kêu gọi thêm tình nguyện viên và mô tả yêu cầu của vai trò.",
+          "options": [
+            {
+              "id": 4725,
+              "question_id": 1182,
+              "label": "A",
+              "text": "To explain the history of the old workshop.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì đoạn không kể lịch sử địa điểm."
+            },
+            {
+              "id": 4726,
+              "question_id": 1182,
+              "label": "B",
+              "text": "To explain the café's aims and invite volunteers, including the role requirements.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: đoạn nêu mục tiêu giảm rác và chia sẻ kỹ năng, sau đó mời thêm tình nguyện viên và nêu yêu cầu cho vai trò."
+            },
+            {
+              "id": 4727,
+              "question_id": 1182,
+              "label": "C",
+              "text": "To announce that the event has been cancelled.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì sự kiện vẫn được lên kế hoạch vào tháng 10."
+            },
+            {
+              "id": 4728,
+              "question_id": 1182,
+              "label": "D",
+              "text": "To ask visitors to bring large appliances.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì thiết bị lớn bị từ chối; đoạn cuối nói về tuyển tình nguyện viên."
+            }
+          ],
+          "version_hash": "42efc3da6d5a8fda7ccc2a5ad01b2ed7ecc3ee620b8e81e965ac058c591aa5a5",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        }
+      ],
+      "coverage": {
+        "flashcards": {
+          "total": 0,
+          "exported": 0,
+          "complete": true
+        },
+        "questions": {
+          "total": 4,
+          "exported": 4,
+          "complete": true
+        }
+      },
+      "content_hash": "f6760d728772e67762f4d8d8b0c29cafd5220625b72415d29b3192728d8ba45c",
+      "structural_findings": [],
+      "findings_scope": "Structural checks of exported samples only; no linguistic or professional approval."
+    },
+    {
+      "content": {
+        "cefr_level": "B1",
+        "content_type": "reading",
+        "description": "Bài đọc tự biên soạn ở mức B1 tham khảo; luyện chi tiết, suy luận và diễn đạt lại. Không phải đề thi chính thức.",
+        "difficulty": 2,
+        "estimated_minutes": 10,
+        "exam_type": "TOEIC",
+        "id": 72,
+        "is_published": true,
+        "question_type": "foundation-advanced",
+        "review_status": "language_checked",
+        "reviewed_at": null,
+        "reviewer": "AI rà soát chéo; chưa giảng viên duyệt",
+        "rights_note": "Đoạn bài, câu hỏi và lời giải tự biên soạn; audio tổng hợp Flite. Không sao chép đề thi hoặc audio từ điển.",
+        "skill": "reading",
+        "source_checked_on": null,
+        "source_name": "Nội dung tự biên soạn có AI hỗ trợ",
+        "source_url": "",
+        "title": "Reading B1: An internship schedule update",
+        "topic": "Work and study"
+      },
+      "flashcards": [],
+      "questions": [
+        {
+          "id": 1183,
+          "content_id": 72,
+          "order": 1,
+          "prompt": "Why was the first-week schedule changed?",
+          "passage": "From: Linh Tran, Internship Coordinator\nSubject: Revised plan for the first week\n\nHello interns,\n\nWelcome to the communications team. We have changed the schedule for your first week because the training room will be used for equipment maintenance on Monday. Please come to the reception desk at 8:45 a.m. on Tuesday, 3 September, instead. A staff member will give you a badge and show you where to leave bags. The orientation session will begin at 9:15 in Meeting Room 2.\n\nBring a laptop if you have one, but do not buy or borrow a device just for this session. Shared computers and paper are available. Before lunch, you will learn file storage and client privacy. Do not copy sample files to a personal account or USB drive.\n\nThe afternoon task is a short writing exercise based on a fictional product. It will not be graded. We use it to understand what kind of support interns may need. Submit your own one-page response by 4 p.m. Thursday; you may work alone or discuss ideas with a partner. If you need extra time because of an accessibility arrangement, reply to this email before Tuesday so that we can plan with you.\n\nOn Wednesday, the group will visit the design studio. Wear comfortable shoes for the walk between buildings. The café beside the studio is closed for renovation, so bring lunch or use the student canteen across the courtyard.\n\nPlease confirm that you have received this update by Monday evening. If you cannot attend on Tuesday, contact me directly; do not ask another intern to report your absence. I will send the room map after everyone replies.\n\nBest,\nLinh",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "Lý do nằm ngay đầu email: phòng đào tạo được dùng cho công việc bảo trì vào thứ Hai.",
+          "explanation_vi": "Lý do nằm ngay đầu email: phòng đào tạo được dùng cho công việc bảo trì vào thứ Hai.",
+          "options": [
+            {
+              "id": 4729,
+              "question_id": 1183,
+              "label": "A",
+              "text": "The coordinator will be away on Monday.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì lý do được nêu là phòng đào tạo cần bảo trì thiết bị."
+            },
+            {
+              "id": 4730,
+              "question_id": 1183,
+              "label": "B",
+              "text": "The training room is needed for maintenance work on Monday.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: email nói phòng sẽ được dùng để bảo trì thiết bị vào thứ Hai."
+            },
+            {
+              "id": 4731,
+              "question_id": 1183,
+              "label": "C",
+              "text": "The interns requested a later start time.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì email không nói lịch đổi theo yêu cầu của thực tập sinh."
+            },
+            {
+              "id": 4732,
+              "question_id": 1183,
+              "label": "D",
+              "text": "The design studio cannot host visitors on Wednesday.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì chuyến thăm studio vẫn diễn ra vào thứ Tư."
+            }
+          ],
+          "version_hash": "567bdda533303796844aecfd4a7df0d6432a0f6d27eadc442b210d25ffdd7bdf",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1184,
+          "content_id": 72,
+          "order": 2,
+          "prompt": "What can an intern infer about bringing a laptop?",
+          "passage": "From: Linh Tran, Internship Coordinator\nSubject: Revised plan for the first week\n\nHello interns,\n\nWelcome to the communications team. We have changed the schedule for your first week because the training room will be used for equipment maintenance on Monday. Please come to the reception desk at 8:45 a.m. on Tuesday, 3 September, instead. A staff member will give you a badge and show you where to leave bags. The orientation session will begin at 9:15 in Meeting Room 2.\n\nBring a laptop if you have one, but do not buy or borrow a device just for this session. Shared computers and paper are available. Before lunch, you will learn file storage and client privacy. Do not copy sample files to a personal account or USB drive.\n\nThe afternoon task is a short writing exercise based on a fictional product. It will not be graded. We use it to understand what kind of support interns may need. Submit your own one-page response by 4 p.m. Thursday; you may work alone or discuss ideas with a partner. If you need extra time because of an accessibility arrangement, reply to this email before Tuesday so that we can plan with you.\n\nOn Wednesday, the group will visit the design studio. Wear comfortable shoes for the walk between buildings. The café beside the studio is closed for renovation, so bring lunch or use the student canteen across the courtyard.\n\nPlease confirm that you have received this update by Monday evening. If you cannot attend on Tuesday, contact me directly; do not ask another intern to report your absence. I will send the room map after everyone replies.\n\nBest,\nLinh",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "Đây là suy luận từ lời khuyên mang nếu sẵn có và các phương án thay thế; không bắt buộc.",
+          "explanation_vi": "Đây là suy luận từ lời khuyên mang nếu sẵn có và các phương án thay thế; không bắt buộc.",
+          "options": [
+            {
+              "id": 4733,
+              "question_id": 1184,
+              "label": "A",
+              "text": "It is useful but not required for the session.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: email khuyên mang nếu đã có, đồng thời nói không cần mua/mượn và có máy dùng chung, giấy."
+            },
+            {
+              "id": 4734,
+              "question_id": 1184,
+              "label": "B",
+              "text": "Every intern must bring a personal laptop.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì câu “if you have one” và lựa chọn máy dùng chung cho thấy không bắt buộc."
+            },
+            {
+              "id": 4735,
+              "question_id": 1184,
+              "label": "C",
+              "text": "The team will lend every intern a new device.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì chỉ có bốn máy dùng chung, không nói mỗi người được mượn một máy."
+            },
+            {
+              "id": 4736,
+              "question_id": 1184,
+              "label": "D",
+              "text": "Laptops are prohibited during training.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì email cho phép mang laptop; chỉ cấm sao chép file mẫu ra thiết bị/tài khoản cá nhân."
+            }
+          ],
+          "version_hash": "d870ea6ca03a2f11a641785a457cc94c4e6b4e70b02baf54d59762f1736d8589",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1185,
+          "content_id": 72,
+          "order": 3,
+          "prompt": "What must interns submit by Thursday at 4 p.m.?",
+          "passage": "From: Linh Tran, Internship Coordinator\nSubject: Revised plan for the first week\n\nHello interns,\n\nWelcome to the communications team. We have changed the schedule for your first week because the training room will be used for equipment maintenance on Monday. Please come to the reception desk at 8:45 a.m. on Tuesday, 3 September, instead. A staff member will give you a badge and show you where to leave bags. The orientation session will begin at 9:15 in Meeting Room 2.\n\nBring a laptop if you have one, but do not buy or borrow a device just for this session. Shared computers and paper are available. Before lunch, you will learn file storage and client privacy. Do not copy sample files to a personal account or USB drive.\n\nThe afternoon task is a short writing exercise based on a fictional product. It will not be graded. We use it to understand what kind of support interns may need. Submit your own one-page response by 4 p.m. Thursday; you may work alone or discuss ideas with a partner. If you need extra time because of an accessibility arrangement, reply to this email before Tuesday so that we can plan with you.\n\nOn Wednesday, the group will visit the design studio. Wear comfortable shoes for the walk between buildings. The café beside the studio is closed for renovation, so bring lunch or use the student canteen across the courtyard.\n\nPlease confirm that you have received this update by Monday evening. If you cannot attend on Tuesday, contact me directly; do not ask another intern to report your absence. I will send the room map after everyone replies.\n\nBest,\nLinh",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "Đoạn về bài chiều thứ Ba nêu hạn nộp và yêu cầu mọi người gửi phản hồi riêng dài một trang.",
+          "explanation_vi": "Đoạn về bài chiều thứ Ba nêu hạn nộp và yêu cầu mọi người gửi phản hồi riêng dài một trang.",
+          "options": [
+            {
+              "id": 4737,
+              "question_id": 1185,
+              "label": "A",
+              "text": "A group report about the studio visit.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì chuyến studio là hoạt động thứ Tư, không phải bài nộp."
+            },
+            {
+              "id": 4738,
+              "question_id": 1185,
+              "label": "B",
+              "text": "A one-page individual response to a writing exercise.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: mỗi người nộp phản hồi một trang của bài viết về sản phẩm giả định."
+            },
+            {
+              "id": 4739,
+              "question_id": 1185,
+              "label": "C",
+              "text": "A graded test about client privacy.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì bài viết không được chấm điểm; phần trước là hướng dẫn xử lý dữ liệu."
+            },
+            {
+              "id": 4740,
+              "question_id": 1185,
+              "label": "D",
+              "text": "A copy of their personal project files.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì email yêu cầu không sao chép tệp mẫu và không đề cập nộp tệp cá nhân."
+            }
+          ],
+          "version_hash": "dee8541d9bcd81ccdf189aa4a2a9f10d7af479cac07a19240fc44ee637148561",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1186,
+          "content_id": 72,
+          "order": 4,
+          "prompt": "Why should interns bring lunch on Wednesday?",
+          "passage": "From: Linh Tran, Internship Coordinator\nSubject: Revised plan for the first week\n\nHello interns,\n\nWelcome to the communications team. We have changed the schedule for your first week because the training room will be used for equipment maintenance on Monday. Please come to the reception desk at 8:45 a.m. on Tuesday, 3 September, instead. A staff member will give you a badge and show you where to leave bags. The orientation session will begin at 9:15 in Meeting Room 2.\n\nBring a laptop if you have one, but do not buy or borrow a device just for this session. Shared computers and paper are available. Before lunch, you will learn file storage and client privacy. Do not copy sample files to a personal account or USB drive.\n\nThe afternoon task is a short writing exercise based on a fictional product. It will not be graded. We use it to understand what kind of support interns may need. Submit your own one-page response by 4 p.m. Thursday; you may work alone or discuss ideas with a partner. If you need extra time because of an accessibility arrangement, reply to this email before Tuesday so that we can plan with you.\n\nOn Wednesday, the group will visit the design studio. Wear comfortable shoes for the walk between buildings. The café beside the studio is closed for renovation, so bring lunch or use the student canteen across the courtyard.\n\nPlease confirm that you have received this update by Monday evening. If you cannot attend on Tuesday, contact me directly; do not ask another intern to report your absence. I will send the room map after everyone replies.\n\nBest,\nLinh",
+          "audio_url": "",
+          "audio_script": "",
+          "transcript": "",
+          "explanation": "Email nêu quán bên studio đóng cửa, rồi đưa ra hai lựa chọn: mang bữa trưa hoặc ăn ở canteen.",
+          "explanation_vi": "Email nêu quán bên studio đóng cửa, rồi đưa ra hai lựa chọn: mang bữa trưa hoặc ăn ở canteen.",
+          "options": [
+            {
+              "id": 4741,
+              "question_id": 1186,
+              "label": "A",
+              "text": "The student canteen is reserved for the team.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì canteen chỉ được gợi ý là lựa chọn thay thế, không phải nơi dành riêng."
+            },
+            {
+              "id": 4742,
+              "question_id": 1186,
+              "label": "B",
+              "text": "The café near the studio will be closed during renovation.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: quán cà phê cạnh studio đóng để sửa chữa; email gợi ý mang đồ ăn hoặc qua canteen."
+            },
+            {
+              "id": 4743,
+              "question_id": 1186,
+              "label": "C",
+              "text": "The visit has been moved outside the city.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì email chỉ nói đi bộ giữa các tòa nhà."
+            },
+            {
+              "id": 4744,
+              "question_id": 1186,
+              "label": "D",
+              "text": "Lunch will be served only after the visit ends.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì không có thông tin về giờ phục vụ bữa trưa."
+            }
+          ],
+          "version_hash": "0d0c5a8a9f6a0e28e7b49b26d3c4ee1261e29fb372178172ef6e6058120f4799",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        }
+      ],
+      "coverage": {
+        "flashcards": {
+          "total": 0,
+          "exported": 0,
+          "complete": true
+        },
+        "questions": {
+          "total": 4,
+          "exported": 4,
+          "complete": true
+        }
+      },
+      "content_hash": "b7638aeabbb29534a04bf83b5270e78a0bbaac20b1c7b2e4d3621716ec71a921",
+      "structural_findings": [],
+      "findings_scope": "Structural checks of exported samples only; no linguistic or professional approval."
+    },
+    {
+      "content": {
+        "cefr_level": "B1",
+        "content_type": "listening",
+        "description": "Kịch bản nghe tự biên soạn ở mức B1 tham khảo; luyện nghe chi tiết, mục đích và suy luận. Không phải đề thi chính thức.",
+        "difficulty": 2,
+        "estimated_minutes": 10,
+        "exam_type": "TOEIC",
+        "id": 75,
+        "is_published": true,
+        "question_type": "foundation-advanced",
+        "review_status": "language_checked",
+        "reviewed_at": null,
+        "reviewer": "AI rà soát chéo; chưa giảng viên duyệt",
+        "rights_note": "Đoạn bài, câu hỏi và lời giải tự biên soạn; audio tổng hợp Flite. Không sao chép đề thi hoặc audio từ điển.",
+        "skill": "listening",
+        "source_checked_on": null,
+        "source_name": "Nội dung tự biên soạn có AI hỗ trợ",
+        "source_url": "",
+        "title": "Listening B1: Volunteer orientation announcement",
+        "topic": "Volunteering"
+      },
+      "flashcards": [],
+      "questions": [
+        {
+          "id": 1195,
+          "content_id": 75,
+          "order": 1,
+          "prompt": "What time will tomorrow’s food-packing session start?",
+          "passage": "",
+          "audio_url": "/static/audio/listening-b1-volunteer-orientation.mp3",
+          "audio_script": "Good afternoon, everyone, and thanks for joining the welcome session for the Riverside Food Project. I’m Daniel, the volunteer coordinator. A quick change: tomorrow’s food packing session will start at half past nine, not nine o’clock, because the delivery truck is arriving later than planned. Meet at the side entrance on Bridge Street; the main doors will be locked.\n\nYou don’t need to bring food or containers. We have gloves and labels. Please wear closed shoes and clothes you don’t mind getting a little dusty. If you have a food allergy, tell me before you start; we can assign you to sorting supplies instead of packing meals. That task is just as important, because it helps us use donations safely.\n\nWe expect to prepare about 120 boxes for families in the area. The number may change, so don’t write quantities on labels. Put the date and the meal type only. We’ll take a group photo for the newsletter; tell me privately if you prefer not to appear.\n\nFinally, next week’s training has moved online. You’ll receive the link by email on Monday, and you should complete the short safety quiz before Friday. You don’t need to pass it to continue volunteering, but the answers will help us decide what to explain in the next in-person session. Any questions?",
+          "transcript": "Good afternoon, everyone, and thanks for joining the welcome session for the Riverside Food Project. I’m Daniel, the volunteer coordinator. A quick change: tomorrow’s food packing session will start at half past nine, not nine o’clock, because the delivery truck is arriving later than planned. Meet at the side entrance on Bridge Street; the main doors will be locked.\n\nYou don’t need to bring food or containers. We have gloves and labels. Please wear closed shoes and clothes you don’t mind getting a little dusty. If you have a food allergy, tell me before you start; we can assign you to sorting supplies instead of packing meals. That task is just as important, because it helps us use donations safely.\n\nWe expect to prepare about 120 boxes for families in the area. The number may change, so don’t write quantities on labels. Put the date and the meal type only. We’ll take a group photo for the newsletter; tell me privately if you prefer not to appear.\n\nFinally, next week’s training has moved online. You’ll receive the link by email on Monday, and you should complete the short safety quiz before Friday. You don’t need to pass it to continue volunteering, but the answers will help us decide what to explain in the next in-person session. Any questions?",
+          "explanation": "Người nói sửa giờ bắt đầu từ 9 giờ thành half past nine, tức 9:30.",
+          "explanation_vi": "Người nói sửa giờ bắt đầu từ 9 giờ thành half past nine, tức 9:30.",
+          "options": [
+            {
+              "id": 4777,
+              "question_id": 1195,
+              "label": "A",
+              "text": "9:00 a.m.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì đây là giờ cũ, người nói đính chính thành 9:30."
+            },
+            {
+              "id": 4778,
+              "question_id": 1195,
+              "label": "B",
+              "text": "9:30 a.m.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: buổi đóng gói bắt đầu lúc half past nine."
+            },
+            {
+              "id": 4779,
+              "question_id": 1195,
+              "label": "C",
+              "text": "10:00 a.m.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì không có mốc 10 giờ trong thông báo."
+            },
+            {
+              "id": 4780,
+              "question_id": 1195,
+              "label": "D",
+              "text": "11:30 a.m.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì giờ xe giao hàng không phải giờ tình nguyện viên đến."
+            }
+          ],
+          "version_hash": "bfa78b37292ddaf2588d8d1304ccd91d9c21d2d803c43c48f81f495bd19a2ee1",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1196,
+          "content_id": 75,
+          "order": 2,
+          "prompt": "Why might a volunteer be assigned to sort supplies instead of packing meals?",
+          "passage": "",
+          "audio_url": "/static/audio/listening-b1-volunteer-orientation.mp3",
+          "audio_script": "Good afternoon, everyone, and thanks for joining the welcome session for the Riverside Food Project. I’m Daniel, the volunteer coordinator. A quick change: tomorrow’s food packing session will start at half past nine, not nine o’clock, because the delivery truck is arriving later than planned. Meet at the side entrance on Bridge Street; the main doors will be locked.\n\nYou don’t need to bring food or containers. We have gloves and labels. Please wear closed shoes and clothes you don’t mind getting a little dusty. If you have a food allergy, tell me before you start; we can assign you to sorting supplies instead of packing meals. That task is just as important, because it helps us use donations safely.\n\nWe expect to prepare about 120 boxes for families in the area. The number may change, so don’t write quantities on labels. Put the date and the meal type only. We’ll take a group photo for the newsletter; tell me privately if you prefer not to appear.\n\nFinally, next week’s training has moved online. You’ll receive the link by email on Monday, and you should complete the short safety quiz before Friday. You don’t need to pass it to continue volunteering, but the answers will help us decide what to explain in the next in-person session. Any questions?",
+          "transcript": "Good afternoon, everyone, and thanks for joining the welcome session for the Riverside Food Project. I’m Daniel, the volunteer coordinator. A quick change: tomorrow’s food packing session will start at half past nine, not nine o’clock, because the delivery truck is arriving later than planned. Meet at the side entrance on Bridge Street; the main doors will be locked.\n\nYou don’t need to bring food or containers. We have gloves and labels. Please wear closed shoes and clothes you don’t mind getting a little dusty. If you have a food allergy, tell me before you start; we can assign you to sorting supplies instead of packing meals. That task is just as important, because it helps us use donations safely.\n\nWe expect to prepare about 120 boxes for families in the area. The number may change, so don’t write quantities on labels. Put the date and the meal type only. We’ll take a group photo for the newsletter; tell me privately if you prefer not to appear.\n\nFinally, next week’s training has moved online. You’ll receive the link by email on Monday, and you should complete the short safety quiz before Friday. You don’t need to pass it to continue volunteering, but the answers will help us decide what to explain in the next in-person session. Any questions?",
+          "explanation": "Người nói đưa ra phương án sorting supplies cho người báo dị ứng để bảo đảm an toàn.",
+          "explanation_vi": "Người nói đưa ra phương án sorting supplies cho người báo dị ứng để bảo đảm an toàn.",
+          "options": [
+            {
+              "id": 4781,
+              "question_id": 1196,
+              "label": "A",
+              "text": "They have reported a food allergy.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: người có dị ứng cần báo trước và có thể được phân sang việc phân loại vật tư."
+            },
+            {
+              "id": 4782,
+              "question_id": 1196,
+              "label": "B",
+              "text": "They forgot to bring a container.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì dự án đã chuẩn bị mọi vật dụng, không yêu cầu mang hộp."
+            },
+            {
+              "id": 4783,
+              "question_id": 1196,
+              "label": "C",
+              "text": "They arrive through the main doors.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì cửa chính khóa; mọi người cần đến lối bên phố Bridge."
+            },
+            {
+              "id": 4784,
+              "question_id": 1196,
+              "label": "D",
+              "text": "They do not want to join the group photo.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì ảnh cuối buổi không liên quan phân công đóng gói hay phân loại."
+            }
+          ],
+          "version_hash": "ed237c524d30c1882bc8fd4b0937ef5a951ad7bb0ae43bb7057287b702f047c5",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1197,
+          "content_id": 75,
+          "order": 3,
+          "prompt": "What should volunteers write on the labels?",
+          "passage": "",
+          "audio_url": "/static/audio/listening-b1-volunteer-orientation.mp3",
+          "audio_script": "Good afternoon, everyone, and thanks for joining the welcome session for the Riverside Food Project. I’m Daniel, the volunteer coordinator. A quick change: tomorrow’s food packing session will start at half past nine, not nine o’clock, because the delivery truck is arriving later than planned. Meet at the side entrance on Bridge Street; the main doors will be locked.\n\nYou don’t need to bring food or containers. We have gloves and labels. Please wear closed shoes and clothes you don’t mind getting a little dusty. If you have a food allergy, tell me before you start; we can assign you to sorting supplies instead of packing meals. That task is just as important, because it helps us use donations safely.\n\nWe expect to prepare about 120 boxes for families in the area. The number may change, so don’t write quantities on labels. Put the date and the meal type only. We’ll take a group photo for the newsletter; tell me privately if you prefer not to appear.\n\nFinally, next week’s training has moved online. You’ll receive the link by email on Monday, and you should complete the short safety quiz before Friday. You don’t need to pass it to continue volunteering, but the answers will help us decide what to explain in the next in-person session. Any questions?",
+          "transcript": "Good afternoon, everyone, and thanks for joining the welcome session for the Riverside Food Project. I’m Daniel, the volunteer coordinator. A quick change: tomorrow’s food packing session will start at half past nine, not nine o’clock, because the delivery truck is arriving later than planned. Meet at the side entrance on Bridge Street; the main doors will be locked.\n\nYou don’t need to bring food or containers. We have gloves and labels. Please wear closed shoes and clothes you don’t mind getting a little dusty. If you have a food allergy, tell me before you start; we can assign you to sorting supplies instead of packing meals. That task is just as important, because it helps us use donations safely.\n\nWe expect to prepare about 120 boxes for families in the area. The number may change, so don’t write quantities on labels. Put the date and the meal type only. We’ll take a group photo for the newsletter; tell me privately if you prefer not to appear.\n\nFinally, next week’s training has moved online. You’ll receive the link by email on Monday, and you should complete the short safety quiz before Friday. You don’t need to pass it to continue volunteering, but the answers will help us decide what to explain in the next in-person session. Any questions?",
+          "explanation": "Thông báo chỉ định rõ hai thông tin trên nhãn và cấm ghi số lượng vì số hộp có thể đổi.",
+          "explanation_vi": "Thông báo chỉ định rõ hai thông tin trên nhãn và cấm ghi số lượng vì số hộp có thể đổi.",
+          "options": [
+            {
+              "id": 4785,
+              "question_id": 1197,
+              "label": "A",
+              "text": "The date and meal type only.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: họ được yêu cầu ghi ngày và loại bữa ăn, không ghi số lượng."
+            },
+            {
+              "id": 4786,
+              "question_id": 1197,
+              "label": "B",
+              "text": "The number of boxes and family names.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì số hộp có thể thay đổi và không yêu cầu tên gia đình."
+            },
+            {
+              "id": 4787,
+              "question_id": 1197,
+              "label": "C",
+              "text": "The volunteer's name and arrival time.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì thông báo không yêu cầu ghi tên người làm hoặc giờ đến."
+            },
+            {
+              "id": 4788,
+              "question_id": 1197,
+              "label": "D",
+              "text": "The delivery truck's registration number.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì xe giao hàng chỉ giải thích việc đổi giờ."
+            }
+          ],
+          "version_hash": "59bb969bd91efd5655a88e0fcba3bc4087463a42c5fc831852b76bceee11e361",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1198,
+          "content_id": 75,
+          "order": 4,
+          "prompt": "What is the purpose of the safety quiz?",
+          "passage": "",
+          "audio_url": "/static/audio/listening-b1-volunteer-orientation.mp3",
+          "audio_script": "Good afternoon, everyone, and thanks for joining the welcome session for the Riverside Food Project. I’m Daniel, the volunteer coordinator. A quick change: tomorrow’s food packing session will start at half past nine, not nine o’clock, because the delivery truck is arriving later than planned. Meet at the side entrance on Bridge Street; the main doors will be locked.\n\nYou don’t need to bring food or containers. We have gloves and labels. Please wear closed shoes and clothes you don’t mind getting a little dusty. If you have a food allergy, tell me before you start; we can assign you to sorting supplies instead of packing meals. That task is just as important, because it helps us use donations safely.\n\nWe expect to prepare about 120 boxes for families in the area. The number may change, so don’t write quantities on labels. Put the date and the meal type only. We’ll take a group photo for the newsletter; tell me privately if you prefer not to appear.\n\nFinally, next week’s training has moved online. You’ll receive the link by email on Monday, and you should complete the short safety quiz before Friday. You don’t need to pass it to continue volunteering, but the answers will help us decide what to explain in the next in-person session. Any questions?",
+          "transcript": "Good afternoon, everyone, and thanks for joining the welcome session for the Riverside Food Project. I’m Daniel, the volunteer coordinator. A quick change: tomorrow’s food packing session will start at half past nine, not nine o’clock, because the delivery truck is arriving later than planned. Meet at the side entrance on Bridge Street; the main doors will be locked.\n\nYou don’t need to bring food or containers. We have gloves and labels. Please wear closed shoes and clothes you don’t mind getting a little dusty. If you have a food allergy, tell me before you start; we can assign you to sorting supplies instead of packing meals. That task is just as important, because it helps us use donations safely.\n\nWe expect to prepare about 120 boxes for families in the area. The number may change, so don’t write quantities on labels. Put the date and the meal type only. We’ll take a group photo for the newsletter; tell me privately if you prefer not to appear.\n\nFinally, next week’s training has moved online. You’ll receive the link by email on Monday, and you should complete the short safety quiz before Friday. You don’t need to pass it to continue volunteering, but the answers will help us decide what to explain in the next in-person session. Any questions?",
+          "explanation": "Người điều phối nói quiz không phải điều kiện tiếp tục; kết quả giúp chuẩn bị phần giải thích cho buổi gặp sau.",
+          "explanation_vi": "Người điều phối nói quiz không phải điều kiện tiếp tục; kết quả giúp chuẩn bị phần giải thích cho buổi gặp sau.",
+          "options": [
+            {
+              "id": 4789,
+              "question_id": 1198,
+              "label": "A",
+              "text": "To decide who is allowed to keep volunteering.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì người nói khẳng định không cần vượt qua quiz để tiếp tục tình nguyện."
+            },
+            {
+              "id": 4790,
+              "question_id": 1198,
+              "label": "B",
+              "text": "To help plan what the next in-person session should explain.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: câu trả lời giúp nhóm biết nội dung nào cần giải thích thêm ở buổi trực tiếp."
+            },
+            {
+              "id": 4791,
+              "question_id": 1198,
+              "label": "C",
+              "text": "To replace tomorrow's food packing session.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì quiz thuộc khóa đào tạo tuần sau, không thay buổi ngày mai."
+            },
+            {
+              "id": 4792,
+              "question_id": 1198,
+              "label": "D",
+              "text": "To collect names for the project newsletter.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì newsletter được nhắc ở phần chụp ảnh, tách biệt với quiz."
+            }
+          ],
+          "version_hash": "728e3c209e4ab1ca3b97a5cdb2da68ad1f1659bb4682a215feb9c1219deabdbc",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        }
+      ],
+      "coverage": {
+        "flashcards": {
+          "total": 0,
+          "exported": 0,
+          "complete": true
+        },
+        "questions": {
+          "total": 4,
+          "exported": 4,
+          "complete": true
+        }
+      },
+      "content_hash": "3366365e03c9608753bf90a071a837711690e971c011f50b671d7e8338b72d2e",
+      "structural_findings": [],
+      "findings_scope": "Structural checks of exported samples only; no linguistic or professional approval."
+    },
+    {
+      "content": {
+        "cefr_level": "B1",
+        "content_type": "listening",
+        "description": "Kịch bản nghe tự biên soạn ở mức B1 tham khảo; luyện nghe chi tiết, suy luận và ý định. Không phải đề thi chính thức.",
+        "difficulty": 2,
+        "estimated_minutes": 10,
+        "exam_type": "TOEIC",
+        "id": 76,
+        "is_published": true,
+        "question_type": "foundation-advanced",
+        "review_status": "language_checked",
+        "reviewed_at": null,
+        "reviewer": "AI rà soát chéo; chưa giảng viên duyệt",
+        "rights_note": "Đoạn bài, câu hỏi và lời giải tự biên soạn; audio tổng hợp Flite. Không sao chép đề thi hoặc audio từ điển.",
+        "skill": "listening",
+        "source_checked_on": null,
+        "source_name": "Nội dung tự biên soạn có AI hỗ trợ",
+        "source_url": "",
+        "title": "Listening B1: A change to the intern shift",
+        "topic": "Internship and scheduling"
+      },
+      "flashcards": [],
+      "questions": [
+        {
+          "id": 1199,
+          "content_id": 76,
+          "order": 1,
+          "prompt": "Where will the briefing take place?",
+          "passage": "",
+          "audio_url": "/static/audio/listening-b1-intern-shift-change.mp3",
+          "audio_script": "Hi, this is Priya from the museum visitor team. I’m calling about your Saturday shift. We’ve had to move the morning briefing from the lobby to the education room because a school group will be arriving at the same time. The briefing still begins at eight forty-five, so please use the staff entrance by the loading area. Your name badge will be waiting at the desk inside.\n\nAfter the briefing, you’ll help visitors use the audio-guide machines. We were going to ask you to work at the ticket counter, but the supervisor has assigned an experienced volunteer there because the new booking system is being tested. You don’t need to know the system for your role. If a visitor asks about a ticket change, please direct them to the counter rather than trying to fix it yourself.\n\nThe museum café opens late this Saturday, so you may want to bring a drink. You can leave it in the staff room, not at the information desk. We’ll provide lunch vouchers, but they can only be used at the café after it opens at eleven.\n\nOne more thing: the group tour starts at ten, not ten thirty as shown on the old schedule. Please check the printed sheet I sent yesterday and cross out the old time. If you can’t stay until one o’clock, tell me before Friday afternoon so I can arrange cover. Thanks, and I’ll see you Saturday.",
+          "transcript": "Hi, this is Priya from the museum visitor team. I’m calling about your Saturday shift. We’ve had to move the morning briefing from the lobby to the education room because a school group will be arriving at the same time. The briefing still begins at eight forty-five, so please use the staff entrance by the loading area. Your name badge will be waiting at the desk inside.\n\nAfter the briefing, you’ll help visitors use the audio-guide machines. We were going to ask you to work at the ticket counter, but the supervisor has assigned an experienced volunteer there because the new booking system is being tested. You don’t need to know the system for your role. If a visitor asks about a ticket change, please direct them to the counter rather than trying to fix it yourself.\n\nThe museum café opens late this Saturday, so you may want to bring a drink. You can leave it in the staff room, not at the information desk. We’ll provide lunch vouchers, but they can only be used at the café after it opens at eleven.\n\nOne more thing: the group tour starts at ten, not ten thirty as shown on the old schedule. Please check the printed sheet I sent yesterday and cross out the old time. If you can’t stay until one o’clock, tell me before Friday afternoon so I can arrange cover. Thanks, and I’ll see you Saturday.",
+          "explanation": "Người gọi báo đổi từ lobby sang education room; loading area chỉ là lối vào nhân viên.",
+          "explanation_vi": "Người gọi báo đổi từ lobby sang education room; loading area chỉ là lối vào nhân viên.",
+          "options": [
+            {
+              "id": 4793,
+              "question_id": 1199,
+              "label": "A",
+              "text": "In the lobby.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì địa điểm cũ được đổi do nhóm học sinh đến cùng lúc."
+            },
+            {
+              "id": 4794,
+              "question_id": 1199,
+              "label": "B",
+              "text": "In the education room.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: Priya nói briefing chuyển sang education room."
+            },
+            {
+              "id": 4795,
+              "question_id": 1199,
+              "label": "C",
+              "text": "At the ticket counter.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì quầy vé là vị trí làm việc được giao cho tình nguyện viên khác."
+            },
+            {
+              "id": 4796,
+              "question_id": 1199,
+              "label": "D",
+              "text": "In the staff room.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì staff room được dùng để cất đồ uống."
+            }
+          ],
+          "version_hash": "fe28ac45422a4b884efcdb5d0555a8435357610488d4efb6b59c7af57ee69333",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1200,
+          "content_id": 76,
+          "order": 2,
+          "prompt": "Why will an experienced volunteer work at the ticket counter?",
+          "passage": "",
+          "audio_url": "/static/audio/listening-b1-intern-shift-change.mp3",
+          "audio_script": "Hi, this is Priya from the museum visitor team. I’m calling about your Saturday shift. We’ve had to move the morning briefing from the lobby to the education room because a school group will be arriving at the same time. The briefing still begins at eight forty-five, so please use the staff entrance by the loading area. Your name badge will be waiting at the desk inside.\n\nAfter the briefing, you’ll help visitors use the audio-guide machines. We were going to ask you to work at the ticket counter, but the supervisor has assigned an experienced volunteer there because the new booking system is being tested. You don’t need to know the system for your role. If a visitor asks about a ticket change, please direct them to the counter rather than trying to fix it yourself.\n\nThe museum café opens late this Saturday, so you may want to bring a drink. You can leave it in the staff room, not at the information desk. We’ll provide lunch vouchers, but they can only be used at the café after it opens at eleven.\n\nOne more thing: the group tour starts at ten, not ten thirty as shown on the old schedule. Please check the printed sheet I sent yesterday and cross out the old time. If you can’t stay until one o’clock, tell me before Friday afternoon so I can arrange cover. Thanks, and I’ll see you Saturday.",
+          "transcript": "Hi, this is Priya from the museum visitor team. I’m calling about your Saturday shift. We’ve had to move the morning briefing from the lobby to the education room because a school group will be arriving at the same time. The briefing still begins at eight forty-five, so please use the staff entrance by the loading area. Your name badge will be waiting at the desk inside.\n\nAfter the briefing, you’ll help visitors use the audio-guide machines. We were going to ask you to work at the ticket counter, but the supervisor has assigned an experienced volunteer there because the new booking system is being tested. You don’t need to know the system for your role. If a visitor asks about a ticket change, please direct them to the counter rather than trying to fix it yourself.\n\nThe museum café opens late this Saturday, so you may want to bring a drink. You can leave it in the staff room, not at the information desk. We’ll provide lunch vouchers, but they can only be used at the café after it opens at eleven.\n\nOne more thing: the group tour starts at ten, not ten thirty as shown on the old schedule. Please check the printed sheet I sent yesterday and cross out the old time. If you can’t stay until one o’clock, tell me before Friday afternoon so I can arrange cover. Thanks, and I’ll see you Saturday.",
+          "explanation": "Câu giải thích nêu thẳng việc thử hệ thống đặt chỗ mới là lý do giao quầy cho tình nguyện viên có kinh nghiệm.",
+          "explanation_vi": "Câu giải thích nêu thẳng việc thử hệ thống đặt chỗ mới là lý do giao quầy cho tình nguyện viên có kinh nghiệm.",
+          "options": [
+            {
+              "id": 4797,
+              "question_id": 1200,
+              "label": "A",
+              "text": "The booking system is being tested there.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: hệ thống đặt vé mới đang được thử nghiệm, nên người có kinh nghiệm phụ trách."
+            },
+            {
+              "id": 4798,
+              "question_id": 1200,
+              "label": "B",
+              "text": "The intern asked to avoid visitors.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì không có yêu cầu này; vai trò của thực tập sinh là hỗ trợ audio-guide."
+            },
+            {
+              "id": 4799,
+              "question_id": 1200,
+              "label": "C",
+              "text": "The counter will close during the morning.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì quầy vẫn hoạt động, chỉ đổi người phụ trách."
+            },
+            {
+              "id": 4800,
+              "question_id": 1200,
+              "label": "D",
+              "text": "The education room needs another supervisor.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì địa điểm briefing không liên quan đến lý do phân công tại quầy vé."
+            }
+          ],
+          "version_hash": "81564dc401030f2a40d13d7c2b02d26d9433374c994a91144aff5d2b983dc395",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1201,
+          "content_id": 76,
+          "order": 3,
+          "prompt": "What should the intern do if a visitor asks to change a ticket?",
+          "passage": "",
+          "audio_url": "/static/audio/listening-b1-intern-shift-change.mp3",
+          "audio_script": "Hi, this is Priya from the museum visitor team. I’m calling about your Saturday shift. We’ve had to move the morning briefing from the lobby to the education room because a school group will be arriving at the same time. The briefing still begins at eight forty-five, so please use the staff entrance by the loading area. Your name badge will be waiting at the desk inside.\n\nAfter the briefing, you’ll help visitors use the audio-guide machines. We were going to ask you to work at the ticket counter, but the supervisor has assigned an experienced volunteer there because the new booking system is being tested. You don’t need to know the system for your role. If a visitor asks about a ticket change, please direct them to the counter rather than trying to fix it yourself.\n\nThe museum café opens late this Saturday, so you may want to bring a drink. You can leave it in the staff room, not at the information desk. We’ll provide lunch vouchers, but they can only be used at the café after it opens at eleven.\n\nOne more thing: the group tour starts at ten, not ten thirty as shown on the old schedule. Please check the printed sheet I sent yesterday and cross out the old time. If you can’t stay until one o’clock, tell me before Friday afternoon so I can arrange cover. Thanks, and I’ll see you Saturday.",
+          "transcript": "Hi, this is Priya from the museum visitor team. I’m calling about your Saturday shift. We’ve had to move the morning briefing from the lobby to the education room because a school group will be arriving at the same time. The briefing still begins at eight forty-five, so please use the staff entrance by the loading area. Your name badge will be waiting at the desk inside.\n\nAfter the briefing, you’ll help visitors use the audio-guide machines. We were going to ask you to work at the ticket counter, but the supervisor has assigned an experienced volunteer there because the new booking system is being tested. You don’t need to know the system for your role. If a visitor asks about a ticket change, please direct them to the counter rather than trying to fix it yourself.\n\nThe museum café opens late this Saturday, so you may want to bring a drink. You can leave it in the staff room, not at the information desk. We’ll provide lunch vouchers, but they can only be used at the café after it opens at eleven.\n\nOne more thing: the group tour starts at ten, not ten thirty as shown on the old schedule. Please check the printed sheet I sent yesterday and cross out the old time. If you can’t stay until one o’clock, tell me before Friday afternoon so I can arrange cover. Thanks, and I’ll see you Saturday.",
+          "explanation": "Người gọi yêu cầu chuyển khách tới quầy nếu họ hỏi về đổi vé; thực tập sinh không cần biết hệ thống.",
+          "explanation_vi": "Người gọi yêu cầu chuyển khách tới quầy nếu họ hỏi về đổi vé; thực tập sinh không cần biết hệ thống.",
+          "options": [
+            {
+              "id": 4801,
+              "question_id": 1201,
+              "label": "A",
+              "text": "Try to change it using the new system.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì người gọi dặn không tự xử lý thay đổi vé."
+            },
+            {
+              "id": 4802,
+              "question_id": 1201,
+              "label": "B",
+              "text": "Send the visitor to the ticket counter.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: hướng dẫn khách đến quầy thay vì tự sửa vé."
+            },
+            {
+              "id": 4803,
+              "question_id": 1201,
+              "label": "C",
+              "text": "Ask the visitor to return after lunch.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì không có yêu cầu trì hoãn đến sau bữa trưa."
+            },
+            {
+              "id": 4804,
+              "question_id": 1201,
+              "label": "D",
+              "text": "Direct the visitor to the café.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì café được nhắc đến để nói giờ mở và voucher, không xử lý vé."
+            }
+          ],
+          "version_hash": "60f30a41b66cc2c72628e4ccdb417704b1b745380f4a035a1264c0a55d5c5495",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1202,
+          "content_id": 76,
+          "order": 4,
+          "prompt": "What does Priya want the intern to do about the tour time?",
+          "passage": "",
+          "audio_url": "/static/audio/listening-b1-intern-shift-change.mp3",
+          "audio_script": "Hi, this is Priya from the museum visitor team. I’m calling about your Saturday shift. We’ve had to move the morning briefing from the lobby to the education room because a school group will be arriving at the same time. The briefing still begins at eight forty-five, so please use the staff entrance by the loading area. Your name badge will be waiting at the desk inside.\n\nAfter the briefing, you’ll help visitors use the audio-guide machines. We were going to ask you to work at the ticket counter, but the supervisor has assigned an experienced volunteer there because the new booking system is being tested. You don’t need to know the system for your role. If a visitor asks about a ticket change, please direct them to the counter rather than trying to fix it yourself.\n\nThe museum café opens late this Saturday, so you may want to bring a drink. You can leave it in the staff room, not at the information desk. We’ll provide lunch vouchers, but they can only be used at the café after it opens at eleven.\n\nOne more thing: the group tour starts at ten, not ten thirty as shown on the old schedule. Please check the printed sheet I sent yesterday and cross out the old time. If you can’t stay until one o’clock, tell me before Friday afternoon so I can arrange cover. Thanks, and I’ll see you Saturday.",
+          "transcript": "Hi, this is Priya from the museum visitor team. I’m calling about your Saturday shift. We’ve had to move the morning briefing from the lobby to the education room because a school group will be arriving at the same time. The briefing still begins at eight forty-five, so please use the staff entrance by the loading area. Your name badge will be waiting at the desk inside.\n\nAfter the briefing, you’ll help visitors use the audio-guide machines. We were going to ask you to work at the ticket counter, but the supervisor has assigned an experienced volunteer there because the new booking system is being tested. You don’t need to know the system for your role. If a visitor asks about a ticket change, please direct them to the counter rather than trying to fix it yourself.\n\nThe museum café opens late this Saturday, so you may want to bring a drink. You can leave it in the staff room, not at the information desk. We’ll provide lunch vouchers, but they can only be used at the café after it opens at eleven.\n\nOne more thing: the group tour starts at ten, not ten thirty as shown on the old schedule. Please check the printed sheet I sent yesterday and cross out the old time. If you can’t stay until one o’clock, tell me before Friday afternoon so I can arrange cover. Thanks, and I’ll see you Saturday.",
+          "explanation": "Priya nhắc giờ đúng là 10:00 và yêu cầu gạch giờ 10:30 trên lịch cũ.",
+          "explanation_vi": "Priya nhắc giờ đúng là 10:00 và yêu cầu gạch giờ 10:30 trên lịch cũ.",
+          "options": [
+            {
+              "id": 4805,
+              "question_id": 1202,
+              "label": "A",
+              "text": "Keep the old schedule because it has already been printed.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì giờ cũ 10:30 đã lỗi thời."
+            },
+            {
+              "id": 4806,
+              "question_id": 1202,
+              "label": "B",
+              "text": "Change the printed schedule from 10:30 to 10:00.",
+              "is_correct": true,
+              "explanation_vi": "Đúng: tour bắt đầu lúc 10 giờ; cần gạch giờ cũ trên tờ lịch."
+            },
+            {
+              "id": 4807,
+              "question_id": 1202,
+              "label": "C",
+              "text": "Move the tour to the education room.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì địa điểm briefing được đổi, không phải địa điểm tour."
+            },
+            {
+              "id": 4808,
+              "question_id": 1202,
+              "label": "D",
+              "text": "Ask visitors to choose a start time.",
+              "is_correct": false,
+              "explanation_vi": "Sai vì giờ bắt đầu đã được quyết định là 10 giờ."
+            }
+          ],
+          "version_hash": "65e650131b00c34017bf2277012bbba0a8a968a41ab8ef9e968c1a719ac7d898",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        }
+      ],
+      "coverage": {
+        "flashcards": {
+          "total": 0,
+          "exported": 0,
+          "complete": true
+        },
+        "questions": {
+          "total": 4,
+          "exported": 4,
+          "complete": true
+        }
+      },
+      "content_hash": "81acb014bd90f5a4e818dcb1e0eecd56d1c9bb23163d414737bef6089ad1a943",
+      "structural_findings": [],
+      "findings_scope": "Structural checks of exported samples only; no linguistic or professional approval."
+    },
+    {
+      "content": {
+        "cefr_level": "A2",
+        "content_type": "vocabulary",
+        "description": "15 mục · thẻ từ theo chủ đề. Nội dung tự biên soạn có AI hỗ trợ; CEFR tạm thời, chưa giáo viên duyệt. Không phải đề Cambridge/TOEIC/IELTS chính thức.",
+        "difficulty": 1,
+        "estimated_minutes": 6,
+        "exam_type": "TOEIC",
+        "id": 130,
+        "is_published": true,
+        "question_type": "lp3000-v1-deck",
+        "review_status": "language_checked",
+        "reviewed_at": "2026-10-21T00:30:21.574088+00:00",
+        "reviewer": "AI kiểm tra cấu trúc và tự rà soát; chưa giáo viên duyệt",
+        "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+        "skill": "vocabulary",
+        "source_checked_on": null,
+        "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+        "source_url": "",
+        "title": "Bổ sung A2 · Công việc và dịch vụ · Thẻ từ 01",
+        "topic": "Công việc và dịch vụ"
+      },
+      "flashcards": [
+        {
+          "id": 1482,
+          "content_id": 130,
+          "order": 1,
+          "term": "government",
+          "cefr_level": "A2",
+          "topic": "Civic life",
+          "part_of_speech": "noun",
+          "meaning_vi": "chính phủ",
+          "example_en": "The government runs the country and implements national public policies.",
+          "example_vi": "Chính phủ điều hành đất nước và thực hiện chính sách công quốc gia.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "94776f7d3cceaf8d0c580b6d940249a65a190cb8a3de02b6a54f7b42bd6914d0",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1483,
+          "content_id": 130,
+          "order": 2,
+          "term": "bill",
+          "cefr_level": "A2",
+          "topic": "Finance",
+          "part_of_speech": "noun",
+          "meaning_vi": "hóa đơn yêu cầu thanh toán",
+          "example_en": "The electricity bill shows how much we owe for last month.",
+          "example_vi": "Hóa đơn điện cho biết chúng tôi nợ bao nhiêu tiền tháng trước.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "37319e12c7bb910796bdc904e78c94371328412f1217467d7f41dfd1983c4133",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1484,
+          "content_id": 130,
+          "order": 3,
+          "term": "cent",
+          "cefr_level": "A2",
+          "topic": "Finance",
+          "part_of_speech": "noun",
+          "meaning_vi": "xu bằng một phần trăm đô la",
+          "example_en": "A cent is worth one hundredth of an American dollar.",
+          "example_vi": "Một xu có giá trị bằng một phần trăm đô la Mỹ.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "597d1849a8b043bde3555d4b342997ca1dea097874b6052f6ba897f2c2981370",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1485,
+          "content_id": 130,
+          "order": 4,
+          "term": "earn",
+          "cefr_level": "A2",
+          "topic": "Finance",
+          "part_of_speech": "verb",
+          "meaning_vi": "kiếm được tiền nhờ làm việc",
+          "example_en": "She works evenings to earn enough money for her rent.",
+          "example_vi": "Cô ấy làm buổi tối để kiếm đủ tiền trả tiền thuê nhà.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "947cef621e1ea0212579b8c6a962ba1e7c8acec504a7df498924d71637915130",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1486,
+          "content_id": 130,
+          "order": 5,
+          "term": "euro",
+          "cefr_level": "A2",
+          "topic": "Finance",
+          "part_of_speech": "noun",
+          "meaning_vi": "đồng euro",
+          "example_en": "The euro is the shared currency used in France and Germany.",
+          "example_vi": "Euro là đồng tiền chung được dùng ở Pháp và Đức.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "daecdf331e6bf1450386029bad2ff521327f9c555404fdbb14094cd7c7e707d9",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1487,
+          "content_id": 130,
+          "order": 6,
+          "term": "note",
+          "cefr_level": "A2",
+          "topic": "Finance",
+          "part_of_speech": "noun",
+          "meaning_vi": "tờ tiền giấy",
+          "example_en": "He paid with a bank note instead of several metal coins.",
+          "example_vi": "Anh ấy trả bằng một tờ tiền giấy thay vì vài đồng xu kim loại.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "76cb4f1a60544ba90fbfa25d6268de2d261cf53736e41e81ac1178e26fe3a95b",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1488,
+          "content_id": 130,
+          "order": 7,
+          "term": "penny",
+          "cefr_level": "A2",
+          "topic": "Finance",
+          "part_of_speech": "noun",
+          "meaning_vi": "đồng một xu Anh",
+          "example_en": "A British penny is a coin worth one hundredth of a pound.",
+          "example_vi": "Một đồng xu Anh có giá trị bằng một phần trăm bảng.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "c70b7cfea05939864a89f16fb1f37a826d27ac6805f6a15a61cf5dac857def97",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1489,
+          "content_id": 130,
+          "order": 8,
+          "term": "pound",
+          "cefr_level": "A2",
+          "topic": "Finance",
+          "part_of_speech": "noun",
+          "meaning_vi": "bảng Anh",
+          "example_en": "She paid one British pound using a coin marked with the currency symbol.",
+          "example_vi": "Cô ấy trả một bảng Anh bằng đồng xu có ký hiệu tiền tệ.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "b450646811c194bba56dfad59913129c9a0a3f142a28412b958c1a351edc00ec",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1490,
+          "content_id": 130,
+          "order": 9,
+          "term": "barber",
+          "cefr_level": "A2",
+          "topic": "Jobs",
+          "part_of_speech": "noun",
+          "meaning_vi": "thợ cắt tóc nam",
+          "example_en": "The barber trimmed his beard and cut his hair short.",
+          "example_vi": "Thợ cắt tóc nam tỉa râu và cắt ngắn tóc cho anh ấy.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "6598ee8e7198cba5cd3524ec691c3350bfcf885e0e4db1e4d1b8cd9009ba7f5f",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1491,
+          "content_id": 130,
+          "order": 10,
+          "term": "builder",
+          "cefr_level": "A2",
+          "topic": "Jobs",
+          "part_of_speech": "noun",
+          "meaning_vi": "thợ xây",
+          "example_en": "The builder constructed the new house according to the approved plans.",
+          "example_vi": "Thợ xây dựng ngôi nhà mới theo bản vẽ đã được duyệt.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "d5598cbddec1d5e1f0a3fdfd21d8d701a5d6c3fc074eadc7408ccce609cedfec",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        }
+      ],
+      "questions": [],
+      "coverage": {
+        "flashcards": {
+          "total": 15,
+          "exported": 10,
+          "complete": false
+        },
+        "questions": {
+          "total": 0,
+          "exported": 0,
+          "complete": true
+        }
+      },
+      "content_hash": "bf06384c840e92f0469621ea00309aad7409165ec25bb01c05ad663be3586269",
+      "structural_findings": [],
+      "findings_scope": "Structural checks of exported samples only; no linguistic or professional approval."
+    },
+    {
+      "content": {
+        "cefr_level": "B1",
+        "content_type": "vocabulary",
+        "description": "20 mục · thẻ từ theo chủ đề. Nội dung tự biên soạn có AI hỗ trợ; CEFR tạm thời, chưa giáo viên duyệt. Không phải đề Cambridge/TOEIC/IELTS chính thức.",
+        "difficulty": 2,
+        "estimated_minutes": 8,
+        "exam_type": "TOEIC",
+        "id": 205,
+        "is_published": true,
+        "question_type": "lp3000-v1-deck",
+        "review_status": "language_checked",
+        "reviewed_at": "2026-10-21T00:30:28.666837+00:00",
+        "reviewer": "AI kiểm tra cấu trúc và tự rà soát; chưa giáo viên duyệt",
+        "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+        "skill": "vocabulary",
+        "source_checked_on": null,
+        "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+        "source_url": "",
+        "title": "Bổ sung B1 · Công việc và dịch vụ · Thẻ từ 01",
+        "topic": "Công việc và dịch vụ"
+      },
+      "flashcards": [
+        {
+          "id": 1922,
+          "content_id": 205,
+          "order": 1,
+          "term": "competition",
+          "cefr_level": "B1",
+          "topic": "Business",
+          "part_of_speech": "noun",
+          "meaning_vi": "sự cạnh tranh kinh doanh",
+          "example_en": "Competition between several suppliers helps customers obtain lower prices.",
+          "example_vi": "Sự cạnh tranh giữa vài nhà cung cấp giúp khách hàng có giá thấp hơn.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "34dff4a44cc10eff125f25ad3f5b3c33c913185c982dc17c155877e8b47c4b80",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1923,
+          "content_id": 205,
+          "order": 2,
+          "term": "competitor",
+          "cefr_level": "B1",
+          "topic": "Business",
+          "part_of_speech": "noun",
+          "meaning_vi": "đối thủ cạnh tranh",
+          "example_en": "Our main competitor sells similar furniture to the same customers.",
+          "example_vi": "Đối thủ cạnh tranh chính bán đồ nội thất tương tự cho cùng nhóm khách.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "7ee1a5127b8c9e86bc343bb4d55f09789ffcca4d70da6a224bbe8d3e7d46ca18",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1924,
+          "content_id": 205,
+          "order": 3,
+          "term": "demand",
+          "cefr_level": "B1",
+          "topic": "Business",
+          "part_of_speech": "noun",
+          "meaning_vi": "nhu cầu mua hàng",
+          "example_en": "High demand means many customers want to buy the product.",
+          "example_vi": "Nhu cầu cao nghĩa là nhiều khách hàng muốn mua sản phẩm.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "05b213552454030352ec98babb03bf5020f5d9ac462e02d752e7d2def10710b1",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1925,
+          "content_id": 205,
+          "order": 4,
+          "term": "export",
+          "cefr_level": "B1",
+          "topic": "Business",
+          "part_of_speech": "noun",
+          "meaning_vi": "hàng xuất khẩu",
+          "example_en": "Coffee is a major export sold from Vietnam to overseas buyers.",
+          "example_vi": "Cà phê là mặt hàng xuất khẩu lớn được bán từ Việt Nam cho người mua nước ngoài.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "b4c86234239db82335ebaf4a4ff09c3f083f28f062662463fc242b8645d34446",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1926,
+          "content_id": 205,
+          "order": 5,
+          "term": "goods",
+          "cefr_level": "B1",
+          "topic": "Business",
+          "part_of_speech": "plural noun",
+          "meaning_vi": "hàng hóa",
+          "example_en": "The lorry carries finished goods from the factory to retail stores.",
+          "example_vi": "Xe tải chở hàng hóa thành phẩm từ nhà máy đến các cửa hàng bán lẻ.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "5d9a04d4b21867b1d00d70581dd61018117a032d5b2431eadce6004c7e4801e1",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1927,
+          "content_id": 205,
+          "order": 6,
+          "term": "import",
+          "cefr_level": "B1",
+          "topic": "Business",
+          "part_of_speech": "noun",
+          "meaning_vi": "hàng nhập khẩu",
+          "example_en": "This cheese is an import produced abroad and sold here.",
+          "example_vi": "Loại phô mai này là hàng nhập khẩu được sản xuất ở nước ngoài và bán tại đây.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "3067a974870fd6914f7c4088daa9660ae083990069103e5f11f490584323bd46",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1928,
+          "content_id": 205,
+          "order": 7,
+          "term": "production",
+          "cefr_level": "B1",
+          "topic": "Business",
+          "part_of_speech": "noun",
+          "meaning_vi": "quá trình sản xuất",
+          "example_en": "Production stops when the factory runs out of essential raw materials.",
+          "example_vi": "Quá trình sản xuất dừng khi nhà máy hết nguyên liệu thiết yếu.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "58e04d5b3d5c147c10ea74cf40b97af80a25cea768c315d5f81683996256a096",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1929,
+          "content_id": 205,
+          "order": 8,
+          "term": "warehouse",
+          "cefr_level": "B1",
+          "topic": "Business",
+          "part_of_speech": "noun",
+          "meaning_vi": "nhà kho",
+          "example_en": "The warehouse stores boxed products before they are sent to shops.",
+          "example_vi": "Nhà kho chứa sản phẩm đóng hộp trước khi được gửi đến cửa hàng.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "b6eda030349b51bbaca714c9908dbd767262ae7e6391165a4bd8ee40935436a4",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1930,
+          "content_id": 205,
+          "order": 9,
+          "term": "citizen",
+          "cefr_level": "B1",
+          "topic": "Civic life",
+          "part_of_speech": "noun",
+          "meaning_vi": "công dân",
+          "example_en": "A citizen has legal membership of a country and associated rights.",
+          "example_vi": "Công dân có tư cách thành viên pháp lý của một nước và các quyền liên quan.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "1ea71875d37bebc065f0af467d3581b7784a7051ee8002fcd233f17642d5adf8",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        },
+        {
+          "id": 1931,
+          "content_id": 205,
+          "order": 10,
+          "term": "council",
+          "cefr_level": "B1",
+          "topic": "Civic life",
+          "part_of_speech": "noun",
+          "meaning_vi": "hội đồng chính quyền địa phương",
+          "example_en": "The local council manages rubbish collection and public parks in our town.",
+          "example_vi": "Hội đồng địa phương quản lý thu gom rác và công viên công cộng ở thị trấn chúng tôi.",
+          "pronunciation": "",
+          "audio_url": "",
+          "source_name": "LinguaPath · nội dung gốc do AI hỗ trợ biên soạn",
+          "source_url": "",
+          "rights_note": "Nghĩa, ví dụ và bài tập tự biên soạn; không sao chép Cambridge. CEFR tạm thời, chưa giáo viên duyệt.",
+          "version_hash": "9799feabd2f95d0ba3c82800efab6fd46041b3438f231208fdcfa49829f5f394",
+          "human_review": {
+            "reviewer_name": "",
+            "qualifications": "",
+            "reviewed_at": null,
+            "conclusion": null,
+            "notes": ""
+          },
+          "checklist": {
+            "sense_and_context": {
+              "result": null,
+              "notes": ""
+            },
+            "answer_key": {
+              "result": null,
+              "notes": ""
+            },
+            "distractors_and_explanations": {
+              "result": null,
+              "notes": ""
+            },
+            "cefr_reference": {
+              "result": null,
+              "notes": ""
+            },
+            "source_and_rights": {
+              "result": null,
+              "notes": ""
+            },
+            "audio_and_accessibility": {
+              "result": null,
+              "notes": ""
+            }
+          }
+        }
+      ],
+      "questions": [],
+      "coverage": {
+        "flashcards": {
+          "total": 20,
+          "exported": 10,
+          "complete": false
+        },
+        "questions": {
+          "total": 0,
+          "exported": 0,
+          "complete": true
+        }
+      },
+      "content_hash": "b9ca82cbf225a1b08905ea6ada1bbb73463207be3ee4e83284579acd9713ef4d",
+      "structural_findings": [],
+      "findings_scope": "Structural checks of exported samples only; no linguistic or professional approval."
+    }
+  ],
+  "fingerprint": "3cdffcef4de96662e399baf0c1b2111ba0d844e5e03c76f852a463264fd1fe31",
+  "generated_at": "2026-10-25T00:36:38.127949+00:00"
+}

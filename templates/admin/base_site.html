@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{% if title %}{{ title }} | {% endif %}LinguaPath · Quản trị{% endblock %}
+{% block branding %}
+<div id="site-name">
+  <a href="{% url 'admin:index' %}" aria-label="LinguaPath, trang tổng quan quản trị">
+    <span class="admin-brand-mark" aria-hidden="true">L</span>
+    <span>LinguaPath <small>QUẢN TRỊ HỌC LIỆU</small></span>
+  </a>
+</div>
+{% endblock %}
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" href="{% static 'css/admin.css' %}">{% endblock %}
+{% block nav-global %}
+  <a class="admin-site-link" href="{% url 'dashboard' %}">← Mở website học</a>
+{% endblock %}

@@ -1,0 +1,363 @@
+{
+  "version": "editorial-coverage-v2",
+  "generated_at": "2026-10-25T08:37:00.449661+00:00",
+  "exam": "TOEIC",
+  "scope": "Source-library inventory only; stored labels and structural flags, not teacher approval, CEFR calibration, official TOEIC Part coverage or learner analytics.",
+  "visible_definition": "Published with language_checked or teacher_approved; cards must also be individually available; does not release question answers to a learner.",
+  "totals": {
+    "contents": 429,
+    "published_contents": 428,
+    "visible_contents": 428,
+    "cards": 3056,
+    "questions": 5138,
+    "visible_cards": 3055,
+    "visible_questions": 5118,
+    "teacher_approved_contents": 0,
+    "held_cards": 1
+  },
+  "content_groups": [
+    {
+      "skill": "listening",
+      "content_type": "listening",
+      "cefr_level": "A1",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 2,
+      "cards": 0,
+      "questions": 4
+    },
+    {
+      "skill": "listening",
+      "content_type": "listening",
+      "cefr_level": "A2",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 4,
+      "cards": 0,
+      "questions": 8
+    },
+    {
+      "skill": "listening",
+      "content_type": "listening",
+      "cefr_level": "B1",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 2,
+      "cards": 0,
+      "questions": 8
+    },
+    {
+      "skill": "listening",
+      "content_type": "listening",
+      "cefr_level": "B2",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 2,
+      "cards": 0,
+      "questions": 8
+    },
+    {
+      "skill": "reading",
+      "content_type": "reading",
+      "cefr_level": "",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 1,
+      "cards": 0,
+      "questions": 2
+    },
+    {
+      "skill": "reading",
+      "content_type": "reading",
+      "cefr_level": "A1",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 3,
+      "cards": 0,
+      "questions": 6
+    },
+    {
+      "skill": "reading",
+      "content_type": "reading",
+      "cefr_level": "A2",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 3,
+      "cards": 0,
+      "questions": 6
+    },
+    {
+      "skill": "reading",
+      "content_type": "reading",
+      "cefr_level": "B1",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 2,
+      "cards": 0,
+      "questions": 8
+    },
+    {
+      "skill": "reading",
+      "content_type": "reading",
+      "cefr_level": "B2",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 2,
+      "cards": 0,
+      "questions": 8
+    },
+    {
+      "skill": "vocabulary",
+      "content_type": "vocabulary",
+      "cefr_level": "",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 2,
+      "cards": 1016,
+      "questions": 0
+    },
+    {
+      "skill": "vocabulary",
+      "content_type": "vocabulary",
+      "cefr_level": "A1",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 55,
+      "cards": 277,
+      "questions": 633
+    },
+    {
+      "skill": "vocabulary",
+      "content_type": "vocabulary",
+      "cefr_level": "A2",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 87,
+      "cards": 440,
+      "questions": 1115
+    },
+    {
+      "skill": "vocabulary",
+      "content_type": "vocabulary",
+      "cefr_level": "B1",
+      "review_status": "draft",
+      "is_published": false,
+      "contents": 1,
+      "cards": 0,
+      "questions": 20
+    },
+    {
+      "skill": "vocabulary",
+      "content_type": "vocabulary",
+      "cefr_level": "B1",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 110,
+      "cards": 587,
+      "questions": 1440
+    },
+    {
+      "skill": "vocabulary",
+      "content_type": "vocabulary",
+      "cefr_level": "B2",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 119,
+      "cards": 604,
+      "questions": 1471
+    },
+    {
+      "skill": "vocabulary",
+      "content_type": "vocabulary",
+      "cefr_level": "C1",
+      "review_status": "language_checked",
+      "is_published": true,
+      "contents": 34,
+      "cards": 132,
+      "questions": 401
+    }
+  ],
+  "card_levels": [
+    {
+      "cefr_level": "A1",
+      "cards": 359,
+      "visible_cards": 359
+    },
+    {
+      "cefr_level": "A2",
+      "cards": 678,
+      "visible_cards": 678
+    },
+    {
+      "cefr_level": "B1",
+      "cards": 899,
+      "visible_cards": 898
+    },
+    {
+      "cefr_level": "B2",
+      "cards": 848,
+      "visible_cards": 848
+    },
+    {
+      "cefr_level": "C1",
+      "cards": 272,
+      "visible_cards": 272
+    }
+  ],
+  "question_types": [
+    {
+      "question_type": "",
+      "contents": 67,
+      "questions": 1026,
+      "visible_questions": 1006
+    },
+    {
+      "question_type": "foundation-advanced",
+      "contents": 8,
+      "questions": 32,
+      "visible_questions": 32
+    },
+    {
+      "question_type": "lp-workplace-v1-01-cloze",
+      "contents": 1,
+      "questions": 10,
+      "visible_questions": 10
+    },
+    {
+      "question_type": "lp-workplace-v1-01-deck",
+      "contents": 1,
+      "questions": 0,
+      "visible_questions": 0
+    },
+    {
+      "question_type": "lp-workplace-v1-01-meaning",
+      "contents": 1,
+      "questions": 10,
+      "visible_questions": 10
+    },
+    {
+      "question_type": "lp-workplace-v1-02-cloze",
+      "contents": 1,
+      "questions": 10,
+      "visible_questions": 10
+    },
+    {
+      "question_type": "lp-workplace-v1-02-deck",
+      "contents": 1,
+      "questions": 0,
+      "visible_questions": 0
+    },
+    {
+      "question_type": "lp-workplace-v1-02-meaning",
+      "contents": 1,
+      "questions": 10,
+      "visible_questions": 10
+    },
+    {
+      "question_type": "lp-workplace-v1-03-cloze",
+      "contents": 1,
+      "questions": 10,
+      "visible_questions": 10
+    },
+    {
+      "question_type": "lp-workplace-v1-03-deck",
+      "contents": 1,
+      "questions": 0,
+      "visible_questions": 0
+    },
+    {
+      "question_type": "lp-workplace-v1-03-meaning",
+      "contents": 1,
+      "questions": 10,
+      "visible_questions": 10
+    },
+    {
+      "question_type": "lp-workplace-v1-04-cloze",
+      "contents": 1,
+      "questions": 10,
+      "visible_questions": 10
+    },
+    {
+      "question_type": "lp-workplace-v1-04-deck",
+      "contents": 1,
+      "questions": 0,
+      "visible_questions": 0
+    },
+    {
+      "question_type": "lp-workplace-v1-04-meaning",
+      "contents": 1,
+      "questions": 10,
+      "visible_questions": 10
+    },
+    {
+      "question_type": "lp3000-v1-cloze",
+      "contents": 114,
+      "questions": 2000,
+      "visible_questions": 2000
+    },
+    {
+      "question_type": "lp3000-v1-deck",
+      "contents": 114,
+      "questions": 0,
+      "visible_questions": 0
+    },
+    {
+      "question_type": "lp3000-v1-meaning",
+      "contents": 114,
+      "questions": 2000,
+      "visible_questions": 2000
+    }
+  ],
+  "structural": {
+    "content": {
+      "skill_type_mismatch": 0,
+      "missing_source_or_rights": 0,
+      "teacher_approval_missing_reviewer_or_time": 0,
+      "empty_content": 0
+    },
+    "question": {
+      "blank_prompt": 0,
+      "fewer_than_two_options": 0,
+      "not_exactly_one_correct_option": 0,
+      "missing_explanation": 0,
+      "has_blank_option_text": 0,
+      "has_missing_option_explanation": 0,
+      "listening_without_audio_or_script": 0
+    },
+    "flashcard": {
+      "blank_term_or_meaning": 0,
+      "missing_english_example": 0,
+      "missing_vietnamese_example": 0,
+      "missing_source_or_rights": 0
+    }
+  },
+  "metadata": {
+    "contents_without_cefr": 3,
+    "contents_with_unrecognized_cefr": 0,
+    "question_type_unclassified_contents": 67,
+    "contents_with_unrecognized_skill": 0,
+    "contents_with_unrecognized_review_status": 0,
+    "cards_with_unrecognized_cefr": 0,
+    "child_rows_without_loaded_parent": 0
+  },
+  "gaps": [
+    {
+      "skill": "reading",
+      "cefr_level": "C1",
+      "visible_questions": 0,
+      "reason": "No published learner-visible question is labelled with this skill/level."
+    },
+    {
+      "skill": "listening",
+      "cefr_level": "C1",
+      "visible_questions": 0,
+      "reason": "No published learner-visible question is labelled with this skill/level."
+    }
+  ],
+  "limitations": [
+    "Counts do not judge sense, distractor plausibility, answer correctness or rights validity.",
+    "Question type values are raw metadata; no official TOEIC Part is inferred.",
+    "Blank/unrecognized labels remain explicit and are not assigned a level automatically.",
+    "The three read queries are not one database snapshot; export during an editorial freeze for a stable inventory."
+  ]
+}

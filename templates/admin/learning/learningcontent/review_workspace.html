@@ -1,0 +1,38 @@
+{% extends 'admin/base_site.html' %}
+{% load static %}
+{% block extrahead %}{{ block.super }}<link rel="stylesheet" href="{% static 'css/content-review.css' %}">{% endblock %}
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">Trang quản trị</a> › <a href="{% url 'admin:learning_learningcontent_changelist' %}">Học liệu</a> › Chuẩn bị duyệt pilot</div>{% endblock %}
+{% block content %}
+<div class="review-workspace">
+  <div class="review-intro"><span class="review-eyebrow">CHUẨN BỊ CHO NGƯỜI DUYỆT</span><h2>Nhìn rõ kho học liệu.<br>Chọn một mẫu để rà soát.</h2><p>Phiếu chứa dữ liệu gốc và mã phiên bản để người có chuyên môn kiểm tra. Xuất phiếu không phê duyệt hoặc xuất bản học liệu; mẫu được chọn không chứng nhận cả bộ.</p></div>
+  <section class="review-stats" aria-label="Độ phủ học liệu {{ coverage.exam }}">
+    <article><strong>{{ coverage.totals.visible_contents }}</strong><span>bộ đang cho người học xem</span></article>
+    <article><strong>{{ coverage.totals.visible_cards }}</strong><span>flashcard đang khả dụng</span></article>
+    <article><strong>{{ coverage.totals.visible_questions }}</strong><span>câu hỏi đang khả dụng</span></article>
+    <article><strong>{{ coverage.totals.teacher_approved_contents }}</strong><span>bộ mang trạng thái chuyên môn duyệt</span></article>
+  </section>
+  <section class="review-panel" aria-labelledby="review-select-title">
+    <h2 id="review-select-title">1. Lọc và chọn học liệu</h2>
+    <form method="get" class="review-filters">
+      <div><label for="id_exam">Kỳ thi</label>{{ form.exam }}</div><div><label for="id_skill">Kỹ năng</label>{{ form.skill }}</div><div><label for="id_level">Mức tham khảo</label>{{ form.level }}</div>
+      <button type="submit">Lọc danh sách</button>
+    </form>
+    {% if form.errors %}<div class="review-errors" role="alert">{{ form.non_field_errors }}{% for field in form %}{{ field.errors }}{% endfor %}</div>{% endif %}
+    <form method="post">
+      {% csrf_token %}<input type="hidden" name="exam" value="{{ exam }}"><input type="hidden" name="skill" value="{{ skill }}"><input type="hidden" name="level" value="{{ level }}">
+      <p id="selection-help">Chọn từ 1 đến 10 bộ trên trang hiện tại. Phiếu chỉ gồm số mẫu bạn yêu cầu, theo thứ tự cố định để dễ đối chiếu; mã phiên bản vẫn gắn với toàn bộ nội dung của từng bộ.</p><p class="review-note">Nên xuất khi đợt biên tập đã tạm dừng. Phiếu không khóa học liệu trong database; cần đối chiếu lại phiên bản trước khi duyệt.</p>
+      <div class="review-table-wrap" role="region" aria-labelledby="review-table-caption" tabindex="0"><table><caption id="review-table-caption">Danh sách học liệu · {{ exam }} · trang {{ page_obj.number }}</caption><thead><tr><th scope="col">Chọn</th><th scope="col">Bộ học liệu</th><th scope="col">Kỹ năng / mức</th><th scope="col">Thẻ / câu</th><th scope="col">Trạng thái</th></tr></thead><tbody>
+        {% for item in page_obj %}<tr><td><input type="checkbox" name="content_id" value="{{ item.pk }}" id="review-content-{{ item.pk }}" aria-describedby="selection-help"{% if item.pk in selected_ids %} checked{% endif %}><label for="review-content-{{ item.pk }}" class="visually-hidden">Chọn {{ item.title }}</label></td><th scope="row"><a href="{% url 'admin:learning_learningcontent_change' item.pk %}">{{ item.title }}</a><small>ID {{ item.pk }}</small></th><td>{{ item.get_skill_display }}<small>{{ item.cefr_level|default:'Chưa gán mức' }}</small></td><td>{{ item.review_card_count }} thẻ<small>{{ item.review_question_count }} câu hỏi</small></td><td>{{ item.get_review_status_display }}<small>{% if item.is_published %}Đang xuất bản{% else %}Chưa xuất bản{% endif %}</small></td></tr>{% empty %}<tr><td colspan="5">Chưa có học liệu phù hợp bộ lọc.</td></tr>{% endfor %}
+      </tbody></table></div>
+      <div class="review-export"><div><label for="id_max_items">Số mẫu tối đa mỗi loại trong một bộ</label>{{ form.max_items }}<small>1–100 flashcard và 1–100 câu hỏi mỗi bộ; các phần không được lấy mẫu vẫn chưa được rà soát.</small></div><button type="submit" name="action" value="editor">Mở phiếu để điền nhận xét</button><button type="submit" name="action" value="export">Tải phiếu mẫu · JSON</button></div>
+    </form>
+    {% if page_obj.has_other_pages %}<nav class="review-pagination" aria-label="Trang danh sách học liệu">{% if page_obj.has_previous %}<a href="?exam={{ exam|urlencode }}&amp;skill={{ skill|urlencode }}&amp;level={{ level|urlencode }}&amp;page={{ page_obj.previous_page_number }}">← Trang trước</a>{% endif %}<span>Trang {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>{% if page_obj.has_next %}<a href="?exam={{ exam|urlencode }}&amp;skill={{ skill|urlencode }}&amp;level={{ level|urlencode }}&amp;page={{ page_obj.next_page_number }}">Trang sau →</a>{% endif %}</nav><p class="review-note">Đổi trang sẽ bỏ lựa chọn chưa xuất. Hãy tạo phiếu cho trang hiện tại trước khi chuyển trang.</p>{% endif %}
+  </section>
+  <section class="review-panel" aria-labelledby="review-return-title"><h2 id="review-return-title">2. Tiếp tục phiếu đã điền</h2><p>Tải phiếu JSON đã lưu để kiểm tra phiên bản nguồn, phần nhận xét còn thiếu và mở lại để tiếp tục rà soát.</p><a href="{% url 'admin:learning_learningcontent_review_check' %}">Đối chiếu hoặc mở lại phiếu →</a></section>
+  <section class="review-panel" aria-labelledby="review-coverage-title"><h2 id="review-coverage-title">3. Phần nào còn thiếu độ phủ?</h2><p>Số liệu của toàn kỳ thi {{ coverage.exam }}, không chỉ bộ lọc phía trên. Nhãn CEFR và dạng câu hiện là metadata học liệu; không chứng minh độ khó hoặc tương đương đề thi chuẩn.</p>
+    <p>Chưa gán nhãn kiểu câu: <strong>{{ coverage.metadata.question_type_unclassified_contents }}</strong> bộ · chưa có mức tham khảo cho bộ: <strong>{{ coverage.metadata.contents_without_cefr }}</strong> bộ.</p>
+    <div class="review-table-wrap" role="region" aria-label="Khoảng trống theo kỹ năng và mức" tabindex="0"><table><thead><tr><th scope="col">Kỹ năng</th><th scope="col">Mức tham khảo</th><th scope="col">Câu đang khả dụng</th><th scope="col">Ghi nhận</th></tr></thead><tbody>{% for gap in coverage.gaps %}<tr><th scope="row">{{ gap.skill }}</th><td>{{ gap.cefr_level|default:'Chưa gán mức' }}</td><td>{{ gap.visible_questions }}</td><td>Chưa có câu đang cho người học xem ở kỹ năng và mức này.</td></tr>{% empty %}<tr><td colspan="4">Không có ô trống theo phép kiểm kê này. Vẫn cần người duyệt nội dung và blueprint riêng.</td></tr>{% endfor %}</tbody></table></div>
+    <details><summary>Các dấu hiệu cấu trúc cần rà soát</summary><p>Đây là kiểm tra dữ liệu, không đánh giá đúng/sai ngôn ngữ hoặc thay giảng viên.</p>{% for group in flag_groups %}<h3>{{ group.label }}</h3><ul>{% for item in group.items %}<li>{{ item.label }}: <strong>{{ item.count }}</strong></li>{% empty %}<li>Chưa có dấu hiệu được ghi nhận.</li>{% endfor %}</ul>{% endfor %}</details>
+  </section>
+</div>
+{% endblock %}

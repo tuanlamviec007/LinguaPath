@@ -1,0 +1,7 @@
+<form method="post" action="{% url 'learning:save_word' card_id %}" class="lp-save-word-form" data-save-word data-card-id="{{ card_id }}" data-term="{{ term }}">
+  {% csrf_token %}
+  <input type="hidden" name="action" value="{% if is_saved %}remove{% else %}save{% endif %}">
+  <input type="hidden" name="next" value="{{ request.get_full_path }}">
+  <button class="lp-save-word-button{% if is_saved %} is-saved{% endif %}" type="submit" aria-pressed="{% if is_saved %}true{% else %}false{% endif %}" aria-label="{% if is_saved %}Bỏ {{ term }} khỏi sổ từ{% else %}Lưu {{ term }} vào sổ từ{% endif %}"><span data-save-icon aria-hidden="true">{% if is_saved %}★{% else %}☆{% endif %}</span> <span data-save-label>{% if is_saved %}Đã lưu{% else %}Lưu từ{% endif %}</span></button>
+  <span class="lp-save-word-status" data-save-status role="status" aria-live="polite"></span>
+</form>

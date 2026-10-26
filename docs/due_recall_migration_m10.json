@@ -1,0 +1,21 @@
+{
+  "version": "due-recall-migration-m10",
+  "date": "2026-10-25",
+  "migration": "0023_due_recall_observation",
+  "backup_sha256": "21e7f43ea41ad85b046b47795f88e969e5a9708876fafd10ada3d7d4f5f70f46",
+  "integrity_check": "ok",
+  "existing_tables_compared": 36,
+  "all_existing_rows_unchanged": true,
+  "tables_with_identical_rows": 33,
+  "framework_rows_added": {
+    "auth_permission": 4,
+    "django_content_type": 1,
+    "django_migrations": 1
+  },
+  "framework_additions": "New model content type, four standard permission definitions, migration record. No permission assignments.",
+  "new_observation_rows": 0,
+  "learner_accounts": 0,
+  "pilot_completed": false,
+  "production_approved": false,
+  "postgresql_executed": false
+}

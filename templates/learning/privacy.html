@@ -1,0 +1,46 @@
+{% extends 'learning/base.html' %}
+{% block title %}Quyền riêng tư và dữ liệu · LinguaPath{% endblock %}
+{% block content %}
+<section class="page-heading">
+  <span class="eyebrow">TÀI KHOẢN CỦA BẠN</span>
+  <h1>Quyền riêng tư và dữ liệu</h1>
+  <p>Xem cách dữ liệu học được lưu, tải bản sao riêng hoặc chủ động xóa tài khoản.</p>
+</section>
+{% if privacy_error %}<div class="notice" role="alert">{{ privacy_error }}</div>{% endif %}
+<section class="panel" aria-labelledby="privacy-data-title">
+  <h2 id="privacy-data-title">Ứng dụng lưu những gì?</h2>
+  <p>Thông tin tài khoản, mục tiêu và nhiệm vụ; lịch ôn flashcard, sổ từ; bản nháp, kết quả và bằng chứng bài luyện/quiz; sổ lỗi; lịch sử trợ lý cùng lượt sử dụng AI. Lịch sử trợ lý lưu tối đa 50 lượt gần nhất; bạn cũng có thể xóa riêng tại trang trợ lý.</p>
+  <p>Tra cứu học liệu, tiến độ và kế hoạch không gửi câu hỏi tới dịch vụ AI. Khi bạn chọn AI hỗ trợ, câu hỏi cùng nguồn liên quan được gửi tới nhà cung cấp được cấu hình. Ứng dụng chưa gửi lịch sử chat làm bộ nhớ hội thoại.</p>
+  <p>Log ứng dụng không ghi prompt, mật khẩu, cookie, token hoặc IP thô. Bộ đếm chống lạm dụng lưu khóa HMAC, không liên kết trực tiếp bằng khóa ngoại với tài khoản. Chỉ cửa sổ đang hiệu lực được dùng để giới hạn; quản trị viên cần dọn bản ghi cũ theo quy trình.</p>
+</section>
+<section class="panel" aria-labelledby="privacy-export-title">
+  <h2 id="privacy-export-title">Tải bản sao dữ liệu của tôi</h2>
+  <p>Bản JSON chứa dữ liệu của tài khoản đang đăng nhập. Không có mật khẩu/hash, session, token, khóa dịch vụ hay dữ liệu tài khoản khác. Quiz chưa nộp chỉ xuất đề được phép xem và đáp án bạn đã nhập; không mở khóa chấm.</p>
+  <p>Bản tải có thể chứa nội dung riêng tư bạn từng nhập vào trợ lý hoặc ghi chú. Giữ file ở nơi riêng; tránh gửi nguyên file công khai. Giới hạn tải trực tiếp {{ export_size_mb }} MiB; nếu vượt giới hạn, hệ thống báo lỗi và không tạo bản xuất thiếu dữ liệu.</p>
+  <form method="post" class="form-stack">
+    {% csrf_token %}<input type="hidden" name="action" value="export">
+    <label for="privacy-export-password">Mật khẩu hiện tại</label>
+    <input id="privacy-export-password" name="password" type="password" autocomplete="current-password" maxlength="1024" required>
+    <button class="button primary" type="submit">Xác nhận và tải dữ liệu JSON</button>
+  </form>
+</section>
+<section class="panel" aria-labelledby="privacy-delete-title">
+  <h2 id="privacy-delete-title">Xóa tài khoản</h2>
+  <p>Tác vụ này xóa tài khoản và dữ liệu học gắn trực tiếp trong cơ sở dữ liệu ứng dụng: lịch sử, bản nháp, kết quả, lịch ôn, sổ từ và lịch sử trợ lý. Học liệu dùng chung và dữ liệu người khác được giữ lại. Không có nút hoàn tác trong ứng dụng; hãy tải bản sao trước nếu cần.</p>
+  <p>Thao tác không tự xóa mọi bản sao lưu, bản đã tải trên thiết bị hoặc dữ liệu đã gửi tới nhà cung cấp AI. Vòng đời backup, log hạ tầng và chính sách lưu giữ của nhà cung cấp cần được quản trị viên xử lý riêng; chưa có cơ chế xóa tức thì các bản sao đó.</p>
+  {% if privileged_account %}
+    <div class="notice" role="note">Tài khoản có quyền quản trị không được tự xóa ở đây. Cần quy trình quản trị riêng để bàn giao quyền và kiểm tra nhật ký.</div>
+  {% else %}
+    <form method="post" class="form-stack">
+      {% csrf_token %}<input type="hidden" name="action" value="delete">
+      <label for="privacy-delete-password">Mật khẩu hiện tại</label>
+      <input id="privacy-delete-password" name="password" type="password" autocomplete="current-password" maxlength="1024" required>
+      <label for="privacy-delete-confirm">Nhập XOA để xác nhận</label>
+      <input id="privacy-delete-confirm" name="confirm_delete" type="text" autocomplete="off" maxlength="3" pattern="XOA" required aria-describedby="privacy-delete-warning">
+      <label><input name="confirm_understood" type="checkbox" value="yes" required> Tôi hiểu tài khoản và dữ liệu học trong ứng dụng sẽ bị xóa.</label>
+      <p id="privacy-delete-warning">Chỉ nhấn nút dưới khi bạn muốn kết thúc việc sử dụng tài khoản này.</p>
+      <button class="button secondary" type="submit">Xóa tài khoản và dữ liệu học của tôi</button>
+    </form>
+  {% endif %}
+</section>
+{% endblock %}

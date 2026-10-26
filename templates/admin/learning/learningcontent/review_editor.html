@@ -1,0 +1,12 @@
+{% extends 'admin/base_site.html' %}
+{% load static %}
+{% block extrahead %}{{ block.super }}<link rel="stylesheet" href="{% static 'css/content-review.css' %}"><link rel="stylesheet" href="{% static 'css/content-review-editor.css' %}"><script src="{% static 'js/content-review-editor.js' %}" defer></script>{% endblock %}
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">Trang quản trị</a> › <a href="{% url 'admin:learning_learningcontent_review_workspace' %}">Chuẩn bị duyệt pilot</a> › Rà soát phiếu</div>{% endblock %}
+{% block content %}
+<div class="review-workspace">
+  <div class="review-intro"><span class="review-eyebrow">NHẬN XÉT CỦA NGƯỜI DUYỆT</span><h2>Đọc nguồn. Ghi bằng chứng.<br>Lưu kết luận từng mục.</h2><p>Nhận xét chỉ nằm trên trang này đến khi bạn tải phiếu JSON. Hãy tải phiếu trước khi đóng trang; có thể <a href="{% url 'admin:learning_learningcontent_review_check' %}">tải lên để đối chiếu và tiếp tục</a>. Phiếu không tự cập nhật hoặc phê duyệt học liệu.</p></div>
+  <noscript><p class="review-errors">Cần JavaScript để điền phiếu trên trang. Bạn vẫn có thể tải phiếu JSON từ khu chuẩn bị, điền bằng trình soạn thảo và đối chiếu lại.</p></noscript>
+  {{ packet|json_script:'review-packet-data' }}
+  <div id="review-editor-root" class="review-editor"></div>
+</div>
+{% endblock %}

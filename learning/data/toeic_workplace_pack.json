@@ -1,0 +1,886 @@
+{
+  "version": 1,
+  "note": "Original AI-assisted learning material. CEFR labels are provisional; not official Cambridge or ETS content.",
+  "entries": [
+    {
+      "id": "workplace-v1-01-01",
+      "topic": "Office collaboration",
+      "term": "meet a deadline",
+      "meaning_vi": "đáp ứng đúng thời hạn",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Our team must meet a deadline by delivering the finished report before Friday.",
+      "example_vi": "Nhóm chúng tôi phải đáp ứng đúng thời hạn bằng cách giao bản báo cáo hoàn chỉnh trước thứ Sáu.",
+      "cloze_answer": "meet",
+      "cloze_distractors": [
+        "reimburse",
+        "recruit",
+        "board"
+      ],
+      "meaning_distractors": [
+        "ghi biên bản cuộc họp",
+        "xin nghỉ làm",
+        "chia sẻ chương trình cuộc họp"
+      ],
+      "explanation_vi": "Meet a deadline nghĩa là hoàn thành công việc trước hoặc đúng hạn; Friday là mốc phải giao báo cáo."
+    },
+    {
+      "id": "workplace-v1-01-02",
+      "topic": "Office collaboration",
+      "term": "take minutes",
+      "meaning_vi": "ghi biên bản cuộc họp",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Please take minutes during the meeting so we have a written record of every decision.",
+      "example_vi": "Vui lòng ghi biên bản trong cuộc họp để chúng ta có bản ghi từng quyết định.",
+      "cloze_answer": "take",
+      "cloze_distractors": [
+        "recruit",
+        "reimburse",
+        "invoice"
+      ],
+      "meaning_distractors": [
+        "phê duyệt một đề xuất",
+        "tham dự buổi phổ biến thông tin ngắn",
+        "lưu lại hồ sơ hoặc thông tin ghi chép"
+      ],
+      "explanation_vi": "Take minutes là ghi lại diễn biến và quyết định trong cuộc họp; written record cho biết cần biên bản."
+    },
+    {
+      "id": "workplace-v1-01-03",
+      "topic": "Office collaboration",
+      "term": "approve a proposal",
+      "meaning_vi": "phê duyệt một đề xuất",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Only the director can approve a proposal and officially authorize the project to begin.",
+      "example_vi": "Chỉ giám đốc mới có thể phê duyệt đề xuất và chính thức cho phép dự án bắt đầu.",
+      "cloze_answer": "approve",
+      "cloze_distractors": [
+        "reimburse",
+        "board",
+        "recruit"
+      ],
+      "meaning_distractors": [
+        "giao một nhiệm vụ cho người khác",
+        "chỉnh sửa bản nháp",
+        "đạt được sự đồng thuận"
+      ],
+      "explanation_vi": "Approve a proposal là đồng ý chính thức với đề xuất; authorize the project chỉ việc cấp phép triển khai."
+    },
+    {
+      "id": "workplace-v1-01-04",
+      "topic": "Office collaboration",
+      "term": "delegate a task",
+      "meaning_vi": "giao một nhiệm vụ cho người khác",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "A manager may delegate a task to a qualified colleague while remaining responsible for its completion.",
+      "example_vi": "Người quản lý có thể giao nhiệm vụ cho đồng nghiệp đủ năng lực nhưng vẫn chịu trách nhiệm về việc hoàn thành.",
+      "cloze_answer": "delegate",
+      "cloze_distractors": [
+        "reimburse",
+        "board",
+        "recruit"
+      ],
+      "meaning_distractors": [
+        "xin nghỉ làm",
+        "chia sẻ chương trình cuộc họp",
+        "đáp ứng đúng thời hạn"
+      ],
+      "explanation_vi": "Delegate a task là giao quyền thực hiện nhiệm vụ cho người khác; to a qualified colleague xác định người nhận việc."
+    },
+    {
+      "id": "workplace-v1-01-05",
+      "topic": "Office collaboration",
+      "term": "request time off",
+      "meaning_vi": "xin nghỉ làm",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Employees must request time off before taking leave for a personal appointment.",
+      "example_vi": "Nhân viên phải xin nghỉ làm trước khi nghỉ để giải quyết cuộc hẹn cá nhân.",
+      "cloze_answer": "request",
+      "cloze_distractors": [
+        "reimburse",
+        "shortlist",
+        "board"
+      ],
+      "meaning_distractors": [
+        "tham dự buổi phổ biến thông tin ngắn",
+        "lưu lại hồ sơ hoặc thông tin ghi chép",
+        "ghi biên bản cuộc họp"
+      ],
+      "explanation_vi": "Request time off là xin phép được nghỉ làm; taking leave và personal appointment làm rõ tình huống nghỉ phép."
+    },
+    {
+      "id": "workplace-v1-01-06",
+      "topic": "Office collaboration",
+      "term": "attend a briefing",
+      "meaning_vi": "tham dự buổi phổ biến thông tin ngắn",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "All technicians should attend a briefing to hear the safety instructions before entering the site.",
+      "example_vi": "Tất cả kỹ thuật viên nên tham dự buổi phổ biến ngắn để nghe hướng dẫn an toàn trước khi vào công trường.",
+      "cloze_answer": "attend",
+      "cloze_distractors": [
+        "submit",
+        "reimburse",
+        "renew"
+      ],
+      "meaning_distractors": [
+        "chỉnh sửa bản nháp",
+        "đạt được sự đồng thuận",
+        "phê duyệt một đề xuất"
+      ],
+      "explanation_vi": "Attend a briefing là có mặt tại buổi cung cấp thông tin ngắn; hear the safety instructions cho biết mục đích tham dự."
+    },
+    {
+      "id": "workplace-v1-01-07",
+      "topic": "Office collaboration",
+      "term": "revise a draft",
+      "meaning_vi": "chỉnh sửa bản nháp",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Please revise a draft of the announcement by correcting the dates and replacing the outdated figures.",
+      "example_vi": "Vui lòng chỉnh sửa bản nháp thông báo bằng cách sửa ngày tháng và thay các số liệu đã cũ.",
+      "cloze_answer": "revise",
+      "cloze_distractors": [
+        "board",
+        "reimburse",
+        "recruit"
+      ],
+      "meaning_distractors": [
+        "chia sẻ chương trình cuộc họp",
+        "đáp ứng đúng thời hạn",
+        "giao một nhiệm vụ cho người khác"
+      ],
+      "explanation_vi": "Revise a draft là xem xét và sửa bản nháp; correcting và replacing mô tả các thao tác chỉnh sửa."
+    },
+    {
+      "id": "workplace-v1-01-08",
+      "topic": "Office collaboration",
+      "term": "share an agenda",
+      "meaning_vi": "chia sẻ chương trình cuộc họp",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "The organizer will share an agenda listing the discussion topics before the meeting starts.",
+      "example_vi": "Người tổ chức sẽ chia sẻ chương trình liệt kê các chủ đề thảo luận trước khi cuộc họp bắt đầu.",
+      "cloze_answer": "share",
+      "cloze_distractors": [
+        "reimburse",
+        "recruit",
+        "board"
+      ],
+      "meaning_distractors": [
+        "lưu lại hồ sơ hoặc thông tin ghi chép",
+        "ghi biên bản cuộc họp",
+        "xin nghỉ làm"
+      ],
+      "explanation_vi": "Share an agenda là gửi chương trình làm việc cho những người tham gia; discussion topics là nội dung của agenda."
+    },
+    {
+      "id": "workplace-v1-01-09",
+      "topic": "Office collaboration",
+      "term": "keep a record",
+      "meaning_vi": "lưu lại hồ sơ hoặc thông tin ghi chép",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "We must keep a record of each equipment inspection so the audit team can check the dates later.",
+      "example_vi": "Chúng ta phải lưu thông tin từng lần kiểm tra thiết bị để nhóm đánh giá có thể kiểm tra lại ngày tháng.",
+      "cloze_answer": "keep",
+      "cloze_distractors": [
+        "reimburse",
+        "recruit",
+        "waive"
+      ],
+      "meaning_distractors": [
+        "đạt được sự đồng thuận",
+        "phê duyệt một đề xuất",
+        "tham dự buổi phổ biến thông tin ngắn"
+      ],
+      "explanation_vi": "Keep a record là lưu thông tin để tra cứu; check the dates later nêu lý do cần lưu hồ sơ."
+    },
+    {
+      "id": "workplace-v1-01-10",
+      "topic": "Office collaboration",
+      "term": "reach a consensus",
+      "meaning_vi": "đạt được sự đồng thuận",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "After discussing every concern, the committee hopes to reach a consensus that all members can support.",
+      "example_vi": "Sau khi thảo luận mọi băn khoăn, ủy ban hy vọng đạt được sự đồng thuận mà tất cả thành viên đều ủng hộ.",
+      "cloze_answer": "reach",
+      "cloze_distractors": [
+        "reimburse",
+        "submit",
+        "recruit"
+      ],
+      "meaning_distractors": [
+        "đáp ứng đúng thời hạn",
+        "giao một nhiệm vụ cho người khác",
+        "chỉnh sửa bản nháp"
+      ],
+      "explanation_vi": "Reach a consensus là đi đến ý kiến được cả nhóm chấp nhận; all members can support là dấu hiệu đồng thuận."
+    },
+    {
+      "id": "workplace-v1-02-01",
+      "topic": "Finance and purchasing",
+      "term": "submit an invoice",
+      "meaning_vi": "nộp hóa đơn yêu cầu thanh toán",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "The supplier must submit an invoice showing the amount owed before our accounts team can arrange payment.",
+      "example_vi": "Nhà cung cấp phải nộp hóa đơn ghi số tiền phải trả trước khi bộ phận kế toán có thể thu xếp thanh toán.",
+      "cloze_answer": "submit",
+      "cloze_distractors": [
+        "attend",
+        "recruit",
+        "board"
+      ],
+      "meaning_distractors": [
+        "hoàn trả các khoản chi phí đã ứng",
+        "cân đối ngân sách thu và chi",
+        "thanh toán thành nhiều đợt"
+      ],
+      "explanation_vi": "Submit an invoice là gửi hóa đơn để được xử lý thanh toán; amount owed là số tiền còn phải trả."
+    },
+    {
+      "id": "workplace-v1-02-02",
+      "topic": "Finance and purchasing",
+      "term": "reimburse expenses",
+      "meaning_vi": "hoàn trả các khoản chi phí đã ứng",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "The company will reimburse expenses after you provide receipts for the business trip.",
+      "example_vi": "Công ty sẽ hoàn trả các khoản chi phí sau khi bạn cung cấp hóa đơn chứng từ của chuyến công tác.",
+      "cloze_answer": "reimburse",
+      "cloze_distractors": [
+        "recruit",
+        "attend",
+        "appoint"
+      ],
+      "meaning_distractors": [
+        "thực hiện việc hoàn tiền",
+        "đề nghị thanh toán lại chi phí đã chi",
+        "yêu cầu bên bán báo giá"
+      ],
+      "explanation_vi": "Reimburse expenses là trả lại tiền người lao động đã chi cho công việc; receipts là chứng từ dùng để hoàn trả."
+    },
+    {
+      "id": "workplace-v1-02-03",
+      "topic": "Finance and purchasing",
+      "term": "issue a refund",
+      "meaning_vi": "thực hiện việc hoàn tiền",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "The retailer will issue a refund to return the money you paid for the defective item.",
+      "example_vi": "Nhà bán lẻ sẽ thực hiện việc hoàn tiền để trả lại số tiền bạn đã thanh toán cho sản phẩm bị lỗi.",
+      "cloze_answer": "issue",
+      "cloze_distractors": [
+        "attend",
+        "recruit",
+        "board"
+      ],
+      "meaning_distractors": [
+        "thanh toán đầy đủ một hóa đơn",
+        "nộp đơn xin vay tiền",
+        "miễn một khoản phí"
+      ],
+      "explanation_vi": "Issue a refund là bên bán thực hiện hoàn tiền; return the money và defective item nêu rõ lý do hoàn tiền."
+    },
+    {
+      "id": "workplace-v1-02-04",
+      "topic": "Finance and purchasing",
+      "term": "settle an invoice",
+      "meaning_vi": "thanh toán đầy đủ một hóa đơn",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "Please settle an invoice for the delivered goods by transferring the full outstanding amount today.",
+      "example_vi": "Vui lòng thanh toán đầy đủ hóa đơn hàng đã giao bằng cách chuyển toàn bộ số tiền còn nợ hôm nay.",
+      "cloze_answer": "settle",
+      "cloze_distractors": [
+        "attend",
+        "recruit",
+        "board"
+      ],
+      "meaning_distractors": [
+        "cân đối ngân sách thu và chi",
+        "thanh toán thành nhiều đợt",
+        "nộp hóa đơn yêu cầu thanh toán"
+      ],
+      "explanation_vi": "Settle an invoice là trả hết số tiền ghi trên hóa đơn; full outstanding amount nhấn mạnh thanh toán toàn bộ."
+    },
+    {
+      "id": "workplace-v1-02-05",
+      "topic": "Finance and purchasing",
+      "term": "balance a budget",
+      "meaning_vi": "cân đối ngân sách thu và chi",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "The charity must balance a budget by ensuring that planned spending does not exceed its available income.",
+      "example_vi": "Tổ chức từ thiện phải cân đối ngân sách bằng cách bảo đảm chi tiêu dự kiến không vượt thu nhập sẵn có.",
+      "cloze_answer": "balance",
+      "cloze_distractors": [
+        "attend",
+        "recruit",
+        "board"
+      ],
+      "meaning_distractors": [
+        "đề nghị thanh toán lại chi phí đã chi",
+        "yêu cầu bên bán báo giá",
+        "hoàn trả các khoản chi phí đã ứng"
+      ],
+      "explanation_vi": "Balance a budget là điều chỉnh ngân sách để chi không vượt thu; spending và income là hai phía cần cân đối."
+    },
+    {
+      "id": "workplace-v1-02-06",
+      "topic": "Finance and purchasing",
+      "term": "claim expenses",
+      "meaning_vi": "đề nghị thanh toán lại chi phí đã chi",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "Employees can claim expenses by submitting the original receipts with a completed reimbursement form.",
+      "example_vi": "Nhân viên có thể đề nghị thanh toán lại chi phí đã chi bằng cách nộp chứng từ gốc cùng mẫu đề nghị hoàn trả đã điền.",
+      "cloze_answer": "claim",
+      "cloze_distractors": [
+        "recruit",
+        "attend",
+        "appoint"
+      ],
+      "meaning_distractors": [
+        "nộp đơn xin vay tiền",
+        "miễn một khoản phí",
+        "thực hiện việc hoàn tiền"
+      ],
+      "explanation_vi": "Claim expenses là người đã chi tiền nộp yêu cầu hoàn trả; khác reimburse expenses là hành động trả tiền của công ty."
+    },
+    {
+      "id": "workplace-v1-02-07",
+      "topic": "Finance and purchasing",
+      "term": "apply for a loan",
+      "meaning_vi": "nộp đơn xin vay tiền",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Small businesses can apply for a loan at the bank by completing an application and supplying financial records.",
+      "example_vi": "Doanh nghiệp nhỏ có thể nộp đơn xin vay tiền tại ngân hàng bằng cách điền đơn và cung cấp hồ sơ tài chính.",
+      "cloze_answer": "apply",
+      "cloze_distractors": [
+        "attend",
+        "invoice",
+        "board"
+      ],
+      "meaning_distractors": [
+        "thanh toán thành nhiều đợt",
+        "nộp hóa đơn yêu cầu thanh toán",
+        "thanh toán đầy đủ một hóa đơn"
+      ],
+      "explanation_vi": "Apply for a loan là gửi hồ sơ đề nghị được vay; an application và financial records là giấy tờ cần nộp."
+    },
+    {
+      "id": "workplace-v1-02-08",
+      "topic": "Finance and purchasing",
+      "term": "pay in installments",
+      "meaning_vi": "thanh toán thành nhiều đợt",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "Customers may pay in installments by dividing the total price into six equal monthly payments.",
+      "example_vi": "Khách hàng có thể thanh toán thành nhiều đợt bằng cách chia tổng giá thành sáu khoản trả hằng tháng bằng nhau.",
+      "cloze_answer": "pay",
+      "cloze_distractors": [
+        "recruit",
+        "attend",
+        "appoint"
+      ],
+      "meaning_distractors": [
+        "yêu cầu bên bán báo giá",
+        "hoàn trả các khoản chi phí đã ứng",
+        "cân đối ngân sách thu và chi"
+      ],
+      "explanation_vi": "Pay in installments là trả dần theo từng kỳ; six equal monthly payments là sáu khoản thanh toán định kỳ."
+    },
+    {
+      "id": "workplace-v1-02-09",
+      "topic": "Finance and purchasing",
+      "term": "request a quotation",
+      "meaning_vi": "yêu cầu bên bán báo giá",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Before selecting a supplier, please request a quotation stating the proposed price for fifty office chairs.",
+      "example_vi": "Trước khi chọn nhà cung cấp, vui lòng yêu cầu báo giá nêu mức giá đề xuất cho năm mươi ghế văn phòng.",
+      "cloze_answer": "request",
+      "cloze_distractors": [
+        "reimburse",
+        "board",
+        "recruit"
+      ],
+      "meaning_distractors": [
+        "miễn một khoản phí",
+        "thực hiện việc hoàn tiền",
+        "đề nghị thanh toán lại chi phí đã chi"
+      ],
+      "explanation_vi": "Request a quotation là đề nghị nhà cung cấp cho biết giá dự kiến; trước khi chọn bên bán thì đây chưa phải hóa đơn."
+    },
+    {
+      "id": "workplace-v1-02-10",
+      "topic": "Finance and purchasing",
+      "term": "waive a fee",
+      "meaning_vi": "miễn một khoản phí",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "The bank agreed to waive a fee, so the customer will not have to pay the account maintenance charge.",
+      "example_vi": "Ngân hàng đồng ý miễn khoản phí nên khách hàng sẽ không phải trả phí duy trì tài khoản.",
+      "cloze_answer": "waive",
+      "cloze_distractors": [
+        "recruit",
+        "attend",
+        "board"
+      ],
+      "meaning_distractors": [
+        "nộp hóa đơn yêu cầu thanh toán",
+        "thanh toán đầy đủ một hóa đơn",
+        "nộp đơn xin vay tiền"
+      ],
+      "explanation_vi": "Waive a fee là quyết định không thu một khoản phí; will not have to pay xác nhận khoản phí được miễn."
+    },
+    {
+      "id": "workplace-v1-03-01",
+      "topic": "Business travel",
+      "term": "confirm a reservation",
+      "meaning_vi": "xác nhận đặt chỗ",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Please confirm a reservation by replying that the hotel should keep the room booked under your name.",
+      "example_vi": "Vui lòng xác nhận đặt chỗ bằng cách trả lời rằng khách sạn cần giữ phòng đã đặt dưới tên bạn.",
+      "cloze_answer": "confirm",
+      "cloze_distractors": [
+        "reimburse",
+        "recruit",
+        "board"
+      ],
+      "meaning_distractors": [
+        "lên máy bay để thực hiện chuyến bay",
+        "qua khu vực kiểm tra hải quan",
+        "xuất trình hộ chiếu"
+      ],
+      "explanation_vi": "Confirm a reservation là xác nhận sẽ sử dụng chỗ đã đặt; keep the room booked nghĩa là tiếp tục giữ phòng."
+    },
+    {
+      "id": "workplace-v1-03-02",
+      "topic": "Business travel",
+      "term": "board a flight",
+      "meaning_vi": "lên máy bay để thực hiện chuyến bay",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Passengers can board a flight only after the gate agent checks their boarding passes.",
+      "example_vi": "Hành khách chỉ có thể lên máy bay sau khi nhân viên cửa khởi hành kiểm tra thẻ lên máy bay.",
+      "cloze_answer": "board",
+      "cloze_distractors": [
+        "reimburse",
+        "recruit",
+        "submit"
+      ],
+      "meaning_distractors": [
+        "làm thủ tục chuyến bay trực tuyến",
+        "kịp chuyến bay nối tiếp",
+        "đề nghị nâng hạng dịch vụ"
+      ],
+      "explanation_vi": "Board a flight là lên máy bay; gate agent và boarding passes xác định giai đoạn tại cửa ra máy bay."
+    },
+    {
+      "id": "workplace-v1-03-03",
+      "topic": "Business travel",
+      "term": "check in online",
+      "meaning_vi": "làm thủ tục chuyến bay trực tuyến",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Travelers can check in online on the airline website and download a boarding pass before leaving home.",
+      "example_vi": "Hành khách có thể làm thủ tục trực tuyến trên trang hãng hàng không và tải thẻ lên máy bay trước khi rời nhà.",
+      "cloze_answer": "check",
+      "cloze_distractors": [
+        "reimburse",
+        "submit",
+        "recruit"
+      ],
+      "meaning_distractors": [
+        "nhận lại hành lý ký gửi",
+        "thay đổi thông tin đặt chỗ",
+        "hủy đặt chỗ"
+      ],
+      "explanation_vi": "Check in online là làm thủ tục qua mạng; airline website và download a boarding pass làm rõ hình thức trực tuyến."
+    },
+    {
+      "id": "workplace-v1-03-04",
+      "topic": "Business travel",
+      "term": "collect baggage",
+      "meaning_vi": "nhận lại hành lý ký gửi",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "After landing, passengers should collect baggage from the carousel marked with their flight number.",
+      "example_vi": "Sau khi hạ cánh, hành khách nên nhận lại hành lý ở băng chuyền ghi số hiệu chuyến bay.",
+      "cloze_answer": "collect",
+      "cloze_distractors": [
+        "reimburse",
+        "recruit",
+        "approve"
+      ],
+      "meaning_distractors": [
+        "qua khu vực kiểm tra hải quan",
+        "xuất trình hộ chiếu",
+        "xác nhận đặt chỗ"
+      ],
+      "explanation_vi": "Collect baggage là nhận lại hành lý sau chuyến bay; carousel là băng chuyền hành lý tại sân bay."
+    },
+    {
+      "id": "workplace-v1-03-05",
+      "topic": "Business travel",
+      "term": "go through customs",
+      "meaning_vi": "qua khu vực kiểm tra hải quan",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Travelers must go through customs and declare restricted goods when entering the country.",
+      "example_vi": "Hành khách phải qua khu vực hải quan và khai báo hàng hóa bị hạn chế khi nhập cảnh.",
+      "cloze_answer": "go",
+      "cloze_distractors": [
+        "recruit",
+        "invoice",
+        "appoint"
+      ],
+      "meaning_distractors": [
+        "kịp chuyến bay nối tiếp",
+        "đề nghị nâng hạng dịch vụ",
+        "lên máy bay để thực hiện chuyến bay"
+      ],
+      "explanation_vi": "Go through customs là làm thủ tục kiểm tra hải quan; declare restricted goods là khai báo hàng thuộc diện quản lý."
+    },
+    {
+      "id": "workplace-v1-03-06",
+      "topic": "Business travel",
+      "term": "make a connection",
+      "meaning_vi": "kịp chuyến bay nối tiếp",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "We have only forty minutes to make a connection and reach the gate for our onward flight.",
+      "example_vi": "Chúng tôi chỉ có bốn mươi phút để kịp chuyến bay nối tiếp và đến cửa ra máy bay của chặng tiếp theo.",
+      "cloze_answer": "make",
+      "cloze_distractors": [
+        "reimburse",
+        "recruit",
+        "invoice"
+      ],
+      "meaning_distractors": [
+        "thay đổi thông tin đặt chỗ",
+        "hủy đặt chỗ",
+        "làm thủ tục chuyến bay trực tuyến"
+      ],
+      "explanation_vi": "Make a connection trong ngữ cảnh sân bay là kịp chuyến nối tiếp; onward flight là chuyến bay ở chặng sau."
+    },
+    {
+      "id": "workplace-v1-03-07",
+      "topic": "Business travel",
+      "term": "change a booking",
+      "meaning_vi": "thay đổi thông tin đặt chỗ",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Please contact the airline to change a booking if you need to move your trip from Tuesday to Thursday.",
+      "example_vi": "Vui lòng liên hệ hãng hàng không để thay đổi đặt chỗ nếu bạn cần dời chuyến đi từ thứ Ba sang thứ Năm.",
+      "cloze_answer": "change",
+      "cloze_distractors": [
+        "reimburse",
+        "recruit",
+        "appoint"
+      ],
+      "meaning_distractors": [
+        "xuất trình hộ chiếu",
+        "xác nhận đặt chỗ",
+        "nhận lại hành lý ký gửi"
+      ],
+      "explanation_vi": "Change a booking là sửa thông tin đặt chỗ; move your trip from Tuesday to Thursday chỉ việc đổi ngày."
+    },
+    {
+      "id": "workplace-v1-03-08",
+      "topic": "Business travel",
+      "term": "present a passport",
+      "meaning_vi": "xuất trình hộ chiếu",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "At border control, each traveler must present a passport so the officer can verify their identity.",
+      "example_vi": "Tại khu kiểm soát biên giới, mỗi hành khách phải xuất trình hộ chiếu để nhân viên xác minh danh tính.",
+      "cloze_answer": "present",
+      "cloze_distractors": [
+        "reimburse",
+        "recruit",
+        "negotiate"
+      ],
+      "meaning_distractors": [
+        "đề nghị nâng hạng dịch vụ",
+        "lên máy bay để thực hiện chuyến bay",
+        "qua khu vực kiểm tra hải quan"
+      ],
+      "explanation_vi": "Present a passport là đưa hộ chiếu cho nhân viên kiểm tra; verify their identity là mục đích xuất trình."
+    },
+    {
+      "id": "workplace-v1-03-09",
+      "topic": "Business travel",
+      "term": "request an upgrade",
+      "meaning_vi": "đề nghị nâng hạng dịch vụ",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "A passenger may request an upgrade from economy to business class if premium seats are available.",
+      "example_vi": "Hành khách có thể đề nghị nâng hạng từ phổ thông lên thương gia nếu còn chỗ ở hạng cao hơn.",
+      "cloze_answer": "request",
+      "cloze_distractors": [
+        "reimburse",
+        "recruit",
+        "invoice"
+      ],
+      "meaning_distractors": [
+        "hủy đặt chỗ",
+        "làm thủ tục chuyến bay trực tuyến",
+        "kịp chuyến bay nối tiếp"
+      ],
+      "explanation_vi": "Request an upgrade là xin chuyển lên hạng dịch vụ cao hơn; economy to business class nêu hai hạng ghế."
+    },
+    {
+      "id": "workplace-v1-03-10",
+      "topic": "Business travel",
+      "term": "cancel a reservation",
+      "meaning_vi": "hủy đặt chỗ",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Please cancel a reservation if you no longer need the hotel room, so it can be offered to another guest.",
+      "example_vi": "Vui lòng hủy đặt chỗ nếu bạn không còn cần phòng khách sạn để phòng có thể được bán cho khách khác.",
+      "cloze_answer": "cancel",
+      "cloze_distractors": [
+        "reimburse",
+        "recruit",
+        "board"
+      ],
+      "meaning_distractors": [
+        "xác nhận đặt chỗ",
+        "nhận lại hành lý ký gửi",
+        "thay đổi thông tin đặt chỗ"
+      ],
+      "explanation_vi": "Cancel a reservation là chấm dứt đặt chỗ; no longer need the hotel room cho biết khách không dùng phòng nữa."
+    },
+    {
+      "id": "workplace-v1-04-01",
+      "topic": "People and careers",
+      "term": "recruit staff",
+      "meaning_vi": "tuyển nhân sự",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "The new branch will recruit staff by advertising vacancies and selecting suitable applicants.",
+      "example_vi": "Chi nhánh mới sẽ tuyển nhân sự bằng cách đăng tin vị trí trống và lựa chọn ứng viên phù hợp.",
+      "cloze_answer": "recruit",
+      "cloze_distractors": [
+        "reimburse",
+        "invoice",
+        "waive"
+      ],
+      "meaning_distractors": [
+        "tiến hành một cuộc phỏng vấn",
+        "gửi lời mời nhận việc",
+        "thương lượng mức lương"
+      ],
+      "explanation_vi": "Recruit staff là tìm và tuyển người cho tổ chức; vacancies và applicants đều thuộc hoạt động tuyển dụng."
+    },
+    {
+      "id": "workplace-v1-04-02",
+      "topic": "People and careers",
+      "term": "conduct an interview",
+      "meaning_vi": "tiến hành một cuộc phỏng vấn",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "The hiring manager will conduct an interview and ask the applicant about relevant work experience.",
+      "example_vi": "Người quản lý tuyển dụng sẽ tiến hành phỏng vấn và hỏi ứng viên về kinh nghiệm làm việc liên quan.",
+      "cloze_answer": "conduct",
+      "cloze_distractors": [
+        "reimburse",
+        "invoice",
+        "board"
+      ],
+      "meaning_distractors": [
+        "nộp bản tóm tắt kinh nghiệm và học vấn",
+        "hoàn thành thời gian thử việc",
+        "tham gia quá trình đào tạo"
+      ],
+      "explanation_vi": "Conduct an interview là tổ chức và thực hiện cuộc phỏng vấn; người hỏi là hiring manager, người trả lời là applicant."
+    },
+    {
+      "id": "workplace-v1-04-03",
+      "topic": "People and careers",
+      "term": "submit a résumé",
+      "meaning_vi": "nộp bản tóm tắt kinh nghiệm và học vấn",
+      "cefr_level": "B1",
+      "part_of_speech": "verb phrase",
+      "example_en": "Applicants should submit a résumé listing their education, work history, and contact details.",
+      "example_vi": "Ứng viên nên nộp bản tóm tắt ghi học vấn, quá trình làm việc và thông tin liên hệ.",
+      "cloze_answer": "submit",
+      "cloze_distractors": [
+        "reimburse",
+        "recruit",
+        "board"
+      ],
+      "meaning_distractors": [
+        "chọn ứng viên vào danh sách rút gọn",
+        "cung cấp thông tin người tham chiếu",
+        "đánh giá kết quả thực hiện công việc"
+      ],
+      "explanation_vi": "Submit a résumé là gửi hồ sơ tóm tắt năng lực khi ứng tuyển; education và work history là các mục trong résumé."
+    },
+    {
+      "id": "workplace-v1-04-04",
+      "topic": "People and careers",
+      "term": "shortlist candidates",
+      "meaning_vi": "chọn ứng viên vào danh sách rút gọn",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "The panel will shortlist candidates, reducing the applications to five people who will attend a final interview.",
+      "example_vi": "Hội đồng sẽ chọn ứng viên vào danh sách rút gọn, giảm số hồ sơ xuống còn năm người dự phỏng vấn cuối.",
+      "cloze_answer": "shortlist",
+      "cloze_distractors": [
+        "reimburse",
+        "invoice",
+        "renew"
+      ],
+      "meaning_distractors": [
+        "gửi lời mời nhận việc",
+        "thương lượng mức lương",
+        "tuyển nhân sự"
+      ],
+      "explanation_vi": "Shortlist candidates là chọn nhóm ứng viên phù hợp nhất cho vòng tiếp; reducing ... to five people mô tả việc rút gọn."
+    },
+    {
+      "id": "workplace-v1-04-05",
+      "topic": "People and careers",
+      "term": "extend a job offer",
+      "meaning_vi": "gửi lời mời nhận việc",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "After the final interview, the employer may extend a job offer stating the position, salary, and start date.",
+      "example_vi": "Sau cuộc phỏng vấn cuối, nhà tuyển dụng có thể gửi lời mời nhận việc nêu vị trí, lương và ngày bắt đầu.",
+      "cloze_answer": "extend",
+      "cloze_distractors": [
+        "reimburse",
+        "attend",
+        "board"
+      ],
+      "meaning_distractors": [
+        "hoàn thành thời gian thử việc",
+        "tham gia quá trình đào tạo",
+        "tiến hành một cuộc phỏng vấn"
+      ],
+      "explanation_vi": "Extend a job offer là chính thức mời ứng viên làm việc; position, salary và start date là điều kiện của lời mời."
+    },
+    {
+      "id": "workplace-v1-04-06",
+      "topic": "People and careers",
+      "term": "complete probation",
+      "meaning_vi": "hoàn thành thời gian thử việc",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "New employees must complete probation before the company confirms their permanent appointments.",
+      "example_vi": "Nhân viên mới phải hoàn thành thời gian thử việc trước khi công ty xác nhận bổ nhiệm chính thức.",
+      "cloze_answer": "complete",
+      "cloze_distractors": [
+        "invoice",
+        "recruit",
+        "board"
+      ],
+      "meaning_distractors": [
+        "cung cấp thông tin người tham chiếu",
+        "đánh giá kết quả thực hiện công việc",
+        "nộp bản tóm tắt kinh nghiệm và học vấn"
+      ],
+      "explanation_vi": "Complete probation là kết thúc giai đoạn thử việc theo yêu cầu; permanent appointments là bước chính thức sau đó."
+    },
+    {
+      "id": "workplace-v1-04-07",
+      "topic": "People and careers",
+      "term": "provide references",
+      "meaning_vi": "cung cấp thông tin người tham chiếu",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "Candidates should provide references, including former supervisors whom the employer can contact about their work.",
+      "example_vi": "Ứng viên nên cung cấp thông tin người tham chiếu, gồm quản lý cũ mà nhà tuyển dụng có thể liên hệ để hỏi về công việc.",
+      "cloze_answer": "provide",
+      "cloze_distractors": [
+        "recruit",
+        "invoice",
+        "board"
+      ],
+      "meaning_distractors": [
+        "thương lượng mức lương",
+        "tuyển nhân sự",
+        "chọn ứng viên vào danh sách rút gọn"
+      ],
+      "explanation_vi": "Provide references trong tuyển dụng là cho thông tin người có thể xác nhận kinh nghiệm; former supervisors là ví dụ."
+    },
+    {
+      "id": "workplace-v1-04-08",
+      "topic": "People and careers",
+      "term": "negotiate a salary",
+      "meaning_vi": "thương lượng mức lương",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "Before signing the employment contract, the candidate can negotiate a salary and discuss a suitable monthly amount.",
+      "example_vi": "Trước khi ký hợp đồng lao động, ứng viên có thể thương lượng mức lương và thảo luận số tiền hằng tháng phù hợp.",
+      "cloze_answer": "negotiate",
+      "cloze_distractors": [
+        "recruit",
+        "attend",
+        "board"
+      ],
+      "meaning_distractors": [
+        "tham gia quá trình đào tạo",
+        "tiến hành một cuộc phỏng vấn",
+        "gửi lời mời nhận việc"
+      ],
+      "explanation_vi": "Negotiate a salary là trao đổi để thống nhất mức lương; discuss a suitable monthly amount mô tả nội dung thương lượng."
+    },
+    {
+      "id": "workplace-v1-04-09",
+      "topic": "People and careers",
+      "term": "undergo training",
+      "meaning_vi": "tham gia quá trình đào tạo",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "All recruits must undergo training to learn the safety procedures before operating the machinery.",
+      "example_vi": "Tất cả nhân viên mới phải tham gia đào tạo để học quy trình an toàn trước khi vận hành máy móc.",
+      "cloze_answer": "undergo",
+      "cloze_distractors": [
+        "invoice",
+        "recruit",
+        "board"
+      ],
+      "meaning_distractors": [
+        "đánh giá kết quả thực hiện công việc",
+        "nộp bản tóm tắt kinh nghiệm và học vấn",
+        "hoàn thành thời gian thử việc"
+      ],
+      "explanation_vi": "Undergo training là trải qua khóa hoặc quá trình đào tạo; learn the safety procedures cho biết nội dung học."
+    },
+    {
+      "id": "workplace-v1-04-10",
+      "topic": "People and careers",
+      "term": "evaluate performance",
+      "meaning_vi": "đánh giá kết quả thực hiện công việc",
+      "cefr_level": "B2",
+      "part_of_speech": "verb phrase",
+      "example_en": "Supervisors evaluate performance by comparing employees' results with the goals agreed at the start of the year.",
+      "example_vi": "Quản lý đánh giá kết quả công việc bằng cách so sánh kết quả của nhân viên với mục tiêu đã thống nhất đầu năm.",
+      "cloze_answer": "evaluate",
+      "cloze_distractors": [
+        "reimburse",
+        "board",
+        "recruit"
+      ],
+      "meaning_distractors": [
+        "tuyển nhân sự",
+        "chọn ứng viên vào danh sách rút gọn",
+        "cung cấp thông tin người tham chiếu"
+      ],
+      "explanation_vi": "Evaluate performance là xem xét mức độ hoàn thành công việc; comparing results with goals là một cách đánh giá."
+    }
+  ]
+}

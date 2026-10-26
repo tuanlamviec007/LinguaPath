@@ -1,0 +1,51 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}{{ content.title }} · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/practice-session.css' %}">
+<link rel="stylesheet" href="{% static 'css/listening-workspace.css' %}">
+<section class="practice-head">
+  <a class="session-dashboard-link" href="{% url 'dashboard' %}">← Về tổng quan</a>
+  <span class="eyebrow">{% if content.cefr_level %}Bài luyện nền tảng{% else %}{{ content.exam_type }}{% endif %} · {{ content.get_skill_display }}{% if content.cefr_level %} · CEFR {{ content.cefr_level }} tham khảo{% endif %}</span>
+  <h1>{{ content.title }}</h1><p>{{ content.description }}</p>
+</section>
+{% if content.skill == 'listening' %}<p class="practice-support-note">Bài luyện có hỗ trợ: có thể nghe lại, đổi tốc độ và mở bản chép lời. Tỷ lệ đúng ghi nhận việc luyện tập trên web, không phải điểm TOEIC/IELTS hay đánh giá không có trợ giúp.</p>{% endif %}
+<form class="abandon-attempt-form" method="post" action="{% url 'learning:abandon_attempt' attempt.id %}" data-abandon-attempt>
+  {% csrf_token %}
+  <button class="abandon-attempt-button" type="submit">Dừng lượt và xóa nháp</button>
+</form>
+<form class="practice-form" method="post" action="{% url 'learning:submit_attempt' attempt.id %}" data-practice-draft data-draft-revision="{{ attempt.draft_revision|default:0 }}" data-draft-conflict="{% if draft_conflict %}true{% else %}false{% endif %}" data-draft-unsaved="{% if draft_has_unsaved %}true{% else %}false{% endif %}" data-draft-url="{% url 'learning:save_draft' attempt.id %}" data-total="{{ questions|length }}">
+  {% csrf_token %}
+  <input type="hidden" name="draft_revision" value="{{ attempt.draft_revision|default:0 }}" data-draft-revision>
+  {% if draft_conflict %}<p class="message error" role="alert">Bản nháp đã thay đổi hoặc lượt làm đã đóng. Các lựa chọn bạn vừa gửi vẫn được giữ bên dưới. <a href="{% url 'learning:take_attempt' attempt.id %}">Tải lại bản đã lưu</a> trước khi tiếp tục.</p>{% endif %}
+  <section class="session-savebar" aria-label="Tiến độ và lưu bản nháp">
+    <div class="session-progress-copy">
+      <strong><span data-answered-count>{{ draft_count|default:0 }}</span> / {{ questions|length }} câu đã trả lời</strong>
+      <span data-draft-status role="status" aria-live="polite">{% if has_draft %}Đã khôi phục bản nháp{% if last_saved_at %} · lưu lúc {{ last_saved_at|date:"H:i" }}{% endif %}{% else %}Lựa chọn sẽ được tự động lưu trên tài khoản của bạn{% endif %}</span>
+      <small>Nếu bản nháp thay đổi ở tab khác, trang sẽ yêu cầu tải lại trước khi tiếp tục.</small>
+    </div>
+    <div class="session-progress-track" role="progressbar" aria-label="Tiến độ trả lời câu hỏi" aria-valuemin="0" aria-valuemax="{{ questions|length }}" aria-valuenow="{{ draft_count|default:0 }}" data-progressbar><span data-progress-fill></span></div>
+    <div class="draft-actions"><button class="session-save-button" type="button" data-save-draft hidden>Lưu bản nháp</button><button class="session-save-button" type="button" data-reload-draft hidden>Tải lại bản đã lưu</button></div>
+  </section>
+  <noscript><p>Tự động lưu cần JavaScript. Bạn vẫn có thể chọn đáp án và nộp bài; hãy nộp trước khi rời trang.</p></noscript>
+  <nav class="session-question-nav" aria-label="Chuyển nhanh đến câu hỏi"><span>Đến câu</span>{% for question in questions %}<a href="#question-{{ question.id }}" aria-label="Đến câu {{ forloop.counter }}">{{ forloop.counter }}</a>{% endfor %}</nav>
+  {% for question in questions %}
+    <section class="question-card" id="question-{{ question.id }}" data-question>
+      <span class="eyebrow">CÂU {{ forloop.counter }}</span>
+      {% ifchanged question.passage question.audio_url question.audio_script %}
+      {% if question.passage %}<div class="passage">{{ question.passage|linebreaks }}</div>{% endif %}
+      {% if question.audio_url or question.audio_script %}
+        {% include 'learning/listening_audio.html' with question=question only %}
+      {% endif %}
+      {% endifchanged %}
+      <h2>{{ question.prompt }}</h2>
+      <fieldset class="option-list"><legend class="sr-only">Chọn một đáp án</legend>
+        {% for option in question.options.all %}<label class="option"><input type="radio" name="question_{{ question.id }}" value="{{ option.id }}"{% if question.selected_option_id == option.id %} checked{% endif %}><span class="option-label">{{ option.label }}</span><span>{{ option.text }}</span></label>{% endfor %}
+      </fieldset>
+    </section>
+  {% endfor %}
+  <button class="button primary submit-button" type="submit"{% if draft_conflict %} disabled{% endif %}>Nộp bài và xem giải thích →</button>
+</form>
+<script src="{% static 'js/practice-draft.js' %}" defer></script>
+<script src="{% static 'js/listening-workspace.js' %}" defer></script>
+{% endblock %}

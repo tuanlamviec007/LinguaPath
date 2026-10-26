@@ -1,0 +1,49 @@
+/* Recall prompts contain only the Vietnamese meaning and an explicit hint. */
+.lp-quiz-mode-options { margin: 24px 0 0; padding: 0; border: 0; min-width: 0; }
+.lp-quiz-mode-options legend { padding: 0; color: #3e6551; font-size: 13px; font-weight: 700; }
+.lp-quiz-mode-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 11px; }
+.lp-quiz-mode-card { display: flex; align-items: flex-start; gap: 10px; padding: 16px; border: 1px solid #dce8e1; border-radius: 14px; background: #fff; cursor: pointer; min-width: 0; }
+.lp-quiz-mode-card:has(input:checked) { background: #edf9f1; border-color: #9dcbb1; box-shadow: 0 0 0 1px #c8e6d3; }
+.lp-quiz-mode-card:focus-within { outline: 3px solid #6485ce; outline-offset: 3px; }
+.lp-quiz-mode-card input { flex: none; width: 16px; height: 16px; margin: 3px 0 0; accent-color: #087f68; }
+.lp-quiz-mode-card > span { min-width: 0; }
+.lp-quiz-mode-card strong { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; color: #315e46; font-size: 13px; line-height: 1.5; }
+.lp-quiz-mode-card strong b { color: #538669; font-size: 16px; }
+.lp-quiz-mode-card small { display: block; margin-top: 7px; color: #587060; font-size: 11px; line-height: 1.7; }
+.lp-quiz-mode-help { margin: 12px 0 0; color: #5d7366; font-size: 11px; line-height: 1.8; }
+.lp-quiz-mode-badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 8px; border: 1px solid #dfe9e3; border-radius: 7px; background: #f3f8f5; color: #4d6c59; font-size: 10px; font-weight: 650; line-height: 1.5; }
+.lp-quiz-mode-badge.is-recall { border-color: #e2d2f1; background: #f2eaff; color: #755397; }
+.lp-quiz-mode-result { margin: 0 0 16px; }
+.lp-archive .lp-archive-filter-actions { grid-column: 1 / -1; justify-content: flex-end; }
+.lp-quiz-mode-result .lp-quiz-mode-badge { padding: 7px 11px; font-size: 12px; }
+.lp-quiz-play-heading p.lp-recall-rule { max-width: 760px; margin: 15px 0 0; padding: 13px 16px; border: 1px solid #dfd4ed; border-radius: 12px; background: #f6f0fd; color: #69527e; font-size: 13px; line-height: 1.8; }
+.lp-quiz-word.lp-recall-prompt { padding-bottom: 2px; }
+.lp-quiz-word.lp-recall-prompt .lp-recall-kicker { margin: 20px 0 9px; color: #64836b; font-size: 10px; font-weight: 750; letter-spacing: 1.1px; }
+.lp-quiz-word.lp-recall-prompt h2 { max-width: 760px; margin: 0 0 19px; color: #2a5c44; font-size: clamp(24px, 3vw, 33px); line-height: 1.5; letter-spacing: -.7px; overflow-wrap: anywhere; }
+.lp-recall-prompt .lp-recall-hint { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 22px; padding: 9px 12px; border: 1px solid #efdfa9; border-radius: 10px; background: #fff9e2; color: #826735; font-size: 12px; font-weight: 600; line-height: 1.6; }
+.lp-recall-hint > span { font-size: 20px; }
+.lp-recall-answer { display: grid; gap: 10px; padding: 21px; border: 1px solid #dcece2; border-radius: 16px; background: #f2faf5; }
+.lp-recall-answer label { color: #42674e; font-size: 13px; font-weight: 700; }
+.lp-recall-answer input { display: block; width: 100%; min-width: 0; min-height: 59px; padding: 13px 16px; border: 1px solid #bfd8c7; border-radius: 11px; background: #fff; color: #28563f; font: 600 23px/1.35 Inter, 'Segoe UI', sans-serif; box-sizing: border-box; }
+.lp-recall-answer input::placeholder { color: #586e5d; opacity: 1; font-size: 18px; font-weight: 400; }
+.lp-recall-answer input:focus-visible { outline: 3px solid #6485ce; outline-offset: 3px; }
+.lp-recall-input-note { color: #526a59; font-size: 11px; line-height: 1.6; }
+.lp-quiz-result-page .lp-quiz-your-answer span { overflow-wrap: anywhere; }
+
+@media (max-width: 620px) {
+  .lp-quiz-mode-grid { grid-template-columns: 1fr; gap: 10px; }
+  .lp-quiz-mode-card { padding: 14px; }
+  .lp-quiz-mode-card strong { font-size: 13px; }
+  .lp-quiz-mode-card small, .lp-quiz-mode-help { font-size: 11px; }
+  .lp-quiz-play-heading p.lp-recall-rule { padding: 12px 14px; font-size: 12px; }
+  .lp-quiz-word.lp-recall-prompt h2 { font-size: 25px; line-height: 1.5; }
+  .lp-recall-prompt .lp-recall-hint { font-size: 11px; margin-bottom: 18px; }
+  .lp-recall-answer { padding: 17px 15px; }
+  .lp-recall-answer input { min-height: 55px; padding: 12px; font-size: 21px; }
+  .lp-recall-answer input::placeholder { font-size: 16px; }
+  .lp-archive-item-tags .lp-quiz-mode-badge { font-size: 9px; padding: 3px 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-quiz-mode-card { transition: none; }
+}

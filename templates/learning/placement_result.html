@@ -1,0 +1,21 @@
+{% extends 'learning/base.html' %}
+{% block title %}Kết quả ước lượng vốn từ · LinguaPath{% endblock %}
+{% block content %}
+<section class="page-heading">
+  <span class="eyebrow">KẾT QUẢ NHẬN BIẾT TỪ VỰNG</span>
+  <h1>Mức gợi ý: {{ estimate }}</h1>
+  <p>Hệ thống gợi ý mức cao nhất có ít nhất 2/3 câu đúng ở từng mức liên tiếp từ A1. Đây là ước lượng vốn từ qua chọn nghĩa, chưa được hiệu chuẩn bằng pilot; kết quả không xác nhận trình độ CEFR hoặc điểm TOEIC.</p>
+</section>
+<section class="panel placement-result">
+  <h2>Kết quả theo từng mức</h2>
+  <div class="recent-list">
+    {% for row in score_rows %}<div class="recent-row"><span>{{ row.level }}</span><span>{{ row.score }}/3 câu đúng</span></div>{% endfor %}
+  </div>
+  <form method="post" action="{% url 'learning:apply_placement_result' %}">
+    {% csrf_token %}
+    <button class="button primary" type="submit">Dùng {{ estimate }} làm mức học hiện tại</button>
+    <a class="button secondary" href="{% url 'learning_goal' %}">Tự chọn mức khác hoặc bắt đầu dễ hơn</a>
+  </form>
+  <p class="progress-explainer">Bạn có thể giữ mức đang học, chọn mức dễ hơn trong hồ sơ hoặc <a href="{% url 'learning:placement_test' %}">làm lại bài ước lượng</a>. Chỉ cập nhật hồ sơ khi bạn chọn dùng kết quả.</p>
+</section>
+{% endblock %}

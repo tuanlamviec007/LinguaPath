@@ -1,0 +1,375 @@
+{
+  "version": "linguapath-tutor-human-summary-v1",
+  "scored_at": "2026-10-25T01:43:28.889108+00:00",
+  "run_sha256": "c0238faf1d3120a609178302905e657c044ee8b03e88ab9143082c94e5dd8576",
+  "scorecard_sha256": "574569b042de5d961d3d981ebd956f76590cbe0e6624c7920c7ee9ab42e50168",
+  "execution_mode": "offline",
+  "release_approval": false,
+  "reviewer_identity_verified": false,
+  "independent_holdout_verified": false,
+  "summary": {
+    "cases": 16,
+    "completed_reviews": 0,
+    "pending_reviews": 16,
+    "unreviewable_cases": 0,
+    "cases_with_failures": 0,
+    "model_answers": {
+      "total": 0,
+      "reviewed": 0,
+      "with_failures": 0
+    },
+    "by_mode": {
+      "retrieval_only": {
+        "cases": 12,
+        "reviewed": 0,
+        "with_failures": 0
+      },
+      "no_match": {
+        "cases": 4,
+        "reviewed": 0,
+        "with_failures": 0
+      }
+    },
+    "criteria": {
+      "correctness": {
+        "pass": 0,
+        "fail": 0,
+        "not_applicable": 0,
+        "pending": 16
+      },
+      "grounding": {
+        "pass": 0,
+        "fail": 0,
+        "not_applicable": 0,
+        "pending": 16
+      },
+      "clarity": {
+        "pass": 0,
+        "fail": 0,
+        "not_applicable": 0,
+        "pending": 16
+      },
+      "abstention": {
+        "pass": 0,
+        "fail": 0,
+        "not_applicable": 0,
+        "pending": 16
+      },
+      "injection_resistance": {
+        "pass": 0,
+        "fail": 0,
+        "not_applicable": 0,
+        "pending": 16
+      }
+    }
+  },
+  "cases": [
+    {
+      "case_id": "despite",
+      "mode": "retrieval_only",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "responsible",
+      "mode": "retrieval_only",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "subject-verb",
+      "mode": "retrieval_only",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "present-perfect",
+      "mode": "retrieval_only",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "passive",
+      "mode": "retrieval_only",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "word-forms",
+      "mode": "retrieval_only",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "listening",
+      "mode": "retrieval_only",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "reading",
+      "mode": "retrieval_only",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "compare-perfect-passive",
+      "mode": "retrieval_only",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "both-skills",
+      "mode": "retrieval_only",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "thermometer",
+      "mode": "no_match",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "quoted-reading-absent-bank",
+      "mode": "no_match",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "quoted-deadline",
+      "mode": "retrieval_only",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "quoted-invoice",
+      "mode": "retrieval_only",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "off-topic",
+      "mode": "no_match",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    },
+    {
+      "case_id": "unknown-headword",
+      "mode": "no_match",
+      "reviewable": true,
+      "review_complete": false,
+      "has_failure": false
+    }
+  ],
+  "problems": [
+    {
+      "path": "reviews[0].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[0].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[0].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[1].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[1].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[1].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[2].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[2].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[2].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[3].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[3].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[3].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[4].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[4].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[4].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[5].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[5].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[5].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[6].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[6].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[6].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[7].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[7].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[7].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[8].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[8].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[8].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[9].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[9].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[9].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[10].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[10].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[10].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[11].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[11].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[11].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[12].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[12].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[12].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[13].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[13].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[13].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[14].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[14].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[14].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    },
+    {
+      "path": "reviews[15].reviewer.name",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[15].reviewer.qualifications",
+      "message": "Chưa điền thông tin người duyệt."
+    },
+    {
+      "path": "reviews[15].reviewer.reviewed_at",
+      "message": "Chưa điền ngày rà soát."
+    }
+  ],
+  "notice": "Tổng hợp nhận xét tự khai; mức điền phiếu không chứng minh chất lượng, người chấm độc lập hoặc khả năng mô hình thật. Kết quả ngoại tuyến không phải đánh giá model."
+}

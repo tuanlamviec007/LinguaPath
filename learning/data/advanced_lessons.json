@@ -1,0 +1,1058 @@
+[
+  {
+    "slug": "reading-b1-campus-repair-cafe",
+    "title": "Reading B1: A student-run repair café",
+    "kind": "reading",
+    "cefr_level": "B1",
+    "topic": "Campus and community",
+    "estimated_minutes": 10,
+    "description": "Bài đọc tự biên soạn ở mức B1 tham khảo; luyện tìm chi tiết, suy luận và mục đích. Không phải đề thi chính thức.",
+    "stimulus": "The student union will open a repair café in the old workshop next to the library on 12 October. The café is not a place to buy coffee. It is a monthly event where students and local residents can bring small household items that have stopped working. Volunteer repairers will help visitors examine lamps, radios, bicycles and clothing. Visitors are encouraged to stay and learn, although they do not have to do the repair themselves.\n\nThe event runs from 10 a.m. to 3 p.m. Entry is free, but visitors should register online because the workshop can safely hold only 30 people at a time. If all places are booked, a waiting list will open. People may bring one item each. Large appliances, phones with damaged batteries and anything containing fuel cannot be accepted. These restrictions help volunteers work safely with the tools and space available.\n\nA small table near the entrance will collect clean jars and fabric scraps for future projects. Donations are welcome but are not required. The organizers ask visitors to describe the problem when they register; this allows the team to prepare likely tools and check whether a repairer with suitable experience will attend. They cannot promise that every item can be fixed. If a repair is not possible, volunteers will explain why and suggest a local recycling point.\n\nThe student union hopes the café will reduce waste and give people a chance to share practical skills. It is also looking for two more volunteers to welcome visitors and record which items are repaired. No repair experience is needed for these roles, but volunteers must attend a short safety briefing on 8 October.",
+    "questions": [
+      {
+        "prompt": "Why are visitors asked to register online?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The organizers need to charge an entry fee.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì bài nêu rõ vào cửa miễn phí; phí không phải lý do đăng ký."
+          },
+          {
+            "label": "B",
+            "text": "The workshop has a limited safe capacity.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: workshop chỉ chứa an toàn 30 người cùng lúc, nên cần đăng ký."
+          },
+          {
+            "label": "C",
+            "text": "Visitors must prove they can repair an item.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì người tham gia có thể quan sát và học, không cần tự sửa."
+          },
+          {
+            "label": "D",
+            "text": "The event is only for people who live near the library.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì sự kiện dành cho sinh viên và cư dân địa phương, không giới hạn theo khoảng cách."
+          }
+        ],
+        "explanation_vi": "Manh mối là workshop “can safely hold only 30 people at a time”; đăng ký giúp kiểm soát số người."
+      },
+      {
+        "prompt": "Which item would the café refuse?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A shirt with a loose button.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì quần áo nằm trong nhóm đồ có thể mang đến."
+          },
+          {
+            "label": "B",
+            "text": "A bicycle with a loose brake cable.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì xe đạp được nêu là đồ được tiếp nhận."
+          },
+          {
+            "label": "C",
+            "text": "A radio that no longer turns on.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì radio được liệt kê trong các vật dụng phù hợp."
+          },
+          {
+            "label": "D",
+            "text": "A large washing machine.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: bài loại trừ rõ ràng các thiết bị gia dụng cỡ lớn."
+          }
+        ],
+        "explanation_vi": "Đối chiếu danh sách được nhận với ngoại lệ: “Large appliances” không được nhận."
+      },
+      {
+        "prompt": "Why do organizers ask people to describe an item's problem in advance?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To help prepare tools and match the item with suitable experience.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: mô tả giúp chuẩn bị dụng cụ và kiểm tra có tình nguyện viên phù hợp hay không."
+          },
+          {
+            "label": "B",
+            "text": "To decide how much each visitor must donate.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì đóng góp chỉ được hoan nghênh, không bắt buộc hay tính theo mô tả."
+          },
+          {
+            "label": "C",
+            "text": "To guarantee that every item will be repaired.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì ban tổ chức nói không thể hứa sửa được mọi món đồ."
+          },
+          {
+            "label": "D",
+            "text": "To choose which visitor can enter the waiting list.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì danh sách chờ phụ thuộc việc đã hết chỗ, không phụ thuộc loại hỏng."
+          }
+        ],
+        "explanation_vi": "Câu về đăng ký giải thích hai mục đích thực tế: chuẩn bị dụng cụ và bố trí người có kinh nghiệm phù hợp."
+      },
+      {
+        "prompt": "What is the main purpose of the final paragraph?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To explain the history of the old workshop.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì đoạn không kể lịch sử địa điểm."
+          },
+          {
+            "label": "B",
+            "text": "To explain the café's aims and invite volunteers, including the role requirements.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: đoạn nêu mục tiêu giảm rác và chia sẻ kỹ năng, sau đó mời thêm tình nguyện viên và nêu yêu cầu cho vai trò."
+          },
+          {
+            "label": "C",
+            "text": "To announce that the event has been cancelled.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì sự kiện vẫn được lên kế hoạch vào tháng 10."
+          },
+          {
+            "label": "D",
+            "text": "To ask visitors to bring large appliances.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì thiết bị lớn bị từ chối; đoạn cuối nói về tuyển tình nguyện viên."
+          }
+        ],
+        "explanation_vi": "Đoạn cuối nêu mục tiêu của quán sửa chữa, rồi kêu gọi thêm tình nguyện viên và mô tả yêu cầu của vai trò."
+      }
+    ]
+  },
+  {
+    "slug": "reading-b1-internship-schedule",
+    "title": "Reading B1: An internship schedule update",
+    "kind": "reading",
+    "cefr_level": "B1",
+    "topic": "Work and study",
+    "estimated_minutes": 10,
+    "description": "Bài đọc tự biên soạn ở mức B1 tham khảo; luyện chi tiết, suy luận và diễn đạt lại. Không phải đề thi chính thức.",
+    "stimulus": "From: Linh Tran, Internship Coordinator\nSubject: Revised plan for the first week\n\nHello interns,\n\nWelcome to the communications team. We have changed the schedule for your first week because the training room will be used for equipment maintenance on Monday. Please come to the reception desk at 8:45 a.m. on Tuesday, 3 September, instead. A staff member will give you a badge and show you where to leave bags. The orientation session will begin at 9:15 in Meeting Room 2.\n\nBring a laptop if you have one, but do not buy or borrow a device just for this session. Shared computers and paper are available. Before lunch, you will learn file storage and client privacy. Do not copy sample files to a personal account or USB drive.\n\nThe afternoon task is a short writing exercise based on a fictional product. It will not be graded. We use it to understand what kind of support interns may need. Submit your own one-page response by 4 p.m. Thursday; you may work alone or discuss ideas with a partner. If you need extra time because of an accessibility arrangement, reply to this email before Tuesday so that we can plan with you.\n\nOn Wednesday, the group will visit the design studio. Wear comfortable shoes for the walk between buildings. The café beside the studio is closed for renovation, so bring lunch or use the student canteen across the courtyard.\n\nPlease confirm that you have received this update by Monday evening. If you cannot attend on Tuesday, contact me directly; do not ask another intern to report your absence. I will send the room map after everyone replies.\n\nBest,\nLinh",
+    "questions": [
+      {
+        "prompt": "Why was the first-week schedule changed?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The coordinator will be away on Monday.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì lý do được nêu là phòng đào tạo cần bảo trì thiết bị."
+          },
+          {
+            "label": "B",
+            "text": "The training room is needed for maintenance work on Monday.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: email nói phòng sẽ được dùng để bảo trì thiết bị vào thứ Hai."
+          },
+          {
+            "label": "C",
+            "text": "The interns requested a later start time.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì email không nói lịch đổi theo yêu cầu của thực tập sinh."
+          },
+          {
+            "label": "D",
+            "text": "The design studio cannot host visitors on Wednesday.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì chuyến thăm studio vẫn diễn ra vào thứ Tư."
+          }
+        ],
+        "explanation_vi": "Lý do nằm ngay đầu email: phòng đào tạo được dùng cho công việc bảo trì vào thứ Hai."
+      },
+      {
+        "prompt": "What can an intern infer about bringing a laptop?",
+        "options": [
+          {
+            "label": "A",
+            "text": "It is useful but not required for the session.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: email khuyên mang nếu đã có, đồng thời nói không cần mua/mượn và có máy dùng chung, giấy."
+          },
+          {
+            "label": "B",
+            "text": "Every intern must bring a personal laptop.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì câu “if you have one” và lựa chọn máy dùng chung cho thấy không bắt buộc."
+          },
+          {
+            "label": "C",
+            "text": "The team will lend every intern a new device.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì chỉ có bốn máy dùng chung, không nói mỗi người được mượn một máy."
+          },
+          {
+            "label": "D",
+            "text": "Laptops are prohibited during training.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì email cho phép mang laptop; chỉ cấm sao chép file mẫu ra thiết bị/tài khoản cá nhân."
+          }
+        ],
+        "explanation_vi": "Đây là suy luận từ lời khuyên mang nếu sẵn có và các phương án thay thế; không bắt buộc."
+      },
+      {
+        "prompt": "What must interns submit by Thursday at 4 p.m.?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A group report about the studio visit.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì chuyến studio là hoạt động thứ Tư, không phải bài nộp."
+          },
+          {
+            "label": "B",
+            "text": "A one-page individual response to a writing exercise.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: mỗi người nộp phản hồi một trang của bài viết về sản phẩm giả định."
+          },
+          {
+            "label": "C",
+            "text": "A graded test about client privacy.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì bài viết không được chấm điểm; phần trước là hướng dẫn xử lý dữ liệu."
+          },
+          {
+            "label": "D",
+            "text": "A copy of their personal project files.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì email yêu cầu không sao chép tệp mẫu và không đề cập nộp tệp cá nhân."
+          }
+        ],
+        "explanation_vi": "Đoạn về bài chiều thứ Ba nêu hạn nộp và yêu cầu mọi người gửi phản hồi riêng dài một trang."
+      },
+      {
+        "prompt": "Why should interns bring lunch on Wednesday?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The student canteen is reserved for the team.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì canteen chỉ được gợi ý là lựa chọn thay thế, không phải nơi dành riêng."
+          },
+          {
+            "label": "B",
+            "text": "The café near the studio will be closed during renovation.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: quán cà phê cạnh studio đóng để sửa chữa; email gợi ý mang đồ ăn hoặc qua canteen."
+          },
+          {
+            "label": "C",
+            "text": "The visit has been moved outside the city.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì email chỉ nói đi bộ giữa các tòa nhà."
+          },
+          {
+            "label": "D",
+            "text": "Lunch will be served only after the visit ends.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì không có thông tin về giờ phục vụ bữa trưa."
+          }
+        ],
+        "explanation_vi": "Email nêu quán bên studio đóng cửa, rồi đưa ra hai lựa chọn: mang bữa trưa hoặc ăn ở canteen."
+      }
+    ]
+  },
+  {
+    "slug": "reading-b2-library-hours-trial",
+    "title": "Reading B2: A trial of extended library hours",
+    "kind": "reading",
+    "cefr_level": "B2",
+    "topic": "University services",
+    "estimated_minutes": 12,
+    "description": "Bài đọc tự biên soạn ở mức B2 tham khảo; luyện suy luận, mục đích và đối chiếu quan điểm. Không phải đề thi chính thức.",
+    "stimulus": "The university library will test later opening hours from 4 November to 13 December. During this six-week trial, the main study floor will remain open until midnight from Monday to Thursday, rather than closing at 9 p.m. The change follows requests from students who have evening classes or travel to campus after work. The library will not extend every service: the help desk and borrowing counter will close at 8 p.m., and the café will keep its usual schedule.\n\nStudents can enter after 9 p.m. using their campus cards. Visitors without cards must leave by the normal closing time. The library has added security staff near the entrance and asked students to report any equipment problem through the online form, not by leaving a note on a desk. Quiet study areas will remain silent, while the group rooms must be booked in advance and may be used only until 10:30 p.m.\n\nThe trial is intended to answer two practical questions: whether enough students use the later hours to justify the extra staffing cost, and whether late opening affects safety or noise levels. The library will compare door counts with the previous term and review short surveys from students and staff. It will also examine incident reports, but officials say a small change in reported incidents alone will not determine the final decision.\n\nSome students have asked why the library cannot simply stay open all night. The director says overnight access would require a different security plan and additional funding, so the trial should not be seen as a promise of 24-hour service. If demand is low, the library may shorten the trial or repeat it during exam season instead. If the results are positive, the university will consider a longer schedule next year. A summary of the findings will be published in January, including the cost per additional student visit.",
+    "questions": [
+      {
+        "prompt": "Which service is explicitly unavailable after 8 p.m.?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The main study floor.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì study floor mở đến nửa đêm từ thứ Hai đến thứ Năm."
+          },
+          {
+            "label": "B",
+            "text": "The borrowing counter.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: help desk và quầy mượn trả đóng lúc 8 giờ tối."
+          },
+          {
+            "label": "C",
+            "text": "The group rooms.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì phòng nhóm có thể dùng tới 10:30 tối nếu đặt trước."
+          },
+          {
+            "label": "D",
+            "text": "The campus-card entrance.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì thẻ campus được dùng để vào sau 9 giờ tối."
+          }
+        ],
+        "explanation_vi": "Đoạn đầu phân biệt giờ mở của study floor với quầy hỗ trợ và borrowing counter; quầy đóng lúc 8 p.m."
+      },
+      {
+        "prompt": "Why will the library compare door counts with the previous term?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To estimate whether the extended hours attract enough users.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: số lượt vào cửa giúp đánh giá nhu cầu, một trong hai câu hỏi của đợt thử nghiệm."
+          },
+          {
+            "label": "B",
+            "text": "To identify which students have unpaid fines.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì văn bản không đề cập tiền phạt; số lượt vào được dùng để đánh giá mức sử dụng."
+          },
+          {
+            "label": "C",
+            "text": "To calculate how many books staff should purchase.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì mục tiêu không liên quan quyết định mua sách."
+          },
+          {
+            "label": "D",
+            "text": "To prove that late opening reduces noise.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì noise là yếu tố được xem xét, nhưng đếm cửa không tự nó chứng minh tiếng ồn giảm."
+          }
+        ],
+        "explanation_vi": "So sánh số lượt vào với học kỳ trước cung cấp bằng chứng liệu có đủ sinh viên dùng giờ mở rộng để bù chi phí."
+      },
+      {
+        "prompt": "What does the director imply about 24-hour opening?",
+        "options": [
+          {
+            "label": "A",
+            "text": "It will begin automatically if the trial is popular.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì kết quả tích cực chỉ dẫn tới cân nhắc lịch dài hơn vào năm sau, không tự động mở 24/7."
+          },
+          {
+            "label": "B",
+            "text": "It would require resources beyond those tested in this trial.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: mở xuyên đêm cần kế hoạch an ninh khác và thêm ngân sách."
+          },
+          {
+            "label": "C",
+            "text": "It is impossible because campus cards stop working at midnight.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì bài không nêu giới hạn kỹ thuật của thẻ."
+          },
+          {
+            "label": "D",
+            "text": "It has already been rejected by students.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì một số sinh viên đã hỏi về phương án này; không có ý kiến phản đối được nêu."
+          }
+        ],
+        "explanation_vi": "Lời giám đốc cho thấy mở 24 giờ vượt phạm vi thử nghiệm vì cần nguồn lực và phương án an ninh khác."
+      },
+      {
+        "prompt": "Why will the January summary include cost per additional student visit?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To connect the extra staffing expense with the use gained.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: chỉ số này cho phép xem chi phí tăng thêm có tương xứng với lượt sử dụng mới hay không."
+          },
+          {
+            "label": "B",
+            "text": "To set a fee for students who study late.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì không có đề xuất thu phí; đây là chỉ số đánh giá thử nghiệm."
+          },
+          {
+            "label": "C",
+            "text": "To rank students by how often they visit.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì báo cáo công bố kết quả tổng hợp, không xếp hạng cá nhân."
+          },
+          {
+            "label": "D",
+            "text": "To calculate the cost of replacing every campus card.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì thẻ chỉ là phương tiện vào cửa và không nói sẽ thay thẻ."
+          }
+        ],
+        "explanation_vi": "Đây là chỉ số hiệu quả: so sánh khoản chi thêm với số lượt dùng tăng thêm."
+      }
+    ]
+  },
+  {
+    "slug": "reading-b2-coop-project-review",
+    "title": "Reading B2: Reviewing a student co-op project",
+    "kind": "reading",
+    "cefr_level": "B2",
+    "topic": "Workplace communication",
+    "estimated_minutes": 12,
+    "description": "Bài đọc tự biên soạn ở mức B2 tham khảo; luyện mục đích, chi tiết và suy luận từ hai thông báo liên quan. Không phải đề thi chính thức.",
+    "stimulus": "MEMO — From: Project Lead\nSubject: Pilot feedback and next steps\n\nThanks for completing the four-week booking pilot. The new form reduced duplicate room requests, which was the main goal. However, several teams entered the room name in the comments field because the form's location list was difficult to find on a phone. We will move that field higher on the page and add a short example. Please do not add more required fields this week; the pilot showed that extra questions make people abandon the form.\n\nThe pilot did not show whether reminders improve attendance. We sent reminders only to the evening group, and that group already had a higher attendance rate before the project began. We need a fairer comparison before recommending reminders for everyone. For the next two weeks, the operations team will randomly assign half of the morning bookings to receive a reminder. The other half will receive the current confirmation message only. We will compare attendance, cancellations and late room releases.\n\nWe are also changing how we report results. A high number of bookings does not necessarily mean the system is working well; some rooms may be requested and then left unused. The dashboard will therefore show completed meetings alongside bookings. It will not display individual attendance histories outside the project team.\n\nEMAIL — From: Operations Coordinator\nSubject: What to do during the reminder test\n\nPlease keep the new location field optional until we have checked the mobile version. When you test the form, use the sample project names in the guide rather than real client names. If a reminder arrives late, record the time and forward the message to the project mailbox; do not resend it manually, as this would make the results unreliable. We will share a short update at Friday's stand-up, but the team should not draw conclusions until both weeks of data have been reviewed.",
+    "questions": [
+      {
+        "prompt": "What problem did the pilot reveal about the form?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Users could not find the location list easily on phones.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: nhiều nhóm nhập tên phòng vào nhầm ô vì danh sách địa điểm khó tìm trên điện thoại."
+          },
+          {
+            "label": "B",
+            "text": "The form accepted duplicate room requests too often.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì pilot đã giảm yêu cầu trùng lặp, tức mục tiêu chính đạt được."
+          },
+          {
+            "label": "C",
+            "text": "The form required users to enter real client names.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì hướng dẫn còn yêu cầu dùng tên dự án mẫu, không dùng tên khách hàng thật."
+          },
+          {
+            "label": "D",
+            "text": "Users were unable to book rooms in the evening.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì nhóm tối được nhắc đến trong phân tích attendance, không có lỗi đặt phòng tối."
+          }
+        ],
+        "explanation_vi": "Memo nói rõ người dùng điền nhầm trường comments vì trường location khó thấy trên điện thoại."
+      },
+      {
+        "prompt": "Why is the team testing reminders with randomly assigned morning bookings?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To make the comparison less affected by the groups' previous attendance differences.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: nhóm tối vốn đi học đầy đủ hơn, nên thử ngẫu nhiên trong nhóm buổi sáng giúp so sánh công bằng hơn."
+          },
+          {
+            "label": "B",
+            "text": "To ensure every morning booking receives two reminders.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì chỉ một nửa nhận nhắc; nhóm còn lại tiếp tục nhận xác nhận hiện tại."
+          },
+          {
+            "label": "C",
+            "text": "To test whether room names should become required fields.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì thử nghiệm nhắc lịch tách biệt với điều chỉnh trường địa điểm."
+          },
+          {
+            "label": "D",
+            "text": "To avoid collecting any attendance information.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì nhóm sẽ so sánh attendance, cancellations và việc trả phòng muộn."
+          }
+        ],
+        "explanation_vi": "So sánh trước đây bị nhiễu vì nhóm tối vốn có attendance cao hơn. Phân nhóm ngẫu nhiên trong nhóm sáng giúp giảm khác biệt nền."
+      },
+      {
+        "prompt": "What will the revised dashboard add to booking totals?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The names of every person who attended.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì lịch sử cá nhân không được hiển thị ngoài nhóm dự án."
+          },
+          {
+            "label": "B",
+            "text": "The number of meetings that actually took place.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: dashboard sẽ thể hiện các cuộc họp đã hoàn thành bên cạnh số lượt đặt."
+          },
+          {
+            "label": "C",
+            "text": "A list of all client projects.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì nội dung nhấn mạnh dùng tên mẫu và bảo vệ thông tin client."
+          },
+          {
+            "label": "D",
+            "text": "A count of reminder messages sent manually.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì nhân viên được dặn không gửi lại thủ công để tránh làm sai kết quả."
+          }
+        ],
+        "explanation_vi": "Đoạn về báo cáo nói số lượt đặt có thể gồm phòng không dùng; vì vậy cần bổ sung cuộc họp thực sự diễn ra."
+      },
+      {
+        "prompt": "Why should staff avoid manually resending a late reminder?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A second message could distort the test results.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: gửi lại thủ công sẽ khiến dữ liệu thử nghiệm không còn đáng tin cậy."
+          },
+          {
+            "label": "B",
+            "text": "The project mailbox cannot receive forwarded messages.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì điều phối viên yêu cầu chuyển tiếp tin nhắn vào mailbox dự án."
+          },
+          {
+            "label": "C",
+            "text": "The reminder test has already been cancelled.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì thử nghiệm vẫn tiếp tục trong hai tuần."
+          },
+          {
+            "label": "D",
+            "text": "The system sends reminders only to evening bookings.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì giai đoạn tiếp theo thử với các đặt phòng buổi sáng."
+          }
+        ],
+        "explanation_vi": "Email hướng dẫn cần ghi nhận giờ đến và chuyển tiếp; gửi lại sẽ can thiệp vào phép so sánh."
+      }
+    ]
+  },
+  {
+    "slug": "listening-b1-volunteer-orientation",
+    "title": "Listening B1: Volunteer orientation announcement",
+    "kind": "listening",
+    "cefr_level": "B1",
+    "topic": "Volunteering",
+    "estimated_minutes": 10,
+    "description": "Kịch bản nghe tự biên soạn ở mức B1 tham khảo; luyện nghe chi tiết, mục đích và suy luận. Không phải đề thi chính thức.",
+    "stimulus": "Good afternoon, everyone, and thanks for joining the welcome session for the Riverside Food Project. I’m Daniel, the volunteer coordinator. A quick change: tomorrow’s food packing session will start at half past nine, not nine o’clock, because the delivery truck is arriving later than planned. Meet at the side entrance on Bridge Street; the main doors will be locked.\n\nYou don’t need to bring food or containers. We have gloves and labels. Please wear closed shoes and clothes you don’t mind getting a little dusty. If you have a food allergy, tell me before you start; we can assign you to sorting supplies instead of packing meals. That task is just as important, because it helps us use donations safely.\n\nWe expect to prepare about 120 boxes for families in the area. The number may change, so don’t write quantities on labels. Put the date and the meal type only. We’ll take a group photo for the newsletter; tell me privately if you prefer not to appear.\n\nFinally, next week’s training has moved online. You’ll receive the link by email on Monday, and you should complete the short safety quiz before Friday. You don’t need to pass it to continue volunteering, but the answers will help us decide what to explain in the next in-person session. Any questions?",
+    "questions": [
+      {
+        "prompt": "What time will tomorrow’s food-packing session start?",
+        "options": [
+          {
+            "label": "A",
+            "text": "9:00 a.m.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì đây là giờ cũ, người nói đính chính thành 9:30."
+          },
+          {
+            "label": "B",
+            "text": "9:30 a.m.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: buổi đóng gói bắt đầu lúc half past nine."
+          },
+          {
+            "label": "C",
+            "text": "10:00 a.m.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì không có mốc 10 giờ trong thông báo."
+          },
+          {
+            "label": "D",
+            "text": "11:30 a.m.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì giờ xe giao hàng không phải giờ tình nguyện viên đến."
+          }
+        ],
+        "explanation_vi": "Người nói sửa giờ bắt đầu từ 9 giờ thành half past nine, tức 9:30."
+      },
+      {
+        "prompt": "Why might a volunteer be assigned to sort supplies instead of packing meals?",
+        "options": [
+          {
+            "label": "A",
+            "text": "They have reported a food allergy.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: người có dị ứng cần báo trước và có thể được phân sang việc phân loại vật tư."
+          },
+          {
+            "label": "B",
+            "text": "They forgot to bring a container.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì dự án đã chuẩn bị mọi vật dụng, không yêu cầu mang hộp."
+          },
+          {
+            "label": "C",
+            "text": "They arrive through the main doors.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì cửa chính khóa; mọi người cần đến lối bên phố Bridge."
+          },
+          {
+            "label": "D",
+            "text": "They do not want to join the group photo.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì ảnh cuối buổi không liên quan phân công đóng gói hay phân loại."
+          }
+        ],
+        "explanation_vi": "Người nói đưa ra phương án sorting supplies cho người báo dị ứng để bảo đảm an toàn."
+      },
+      {
+        "prompt": "What should volunteers write on the labels?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The date and meal type only.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: họ được yêu cầu ghi ngày và loại bữa ăn, không ghi số lượng."
+          },
+          {
+            "label": "B",
+            "text": "The number of boxes and family names.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì số hộp có thể thay đổi và không yêu cầu tên gia đình."
+          },
+          {
+            "label": "C",
+            "text": "The volunteer's name and arrival time.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì thông báo không yêu cầu ghi tên người làm hoặc giờ đến."
+          },
+          {
+            "label": "D",
+            "text": "The delivery truck's registration number.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì xe giao hàng chỉ giải thích việc đổi giờ."
+          }
+        ],
+        "explanation_vi": "Thông báo chỉ định rõ hai thông tin trên nhãn và cấm ghi số lượng vì số hộp có thể đổi."
+      },
+      {
+        "prompt": "What is the purpose of the safety quiz?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To decide who is allowed to keep volunteering.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì người nói khẳng định không cần vượt qua quiz để tiếp tục tình nguyện."
+          },
+          {
+            "label": "B",
+            "text": "To help plan what the next in-person session should explain.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: câu trả lời giúp nhóm biết nội dung nào cần giải thích thêm ở buổi trực tiếp."
+          },
+          {
+            "label": "C",
+            "text": "To replace tomorrow's food packing session.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì quiz thuộc khóa đào tạo tuần sau, không thay buổi ngày mai."
+          },
+          {
+            "label": "D",
+            "text": "To collect names for the project newsletter.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì newsletter được nhắc ở phần chụp ảnh, tách biệt với quiz."
+          }
+        ],
+        "explanation_vi": "Người điều phối nói quiz không phải điều kiện tiếp tục; kết quả giúp chuẩn bị phần giải thích cho buổi gặp sau."
+      }
+    ]
+  },
+  {
+    "slug": "listening-b1-intern-shift-change",
+    "title": "Listening B1: A change to the intern shift",
+    "kind": "listening",
+    "cefr_level": "B1",
+    "topic": "Internship and scheduling",
+    "estimated_minutes": 10,
+    "description": "Kịch bản nghe tự biên soạn ở mức B1 tham khảo; luyện nghe chi tiết, suy luận và ý định. Không phải đề thi chính thức.",
+    "stimulus": "Hi, this is Priya from the museum visitor team. I’m calling about your Saturday shift. We’ve had to move the morning briefing from the lobby to the education room because a school group will be arriving at the same time. The briefing still begins at eight forty-five, so please use the staff entrance by the loading area. Your name badge will be waiting at the desk inside.\n\nAfter the briefing, you’ll help visitors use the audio-guide machines. We were going to ask you to work at the ticket counter, but the supervisor has assigned an experienced volunteer there because the new booking system is being tested. You don’t need to know the system for your role. If a visitor asks about a ticket change, please direct them to the counter rather than trying to fix it yourself.\n\nThe museum café opens late this Saturday, so you may want to bring a drink. You can leave it in the staff room, not at the information desk. We’ll provide lunch vouchers, but they can only be used at the café after it opens at eleven.\n\nOne more thing: the group tour starts at ten, not ten thirty as shown on the old schedule. Please check the printed sheet I sent yesterday and cross out the old time. If you can’t stay until one o’clock, tell me before Friday afternoon so I can arrange cover. Thanks, and I’ll see you Saturday.",
+    "questions": [
+      {
+        "prompt": "Where will the briefing take place?",
+        "options": [
+          {
+            "label": "A",
+            "text": "In the lobby.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì địa điểm cũ được đổi do nhóm học sinh đến cùng lúc."
+          },
+          {
+            "label": "B",
+            "text": "In the education room.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: Priya nói briefing chuyển sang education room."
+          },
+          {
+            "label": "C",
+            "text": "At the ticket counter.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì quầy vé là vị trí làm việc được giao cho tình nguyện viên khác."
+          },
+          {
+            "label": "D",
+            "text": "In the staff room.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì staff room được dùng để cất đồ uống."
+          }
+        ],
+        "explanation_vi": "Người gọi báo đổi từ lobby sang education room; loading area chỉ là lối vào nhân viên."
+      },
+      {
+        "prompt": "Why will an experienced volunteer work at the ticket counter?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The booking system is being tested there.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: hệ thống đặt vé mới đang được thử nghiệm, nên người có kinh nghiệm phụ trách."
+          },
+          {
+            "label": "B",
+            "text": "The intern asked to avoid visitors.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì không có yêu cầu này; vai trò của thực tập sinh là hỗ trợ audio-guide."
+          },
+          {
+            "label": "C",
+            "text": "The counter will close during the morning.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì quầy vẫn hoạt động, chỉ đổi người phụ trách."
+          },
+          {
+            "label": "D",
+            "text": "The education room needs another supervisor.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì địa điểm briefing không liên quan đến lý do phân công tại quầy vé."
+          }
+        ],
+        "explanation_vi": "Câu giải thích nêu thẳng việc thử hệ thống đặt chỗ mới là lý do giao quầy cho tình nguyện viên có kinh nghiệm."
+      },
+      {
+        "prompt": "What should the intern do if a visitor asks to change a ticket?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Try to change it using the new system.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì người gọi dặn không tự xử lý thay đổi vé."
+          },
+          {
+            "label": "B",
+            "text": "Send the visitor to the ticket counter.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: hướng dẫn khách đến quầy thay vì tự sửa vé."
+          },
+          {
+            "label": "C",
+            "text": "Ask the visitor to return after lunch.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì không có yêu cầu trì hoãn đến sau bữa trưa."
+          },
+          {
+            "label": "D",
+            "text": "Direct the visitor to the café.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì café được nhắc đến để nói giờ mở và voucher, không xử lý vé."
+          }
+        ],
+        "explanation_vi": "Người gọi yêu cầu chuyển khách tới quầy nếu họ hỏi về đổi vé; thực tập sinh không cần biết hệ thống."
+      },
+      {
+        "prompt": "What does Priya want the intern to do about the tour time?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Keep the old schedule because it has already been printed.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì giờ cũ 10:30 đã lỗi thời."
+          },
+          {
+            "label": "B",
+            "text": "Change the printed schedule from 10:30 to 10:00.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: tour bắt đầu lúc 10 giờ; cần gạch giờ cũ trên tờ lịch."
+          },
+          {
+            "label": "C",
+            "text": "Move the tour to the education room.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì địa điểm briefing được đổi, không phải địa điểm tour."
+          },
+          {
+            "label": "D",
+            "text": "Ask visitors to choose a start time.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì giờ bắt đầu đã được quyết định là 10 giờ."
+          }
+        ],
+        "explanation_vi": "Priya nhắc giờ đúng là 10:00 và yêu cầu gạch giờ 10:30 trên lịch cũ."
+      }
+    ]
+  },
+  {
+    "slug": "listening-b2-research-equipment-booking",
+    "title": "Listening B2: Research equipment booking update",
+    "kind": "listening",
+    "cefr_level": "B2",
+    "topic": "University research",
+    "estimated_minutes": 12,
+    "description": "Kịch bản nghe tự biên soạn ở mức B2 tham khảo; luyện chi tiết, suy luận và mục đích. Không phải đề thi chính thức.",
+    "stimulus": "Hello, this is Dr. Mason from the materials lab. I’m calling about the microscope booking you made for Thursday afternoon. The instrument itself is available, but the imaging computer is being updated until two o’clock, so your original one o’clock start will not work. You can keep the same session and begin at two thirty, or move the booking to Friday morning. Please reply by noon tomorrow; otherwise, the system will release the slot to the next person on the waiting list.\n\nIf you choose Thursday, bring the sample log from your supervisor. We need it to confirm that the material has been prepared according to the lab’s safety procedure. You do not need to email the log in advance, and please don’t send sample photographs through ordinary email because some images include identifying project information. The secure upload folder is listed on the lab page.\n\nThere is another change for this week. The technician who normally helps with image calibration is supporting a different team, so we have prepared a short instruction sheet. It covers the basic settings but not advanced image correction. If your project requires that correction, book a separate consultation instead of trying to adjust the settings yourself. This will not affect the quality of your sample; it simply means we should reserve time with the specialist.\n\nThe lab will send a confirmation once you choose a new start time. If you do not hear from us by Wednesday morning, call the front desk rather than making a second booking. We are trying to avoid duplicate reservations while the computer update is in progress. Thank you.",
+    "questions": [
+      {
+        "prompt": "Why can’t the original one o’clock booking begin as planned?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The microscope has been reserved by another team.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì thiết bị vẫn có thể dùng; máy tính xử lý ảnh mới là nguyên nhân trì hoãn."
+          },
+          {
+            "label": "B",
+            "text": "The imaging computer will not be ready until later.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: máy tính đang được cập nhật đến 2 giờ, nên bắt đầu 2:30."
+          },
+          {
+            "label": "C",
+            "text": "The supervisor has not prepared the sample log.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì log là tài liệu cần mang nếu chọn thứ Năm, không phải nguyên nhân đổi giờ."
+          },
+          {
+            "label": "D",
+            "text": "The technician is unavailable all Thursday.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì kỹ thuật viên hỗ trợ hiệu chỉnh ảnh, không phải lý do máy tính không sẵn sàng."
+          }
+        ],
+        "explanation_vi": "Người gọi phân biệt thiết bị microscope còn trống với imaging computer đang cập nhật đến 2 giờ."
+      },
+      {
+        "prompt": "What must the caller do by noon tomorrow?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Choose the delayed Thursday session or Friday morning.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: cần phản hồi chọn một trong hai phương án trước hạn trưa mai."
+          },
+          {
+            "label": "B",
+            "text": "Email the sample log and sample photographs.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì không cần email log, và ảnh phải tải lên thư mục bảo mật."
+          },
+          {
+            "label": "C",
+            "text": "Cancel every booking in the lab.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì chỉ cần chọn lịch mới cho lượt đặt này."
+          },
+          {
+            "label": "D",
+            "text": "Complete the computer update personally.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì việc cập nhật do lab thực hiện, người gọi không được yêu cầu hỗ trợ."
+          }
+        ],
+        "explanation_vi": "Hạn trưa mai áp dụng cho việc xác nhận giữ phiên thứ Năm lúc 2:30 hay chuyển sang sáng thứ Sáu."
+      },
+      {
+        "prompt": "Why should sample photographs not be sent through ordinary email?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The files are too large for the lab mailbox.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì lý do nêu ra là bảo mật thông tin dự án, không phải dung lượng."
+          },
+          {
+            "label": "B",
+            "text": "Some images may reveal identifying project information.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: ảnh có thể chứa thông tin nhận diện dự án, nên cần thư mục tải lên an toàn."
+          },
+          {
+            "label": "C",
+            "text": "The microscope cannot open emailed images.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì bài không nói về khả năng tương thích của kính hiển vi."
+          },
+          {
+            "label": "D",
+            "text": "Photographs are not needed for this booking.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì lời dặn về kênh gửi không có nghĩa là cấm hay không cần ảnh."
+          }
+        ],
+        "explanation_vi": "Người gọi nêu nguy cơ thông tin dự án bị nhận diện và chỉ ra secure upload folder là kênh phù hợp."
+      },
+      {
+        "prompt": "What is the purpose of suggesting a separate consultation for advanced image correction?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To reserve specialist support rather than risk an incorrect adjustment.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: tờ hướng dẫn không bao gồm hiệu chỉnh nâng cao; cần đặt thời gian với chuyên gia."
+          },
+          {
+            "label": "B",
+            "text": "To tell the researcher that the sample has failed safety checks.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì người gọi nói việc này không ảnh hưởng chất lượng mẫu."
+          },
+          {
+            "label": "C",
+            "text": "To move all microscope sessions to Friday.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì chỉ đổi lịch nếu người đặt chọn chuyển sang thứ Sáu."
+          },
+          {
+            "label": "D",
+            "text": "To avoid using the instruction sheet for basic settings.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì tờ hướng dẫn vẫn bao gồm các thiết lập cơ bản."
+          }
+        ],
+        "explanation_vi": "Chuyên gia cần được đặt lịch riêng cho thao tác vượt quá hướng dẫn cơ bản; đây là sắp xếp hỗ trợ, không phải lỗi mẫu."
+      }
+    ]
+  },
+  {
+    "slug": "listening-b2-delivery-route-review",
+    "title": "Listening B2: Reviewing a delivery route pilot",
+    "kind": "listening",
+    "cefr_level": "B2",
+    "topic": "Workplace operations",
+    "estimated_minutes": 12,
+    "description": "Kịch bản nghe tự biên soạn ở mức B2 tham khảo; luyện suy luận, mục đích và thông tin đối chiếu. Không phải đề thi chính thức.",
+    "stimulus": "Good morning, team. Before we review the route pilot, I want to clarify yesterday’s message. The new schedule does not mean every driver should leave the depot earlier. Only the north route is changing its departure time, from 8:15 to 8:00, because the bridge works are causing delays near the market. The west route remains at 8:30. Please use the updated map on the shared drive; the printed copies in the vans are still being replaced.\n\nOur first-week figures look promising: average delivery time on the north route fell by twelve minutes. However, that number includes Tuesday, when the route had fewer stops than usual. We should not claim the new schedule caused the entire improvement until we compare days with similar workloads. The operations analyst will prepare that comparison by Friday.\n\nWe also received three customer reports that packages were left at the side entrance instead of the reception desk. That was not part of the pilot. The delivery note template still shows an old instruction, so please check the recipient’s preference before leaving a package. Do not change the customer record yourself; send corrections to the support team so they can confirm the details.\n\nOne final point: we are not asking drivers to speed up. The aim is to reduce waiting time at the bridge by adjusting the departure, while keeping the existing safety limits. If the revised route creates pressure to drive faster, tell your supervisor and record where the delay occurred. We will decide next month whether to keep the change, after we review time, missed deliveries and customer feedback together.",
+    "questions": [
+      {
+        "prompt": "Which route has an earlier departure time?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The west route, from 8:30 to 8:00.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì west route giữ nguyên giờ 8:30."
+          },
+          {
+            "label": "B",
+            "text": "The north route, from 8:15 to 8:00.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: chỉ tuyến phía bắc đổi từ 8:15 sang 8:00."
+          },
+          {
+            "label": "C",
+            "text": "Both routes, by fifteen minutes.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì chỉ một tuyến đổi giờ."
+          },
+          {
+            "label": "D",
+            "text": "The market route, from 8:00 to 8:15.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì không có market route; chợ được nói là khu vực gần cầu."
+          }
+        ],
+        "explanation_vi": "Người nói sửa hiểu nhầm: chỉ north route khởi hành sớm hơn, còn west route giữ 8:30."
+      },
+      {
+        "prompt": "Why should the team be cautious about the twelve-minute improvement?",
+        "options": [
+          {
+            "label": "A",
+            "text": "One day had fewer stops, so the comparison may not be like-for-like.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: thứ Ba có ít điểm dừng hơn, nên workload khác có thể giải thích một phần kết quả."
+          },
+          {
+            "label": "B",
+            "text": "The north route was not included in the pilot.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì số liệu đang được báo cáo cho north route."
+          },
+          {
+            "label": "C",
+            "text": "The updated map has not been saved yet.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì bản đồ đã có trên shared drive; bản in mới là đang thay."
+          },
+          {
+            "label": "D",
+            "text": "Customers reported that every delivery was late.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì có ba phản ánh về vị trí để hàng, không phải báo cáo mọi chuyến trễ."
+          }
+        ],
+        "explanation_vi": "Dữ liệu thứ Ba có số điểm dừng ít hơn thông thường; cần so sánh các ngày có khối lượng tương đương trước khi kết luận nguyên nhân."
+      },
+      {
+        "prompt": "What should drivers do if delivery instructions need correction?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Edit the customer record immediately.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì người nói yêu cầu không tự sửa hồ sơ khách hàng."
+          },
+          {
+            "label": "B",
+            "text": "Leave every package at the side entrance.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì đây chính là cách làm bị phản ánh và không thuộc thử nghiệm."
+          },
+          {
+            "label": "C",
+            "text": "Send the correction to the support team for confirmation.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: nhóm hỗ trợ cần xác nhận chi tiết trước khi sửa hồ sơ."
+          },
+          {
+            "label": "D",
+            "text": "Remove the delivery note from the template.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì chưa có chỉ dẫn bỏ ghi chú; tài xế cần kiểm tra lựa chọn của người nhận."
+          }
+        ],
+        "explanation_vi": "Quy trình là gửi yêu cầu sửa cho support team để họ kiểm tra, không tự thay đổi dữ liệu khách."
+      },
+      {
+        "prompt": "What does the speaker mean by saying the team is not asking drivers to speed up?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The schedule change is intended to reduce bridge waiting while preserving safety limits.",
+            "is_correct": true,
+            "explanation_vi": "Đúng: thay giờ xuất phát để tránh chờ cầu; tốc độ an toàn vẫn phải giữ nguyên."
+          },
+          {
+            "label": "B",
+            "text": "Drivers should ignore delays and arrive whenever they can.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì vẫn yêu cầu ghi nhận nơi xảy ra trễ và báo quản lý."
+          },
+          {
+            "label": "C",
+            "text": "The north route should return to its old departure time.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì giờ mới đang được thử nghiệm, chưa bị hủy."
+          },
+          {
+            "label": "D",
+            "text": "Only customer feedback will determine the final decision.",
+            "is_correct": false,
+            "explanation_vi": "Sai vì quyết định sẽ xem xét thời gian, giao thất bại và phản hồi khách hàng cùng nhau."
+          }
+        ],
+        "explanation_vi": "Người nói làm rõ thay đổi là điều chỉnh thời điểm rời depot, không phải ép tài xế bù trễ bằng cách chạy nhanh."
+      }
+    ]
+  }
+]

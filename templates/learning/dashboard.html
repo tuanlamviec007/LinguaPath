@@ -1,0 +1,147 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Tổng quan · LinguaPath
+{% endblock %}
+{% block content %}
+{% include 'learning/_weak_words_pending.html' %}
+<link rel="stylesheet" href="{% static 'css/learning-journey.css' %}">
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+<div class="dashboard-home">
+<section class="welcome dashboard-welcome">
+  <div class="dashboard-welcome-copy">
+    <span class="eyebrow">{{ today|date:'d/m/Y' }}</span>
+    <h1>Chút tiếng Anh.<br>Nhiều tiến bộ.</h1><p class="dashboard-greeting">Chào {{ user.first_name|default:user.username }}, cùng học tiếng Anh nhé.</p>
+    <p>Kế hoạch học được xây dựng theo mục tiêu {{ profile.exam_goal }} và thời gian bạn đã chọn.</p>
+  </div>
+  <div class="lp-learning-art" aria-hidden="true">
+    <svg viewBox="0 0 300 250" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="150" cy="226" rx="111" ry="15" fill="#123c35"/><path d="M45 169L150 131L258 169L151 211L45 169Z" fill="#b9d8a8"/><path d="M45 169L151 211V229L45 187V169Z" fill="#80ac87"/><path d="M151 211L258 169V187L151 229V211Z" fill="#609578"/><rect x="91" y="53" width="120" height="141" rx="39" transform="rotate(7 91 53)" fill="#e2eda4"/><path d="M93 142C110 154 136 159 156 155" stroke="#386251" stroke-width="6" stroke-linecap="round"/><ellipse cx="119" cy="113" rx="5" ry="7" fill="#284b40"/><ellipse cx="164" cy="117" rx="5" ry="7" fill="#284b40"/><circle cx="104" cy="132" r="10" fill="#e9ba93"/><circle cx="178" cy="140" r="10" fill="#e9ba93"/><path d="M91 164L62 150M193 163L222 154" stroke="#e2eda4" stroke-width="13" stroke-linecap="round"/><path d="M129 191L120 207M165 197L164 212" stroke="#e2eda4" stroke-width="12" stroke-linecap="round"/><rect x="54" y="36" width="66" height="49" rx="13" transform="rotate(-12 54 36)" fill="#c8c0f4"/><text x="76" y="66" font-size="22" font-weight="800" fill="#4e447d" transform="rotate(-12 76 66)">Aa</text><path d="M222 40L226 50L237 54L226 58L222 69L218 58L207 54L218 50L222 40Z" fill="#f6c29d"/><circle cx="247" cy="105" r="7" fill="#bccaf1"/><path d="M42 112L46 120L54 124L46 128L42 136L38 128L30 124L38 120L42 112Z" fill="#a6cba9"/></svg>
+    <span class="lp-art-caption">Small steps, big dreams.</span>
+  </div>
+  {% if resume_attempts %}
+    {% with resume=resume_attempts.0 %}<a class="button primary" href="{% url 'learning:take_attempt' resume.id %}">Tiếp tục bài đang làm <span aria-hidden="true">→</span></a>{% endwith %}
+  {% elif next_task %}
+    <a class="button primary" href="{% if next_task.content.content_type == 'vocabulary' %}{% url 'learning:flashcards_content' next_task.content.id %}{% if next_task.cefr_level %}?level={{ next_task.cefr_level }}{% endif %}{% else %}{% url 'learning:practice' next_task.content.id %}{% endif %}">Bắt đầu nhiệm vụ <span aria-hidden="true">→</span></a>
+  {% else %}
+    <a class="button primary" href="{% url 'learning:practice_list' %}">Học thêm tùy chọn <span aria-hidden="true">→</span></a>
+  {% endif %}
+</section>
+
+{% if active_quiz %}
+<section class="panel lp-dashboard-quiz-resume" aria-labelledby="quiz-resume-title">
+  <div><span class="eyebrow">THỬ THÁCH ĐANG DỞ</span><h2 id="quiz-resume-title">{% if active_quiz.is_retry %}Tiếp tục ôn từ từng nhầm{% else %}Quiz đang chờ bạn{% endif %}</h2><p>{{ active_quiz.saved_count }} / {{ active_quiz.question_count }} câu đã lưu{% if active_quiz.last_saved_at %} · lúc {{ active_quiz.last_saved_at|date:'H:i d/m' }}{% endif %}</p></div>
+  <a class="button primary" href="{% url 'learning:quiz_take' active_quiz.pk %}">Tiếp tục quiz <span aria-hidden="true">→</span></a>
+</section>
+{% endif %}
+
+{% if rewards %}
+<section class="lp-reward-strip" aria-label="Thành tích học tập của bạn">
+  <article class="lp-reward-cell lp-reward-level"><span class="lp-reward-symbol" aria-hidden="true">✦</span><div><span>Cấp {{ rewards.level }} · {{ rewards.level_name }}</span><strong>{{ rewards.total_xp }} <small>XP tích lũy</small></strong><div class="lp-meter" role="progressbar" aria-label="Tiến độ cấp độ" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ rewards.level_progress }}"><span style="width:{{ rewards.level_progress }}%"></span></div><small>{{ rewards.xp_to_next }} XP để lên cấp tiếp theo</small></div></article>
+  <article class="lp-reward-cell"><span class="lp-reward-symbol lp-symbol-fire" aria-hidden="true">♨</span><div><span>Chuỗi ngày học</span><strong>{{ rewards.streak_days }} <small>ngày</small></strong><small>Giữ nhịp, mỗi ngày một chút</small></div></article>
+  <article class="lp-reward-cell"><span class="lp-reward-symbol lp-symbol-sun" aria-hidden="true">☀</span><div><span>Năng lượng hôm nay</span><strong>{{ rewards.today_xp }} <small>/ {{ rewards.daily_goal }} XP</small></strong><div class="lp-meter lp-meter-sun" role="progressbar" aria-label="Mục tiêu XP hôm nay" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ rewards.daily_progress }}"><span style="width:{{ rewards.daily_progress }}%"></span></div></div></article>
+</section>
+{% endif %}
+
+<section class="lp-discovery" aria-labelledby="discovery-title">
+  <div class="lp-section-heading"><div><span class="eyebrow">CHỌN MỘT CUỘC PHIÊU LƯU</span><h2 id="discovery-title">Hôm nay học theo cách của bạn</h2></div><span class="lp-mini-note">Một chút tò mò là đủ để bắt đầu</span></div>
+  <div class="lp-discovery-grid">
+    <a class="lp-discovery-card lp-discovery-quiz" href="{% url 'learning:quiz_hub' %}"><span class="lp-discovery-icon" aria-hidden="true">⚡</span><span class="lp-card-kicker">THỬ THÁCH NHANH</span><h3>Quiz từ vựng</h3><p>Chọn chủ đề, thử sức và nhận XP.</p><span class="lp-discovery-link">Vào thử thách <span aria-hidden="true">↗</span></span></a>
+    <a class="lp-discovery-card lp-discovery-words" href="{% url 'learning:flashcards' %}"><span class="lp-discovery-icon" aria-hidden="true">Aa</span><span class="lp-card-kicker">NHỚ LÂU HƠN</span><h3>Khu vườn từ vựng</h3><p>{{ due_cards }} từ đến hạn đang đợi bạn ôn.</p><span class="lp-discovery-link">Mở flashcard <span aria-hidden="true">↗</span></span></a>
+    <a class="lp-discovery-card lp-discovery-listen" href="{% url 'learning:practice_list' %}?skill=listening"><span class="lp-discovery-icon" aria-hidden="true">♫</span><span class="lp-card-kicker">LẮNG NGHE THẾ GIỚI</span><h3>Listening & Reading</h3><p>Luyện từng bài nhỏ, hiểu từng lời giải.</p><span class="lp-discovery-link">Khám phá bài luyện <span aria-hidden="true">↗</span></span></a>
+  </div>
+</section>
+
+{% if resume_attempts %}
+<section class="journey-resume-section" aria-labelledby="resume-title">
+  <div class="journey-section-heading"><div><span class="eyebrow">LƯU TIẾN ĐỘ CỦA BẠN</span><h2 id="resume-title">Tiếp tục bài đang làm</h2></div><span>{{ resume_attempts|length }} lượt đang dở gần nhất</span></div>
+  <div class="resume-grid">
+    {% for resume in resume_attempts %}
+      <article class="resume-card">
+        <div class="resume-card-copy"><span class="resume-card-kicker">{{ resume.content.get_skill_display }} · {{ resume.content.exam_type }}</span><h3>{{ resume.content.title }}</h3><p>{{ resume.saved_count }} / {{ resume.question_count }} câu đã trả lời{% if resume.last_saved_at %}<span> · Lưu lúc {{ resume.last_saved_at|date:'d/m H:i' }}</span>{% endif %}</p></div>
+        <a href="{% url 'learning:take_attempt' resume.id %}" aria-label="Tiếp tục bài {{ resume.content.title }}">Tiếp tục <span aria-hidden="true">→</span></a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+
+
+
+
+<section class="stat-grid" aria-label="Tóm tắt học tập">
+  <article class="stat-card"><div class="stat-icon lavender" aria-hidden="true">◎</div><div><span>Kỳ thi mục tiêu</span><strong>{{ profile.exam_goal }}{% if profile.target_score %} · {{ profile.target_score }}{% endif %}</strong></div></article>
+  <article class="stat-card"><div class="stat-icon peach" aria-hidden="true">◷</div><div><span>Thời gian mỗi ngày</span><strong>{{ profile.daily_minutes }} phút</strong></div></article>
+  <article class="stat-card"><div class="stat-icon mint" aria-hidden="true">▤</div><div><span>Từ đến hạn ôn</span><strong>{{ due_cards }} từ</strong></div></article>
+</section>
+
+<div class="dashboard-grid dashboard-focus-grid">
+  <section class="panel" aria-labelledby="today-tasks-title">
+    <div class="panel-heading">
+      <div><span class="eyebrow">KẾ HOẠCH HÔM NAY</span><h2 id="today-tasks-title">Việc học của bạn</h2></div>
+      <span class="pill">{{ completed_task_count|default:0 }}/{{ tasks|length }} hoàn thành</span>
+    </div>
+    <div class="task-progress-wrap">
+      <div class="task-progress-track" role="progressbar" aria-label="Tiến độ nhiệm vụ hôm nay" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ task_progress_percent|default:0 }}">
+        <span class="task-progress-fill" style="width:{{ task_progress_percent|default:0 }}%"></span>
+      </div>
+      <span>{{ task_progress_percent|default:0 }}%</span>
+    </div>
+    {% if tasks %}
+      <div class="task-list">
+        {% for task in tasks %}
+          <article class="task">
+            <span class="task-check" aria-hidden="true">{% if task.status == 'done' %}✓{% else %}{{ forloop.counter|stringformat:'02d' }}{% endif %}</span>
+            <div class="task-info"><b>{{ task.content.title }}</b><span>{{ task.reason|default:task.content.get_skill_display }} · {{ task.estimated_minutes }} phút</span></div>
+            {% if task.status == 'done' %}
+              <span class="task-done">Đã hoàn thành</span>
+            {% else %}
+              <a class="task-link" href="{% if task.content.content_type == 'vocabulary' %}{% url 'learning:flashcards_content' task.content.id %}{% if task.cefr_level %}?level={{ task.cefr_level }}{% endif %}{% else %}{% url 'learning:practice' task.content.id %}{% endif %}" aria-label="Bắt đầu nhiệm vụ {{ task.content.title }}{% if task.cefr_level %}, mức {{ task.cefr_level }}{% endif %}">Bắt đầu <span aria-hidden="true">→</span></a>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state"><div aria-hidden="true">☼</div><b>Chưa có nhiệm vụ hôm nay</b><p>Hãy xem các bài học đang có hoặc quay lại khi kho nội dung được cập nhật.</p><a href="{% url 'learning:practice_list' %}">Xem bài luyện →</a></div>
+    {% endif %}
+  </section>
+
+  <aside class="panel side-panel" aria-labelledby="quick-start-title">
+    <div class="panel-heading"><div><span class="eyebrow">BẮT ĐẦU NHANH</span><h2 id="quick-start-title">Bạn muốn học gì?</h2></div></div>
+    <a class="quick-link" href="{% url 'learning:flashcards' %}"><span class="quick-icon lavender" aria-hidden="true">Aa</span><span><b>Ôn từ vựng</b><small>Từ được phân loại theo chủ đề và CEFR</small></span><span aria-hidden="true">→</span></a>
+    <a class="quick-link" href="{% url 'learning:saved_words' %}"><span class="quick-icon mint" aria-hidden="true">☆</span><span><b>Sổ từ cá nhân</b><small>{{ saved_word_count }} từ đã lưu cho lần ôn tiếp theo</small></span><span aria-hidden="true">→</span></a>
+    <a class="quick-link" href="{% url 'learning:weak_words' %}"><span class="quick-icon peach" aria-hidden="true">↺</span><span><b>Từ cần ôn</b><small>{% if weak_words_ready == False %}—{% else %}{{ weak_word_count }}{% endif %} từ từng nhầm đang chờ gặp lại</small></span><span aria-hidden="true">→</span></a>
+    <a class="quick-link" href="{% url 'learning:practice_list' %}"><span class="quick-icon peach" aria-hidden="true">✎</span><span><b>Luyện TOEIC</b><small>Listening và Reading theo chủ đề</small></span><span aria-hidden="true">→</span></a>
+    <a class="quick-link" href="{% url 'learning:mistake_notebook' %}"><span class="quick-icon peach" aria-hidden="true">↻</span><span><b>Ôn câu sai</b><small>{{ new_error_count }} mục lỗi đang chờ xem lại</small></span><span aria-hidden="true">→</span></a>
+    <a class="quick-link" href="{% url 'tutor' %}"><span class="quick-icon mint" aria-hidden="true">✦</span><span><b>Hỏi trợ lý học tập</b><small>Yêu cầu giải thích kiến thức trong bài</small></span><span aria-hidden="true">→</span></a>
+  </aside>
+</div>
+
+{% if rewards %}
+<div class="lp-game-grid">
+<section class="lp-quests panel" aria-labelledby="quests-title"><div class="lp-section-heading"><div><span class="eyebrow">TÍCH LŨY NIỀM VUI</span><h2 id="quests-title">Nhiệm vụ nhận XP</h2></div><span aria-hidden="true">✧</span></div><div class="lp-quest-list">{% for quest in rewards.quests %}<a class="lp-quest{% if quest.done %} is-complete{% endif %}" href="{{ quest.href }}"><span class="lp-quest-check" aria-hidden="true">{% if quest.done %}✓{% else %}{{ forloop.counter }}{% endif %}</span><div><strong>{{ quest.title }}</strong><span>{{ quest.description }}</span><div class="lp-meter" role="progressbar" aria-label="{{ quest.title }}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ quest.progress }}"><span style="width:{{ quest.progress }}%"></span></div></div><span class="lp-quest-count">{{ quest.current }}/{{ quest.target }}</span></a>{% endfor %}</div><p class="lp-xp-note">XP là điểm khuyến khích học tập trong LinguaPath.</p></section>
+<section class="lp-badges panel" aria-labelledby="badges-title"><div class="lp-section-heading"><div><span class="eyebrow">DẤU MỐC CỦA RIÊNG BẠN</span><h2 id="badges-title">Bộ sưu tập huy hiệu</h2></div><span aria-hidden="true">✦</span></div><div class="lp-badge-grid">{% for badge in rewards.badges %}<article class="lp-badge{% if badge.earned %} is-earned{% endif %}"><span class="lp-badge-icon" aria-hidden="true">{{ badge.icon }}</span><strong>{{ badge.name }}</strong><p>{{ badge.description }}</p><small>{% if badge.earned %}Đã mở khóa{% else %}Đang chờ khám phá{% endif %}</small></article>{% endfor %}</div></section>
+</div>
+{% endif %}
+
+<section class="panel cefr-summary" aria-labelledby="cefr-summary-title">
+  <div class="cefr-summary-copy">
+    <span class="eyebrow">HỒ SƠ CEFR</span>
+    <h2 id="cefr-summary-title">Lộ trình trình độ của bạn</h2>
+    <p>Trình độ hiện tại <strong>{{ current_cefr|default:'Chưa xác định' }}</strong><span aria-hidden="true"> → </span> mục tiêu <strong>{{ target_cefr|default:'Chưa đặt' }}</strong></p>
+    <small>Mức hiện tại là thông tin tự khai báo hoặc ước lượng từ hoạt động học; đây không phải chứng nhận CEFR.</small>
+  </div>
+  <a class="button secondary" href="{% url 'learning_goal' %}">Cập nhật mục tiêu</a>
+</section>
+
+{% include 'learning/_activity_summary.html' %}
+
+<section class="panel recent-panel" aria-labelledby="recent-title">
+  <div class="panel-heading"><div><span class="eyebrow">LỊCH SỬ</span><h2 id="recent-title">Lượt luyện gần đây</h2></div><a class="subtle-link" href="{% url 'progress' %}">Xem tiến độ →</a></div>
+  {% if recent_attempts %}
+    <div class="recent-list">{% for attempt in recent_attempts %}<div class="recent-row"><span><a href="{% url 'learning:attempt_result' attempt.pk %}">{{ attempt.content.title }}</a></span><span>{{ attempt.correct_count }}/{{ attempt.question_count }} câu đúng</span><b>{{ attempt.accuracy }}%</b></div>{% endfor %}</div>
+  {% else %}
+    <p class="muted">Bạn chưa có lượt luyện nào. Hãy làm một bài ngắn để bắt đầu theo dõi tiến bộ.</p>
+  {% endif %}
+</section>
+</div>
+{% endblock %}

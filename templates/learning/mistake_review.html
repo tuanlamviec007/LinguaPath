@@ -1,0 +1,54 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Lượt ôn câu sai · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/mistake-review.css' %}">
+<section class="mistake-session-head">
+  <a class="subtle-link" href="{% url 'learning:mistake_notebook' %}">← Về sổ lỗi</a>
+  <span class="eyebrow">LƯỢT ÔN RIÊNG · {{ question_count }} CÂU</span>
+  <h1>Thử trả lời lại</h1>
+  <p>Đáp án và lời giải sẽ chỉ hiện sau khi bạn nộp. Lựa chọn được tự động lưu trên tài khoản để bạn tiếp tục khi mở lại lượt ôn này.</p>
+</section>
+
+<form class="mistake-abandon-form" method="post" action="{% url 'learning:abandon_mistake_review' review_session.id %}" data-mistake-abandon data-abandon-attempt>
+  {% csrf_token %}
+  <button class="button secondary" type="submit">Dừng lượt ôn</button>
+</form>
+
+<form class="mistake-review-form" method="post" action="{% url 'learning:submit_mistake_review' review_session.id %}" data-mistake-review data-practice-draft data-draft-revision="{{ review_session.draft_revision|default:0 }}" data-draft-conflict="{% if draft_conflict %}true{% else %}false{% endif %}" data-draft-unsaved="{% if draft_has_unsaved %}true{% else %}false{% endif %}" data-draft-url="{% url 'learning:save_mistake_review_draft' review_session.id %}" data-total="{{ question_count }}">
+  {% csrf_token %}
+  <input type="hidden" name="draft_revision" value="{{ review_session.draft_revision|default:0 }}" data-draft-revision>
+  {% if draft_conflict %}<p class="message error" role="alert">Bản nháp đã thay đổi hoặc lượt làm đã đóng. Các lựa chọn bạn vừa gửi vẫn được giữ bên dưới. <a href="{% url 'learning:take_mistake_review' review_session.id %}">Tải lại bản đã lưu</a> trước khi tiếp tục.</p>{% endif %}
+  <section class="mistake-review-savebar" aria-label="Tiến độ lượt ôn">
+    <div class="mistake-save-copy"><strong><span data-answered-count>{{ draft_count|default:0 }}</span> / {{ question_count }} câu đã trả lời</strong><span data-review-status>Lượt ôn có {{ question_count }} câu.</span><span data-draft-status role="status" aria-live="polite">{% if has_draft %}Đã khôi phục bản nháp{% if last_saved_at %} · lưu lúc {{ last_saved_at|date:"H:i" }}{% endif %}{% else %}Lựa chọn sẽ được tự động lưu trên tài khoản của bạn.{% endif %}</span><small>Nếu bản nháp thay đổi ở tab khác, trang sẽ yêu cầu tải lại trước khi tiếp tục.</small></div>
+    <div class="mistake-review-track" role="progressbar" aria-label="Tiến độ trả lời" aria-valuemin="0" aria-valuemax="{{ question_count }}" aria-valuenow="{{ draft_count|default:0 }}" data-progressbar><span data-progress-fill></span></div>
+    <div class="draft-actions"><button class="mistake-save-button" type="button" data-save-draft hidden>Lưu bản nháp</button><button class="mistake-save-button" type="button" data-reload-draft hidden>Tải lại bản đã lưu</button></div>
+  </section>
+  <noscript><p class="mistake-noscript-note">Tự động lưu cần JavaScript. Bạn vẫn có thể chọn đáp án và nộp bằng nút cuối trang; hãy nộp trước khi rời đi để giữ kết quả.</p></noscript>
+
+  {% for question in questions %}
+    <section class="mistake-question-card" data-question>
+      <span class="eyebrow">CÂU {{ forloop.counter }} · {{ question.content_title }}{% if question.skill %} · {{ question.skill }}{% endif %}</span>
+      {% if question.passage %}<div class="mistake-passage">{{ question.passage|linebreaks }}</div>{% endif %}
+      {% if question.audio_url %}
+        <label class="mistake-audio-label" for="mistake-audio-{{ question.id }}">Nghe đoạn âm thanh</label>
+        <audio id="mistake-audio-{{ question.id }}" controls preload="metadata" src="{{ question.audio_url }}">Trình duyệt không phát được âm thanh.</audio>
+        <span class="mistake-audio-error" data-audio-error hidden>Không tải được file nghe. Hãy kiểm tra kết nối hoặc dừng lượt để thử lại sau; transcript chỉ hiện sau khi nộp.</span>
+      {% endif %}
+      <h2>{{ question.prompt }}</h2>
+      <fieldset class="mistake-options">
+        <legend>Chọn một đáp án</legend>
+        {% for option in question.options %}
+          <label class="mistake-option"><input type="radio" name="question_{{ question.id }}" value="{{ option.id }}"{% if question.selected_option_id == option.id %} checked{% endif %}><span class="mistake-option-label">{{ option.label }}</span><span>{{ option.text }}</span></label>
+        {% endfor %}
+      </fieldset>
+    </section>
+  {% endfor %}
+  <div class="mistake-submit-row">
+    <button class="button primary" type="submit" data-review-submit{% if draft_conflict %} disabled{% endif %}>Nộp lượt ôn và xem kết quả →</button>
+    <span class="mistake-submit-status" role="status" aria-live="polite" data-submit-status></span>
+  </div>
+</form>
+<script src="{% static 'js/practice-draft.js' %}" defer></script>
+<script src="{% static 'js/mistake-review.js' %}" defer></script>
+{% endblock %}

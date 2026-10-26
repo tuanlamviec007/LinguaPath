@@ -1,0 +1,119 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Tiến độ · LinguaPath{% endblock %}
+{% block content %}
+{% include 'learning/_weak_words_pending.html' %}
+<link rel="stylesheet" href="{% static 'css/learning-journey.css' %}">
+<link rel="stylesheet" href="{% static 'css/quiz-history.css' %}">
+<link rel="stylesheet" href="{% static 'css/quiz-due.css' %}">
+<section class="page-heading">
+  <span class="eyebrow">DỮ LIỆU HỌC CỦA BẠN</span>
+  <h1>Tiến độ học tập</h1>
+  <p>Kết quả phản ánh các lượt luyện trên website. CEFR được dùng để tổ chức nội dung từ vựng, không quy đổi trực tiếp thành điểm TOEIC/IELTS.</p>
+</section>
+
+{% include 'learning/_activity_summary.html' %}
+
+<section class="panel lp-quiz-progress-panel" aria-labelledby="quiz-progress-title">
+  <div class="panel-heading"><div><span class="eyebrow">QUIZ · 30 NGÀY GẦN NHẤT</span><h2 id="quiz-progress-title">Kết quả quiz theo cách luyện</h2></div><a class="button secondary" href="{% url 'learning:quiz_hub' %}">Chơi quiz →</a></div>
+  <div class="lp-quiz-progress-stats"><div><strong>{{ quiz_progress.completed }}</strong><span>quiz mới hoàn thành</span></div><div><strong>{{ quiz_progress.correct }} / {{ quiz_progress.questions }}</strong><span>câu đúng ở lượt đầu</span></div><div><strong>{% if quiz_progress.accuracy != None %}{{ quiz_progress.accuracy }}%{% else %}—{% endif %}</strong><span>tỷ lệ đúng tổng hợp</span></div><div><strong>{{ quiz_progress.retry_count }}</strong><span>lượt ôn từ từng sai</span></div></div>
+  <p class="progress-explainer">Tổng hợp trên mô tả hoạt động ở các quiz mới, không phải điểm năng lực. Chọn nghĩa và tự gõ từ yêu cầu khác nhau; thay đổi cách luyện, mức hoặc nguồn có thể làm tỷ lệ chung đổi. Lượt ôn từ sai được ghi nhận riêng. <a class="subtle-link" href="{% url 'learning:quiz_history' %}">Xem toàn bộ lịch sử →</a></p>
+  {% if quiz_progress.strata %}
+    <div class="lp-quiz-strata-wrap" role="region" aria-labelledby="quiz-strata-caption" tabindex="0">
+      <table class="lp-quiz-strata-table">
+        <caption id="quiz-strata-caption">Quiz mới theo cách luyện, mức đã chọn và nguồn · 30 ngày</caption>
+        <thead><tr><th scope="col">Cách luyện</th><th scope="col">Mức đã chọn</th><th scope="col">Nguồn</th><th scope="col">Quiz</th><th scope="col">Đúng / số câu</th><th scope="col">Tỷ lệ đúng</th></tr></thead>
+        <tbody>{% for row in quiz_progress.strata %}<tr><th scope="row">{{ row.mode_label }}</th><td>{{ row.level_label }}</td><td>{{ row.source_label }}</td><td>{{ row.completed }}</td><td>{{ row.correct }} / {{ row.questions }}</td><td>{% if row.sufficient %}<strong>{{ row.accuracy }}%</strong>{% else %}<span class="lp-quiz-strata-insufficient">Chưa đủ dữ liệu</span>{% endif %}</td></tr>{% endfor %}</tbody>
+      </table>
+    </div>
+    <p class="progress-explainer">Mỗi nhóm cần ít nhất {{ quiz_progress.minimum_stratum_questions }} câu để hiển thị tỷ lệ. Mức là bộ lọc bạn đã chọn; “Mọi mức (trộn)” gồm nhiều mức và không xác nhận trình độ CEFR. Không so sánh trực tiếp các nhóm để kết luận tiến bộ.</p>
+  {% else %}
+    <p class="progress-explainer">Chưa có quiz mới trong 30 ngày để tách theo cách luyện, mức và nguồn.</p>
+  {% endif %}
+  <a class="lp-quiz-pending-words" href="{% url 'learning:weak_words' %}"><span aria-hidden="true">↺</span><span><strong>{% if weak_words_ready == False %}—{% else %}{{ weak_word_count }}{% endif %} từ đang cần ôn</strong><small>Tổng hợp từ các lượt quiz; trả lời đúng lần tiếp theo để rời danh sách.</small></span><b aria-hidden="true">→</b></a>
+  {% if quiz_progress.recent %}<div class="lp-quiz-progress-list">{% for item in quiz_progress.recent %}<a href="{% url 'learning:quiz_result' item.pk %}"><span class="lp-quiz-history-mark" aria-hidden="true">{% if item.is_retry %}↻{% else %}✦{% endif %}</span><div><strong>{% if item.vocabulary_source == 'due' %}{% if item.is_retry %}Luyện lại từ đến lịch ôn{% else %}Gõ từ đến lịch ôn{% endif %}{% elif item.vocabulary_source == 'weak' %}Luyện từ cần ôn{% elif item.is_retry %}Ôn từ từng sai{% else %}{{ item.topic|default:'Khám phá từ vựng' }}{% endif %}</strong><span>{% if item.mode == 'recall' %}Gõ từ tiếng Anh{% else %}Chọn nghĩa{% endif %} · {{ item.submitted_at|date:'d/m H:i' }} · {{ item.cefr_level|default:'Mọi cấp độ' }}</span></div><span>{{ item.correct_count }}/{{ item.question_count }} đúng <b aria-hidden="true">→</b></span></a>{% endfor %}</div>{% else %}<p class="muted">Hoàn thành một quiz để bắt đầu theo dõi hành trình ghi nhớ của bạn.</p>{% endif %}
+</section>
+
+<section class="panel lp-due-panel" aria-labelledby="due-progress-title">
+  <div class="panel-heading"><div><span class="eyebrow">GÕ TỪ ĐẾN LỊCH ÔN · 30 NGÀY</span><h2 id="due-progress-title">Sau khoảng cách tự đánh giá</h2></div><a class="button secondary" href="{% url 'learning:quiz_hub' %}?source=due&amp;mode=recall">Gõ từ đến lịch ôn →</a></div>
+  <dl class="lp-due-stats"><div><dt>Gõ đúng / câu được tính</dt><dd>{{ due_summary.correct|default:0 }} / {{ due_summary.questions|default:0 }}</dd></div><div><dt>Tỷ lệ gõ đúng</dt><dd>{% if due_summary.accuracy != None %}{{ due_summary.accuracy }}%{% else %}—{% endif %}</dd></div><div><dt>Câu loại khỏi thống kê</dt><dd>{{ due_summary.excluded|default:0 }}</dd></div></dl>
+  <p class="progress-explainer">Thẻ được chọn khi đã đến hạn và cách lần tự đánh giá gần nhất ít nhất 24 giờ. Chỉ tính lần kiểm tra đầu tiên cho mỗi lần tự đánh giá; không gộp luyện lại. Câu có nguồn hoặc lần tự đánh giá thay đổi khi đang làm được loại khỏi thống kê này.</p>
+  <p class="progress-explainer">Tỷ lệ chỉ hiển thị từ 5 câu được tính. Bài vẫn gợi ý chữ đầu và số từ, không theo dõi mọi lần xem lại. Đây là kết quả gõ từ theo gợi ý, chưa xác nhận nhớ lâu, mức thành thạo hoặc CEFR. Quiz không thay đổi lịch ôn flashcard.</p>
+</section>
+
+<section class="panel review-calendar" aria-labelledby="review-calendar-title">
+  <div class="panel-heading"><div><span class="eyebrow">NHẮC LẠI ĐÚNG LÚC</span><h2 id="review-calendar-title">Lịch ôn 7 ngày tới</h2></div><span class="pill">{{ reviewed_card_count }} thẻ đã có lịch</span></div>
+  <p class="progress-explainer">Số thẻ đã học cần ôn lại theo lịch hiện tại; hôm nay bao gồm cả thẻ quá hạn. Khi bạn đánh giá lại, lịch sẽ điều chỉnh.</p>
+  <div class="review-calendar-grid">
+    {% for item in upcoming_reviews %}<div class="review-calendar-day{% if item.today %} is-today{% endif %}"><span>{% if item.today %}Hôm nay{% else %}{{ item.day|date:'d/m' }}{% endif %}</span><strong>{{ item.count }}</strong><small>thẻ ôn</small></div>{% endfor %}
+  </div>
+  <a class="button secondary" href="{% url 'learning:flashcards' %}">Ôn thẻ đến hạn →</a>
+</section>
+
+<section class="panel cefr-progress-panel" aria-labelledby="cefr-progress-title">
+  <div class="panel-heading">
+    <div><span class="eyebrow">TỪ VỰNG THEO CEFR</span><h2 id="cefr-progress-title">Từ vựng theo từng cấp độ</h2></div>
+    <span class="pill">{{ profile.current_cefr }} hiện tại → {{ profile.target_cefr }} mục tiêu</span>
+  </div>
+  <p class="progress-explainer">“Đã nhớ” ở đây là số thẻ bạn đã đánh giá là đã nhớ; mức độ thành thạo cần được kiểm tra lại qua các lần ôn tiếp theo.</p>
+  {% if cefr_progress %}
+    <div class="cefr-level-list">
+      {% for item in cefr_progress %}
+        <article class="cefr-level-row">
+          <div class="cefr-level-label">
+            <strong>{{ item.level }}</strong>
+            <span>{{ item.known }}/{{ item.total }} thẻ tự đánh giá “Đã nhớ”</span>
+          </div>
+          <div class="cefr-progress-track" role="progressbar" aria-label="Tỷ lệ tự đánh giá Đã nhớ ở mức {{ item.level }}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ item.percent }}" aria-valuetext="{{ item.known }} trên {{ item.total }} thẻ tự đánh giá Đã nhớ">
+            <span class="cefr-progress-fill" style="width:{{ item.percent }}%"></span>
+          </div>
+          <span class="cefr-progress-value">{{ item.percent }}%</span>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="muted">Chưa có dữ liệu từ vựng. Hãy học và đánh giá một vài flashcard để bắt đầu theo dõi.</p>
+  {% endif %}
+</section>
+
+<section class="stat-grid progress-stats" aria-label="Kết quả luyện tập">
+  <article class="stat-card"><div class="stat-icon lavender" aria-hidden="true">↗</div><div><span>Lượt luyện đã nộp</span><strong>{{ total_attempts }}</strong></div></article>
+  <article class="stat-card"><div class="stat-icon peach" aria-hidden="true">✓</div><div><span>Câu đã làm</span><strong>{{ total_questions }}</strong></div></article>
+  <article class="stat-card"><div class="stat-icon mint" aria-hidden="true">◎</div><div><span>Tỷ lệ đúng chung</span><strong>{{ accuracy }}%</strong></div></article>
+</section>
+
+<section class="panel skill-progress-panel" aria-labelledby="skill-progress-title">
+  <div class="panel-heading"><div><span class="eyebrow">TỔNG HỢP 30 NGÀY</span><h2 id="skill-progress-title">Kết quả theo kỹ năng</h2></div><span class="pill">Reading · Listening · Từ vựng</span></div>
+  <p class="progress-explainer">Tỷ lệ đúng chỉ hiển thị khi các lượt đã nộp có tổng ít nhất 5 câu hỏi trong khoảng thời gian này; tính cả câu bỏ trống.</p>
+  {% if activity.skill_rows %}
+    <div class="skill-table-wrap">
+      <table class="skill-table">
+        <caption class="sr-only">Số câu và tỷ lệ đúng trong 30 ngày qua theo kỹ năng</caption>
+        <thead><tr><th scope="col">Kỹ năng</th><th scope="col">Câu đúng / đã làm</th><th scope="col">Tỷ lệ đúng</th><th scope="col"><span class="sr-only">Hành động</span></th></tr></thead>
+        <tbody>
+          {% for row in activity.skill_rows %}
+            <tr>
+              <th scope="row">{{ row.label }}</th>
+              <td>{{ row.correct }} / {{ row.total }}</td>
+              <td>{% if row.sufficient %}<strong class="skill-accuracy">{{ row.accuracy }}%</strong>{% else %}<span class="skill-insufficient">Chưa đủ dữ liệu</span>{% endif %}</td>
+              <td><a class="skill-practice-link" href="{{ row.href }}">{% if row.sufficient %}Luyện thêm{% else %}Thử kỹ năng này{% endif %} <span aria-hidden="true">→</span></a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="skill-empty"><p>Chưa có câu trả lời trong 30 ngày gần nhất.</p><a class="button secondary" href="{% url 'learning:practice_list' %}">Chọn bài luyện →</a></div>
+  {% endif %}
+</section>
+
+<section class="panel recent-panel" aria-labelledby="history-title">
+  <div class="panel-heading"><div><span class="eyebrow">LỊCH SỬ LUYỆN</span><h2 id="history-title">Lịch sử bài luyện</h2></div></div>
+  {% if attempts %}
+    <div class="recent-list">{% for attempt in attempts %}<div class="recent-row"><span><a href="{% url 'learning:attempt_result' attempt.pk %}">{{ attempt.content.title }}</a><small>{{ attempt.submitted_at|date:'d/m/Y H:i' }}</small></span><span>{{ attempt.correct_count }}/{{ attempt.question_count }} câu đúng</span><b>{{ attempt.accuracy }}%</b></div>{% endfor %}</div>
+    {% if practice_page_obj.has_other_pages %}<nav class="lp-archive-pagination" aria-label="Trang lịch sử bài luyện">{% if practice_page_obj.has_previous %}<a href="?practice_page={{ practice_page_obj.previous_page_number }}#history-title">← Trang trước</a>{% endif %}<span>Trang {{ practice_page_obj.number }} / {{ practice_page_obj.paginator.num_pages }}</span>{% if practice_page_obj.has_next %}<a href="?practice_page={{ practice_page_obj.next_page_number }}#history-title">Trang sau →</a>{% endif %}</nav>{% endif %}
+  {% else %}
+    <p class="muted">Chưa có dữ liệu. Hãy hoàn thành bài luyện đầu tiên để bắt đầu xem tiến độ.</p>
+  {% endif %}
+</section>
+{% endblock %}

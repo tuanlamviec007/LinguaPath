@@ -1,0 +1,361 @@
+term,cefr_level,part_of_speech,meaning_vi,example_en,example_vi,topic,cloze_answer,distractor_1,distractor_2,distractor_3
+laptop,A2,noun,máy tính xách tay,My laptop folds shut so I can carry it between classes.,Máy tính xách tay của tôi gập lại được nên tôi có thể mang theo giữa các tiết học.,Technology,laptop,router,scanner,projector
+tablet,A2,noun,máy tính bảng,She draws directly on the tablet with a digital pen.,Cô ấy vẽ trực tiếp trên máy tính bảng bằng bút điện tử.,Technology,tablet,router,microphone,printer
+smartphone,A2,noun,điện thoại thông minh,His smartphone combines mobile calls with apps and a touch screen.,Điện thoại thông minh của anh ấy kết hợp cuộc gọi di động với ứng dụng và màn hình cảm ứng.,Technology,smartphone,keyboard,projector,scanner
+mouse,A1,noun,chuột máy tính,Move the mouse across the desk to control the screen pointer.,Di chuyển chuột trên bàn để điều khiển con trỏ trên màn hình.,Technology,mouse,microphone,speaker,router
+touchpad,B1,noun,bàn di chuột,The touchpad moves the pointer when you slide your finger across it.,Bàn di chuột làm con trỏ di chuyển khi bạn trượt ngón tay trên đó.,Technology,touchpad,webcam,battery,socket
+touchscreen,B1,noun,màn hình cảm ứng,The touchscreen responds when you press an icon with your finger.,Màn hình cảm ứng phản hồi khi bạn nhấn biểu tượng bằng ngón tay.,Technology,touchscreen,microphone,antenna,charger
+cursor,B1,noun,con trỏ nhập văn bản,The blinking cursor shows where the next typed letter will appear.,Con trỏ nhấp nháy cho biết chữ cái tiếp theo sẽ xuất hiện ở đâu.,Computing,cursor,password,filename,wallpaper
+icon,A2,noun,biểu tượng trên màn hình,Tap the small envelope icon to open your email application.,Chạm vào biểu tượng phong bì nhỏ để mở ứng dụng email.,Computing,icon,socket,battery,cable
+toolbar,B1,noun,thanh công cụ,The toolbar groups the editing buttons above the document.,Thanh công cụ tập hợp các nút chỉnh sửa phía trên tài liệu.,Computing,toolbar,wallpaper,webcam,inbox
+tab,A2,noun,thẻ trên trình duyệt,Open a separate browser tab to keep both websites available.,Mở một thẻ trình duyệt riêng để giữ cả hai trang web.,Computing,tab,socket,plug,microphone
+webpage,A2,noun,trang web đơn lẻ,This webpage contains one article within the university website.,Trang web này chứa một bài viết trong website của trường đại học.,Computing,webpage,password,keyboard,battery
+website,A1,noun,website,The museum website groups its opening hours and online exhibitions together.,Website của bảo tàng tập hợp giờ mở cửa và các triển lãm trực tuyến.,Computing,website,microphone,socket,headphone
+homepage,A2,noun,trang chủ,The homepage is the first main page of our club website.,Trang chủ là trang chính đầu tiên của website câu lạc bộ chúng tôi.,Computing,homepage,password,cursor,toolbar
+hyperlink,B2,noun,siêu liên kết,Click the blue hyperlink to move directly to the registration page.,Nhấp vào siêu liên kết màu xanh để chuyển thẳng đến trang đăng ký.,Computing,hyperlink,battery,microphone,socket
+bookmark,B1,noun,dấu trang trong trình duyệt,Save a browser bookmark so you can return without typing the address.,Lưu dấu trang trong trình duyệt để quay lại mà không cần nhập địa chỉ.,Computing,bookmark,virus,pixel,password
+username,A2,noun,tên đăng nhập,Type your username in the first box and your password below.,Nhập tên đăng nhập ở ô đầu tiên và mật khẩu ở bên dưới.,Computing,username,wallpaper,toolbar,battery
+profile,A2,noun,hồ sơ cá nhân trực tuyến,Her public profile displays a short biography and a photograph.,Hồ sơ công khai của cô ấy hiển thị tiểu sử ngắn và một bức ảnh.,Computing,profile,socket,processor,cable
+avatar,B1,noun,hình đại diện,He uses a cartoon avatar instead of his photograph online.,Anh ấy dùng hình đại diện hoạt hình thay cho ảnh cá nhân trên mạng.,Computing,avatar,firewall,router,inbox
+inbox,A2,noun,hộp thư đến,New messages arrive in my inbox before I sort them.,Thư mới đến hộp thư đến của tôi trước khi tôi phân loại chúng.,Computing,inbox,outbox,clipboard,toolbar
+outbox,B1,noun,hộp thư chờ gửi,The message stayed in the outbox until the connection returned.,Tin nhắn nằm trong hộp thư chờ gửi cho đến khi có kết nối trở lại.,Computing,outbox,inbox,wallpaper,cursor
+spam,B1,noun,thư rác,The email filter moves unwanted advertising messages into spam.,Bộ lọc email chuyển những thư quảng cáo không mong muốn vào thư rác.,Computing,spam,memory,hardware,bandwidth
+firewall,B2,noun,tường lửa,A firewall checks network traffic against rules that allow or block connections.,Tường lửa kiểm tra lưu lượng mạng theo các quy tắc cho phép hoặc chặn kết nối.,Cybersecurity,firewall,printer,headphone,webcam
+spyware,B2,noun,phần mềm gián điệp,The report describes spyware that secretly collects information from a device.,Báo cáo mô tả phần mềm gián điệp bí mật thu thập thông tin từ thiết bị.,Cybersecurity,spyware,wallpaper,spreadsheet,podcast
+ransomware,C1,noun,mã độc tống tiền,The workshop explains how ransomware demands payment after locking computer files.,Buổi hướng dẫn giải thích cách mã độc tống tiền đòi tiền sau khi khóa tệp máy tính.,Cybersecurity,ransomware,calculator,headset,touchpad
+phishing,B2,noun,hành vi lừa đảo lấy thông tin qua giả mạo,The training labels a fake login email as an example of phishing.,Buổi đào tạo gọi email đăng nhập giả là một ví dụ về hành vi lừa đảo giả mạo.,Cybersecurity,phishing,printing,scrolling,drawing
+hacker,B2,noun,người xâm nhập hệ thống máy tính,The fictional hacker gains unauthorized access to the company network.,Tin tặc trong truyện giành quyền truy cập trái phép vào mạng công ty.,Cybersecurity,hacker,printer,scanner,projector
+programmer,B1,noun,lập trình viên,A programmer writes the instructions that tell a computer what to do.,Lập trình viên viết các chỉ dẫn cho máy tính biết phải làm gì.,Computing,programmer,thermometer,calculator,microphone
+programming,B1,noun,việc lập trình,Our programming class teaches us to write and test computer instructions.,Lớp lập trình dạy chúng tôi viết và kiểm tra chỉ dẫn máy tính.,Computing,programming,gardening,swimming,painting
+database,B1,noun,cơ sở dữ liệu,The database stores student records in organized tables for searching.,Cơ sở dữ liệu lưu hồ sơ sinh viên trong các bảng có tổ chức để tìm kiếm.,Computing,database,microphone,wallpaper,battery
+server,B1,noun,máy chủ,The server responds to requests from many computers on the network.,Máy chủ phản hồi yêu cầu từ nhiều máy tính trong mạng.,Computing,server,mouse,headphone,touchpad
+router,B1,noun,bộ định tuyến,Our router directs data between the home network and the internet.,Bộ định tuyến điều hướng dữ liệu giữa mạng gia đình và Internet.,Technology,router,webcam,microphone,scanner
+modem,B2,noun,bộ điều giải,The modem converts signals so our connection can use the telephone line.,Bộ điều giải chuyển đổi tín hiệu để kết nối của chúng tôi dùng được đường dây điện thoại.,Technology,modem,mouse,webcam,headset
+adapter,B1,noun,bộ chuyển đổi,This adapter lets a small connector fit a larger socket.,Bộ chuyển đổi này giúp đầu nối nhỏ vừa với ổ cắm lớn hơn.,Technology,adapter,pixel,cursor,password
+socket,B1,noun,ổ cắm điện,The wall socket has openings for the plug pins.,Ổ cắm trên tường có các lỗ để cắm chân phích điện.,Technology,socket,microphone,screen,mouse
+plug,A2,noun,phích cắm điện,The plug has two metal pins that fit the wall socket.,Phích cắm có hai chân kim loại vừa với ổ cắm trên tường.,Technology,plug,speaker,cursor,pixel
+wire,A2,noun,dây dẫn điện,A thin copper wire carries electricity inside the cable.,Một dây đồng mỏng dẫn điện bên trong cáp.,Technology,wire,lens,pixel,screen
+circuit,B2,noun,mạch điện,The lamp lights when the switch completes the electrical circuit.,Đèn sáng khi công tắc khép kín mạch điện.,Science,circuit,planet,fraction,muscle
+microchip,B2,noun,vi mạch,The tiny microchip contains electronic components on a piece of silicon.,Vi mạch nhỏ chứa các linh kiện điện tử trên một miếng silic.,Technology,microchip,headphone,keyboard,socket
+processor,B2,noun,bộ xử lý,The processor executes instructions inside the computer rather than storing paper records.,Bộ xử lý thực thi chỉ dẫn bên trong máy tính thay vì lưu hồ sơ giấy.,Computing,processor,microphone,printer,mouse
+sensor,B1,noun,cảm biến,A motion sensor detects movement and switches on the corridor light.,Cảm biến chuyển động phát hiện sự di chuyển và bật đèn hành lang.,Technology,sensor,speaker,printer,keyboard
+scanner,B1,noun,máy quét,The scanner turns a paper photograph into a digital image.,Máy quét chuyển ảnh giấy thành hình ảnh kỹ thuật số.,Technology,scanner,speaker,router,microphone
+microphone,A2,noun,micrô,Speak into the microphone so it can capture your voice.,Nói vào micrô để thiết bị thu giọng nói của bạn.,Technology,microphone,printer,router,scanner
+loudspeaker,B1,noun,loa phóng thanh,The loudspeaker broadcasts the announcement across the school courtyard.,Loa phóng thanh phát thông báo khắp sân trường.,Technology,loudspeaker,microphone,webcam,scanner
+headphones,A2,plural noun,tai nghe chụp tai,These headphones cover both ears while I listen to the recording.,Chiếc tai nghe này chụp cả hai tai khi tôi nghe bản ghi.,Technology,headphones,keyboards,routers,scanners
+earphones,B1,plural noun,tai nghe nhét tai,Her earphones fit inside her ears rather than covering them.,Tai nghe của cô ấy nằm trong tai thay vì chụp bên ngoài.,Technology,earphones,speakers,printers,projectors
+webcam,A2,noun,camera dùng cho cuộc gọi trực tuyến,The webcam sends live video of my face during online meetings.,Webcam truyền hình ảnh trực tiếp khuôn mặt tôi trong các cuộc họp trực tuyến.,Technology,webcam,microphone,router,keyboard
+projector,B1,noun,máy chiếu,The projector throws the slide image onto a large white screen.,Máy chiếu chiếu hình ảnh trang trình bày lên màn hình trắng lớn.,Technology,projector,microphone,router,scanner
+calculator,A2,noun,máy tính cầm tay,I use a calculator to multiply large numbers without writing every step.,Tôi dùng máy tính cầm tay để nhân số lớn mà không viết từng bước.,Technology,calculator,microphone,webcam,router
+battery,A2,noun,pin,The battery stores energy so the phone works without a power cable.,Pin tích trữ năng lượng để điện thoại hoạt động mà không cần dây điện.,Technology,battery,cursor,toolbar,webpage
+pixel,B2,noun,điểm ảnh,Enlarging the picture reveals each tiny square pixel that forms the image.,Phóng to bức ảnh sẽ thấy từng điểm ảnh vuông nhỏ tạo thành hình.,Computing,pixel,socket,charger,router
+resolution,B2,noun,độ phân giải hình ảnh,Higher image resolution means more pixels represent the same picture area.,Độ phân giải hình ảnh cao hơn nghĩa là có nhiều điểm ảnh hơn biểu diễn cùng một vùng ảnh.,Computing,resolution,password,volume,latency
+upload,A2,verb,tải lên,Please upload the photograph from your phone to the class website.,Vui lòng tải ảnh từ điện thoại lên website của lớp.,Computing,upload,erase,print,fold
+install,B1,verb,cài đặt,We install the new software before opening it for the first time.,Chúng tôi cài đặt phần mềm mới trước khi mở lần đầu.,Computing,install,uninstall,erase,unplug
+uninstall,B1,verb,gỡ cài đặt,I will uninstall the unused application to remove it from my laptop.,Tôi sẽ gỡ cài đặt ứng dụng không dùng để xóa nó khỏi máy tính xách tay.,Computing,uninstall,install,launch,update
+reboot,B2,verb,khởi động lại hệ thống,The technician will reboot the computer by shutting it down and starting it again.,Kỹ thuật viên sẽ khởi động lại máy tính bằng cách tắt rồi bật lại.,Computing,reboot,print,scan,mute
+reset,B1,verb,đặt lại về trạng thái ban đầu,Press this button to reset the timer to zero.,Nhấn nút này để đặt lại bộ đếm giờ về không.,Technology,reset,extend,double,record
+synchronize,B2,verb,đồng bộ hóa,The app can synchronize changes so both devices show the same notes.,Ứng dụng có thể đồng bộ thay đổi để cả hai thiết bị hiện cùng ghi chú.,Computing,synchronize,erase,conceal,disconnect
+compress,B2,verb,nén dữ liệu,This tool can compress the file to reduce its storage size.,Công cụ này có thể nén tệp để giảm dung lượng lưu trữ.,Computing,compress,enlarge,erase,print
+extract,B2,verb,giải nén lấy tệp,Use this command to extract the documents from the compressed archive.,Dùng lệnh này để giải nén các tài liệu trong tệp lưu trữ đã nén.,Computing,extract,compress,delete,encrypt
+encode,C1,verb,mã hóa biểu diễn dữ liệu,The exercise asks us to encode each letter as a binary number.,Bài tập yêu cầu chúng tôi biểu diễn mỗi chữ cái bằng một số nhị phân.,Computing,encode,erase,fold,print
+decode,C1,verb,giải mã biểu diễn dữ liệu,Students decode the binary message by converting its numbers back into letters.,Sinh viên giải mã thông điệp nhị phân bằng cách chuyển các số về chữ cái.,Computing,decode,encrypt,compress,delete
+compile,B2,verb,biên dịch mã nguồn,The tool will compile source code into a program the machine can run.,Công cụ sẽ biên dịch mã nguồn thành chương trình mà máy có thể chạy.,Computing,compile,erase,upload,rename
+execute,B2,verb,thực thi lệnh,The computer will execute the instruction instead of merely displaying its text.,Máy tính sẽ thực thi lệnh thay vì chỉ hiển thị văn bản của lệnh.,Computing,execute,underline,translate,erase
+render,C1,verb,kết xuất hình ảnh,The graphics software will render the scene as a finished digital image.,Phần mềm đồ họa sẽ kết xuất cảnh thành hình ảnh kỹ thuật số hoàn chỉnh.,Computing,render,erase,encrypt,rename
+scroll,B1,verb,cuộn nội dung trên màn hình,Scroll down the page to reveal the paragraph below the screen.,Cuộn trang xuống để hiện đoạn văn nằm bên dưới màn hình.,Computing,scroll,type,mute,unplug
+swipe,B1,verb,vuốt trên màn hình,Swipe your finger across the screen to move to the next photograph.,Vuốt ngón tay qua màn hình để chuyển đến bức ảnh tiếp theo.,Computing,swipe,print,unplug,type
+tap,A2,verb,chạm nhẹ trên màn hình,Tap the screen once rather than holding your finger against it.,Chạm nhẹ màn hình một lần thay vì giữ ngón tay trên đó.,Computing,tap,print,erase,unplug
+drag,B1,verb,kéo mục trên màn hình,Drag the icon while holding the mouse button to move it.,Kéo biểu tượng trong khi giữ nút chuột để di chuyển nó.,Computing,drag,type,mute,print
+paste,A2,verb,dán nội dung đã sao chép,"After copying the sentence, paste it into the empty text box.","Sau khi sao chép câu, hãy dán câu đó vào ô văn bản trống.",Computing,paste,erase,encrypt,scan
+copy,A2,verb,sao chép,Choose copy to place a duplicate of the selected text on the clipboard.,Chọn sao chép để đưa một bản sao của đoạn văn bản đã chọn vào bộ nhớ tạm.,Computing,copy,erase,mute,unplug
+print,A1,verb,in ra giấy,We print the digital form so everyone has a paper copy.,Chúng tôi in biểu mẫu kỹ thuật số để mỗi người có một bản giấy.,Computing,print,scan,upload,mute
+scan,B1,verb,quét tài liệu thành tệp,Please scan the paper certificate to create a digital copy.,Vui lòng quét chứng chỉ giấy để tạo bản sao kỹ thuật số.,Computing,scan,print,erase,fold
+screenshot,B1,noun,ảnh chụp màn hình,A screenshot captures exactly what appears on the computer display.,Ảnh chụp màn hình ghi lại đúng những gì xuất hiện trên màn hình máy tính.,Computing,screenshot,microphone,password,router
+shortcut,B1,noun,phím tắt,This keyboard shortcut performs the action when two keys are pressed together.,Phím tắt này thực hiện thao tác khi hai phím được nhấn cùng lúc.,Computing,shortcut,wallpaper,battery,webcam
+clipboard,B2,noun,bộ nhớ tạm để sao chép,Copied text stays on the clipboard until I paste it elsewhere.,Văn bản đã sao chép nằm trong bộ nhớ tạm cho đến khi tôi dán sang nơi khác.,Computing,clipboard,webcam,router,socket
+checkbox,B1,noun,ô đánh dấu lựa chọn,Tick the checkbox to show that you agree with the statement.,Đánh dấu vào ô lựa chọn để cho biết bạn đồng ý với phát biểu.,Computing,checkbox,cursor,battery,router
+slider,B2,noun,thanh trượt điều chỉnh,Move the volume slider left to make the sound quieter.,Di chuyển thanh trượt âm lượng sang trái để giảm âm thanh.,Computing,slider,webcam,microphone,socket
+toggle,B2,noun,nút chuyển giữa hai trạng thái,The toggle changes between on and off with each click.,Nút chuyển thay đổi giữa bật và tắt sau mỗi lần nhấp.,Computing,toggle,password,microphone,pixel
+widget,B2,noun,tiện ích nhỏ trên giao diện,The weather widget shows a forecast inside a small home screen panel.,Tiện ích thời tiết hiển thị dự báo trong một ô nhỏ trên màn hình chính.,Computing,widget,wire,plug,microphone
+plugin,B2,noun,phần bổ trợ phần mềm,A browser plugin adds a function without replacing the entire browser.,Phần bổ trợ trình duyệt thêm chức năng mà không thay thế toàn bộ trình duyệt.,Computing,plugin,battery,microphone,socket
+extension,B2,noun,tiện ích mở rộng trình duyệt,This browser extension adds a translation button beside the address bar.,Tiện ích mở rộng trình duyệt này thêm nút dịch cạnh thanh địa chỉ.,Computing,extension,headphone,microphone,scanner
+ebook,B1,noun,sách điện tử,An ebook is read on a screen instead of printed pages.,Sách điện tử được đọc trên màn hình thay vì trên các trang giấy.,Computing,ebook,router,microphone,keyboard
+podcast,B1,noun,chương trình âm thanh theo tập,Her weekly podcast releases a new recorded discussion every Friday.,Chương trình âm thanh hằng tuần của cô ấy phát hành một cuộc thảo luận được ghi âm mới mỗi thứ Sáu.,Media technology,podcast,webcam,socket,calculator
+livestream,B2,noun,buổi phát trực tiếp trên mạng,The livestream lets distant viewers watch the event as it happens.,Buổi phát trực tiếp cho phép người xem ở xa theo dõi sự kiện ngay khi diễn ra.,Media technology,livestream,screenshot,password,clipboard
+headset,B1,noun,bộ tai nghe có micrô,This headset combines earphones and a microphone for online conversations.,Bộ tai nghe này kết hợp tai nghe và micrô cho các cuộc trò chuyện trực tuyến.,Technology,headset,router,scanner,projector
+antenna,B2,noun,ăng-ten,The rooftop antenna receives radio signals from distant transmitters.,Ăng-ten trên mái nhà thu tín hiệu vô tuyến từ các máy phát ở xa.,Technology,antenna,keyboard,mouse,printer
+signal,B1,noun,tín hiệu truyền đi,A radio signal carries the broadcast through the air.,Tín hiệu vô tuyến truyền chương trình phát thanh qua không khí.,Technology,signal,socket,printer,keyboard
+robot,A2,noun,rô-bốt,The factory robot follows programmed instructions to move parts along the line.,Rô-bốt nhà máy làm theo chỉ dẫn được lập trình để chuyển linh kiện dọc dây chuyền.,Technology,robot,socket,scanner,microphone
+drone,B1,noun,thiết bị bay không người lái,The camera drone flies above the field without a pilot inside.,Thiết bị bay gắn camera bay trên cánh đồng mà không có phi công bên trong.,Technology,drone,router,scanner,printer
+laser,B2,noun,thiết bị phát tia la-de,A laser produces a narrow beam of light for the demonstration.,Thiết bị la-de tạo một chùm ánh sáng hẹp cho buổi trình diễn.,Science,laser,socket,microphone,headphone
+lens,B1,noun,thấu kính,The curved lens bends light to focus the camera image.,Thấu kính cong bẻ ánh sáng để lấy nét hình ảnh máy ảnh.,Science,lens,battery,wire,socket
+magnify,B2,verb,phóng đại hình ảnh,The microscope can magnify tiny objects until their details become visible.,Kính hiển vi có thể phóng đại vật rất nhỏ cho đến khi thấy được chi tiết.,Science,magnify,shrink,conceal,erase
+zoom,B1,verb,phóng to hình ảnh trên màn hình,Use this button to zoom in and enlarge the map labels.,Dùng nút này để phóng to và làm các nhãn trên bản đồ lớn hơn.,Computing,zoom,mute,erase,unplug
+mute,B1,verb,tắt tiếng,Please mute your microphone so the meeting cannot hear background noise.,Vui lòng tắt tiếng micrô để cuộc họp không nghe thấy tiếng ồn xung quanh.,Computing,mute,amplify,reboot,print
+unplug,B1,verb,rút phích cắm,"To disconnect the cable, unplug it from the wall socket.","Để ngắt cáp, hãy rút phích khỏi ổ cắm trên tường.",Technology,unplug,install,type,scan
+amplify,C1,verb,khuếch đại âm thanh,The sound system can amplify a quiet voice for a large audience.,Hệ thống âm thanh có thể khuếch đại giọng nhỏ cho lượng khán giả đông.,Technology,amplify,mute,erase,compress
+transmit,B2,verb,truyền tín hiệu,The station will transmit a radio signal to the receiver.,Trạm sẽ truyền tín hiệu vô tuyến đến máy thu.,Technology,transmit,erase,fold,weigh
+receiver,B2,noun,máy thu tín hiệu,The radio receiver picks up the signal sent by the transmitter.,Máy thu vô tuyến bắt tín hiệu do máy phát gửi đi.,Technology,receiver,keyboard,scanner,projector
+transmitter,B2,noun,máy phát tín hiệu,The transmitter sends the radio signal toward receivers across the region.,Máy phát gửi tín hiệu vô tuyến đến các máy thu khắp khu vực.,Technology,transmitter,calculator,scanner,keyboard
+satellite,B1,noun,vệ tinh nhân tạo,The satellite orbits Earth and sends pictures back to researchers.,Vệ tinh quay quanh Trái Đất và gửi ảnh về cho các nhà nghiên cứu.,Science,satellite,microscope,thermometer,calculator
+astronaut,A2,noun,phi hành gia,The astronaut trained to live and work aboard a spacecraft.,Phi hành gia được huấn luyện để sống và làm việc trên tàu vũ trụ.,Science,astronaut,dentist,programmer,chemist
+spacecraft,B2,noun,tàu vũ trụ,The spacecraft travels beyond the atmosphere carrying scientific equipment.,Tàu vũ trụ bay ra ngoài khí quyển mang theo thiết bị khoa học.,Science,spacecraft,microscope,router,scanner
+rocket,B1,noun,tên lửa,The rocket rises into the sky as hot gases rush downward.,Tên lửa bay lên trời khi khí nóng phụt xuống dưới.,Science,rocket,microscope,socket,webcam
+orbit,B2,noun,quỹ đạo,The diagram shows the Moon's orbit around Earth as a curved path.,Sơ đồ thể hiện quỹ đạo của Mặt Trăng quanh Trái Đất dưới dạng đường cong.,Science,orbit,pixel,circuit,fraction
+telescope,B1,noun,kính thiên văn,A telescope makes distant stars easier to observe from the observatory.,Kính thiên văn giúp quan sát các ngôi sao xa dễ hơn từ đài quan sát.,Science,telescope,microscope,thermometer,calculator
+microscope,B1,noun,kính hiển vi,The microscope reveals cells that are too small to see unaided.,Kính hiển vi cho thấy những tế bào quá nhỏ để nhìn bằng mắt thường.,Science,microscope,telescope,projector,router
+laboratory,B1,noun,phòng thí nghiệm,Students test materials in the laboratory rather than in the lecture room.,Sinh viên thử nghiệm vật liệu trong phòng thí nghiệm thay vì phòng giảng.,Science,laboratory,cafeteria,bedroom,stadium
+experiment,A2,noun,thí nghiệm,Our experiment tests whether different light levels affect the seedlings.,Thí nghiệm của chúng tôi kiểm tra liệu các mức ánh sáng khác nhau có ảnh hưởng đến cây con hay không.,Science,experiment,appointment,biography,receipt
+specimen,C1,noun,mẫu vật để nghiên cứu,Each rock specimen is labeled before scientists examine it under magnification.,Mỗi mẫu đá được dán nhãn trước khi các nhà khoa học quan sát dưới độ phóng đại.,Science,specimen,equation,orbit,signal
+sample,B1,noun,mẫu lấy để kiểm tra,The team collected a water sample for chemical testing.,Nhóm đã lấy một mẫu nước để kiểm tra hóa học.,Science,sample,formula,angle,orbit
+researcher,B1,noun,nhà nghiên cứu,The researcher records observations before drawing conclusions from the experiment.,Nhà nghiên cứu ghi lại quan sát trước khi rút kết luận từ thí nghiệm.,Science,researcher,printer,router,microphone
+chemist,B2,noun,nhà hóa học,The chemist studies how substances react when they are mixed.,Nhà hóa học nghiên cứu cách các chất phản ứng khi được trộn.,Science,chemist,astronaut,programmer,dentist
+physicist,B2,noun,nhà vật lý học,The physicist studies forces and motion in the university laboratory.,Nhà vật lý học nghiên cứu lực và chuyển động trong phòng thí nghiệm đại học.,Science,physicist,dentist,translator,accountant
+biologist,B2,noun,nhà sinh học,A biologist studies living organisms and their relationships with the environment.,Nhà sinh học nghiên cứu sinh vật sống và quan hệ của chúng với môi trường.,Science,biologist,programmer,accountant,translator
+astronomer,B2,noun,nhà thiên văn học,The astronomer uses observations of stars to study the universe.,Nhà thiên văn học dùng quan sát các vì sao để nghiên cứu vũ trụ.,Science,astronomer,dentist,chef,programmer
+engineer,A2,noun,kỹ sư,The engineer designs the bridge and checks how it supports weight.,Kỹ sư thiết kế cây cầu và kiểm tra cách nó chịu trọng lượng.,Technology,engineer,dentist,pianist,translator
+technician,B1,noun,kỹ thuật viên,The technician repairs the laboratory equipment and tests its electrical connections.,Kỹ thuật viên sửa thiết bị phòng thí nghiệm và kiểm tra các kết nối điện.,Technology,technician,poet,waiter,pianist
+mechanic,B1,noun,thợ sửa máy,The mechanic examines the car engine to find the cause of the noise.,Thợ sửa máy kiểm tra động cơ ô tô để tìm nguyên nhân tiếng ồn.,Technology,mechanic,dentist,translator,pianist
+mechanism,C1,noun,cơ cấu hoạt động,The clock mechanism connects its gears so the hands move together.,Cơ cấu đồng hồ nối các bánh răng để các kim chuyển động cùng nhau.,Technology,mechanism,fraction,paragraph,symptom
+gear,B2,noun,bánh răng,Each gear has teeth that fit into another wheel to transfer motion.,Mỗi bánh răng có các răng khớp vào bánh khác để truyền chuyển động.,Technology,gear,battery,lens,socket
+lever,B2,noun,đòn bẩy,Pulling the lever raises the heavy platform through a pivoting bar.,Kéo đòn bẩy nâng bệ nặng lên thông qua một thanh quay quanh điểm tựa.,Technology,lever,battery,lens,pixel
+pulley,C1,noun,ròng rọc,The pulley guides a rope over a wheel to lift the load.,Ròng rọc dẫn dây qua một bánh xe để nâng vật nặng.,Technology,pulley,battery,lens,socket
+valve,B2,noun,van,Turning the valve controls the flow of water through the pipe.,Xoay van điều khiển dòng nước chảy qua ống.,Technology,valve,pixel,microphone,battery
+pump,B1,noun,máy bơm,The pump moves water from the underground tank into the pipes.,Máy bơm chuyển nước từ bể ngầm vào các đường ống.,Technology,pump,telescope,calculator,keyboard
+motor,B1,noun,động cơ điện,An electric motor turns electrical energy into movement for the fan.,Động cơ điện biến điện năng thành chuyển động cho quạt.,Technology,motor,lens,pixel,socket
+turbine,C1,noun,tua-bin,Steam spins the turbine blades to help generate electricity.,Hơi nước làm quay các cánh tua-bin để góp phần tạo điện.,Technology,turbine,microscope,calculator,socket
+body,A1,noun,cơ thể,The diagram shows the whole body from the head to the feet.,Sơ đồ thể hiện toàn bộ cơ thể từ đầu đến chân.,Body,body,battery,planet,fraction
+head,A1,noun,đầu,Wear the helmet on your head rather than carrying it in your hand.,Đội mũ bảo hiểm trên đầu thay vì cầm trên tay.,Body,head,elbow,ankle,knee
+face,A1,noun,khuôn mặt,Her face appears in the photograph with both eyes clearly visible.,Khuôn mặt cô ấy xuất hiện trong bức ảnh với cả hai mắt nhìn rõ.,Body,face,wrist,heel,elbow
+hair,A1,noun,tóc,His hair falls over his forehead and almost covers his eyes.,Tóc anh ấy rủ xuống trán và gần che mắt.,Body,hair,thumb,ankle,rib
+eye,A1,noun,mắt,The drawing shows one eye looking through the telescope.,Bức vẽ thể hiện một mắt đang nhìn qua kính thiên văn.,Body,eye,elbow,knee,heel
+ear,A1,noun,tai,She holds the telephone beside her ear to hear the caller.,Cô ấy giữ điện thoại bên tai để nghe người gọi.,Body,ear,knee,thumb,heel
+nose,A1,noun,mũi,The nose sits between the eyes and the mouth on the face.,Mũi nằm giữa mắt và miệng trên khuôn mặt.,Body,nose,elbow,knee,ankle
+mouth,A1,noun,miệng,The dentist asks the model patient to open her mouth.,Nha sĩ yêu cầu người đóng vai bệnh nhân mở miệng.,Body,mouth,elbow,ankle,wrist
+tooth,A1,noun,răng,The dentist points to one tooth in the photograph of the jaw.,Nha sĩ chỉ vào một chiếc răng trong ảnh chụp hàm.,Body,tooth,rib,thumb,heel
+tongue,A2,noun,lưỡi,The tongue moves inside the mouth when we form different speech sounds.,Lưỡi chuyển động trong miệng khi chúng ta tạo các âm lời nói khác nhau.,Body,tongue,elbow,wrist,heel
+lip,A2,noun,môi,The artist draws the upper lip just below the nose.,Họa sĩ vẽ môi trên ngay bên dưới mũi.,Body,lip,rib,heel,thumb
+chin,A2,noun,cằm,His chin is the lowest part of his face below his mouth.,Cằm là phần thấp nhất của khuôn mặt anh ấy bên dưới miệng.,Body,chin,elbow,knee,ankle
+cheek,A2,noun,má,The child rests one cheek against the soft pillow.,Đứa trẻ tựa một bên má vào chiếc gối mềm.,Body,cheek,rib,heel,toe
+forehead,A2,noun,trán,Her forehead is the area above her eyebrows and below her hair.,Trán là vùng phía trên lông mày và dưới tóc của cô ấy.,Body,forehead,ankle,elbow,wrist
+eyebrow,B1,noun,lông mày,The eyebrow forms a curved line of hair above the eye.,Lông mày tạo thành một đường lông cong phía trên mắt.,Body,eyebrow,eyelash,fingernail,thumb
+eyelash,B1,noun,lông mi,An eyelash grows from the edge of the eyelid.,Lông mi mọc từ mép mí mắt.,Body,eyelash,eyebrow,fingernail,rib
+neck,A1,noun,cổ,A scarf wraps around the neck between the head and shoulders.,Khăn quàng quanh cổ ở giữa đầu và vai.,Body,neck,knee,elbow,heel
+shoulder,A2,noun,vai,The shoulder connects the upper arm to the main part of the body.,Vai nối cánh tay trên với phần chính của cơ thể.,Body,shoulder,ankle,wrist,heel
+arm,A1,noun,cánh tay,She raises one arm above her head to wave.,Cô ấy giơ một cánh tay lên trên đầu để vẫy.,Body,arm,toe,rib,heel
+elbow,A2,noun,khuỷu tay,The elbow bends in the middle of the arm.,Khuỷu tay gập ở phần giữa cánh tay.,Body,elbow,ankle,hip,knee
+wrist,A2,noun,cổ tay,The watch sits around his wrist just above his hand.,Chiếc đồng hồ nằm quanh cổ tay ngay phía trên bàn tay anh ấy.,Body,wrist,ankle,knee,hip
+hand,A1,noun,bàn tay,She holds the pen in one hand and the notebook in the other.,Cô ấy cầm bút bằng một tay và quyển sổ bằng tay kia.,Body,hand,heel,rib,knee
+finger,A1,noun,ngón tay,Point to the correct answer with one finger on your hand.,Dùng một ngón tay trên bàn tay để chỉ đáp án đúng.,Body,finger,toe,rib,heel
+thumb,A2,noun,ngón tay cái,The thumb is the short thick digit beside the four fingers.,Ngón tay cái là ngón ngắn và to cạnh bốn ngón còn lại.,Body,thumb,heel,elbow,knee
+palm,B1,noun,lòng bàn tay,She places the coin in the palm of her open hand.,Cô ấy đặt đồng xu vào lòng bàn tay đang mở.,Body,palm,heel,elbow,knee
+chest,A2,noun,ngực,The illustration places the lungs inside the chest behind the ribs.,Hình minh họa đặt phổi bên trong lồng ngực phía sau các xương sườn.,Body,chest,wrist,ankle,heel
+back,A1,noun,lưng,The backpack rests against his back rather than against his chest.,Ba lô tựa vào lưng anh ấy thay vì ngực.,Body,back,palm,chin,forehead
+waist,B1,noun,eo,The belt goes around her waist between her chest and hips.,Thắt lưng vòng quanh eo cô ấy giữa ngực và hông.,Body,waist,ankle,wrist,forehead
+hip,B1,noun,hông,The hip is the area where the upper leg joins the body.,Hông là vùng đùi trên nối với thân người.,Body,hip,elbow,wrist,forehead
+leg,A1,noun,chân,He stands on one leg while lifting the other foot.,Anh ấy đứng bằng một chân trong khi nhấc bàn chân còn lại.,Body,leg,arm,thumb,rib
+knee,A2,noun,đầu gối,The knee bends between the upper and lower parts of the leg.,Đầu gối gập giữa phần trên và phần dưới của chân.,Body,knee,elbow,wrist,chin
+foot,A1,noun,bàn chân,The sock covers one foot from the toes to the ankle.,Chiếc tất che một bàn chân từ các ngón đến mắt cá.,Body,foot,hand,elbow,rib
+toe,A2,noun,ngón chân,Each toe is a digit at the end of the foot.,Mỗi ngón chân là một ngón ở đầu bàn chân.,Body,toe,finger,thumb,rib
+heel,B1,noun,gót chân,The heel is the back part of the foot beneath the ankle.,Gót chân là phần phía sau bàn chân bên dưới mắt cá.,Body,heel,palm,elbow,wrist
+bone,A2,noun,xương,The hard bone inside the arm helps support its shape.,Xương cứng bên trong cánh tay giúp nâng đỡ hình dạng của nó.,Body,bone,vein,nerve,skin
+brain,A2,noun,não,The brain sits inside the skull and processes information.,Não nằm trong hộp sọ và xử lý thông tin.,Body,brain,lung,stomach,heel
+heart,A2,noun,tim,The heart pumps blood through the body's network of vessels.,Tim bơm máu qua mạng lưới mạch của cơ thể.,Body,heart,stomach,lung,rib
+lung,B1,noun,lá phổi,The model shows a lung beside the heart inside the chest.,Mô hình cho thấy một lá phổi cạnh tim trong lồng ngực.,Body,lung,stomach,brain,heel
+stomach,A2,noun,dạ dày,The stomach receives food after it passes down the food pipe.,Dạ dày nhận thức ăn sau khi thức ăn đi xuống thực quản.,Body,stomach,lung,brain,wrist
+blood,A2,noun,máu,The diagram colors the blood red inside the vessels.,Sơ đồ tô máu màu đỏ bên trong các mạch.,Body,blood,bone,hair,skin
+nerve,B2,noun,dây thần kinh,A nerve carries signals between the brain and other body parts.,Dây thần kinh truyền tín hiệu giữa não và các phần khác của cơ thể.,Body,nerve,bone,vein,tendon
+spine,B2,noun,cột sống,The spine forms a column of bones along the middle of the back.,Cột sống tạo thành một cột xương dọc phần giữa lưng.,Body,spine,skull,wrist,rib
+skull,B2,noun,hộp sọ,The skull is the bony structure that surrounds the brain.,Hộp sọ là cấu trúc xương bao quanh não.,Body,skull,rib,heel,palm
+rib,B1,noun,xương sườn,The diagram labels one curved rib around the chest.,Sơ đồ ghi nhãn một xương sườn cong quanh lồng ngực.,Body,rib,skull,thumb,heel
+organ,B2,noun,cơ quan trong cơ thể,The heart is an organ that performs a particular function in the body.,Tim là một cơ quan thực hiện một chức năng cụ thể trong cơ thể.,Body,organ,fraction,planet,circuit
+tissue,B2,noun,mô sinh học,Muscle tissue consists of cells that work together to produce movement.,Mô cơ gồm các tế bào phối hợp để tạo chuyển động.,Body,tissue,battery,pixel,mineral
+cell,B1,noun,tế bào,A cell is a tiny living unit visible through this microscope.,Tế bào là một đơn vị sống rất nhỏ có thể nhìn qua kính hiển vi này.,Biology,cell,planet,angle,socket
+vein,B2,noun,tĩnh mạch,A vein carries blood toward the heart in the circulation diagram.,Tĩnh mạch đưa máu về tim trong sơ đồ tuần hoàn.,Body,vein,artery,nerve,tendon
+artery,B2,noun,động mạch,An artery carries blood away from the heart in this diagram.,Động mạch đưa máu rời tim trong sơ đồ này.,Body,artery,vein,nerve,tendon
+joint,B2,noun,khớp xương,The knee is a joint where two main leg bones meet.,Đầu gối là khớp nơi hai xương chân chính gặp nhau.,Body,joint,nerve,vein,artery
+tendon,C1,noun,gân,A tendon connects a muscle to a bone in the anatomical drawing.,Gân nối cơ với xương trong hình vẽ giải phẫu.,Body,tendon,vein,artery,nerve
+skeleton,B2,noun,bộ xương,The skeleton supports the body with a framework of connected bones.,Bộ xương nâng đỡ cơ thể bằng một khung các xương nối với nhau.,Body,skeleton,circulation,digestion,respiration
+fingernail,B1,noun,móng tay,The fingernail is the hard plate covering the upper tip of a finger.,Móng tay là tấm cứng phủ phần trên của đầu ngón tay.,Body,fingernail,eyebrow,eyelash,heel
+eyelid,B1,noun,mí mắt,The eyelid closes over the eye when the person blinks.,Mí mắt khép lại che mắt khi người đó chớp mắt.,Body,eyelid,eyebrow,fingernail,ear
+jaw,B2,noun,hàm,The lower jaw moves when we open and close our mouths.,Hàm dưới chuyển động khi chúng ta mở và khép miệng.,Body,jaw,skull,rib,spine
+vision,B1,noun,thị giác,The lesson uses optical illusions to explain how vision interprets light.,Bài học dùng ảo ảnh quang học để giải thích cách thị giác diễn giải ánh sáng.,Body,vision,digestion,circulation,respiration
+eyesight,B1,noun,khả năng nhìn,The character wears glasses because his eyesight makes distant letters unclear.,Nhân vật đeo kính vì khả năng nhìn của anh ấy khiến chữ ở xa không rõ.,Body,eyesight,hearing,appetite,digestion
+smell,A2,noun,khứu giác,Our sense of smell helps us recognize the scent of flowers.,Khứu giác giúp chúng ta nhận ra hương hoa.,Body,smell,hearing,vision,balance
+pulse,B2,noun,nhịp mạch,The teacher describes a pulse as the rhythmic movement felt in an artery.,Giáo viên mô tả nhịp mạch là chuyển động có nhịp cảm nhận được ở động mạch.,Health,pulse,rash,bruise,scar
+breath,B1,noun,hơi thở,Cold air makes each breath briefly visible as a cloud.,Không khí lạnh khiến mỗi hơi thở hiện lên thoáng chốc như một đám mây.,Body,breath,pulse,bruise,scar
+heartbeat,B1,noun,nhịp tim,The recording lets students hear a steady heartbeat through the speakers.,Bản ghi cho sinh viên nghe một nhịp tim đều qua loa.,Body,heartbeat,rash,bruise,scar
+blink,B1,verb,chớp mắt,Watch the model blink as its eyelids close and open.,Quan sát mô hình chớp mắt khi mí mắt khép rồi mở.,Body,blink,swallow,sneeze,yawn
+swallow,B1,verb,nuốt,The diagram shows how throat muscles move when people swallow food.,Sơ đồ cho thấy các cơ họng chuyển động thế nào khi người ta nuốt thức ăn.,Body,swallow,blink,sneeze,shiver
+sneeze,B1,verb,hắt hơi,"In the story, dust makes the character sneeze through his nose.","Trong truyện, bụi khiến nhân vật hắt hơi qua mũi.",Body,sneeze,blink,swallow,snore
+yawn,B1,verb,ngáp,The sleepy character begins to yawn with his mouth wide open.,Nhân vật buồn ngủ bắt đầu ngáp với miệng mở rộng.,Body,yawn,blink,swallow,shiver
+hiccup,B2,noun,tiếng nấc,A sudden hiccup interrupts the character in the middle of a sentence.,Một tiếng nấc bất chợt làm nhân vật gián đoạn giữa câu.,Body,hiccup,bruise,rash,scar
+snore,B2,verb,ngáy,The sleeping character begins to snore with a loud rattling sound.,Nhân vật đang ngủ bắt đầu ngáy với âm thanh khò khè lớn.,Body,snore,blink,swallow,shiver
+shiver,B2,verb,run lên vì lạnh,The actors shiver in the cold scene despite their thick coats.,Các diễn viên run lên trong cảnh lạnh dù mặc áo khoác dày.,Body,shiver,blink,swallow,snore
+health,A2,noun,sức khỏe,The school exhibition explores health through displays about the human body.,Triển lãm của trường tìm hiểu sức khỏe qua các trưng bày về cơ thể người.,Health,health,geometry,hardware,astronomy
+illness,A2,noun,bệnh hoặc tình trạng ốm,The story mentions an illness that kept the character away from school.,Câu chuyện nhắc đến một căn bệnh khiến nhân vật phải nghỉ học.,Health,illness,equation,battery,planet
+cold,A2,noun,bệnh cảm lạnh,"In the dialogue, she describes a cold with a runny nose and sneezing.","Trong đoạn hội thoại, cô ấy mô tả bệnh cảm lạnh với chảy nước mũi và hắt hơi.",Health,cold,bruise,fracture,rash
+ache,B1,noun,cơn đau âm ỉ,The character describes a dull ache rather than a sharp sudden pain.,Nhân vật mô tả một cơn đau âm ỉ thay vì đau nhói bất chợt.,Health,ache,scar,rash,pulse
+bruise,B1,noun,vết bầm,The makeup artist paints a purple bruise on the actor's arm.,Chuyên viên hóa trang vẽ một vết bầm tím trên cánh tay diễn viên.,Health,bruise,scar,stitch,pill
+burn,B1,noun,vết bỏng,The training photograph labels an injury caused by heat as a burn.,Ảnh đào tạo ghi nhãn một tổn thương do nhiệt là vết bỏng.,Health,burn,bruise,fracture,sprain
+scar,B2,noun,vết sẹo,A pale scar remains where the character's old wound has healed.,Một vết sẹo nhạt còn lại ở nơi vết thương cũ của nhân vật đã lành.,Health,scar,pulse,pill,capsule
+rash,B2,noun,phát ban trên da,The textbook photograph shows a red rash spread across the skin.,Ảnh trong sách giáo khoa cho thấy phát ban đỏ lan trên da.,Health,rash,fracture,pulse,tendon
+swelling,B2,noun,sự sưng lên,The diagram compares normal tissue with swelling around an injured area.,Sơ đồ so sánh mô bình thường với vùng sưng quanh chỗ bị thương.,Health,swelling,digestion,vision,hearing
+bleeding,B2,noun,sự chảy máu,The first aid poster uses red arrows to illustrate bleeding from a wound.,Áp phích sơ cứu dùng các mũi tên đỏ để minh họa máu chảy từ vết thương.,Health,bleeding,blinking,digestion,hearing
+inflammation,C1,noun,tình trạng viêm,The lecturer explains inflammation as a body response involving affected tissue.,Giảng viên giải thích viêm là một phản ứng của cơ thể liên quan đến mô bị ảnh hưởng.,Health,inflammation,geometry,electricity,encryption
+virus,B1,noun,vi-rút sinh học,The biology lesson describes a virus that reproduces inside living cells.,Bài sinh học mô tả một vi-rút nhân lên bên trong tế bào sống.,Biology,virus,mineral,planet,fraction
+bacterium,B2,noun,vi khuẩn đơn lẻ,The enlarged drawing shows one bacterium rather than a group of microbes.,Hình vẽ phóng to thể hiện một vi khuẩn thay vì một nhóm vi sinh vật.,Biology,bacterium,mineral,planet,fraction
+germ,B1,noun,mầm bệnh,The cartoon shows a tiny germ capable of causing an infection.,Phim hoạt hình cho thấy một mầm bệnh nhỏ có khả năng gây nhiễm trùng.,Biology,germ,planet,circuit,socket
+parasite,C1,noun,sinh vật ký sinh,The diagram shows a parasite obtaining nutrients from another living organism.,Sơ đồ cho thấy sinh vật ký sinh lấy chất dinh dưỡng từ một sinh vật sống khác.,Biology,parasite,mineral,battery,planet
+pollen,B2,noun,phấn hoa,The microscope photograph shows yellow pollen grains collected from a flower.,Ảnh hiển vi cho thấy những hạt phấn hoa vàng được lấy từ một bông hoa.,Biology,pollen,blood,silicon,plastic
+pill,A2,noun,viên thuốc,The vocabulary card shows a small round pill beside a medicine bottle.,Thẻ từ vựng cho thấy một viên thuốc nhỏ hình tròn cạnh lọ thuốc.,Health,pill,syringe,stethoscope,crutch
+capsule,B2,noun,viên nang thuốc,The diagram shows a capsule with medicine enclosed inside its outer shell.,Sơ đồ cho thấy viên nang với thuốc được chứa bên trong lớp vỏ ngoài.,Health,capsule,syringe,stethoscope,crutch
+ointment,B2,noun,thuốc mỡ,The pharmacy display includes a tube of ointment labeled for external use.,Quầy trưng bày dược phẩm có một tuýp thuốc mỡ ghi dùng ngoài da.,Health,ointment,tablet,syringe,crutch
+inhaler,B2,noun,dụng cụ hít thuốc,The diagram shows an inhaler that delivers medicine as a spray to breathe in.,Sơ đồ cho thấy dụng cụ hít đưa thuốc dưới dạng xịt để hít vào.,Health,inhaler,crutch,bandage,stethoscope
+syringe,B2,noun,ống tiêm,The training model shows a syringe with a plunger and a narrow barrel.,Mô hình đào tạo thể hiện ống tiêm với pít-tông và thân ống hẹp.,Health,syringe,stethoscope,crutch,wheelchair
+needle,B1,noun,kim tiêm,A needle is the thin pointed part attached to this syringe.,Kim tiêm là phần mảnh có đầu nhọn gắn vào ống tiêm này.,Health,needle,bandage,stethoscope,crutch
+stethoscope,B2,noun,ống nghe y tế,The stethoscope has earpieces and a chest piece for listening to body sounds.,Ống nghe có phần đeo tai và bộ phận đặt trên ngực để nghe âm thanh cơ thể.,Health,stethoscope,syringe,crutch,wheelchair
+crutch,B2,noun,nạng,The museum display shows a wooden crutch used to support someone while walking.,Trưng bày ở bảo tàng cho thấy một chiếc nạng gỗ dùng để đỡ người khi đi.,Health,crutch,syringe,stethoscope,thermometer
+wheelchair,B1,noun,xe lăn,The wheelchair has two large side wheels and a seat for its user.,Xe lăn có hai bánh lớn hai bên và một ghế ngồi cho người dùng.,Health,wheelchair,stethoscope,inhaler,syringe
+ambulance,A2,noun,xe cứu thương,An ambulance marked with emergency symbols arrives at the hospital entrance.,Một xe cứu thương có các ký hiệu cấp cứu đến cổng bệnh viện.,Health,ambulance,telescope,calculator,microscope
+hospital,A1,noun,bệnh viện,The hospital provides wards and treatment rooms for people who need medical care.,Bệnh viện có các khoa bệnh và phòng điều trị cho người cần chăm sóc y tế.,Health,hospital,bakery,stadium,library
+ward,B2,noun,khu phòng bệnh,The nurse works in a hospital ward containing several patient beds.,Y tá làm việc trong khu phòng bệnh có nhiều giường bệnh.,Health,ward,laboratory,cafeteria,reception
+surgeon,B2,noun,bác sĩ phẫu thuật,The surgeon performs operations in the hospital's operating theatre.,Bác sĩ phẫu thuật thực hiện các ca mổ trong phòng mổ của bệnh viện.,Health,surgeon,optician,pharmacist,dentist
+physician,C1,noun,bác sĩ,"The physician, a medical doctor, examined the patient and discussed the test results.",Bác sĩ khám bệnh và trao đổi về kết quả xét nghiệm.,Health,physician,optician,pharmacist,paramedic
+pediatrician,C1,noun,bác sĩ nhi khoa,The pediatrician specializes in the medical care of babies and children.,Bác sĩ nhi khoa chuyên chăm sóc y tế cho trẻ sơ sinh và trẻ em.,Health,pediatrician,optician,pharmacist,surgeon
+pharmacist,B2,noun,dược sĩ,The pharmacist prepares medicines and answers questions at the pharmacy counter.,Dược sĩ chuẩn bị thuốc và trả lời câu hỏi tại quầy thuốc.,Health,pharmacist,surgeon,optician,paramedic
+optician,B2,noun,chuyên viên kính mắt,The optician fits the new spectacle lenses into the customer's chosen frame.,Chuyên viên kính mắt lắp tròng kính mới vào gọng khách hàng đã chọn.,Health,optician,pharmacist,surgeon,midwife
+midwife,C1,noun,nữ hộ sinh,The midwife provides professional care during pregnancy and childbirth.,Nữ hộ sinh cung cấp chăm sóc chuyên môn trong thời kỳ mang thai và sinh nở.,Health,midwife,optician,pharmacist,dentist
+paramedic,C1,noun,nhân viên cấp cứu ngoài bệnh viện,The paramedic travels with the ambulance crew to provide emergency care.,Nhân viên cấp cứu đi cùng đội xe cứu thương để chăm sóc khẩn cấp.,Health,paramedic,optician,pharmacist,dentist
+plaster,B1,noun,băng dán vết thương,The first aid box contains a small adhesive plaster for covering a cut.,Hộp sơ cứu có một miếng băng dán nhỏ để che vết cắt.,Health,plaster,inhaler,syringe,crutch
+cast,B2,noun,bó bột cố định,The display shows a rigid cast placed around a model arm.,Trưng bày cho thấy một phần bó bột cứng quanh cánh tay mô hình.,Health,cast,inhaler,syringe,stethoscope
+stitch,B2,noun,mũi khâu vết thương,The training diagram marks each stitch holding the edges of the wound together.,Sơ đồ đào tạo đánh dấu từng mũi khâu giữ các mép vết thương lại với nhau.,Health,stitch,pulse,rash,bruise
+ultrasound,C1,noun,kỹ thuật siêu âm,The lecture describes ultrasound imaging as using sound waves to form pictures inside the body.,Bài giảng mô tả kỹ thuật siêu âm dùng sóng âm để tạo ảnh bên trong cơ thể.,Health,ultrasound,encryption,programming,geometry
+rehabilitation,C1,noun,quá trình phục hồi chức năng,The documentary follows rehabilitation sessions that help people regain everyday abilities after injury.,Phim tài liệu theo dõi các buổi phục hồi chức năng giúp người bệnh lấy lại khả năng sinh hoạt sau chấn thương.,Health,rehabilitation,vaccination,diagnosis,infection
+therapy,B2,noun,liệu pháp điều trị,The article uses therapy as a general word for treatment intended to help a health condition.,Bài viết dùng liệu pháp như một từ chung chỉ cách điều trị nhằm hỗ trợ một vấn đề sức khỏe.,Health,therapy,symptom,injury,diagnosis
+prevention,B2,noun,sự phòng ngừa,The exhibition contrasts disease prevention with treatment after someone becomes ill.,Triển lãm đối chiếu việc phòng bệnh với điều trị sau khi một người mắc bệnh.,Health,prevention,diagnosis,infection,symptom
+healing,B2,noun,quá trình lành lại,The time-lapse diagram illustrates healing as the damaged tissue gradually repairs itself.,Sơ đồ theo thời gian minh họa sự lành lại khi mô bị tổn thương dần tự phục hồi.,Health,healing,bleeding,swelling,infection
+hydration,C1,noun,sự cung cấp nước cho cơ thể,The lesson defines hydration as the process of supplying the body with water.,Bài học định nghĩa việc cung cấp nước là quá trình đưa nước cho cơ thể.,Health,hydration,digestion,vision,hearing
+migraine,C1,noun,chứng đau nửa đầu,The character describes her migraine diagnosis while discussing her medical history.,Nhân vật nói về chẩn đoán đau nửa đầu khi thảo luận bệnh sử.,Health,migraine,fracture,sprain,bruise
+diabetes,B2,noun,bệnh đái tháo đường,The biology textbook discusses diabetes in a chapter about blood sugar regulation.,Sách sinh học bàn về bệnh đái tháo đường trong chương điều hòa đường huyết.,Health,diabetes,fracture,sprain,bruise
+arthritis,C1,noun,bệnh viêm khớp,The chapter on joint conditions includes an explanation of arthritis.,Chương về các bệnh khớp có phần giải thích bệnh viêm khớp.,Health,arthritis,migraine,insomnia,allergy
+respiration,C1,noun,quá trình hô hấp,The biology lesson describes respiration as a process through which cells release usable energy.,Bài sinh học mô tả hô hấp là quá trình tế bào giải phóng năng lượng có thể sử dụng.,Biology,respiration,digestion,circulation,hearing
+digestion,B2,noun,quá trình tiêu hóa,Digestion breaks food down into smaller substances that the body can use.,Quá trình tiêu hóa phân giải thức ăn thành các chất nhỏ hơn mà cơ thể có thể sử dụng.,Biology,Digestion,Circulation,Vision,Hearing
+circulation,B2,noun,sự tuần hoàn máu,The lesson illustrates circulation by following blood around the body and back to the heart.,Bài học minh họa tuần hoàn bằng cách theo dõi máu đi khắp cơ thể rồi trở về tim.,Biology,circulation,digestion,vision,hearing
+metabolism,C1,noun,quá trình trao đổi chất,The lecture describes metabolism as the chemical processes that take place within living organisms.,Bài giảng mô tả trao đổi chất là các quá trình hóa học diễn ra trong sinh vật sống.,Biology,metabolism,astronomy,geometry,encryption
+protein,B1,noun,chất đạm,The nutrition label lists protein separately from fat and carbohydrate.,Nhãn dinh dưỡng liệt kê chất đạm riêng với chất béo và chất bột đường.,Nutrition,protein,calcium,sodium,iron
+carbohydrate,B2,noun,chất bột đường,The textbook groups sugars and starches under the term carbohydrate.,Sách giáo khoa xếp đường và tinh bột vào nhóm chất bột đường.,Nutrition,carbohydrate,protein,calcium,iron
+fibre,B2,noun,chất xơ trong thực phẩm,The nutrition lesson describes dietary fibre as plant material that human digestion cannot fully break down.,Bài học dinh dưỡng mô tả chất xơ là phần thực vật mà hệ tiêu hóa của con người không phân giải hoàn toàn.,Nutrition,fibre,protein,calcium,sodium
+calcium,B2,noun,canxi,The periodic table uses the symbol Ca for calcium.,Bảng tuần hoàn dùng ký hiệu Ca cho canxi.,Science,calcium,carbon,copper,chlorine
+sodium,C1,noun,natri,The periodic table identifies sodium with the chemical symbol Na.,Bảng tuần hoàn xác định natri bằng ký hiệu hóa học Na.,Science,sodium,silicon,carbon,copper
+chlorine,C1,noun,clo,The periodic table labels chlorine with the symbol Cl.,Bảng tuần hoàn ghi nhãn clo bằng ký hiệu Cl.,Science,chlorine,calcium,carbon,copper
+sprain,B2,noun,chấn thương bong gân,The sports glossary defines a sprain as an injury to ligaments around a joint.,Bảng thuật ngữ thể thao định nghĩa bong gân là chấn thương dây chằng quanh khớp.,Health,sprain,fracture,migraine,rash
+ligament,C1,noun,dây chằng,A ligament connects one bone to another across a joint.,Dây chằng nối xương này với xương khác qua một khớp.,Body,ligament,artery,vein,nerve
+abdomen,C1,noun,bụng theo cách gọi giải phẫu,The abdomen lies between the chest and the pelvis in the anatomical diagram.,Bụng nằm giữa ngực và xương chậu trong sơ đồ giải phẫu.,Body,abdomen,forehead,elbow,wrist
+pelvis,C1,noun,xương chậu,The pelvis is the bony structure connecting the spine with the legs.,Xương chậu là cấu trúc xương nối cột sống với chân.,Body,pelvis,skull,rib,jaw
+throat,A2,noun,họng,The drawing labels the throat as the passage behind the mouth and nose.,Hình vẽ ghi nhãn họng là đường nằm sau miệng và mũi.,Body,throat,elbow,wrist,heel
+saliva,C1,noun,nước bọt,The lesson explains that saliva moistens food inside the mouth.,Bài học giải thích rằng nước bọt làm ẩm thức ăn trong miệng.,Body,saliva,blood,pollen,oxygen
+sweat,B1,noun,mồ hôi,Drops of sweat appear on the runner's forehead during the race.,Những giọt mồ hôi xuất hiện trên trán vận động viên trong cuộc đua.,Body,sweat,saliva,blood,pollen
+tear,B1,noun,giọt nước mắt,A single tear runs from the actor's eye down her cheek.,Một giọt nước mắt chảy từ mắt diễn viên xuống má.,Body,tear,scar,bruise,pulse
+blister,B2,noun,chỗ da phồng rộp,The glossary describes a blister as a small fluid-filled bubble on the skin.,Bảng thuật ngữ mô tả chỗ phồng rộp là một bọng nhỏ chứa dịch trên da.,Health,blister,fracture,pulse,tendon
+splinter,B2,noun,dằm nhỏ,The story mentions a tiny wooden splinter caught in the character's finger.,Câu chuyện nhắc đến một chiếc dằm gỗ nhỏ mắc trong ngón tay nhân vật.,Health,splinter,pill,capsule,bandage
+spray,B1,noun,thuốc dạng xịt,The illustration shows a medicine spray releasing tiny drops into the air.,Hình minh họa cho thấy thuốc xịt phóng các giọt nhỏ vào không khí.,Health,spray,pill,capsule,ointment
+sling,C1,noun,đai treo tay,The actor wears a cloth sling supporting his arm across his chest.,Diễn viên đeo một đai vải đỡ cánh tay ngang ngực.,Health,sling,inhaler,syringe,stethoscope
+mask,A2,noun,khẩu trang,The laboratory safety illustration shows a mask covering the nose and mouth.,Hình minh họa an toàn phòng thí nghiệm cho thấy khẩu trang che mũi và miệng.,Health,mask,glove,boot,helmet
+sterilize,C1,verb,tiệt trùng,The lab protocol describes equipment used to sterilize instruments before a demonstration.,Quy trình phòng thí nghiệm mô tả thiết bị dùng để tiệt trùng dụng cụ trước buổi trình diễn.,Health,sterilize,weigh,photograph,label
+disinfect,B2,verb,khử trùng,The training video demonstrates how staff disinfect a laboratory work surface.,Video đào tạo trình diễn cách nhân viên khử trùng bề mặt làm việc trong phòng thí nghiệm.,Health,disinfect,weigh,photograph,measure
+vaccination,B2,noun,việc tiêm chủng,The public health exhibition presents vaccination as a topic in disease prevention.,Triển lãm y tế công cộng trình bày tiêm chủng như một chủ đề trong phòng bệnh.,Health,vaccination,digestion,circulation,vision
+antibiotic,B2,noun,thuốc kháng sinh,The glossary describes an antibiotic as a medicine used against bacterial infections.,Bảng thuật ngữ mô tả kháng sinh là thuốc dùng chống nhiễm khuẩn.,Health,antibiotic,thermometer,stethoscope,crutch
+allergen,C1,noun,chất gây dị ứng,The textbook identifies an allergen as a substance that can trigger an allergic reaction.,Sách giáo khoa xác định chất gây dị ứng là chất có thể gây phản ứng dị ứng.,Health,allergen,bandage,stethoscope,crutch
+number,A1,noun,số,Write one number in each box rather than a letter.,Viết một số vào mỗi ô thay vì một chữ cái.,Mathematics,number,sentence,picture,word
+digit,B1,noun,chữ số,"The number 507 contains three digits, including one zero.","Số 507 chứa ba chữ số, trong đó có một số không.",Mathematics,digits,fractions,equations,triangles
+zero,A2,noun,số không,The counter shows zero before any visitors enter the room.,Bộ đếm hiển thị số không trước khi có khách vào phòng.,Mathematics,zero,ten,fifty,hundred
+unit,B1,noun,đơn vị đo,The worksheet asks which unit measures length rather than time.,Phiếu bài tập hỏi đơn vị nào đo chiều dài thay vì thời gian.,Mathematics,unit,angle,fraction,equation
+decimal,B1,noun,số thập phân,The decimal 0.5 represents the same value as one half.,"Số thập phân 0,5 biểu diễn cùng giá trị với một phần hai.",Mathematics,decimal,triangle,circle,angle
+fraction,B1,noun,phân số,The fraction has a numerator above the line and a denominator below.,Phân số có tử số phía trên vạch và mẫu số phía dưới.,Mathematics,fraction,triangle,circle,angle
+percentage,B1,noun,tỷ lệ phần trăm,A percentage expresses an amount as parts out of one hundred.,Tỷ lệ phần trăm biểu thị một lượng bằng số phần trên một trăm.,Mathematics,percentage,diameter,radius,perimeter
+ratio,B2,noun,tỷ số,The ratio compares two quantities by showing how many times one fits into the other.,Tỷ số so sánh hai đại lượng bằng cách cho biết đại lượng này gấp bao nhiêu lần đại lượng kia.,Mathematics,ratio,radius,diameter,perimeter
+sum,B1,noun,tổng trong phép cộng,The sum of three and four is seven.,Tổng của ba và bốn là bảy.,Mathematics,sum,difference,product,quotient
+difference,A2,noun,hiệu trong phép trừ,The difference between nine and six is three.,Hiệu giữa chín và sáu là ba.,Mathematics,difference,sum,product,quotient
+product,B1,noun,tích trong phép nhân,The product of three multiplied by four is twelve.,Tích của ba nhân bốn là mười hai.,Mathematics,product,sum,difference,quotient
+quotient,C1,noun,thương trong phép chia,The quotient is the result obtained when one number is divided by another.,Thương là kết quả thu được khi một số được chia cho số khác.,Mathematics,quotient,sum,product,difference
+remainder,B2,noun,số dư trong phép chia,Dividing eleven by four gives two with a remainder of three.,Chia mười một cho bốn được hai và dư ba.,Mathematics,remainder,diameter,radius,angle
+formula,B1,noun,công thức,The formula uses symbols to show how to calculate the area.,Công thức dùng các ký hiệu để thể hiện cách tính diện tích.,Mathematics,formula,triangle,sphere,cylinder
+equation,B2,noun,phương trình,An equation states that two mathematical expressions have equal values.,Phương trình phát biểu rằng hai biểu thức toán học có giá trị bằng nhau.,Mathematics,equation,triangle,sphere,cylinder
+coefficient,C1,noun,hệ số,"In the expression three times x, the coefficient of x is three.","Trong biểu thức ba nhân x, hệ số của x là ba.",Mathematics,coefficient,diameter,radius,perimeter
+exponent,C1,noun,số mũ,The exponent tells how many times the base is multiplied by itself.,Số mũ cho biết cơ số được nhân với chính nó bao nhiêu lần.,Mathematics,exponent,radius,diameter,angle
+square,A2,noun,hình vuông,A square has four equal sides and four right angles.,Hình vuông có bốn cạnh bằng nhau và bốn góc vuông.,Mathematics,square,triangle,circle,oval
+cube,B1,noun,hình lập phương,A cube has six square faces of equal size.,Hình lập phương có sáu mặt vuông cùng kích thước.,Mathematics,cube,sphere,cylinder,cone
+root,B2,noun,căn bậc hai trong toán học,The square root of twenty-five is five because five multiplied by itself equals twenty-five.,Căn bậc hai của hai mươi lăm là năm vì năm nhân chính nó bằng hai mươi lăm.,Mathematics,root,sum,difference,ratio
+angle,B1,noun,góc,The two straight lines meet to form an angle.,Hai đường thẳng gặp nhau để tạo thành một góc.,Mathematics,angle,sphere,cube,cylinder
+triangle,A2,noun,hình tam giác,The triangle in the diagram has three straight sides.,Hình tam giác trong sơ đồ có ba cạnh thẳng.,Mathematics,triangle,square,circle,oval
+rectangle,B1,noun,hình chữ nhật,The rectangle has four right angles with opposite sides of equal length.,Hình chữ nhật có bốn góc vuông với các cạnh đối diện dài bằng nhau.,Mathematics,rectangle,triangle,circle,oval
+circle,A2,noun,hình tròn,Every point on the circle is the same distance from its center.,Mỗi điểm trên đường tròn cách tâm một khoảng bằng nhau.,Mathematics,circle,triangle,rectangle,cube
+oval,B1,noun,hình bầu dục,The oval looks like a circle stretched in one direction.,Hình bầu dục trông như một hình tròn kéo dài theo một hướng.,Mathematics,oval,triangle,square,cube
+sphere,B2,noun,hình cầu,A sphere is round in every direction like a perfectly shaped ball.,Hình cầu tròn theo mọi hướng như một quả bóng có hình dạng hoàn hảo.,Mathematics,sphere,cube,cylinder,pyramid
+cylinder,B2,noun,hình trụ,The cylinder has two matching circular ends joined by a curved surface.,Hình trụ có hai đáy tròn bằng nhau được nối bởi một mặt cong.,Mathematics,cylinder,sphere,cube,pyramid
+cone,B2,noun,hình nón,The cone narrows from a circular base to a single point.,Hình nón thu hẹp từ đáy tròn tới một đỉnh duy nhất.,Mathematics,cone,sphere,cube,cylinder
+pyramid,B1,noun,hình chóp,The solid pyramid has triangular faces meeting at one top point.,Hình chóp có các mặt tam giác gặp nhau tại một đỉnh.,Mathematics,pyramid,sphere,cylinder,cube
+diameter,B2,noun,đường kính,The diameter passes through the center and joins two points on the circle.,Đường kính đi qua tâm và nối hai điểm trên đường tròn.,Mathematics,diameter,radius,circumference,perimeter
+radius,B2,noun,bán kính,The radius connects the center of a circle to its edge.,Bán kính nối tâm hình tròn với đường tròn.,Mathematics,radius,diameter,circumference,perimeter
+circumference,C1,noun,chu vi hình tròn,The circumference measures the distance around the edge of a circle.,Chu vi hình tròn đo khoảng cách quanh đường tròn.,Mathematics,circumference,radius,diameter,area
+perimeter,B2,noun,chu vi hình phẳng,Add the lengths of all sides to find the rectangle's perimeter.,Cộng độ dài tất cả các cạnh để tìm chu vi hình chữ nhật.,Mathematics,perimeter,area,volume,radius
+area,A2,noun,diện tích,The area measures how much flat surface lies inside the shape.,Diện tích đo phần bề mặt phẳng nằm bên trong hình.,Mathematics,area,perimeter,volume,diameter
+volume,B1,noun,thể tích,The volume measures how much three-dimensional space the container holds.,Thể tích đo lượng không gian ba chiều mà vật chứa chứa được.,Mathematics,volume,area,perimeter,diameter
+length,A2,noun,chiều dài,We measure the length of the corridor from one end to the other.,Chúng tôi đo chiều dài hành lang từ đầu này đến đầu kia.,Measurement,length,weight,temperature,mass
+width,B1,noun,chiều rộng,The desk's width is measured across it from one side to the other.,Chiều rộng của bàn được đo ngang từ bên này sang bên kia.,Measurement,width,weight,temperature,mass
+height,A2,noun,chiều cao,The height of the tower is measured from its base to its top.,Chiều cao tòa tháp được đo từ chân lên đỉnh.,Measurement,height,weight,temperature,mass
+depth,B1,noun,độ sâu,The diver records the depth below the surface of the water.,Thợ lặn ghi lại độ sâu bên dưới mặt nước.,Measurement,depth,weight,temperature,mass
+distance,A2,noun,khoảng cách,The map scale helps us calculate the distance between the two towns.,Tỷ lệ bản đồ giúp chúng tôi tính khoảng cách giữa hai thị trấn.,Measurement,distance,temperature,mass,weight
+speed,B1,noun,tốc độ,The speed tells us how far the vehicle travels per second.,Tốc độ cho biết phương tiện đi được bao xa trong mỗi giây.,Physics,speed,temperature,mass,density
+velocity,C1,noun,vận tốc có hướng,"Unlike speed alone, velocity describes both how fast something moves and its direction.","Khác với chỉ tốc độ, vận tốc mô tả cả độ nhanh của chuyển động và hướng của nó.",Physics,velocity,mass,temperature,density
+acceleration,C1,noun,gia tốc,The graph shows acceleration as the car's velocity changes over time.,Đồ thị thể hiện gia tốc khi vận tốc của xe thay đổi theo thời gian.,Physics,acceleration,mass,temperature,density
+mass,B2,noun,khối lượng,The balance compares the mass of the two laboratory samples.,Cân so sánh khối lượng của hai mẫu phòng thí nghiệm.,Physics,mass,temperature,speed,volume
+weight,A2,noun,trọng lượng,The physics lesson defines weight as the gravitational force acting on an object.,Bài vật lý định nghĩa trọng lượng là lực hấp dẫn tác dụng lên một vật.,Physics,weight,mass,speed,volume
+force,B1,noun,lực,A force can push or pull an object and change its motion.,Lực có thể đẩy hoặc kéo vật và làm thay đổi chuyển động của nó.,Physics,force,volume,temperature,mass
+gravity,B1,noun,lực hấp dẫn,Gravity attracts objects toward Earth rather than pushing them into space.,Lực hấp dẫn hút vật về phía Trái Đất thay vì đẩy chúng ra không gian.,Physics,Gravity,Friction,Pressure,Electricity
+friction,B2,noun,lực ma sát,Friction between the surfaces resists the sliding motion of the wooden block.,Ma sát giữa các bề mặt cản chuyển động trượt của khối gỗ.,Physics,Friction,Gravity,Electricity,Magnetism
+inertia,C1,noun,quán tính,Inertia is an object's tendency to resist changes in its state of motion.,Quán tính là xu hướng của vật chống lại thay đổi trạng thái chuyển động của nó.,Physics,Inertia,Density,Temperature,Volume
+momentum,C1,noun,động lượng,The physics formula calculates momentum by multiplying mass by velocity.,Công thức vật lý tính động lượng bằng cách nhân khối lượng với vận tốc.,Physics,momentum,density,volume,temperature
+density,B2,noun,khối lượng riêng,Density compares a material's mass with the volume it occupies.,Khối lượng riêng so sánh khối lượng của vật liệu với thể tích nó chiếm.,Physics,Density,Velocity,Acceleration,Temperature
+liquid,B1,noun,chất lỏng,A liquid keeps a fixed volume but flows to match its container.,Chất lỏng giữ thể tích cố định nhưng chảy theo hình dạng bình chứa.,Science,liquid,solid,gas,vapour
+solid,B1,noun,chất rắn,A solid keeps its own shape instead of flowing like water.,Chất rắn giữ hình dạng riêng thay vì chảy như nước.,Science,solid,liquid,gas,vapour
+vapour,B2,noun,hơi ở thể khí,The experiment compares liquid water with water vapour in the air.,Thí nghiệm so sánh nước lỏng với hơi nước trong không khí.,Science,vapour,crystal,clay,gravel
+atom,B1,noun,nguyên tử,An atom contains a nucleus surrounded by electrons.,Nguyên tử chứa một hạt nhân được các electron bao quanh.,Chemistry,atom,molecule,mineral,crystal
+molecule,B2,noun,phân tử,A water molecule contains two hydrogen atoms and one oxygen atom.,Một phân tử nước chứa hai nguyên tử hiđrô và một nguyên tử ôxy.,Chemistry,molecule,electron,proton,neutron
+electron,B2,noun,electron,The electron has a negative charge in the atomic diagram.,Electron mang điện tích âm trong sơ đồ nguyên tử.,Physics,electron,proton,neutron,atom
+proton,C1,noun,proton,A proton is a positively charged particle inside an atomic nucleus.,Proton là hạt mang điện tích dương bên trong hạt nhân nguyên tử.,Physics,proton,electron,neutron,molecule
+neutron,C1,noun,nơtron,A neutron has no electrical charge and is found in atomic nuclei.,Nơtron không mang điện và được tìm thấy trong hạt nhân nguyên tử.,Physics,neutron,proton,electron,molecule
+element,B2,noun,nguyên tố hóa học,A chemical element consists of atoms with the same number of protons.,Nguyên tố hóa học gồm các nguyên tử có cùng số proton.,Chemistry,element,compound,mixture,solution
+compound,B2,noun,hợp chất hóa học,A compound contains different elements chemically joined in a fixed proportion.,Hợp chất chứa các nguyên tố khác nhau liên kết hóa học theo tỷ lệ cố định.,Chemistry,compound,element,mixture,solvent
+mixture,B1,noun,hỗn hợp,The mixture contains sand and salt that have not chemically combined.,Hỗn hợp chứa cát và muối chưa kết hợp với nhau về mặt hóa học.,Chemistry,mixture,element,atom,molecule
+solution,B2,noun,dung dịch,The salt dissolves completely in water to form a clear solution.,Muối tan hoàn toàn trong nước tạo thành dung dịch trong.,Chemistry,solution,element,crystal,atom
+solvent,C1,noun,dung môi,A solvent is the liquid that dissolves another substance in a solution.,Dung môi là chất lỏng hòa tan một chất khác trong dung dịch.,Chemistry,solvent,crystal,element,atom
+acid,B2,noun,axit,The teacher describes an acid as a substance that can donate hydrogen ions.,Giáo viên mô tả axit là chất có thể cho ion hiđrô.,Chemistry,acid,metal,plastic,ceramic
+alkali,C1,noun,kiềm,An alkali is a base that dissolves in water.,Kiềm là một bazơ tan trong nước.,Chemistry,alkali,acid,metal,plastic
+reaction,B2,noun,phản ứng hóa học,The experiment produces new substances through a chemical reaction.,Thí nghiệm tạo ra các chất mới thông qua phản ứng hóa học.,Chemistry,reaction,equation,fraction,diameter
+carbon,B2,noun,cacbon,The periodic table uses the symbol C to represent carbon.,Bảng tuần hoàn dùng ký hiệu C để biểu diễn cacbon.,Chemistry,carbon,copper,calcium,chlorine
+hydrogen,B2,noun,hiđrô,The chemical symbol H stands for hydrogen in the periodic table.,Ký hiệu hóa học H biểu thị hiđrô trong bảng tuần hoàn.,Chemistry,hydrogen,helium,nitrogen,carbon
+nitrogen,C1,noun,nitơ,The chart shows nitrogen as the most abundant gas in Earth's atmosphere.,Biểu đồ thể hiện nitơ là khí có lượng nhiều nhất trong khí quyển Trái Đất.,Chemistry,nitrogen,oxygen,hydrogen,helium
+helium,C1,noun,heli,The periodic table identifies helium with the chemical symbol He.,Bảng tuần hoàn xác định heli bằng ký hiệu hóa học He.,Chemistry,helium,hydrogen,nitrogen,carbon
+silicon,C1,noun,silic,The periodic table uses Si as the symbol for silicon.,Bảng tuần hoàn dùng Si làm ký hiệu cho silic.,Materials,silicon,sodium,sulfur,silver
+copper,B2,noun,đồng kim loại,The reddish metal copper is used inside many electrical wires.,Kim loại đồng màu đỏ được dùng bên trong nhiều dây dẫn điện.,Materials,copper,plastic,rubber,glass
+aluminium,B2,noun,nhôm,The light metal aluminium is used to make many drink cans.,Kim loại nhẹ nhôm được dùng để làm nhiều lon đồ uống.,Materials,aluminium,glass,rubber,plastic
+steel,B1,noun,thép,Steel is an alloy made mainly from iron and carbon.,Thép là hợp kim được tạo chủ yếu từ sắt và cacbon.,Materials,Steel,Glass,Rubber,Plastic
+plastic,A2,noun,nhựa,This synthetic plastic can be molded into many different shapes.,Loại nhựa tổng hợp này có thể được đúc thành nhiều hình dạng khác nhau.,Materials,plastic,copper,aluminium,steel
+rubber,B1,noun,cao su,The rubber stretches and returns toward its original shape.,Cao su kéo giãn rồi trở lại gần hình dạng ban đầu.,Materials,rubber,glass,ceramic,concrete
+glass,A2,noun,thủy tinh,This transparent glass was made by heating a mixture containing sand.,Loại thủy tinh trong suốt này được tạo bằng cách nung hỗn hợp có chứa cát.,Materials,glass,concrete,steel,copper
+ceramic,B2,noun,vật liệu gốm,The ceramic is shaped from clay and hardened by heat.,Vật liệu gốm được tạo hình từ đất sét và làm cứng bằng nhiệt.,Materials,ceramic,rubber,plastic,steel
+concrete,B2,noun,bê tông,Concrete is made by mixing cement with water and aggregates.,Bê tông được tạo bằng cách trộn xi măng với nước và cốt liệu.,Materials,Concrete,Glass,Rubber,Plastic
+brick,B1,noun,gạch,A brick is a small rectangular building block often made from fired clay.,Gạch là khối xây dựng nhỏ hình chữ nhật thường được làm từ đất sét nung.,Materials,brick,wire,lens,battery
+cement,B2,noun,xi măng,The dry cement powder binds the other materials when mixed with water.,Bột xi măng khô liên kết các vật liệu khác khi được trộn với nước.,Materials,cement,rubber,glass,steel
+clay,B1,noun,đất sét,The potter shapes wet clay before the bowl is fired.,Thợ gốm tạo hình đất sét ướt trước khi nung chiếc bát.,Materials,clay,steel,glass,copper
+sand,A2,noun,cát,The sand consists of tiny loose grains beside the larger pebbles.,Cát gồm các hạt nhỏ rời nằm cạnh những viên sỏi lớn hơn.,Materials,sand,steel,glass,rubber
+gravel,B2,noun,sỏi rời,The gravel path is covered with small loose stones.,Lối đi rải sỏi được phủ bằng những viên đá nhỏ rời.,Materials,gravel,cement,clay,plastic
+crystal,B2,noun,tinh thể,The crystal has a regular internal structure and clearly shaped faces.,Tinh thể có cấu trúc bên trong đều đặn và các mặt rõ hình dạng.,Materials,crystal,rubber,plastic,clay
+mineral,B2,noun,khoáng vật,The geologist identifies the mineral by its natural chemical composition and structure.,Nhà địa chất nhận diện khoáng vật qua thành phần hóa học và cấu trúc tự nhiên.,Materials,mineral,plastic,rubber,steel
+metal,A2,noun,kim loại,The experiment tests how well each metal conducts electricity.,Thí nghiệm kiểm tra mỗi kim loại dẫn điện tốt đến mức nào.,Materials,metal,plastic,rubber,glass
+alloy,C1,noun,hợp kim,An alloy combines a metal with one or more other elements.,Hợp kim kết hợp một kim loại với một hoặc nhiều nguyên tố khác.,Materials,alloy,crystal,mineral,solvent
+ore,C1,noun,quặng,The rock contains enough useful mineral to be processed as ore.,Đá chứa đủ khoáng vật có ích để được xử lý thành quặng.,Materials,ore,plastic,rubber,glass
+coal,B1,noun,than đá,Coal is a dark fossil fuel formed from ancient plant material.,Than đá là nhiên liệu hóa thạch sẫm màu hình thành từ vật chất thực vật cổ.,Energy,Coal,Glass,Steel,Rubber

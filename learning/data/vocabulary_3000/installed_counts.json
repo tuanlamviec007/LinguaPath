@@ -1,0 +1,19 @@
+{
+  "flashcards": 3016,
+  "distinct_terms": 3012,
+  "cefr_provisional": {
+    "C1": 272,
+    "A1": 359,
+    "B2": 830,
+    "A2": 678,
+    "B1": 877
+  },
+  "total_questions": 5058,
+  "new_questions": 4000,
+  "new_decks": 114,
+  "new_quiz_sets": 228,
+  "quiz_size_min": 4,
+  "quiz_size_max": 20,
+  "total_content_sets": 417,
+  "bad_new_answer_keys": 0
+}

@@ -1,0 +1,69 @@
+.journey-section-heading {display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:15px;}
+.journey-section-heading h2 {margin:5px 0 0;color:#183b43;font:700 18px "Plus Jakarta Sans",Inter,sans-serif;letter-spacing:-.3px;}
+.journey-section-heading>span {color:#5c6d73;font-size:11px;}
+.journey-resume-section {margin:20px 0;}
+.resume-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.resume-card {display:flex;min-width:0;align-items:center;justify-content:space-between;gap:15px;padding:17px 18px;border:1px solid #dce8df;border-radius:15px;background:linear-gradient(120deg,#fff 0%,#f6f8f1 100%);box-shadow:0 5px 18px rgba(24,45,59,.035);}
+.resume-card-copy {min-width:0;}
+.resume-card-kicker {color:#35766d;font-size:9px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;}
+.resume-card h3 {margin:6px 0;color:#183b43;font:700 14px/1.4 "Plus Jakarta Sans",Inter,sans-serif;overflow-wrap:anywhere;}
+.resume-card p {margin:0;color:#5c6d73;font-size:11px;line-height:1.5;}
+.resume-card a {display:inline-flex;flex:none;align-items:center;gap:8px;min-height:40px;padding:8px 12px;border-radius:10px;background:#236d63;color:#fff;font-size:11px;font-weight:800;}
+.resume-card a:hover {background:#18584f;}
+.resume-card a:focus-visible,.skill-practice-link:focus-visible {outline:3px solid #a7c954;outline-offset:3px;}
+.activity-panel {margin-bottom:20px;}
+.activity-heading {margin-bottom:5px;}
+.activity-streak {display:grid;grid-template-columns:auto auto;align-items:center;column-gap:8px;row-gap:1px;padding:9px 13px;border-radius:12px;background:#f0f4df;color:#405a48;}
+.activity-streak>span {grid-column:1/-1;font-size:9px;font-weight:700;letter-spacing:.3px;}
+.activity-streak strong {font:800 24px/1.1 "Plus Jakarta Sans",Inter,sans-serif;color:#294d41;}
+.activity-streak small {font-size:10px;}
+.activity-helper {margin:0 0 16px;color:#5c6d73;font-size:11px;line-height:1.5;}
+.activity-week {display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;}
+.activity-day {display:grid;justify-items:center;gap:5px;min-width:0;padding:10px 5px;border:1px solid #e5ebe6;border-radius:11px;background:#fbfcfa;text-align:center;}
+.activity-day.is-active {border-color:#d6e5d6;background:#eef5eb;}
+.activity-day.is-today {box-shadow:inset 0 0 0 1px #98b95b;}
+.activity-day-label {color:#566970;font-size:10px;font-weight:700;white-space:nowrap;}
+.activity-day-mark {display:grid;width:25px;height:25px;place-items:center;border-radius:50%;background:#edf0ed;color:#7d8a87;font-size:14px;font-weight:800;}
+.activity-day.is-active .activity-day-mark {background:#dcebab;color:#315d40;}
+.activity-day-count {color:#53676d;font-size:10px;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.activity-count-key {margin:8px 0 0;color:#66777d;font-size:10px;}
+.activity-totals {display:flex;flex-wrap:wrap;gap:8px;margin-top:15px;}
+.activity-totals span {padding:7px 10px;border:1px solid #e4ebe5;border-radius:9px;background:#fff;color:#5b6e73;font-size:10px;}
+.activity-totals strong {color:#183b43;font-size:12px;}
+.skill-progress-panel {margin:20px 0;}
+.skill-table-wrap {position:relative;width:100%;max-width:100%;min-width:0;overflow-x:auto;}
+.skill-table {width:100%;min-width:590px;border-collapse:collapse;text-align:left;}
+.skill-table caption {padding:0;}
+.skill-table th,.skill-table td {padding:13px 12px;border-bottom:1px solid #edf1ed;color:#4f6269;font-size:12px;}
+.skill-table thead th {color:#63747a;font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;}
+.skill-table tbody th {color:#183b43;font-size:13px;font-weight:700;}
+.skill-accuracy {color:#236d63;font-size:14px;}
+.skill-insufficient {display:inline-block;padding:5px 8px;border-radius:7px;background:#f3f4ed;color:#626e68;font-size:10px;}
+.skill-practice-link {display:inline-flex;align-items:center;gap:6px;color:#236d63;font-size:11px;font-weight:800;white-space:nowrap;}
+.skill-empty {display:flex;align-items:center;justify-content:space-between;gap:15px;color:#5c6d73;font-size:12px;}
+.skill-empty p {margin:0;}
+@media(max-width:760px) {
+  .resume-grid {grid-template-columns:1fr;}
+  .resume-card {align-items:flex-start;}
+  .activity-week {gap:5px;}
+  .activity-day {padding:9px 2px;}
+  .activity-day-label {font-size:9px;}
+  .activity-day-count {font-size:9px;}
+}
+@media(max-width:520px) {
+  .journey-section-heading {align-items:flex-start;}
+  .journey-section-heading h2 {font-size:16px;}
+  .resume-card {flex-direction:column;}
+  .resume-card a {width:100%;justify-content:space-between;}
+  .activity-streak {padding:8px 10px;}
+  .activity-helper {font-size:10px;}
+  .activity-week {gap:4px;}
+  .activity-day {padding:8px 1px;border-radius:8px;}
+  .activity-day-label {font-size:8px;}
+  .activity-day-count {font-size:8px;}
+  .activity-totals {display:grid;grid-template-columns:1fr;}
+  .skill-empty {align-items:flex-start;flex-direction:column;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .resume-card a {transition:none;}
+}

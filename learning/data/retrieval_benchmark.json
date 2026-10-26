@@ -1,0 +1,838 @@
+{
+  "version": "1",
+  "description": "Editorial retrieval benchmark for LinguaPath vocabulary lookup. Gold labels are provisional AI/editorial judgments based on the current 1,000-card source vocabulary, not human-certified; no performance claim is implied. Positive cases cover 20 source terms with English, accented Vietnamese, unaccented Vietnamese and semantic paraphrase queries. Negative cases ask for out-of-scope terms absent from the current vocabulary.",
+  "cases": [
+    {
+      "id": "dev-a1-address-en",
+      "split": "dev",
+      "category": "english",
+      "query": "On a form, what does ‘address’ mean?",
+      "expected_terms": [
+        "address"
+      ]
+    },
+    {
+      "id": "dev-a1-address-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Trong biểu mẫu, từ ‘address’ có nghĩa là gì?",
+      "expected_terms": [
+        "address"
+      ]
+    },
+    {
+      "id": "dev-a1-address-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Trong bieu mau, tu address co nghia la gi?",
+      "expected_terms": [
+        "address"
+      ]
+    },
+    {
+      "id": "dev-a1-address-para",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "A form asks where a person lives. Which English word names that information?",
+      "expected_terms": [
+        "address"
+      ]
+    },
+    {
+      "id": "dev-a1-ticket-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does ‘ticket’ mean when you travel by bus?",
+      "expected_terms": [
+        "ticket"
+      ]
+    },
+    {
+      "id": "dev-a1-ticket-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Khi đi xe buýt, ‘ticket’ nghĩa là gì?",
+      "expected_terms": [
+        "ticket"
+      ]
+    },
+    {
+      "id": "dev-a1-ticket-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Khi i xe buyt, ticket nghia la gi?",
+      "expected_terms": [
+        "ticket"
+      ]
+    },
+    {
+      "id": "dev-a1-ticket-para",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "What do I buy or show to prove I have paid for a bus journey?",
+      "expected_terms": [
+        "ticket"
+      ]
+    },
+    {
+      "id": "dev-a1-hungry-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does ‘hungry’ mean?",
+      "expected_terms": [
+        "hungry"
+      ]
+    },
+    {
+      "id": "dev-a1-hungry-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "‘Hungry’ nghĩa là gì?",
+      "expected_terms": [
+        "hungry"
+      ]
+    },
+    {
+      "id": "dev-a1-hungry-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Hungry nghia la gi?",
+      "expected_terms": [
+        "hungry"
+      ]
+    },
+    {
+      "id": "dev-a1-hungry-para",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "If someone has not eaten and wants food, how do they feel?",
+      "expected_terms": [
+        "hungry"
+      ]
+    },
+    {
+      "id": "dev-a1-lunch-en",
+      "split": "dev",
+      "category": "english",
+      "query": "In ‘We eat lunch at noon’, what does ‘lunch’ mean?",
+      "expected_terms": [
+        "lunch"
+      ]
+    },
+    {
+      "id": "dev-a1-lunch-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Trong câu ‘We eat lunch at noon’, ‘lunch’ nghĩa là bữa nào?",
+      "expected_terms": [
+        "lunch"
+      ]
+    },
+    {
+      "id": "dev-a1-lunch-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Trong cau We eat lunch at noon, lunch nghia la bua nao?",
+      "expected_terms": [
+        "lunch"
+      ]
+    },
+    {
+      "id": "dev-a1-lunch-para",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "Which meal do people usually have around the middle of the day?",
+      "expected_terms": [
+        "lunch"
+      ]
+    },
+    {
+      "id": "dev-a2-appointment-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does ‘appointment’ mean in ‘I have a dentist appointment’?",
+      "expected_terms": [
+        "appointment"
+      ]
+    },
+    {
+      "id": "dev-a2-appointment-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Trong câu ‘I have a dentist appointment’, ‘appointment’ nghĩa là gì?",
+      "expected_terms": [
+        "appointment"
+      ]
+    },
+    {
+      "id": "dev-a2-appointment-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Trong cau I have a dentist appointment, appointment nghia la gi?",
+      "expected_terms": [
+        "appointment"
+      ]
+    },
+    {
+      "id": "dev-a2-appointment-para",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "What do you call an arranged time to meet a doctor or another professional?",
+      "expected_terms": [
+        "appointment"
+      ]
+    },
+    {
+      "id": "dev-a2-crowded-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does ‘crowded’ mean when describing a train?",
+      "expected_terms": [
+        "crowded"
+      ]
+    },
+    {
+      "id": "dev-a2-crowded-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Dùng để tả một chuyến tàu, ‘crowded’ có nghĩa là gì?",
+      "expected_terms": [
+        "crowded"
+      ]
+    },
+    {
+      "id": "dev-a2-crowded-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Dung e ta mot chuyen tau, crowded co nghia la gi?",
+      "expected_terms": [
+        "crowded"
+      ]
+    },
+    {
+      "id": "dev-a2-crowded-para",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "If a train has so many passengers that there is little room, what is it like?",
+      "expected_terms": [
+        "crowded"
+      ]
+    },
+    {
+      "id": "dev-a2-receipt-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What is a ‘receipt’ in a shop?",
+      "expected_terms": [
+        "receipt"
+      ]
+    },
+    {
+      "id": "dev-a2-receipt-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Trong cửa hàng, ‘receipt’ là gì?",
+      "expected_terms": [
+        "receipt"
+      ]
+    },
+    {
+      "id": "dev-a2-receipt-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Trong cua hang, receipt la gi?",
+      "expected_terms": [
+        "receipt"
+      ]
+    },
+    {
+      "id": "dev-a2-receipt-para",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "What paper or digital record can show that you paid for an item?",
+      "expected_terms": [
+        "receipt"
+      ]
+    },
+    {
+      "id": "dev-a2-borrow-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does the verb ‘borrow’ mean?",
+      "expected_terms": [
+        "borrow"
+      ]
+    },
+    {
+      "id": "dev-a2-borrow-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Động từ ‘borrow’ có nghĩa là gì?",
+      "expected_terms": [
+        "borrow"
+      ]
+    },
+    {
+      "id": "dev-a2-borrow-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "ong tu borrow co nghia la gi?",
+      "expected_terms": [
+        "borrow"
+      ]
+    },
+    {
+      "id": "dev-a2-borrow-para",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "If I take your dictionary for a short time and plan to give it back, what am I doing?",
+      "expected_terms": [
+        "borrow"
+      ]
+    },
+    {
+      "id": "dev-b1-income-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What does ‘income’ mean in a personal budget?",
+      "expected_terms": [
+        "income"
+      ]
+    },
+    {
+      "id": "dev-b1-income-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "Trong ngân sách cá nhân, ‘income’ nghĩa là gì?",
+      "expected_terms": [
+        "income"
+      ]
+    },
+    {
+      "id": "dev-b1-income-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Trong ngan sach ca nhan, income nghia la gi?",
+      "expected_terms": [
+        "income"
+      ]
+    },
+    {
+      "id": "dev-b1-income-para",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "What do we call money a person receives, for example from work?",
+      "expected_terms": [
+        "income"
+      ]
+    },
+    {
+      "id": "dev-b1-souvenir-en",
+      "split": "dev",
+      "category": "english",
+      "query": "What is a ‘souvenir’ from a trip?",
+      "expected_terms": [
+        "souvenir"
+      ]
+    },
+    {
+      "id": "dev-b1-souvenir-vi",
+      "split": "dev",
+      "category": "vietnamese",
+      "query": "‘Souvenir’ trong chuyến đi là gì?",
+      "expected_terms": [
+        "souvenir"
+      ]
+    },
+    {
+      "id": "dev-b1-souvenir-unaccented",
+      "split": "dev",
+      "category": "unaccented",
+      "query": "Souvenir trong chuyen i la gi?",
+      "expected_terms": [
+        "souvenir"
+      ]
+    },
+    {
+      "id": "dev-b1-souvenir-para",
+      "split": "dev",
+      "category": "paraphrase",
+      "query": "What might a traveller buy or keep to remember a place they visited?",
+      "expected_terms": [
+        "souvenir"
+      ]
+    },
+    {
+      "id": "test-b1-treatment-en",
+      "split": "test",
+      "category": "english",
+      "query": "In a health context, what does ‘treatment’ mean?",
+      "expected_terms": [
+        "treatment"
+      ]
+    },
+    {
+      "id": "test-b1-treatment-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong ngữ cảnh sức khỏe, ‘treatment’ nghĩa là gì?",
+      "expected_terms": [
+        "treatment"
+      ]
+    },
+    {
+      "id": "test-b1-treatment-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong ngu canh suc khoe, treatment nghia la gi?",
+      "expected_terms": [
+        "treatment"
+      ]
+    },
+    {
+      "id": "test-b1-treatment-para",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "What do we call the care or medical steps given to help someone with an illness?",
+      "expected_terms": [
+        "treatment"
+      ]
+    },
+    {
+      "id": "test-b1-complaint-en",
+      "split": "test",
+      "category": "english",
+      "query": "What does ‘complaint’ mean in customer service?",
+      "expected_terms": [
+        "complaint"
+      ]
+    },
+    {
+      "id": "test-b1-complaint-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong dịch vụ khách hàng, ‘complaint’ nghĩa là gì?",
+      "expected_terms": [
+        "complaint"
+      ]
+    },
+    {
+      "id": "test-b1-complaint-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong dich vu khach hang, complaint nghia la gi?",
+      "expected_terms": [
+        "complaint"
+      ]
+    },
+    {
+      "id": "test-b1-complaint-para",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "If a customer tells a company that something is wrong and asks it to be addressed, what is that called?",
+      "expected_terms": [
+        "complaint"
+      ]
+    },
+    {
+      "id": "test-b2-itinerary-en",
+      "split": "test",
+      "category": "english",
+      "query": "What is an ‘itinerary’ for a trip?",
+      "expected_terms": [
+        "itinerary"
+      ]
+    },
+    {
+      "id": "test-b2-itinerary-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "‘Itinerary’ của một chuyến đi là gì?",
+      "expected_terms": [
+        "itinerary"
+      ]
+    },
+    {
+      "id": "test-b2-itinerary-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Itinerary cua mot chuyen i la gi?",
+      "expected_terms": [
+        "itinerary"
+      ]
+    },
+    {
+      "id": "test-b2-itinerary-para",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "Which document or plan lists where a traveller will go and when?",
+      "expected_terms": [
+        "itinerary"
+      ]
+    },
+    {
+      "id": "test-b2-margin-of-error-en",
+      "split": "test",
+      "category": "english",
+      "query": "What does ‘margin of error’ mean in a survey result?",
+      "expected_terms": [
+        "margin of error"
+      ]
+    },
+    {
+      "id": "test-b2-margin-of-error-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong kết quả khảo sát, ‘margin of error’ nghĩa là gì?",
+      "expected_terms": [
+        "margin of error"
+      ]
+    },
+    {
+      "id": "test-b2-margin-of-error-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong ket qua khao sat, margin of error nghia la gi?",
+      "expected_terms": [
+        "margin of error"
+      ]
+    },
+    {
+      "id": "test-b2-margin-of-error-para",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "What term describes the range that indicates how far a survey estimate may differ from the true value?",
+      "expected_terms": [
+        "margin of error"
+      ]
+    },
+    {
+      "id": "test-b2-mitigation-en",
+      "split": "test",
+      "category": "english",
+      "query": "In project planning, what does ‘mitigation’ mean?",
+      "expected_terms": [
+        "mitigation"
+      ]
+    },
+    {
+      "id": "test-b2-mitigation-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong lập kế hoạch dự án, ‘mitigation’ nghĩa là gì?",
+      "expected_terms": [
+        "mitigation"
+      ]
+    },
+    {
+      "id": "test-b2-mitigation-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong lap ke hoach du an, mitigation nghia la gi?",
+      "expected_terms": [
+        "mitigation"
+      ]
+    },
+    {
+      "id": "test-b2-mitigation-para",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "What do we call an action taken to make a risk or its effects less severe?",
+      "expected_terms": [
+        "mitigation"
+      ]
+    },
+    {
+      "id": "test-b2-consensus-en",
+      "split": "test",
+      "category": "english",
+      "query": "What does ‘consensus’ mean in a team discussion?",
+      "expected_terms": [
+        "consensus"
+      ]
+    },
+    {
+      "id": "test-b2-consensus-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong cuộc thảo luận nhóm, ‘consensus’ nghĩa là gì?",
+      "expected_terms": [
+        "consensus"
+      ]
+    },
+    {
+      "id": "test-b2-consensus-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong cuoc thao luan nhom, consensus nghia la gi?",
+      "expected_terms": [
+        "consensus"
+      ]
+    },
+    {
+      "id": "test-b2-consensus-para",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "What is it called when members of a group reach general agreement?",
+      "expected_terms": [
+        "consensus"
+      ]
+    },
+    {
+      "id": "test-c1-anonymity-en",
+      "split": "test",
+      "category": "english",
+      "query": "What does ‘anonymity’ mean in a research study?",
+      "expected_terms": [
+        "anonymity"
+      ]
+    },
+    {
+      "id": "test-c1-anonymity-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong một nghiên cứu, ‘anonymity’ nghĩa là gì?",
+      "expected_terms": [
+        "anonymity"
+      ]
+    },
+    {
+      "id": "test-c1-anonymity-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong mot nghien cuu, anonymity nghia la gi?",
+      "expected_terms": [
+        "anonymity"
+      ]
+    },
+    {
+      "id": "test-c1-anonymity-para",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "What condition protects a participant so their identity is not known or revealed?",
+      "expected_terms": [
+        "anonymity"
+      ]
+    },
+    {
+      "id": "test-c1-scope-creep-en",
+      "split": "test",
+      "category": "english",
+      "query": "What does ‘scope creep’ mean in project management?",
+      "expected_terms": [
+        "scope creep"
+      ]
+    },
+    {
+      "id": "test-c1-scope-creep-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong quản lý dự án, ‘scope creep’ nghĩa là gì?",
+      "expected_terms": [
+        "scope creep"
+      ]
+    },
+    {
+      "id": "test-c1-scope-creep-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong quan ly du an, scope creep nghia la gi?",
+      "expected_terms": [
+        "scope creep"
+      ]
+    },
+    {
+      "id": "test-c1-scope-creep-para",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "What is the term for a project gradually taking on extra work beyond its agreed boundaries?",
+      "expected_terms": [
+        "scope creep"
+      ]
+    },
+    {
+      "id": "test-c1-sampling-en",
+      "split": "test",
+      "category": "english",
+      "query": "What does ‘sampling’ mean in research?",
+      "expected_terms": [
+        "sampling"
+      ]
+    },
+    {
+      "id": "test-c1-sampling-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong nghiên cứu, ‘sampling’ nghĩa là gì?",
+      "expected_terms": [
+        "sampling"
+      ]
+    },
+    {
+      "id": "test-c1-sampling-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong nghien cuu, sampling nghia la gi?",
+      "expected_terms": [
+        "sampling"
+      ]
+    },
+    {
+      "id": "test-c1-sampling-para",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "What is the process of selecting some members of a population to study?",
+      "expected_terms": [
+        "sampling"
+      ]
+    },
+    {
+      "id": "test-c1-audit-trail-en",
+      "split": "test",
+      "category": "english",
+      "query": "What is an ‘audit trail’ in a record system?",
+      "expected_terms": [
+        "audit trail"
+      ]
+    },
+    {
+      "id": "test-c1-audit-trail-vi",
+      "split": "test",
+      "category": "vietnamese",
+      "query": "Trong hệ thống hồ sơ, ‘audit trail’ là gì?",
+      "expected_terms": [
+        "audit trail"
+      ]
+    },
+    {
+      "id": "test-c1-audit-trail-unaccented",
+      "split": "test",
+      "category": "unaccented",
+      "query": "Trong he thong ho so, audit trail la gi?",
+      "expected_terms": [
+        "audit trail"
+      ]
+    },
+    {
+      "id": "test-c1-audit-trail-para",
+      "split": "test",
+      "category": "paraphrase",
+      "query": "What record lets someone see who changed information and when each change happened?",
+      "expected_terms": [
+        "audit trail"
+      ]
+    },
+    {
+      "id": "dev-no-match-01",
+      "split": "dev",
+      "category": "no_match",
+      "query": "Phototropism is a plant’s growth response toward light. What is the English term for this process?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-02",
+      "split": "dev",
+      "category": "no_match",
+      "query": "What do geologists call rock formed when molten material cools and solidifies?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-03",
+      "split": "dev",
+      "category": "no_match",
+      "query": "What is the name of the instrument that records earthquake waves?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-04",
+      "split": "dev",
+      "category": "no_match",
+      "query": "How do you say “the scientific study of fungi” in one English word?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-05",
+      "split": "dev",
+      "category": "no_match",
+      "query": "What is the astronomy term for an extremely bright object powered by a distant active galaxy?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-06",
+      "split": "dev",
+      "category": "no_match",
+      "query": "What is the medical term for an abnormally low level of sodium in the blood?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-07",
+      "split": "dev",
+      "category": "no_match",
+      "query": "Which word names the process by which plants lose water vapour through their leaves?",
+      "expected_terms": []
+    },
+    {
+      "id": "dev-no-match-08",
+      "split": "dev",
+      "category": "no_match",
+      "query": "What is the term for a five-beat poetic line made from five iambs?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-01",
+      "split": "test",
+      "category": "no_match",
+      "query": "What is the branch of mathematics that studies properties preserved under continuous deformation?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-02",
+      "split": "test",
+      "category": "no_match",
+      "query": "Which instrument measures atmospheric pressure for weather observations?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-03",
+      "split": "test",
+      "category": "no_match",
+      "query": "What is the term for the bending of light as it passes between materials?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-04",
+      "split": "test",
+      "category": "no_match",
+      "query": "How do you say “the study of insects” in one English word?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-05",
+      "split": "test",
+      "category": "no_match",
+      "query": "What is the name for a word that imitates a sound, such as “buzz”?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-06",
+      "split": "test",
+      "category": "no_match",
+      "query": "What is the political term for government by a small, privileged group?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-07",
+      "split": "test",
+      "category": "no_match",
+      "query": "What do scientists call the mineral that commonly produces a reddish-brown streak and is an iron oxide?",
+      "expected_terms": []
+    },
+    {
+      "id": "test-no-match-08",
+      "split": "test",
+      "category": "no_match",
+      "query": "What is the medical term for an abnormally high concentration of calcium in the blood?",
+      "expected_terms": []
+    }
+  ]
+}

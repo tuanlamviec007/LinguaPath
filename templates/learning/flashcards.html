@@ -1,0 +1,126 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Flashcard từ vựng · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/flashcards-workspace.css' %}">
+<link rel="stylesheet" href="{% static 'css/learning-discovery.css' %}">
+<div class="flashcard-workspace">
+<section class="vocab-heading">
+  <div class="vocab-heading-copy">
+    <span class="eyebrow">TỪ VỰNG · ÔN TẬP CHỦ ĐỘNG</span>
+    <h1>Học một từ.<br><em>Nhớ thật lâu.</em></h1>
+    <p>Nhìn mặt trước, tự nhớ nghĩa rồi lật thẻ để kiểm tra. Nhớ tốt qua các lần ôn sẽ giãn lịch; “Chưa nhớ” hẹn bạn thử lại sau 10 phút.</p>
+    <div class="learner-level-note">Lộ trình của bạn <strong>{{ profile.current_cefr }}</strong><span aria-hidden="true">→</span><strong>{{ profile.target_cefr }}</strong><span>CEFR trên thẻ chỉ mang tính tham khảo.</span></div>
+  </div>
+  <aside class="deck-count" aria-label="{% if show_all %}Số thẻ theo bộ lọc trong thư viện{% else %}Số thẻ đang đến hạn{% endif %}">
+    <span class="deck-count-icon" aria-hidden="true">↻</span>
+    <span class="deck-count-label">{% if show_all %}THẺ TRONG KHO{% else %}THẺ CẦN ÔN{% endif %}</span>
+    <strong>{{ card_count }}</strong>
+    <span>{% if show_all %}theo bộ lọc{% else %}đến hạn ôn{% endif %}</span>
+  </aside>
+</section>
+<p class="content-review-note" role="note">Một phần học liệu có thể được AI hỗ trợ tạo; nội dung dạng này chỉ để tham khảo và chưa được giáo viên duyệt.</p>
+<aside class="discovery-strip discovery-strip--vocab" aria-label="Quiz từ vựng">
+  <span class="discovery-mark" aria-hidden="true">✦</span>
+  <div><strong>Vừa học xong? Thử tài trí nhớ.</strong><p>Chơi quiz 5–15 câu, khám phá từ cần ôn và nhận XP mỗi ngày.</p></div>
+  <a href="{% url 'learning:quiz_hub' %}{% if selected_level or selected_topic %}?{% if selected_level %}level={{ selected_level }}{% endif %}{% if selected_topic %}{% if selected_level %}&amp;{% endif %}topic={{ selected_topic|urlencode }}{% endif %}{% endif %}">Chơi quiz <span aria-hidden="true">↗</span></a>
+</aside>
+
+<section class="flash-tools" aria-label="Điều khiển bộ flashcard">
+  <div class="flash-tools-copy"><span class="eyebrow">{% if show_all %}THƯ VIỆN TỪ VỰNG{% else %}BỘ THẺ HÔM NAY{% endif %}</span><span>{% if page_obj.has_other_pages %}Trang {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}{% else %}{{ cards|length }} thẻ trong trang{% endif %}</span></div>
+  <nav class="flash-view-tabs" aria-label="Chế độ flashcard">
+    {% if show_all %}<a href="?{% if selected_level %}level={{ selected_level }}&amp;{% endif %}{% if selected_topic %}topic={{ selected_topic|urlencode }}&amp;{% endif %}{% if search_term %}q={{ search_term|urlencode }}{% endif %}" aria-label="Chỉ xem thẻ đến hạn">Thẻ đến hạn</a><a href="?all=1{% if selected_level %}&amp;level={{ selected_level }}{% endif %}{% if selected_topic %}&amp;topic={{ selected_topic|urlencode }}{% endif %}{% if search_term %}&amp;q={{ search_term|urlencode }}{% endif %}" aria-current="page">Toàn bộ từ vựng</a>
+    {% else %}<a href="?{% if selected_level %}level={{ selected_level }}&amp;{% endif %}{% if selected_topic %}topic={{ selected_topic|urlencode }}&amp;{% endif %}{% if search_term %}q={{ search_term|urlencode }}{% endif %}" aria-current="page">Thẻ đến hạn</a><a href="?all=1{% if selected_level %}&amp;level={{ selected_level }}{% endif %}{% if selected_topic %}&amp;topic={{ selected_topic|urlencode }}{% endif %}{% if search_term %}&amp;q={{ search_term|urlencode }}{% endif %}">Toàn bộ từ vựng</a>{% endif %}
+  </nav>
+  <form method="get" class="level-filter" aria-label="Tìm và lọc flashcard">
+    {% if show_all %}<input type="hidden" name="all" value="1">{% endif %}
+    <label for="vocab-search">Tìm từ</label>
+    <input id="vocab-search" type="search" name="q" value="{{ search_term }}" placeholder="Từ, nghĩa hoặc ví dụ" maxlength="80">
+    <label for="level-filter">Mức từ</label>
+    <select id="level-filter" name="level">
+      <option value="">Tất cả mức</option>
+      {% for level, label in cefr_levels %}<option value="{{ level }}"{% if selected_level == level %} selected{% endif %}>{{ label }}</option>{% endfor %}
+    </select>
+    <label for="topic-filter">Chủ đề</label>
+    <select id="topic-filter" name="topic">
+      <option value="">Tất cả chủ đề</option>
+      {% for topic in available_topics %}<option value="{{ topic }}"{% if selected_topic == topic %} selected{% endif %}>{{ topic }}</option>{% endfor %}
+    </select>
+    <button class="button secondary" type="submit">Lọc</button>
+  </form>
+</section>
+
+{% if cards %}
+  <div class="flash-grid">
+    {% for card in cards %}
+      <article class="flash-card" id="flashcard-{{ card.id }}" data-flashcard>
+        <div class="flash-card-inner">
+          <section class="flash-face flash-front" aria-label="Mặt trước của thẻ {{ card.term }}">
+            <div class="flash-meta">
+              <span>{{ card.topic|default:card.content.topic|default:'Từ vựng nền tảng' }}</span>
+              <span class="cefr-badge">{{ card.cefr_level }}</span>
+            </div>
+            <div class="flash-word-block">
+              <span class="flash-word-kicker">TỪ VỰNG</span>
+              <h2 lang="en">{{ card.term }}</h2>
+              <p class="pronunciation">{{ card.part_of_speech }}{% if card.pronunciation %}<span aria-hidden="true"> · </span>{{ card.pronunciation }}{% endif %}</p>
+              <button class="word-speak" type="button" data-speak="{{ card.term }}" aria-label="Nghe phát âm từ {{ card.term }}">▶ <span>Nghe phát âm</span></button>
+            </div>
+            <div class="flash-front-bottom">
+              {% include 'learning/_save_word_button.html' with card_id=card.id is_saved=card.is_saved term=card.term %}
+              <button class="flip-button" type="button" data-flip aria-controls="answer-{{ card.id }}" aria-expanded="false">Lật thẻ <span aria-hidden="true">↻</span></button>
+            </div>
+          </section>
+          <section class="flash-face flash-back" id="answer-{{ card.id }}" aria-label="Mặt sau của thẻ {{ card.term }}" aria-hidden="true" inert>
+            <div class="flash-back-content">
+              <div class="flash-back-top"><span class="flash-back-label">NGHĨA CỦA TỪ</span><span class="cefr-badge">{{ card.cefr_level }}</span></div>
+              <h2 lang="vi">{{ card.meaning_vi }}</h2>
+              {% if card.example_en %}<p class="example-en" lang="en">“{{ card.example_en }}”</p>{% endif %}
+              {% if card.example_vi %}<p class="example-vi" lang="vi">{{ card.example_vi }}</p>{% endif %}
+              <div class="card-provenance"><span>{{ card.source_name|default:'Từ và ví dụ tự biên soạn' }}</span>{% if card.source_url %}<a href="{{ card.source_url }}" target="_blank" rel="noopener noreferrer">Nguồn ↗</a>{% endif %}<a href="https://dictionary.cambridge.org/dictionary/english/" target="_blank" rel="noopener noreferrer" aria-label="Mở từ điển Cambridge để tra {{ card.term }}">Tra Cambridge ↗</a></div>
+            </div>
+            <div class="flash-back-actions">
+              {% include 'learning/_save_word_button.html' with card_id=card.id is_saved=card.is_saved term=card.term %}
+              <form method="post" action="{% url 'learning:review_flashcard' card.id %}" class="rating-row">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ card.rating_return_url }}">
+                <button type="submit" name="rating" value="again" class="rate again">↺ Chưa nhớ</button>
+                <button type="submit" name="rating" value="hard" class="rate hard">△ Còn khó</button>
+                <button type="submit" name="rating" value="known" class="rate known">✓ Đã nhớ</button>
+              </form>
+              <button class="flip-back-button" type="button" data-flip aria-controls="answer-{{ card.id }}" aria-expanded="true">Quay lại từ <span aria-hidden="true">↩</span></button>
+            </div>
+          </section>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+  {% if page_obj.has_other_pages %}
+    <nav class="pagination" aria-label="Trang flashcard">
+      {% if page_obj.has_previous %}<a href="?page={{ page_obj.previous_page_number }}{% if show_all %}&amp;all=1{% endif %}{% if selected_level %}&amp;level={{ selected_level }}{% endif %}{% if selected_topic %}&amp;topic={{ selected_topic|urlencode }}{% endif %}{% if search_term %}&amp;q={{ search_term|urlencode }}{% endif %}">← Trước</a>{% endif %}
+      <span>Trang {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+      {% if page_obj.has_next %}<a href="?page={{ page_obj.next_page_number }}{% if show_all %}&amp;all=1{% endif %}{% if selected_level %}&amp;level={{ selected_level }}{% endif %}{% if selected_topic %}&amp;topic={{ selected_topic|urlencode }}{% endif %}{% if search_term %}&amp;q={{ search_term|urlencode }}{% endif %}">Thẻ tiếp theo →</a>{% endif %}
+    </nav>
+  {% endif %}
+{% else %}
+  <section class="panel empty-state flash-empty">
+    {% if has_filters %}
+      <div aria-hidden="true">⌕</div>
+      <h2>Không tìm thấy thẻ phù hợp</h2>
+      <p>Thử đổi từ khóa, mức CEFR hoặc chủ đề để xem thêm thẻ.</p>
+      <a href="{% if show_all %}?all=1{% else %}{% url 'learning:flashcards' %}{% endif %}">Xóa bộ lọc</a>
+    {% elif show_all %}
+      <div aria-hidden="true">Aa</div>
+      <h2>Chưa có từ vựng trong kho</h2>
+      <p>Các bộ từ vựng sẽ xuất hiện tại đây sau khi được bổ sung và xuất bản.</p>
+      <a href="{% url 'learning:practice_list' %}">Khám phá bài luyện →</a>
+    {% else %}
+      <div aria-hidden="true">✓</div>
+      <h2>Bạn đã ôn xong lượt hôm nay</h2>
+      <p>Các thẻ tiếp theo sẽ xuất hiện theo lịch ôn. Bạn có thể xem toàn bộ từ vựng để tiếp tục.</p>
+      <a href="?all=1">Xem toàn bộ từ vựng →</a>
+    {% endif %}
+  </section>
+{% endif %}
+</div>
+{% endblock %}

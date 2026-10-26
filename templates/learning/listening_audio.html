@@ -1,0 +1,41 @@
+<section class="listening-workspace" data-listening-player aria-label="Âm thanh bài luyện">
+  <div class="listening-workspace__heading">
+    <span class="listening-workspace__icon" aria-hidden="true">♫</span>
+    <div><span class="eyebrow">LISTENING STUDIO</span><h2>Nghe, hiểu và thử lại</h2><p>Nghe ở tốc độ phù hợp. Phát lại không làm mất câu trả lời.</p></div>
+  </div>
+  {% if question.audio_url %}
+    <div class="listening-media">
+      <label class="audio-label" for="audio-{{ question.id }}">Âm thanh bài học · dữ liệu mẫu dùng giọng tổng hợp</label>
+      <audio id="audio-{{ question.id }}" controls preload="metadata" src="{{ question.audio_url }}">Trình duyệt không phát được âm thanh.</audio>
+      <div class="listening-controls">
+        <button type="button" class="listening-control" data-audio-back disabled aria-controls="audio-{{ question.id }}">↶ Tua lại 10 giây</button>
+        <button type="button" class="listening-control" data-audio-replay disabled aria-controls="audio-{{ question.id }}">↻ Phát từ đầu</button>
+        <label class="listening-speed" for="speed-{{ question.id }}">Tốc độ
+          <select id="speed-{{ question.id }}" data-audio-rate aria-controls="audio-{{ question.id }}"><option value="0.75">0,75× · Chậm</option><option value="1" selected>1× · Bình thường</option><option value="1.25">1,25× · Nhanh</option></select>
+        </label>
+      </div>
+      <p class="listening-status" data-audio-status role="status" aria-live="polite">Bấm nút phát trên thanh âm thanh để bắt đầu.</p>
+      <p class="audio-error" data-audio-error hidden>Không tải được tệp nghe. Kiểm tra kết nối, dùng giọng đọc thiết bị nếu có, hoặc xem bản chép lời hỗ trợ bên dưới.</p>
+    </div>
+  {% endif %}
+  {% if question.audio_script %}
+    <div class="listening-player speech-fallback">
+      <div class="listening-player-copy"><strong>Giọng đọc thiết bị{% if question.audio_url %} · dự phòng{% endif %}</strong><span>Giọng và cách ngắt câu tùy trình duyệt.</span></div>
+      <div class="speech-fallback__controls">
+        <button class="listening-control" type="button" data-speak="{{ question.audio_script }}" aria-controls="speech-status-{{ question.id }}">▶ Nghe bằng giọng thiết bị</button>
+        <button class="listening-control" type="button" data-speech-stop hidden>Dừng giọng đọc</button>
+        <label class="listening-speed" for="speech-speed-{{ question.id }}">Tốc độ giọng đọc
+          <select id="speech-speed-{{ question.id }}" data-speech-rate><option value="0.75">0,75× · Chậm</option><option value="1" selected>1× · Bình thường</option><option value="1.25">1,25× · Nhanh</option></select>
+        </label>
+      </div>
+      <span class="speech-status" id="speech-status-{{ question.id }}" role="status" aria-live="polite" data-speech-status>Chọn giọng đọc thiết bị nếu cần. Đổi tốc độ có hiệu lực ở lần phát tiếp theo.</span>
+    </div>
+  {% endif %}
+  {% if question.transcript or question.audio_script %}
+    <details class="listening-transcript">
+      <summary>Bản chép lời hỗ trợ luyện tập</summary>
+      <p class="listening-support-note">Đọc bản chép lời giúp hiểu nội dung và có thể gợi ra đáp án. Đây là bài luyện có hỗ trợ, không phải bài thi chuẩn hóa.</p>
+      <div lang="en">{{ question.transcript|default:question.audio_script|linebreaks }}</div>
+    </details>
+  {% endif %}
+</section>

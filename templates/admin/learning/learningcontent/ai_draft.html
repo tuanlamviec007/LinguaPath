@@ -1,0 +1,9 @@
+{% extends 'admin/base_site.html' %}
+{% block content %}
+<p>Tạo 3 câu điền từ trắc nghiệm dựa trên ghi chú ngữ pháp tự biên soạn. Mỗi câu có 4 lựa chọn và giải thích tiếng Việt.</p>
+<p><strong>AI chỉ tạo bản nháp.</strong> Kiểm tra cấu trúc dữ liệu không chứng minh đáp án đúng hoặc chỉ có một cách hiểu. Người có chuyên môn cần rà soát câu, toàn bộ lựa chọn, lời giải và mức độ trước khi xuất bản.</p>
+<p>Dùng 1 lượt trong hạn mức AI tài khoản và toàn hệ thống; yêu cầu lỗi vẫn tính lượt, không tự retry. Nội dung hiện chưa có CEFR được kiểm định.</p>
+{% if not ai_available %}<p class="errornote">Workers AI đang tắt hoặc chưa được cấu hình. Bạn vẫn có thể quản lý và biên tập học liệu thủ công.</p>{% endif %}
+<form method="post">{% csrf_token %}{{ form.as_p }}<div class="submit-row"><input type="submit" value="Tạo 3 câu ở trạng thái nháp"></div></form>
+<p><a href="{% url 'admin:learning_learningcontent_changelist' %}">← Quay lại quản lý học liệu</a></p>
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Sổ lỗi cá nhân · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/mistake-review.css' %}">
+<section class="page-heading">
+  <span class="eyebrow">HỌC TỪ CÂU TRẢ LỜI SAI</span>
+  <h1>Sổ lỗi cá nhân</h1>
+  <p>Xem lại lời giải sau khi nộp bài, ghi nguyên nhân sai và thử lại một nhóm câu riêng. Lượt ôn không hiện đáp án trước khi bạn nộp.</p>
+  <p class="learner-level-note">{{ new_count }} mục cần ôn · {{ total_count }} mục trả lời sai đã lưu</p>
+</section>
+
+<section class="mistake-retry-panel" aria-labelledby="retry-title">
+  <div>
+    <span class="eyebrow">LUYỆN LẠI CÂU SAI</span>
+    <h2 id="retry-title">Thử sức thêm một lượt</h2>
+    <p>{% if active_review %}Bạn có một lượt đang làm dở. Tiếp tục để trả lời các câu đã chọn.{% else %}Còn {{ retry_count }} câu khác nhau có thể luyện lại. Mỗi lượt chọn tối đa 10 câu chưa ôn theo loại lỗi và mục tiêu TOEIC/IELTS đang chọn.{% endif %}</p>
+    {% if active_review and active_review.last_saved_at %}<p class="learner-level-note">Đã lưu {{ active_review.draft_answers|length }} / {{ active_review.question_count }} lựa chọn · {{ active_review.last_saved_at|date:"H:i, d/m" }}. Mở lại để tiếp tục từ bản nháp này.</p>{% endif %}
+  </div>
+  {% if active_review %}
+    <a class="button primary" href="{% url 'learning:take_mistake_review' active_review.id %}">Tiếp tục lượt ôn →</a>
+  {% elif retry_count %}
+    <form method="post" action="{% url 'learning:start_mistake_review' %}">
+      {% csrf_token %}
+      {% if category %}<input type="hidden" name="category" value="{{ category }}">{% endif %}
+      <button class="button primary" type="submit">Bắt đầu lượt ôn →</button>
+    </form>
+  {% else %}
+    <span class="mistake-retry-empty">Chưa có câu đủ điều kiện để luyện lại.</span>
+  {% endif %}
+</section>
+
+{% if recent_reviews %}
+<section class="mistake-history" aria-labelledby="history-title">
+  <h2 id="history-title">Lượt ôn gần đây</h2>
+  <ul>
+    {% for review in recent_reviews %}
+    <li><a href="{% url 'learning:mistake_review_result' review.id %}"><span>Lượt ôn ngày {{ review.submitted_at|date:"j M Y, H:i" }}</span><strong>{{ review.correct_count }} / {{ review.question_count }} đúng</strong></a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<form method="get" class="level-filter" aria-label="Lọc sổ lỗi">
+  <label for="mistake-state">Trạng thái</label>
+  <select id="mistake-state" name="state">
+    <option value="new"{% if state == 'new' %} selected{% endif %}>Cần ôn</option>
+    <option value="reviewed"{% if state == 'reviewed' %} selected{% endif %}>Đã ôn</option>
+    <option value="all"{% if state == 'all' %} selected{% endif %}>Tất cả</option>
+  </select>
+  <label for="mistake-category">Loại lỗi</label>
+  <select id="mistake-category" name="category">
+    <option value="">Tất cả loại lỗi</option>
+    {% for value, label in categories %}<option value="{{ value }}"{% if category == value %} selected{% endif %}>{{ label }}</option>{% endfor %}
+  </select>
+  <button class="button secondary" type="submit">Lọc</button>
+</form>
+
+{% if entries %}
+  <section class="mistake-list" aria-label="Các câu sai">
+    {% for entry in entries %}{% with evidence=entry.answer.evidence %}
+    <article class="panel mistake-entry">
+      <div class="panel-heading">
+        <div><span class="eyebrow">{{ evidence.content_title }} · {{ evidence.skill }}</span><h2>{{ evidence.question.prompt }}</h2></div>
+        {% if entry.reviewed_at %}<span class="pill task-done">Đã ôn</span>{% else %}<span class="pill">Cần ôn</span>{% endif %}
+      </div>
+      {% if evidence.question.passage %}<div class="passage">{{ evidence.question.passage|linebreaks }}</div>{% endif %}
+      {% if evidence.legacy %}<p role="note">Lượt luyện cũ chưa lưu bản gốc; nội dung bên dưới từ học liệu hiện tại và có thể đã thay đổi.</p>{% endif %}
+      {% if evidence.unavailable %}<p role="alert">Không thể đọc bản bằng chứng gốc; vui lòng liên hệ người quản lý để kiểm tra dữ liệu.</p>{% endif %}
+      <div class="mistake-answers">
+        {% if evidence.selected_option %}<p><b>Bạn đã chọn:</b> {{ evidence.selected_option.label }}. {{ evidence.selected_option.text }}</p>{% else %}<p><b>Bạn đã chọn:</b> Chưa trả lời</p>{% endif %}
+        {% for option in evidence.question.options %}{% if option.is_correct %}<p class="correct-answer"><b>Đáp án đúng:</b> {{ option.label }}. {{ option.text }}</p>{% endif %}{% endfor %}
+      </div>
+      <p class="explanation-text">{{ evidence.question.explanation_vi|default:evidence.question.explanation }}</p>
+      {% if entry.answer.question.content.content_type == 'listening' and not entry.answer.question.audio_url.strip %}
+        <div class="mistake-retry-panel" role="note"><p>Câu nghe này chưa có tệp âm thanh nên chưa thể đưa vào lượt luyện lại trong sổ lỗi.{% if entry.answer.question.audio_script.strip %} Bạn có thể mở bài gốc để luyện bằng tính năng đọc lời thoại của trình duyệt; giọng đọc có thể khác bản ghi âm.{% else %} Bạn có thể mở bài gốc để xem các phần học liệu đang có.{% endif %}</p><a class="button secondary" href="{% url 'learning:practice' entry.answer.question.content_id %}">Mở bài nghe gốc →</a></div>
+      {% endif %}
+      <a class="subtle-link" href="{% url 'tutor' %}?question_id={{ entry.answer.question_id }}">Hỏi trợ lý về câu hiện tại →</a>
+      <form method="post" action="{% url 'learning:update_mistake_entry' entry.id %}" class="mistake-review-form">
+        {% csrf_token %}
+        <label for="category-{{ entry.id }}">Loại lỗi</label>
+        <select id="category-{{ entry.id }}" name="category">
+          {% for value, label in categories %}<option value="{{ value }}"{% if entry.category == value %} selected{% endif %}>{{ label }}</option>{% endfor %}
+        </select>
+        <label for="note-{{ entry.id }}">Ghi chú của bạn</label>
+        <textarea id="note-{{ entry.id }}" name="learner_note" maxlength="1000" rows="2" placeholder="Ví dụ: Nhầm ngày giao hàng với ngày lắp đặt">{{ entry.learner_note }}</textarea>
+        <div class="mistake-review-actions">
+          <button class="button secondary" type="submit" name="review_action" value="save">Lưu ghi chú</button>
+          {% if entry.reviewed_at %}
+            <button class="button secondary" type="submit" name="review_action" value="reopen">Chuyển về cần ôn</button>
+          {% else %}
+            <button class="button primary" type="submit" name="review_action" value="mark_reviewed">Đánh dấu đã ôn</button>
+          {% endif %}
+        </div>
+      </form>
+    </article>
+    {% endwith %}{% endfor %}
+  </section>
+  {% if page_obj and page_obj.paginator.num_pages > 1 %}
+    <nav class="mistake-pagination" aria-label="Phân trang sổ lỗi">
+      {% if page_obj.has_previous %}<a class="button secondary" href="?state={{ state|urlencode }}&amp;category={{ category|urlencode }}&amp;page={{ page_obj.previous_page_number }}">← Trang trước</a>{% endif %}
+      <span>Trang {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+      {% if page_obj.has_next %}<a class="button secondary" href="?state={{ state|urlencode }}&amp;category={{ category|urlencode }}&amp;page={{ page_obj.next_page_number }}">Trang sau →</a>{% endif %}
+    </nav>
+  {% endif %}
+{% else %}
+  <section class="panel empty-state"><div aria-hidden="true">✓</div><h2>{% if state == 'new' %}Bạn đã ôn hết các câu sai{% else %}Chưa có câu sai trong mục này{% endif %}</h2><p>Sau khi nộp bài luyện có câu trả lời sai, câu hỏi sẽ tự xuất hiện trong sổ này.</p><a class="button secondary" href="{% url 'learning:practice_list' %}">Chọn bài luyện</a></section>
+{% endif %}
+{% endblock %}

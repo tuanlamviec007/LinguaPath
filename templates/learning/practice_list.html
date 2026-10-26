@@ -1,0 +1,103 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Thư viện bài luyện · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/practice-library.css' %}">
+<link rel="stylesheet" href="{% static 'css/learning-discovery.css' %}">
+
+<div class="practice-library">
+  <section class="library-hero" aria-labelledby="library-title">
+    <div class="library-hero-copy">
+      <span class="library-eyebrow">THỰC HÀNH CÓ GIẢI THÍCH</span>
+      <h1 id="library-title">Thư viện <em>bài luyện</em></h1>
+      <p>Chọn nội dung theo kỹ năng và trình độ, luyện từng phần rồi xem giải thích sau khi nộp bài.</p>
+    </div>
+    <div class="library-summary" aria-label="Tổng quan học liệu">
+      <div><strong>{{ total_content }}</strong><span>bài luyện</span></div>
+      <i aria-hidden="true"></i>
+      <div><strong>{{ total_questions }}</strong><span>câu hỏi</span></div>
+    </div>
+  </section>
+
+  <p class="library-notice" role="note">Học liệu là nội dung luyện tập tham khảo, không phải đề thi chính thức. Bài được AI rà soát sơ bộ chưa được giảng viên duyệt.</p>
+  <aside class="discovery-strip discovery-strip--practice" aria-label="Khởi động bằng quiz">
+    <span class="discovery-mark" aria-hidden="true">⚡</span>
+    <div><strong>Một thử thách nhỏ, thêm một bước tiến.</strong><p>Chọn chủ đề yêu thích và khởi động với quiz từ vựng ngắn.</p></div>
+    <a href="{% url 'learning:quiz_hub' %}{% if selected_level %}?level={{ selected_level }}{% endif %}">Khám phá quiz <span aria-hidden="true">→</span></a>
+  </aside>
+
+  <section class="library-toolbar" aria-label="Tìm và lọc bài luyện">
+    <div class="library-results">
+      <span class="library-eyebrow">DANH SÁCH HỌC LIỆU</span>
+      <p><strong>{{ filtered_count }}</strong> bài phù hợp{% if selected_skill or selected_level or selected_mode or search_term %} với bộ lọc{% else %} trong thư viện{% endif %}</p>
+    </div>
+    <form method="get" class="library-filters">
+      <label class="library-search-label" for="library-search">Tìm bài</label>
+      <input id="library-search" type="search" name="q" value="{{ search_term }}" placeholder="Tên bài hoặc chủ đề" maxlength="100">
+      <label for="library-skill">Kỹ năng</label>
+      <select id="library-skill" name="skill">
+        <option value="">Tất cả kỹ năng</option>
+        {% for value, label in skill_choices %}<option value="{{ value }}"{% if selected_skill == value %} selected{% endif %}>{{ label }}</option>{% endfor %}
+      </select>
+      <label for="library-level">Trình độ</label>
+      <select id="library-level" name="level">
+        <option value="">Tất cả mức</option>
+        {% for value, label in cefr_levels %}<option value="{{ value }}"{% if selected_level == value %} selected{% endif %}>{{ label }}</option>{% endfor %}
+      </select>
+      <label for="library-mode">Dạng từ vựng</label>
+      <select id="library-mode" name="mode">
+        <option value="">Tất cả dạng</option>
+        <option value="meaning"{% if selected_mode == 'meaning' %} selected{% endif %}>Chọn nghĩa trong câu</option>
+        <option value="cloze"{% if selected_mode == 'cloze' %} selected{% endif %}>Điền từ vào câu</option>
+      </select>
+      <button class="library-filter-button" type="submit">Lọc bài</button>
+      {% if selected_skill or selected_level or selected_mode or search_term %}<a class="library-clear" href="{% url 'learning:practice_list' %}">Xóa bộ lọc</a>{% endif %}
+    </form>
+  </section>
+
+  {% if content_list %}
+    <div class="library-grid">
+      {% for item in content_list %}
+        <article class="library-card">
+          <div class="library-card-top">
+            <span class="library-skill-icon skill-{{ item.skill }}" aria-hidden="true">{% if item.skill == 'listening' %}♫{% elif item.skill == 'vocabulary' %}Aa{% else %}▤{% endif %}</span>
+            <span class="library-exam">{{ item.exam_type }}</span>
+          </div>
+          <div class="library-tags">
+            <span class="skill-tag">{{ item.get_skill_display }}</span>
+            {% if item.cefr_level %}<span class="level-tag">CEFR {{ item.cefr_level }} · tham khảo</span>{% else %}<span class="level-tag">{{ item.get_difficulty_display }}</span>{% endif %}
+          </div>
+          <h2>{{ item.title }}</h2>
+          <p class="library-description">{{ item.description|default:'Luyện tập theo chủ đề, xem giải thích sau khi nộp bài.' }}</p>
+          <div class="library-card-meta" aria-label="Thông tin bài luyện">
+            <span><b aria-hidden="true">▤</b>{{ item.question_total }} câu hỏi</span>
+            <span><b aria-hidden="true">◷</b>{{ item.estimated_minutes }} phút</span>
+          </div>
+          <a class="library-card-cta" href="{% url 'learning:practice' item.id %}">Xem bài luyện <span aria-hidden="true">→</span></a>
+        </article>
+      {% endfor %}
+    </div>
+
+    {% if content_list.has_other_pages %}
+      <nav class="library-pagination" aria-label="Trang thư viện bài luyện">
+        {% if content_list.has_previous %}<a href="?page={{ content_list.previous_page_number }}{% if selected_skill %}&amp;skill={{ selected_skill|urlencode }}{% endif %}{% if selected_level %}&amp;level={{ selected_level|urlencode }}{% endif %}{% if selected_mode %}&amp;mode={{ selected_mode|urlencode }}{% endif %}{% if search_term %}&amp;q={{ search_term|urlencode }}{% endif %}">← Trước</a>{% else %}<span class="pagination-disabled">← Trước</span>{% endif %}
+        <span class="pagination-current">Trang {{ content_list.number }} / {{ content_list.paginator.num_pages }}</span>
+        {% if content_list.has_next %}<a href="?page={{ content_list.next_page_number }}{% if selected_skill %}&amp;skill={{ selected_skill|urlencode }}{% endif %}{% if selected_level %}&amp;level={{ selected_level|urlencode }}{% endif %}{% if selected_mode %}&amp;mode={{ selected_mode|urlencode }}{% endif %}{% if search_term %}&amp;q={{ search_term|urlencode }}{% endif %}">Tiếp theo →</a>{% else %}<span class="pagination-disabled">Tiếp theo →</span>{% endif %}
+      </nav>
+    {% endif %}
+  {% else %}
+    <section class="library-empty" aria-live="polite">
+      <span class="empty-mark" aria-hidden="true">{% if selected_skill or selected_level or selected_mode or search_term %}⌕{% else %}Aa{% endif %}</span>
+      {% if selected_skill or selected_level or selected_mode or search_term %}
+        <h2>Chưa tìm thấy bài phù hợp</h2>
+        <p>Thử đổi từ khóa hoặc chọn kỹ năng, trình độ khác.</p>
+        <a href="{% url 'learning:practice_list' %}">Xóa bộ lọc</a>
+      {% else %}
+        <h2>Thư viện đang được cập nhật</h2>
+        <p>Hiện chưa có bài luyện phù hợp với mục tiêu học tập của bạn.</p>
+        <a href="{% url 'learning:flashcards' %}">Ôn từ vựng trong lúc chờ →</a>
+      {% endif %}
+    </section>
+  {% endif %}
+</div>
+{% endblock %}

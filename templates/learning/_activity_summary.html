@@ -1,0 +1,24 @@
+<section class="panel activity-panel" aria-labelledby="activity-title">
+  <div class="journey-section-heading activity-heading">
+    <div><span class="eyebrow">NHỊP HỌC GẦN ĐÂY</span><h2 id="activity-title">Hoạt động 7 ngày</h2></div>
+    <div class="activity-streak"><span>Chuỗi ngày có học</span><strong>{{ activity.streak_days }}</strong><small>ngày</small></div>
+  </div>
+  <p class="activity-helper">Chuỗi được tính đến hôm nay; nếu hôm nay chưa có hoạt động, chuỗi gần nhất tính đến hôm qua. Thống kê tối đa 366 ngày gần nhất.</p>
+  <div class="activity-week" role="list" aria-label="Hoạt động từng ngày trong 7 ngày gần nhất">
+    {% for day in activity.days %}
+      <div class="activity-day{% if day.active %} is-active{% endif %}{% if day.today %} is-today{% endif %}" role="listitem" aria-label="{{ day.label }}: {{ day.attempts }} lượt luyện, {{ day.reviews }} lượt ôn từ, {{ day.mistake_reviews }} lượt ôn câu sai, {{ day.quizzes }} lượt quiz">
+        <span class="activity-day-label">{% if day.today %}Hôm nay{% else %}{{ day.label }}{% endif %}</span>
+        <span class="activity-day-mark" aria-hidden="true">{% if day.active %}✓{% else %}·{% endif %}</span>
+        <span class="activity-day-count">{{ day.attempts }} / {{ day.reviews }} / {{ day.mistake_reviews }} / {{ day.quizzes }}</span>
+      </div>
+    {% endfor %}
+  </div>
+  <p class="activity-count-key">Mỗi ngày: luyện bài / ôn từ / ôn câu sai / quiz</p>
+  <div class="activity-totals" aria-label="Tổng hoạt động trong 7 ngày">
+    <span><strong>{{ activity.active_days }}</strong> ngày có hoạt động</span>
+    <span><strong>{{ activity.submitted_attempts }}</strong> lượt luyện đã nộp</span>
+    <span><strong>{{ activity.review_events }}</strong> lượt ôn từ</span>
+    <span><strong>{{ activity.mistake_review_events }}</strong> lượt ôn câu sai</span>
+    <span><strong>{{ activity.quiz_events }}</strong> lượt quiz</span>
+  </div>
+</section>

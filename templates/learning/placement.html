@@ -1,0 +1,34 @@
+{% extends 'learning/base.html' %}
+{% block title %}Ước lượng vốn từ · LinguaPath{% endblock %}
+{% block content %}
+<section class="page-heading">
+  <span class="eyebrow">ĐÁNH GIÁ TỪ VỰNG</span>
+  <h1>Ước lượng vốn từ</h1>
+  <p>15 câu chọn nghĩa, mỗi nhóm học liệu A1–C1 có 3 câu. Kết quả gợi ý mức bắt đầu học từ vựng; bài chưa được hiệu chuẩn bằng pilot và không đánh giá đầy đủ năng lực CEFR.</p>
+  <p class="learner-level-note">Hồ sơ hiện tại: <strong>{{ profile.current_cefr }}</strong> · mục tiêu: <strong>{{ profile.target_cefr }}</strong></p>
+</section>
+<p class="content-review-note" role="note">Một phần học liệu có thể được AI hỗ trợ tạo; nội dung dạng này chỉ để tham khảo và chưa được giáo viên duyệt.</p>
+{% if ready %}
+<form method="post" class="placement-form">
+  {% csrf_token %}
+  {% for question in questions %}
+  <fieldset class="panel placement-question">
+    <legend><span class="eyebrow">CÂU {{ forloop.counter }}</span><strong>{{ question.term }}</strong></legend>
+    <p>Chọn nghĩa phù hợp nhất:</p>
+    <div class="placement-options">
+      {% for option in question.options %}
+      <label class="placement-option"><input type="radio" name="q_{{ question.index }}" value="{{ option.label }}" required><span><b>{{ option.label }}.</b> {{ option.meaning }}</span></label>
+      {% endfor %}
+    </div>
+  </fieldset>
+  {% endfor %}
+  <button class="button primary" type="submit">Nộp bài và xem kết quả</button>
+</form>
+{% else %}
+<section class="panel empty-state">
+  <h2>Chưa đủ học liệu cho bài xếp mức</h2>
+  <p>Admin cần xuất bản ít nhất 3 thẻ có nghĩa riêng cho mỗi cấp A1, A2, B1, B2 và C1, cùng tối thiểu 4 nghĩa khác nhau để tạo phương án nhiễu. Tạm thời, bạn có thể chọn mức gần đúng trong hồ sơ.</p>
+  <a class="button secondary" href="{% url 'learning_goal' %}">Tự chọn mức bắt đầu học</a>
+</section>
+{% endif %}
+{% endblock %}

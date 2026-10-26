@@ -1,0 +1,32 @@
+/* Scheduled typed checks describe recorded spacing, never proficiency. */
+.lp-due-note,.lp-due-panel { min-width:0; color:#365947; background:#f2f8ef; border:1px solid #d4e4cf; border-radius:17px; padding:21px; margin:20px 0; }
+.lp-due-note>strong { display:block; color:#2e5740; font-size:14px; }
+.lp-due-note p,.lp-due-panel>p { margin:10px 0 0; color:#4d6655; font-size:12px; line-height:1.85; }
+.lp-due-panel-heading { display:flex; justify-content:space-between; align-items:center; gap:15px; }
+.lp-due-panel h2 { margin:7px 0 0; color:#2e5740; font-size:21px; line-height:1.4; }
+.lp-due-mark { display:grid; place-items:center; flex:none; width:47px; height:47px; background:#e0ebd8; border-radius:15px; color:#466c48; font-size:30px; }
+.lp-due-panel>.button { margin-top:17px; }
+.lp-quiz-mode-card:has(input:disabled) { cursor:default; background:#f4f5f1; border-color:#e1e5dc; }
+.lp-quiz-mode-card:has(input:disabled) strong,.lp-quiz-mode-card:has(input:disabled) small { color:#697365; }
+.lp-due-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:20px 0; }
+.lp-due-stats>div { display:flex; flex-direction:column-reverse; gap:6px; padding:16px; background:#fffefa; border:1px solid #dde7d6; border-radius:13px; }
+.lp-due-stats dt { color:#50664f; font-size:12px; line-height:1.7; }
+.lp-due-stats dd { margin:0; color:#345943; font-size:26px; font-weight:750; line-height:1.4; }
+.lp-due-observations { display:grid; gap:0; list-style:none; padding:0; margin:20px 0 0; border-top:1px solid #d7e3d0; }
+.lp-due-observations li { display:grid; grid-template-columns:minmax(0,1fr) minmax(160px,.6fr); gap:16px; padding:16px 0; border-bottom:1px solid #d7e3d0; }
+.lp-due-observations strong { display:block; font-size:13px; overflow-wrap:anywhere; }
+.lp-due-observations span { display:block; color:#506951; font-size:11px; line-height:1.8; margin-top:5px; }
+.lp-due-observations p { margin:0; }
+.lp-due-correct { color:#2d6547; }
+.lp-due-excluded,.lp-due-incorrect { color:#7c592e; }
+.lp-archive-source.source-due { background:#edf5e8; color:#3d6344; border-color:#d5e3cc; }
+.lp-due-panel .panel-heading { align-items:flex-start; gap:16px; flex-wrap:wrap; }
+@media(max-width:620px) {
+  .lp-due-note,.lp-due-panel { padding:17px; border-radius:14px; }
+  .lp-due-panel h2 { font-size:19px; }
+  .lp-due-stats { grid-template-columns:1fr; gap:9px; }
+  .lp-due-stats>div { flex-direction:row; align-items:center; justify-content:space-between; gap:15px; padding:12px 14px; }
+  .lp-due-stats dd { flex:none; font-size:23px; }
+  .lp-due-observations li { grid-template-columns:minmax(0,1fr); gap:8px; padding:14px 0; }
+  .lp-due-note p,.lp-due-panel>p { font-size:12px; }
+}
