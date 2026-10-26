@@ -35,10 +35,12 @@ COPY --chown=lingua:lingua manage.py requirements.txt requirements.lock /app/
 # build-only values are placeholders and are not persisted as runtime ENV.
 RUN mkdir -p /app/staticfiles \
     && chown lingua:lingua /app/staticfiles \
+    && chmod +x /app/scripts/*.sh \
     && DJANGO_SECRET_KEY='build-only-placeholder-secret-key-not-for-runtime-0123456789' \
        DATABASE_URL='postgresql://build:build@127.0.0.1:5432/build' \
        python manage.py collectstatic --noinput
 
 USER lingua:lingua
 EXPOSE 8000
-ENTRYPOINT ["/app/scripts/start-production.sh"]
+ENTRYPOINT ["/bin/sh", "/app/scripts/start-production.sh"]
+
