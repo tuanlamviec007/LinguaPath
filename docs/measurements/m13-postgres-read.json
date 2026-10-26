@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "backend": "isolated PostgreSQL test database",
+  "measurements": [
+    {
+      "history_sessions": 10,
+      "logical_snapshot_bytes": 308010,
+      "visible_cards": 3000,
+      "weak_words": 15,
+      "select_queries": 5,
+      "history_payload_columns_selected": 0,
+      "read_samples_ms": [
+        178.17,
+        87.541,
+        173.378
+      ],
+      "median_read_ms": 173.378,
+      "plans": [
+        {
+          "node": "Limit",
+          "actual_rows": 1,
+          "shared_hit_blocks": 1,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.025
+        },
+        {
+          "node": "Limit",
+          "actual_rows": 0,
+          "shared_hit_blocks": 5,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.039
+        },
+        {
+          "node": "Sort",
+          "actual_rows": 3000,
+          "shared_hit_blocks": 83,
+          "shared_read_blocks": 0,
+          "execution_ms": 9.371
+        },
+        {
+          "node": "Seq Scan",
+          "actual_rows": 15,
+          "shared_hit_blocks": 2,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.099
+        },
+        {
+          "node": "Index Scan",
+          "actual_rows": 0,
+          "shared_hit_blocks": 1,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.024
+        }
+      ]
+    },
+    {
+      "history_sessions": 1000,
+      "logical_snapshot_bytes": 30801000,
+      "visible_cards": 3000,
+      "weak_words": 15,
+      "select_queries": 5,
+      "history_payload_columns_selected": 0,
+      "read_samples_ms": [
+        86.64,
+        169.295,
+        88.327
+      ],
+      "median_read_ms": 88.327,
+      "plans": [
+        {
+          "node": "Limit",
+          "actual_rows": 1,
+          "shared_hit_blocks": 1,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.031
+        },
+        {
+          "node": "Limit",
+          "actual_rows": 0,
+          "shared_hit_blocks": 3175,
+          "shared_read_blocks": 0,
+          "execution_ms": 1.254
+        },
+        {
+          "node": "Sort",
+          "actual_rows": 3000,
+          "shared_hit_blocks": 83,
+          "shared_read_blocks": 0,
+          "execution_ms": 9.255
+        },
+        {
+          "node": "Seq Scan",
+          "actual_rows": 15,
+          "shared_hit_blocks": 2,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.098
+        },
+        {
+          "node": "Index Scan",
+          "actual_rows": 0,
+          "shared_hit_blocks": 1,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.024
+        }
+      ]
+    },
+    {
+      "history_sessions": 5000,
+      "logical_snapshot_bytes": 154005000,
+      "visible_cards": 3000,
+      "weak_words": 15,
+      "select_queries": 5,
+      "history_payload_columns_selected": 0,
+      "read_samples_ms": [
+        94.127,
+        186.102,
+        93.539
+      ],
+      "median_read_ms": 94.127,
+      "plans": [
+        {
+          "node": "Limit",
+          "actual_rows": 1,
+          "shared_hit_blocks": 1,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.029
+        },
+        {
+          "node": "Limit",
+          "actual_rows": 0,
+          "shared_hit_blocks": 15860,
+          "shared_read_blocks": 0,
+          "execution_ms": 5.976
+        },
+        {
+          "node": "Sort",
+          "actual_rows": 3000,
+          "shared_hit_blocks": 83,
+          "shared_read_blocks": 0,
+          "execution_ms": 9.388
+        },
+        {
+          "node": "Seq Scan",
+          "actual_rows": 15,
+          "shared_hit_blocks": 3,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.103
+        },
+        {
+          "node": "Index Scan",
+          "actual_rows": 0,
+          "shared_hit_blocks": 1,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.027
+        }
+      ]
+    }
+  ],
+  "scope": "Synthetic materialized reads, warm samples; not production latency, concurrent load or rebuild throughput.",
+  "ci_run_id": 40301521253,
+  "commit": "6f59576a48c64cd60aee3791070cfd0ac57cede2"
+}

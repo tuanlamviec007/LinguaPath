@@ -9,10 +9,11 @@ lịch sử cá nhân. Cloudflare Containers chưa được triển khai.
 - Workspace `My Workspace` (`tea-dbfb042vcj2c73ffcqsg`), đã được người dùng xác nhận.
 - Render `linguapath-app`, service `srv-dbfgv95g1s2s73fpgpog`: Python 3.12,
   Free, Singapore; auto-deploy tắt, một Gunicorn worker, không có disk/database trả phí.
-- Deploy `dep-dbfgv9tg1s2s73fpgtfg` đã live lúc 08:33:52 UTC ngày 26/10/2026.
-- Mã ứng dụng đang chạy: `f374623aed339cb27eb17859c485f44f6bd6096f`, nhánh
+- Bản M13 deploy `dep-dbfi3joae00c7386c7e0` đã live lúc 16:49:26 giờ Việt Nam
+  (UTC+7) ngày 26/10/2026; bổ sung giao diện Daylight.
+- Mã ứng dụng đang chạy: `6f59576a48c64cd60aee3791070cfd0ac57cede2`, nhánh
   `deploy/render-neon` của `tuanlamviec007/LinguaPath`; chưa merge vào main.
-  Các sửa kiểm thử sau đó không thay đổi mã ứng dụng đang chạy.
+  Các cập nhật biên bản sau đó không thay đổi mã ứng dụng đang chạy.
 - Neon PostgreSQL 16, Free, Singapore: project `flat-sun-74939022`, branch
   `br-fancy-truth-azceaiwp`. DATABASE_URL và Django secret chỉ đặt trong môi trường
   dịch vụ; không lưu trong repository hay tài liệu này.
@@ -47,7 +48,15 @@ Thẻ 778 vẫn bị giữ, bộ 45 vẫn chưa xuất bản; không có tài kh
 - Container smoke trên PostgreSQL CI dùng một lần đạt: liveness/readiness,
   secure cookies, CSRF rejection, synthetic login và phiên sau restart.
   Đây là proxy TLS mô phỏng trong CI; không thay cho đăng nhập/restart production.
-- Các cập nhật tài liệu sau commit trên không thay đổi mã ứng dụng hoặc kiểm thử.
+- M13: [CI run 40301521253](https://github.com/tuanlamviec007/LinguaPath/actions/runs/40301521253)
+  đạt trên commit `6f59576a48c64cd60aee3791070cfd0ac57cede2`: **866/866 Django**
+  PostgreSQL không skip, **109/109 Node**, đầy đủ các bước build/smoke như trên.
+  D07 bổ sung phép đo 10/1.000/5.000 phiên tổng hợp; xem
+  [bằng chứng M13](DAYLIGHT_AUDIT_M13.md).
+- Sau rollout M13, trình duyệt xác minh màu CSS tính toán đúng bảng Daylight,
+  focus của skip-link đến main, lật thẻ bằng Enter, viền/ chữ input đăng ký và
+  `/healthz/` trả ok. Không tạo tài khoản thử hoặc ghi dữ liệu học trên production.
+- Các cập nhật tài liệu sau M13 không thay đổi mã ứng dụng hoặc kiểm thử.
 
 ## Giới hạn còn lại
 

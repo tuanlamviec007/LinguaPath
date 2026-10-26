@@ -47,3 +47,24 @@ Neon Free latency, toàn bộ trang HTTP hoặc restore/rollback production.
 U01 vẫn cần screen reader và thiết bị thật. D07 vẫn cần tải đồng thời và workload
 đại diện; chỉ ghi nhận phần query-plan/read scaling sau CI thực đạt. C01/C05 và
 placement/mastery cần người đủ chuyên môn, dữ liệu pilot; không tự teacher-approve.
+
+## Kết quả CI thực
+
+[CI run 40301521253](https://github.com/tuanlamviec007/LinguaPath/actions/runs/40301521253) đạt toàn bộ trên commit `6f59576a48c64cd60aee3791070cfd0ac57cede2`: 866 kiểm thử Django (không skip), 109 Node, migration/static/Worker dry-run/Docker và smoke CSRF/login/session sau restart.
+
+| Số phiên tổng hợp | JSON snapshot logic | SELECT | Median đọc (ms) | Thời gian kiểm tra receipt trong EXPLAIN (ms) |
+|---:|---:|---:|---:|---:|
+| 10 | 308010 byte | 5 | 173.378 | 0.039 |
+| 1000 | 30801000 byte | 5 | 88.327 | 1.254 |
+| 5000 | 154005000 byte | 5 | 94.127 | 5.976 |
+
+[Bản đo JSON](measurements/m13-postgres-read.json) ghi ba mẫu và chỉ số plan. Không chọn cột payload ở cả ba mốc. Truy vấn kiểm tra thiếu receipt vẫn duyệt metadata lịch sử: shared-hit blocks tăng 5 → 3.175 → 15.860; không được mô tả toàn read path là O(1). Kho 3.000 thẻ được đọc ở mỗi lần; cần workload đại diện trước tối ưu tiếp. Các mẫu có nhiễu CPU/cache, không dùng làm cam kết latency hoặc kết luận nhanh hơn bản cũ.
+
+## Nghiệm thu website sau rollout
+
+Render đã live commit `6f59576a48c64cd60aee3791070cfd0ac57cede2` ngày 26/10/2026,
+16:49:26 giờ Việt Nam. Trình duyệt thật xác nhận nền #fafcff, nút #4162d9,
+thẻ giới thiệu pastel; ô nhập trắng với viền #8393b1. Skip-link chuyển focus tới
+main; Enter lật thẻ và cập nhật vùng mặt sau được truy cập. Form đăng ký hiển thị
+và `/healthz/` trả ok. Đã lưu ảnh trang chủ sau rollout; không đăng nhập/tạo dữ liệu
+thử trên production. Thiết bị thật, screen reader và tải đồng thời vẫn chưa nghiệm thu.
