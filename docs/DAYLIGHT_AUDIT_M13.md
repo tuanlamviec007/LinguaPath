@@ -20,8 +20,9 @@ Tỷ lệ tương phản đo bằng công thức relative luminance sRGB, trư�
 | Chữ phụ #63718a / trắng | 4,93:1 |
 | Link #4162c5 / thẻ #edf5ff | 5,06:1 |
 | Nhãn form #495e82 / trắng | 6,55:1 |
+| Viền input #8393b1 / trắng | 3,10:1 |
 
-Các cặp trên đạt 4,5:1; đây không phải tuyên bố toàn website đạt WCAG hoặc
+Các cặp chữ trên đạt 4,5:1; viền input đạt 3:1 cho thành phần phi văn bản; đây không phải tuyên bố toàn website đạt WCAG hoặc
 đã được kiểm tra bằng screen reader/điện thoại thật.
 
 ## D07: kiểm tra đọc projection trên PostgreSQL

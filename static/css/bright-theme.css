@@ -69,7 +69,7 @@ body.lingua-body {
 .lingua-body :is(input, select, textarea):not([type=radio]):not([type=checkbox]):not([type=hidden]) {
   background-color: #fff;
   color: #344566;
-  border-color: #d4dff2;
+  border-color: #8393b1;
 }
 .lingua-body :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
   outline-color: #4162d9;
