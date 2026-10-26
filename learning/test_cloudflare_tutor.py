@@ -221,6 +221,7 @@ class AdminAIDraftTests(TestCase):
         self.client.force_login(self.admin)
         self.url = reverse('admin:learning_learningcontent_ai_draft')
 
+    @override_settings(AI_TUTOR_ENABLED=True)
     def test_only_complete_generation_saves_an_unpublished_unapproved_draft(self):
         with patch('learning.admin.provider_name', return_value='cloudflare'), patch('learning.admin.tutor_ai_available', return_value=True), patch('learning.admin.generate_cloudflare_answer', return_value=valid_draft()) as generate:
             response = self.client.post(self.url, {'topic': 'despite-although'})
@@ -237,6 +238,7 @@ class AdminAIDraftTests(TestCase):
         self.assertEqual(generate.call_args.kwargs, {'task': 'draft_part5'})
         self.assertNotIn(content, self.client.get(reverse('tutor')).context['recommended_practice'])
 
+    @override_settings(AI_TUTOR_ENABLED=True)
     def test_malformed_or_duplicate_output_rolls_back_and_never_publishes(self):
         payload = json.loads(valid_draft())
         payload['questions'][1]['options']['B'] = 'calm'

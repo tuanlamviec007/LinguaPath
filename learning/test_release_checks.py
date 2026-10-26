@@ -93,8 +93,10 @@ class ProductionReleaseCheckTests(SimpleTestCase):
             self.assertTrue(self.evaluate()['ready'])
 
     def test_postgresql_is_required_even_with_other_settings_valid(self):
-        with patch('config.release_checks.check_schema_ready'), \
+        with patch('config.release_checks.connection') as conn, \
+             patch('config.release_checks.check_schema_ready'), \
              patch('learning.management.commands.check_weak_word_outcomes.projection_ready', return_value=True):
+            conn.vendor = 'sqlite'
             report = evaluate_release()
         self.assertIn('postgresql_backend', report['blocked'])
 

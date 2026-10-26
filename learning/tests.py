@@ -1,7 +1,7 @@
 from datetime import timedelta
 from django.contrib.auth import get_user_model
 from django.core.management import call_command
-from django.test import TestCase
+from django.test import TestCase, override_settings
 from django.urls import reverse
 from django.utils import timezone
 from pathlib import Path
@@ -371,6 +371,7 @@ class TutorRetrievalTests(TestCase):
         self.assertEqual(evidence[0]['source'], 'Cartridge schedule')
         self.assertIn('Thursday', evidence[0]['text'])
 
+    @override_settings(AI_TUTOR_ENABLED=True)
     def test_llm_receives_limited_lesson_context_and_returns_source(self):
         from . import ai
         AnswerOption.objects.create(question=self.question, label='A', text='Thursday', is_correct=True,

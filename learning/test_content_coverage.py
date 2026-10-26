@@ -98,7 +98,8 @@ class ContentCoverageTests(TestCase):
             report = content_coverage()
         self.assertEqual(len(queries), 3)
         for query in queries:
-            self.assertTrue(query['sql'].lstrip().upper().startswith('SELECT'))
+            # PostgreSQL iterator() declares a read-only server-side SELECT cursor.
+            self.assertRegex(query['sql'].lstrip().upper(), r'^(?:SELECT\b|DECLARE "[^"]+"(?: NO SCROLL| SCROLL)? CURSOR(?: WITH HOLD)? FOR SELECT\b)')
             for forbidden in ('learning_tutorturn', 'auth_user', 'practiceattempt', 'vocabularyquizsession'):
                 self.assertNotIn(forbidden, query['sql'].lower())
         encoded = json.dumps(report)
