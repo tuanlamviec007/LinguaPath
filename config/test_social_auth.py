@@ -36,12 +36,25 @@ with patch('requests.sessions.Session.request',side_effect=AssertionError('Unexp
 assert resolve('/accounts/login/').url_name=='login'
 assert resolve('/social/login/').url_name=='account_login'
 assert c.get('/social/password/reset/').status_code==404
+for url in ('/social/facebook/login/', '/social/facebook/login/callback/'):
+ response=c.get(url)
+ assert response.status_code==503
+ assert 'Phương thức này chưa sẵn sàng' in response.content.decode()
+ assert 'no-store' in response.get('Cache-Control','')
+for url, status, text in [('/social/3rdparty/login/error/', 401, 'Chưa thể đăng nhập'),
+                  ('/social/3rdparty/login/cancelled/', 200, 'Bạn đã hủy đăng nhập')]:
+ response=c.get(url)
+ assert response.status_code==status
+ assert text in response.content.decode()
+ assert 'Quay lại đăng nhập' in response.content.decode()
+ assert '_auth_user_id' not in c.session
 print('social-guards-passed')
 '''
         env=os.environ.copy()
         env.update(DJANGO_SETTINGS_MODULE='config.settings', DJANGO_DEBUG='true',
             DATABASE_URL='sqlite:///:memory:', SOCIAL_AUTH_ENABLED='true',
             GOOGLE_CLIENT_ID='synthetic-client', GOOGLE_CLIENT_SECRET='synthetic-secret',
+            FACEBOOK_CLIENT_ID='', FACEBOOK_CLIENT_SECRET='',
             DJANGO_ALLOWED_HOSTS='testserver', AI_TUTOR_ENABLED='false')
         result=subprocess.run([sys.executable,'-c',code],env=env,
             cwd=Path(__file__).resolve().parent.parent,capture_output=True,text=True,timeout=40)
