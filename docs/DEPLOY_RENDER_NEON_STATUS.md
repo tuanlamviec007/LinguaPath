@@ -20,12 +20,10 @@ không được coi là release sẵn sàng khi còn thiếu snapshot học li�
 
 ## Điều kiện còn thiếu
 
-1. Render trả về workspace `My Workspace` của tài khoản đã kết nối nhưng chưa có workspace
-   được người dùng xác nhận. Theo yêu cầu công cụ Render, chưa tạo dịch vụ trong workspace này.
-2. Automatic approval review từ chối tải snapshot học liệu đầy đủ lên GitHub công khai
-   vì chưa có chấp thuận rõ cho việc công bố dữ liệu tới repository đó.
-   `initial_content.json.gz` chưa được đưa lên GitHub. Mã bootstrap cố ý báo lỗi nếu
-   chưa có snapshot; không phục vụ kho rỗng hoặc tạo dữ liệu thay thế để giả thành hoàn tất.
+1. Workspace `My Workspace` đã được người dùng xác nhận ngày 26/10/2026.
+2. Người dùng đã cho phép công bố snapshot học liệu lên repository công khai
+   `tuanlamviec007/LinguaPath`. Snapshot đã được tải lên, đúng hash manifest.
+   Mã bootstrap vẫn báo lỗi nếu thiếu snapshot hoặc hash/số lượng không khớp.
 3. Chưa chạy build/deploy Render, nghiệm thu HTTPS/CSRF/session, restart hoặc PostgreSQL
    concurrency. Kết nối TCP từ môi trường cục bộ tới Neon chưa thực hiện được;
    truy vấn qua kết nối Neon thành công không thay cho kiểm thử Django với PostgreSQL.
