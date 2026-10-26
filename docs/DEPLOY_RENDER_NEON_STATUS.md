@@ -9,9 +9,9 @@ lịch sử cá nhân. Cloudflare Containers chưa được triển khai.
 - Workspace `My Workspace` (`tea-dbfb042vcj2c73ffcqsg`), đã được người dùng xác nhận.
 - Render `linguapath-app`, service `srv-dbfgv95g1s2s73fpgpog`: Python 3.12,
   Free, Singapore; auto-deploy tắt, một Gunicorn worker, không có disk/database trả phí.
-- Bản M13 deploy `dep-dbfi3joae00c7386c7e0` đã live lúc 16:49:26 giờ Việt Nam
-  (UTC+7) ngày 26/10/2026; bổ sung giao diện Daylight.
-- Mã ứng dụng đang chạy: `6f59576a48c64cd60aee3791070cfd0ac57cede2`, nhánh
+- Bản M14 deploy `dep-dbfik8u7bikc73dn3q3g` đã live lúc 17:24:29 giờ Việt Nam
+  (UTC+7) ngày 26/10/2026; tối ưu nạp SDK, thẻ và tài nguyên khách, giữ theme Daylight.
+- Mã ứng dụng đang chạy: `57e422bed2243fe045821d43aab6d0397fe45eac`, nhánh
   `deploy/render-neon` của `tuanlamviec007/LinguaPath`; chưa merge vào main.
   Các cập nhật biên bản sau đó không thay đổi mã ứng dụng đang chạy.
 - Neon PostgreSQL 16, Free, Singapore: project `flat-sun-74939022`, branch
@@ -70,3 +70,16 @@ Thẻ 778 vẫn bị giữ, bộ 45 vẫn chưa xuất bản; không có tài kh
 - AI inference tắt; tra cứu học liệu nội bộ vẫn hoạt động. Không gọi model thật.
 - Triển khai không đóng các mục audit cần giáo viên duyệt, pilot người học,
   benchmark AI/semantic retrieval, backup/restore và kiểm tra thiết bị thực tế.
+
+## M14: tối ưu và dự toán chi phí
+
+- [CI 40306276885](https://github.com/tuanlamviec007/LinguaPath/actions/runs/40306276885)
+  đạt trên commit đang live:869 Django PostgreSQL không skip,109 Node, đầy đủ build/smoke.
+- Meaning reader chỉ hydrate thẻ có bằng chứng; fixture3.000 thẻ/15 từ hydrate15 hàng,
+  vẫn5 SELECT. Recall giữ toàn cue khi cần. Xem [bản đo M14](PERFORMANCE_M14.md).
+- Production guest homepage: stylesheet7 →5, không còn3 asset gamification/bookmark;
+  controller lật thẻ vẫn chạy bằng Enter. `/healthz/` trả ok sau rollout.
+- SDK OpenAI chỉ nạp lúc inference; AI production vẫn tắt. Không có migration hoặc
+  tạo dữ liệu học thử trên production. Startup/bootstrap không ghi đè dữ liệu cũ.
+- [Dự toán hạ tầng](HOSTING_COSTS_2026-10-26.md) phân biệt Free,7USD web và compute
+  Neon theo giờ; không nâng cấp hoặc mua tài nguyên trong đợt này.

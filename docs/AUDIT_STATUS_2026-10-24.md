@@ -1,6 +1,6 @@
 # Trạng thái thực hiện audit LinguaPath
 
-Đối chiếu **33 mã phát hiện** trong `AUDIT_PLAN_2026-10-23.md`, cập nhật **26/10/2026** sau M1–M13 và triển khai Render + Neon. **Chưa hoàn tất toàn bộ audit.** “Đã sửa cục bộ” là có mã và regression đạt, không thay cho các điều kiện PostgreSQL, thiết bị thật, chuyên môn hoặc production ghi riêng.
+Đối chiếu **33 mã phát hiện** trong `AUDIT_PLAN_2026-10-23.md`, cập nhật **26/10/2026** sau M1–M14 và triển khai Render + Neon. **Chưa hoàn tất toàn bộ audit.** “Đã sửa cục bộ” là có mã và regression đạt, không thay cho các điều kiện PostgreSQL, thiết bị thật, chuyên môn hoặc production ghi riêng.
 
 | Mã | Trạng thái | Bằng chứng / việc còn lại |
 |---|---|---|
@@ -10,7 +10,7 @@
 | D04 | Đã sửa cục bộ · M1 | Early Hard không đẩy lịch/khoảng ôn xa; giữ relearning Again. |
 | D05 | Đã sửa cục bộ · M1 | Giữ task done, trừ phút đã học, chỉ replan khi trường liên quan đổi. |
 | D06 | Đã sửa cục bộ · M1 | SQL aggregate, order/pagination/link practice history. |
-| D07 | M13 có bằng chứng PG; load thực còn mở | CI 40301521253 đo 10/1.000/5.000 phiên, 3.000 thẻ: 5 SELECT, không chọn payload lịch sử; có EXPLAIN ANALYZE BUFFERS. Kiểm tra receipt vẫn quét metadata tăng theo số phiên; chưa load đồng thời/Neon thực. Xem DAYLIGHT_AUDIT_M13.md. |
+| D07 | M14 giảm hydrate; load thực còn mở | CI 40306276885, 10/1.000/5.000 phiên meaning: 5 SELECT, hydrate15 thẻ liên quan thay vì3.000, không chọn payload; EXPLAIN ANALYZE BUFFERS. Recall giữ toàn cue để chặn mơ hồ. Receipt vẫn quét metadata; chưa load đồng thời/Neon thực. Xem PERFORMANCE_M14.md. |
 | S01 | Đã triển khai · M2; proxy thực chưa nghiệm thu | DB auth quota sau CSRF, fail closed, không khóa username toàn cục. Cần xác minh peer/header/IP thật ở Cloudflare. |
 | S02 | Đã sửa cục bộ · M2 | Import kiểm tra quyền parent và khóa nhất quán; Bộ PostgreSQL lock tests đã chạy và đạt trong CI 40294128144. |
 | S03 | Đã triển khai cục bộ · M2/M4; lifecycle ngoài DB còn mở | private/no-store; privacy center xuất/xóa có mật khẩu, CSRF, quota, giới hạn export và ownership. Retention backup/provider/log hạ tầng cần cấu hình vận hành. |
@@ -31,7 +31,7 @@
 | U02 | Đã sửa cục bộ · M2 | Rating flashcard giữ filter/page/context, allowlist redirect. |
 | U03 | Đã sửa cục bộ · M2 | Đổi nguồn quiz giữ mode/level/topic/count, có no-JS hướng dẫn. |
 | O01 | Render live; CI smoke đạt; vận hành còn mở | HTTPS/trang chủ/form/health đã kiểm tra trên Render + Neon. CI PostgreSQL/Docker/CSRF/login/cookie/session sau restart đạt. Chưa auth/quiz/restart production, backup/restore PostgreSQL, load, rollback biên bản hoặc Cloudflare staging. |
-| O02 | Repository/CI thực đã đạt | GitHub tuanlamviec007/LinguaPath; CI 40301521253 trên 6f59576a: 866 Django PostgreSQL, 109 Node, migration/static/Worker dry-run/Docker/runtime smoke đạt. Render đã live theme M13 tại commit 6f59576a, auto-deploy vẫn tắt; biên bản trong DEPLOY_RENDER_NEON_STATUS.md. |
+| O02 | Repository/CI thực đã đạt | GitHub tuanlamviec007/LinguaPath; CI 40306276885 trên 57e422be:869 Django PostgreSQL,109 Node, migration/static/Worker dry-run/Docker/runtime smoke đạt. Render đã live M14 tại57e422be, auto-deploy vẫn tắt; biên bản trong DEPLOY_RENDER_NEON_STATUS.md. |
 | O03 | Đã sửa cục bộ · M1/M4/M8 | Tách livez/healthz; startup bắt buộc check_release cho config production/schema/projection trước Gunicorn. Có test chặn khởi động khi gate lỗi; không tự migrate/backfill. |
 | O04 | Mã log/runbook có · M4; collector còn mở | UUID và allowlist/redaction Django/Gunicorn/Worker, probe/ngưỡng đề xuất. Chưa collector/retention/alert owner/delivery. |
 | O05 | Lock/hash, build/run Docker đã đạt; digest còn mở | 25 package Linux/Python3.12; hash install, Docker build và runtime smoke đạt trong CI 40294128144. Chưa pin base/service image digest. |

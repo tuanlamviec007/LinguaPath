@@ -1,0 +1,165 @@
+{
+  "version": 2,
+  "backend": "isolated PostgreSQL test database",
+  "measurements": [
+    {
+      "history_sessions": 10,
+      "logical_snapshot_bytes": 308010,
+      "visible_cards": 3000,
+      "bank_rows_hydrated": 15,
+      "weak_words": 15,
+      "select_queries": 5,
+      "history_payload_columns_selected": 0,
+      "read_samples_ms": [
+        11.501,
+        9.759,
+        9.598
+      ],
+      "median_read_ms": 9.759,
+      "plans": [
+        {
+          "node": "Limit",
+          "actual_rows": 1,
+          "shared_hit_blocks": 1,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.017
+        },
+        {
+          "node": "Limit",
+          "actual_rows": 0,
+          "shared_hit_blocks": 5,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.032
+        },
+        {
+          "node": "Nested Loop",
+          "actual_rows": 15,
+          "shared_hit_blocks": 288,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.228
+        },
+        {
+          "node": "Nested Loop",
+          "actual_rows": 0,
+          "shared_hit_blocks": 1,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.019
+        },
+        {
+          "node": "Sort",
+          "actual_rows": 15,
+          "shared_hit_blocks": 132,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.671
+        }
+      ]
+    },
+    {
+      "history_sessions": 1000,
+      "logical_snapshot_bytes": 30801000,
+      "visible_cards": 3000,
+      "bank_rows_hydrated": 15,
+      "weak_words": 15,
+      "select_queries": 5,
+      "history_payload_columns_selected": 0,
+      "read_samples_ms": [
+        11.473,
+        10.877,
+        10.687
+      ],
+      "median_read_ms": 10.877,
+      "plans": [
+        {
+          "node": "Limit",
+          "actual_rows": 1,
+          "shared_hit_blocks": 1,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.019
+        },
+        {
+          "node": "Limit",
+          "actual_rows": 0,
+          "shared_hit_blocks": 3175,
+          "shared_read_blocks": 0,
+          "execution_ms": 1.131
+        },
+        {
+          "node": "Nested Loop",
+          "actual_rows": 15,
+          "shared_hit_blocks": 288,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.206
+        },
+        {
+          "node": "Nested Loop",
+          "actual_rows": 0,
+          "shared_hit_blocks": 1,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.019
+        },
+        {
+          "node": "Sort",
+          "actual_rows": 15,
+          "shared_hit_blocks": 132,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.65
+        }
+      ]
+    },
+    {
+      "history_sessions": 5000,
+      "logical_snapshot_bytes": 154005000,
+      "visible_cards": 3000,
+      "bank_rows_hydrated": 15,
+      "weak_words": 15,
+      "select_queries": 5,
+      "history_payload_columns_selected": 0,
+      "read_samples_ms": [
+        16.634,
+        15.877,
+        14.955
+      ],
+      "median_read_ms": 15.877,
+      "plans": [
+        {
+          "node": "Limit",
+          "actual_rows": 1,
+          "shared_hit_blocks": 1,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.016
+        },
+        {
+          "node": "Limit",
+          "actual_rows": 0,
+          "shared_hit_blocks": 15860,
+          "shared_read_blocks": 0,
+          "execution_ms": 5.52
+        },
+        {
+          "node": "Nested Loop",
+          "actual_rows": 15,
+          "shared_hit_blocks": 289,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.208
+        },
+        {
+          "node": "Nested Loop",
+          "actual_rows": 0,
+          "shared_hit_blocks": 1,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.017
+        },
+        {
+          "node": "Sort",
+          "actual_rows": 15,
+          "shared_hit_blocks": 132,
+          "shared_read_blocks": 0,
+          "execution_ms": 0.645
+        }
+      ]
+    }
+  ],
+  "scope": "Synthetic materialized reads, warm samples; not production latency, concurrent load or rebuild throughput.",
+  "ci_run_id": 40306276885,
+  "commit": "57e422bed2243fe045821d43aab6d0397fe45eac"
+}
