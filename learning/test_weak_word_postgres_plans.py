@@ -87,11 +87,16 @@ class WeakWordPostgresReadPlanTests(TestCase):
                             'shared_hit_blocks': root.get('Shared Hit Blocks', 0),
                             'shared_read_blocks': root.get('Shared Read Blocks', 0),
                             'execution_ms': document['Execution Time']})
+                # The final SELECT hydrates the learner's 15 candidate cards,
+                # rather than all 3,000 cards in the visible vocabulary bank.
+                self.assertIn('learning_flashcard', queries[-1][0])
+                self.assertEqual(plans[-1]['actual_rows'], 15)
                 measurements.append({'history_sessions': history_count,
                     'logical_snapshot_bytes': snapshot_bytes * history_count,
-                    'visible_cards': 3000, 'weak_words': 15, 'select_queries': len(queries),
+                    'visible_cards': 3000, 'bank_rows_hydrated': plans[-1]['actual_rows'],
+                    'weak_words': 15, 'select_queries': len(queries),
                     'history_payload_columns_selected': 0, 'read_samples_ms': samples,
                     'median_read_ms': round(statistics.median(samples), 3), 'plans': plans})
-        print('\nD07_POSTGRES_READ_PLAN ' + json.dumps({'version': 1,
+        print('\nD07_POSTGRES_READ_PLAN ' + json.dumps({'version': 2,
             'backend': 'isolated PostgreSQL test database', 'measurements': measurements,
             'scope': 'Synthetic materialized reads, warm samples; not production latency, concurrent load or rebuild throughput.'}))

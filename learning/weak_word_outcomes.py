@@ -245,25 +245,19 @@ def materialized_weak_word_summary(user, exam_type, *, visible_bank=None, recall
     if (state['version'] != PROJECTION_VERSION or not state['ready'] or state['needs_rebuild']
             or histories.filter(weak_word_receipt__isnull=True).exists()):
         return empty | {'ready': False, 'needs_backfill': True}
-    if visible_bank is None:
-        visible_bank = with_saved_flags(Flashcard.objects.filter(is_available=True, content__exam_type=exam_type,
-            content__content_type='vocabulary', content__is_published=True,
-            content__review_status__in=LEARNER_REVIEW_STATUSES).exclude(term='').exclude(meaning_vi=''), user)
-        cards = {card.pk: card for card in visible_bank}
-    else:
-        supplied = {card.pk: card for card in visible_bank}
-        # A caller may reuse an annotated bank loaded before an editorial hold.
-        # Recheck availability in SQL rather than trusting stale object flags.
-        available_ids = set(Flashcard.objects.learner_visible(exam_type).filter(
-            pk__in=supplied, content__content_type='vocabulary').exclude(term='').exclude(
-                meaning_vi='').values_list('pk', flat=True))
-        cards = {pk: card for pk, card in supplied.items() if pk in available_ids}
-    if not cards:
-        return empty
-    identities = {pk: word_identity(card.term, card.meaning_vi) for pk, card in cards.items()}
+    exam_bank = Flashcard.objects.filter(is_available=True, content__exam_type=exam_type,
+        content__content_type='vocabulary', content__is_published=True,
+        content__review_status__in=LEARNER_REVIEW_STATUSES).exclude(term='').exclude(meaning_vi='')
+    eligible = exam_bank
+    supplied = None if visible_bank is None else {card.pk: card for card in visible_bank}
+    if supplied is not None:
+        # Caller annotations can be reused, but editorial holds must be checked
+        # against the database rather than trusting a previously loaded bank.
+        eligible = eligible.filter(pk__in=supplied)
+    eligible_ids = eligible.values('pk')
     groups = {}
     values = (*GROUP_FIELDS, 'last_attempt_at', 'last_quiz_id', 'is_wrong', 'wrong_count')
-    for row in Outcome.objects.filter(user_id=user.pk, exam_type=exam_type, card_id__in=cards).values(*values).iterator(chunk_size=200):
+    for row in Outcome.objects.filter(user_id=user.pk, exam_type=exam_type, card_id__in=eligible_ids).values(*values).iterator(chunk_size=200):
         if row['last_attempt_at'] > now:
             # A backwards wall-clock can make an already-folded outcome lie in
             # the future. Do not infer an earlier state from the newest row;
@@ -273,7 +267,7 @@ def materialized_weak_word_summary(user, exam_type, *, visible_bank=None, recall
     # These rows exist only for imported future dates. They stay separate from
     # normal counters, and become eligible without touching a quiz snapshot.
     for row in Pending.objects.filter(user_id=user.pk, exam_type=exam_type,
-            card_id__in=cards, submitted_at__lte=now).values(
+            card_id__in=eligible_ids, submitted_at__lte=now).values(
                 *GROUP_FIELDS, 'submitted_at', 'quiz_id', 'is_wrong').iterator(chunk_size=200):
         key = (row['card_id'], row['identity_hash'], row['group_key'])
         current = groups.get(key)
@@ -284,14 +278,32 @@ def materialized_weak_word_summary(user, exam_type, *, visible_bank=None, recall
             current['wrong_count'] += int(row['is_wrong'])
             if (row['submitted_at'], row['quiz_id']) > (current['last_attempt_at'], current['last_quiz_id']):
                 current.update(last_attempt_at=row['submitted_at'], last_quiz_id=row['quiz_id'], is_wrong=row['is_wrong'])
+    if not groups:
+        return empty
+    # Hydrate only words represented in this learner's projection. Ordinary
+    # multiple-choice reads no longer instantiate the entire exam vocabulary.
+    candidate_ids = {row['card_id'] for row in groups.values()}
+    needs_recall_bank = recall_index is None and any(row['mode'] == 'recall' for row in groups.values())
+    if needs_recall_bank:
+        # Recall safety needs every visible cue, including words with no outcome.
+        # Reuse this single bank SELECT for both checks to retain the five-query
+        # budget; ordinary meaning quizzes take the smaller candidate-only path.
+        current_bank = list(with_saved_flags(exam_bank, user))
+        recall_index = RecallPromptIndex(current_bank, exam_type)
+        cards = {card.pk: card if supplied is None else supplied[card.pk]
+                 for card in current_bank if card.pk in candidate_ids}
+    elif supplied is None:
+        cards = {card.pk: card for card in with_saved_flags(eligible.filter(pk__in=candidate_ids), user)}
+    else:
+        available_ids = eligible.filter(pk__in=candidate_ids).values_list('pk', flat=True)
+        cards = {pk: supplied[pk] for pk in available_ids}
+    identities = {pk: word_identity(card.term, card.meaning_vi) for pk, card in cards.items()}
     states = {}
     for row in groups.values():
         card_id = row['card_id']
-        if row['identity_hash'] != identities[card_id]:
+        if row['identity_hash'] != identities.get(card_id):
             continue
         if row['mode'] == 'recall':
-            if recall_index is None:
-                recall_index = RecallPromptIndex(cards.values(), exam_type)
             if not recall_index.allows(row):
                 continue
         current = states.get(card_id)

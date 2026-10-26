@@ -11,8 +11,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/app.css' %}">
   <link rel="stylesheet" href="{% static 'css/design-system.css' %}">
-  <link rel="stylesheet" href="{% static 'css/gamification.css' %}">
-  <link rel="stylesheet" href="{% static 'css/saved-words.css' %}">
+  {% if user.is_authenticated %}
+    <link rel="stylesheet" href="{% static 'css/gamification.css' %}">
+    <link rel="stylesheet" href="{% static 'css/saved-words.css' %}">
+  {% endif %}
   <link rel="stylesheet" href="{% static 'css/bright-theme.css' %}">
 </head>
 <body class="lingua-body">
@@ -95,7 +97,7 @@
   </div>
   <script src="{% static 'js/app.js' %}" defer></script>
   <script src="{% static 'js/navigation.js' %}" defer></script>
-  <script src="{% static 'js/saved-words.js' %}" defer></script>
+  {% if user.is_authenticated %}<script src="{% static 'js/saved-words.js' %}" defer></script>{% endif %}
   <noscript><div class="noscript-note">Một số tương tác học tập cần bật JavaScript trên trình duyệt.</div></noscript>
 </body>
 </html>
