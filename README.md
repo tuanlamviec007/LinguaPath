@@ -1,5 +1,10 @@
 # LinguaPath — website luyện TOEIC có lộ trình cá nhân
 
+**Triển khai Django đầy đủ:** đã bổ sung [cấu hình Render Free + Neon](docs/DEPLOY_RENDER_NEON.md),
+`render.yaml`, build có dependency hash và nhập học liệu một lần khi database trống.
+Startup chỉ kiểm tra release rồi phục vụ, không tự seed mỗi lần khởi động.
+Chưa được coi là deploy thành công cho đến khi có URL và kiểm chứng trên dịch vụ thật.
+
 **26/10/2026 — M12:** thêm [tìm từ theo mô tả](docs/STABILITY_M12.md) trong Tutor: tối đa3 ứng viên theo từ ngữ nguồn, chọn từ trước khi giải thích, không dùng lượt AI và có nút chọn khi tắt JavaScript. Luồng mặc định M11 giữ nguyên; khả năng diễn đạt lại còn thấp (2/20 ca ứng viên trên regression cũ), chưa nghiệm thu semantic search. Không có migration mới sau0023.
 
 **26/10/2026 — M11:** cải thiện [truy xuất Tutor và đo theo nghĩa](docs/STABILITY_M11.md). Nhận yêu cầu tra rõ hơn, giảm trùng từ tình cờ, hỏi lại khi ngữ cảnh nghĩa yếu; thêm fixture/metric nghĩa với ghi báo cáo an toàn. Trên regression v2 đã biết:61/80 mục từ và16/16 ca âm, nhưng paraphrase chỉ1/20; chưa phải nghiệm thu độc lập. Không có migration mới sau0023.

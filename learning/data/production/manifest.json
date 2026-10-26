@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "exported_on": "2026-10-26",
+  "description": "Content-only snapshot; no learner accounts, progress or secrets. Existing availability and review states preserved.",
+  "counts": {
+    "learning.learningcontent": 429,
+    "learning.flashcard": 3056,
+    "learning.question": 5138,
+    "learning.answeroption": 20552
+  },
+  "sha256": "715d67a251945d44909bc7e650f3d8511ae9bdac18e718ba1bc53cf2cfa9f0c0",
+  "compression": "gzip"
+}

@@ -1,0 +1,41 @@
+# Full Django application. Cloudflare's root wrangler.jsonc is UI preview only.
+# No Render database, paid disk, background worker or paid instance is created.
+services:
+  - type: web
+    name: linguapath
+    runtime: python
+    plan: free
+    region: singapore
+    autoDeployTrigger: "off"
+    buildCommand: sh scripts/build-render.sh
+    startCommand: sh scripts/start-production.sh
+    healthCheckPath: /livez/
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: config.settings_render
+      - key: DJANGO_DEBUG
+        value: "false"
+      - key: DJANGO_SECRET_SEED
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
+      - key: DJANGO_TRUST_PROXY_SSL_HEADER
+        value: "true"
+      - key: DJANGO_SECURE_SSL_REDIRECT
+        value: "true"
+      - key: DJANGO_SESSION_COOKIE_SECURE
+        value: "true"
+      - key: DJANGO_CSRF_COOKIE_SECURE
+        value: "true"
+      - key: DJANGO_SECURE_HSTS_SECONDS
+        value: "0"
+      - key: DJANGO_DB_CONN_MAX_AGE
+        value: "0"
+      - key: DJANGO_DB_CONNECT_TIMEOUT
+        value: "5"
+      - key: WEB_CONCURRENCY
+        value: "1"
+      - key: AI_TUTOR_ENABLED
+        value: "false"
+      - key: SKIP_INSTALL_DEPS
+        value: "true"

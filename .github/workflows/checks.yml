@@ -65,6 +65,8 @@ jobs:
       - name: Rehearse migrations on the disposable CI database
         run: |
           python manage.py migrate --noinput
+          python manage.py bootstrap_learning_content --if-empty
+          python manage.py bootstrap_learning_content --if-empty
           python manage.py check_schema
           python manage.py check_weak_word_outcomes
       - name: Production settings and static assets
