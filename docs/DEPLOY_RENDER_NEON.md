@@ -1,6 +1,7 @@
 # Chạy đầy đủ LinguaPath trên Render Free + Neon Free
 
-Cập nhật 26/10/2026. Đây là ứng dụng Django thật: giữ template, đăng ký/đăng nhập,
+Cập nhật 26/10/2026. Website: https://linguapath-app.onrender.com/.
+Xem [trạng thái nghiệm thu](DEPLOY_RENDER_NEON_STATUS.md). Đây là ứng dụng Django thật: giữ template, đăng ký/đăng nhập,
 quiz chấm ở máy chủ, flashcard, kế hoạch học và lịch sử riêng. Không dùng thư mục
 `preview/` hoặc `wrangler.jsonc` để chạy ứng dụng này.
 
@@ -16,7 +17,9 @@ quiz chấm ở máy chủ, flashcard, kế hoạch học và lịch sử riêng
   Django. Không sinh secret mới mỗi lần khởi động. Có thể dùng DJANGO_SECRET_KEY
   riêng đủ ít nhất 50 ký tự thay cho seed nếu đã có.
 - Startup kiểm tra release rồi mới mở Gunicorn, không tự seed lại khi máy thức dậy.
-- `/livez/` làm probe Render; gate startup đã kiểm tra database trước khi mở cổng.
+- Blueprint đặt `/livez/` làm HTTP probe. Service tạo trực tiếp ngày 26/10 dùng
+  probe TCP mặc định của Render; chưa áp dụng HTTP healthCheckPath. Gate startup
+  đã kiểm tra database trước khi mở cổng.
   `/healthz/` dùng kiểm tra database khi nghiệm thu; không cấu hình poll liên tục
   chỉ để giữ dịch vụ thức, tránh tiêu hao hạn mức của các gói Free.
 

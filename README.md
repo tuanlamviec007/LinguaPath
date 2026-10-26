@@ -1,9 +1,10 @@
 # LinguaPath — website luyện TOEIC có lộ trình cá nhân
 
-**Triển khai Django đầy đủ:** đã bổ sung [cấu hình Render Free + Neon](docs/DEPLOY_RENDER_NEON.md),
-`render.yaml`, build có dependency hash và nhập học liệu một lần khi database trống.
+**Website Django đang chạy:** https://linguapath-app.onrender.com/ — [Render Free + Neon Free](docs/DEPLOY_RENDER_NEON.md).
+Cấu hình gồm `render.yaml`, build có dependency hash và nhập học liệu một lần khi database trống.
 Startup chỉ kiểm tra release rồi phục vụ, không tự seed mỗi lần khởi động.
-Chưa được coi là deploy thành công cho đến khi có URL và kiểm chứng trên dịch vụ thật.
+Đã kiểm tra HTTPS, trang chủ, lật thẻ mẫu, trang đăng nhập/đăng ký và hai health endpoint.
+Xem [trạng thái nghiệm thu và giới hạn còn lại](docs/DEPLOY_RENDER_NEON_STATUS.md).
 
 **26/10/2026 — M12:** thêm [tìm từ theo mô tả](docs/STABILITY_M12.md) trong Tutor: tối đa3 ứng viên theo từ ngữ nguồn, chọn từ trước khi giải thích, không dùng lượt AI và có nút chọn khi tắt JavaScript. Luồng mặc định M11 giữ nguyên; khả năng diễn đạt lại còn thấp (2/20 ca ứng viên trên regression cũ), chưa nghiệm thu semantic search. Không có migration mới sau0023.
 
@@ -145,7 +146,7 @@ Xem [báo cáo audit](docs/AUDIT_2026-10-19.md) để biết phạm vi, lỗi đ
 
 ## Cấu hình trước khi triển khai
 
-Đã bổ sung cấu hình Django production, Gunicorn, WhiteNoise, PostgreSQL qua `DATABASE_URL`, Dockerfile chạy non-root và Worker Cloudflare Containers. Xem [hướng dẫn triển khai Cloudflare](docs/DEPLOY_CLOUDFLARE.md) và `.env.production.example`. Production từ chối secret thiếu/ngắn và database khác PostgreSQL. SSL redirect/cookie Secure mặc định bật; HSTS mặc định một năm, mẫu triển khai đặt 0 trong giai đoạn xác minh HTTPS. Chưa có deployment hoặc URL production được xác nhận; cần hoàn tất xác thực tài khoản, PostgreSQL và kiểm thử hạ tầng thật.
+Đã bổ sung cấu hình Django production, Gunicorn, WhiteNoise, PostgreSQL qua `DATABASE_URL`, Dockerfile chạy non-root và Worker Cloudflare Containers. Xem [hướng dẫn triển khai Cloudflare](docs/DEPLOY_CLOUDFLARE.md) và `.env.production.example`. Production từ chối secret thiếu/ngắn và database khác PostgreSQL. SSL redirect/cookie Secure mặc định bật; HSTS mặc định một năm, mẫu triển khai đặt 0 trong giai đoạn xác minh HTTPS. Bản Django đã chạy trên Render + Neon; Cloudflare Containers chưa triển khai. Xem trạng thái nghiệm thu Render ở đầu tài liệu.
 
 ## Kiểm tra
 
