@@ -3,6 +3,7 @@ from . import views, quiz_views, saved_words, quiz_weak_words, quiz_history
 
 app_name = 'learning'
 urlpatterns = [
+    path('start/', views.getting_started, name='getting_started'),
     path('words/', saved_words.saved_words, name='saved_words'),
     path('words/review/', quiz_weak_words.weak_words, name='weak_words'),
     path('words/<int:card_id>/save/', saved_words.save_word, name='save_word'),

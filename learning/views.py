@@ -43,7 +43,16 @@ from .practice_sessions import DraftConflictError, DraftValidationError, Practic
 def home(request):
     if request.user.is_authenticated:
         return redirect('dashboard')
-    return render(request, 'learning/home.html')
+    # A GET-only sample works without JavaScript and never records a grade/XP.
+    answer = request.GET.get('demo_answer', '')
+    answer = answer if answer in {'A', 'B', 'C'} else ''
+    return render(request, 'learning/home.html', {'demo_answer': answer,
+        'demo_correct': answer == 'B'})
+
+
+@require_GET
+def getting_started(request):
+    return render(request, 'learning/getting_started.html')
 
 
 def register(request):
@@ -80,6 +89,8 @@ def dashboard(request):
     due_cards = Flashcard.objects.learner_visible(profile.exam_goal).exclude(id__in=pending_states).count()
     new_error_count = _notebook_entries(request.user, profile.exam_goal).filter(reviewed_at__isnull=True).count()
     weak_summary = weak_word_summary(request.user, profile.exam_goal)
+    from .getting_started import starter_progress
+    starter = starter_progress(request.user, profile)
     return render(request, 'learning/dashboard.html', {
         'profile': profile, 'tasks': tasks, 'recent_attempts': recent_attempts,
         'due_cards': due_cards, 'today': today,
@@ -94,12 +105,15 @@ def dashboard(request):
         'rewards': get_learning_rewards(request.user),
         'saved_word_count': visible_saved_words(request.user).count(),
         'weak_word_count': weak_summary['count'], 'weak_words_ready': weak_summary.get('ready', True),
+        'starter': starter,
+        'show_dashboard_details': starter['complete'] or request.GET.get('view') == 'all',
     })
 
 
 @login_required
 def learning_goal(request):
     profile, _ = LearnerProfile.objects.get_or_create(user=request.user)
+    first_setup = not profile.onboarding_complete
     form = LearningGoalForm(request.POST or None, instance=profile)
     if request.method == 'POST' and form.is_valid():
         with transaction.atomic():
@@ -108,7 +122,10 @@ def learning_goal(request):
             profile.onboarding_complete = True
             profile.save(update_fields=['onboarding_complete', 'updated_at'])
             replan_daily_plan(request.user, profile, changed_fields=form.changed_data)
-        messages.success(request, 'Đã lưu mục tiêu. Các nhiệm vụ đã hoàn thành hôm nay vẫn được giữ lại; kế hoạch mới sẽ tính phần thời gian còn lại.')
+        if first_setup:
+            messages.success(request, 'Kế hoạch đầu tiên đã sẵn sàng. Bắt đầu với một thẻ từ nhé!')
+        else:
+            messages.success(request, 'Đã lưu mục tiêu. Các nhiệm vụ đã hoàn thành hôm nay vẫn được giữ lại; kế hoạch mới sẽ tính phần thời gian còn lại.')
         return redirect('dashboard')
     return render(request, 'learning/learning_goal.html', {'form': form, 'profile': profile})
 

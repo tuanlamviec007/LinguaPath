@@ -6,7 +6,32 @@
 {% include 'learning/_weak_words_pending.html' %}
 <link rel="stylesheet" href="{% static 'css/learning-journey.css' %}">
 <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+<link rel="stylesheet" href="{% static 'css/getting-started.css' %}">
 <div class="dashboard-home">
+{% if not starter.complete %}
+<header class="dashboard-new-welcome"><div><span class="eyebrow">KHÔNG GIAN HỌC CỦA BẠN</span><h1>Chào {{ user.first_name|default:user.username }}, bắt đầu nhẹ thôi.</h1><p>Kế hoạch, bộ từ và công cụ sẽ ở đây khi bạn cần.</p></div><a href="?view=all">Xem toàn bộ tổng quan ↗</a></header>
+{% endif %}
+{% include 'learning/_starter_path.html' %}
+{% if active_quiz %}
+<section class="panel lp-dashboard-quiz-resume" aria-labelledby="quiz-resume-title">
+  <div><span class="eyebrow">THỬ THÁCH ĐANG DỞ</span><h2 id="quiz-resume-title">{% if active_quiz.is_retry %}Tiếp tục ôn từ từng nhầm{% else %}Quiz đang chờ bạn{% endif %}</h2><p>{{ active_quiz.saved_count }} / {{ active_quiz.question_count }} câu đã lưu{% if active_quiz.last_saved_at %} · lúc {{ active_quiz.last_saved_at|date:'H:i d/m' }}{% endif %}</p></div>
+  <a class="button primary" href="{% url 'learning:quiz_take' active_quiz.pk %}">Tiếp tục quiz <span aria-hidden="true">→</span></a>
+</section>
+{% endif %}
+{% if resume_attempts %}
+<section class="journey-resume-section" aria-labelledby="resume-title">
+  <div class="journey-section-heading"><div><span class="eyebrow">LƯU TIẾN ĐỘ CỦA BẠN</span><h2 id="resume-title">Tiếp tục bài đang làm</h2></div><span>{{ resume_attempts|length }} lượt đang dở gần nhất</span></div>
+  <div class="resume-grid">
+    {% for resume in resume_attempts %}
+      <article class="resume-card">
+        <div class="resume-card-copy"><span class="resume-card-kicker">{{ resume.content.get_skill_display }} · {{ resume.content.exam_type }}</span><h3>{{ resume.content.title }}</h3><p>{{ resume.saved_count }} / {{ resume.question_count }} câu đã trả lời{% if resume.last_saved_at %}<span> · Lưu lúc {{ resume.last_saved_at|date:'d/m H:i' }}</span>{% endif %}</p></div>
+        <a href="{% url 'learning:take_attempt' resume.id %}" aria-label="Tiếp tục bài {{ resume.content.title }}">Tiếp tục <span aria-hidden="true">→</span></a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+<details class="dashboard-explore"{% if show_dashboard_details %} open{% endif %}><summary><span>Kế hoạch và công cụ học tập<small>Mở khi bạn muốn xem nhiệm vụ, thành tích và các lựa chọn khác</small></span><span aria-hidden="true">＋</span></summary>
 <section class="welcome dashboard-welcome">
   <div class="dashboard-welcome-copy">
     <span class="eyebrow">{{ today|date:'d/m/Y' }}</span>
@@ -26,12 +51,7 @@
   {% endif %}
 </section>
 
-{% if active_quiz %}
-<section class="panel lp-dashboard-quiz-resume" aria-labelledby="quiz-resume-title">
-  <div><span class="eyebrow">THỬ THÁCH ĐANG DỞ</span><h2 id="quiz-resume-title">{% if active_quiz.is_retry %}Tiếp tục ôn từ từng nhầm{% else %}Quiz đang chờ bạn{% endif %}</h2><p>{{ active_quiz.saved_count }} / {{ active_quiz.question_count }} câu đã lưu{% if active_quiz.last_saved_at %} · lúc {{ active_quiz.last_saved_at|date:'H:i d/m' }}{% endif %}</p></div>
-  <a class="button primary" href="{% url 'learning:quiz_take' active_quiz.pk %}">Tiếp tục quiz <span aria-hidden="true">→</span></a>
-</section>
-{% endif %}
+
 
 {% if rewards %}
 <section class="lp-reward-strip" aria-label="Thành tích học tập của bạn">
@@ -50,19 +70,7 @@
   </div>
 </section>
 
-{% if resume_attempts %}
-<section class="journey-resume-section" aria-labelledby="resume-title">
-  <div class="journey-section-heading"><div><span class="eyebrow">LƯU TIẾN ĐỘ CỦA BẠN</span><h2 id="resume-title">Tiếp tục bài đang làm</h2></div><span>{{ resume_attempts|length }} lượt đang dở gần nhất</span></div>
-  <div class="resume-grid">
-    {% for resume in resume_attempts %}
-      <article class="resume-card">
-        <div class="resume-card-copy"><span class="resume-card-kicker">{{ resume.content.get_skill_display }} · {{ resume.content.exam_type }}</span><h3>{{ resume.content.title }}</h3><p>{{ resume.saved_count }} / {{ resume.question_count }} câu đã trả lời{% if resume.last_saved_at %}<span> · Lưu lúc {{ resume.last_saved_at|date:'d/m H:i' }}</span>{% endif %}</p></div>
-        <a href="{% url 'learning:take_attempt' resume.id %}" aria-label="Tiếp tục bài {{ resume.content.title }}">Tiếp tục <span aria-hidden="true">→</span></a>
-      </article>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
+
 
 
 
@@ -143,5 +151,6 @@
     <p class="muted">Bạn chưa có lượt luyện nào. Hãy làm một bài ngắn để bắt đầu theo dõi tiến bộ.</p>
   {% endif %}
 </section>
+</details>
 </div>
 {% endblock %}
