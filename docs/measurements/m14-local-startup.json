@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "scope": "Local fresh Python process: django.setup plus first guest homepage; isolated SQLite memory, inference off. Not Render cold start, HTTP p95 or a concurrent-load result.",
+  "before": [
+    {
+      "status": 200,
+      "fresh_process_first_home_ms": 1142.814,
+      "max_rss_kib": 70728,
+      "openai_imported": true
+    },
+    {
+      "status": 200,
+      "fresh_process_first_home_ms": 1044.155,
+      "max_rss_kib": 70524,
+      "openai_imported": true
+    },
+    {
+      "status": 200,
+      "fresh_process_first_home_ms": 1068.11,
+      "max_rss_kib": 70528,
+      "openai_imported": true
+    }
+  ],
+  "after": [
+    {
+      "status": 200,
+      "fresh_process_first_home_ms": 346.596,
+      "max_rss_kib": 43260,
+      "openai_imported": false
+    },
+    {
+      "status": 200,
+      "fresh_process_first_home_ms": 362.741,
+      "max_rss_kib": 43348,
+      "openai_imported": false
+    },
+    {
+      "status": 200,
+      "fresh_process_first_home_ms": 327.84,
+      "max_rss_kib": 43216,
+      "openai_imported": false
+    }
+  ],
+  "summary": {
+    "before_median_ms": 1068.11,
+    "after_median_ms": 346.596,
+    "before_median_peak_rss_kib": 70528,
+    "after_median_peak_rss_kib": 43260
+  }
+}

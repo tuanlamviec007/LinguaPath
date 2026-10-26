@@ -13,7 +13,7 @@ Quy đổi minh họa 1 USD = 26.000 VND, không phải tỷ giá thanh toán th
 - Mẫu memory Render gần nhất khoảng 160 MB (152,6 MiB); chưa phải kết quả load test.
   HTTP count/latency metrics không có mẫu trong API của workspace, nên chưa có p95.
 
-## Ba phương án hàng tháng
+## Các phương án hàng tháng
 
 | Phương án | Web | Database | Tổng USD | VND minh họa |
 |---|---:|---:|---:|---:|

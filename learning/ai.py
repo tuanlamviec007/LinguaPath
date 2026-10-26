@@ -1,7 +1,6 @@
 import os
 import logging
 from copy import deepcopy
-from openai import OpenAI
 from django.utils import timezone
 
 from .ai_context import CONTEXT_VERSION, pack_evidence
@@ -10,6 +9,12 @@ from .ai_provider import generate_cloudflare_answer, provider_name, tutor_ai_ava
 
 logger = logging.getLogger(__name__)
 PROMPT_VERSION = 'toeic-evidence-v3'
+
+
+def OpenAI(**kwargs):
+    """Keep the provider SDK out of ordinary page imports and inference-off boots."""
+    from openai import OpenAI as Client
+    return Client(**kwargs)
 
 
 def retrieve_learning_context(query, exam='TOEIC', limit=3, question_id=None, user=None, *, retrieval_mode='auto'):
