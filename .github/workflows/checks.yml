@@ -88,3 +88,5 @@ jobs:
         run: docker build --tag "linguapath-ci:$GITHUB_SHA" .
       - name: Container runtime, CSRF and session persistence after restart
         run: python scripts/smoke-production.py --image "linguapath-ci:$GITHUB_SHA"
+      - name: Rehearse PostgreSQL backup and restore on disposable CI data
+        run: python scripts/rehearse-restore.py
