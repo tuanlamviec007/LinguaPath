@@ -1,12 +1,13 @@
 """Explicit, reauthenticated self-service privacy actions for learner accounts."""
 import json
 
+from django.apps import apps
 from django.contrib import messages
 from django.contrib.auth import get_user_model, logout
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ImproperlyConfigured
 from django.core.serializers.json import DjangoJSONEncoder
-from django.db import DatabaseError, transaction
+from django.db import DatabaseError, connection, transaction
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.utils import timezone
@@ -37,6 +38,23 @@ _QUESTION_FIELDS = ('id', 'order', 'prompt', 'passage', 'audio_url', 'audio_scri
 
 class ExportTooLarge(Exception):
     pass
+
+
+class SocialDataNotReady(Exception):
+    pass
+
+
+def _has_social_data(user):
+    # Social tables may remain after the optional allauth app is disabled.
+    # Inspect by fixed table name so a rollback cannot silently omit records.
+    with connection.cursor() as cursor:
+        tables = set(connection.introspection.table_names(cursor))
+        for table in ('socialaccount_socialaccount', 'account_emailaddress'):
+            if table in tables:
+                cursor.execute(f'SELECT 1 FROM {connection.ops.quote_name(table)} WHERE user_id = %s LIMIT 1', [user.pk])
+                if cursor.fetchone() is not None:
+                    return True
+    return False
 
 
 def _pick(value, fields):
@@ -210,6 +228,8 @@ def _export_sections(user):
 
 def personal_data_response(user):
     """Build bounded JSON without silently omitting records or persisting a file."""
+    if _has_social_data(user):
+        raise SocialDataNotReady
     chunks, size = [], 0
     def append(value):
         nonlocal size
@@ -286,10 +306,14 @@ def privacy_center(request):
                 return personal_data_response(user)
             if request.POST.get('confirm_delete') != 'XOA' or request.POST.get('confirm_understood') != 'yes':
                 return _page(request, 'Hãy nhập đúng XOA và đánh dấu ô xác nhận trước khi xóa tài khoản.', 400)
+            if not apps.is_installed('allauth.socialaccount') and _has_social_data(user):
+                raise SocialDataNotReady
             user.delete()
     except get_user_model().DoesNotExist:
         logout(request)
         return redirect('login')
+    except SocialDataNotReady:
+        return _page(request, 'Tài khoản có dữ liệu liên kết đăng nhập hoặc email do dịch vụ xác thực quản lý. Chức năng xử lý đầy đủ dữ liệu này chưa sẵn sàng; yêu cầu chưa được thực hiện.', 409)
     except ExportTooLarge:
         return _page(request, 'Dữ liệu vượt giới hạn tải trực tiếp. Chưa tạo bản xuất; hãy liên hệ quản trị để xuất đầy đủ qua quy trình đã xác thực.', 413)
     except DatabaseError:

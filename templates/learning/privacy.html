@@ -15,7 +15,7 @@
 </section>
 <section class="panel" aria-labelledby="privacy-export-title">
   <h2 id="privacy-export-title">Tải bản sao dữ liệu của tôi</h2>
-  <p>Bản JSON chứa dữ liệu của tài khoản đang đăng nhập. Không có mật khẩu/hash, session, token, khóa dịch vụ hay dữ liệu tài khoản khác. Quiz chưa nộp chỉ xuất đề được phép xem và đáp án bạn đã nhập; không mở khóa chấm.</p>
+  <p>Bản JSON chứa dữ liệu của tài khoản đang đăng nhập. Nếu tài khoản có dữ liệu đăng nhập hoặc email do dịch vụ xác thực quản lý, hệ thống tạm dừng xuất để tránh tạo bản thiếu dữ liệu. Không có mật khẩu/hash, session, token, khóa dịch vụ hay dữ liệu tài khoản khác. Quiz chưa nộp chỉ xuất đề được phép xem và đáp án bạn đã nhập; không mở khóa chấm.</p>
   <p>Bản tải có thể chứa nội dung riêng tư bạn từng nhập vào trợ lý hoặc ghi chú. Giữ file ở nơi riêng; tránh gửi nguyên file công khai. Giới hạn tải trực tiếp {{ export_size_mb }} MiB; nếu vượt giới hạn, hệ thống báo lỗi và không tạo bản xuất thiếu dữ liệu.</p>
   {% if can_confirm_password %}
   <form method="post" class="form-stack">
