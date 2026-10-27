@@ -13,7 +13,7 @@ def starter_progress(user, profile):
         tried_word=Exists(FlashcardReview.objects.filter(user_id=OuterRef('pk'),
             flashcard__content__exam_type=profile.exam_goal, reviewed_at__lte=now)),
         tried_quiz=Exists(VocabularyQuizSession.objects.filter(user_id=OuterRef('pk'),
-            exam_type=profile.exam_goal, status='submitted', submitted_at__lte=now)),
+            exam_type=profile.exam_goal, status='submitted', question_count__gt=0, submitted_at__lte=now)),
     ).values('tried_word', 'tried_quiz').get()
     steps = [
         {'title': 'Chọn nhịp học', 'description': 'Mục tiêu và thời gian phù hợp với bạn.',

@@ -52,7 +52,13 @@ def home(request):
 
 @require_GET
 def getting_started(request):
-    return render(request, 'learning/getting_started.html')
+    starter = None
+    if request.user.is_authenticated:
+        profile = LearnerProfile.objects.filter(user=request.user).first()
+        if profile:
+            from .getting_started import starter_progress
+            starter = starter_progress(request.user, profile)
+    return render(request, 'learning/getting_started.html', {'starter': starter})
 
 
 def register(request):
