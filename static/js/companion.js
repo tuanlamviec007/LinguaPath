@@ -1,8 +1,28 @@
-/* Local decorative interactions; no network, storage or learning-state writes. */
+/* Local decorative interactions. Only an optional display preference is stored. */
 (() => {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let collapsed = false;
+  try { collapsed = window.localStorage.getItem('linguapath.lumi.collapsed') === 'true'; } catch (_) {}
+  const companions = [...document.querySelectorAll('[data-lumi]')];
+  function updateVisibility() {
+    companions.forEach((companion) => {
+      companion.classList.toggle('is-collapsed', collapsed);
+      const toggle = companion.querySelector('[data-lumi-toggle]');
+      if (!toggle) return;
+      toggle.hidden = false;
+      toggle.textContent = collapsed ? 'Mở Lumi · Bạn đồng hành' : 'Thu gọn Lumi';
+      toggle.setAttribute('aria-expanded', String(!collapsed));
+    });
+  }
+  updateVisibility();
   const greetings = ['Một từ mới cũng là một bước tiến.', 'Cứ thử trước nhé. Sai rồi mình học lại.', 'Bạn chọn nhịp học, Lumi cổ vũ bạn!', 'Học một chút, nghỉ một chút. Bạn đang làm tốt.'];
-  document.querySelectorAll('[data-lumi]').forEach((companion) => {
+  companions.forEach((companion) => {
+    const toggle = companion.querySelector('[data-lumi-toggle]');
+    if (toggle) toggle.addEventListener('click', () => {
+      collapsed = !collapsed;
+      try { window.localStorage.setItem('linguapath.lumi.collapsed', String(collapsed)); } catch (_) {}
+      updateVisibility();
+    });
     const button = companion.querySelector('[data-lumi-greet]');
     const message = companion.querySelector('[data-lumi-message]');
     if (!button || !message) return;

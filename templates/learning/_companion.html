@@ -6,5 +6,6 @@
     <img src="{% static 'images/lumi-owl.webp' %}" alt="Lumi, chú cú xanh cầm sách và vẫy cánh" width="449" height="480" decoding="async">
   </button>
   <div class="lumi-message"><span class="lumi-label">LUMI · BẠN ĐỒNG HÀNH</span><p data-lumi-message aria-live="polite">{{ companion_message|default:"Một chút mỗi ngày. Mình cùng bắt đầu nhé!" }}</p><small>Chạm vào Lumi để nhận lời động viên.</small></div>
+  <button class="lumi-toggle" type="button" data-lumi-toggle aria-expanded="true" hidden>Thu gọn Lumi</button>
 </aside>
 <script src="{% static 'js/companion.js' %}" defer></script>
