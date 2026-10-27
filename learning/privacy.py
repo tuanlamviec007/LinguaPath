@@ -20,7 +20,6 @@ from config.auth_throttle import client_ip
 from planner.models import LearnerProfile, StudyTask
 from .auth_limits import AuthReservationConflict, reserve_auth_request
 from .gamification import get_learning_rewards
-from .locking import nonkey_row_lock
 from .models import (
     DueRecallObservation, AttemptAnswer, AttemptDraftAnswer, ErrorNotebookEntry, FlashcardReview,
     MistakeReviewAnswer, MistakeReviewItem, MistakeReviewSession, PracticeAttempt,
@@ -297,7 +296,9 @@ def privacy_center(request):
     password = request.POST.get('password', '')
     try:
         with transaction.atomic():
-            user = nonkey_row_lock(get_user_model().objects.all()).get(pk=request.user.pk)
+            # Full row lock blocks concurrent FK attachments until the export or
+            # deletion commits; NO KEY UPDATE would allow those inserts.
+            user = get_user_model().objects.select_for_update().get(pk=request.user.pk)
             if action == 'delete' and (user.is_staff or user.is_superuser):
                 return _page(request, 'Tài khoản có quyền quản trị cần được xử lý qua quy trình quản trị riêng.', 403)
             if not user.is_active or not password or len(password) > 1024 or not user.check_password(password):
