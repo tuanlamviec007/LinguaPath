@@ -101,9 +101,12 @@ def _mistake_result(value):
 
 
 def _tutor_result(value):
-    result = _pick(value, ('answer', 'sources', 'mode', 'provider', 'clarification_prompts', 'retrieval_mode'))
+    result = _pick(value, ('answer', 'mode', 'provider', 'retrieval_mode'))
     if not isinstance(value, dict):
         return result
+    for key in ('sources', 'clarification_prompts'):
+        values = value.get(key)
+        result[key] = [item for item in values if isinstance(item, str)] if isinstance(values, list) else []
     result['generation'] = _pick(value.get('generation'), (
         'provider', 'model', 'prompt_version', 'context_version', 'generated_at',
         'bridge_prompt_version', 'requested_model', 'attempted_provider', 'attempted_model'))

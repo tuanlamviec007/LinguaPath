@@ -331,6 +331,23 @@ def quiz_start(request):
                 if not selection_is_current(request.user, _exam(request.user), questions):
                     messages.info(request, 'Lịch ôn hoặc nguồn vừa thay đổi ở một tab khác. Hãy chọn lại từ đến lịch ôn.')
                     return redirect(reverse('learning:quiz_hub') + '?source=due&mode=recall')
+            if source != 'due':
+                # Use the same parent/card lock order as source editors. Validate
+                # the prepared snapshot before changing the learner's old quiz.
+                locked = lock_due_cards(questions)
+                selected = {card['id']: card for card in all_cards if card['id'] in locked}
+                visible_ids = set(_cards(request.user).filter(pk__in=locked).values_list('pk', flat=True))
+                unchanged = all(
+                    q['card_id'] in visible_ids and q['card_id'] in selected
+                    and all(getattr(locked[q['card_id']], field) == selected[q['card_id']][field]
+                            for field in fields)
+                    for q in questions
+                )
+                prepared = VocabularyQuizSession(exam_type=_exam(request.user), mode=mode,
+                                                 question_count=len(questions), snapshot=questions)
+                if not unchanged or not _available(prepared):
+                    messages.warning(request, 'Học liệu vừa thay đổi. Bài đang làm được giữ lại; hãy chọn lại quiz mới.')
+                    return redirect('learning:quiz_hub')
             if replace_id:
                 current.status = 'abandoned'
                 current.save(update_fields=['status'])

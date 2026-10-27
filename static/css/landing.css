@@ -119,7 +119,7 @@
 .landing-welcome .landing-feature h3 {margin-top:10px;}
 .landing-welcome .landing-final p {font-size:13px;color:#63718a;margin:12px 0 0;}
 @media(prefers-reduced-motion:no-preference) {
-  .landing-welcome .landing-hero__copy,.landing-welcome .welcome-demo {animation:welcome-enter .45s ease-out both;}
+  .landing-welcome .landing-hero__copy,.landing-welcome .welcome-demo {animation:welcome-enter .45s ease-out backwards;}
   .landing-welcome .welcome-demo {animation-delay:.08s;}
   @keyframes welcome-enter {from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 }

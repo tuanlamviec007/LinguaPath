@@ -168,6 +168,38 @@ class VocabularyQuizTests(TestCase):
         self.assertEqual(old.status, 'in_progress')
         self.assertEqual(VocabularyQuizSession.objects.filter(user=self.user).count(), 1)
 
+    def test_replace_preserves_old_quiz_if_prepared_source_changes(self):
+        from .quiz_due import lock_due_cards
+        old = self.start()
+        new_content = LearningContent.objects.create(
+            title='New selection', exam_type='TOEIC', content_type='vocabulary',
+            skill='vocabulary', is_published=True, review_status='language_checked')
+        cards = [Flashcard.objects.create(content=new_content, term=f'fresh{i}',
+                 meaning_vi=f'mới {i}', cefr_level='A2', topic='Fresh') for i in range(5)]
+        for change in ('withdraw', 'edit', 'hold'):
+            with self.subTest(change=change):
+                LearningContent.objects.filter(pk=new_content.pk).update(is_published=True)
+                Flashcard.objects.filter(pk=cards[0].pk).update(term='fresh0', is_available=True)
+
+                def change_before_lock(questions):
+                    if change == 'withdraw':
+                        LearningContent.objects.filter(pk=new_content.pk).update(is_published=False)
+                    elif change == 'edit':
+                        Flashcard.objects.filter(pk=cards[0].pk).update(term='revised')
+                    else:
+                        Flashcard.objects.filter(pk=cards[0].pk).update(is_available=False)
+                    return lock_due_cards(questions)
+
+                with patch('learning.quiz_views.lock_due_cards', side_effect=change_before_lock):
+                    response = self.client.post(reverse('learning:quiz_start'), {
+                        'replace_quiz': str(old.pk), 'confirm_replace': 'yes',
+                        'replace_revision': '0', 'count': '5', 'topic': 'Fresh',
+                    })
+                self.assertRedirects(response, reverse('learning:quiz_hub'), fetch_redirect_response=False)
+                old.refresh_from_db()
+                self.assertEqual(old.status, 'in_progress')
+                self.assertEqual(VocabularyQuizSession.objects.filter(user=self.user).count(), 1)
+
     def test_replace_rolls_back_old_quiz_if_new_creation_fails(self):
         old = self.start()
         with patch('learning.quiz_views.VocabularyQuizSession.objects.create', side_effect=IntegrityError('synthetic')):

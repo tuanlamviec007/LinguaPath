@@ -69,7 +69,8 @@ def _generate_daily_plan(user, profile, today=None, *, replan=False):
         return existing
     now = timezone.now()
     attempts = PracticeAttempt.objects.filter(
-        user=user, status='submitted', submitted_at__gte=now - timedelta(days=30),
+        user=user, status='submitted', content__exam_type=profile.exam_goal,
+        submitted_at__gte=now - timedelta(days=30), submitted_at__lte=now,
     )
     recent_content_ids = set(attempts.order_by('-submitted_at').values_list('content_id', flat=True)[:20])
     skill_accuracy = {

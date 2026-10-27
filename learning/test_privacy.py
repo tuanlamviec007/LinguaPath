@@ -24,6 +24,16 @@ from .practice_sessions import answer_evidence
 PASSWORD = 'privacy-test-password-123!'
 
 
+class TutorExportShapeTests(TestCase):
+    def test_nested_unexpected_values_are_excluded(self):
+        from .privacy import _tutor_result
+        result = _tutor_result({'sources': ['Lesson', {'unexpected': 'synthetic'}],
+                                'clarification_prompts': {'unexpected': 'synthetic'}})
+        self.assertEqual(result['sources'], ['Lesson'])
+        self.assertEqual(result['clarification_prompts'], [])
+        self.assertEqual(_tutor_result({'clarification_prompts': ['Try again', None]})['clarification_prompts'], ['Try again'])
+
+
 class PrivacyCenterTests(TestCase):
     def setUp(self):
         users = get_user_model()

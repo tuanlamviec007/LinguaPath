@@ -81,7 +81,7 @@
               <h2 lang="vi">{{ card.meaning_vi }}</h2>
               {% if card.example_en %}<p class="example-en" lang="en">“{{ card.example_en }}”</p>{% endif %}
               {% if card.example_vi %}<p class="example-vi" lang="vi">{{ card.example_vi }}</p>{% endif %}
-              <div class="card-provenance"><span>{{ card.source_name|default:'Từ và ví dụ tự biên soạn' }}</span>{% if card.source_url %}<a href="{{ card.source_url }}" target="_blank" rel="noopener noreferrer">Nguồn ↗</a>{% endif %}<a href="https://dictionary.cambridge.org/dictionary/english/" target="_blank" rel="noopener noreferrer" aria-label="Mở từ điển Cambridge để tra {{ card.term }}">Tra Cambridge ↗</a></div>
+              <div class="card-provenance"><span>{{ card.source_name|default:'Từ và ví dụ tự biên soạn' }}</span>{% if card.source_url %}<a href="{{ card.source_url }}" target="_blank" rel="noopener noreferrer">Nguồn ↗</a>{% endif %}<a href="https://dictionary.cambridge.org/search/english/direct/?q={{ card.term|urlencode }}" target="_blank" rel="noopener noreferrer" aria-label="Mở từ điển Cambridge để tra {{ card.term }}">Tra Cambridge ↗</a></div>
             </div>
             <div class="flash-back-actions">
               {% include 'learning/_save_word_button.html' with card_id=card.id is_saved=card.is_saved term=card.term %}
