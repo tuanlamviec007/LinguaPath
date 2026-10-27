@@ -51,6 +51,10 @@
 </section>
 
 {% if cards %}
+  <noscript>
+    <style>.flashcard-workspace .flash-card-inner {display:none}.flashcard-workspace .flash-card {min-height:0}</style>
+    <p>Nhấn vào từng từ để xem nghĩa, rồi chọn mức bạn nhớ.</p>
+  </noscript>
   <div class="flash-grid">
     {% for card in cards %}
       <article class="flash-card" id="flashcard-{{ card.id }}" data-flashcard>
@@ -92,30 +96,24 @@
             </div>
           </section>
         </div>
+        <noscript>
+          <details class="flash-fallback-card">
+            <summary><strong lang="en">{{ card.term }}</strong> <span>{{ card.cefr_level }}</span></summary>
+            <p><strong>Nghĩa:</strong> {{ card.meaning_vi }}</p>
+            {% if card.example_en %}<p lang="en">{{ card.example_en }}</p>{% endif %}
+            {% if card.example_vi %}<p>{{ card.example_vi }}</p>{% endif %}
+            <form method="post" action="{% url 'learning:review_flashcard' card.id %}" class="rating-row">
+              {% csrf_token %}
+              <input type="hidden" name="next" value="{{ card.rating_return_url }}">
+              <button type="submit" name="rating" value="again" class="rate again">Chưa nhớ</button>
+              <button type="submit" name="rating" value="hard" class="rate hard">Còn khó</button>
+              <button type="submit" name="rating" value="known" class="rate known">Đã nhớ</button>
+            </form>
+          </details>
+        </noscript>
       </article>
     {% endfor %}
   </div>
-  <noscript>
-    <style>.flashcard-workspace .flash-grid { display: none; }</style>
-    <section class="flash-fallback" aria-label="Thẻ từ không dùng JavaScript">
-      <p>Nhấn vào từng từ để xem nghĩa, rồi chọn mức bạn nhớ.</p>
-      {% for card in cards %}
-      <details class="flash-fallback-card">
-        <summary><strong lang="en">{{ card.term }}</strong> <span>{{ card.cefr_level }}</span></summary>
-        <p><strong>Nghĩa:</strong> {{ card.meaning_vi }}</p>
-        {% if card.example_en %}<p lang="en">{{ card.example_en }}</p>{% endif %}
-        {% if card.example_vi %}<p>{{ card.example_vi }}</p>{% endif %}
-        <form method="post" action="{% url 'learning:review_flashcard' card.id %}" class="rating-row">
-          {% csrf_token %}
-          <input type="hidden" name="next" value="{{ card.rating_return_url }}">
-          <button type="submit" name="rating" value="again" class="rate again">Chưa nhớ</button>
-          <button type="submit" name="rating" value="hard" class="rate hard">Còn khó</button>
-          <button type="submit" name="rating" value="known" class="rate known">Đã nhớ</button>
-        </form>
-      </details>
-      {% endfor %}
-    </section>
-  </noscript>
   {% if page_obj.has_other_pages %}
     <nav class="pagination" aria-label="Trang flashcard">
       {% if page_obj.has_previous %}<a href="?page={{ page_obj.previous_page_number }}{% if show_all %}&amp;all=1{% endif %}{% if selected_level %}&amp;level={{ selected_level }}{% endif %}{% if selected_topic %}&amp;topic={{ selected_topic|urlencode }}{% endif %}{% if search_term %}&amp;q={{ search_term|urlencode }}{% endif %}">← Trước</a>{% endif %}
