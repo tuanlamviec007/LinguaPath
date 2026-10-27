@@ -4,7 +4,7 @@ from threading import Event
 from unittest.mock import patch
 
 from django.contrib.auth import get_user_model
-from django.db import close_old_connections, connection, transaction
+from django.db import close_old_connections, connection, connections, transaction
 from django.test import Client, TransactionTestCase, skipUnlessDBFeature
 from django.urls import reverse
 
@@ -41,7 +41,7 @@ class PrivacyAttachmentConcurrencyTests(TransactionTestCase):
                     return client.post(reverse('privacy_center'), {'action': 'export', 'password': 'privacy-password-123'}).status_code
             finally:
                 release.set()
-                close_old_connections()
+                connections.close_all()
 
         def link():
             close_old_connections()
@@ -57,7 +57,7 @@ class PrivacyAttachmentConcurrencyTests(TransactionTestCase):
                     linked.set()
             finally:
                 inserted.set()
-                close_old_connections()
+                connections.close_all()
 
         with ThreadPoolExecutor(max_workers=2) as executor:
             a = executor.submit(export)

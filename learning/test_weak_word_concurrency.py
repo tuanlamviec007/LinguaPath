@@ -3,7 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 from threading import Event
 
 from django.contrib.auth import get_user_model
-from django.db import close_old_connections, connection, transaction
+from django.db import close_old_connections, connection, connections, transaction
 from django.test import TransactionTestCase, skipUnlessDBFeature
 from django.utils import timezone
 
@@ -45,7 +45,7 @@ class WeakWordBackfillConcurrencyTests(TransactionTestCase):
                     return rebuild_user_outcomes(user.pk)
             finally:
                 locked.set()
-                close_old_connections()
+                connections.close_all()
 
         def submit():
             close_old_connections()
@@ -71,7 +71,7 @@ class WeakWordBackfillConcurrencyTests(TransactionTestCase):
                     return quiz.pk
             finally:
                 inserted.set()
-                close_old_connections()
+                connections.close_all()
 
         with ThreadPoolExecutor(max_workers=2) as pool:
             rebuilding = pool.submit(backfill)
