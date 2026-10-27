@@ -119,7 +119,7 @@ class PrivateWorkspaceResponseTests(WorkspaceFixture):
         self.client.logout()
         for route in ('login','register','password_reset'):
             response=self.client.get(reverse(route))
-            self.assertEqual(response.status_code,200)
+            self.assertEqual(response.status_code, 503 if route == 'password_reset' else 200)
             self.assertIn('no-store',response['Cache-Control'])
         home=self.client.get(reverse('home'))
         self.assertEqual(home.status_code,200)

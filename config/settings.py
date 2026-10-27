@@ -235,6 +235,9 @@ AI_TUTOR_GLOBAL_MINUTE_LIMIT = int(os.environ.get('AI_TUTOR_GLOBAL_MINUTE_LIMIT'
 from .observability import observation_logging_config  # noqa: E402
 LOGGING = observation_logging_config()
 
+# Enable only after verified recovery emails and a working mail service exist.
+PASSWORD_RESET_ENABLED = env_bool('PASSWORD_RESET_ENABLED', False)
+
 # Explicit rollout flag: configure provider applications before enabling OAuth.
 SOCIAL_AUTH_ENABLED = env_bool('SOCIAL_AUTH_ENABLED', False)
 SOCIALACCOUNT_PROVIDERS = {}

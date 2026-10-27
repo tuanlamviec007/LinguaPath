@@ -7,7 +7,7 @@
   <aside class="auth-story"><span class="eyebrow">QUAY LẠI VỚI NHỊP HỌC CỦA BẠN</span><h2>Một chút mỗi ngày.<br>Một hành trình dài.</h2><p>Kế hoạch, bộ thẻ và những bài đang làm vẫn ở đây. Hôm nay, tiếp tục từ một việc nhỏ.</p><div class="auth-story-card"><span aria-hidden="true">↻</span><div><strong>Gặp lại những gì cần ôn</strong><p>Từ đến hạn, câu còn sai và nhiệm vụ hôm nay.</p></div></div><a href="{% url 'home' %}">← Khám phá LinguaPath</a></aside>
   <div class="auth-card"><span class="eyebrow">CHÀO MỪNG TRỞ LẠI</span><h1>Đăng nhập</h1><p class="muted">Tiếp tục hành trình học tiếng Anh của bạn.</p>
     {% include 'registration/_social_buttons.html' %}<form method="post" class="form-stack">{% csrf_token %}{{ form.non_field_errors }}<div class="auth-field"><label for="id_username">Tên đăng nhập</label>{{ form.username }}{{ form.username.errors }}</div><div class="auth-field"><label for="id_password">Mật khẩu</label>{{ form.password }}{{ form.password.errors }}</div>{% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}<button class="button primary full" type="submit">Đăng nhập <span aria-hidden="true">→</span></button></form>
-    <p class="auth-foot">Chưa có tài khoản? <a href="{% url 'register' %}">Tạo tài khoản</a></p>
+    <p class="auth-foot"><a href="{% url 'password_reset' %}">Quên mật khẩu?</a> · Chưa có tài khoản? <a href="{% url 'register' %}">Tạo tài khoản</a></p>
   </div>
 </section>
 {% endblock %}

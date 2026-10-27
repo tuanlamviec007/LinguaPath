@@ -50,7 +50,7 @@
 ### Phát hiện mới: khôi phục tài khoản (27/10/2026)
 
 - **Ưu tiên cao — đang mở:** Form đăng ký dùng `UserCreationForm` mặc định, không thu email; tài khoản mới có `email` rỗng. Vì vậy luồng đặt lại mật khẩu qua email của Django không gửi được liên kết cho các tài khoản này. Trang đăng ký hiện thông báo giới hạn trước khi tạo tài khoản.
-- Endpoint đặt lại mật khẩu của Django vẫn tồn tại; cấu hình ứng dụng chưa có dịch vụ email được thiết lập trong mã. Cần thiết kế xác minh địa chỉ email, vận hành gửi thư và cách khôi phục an toàn cho tài khoản cũ trước khi giới thiệu chức năng khôi phục. Không giả định việc gửi email đã hoạt động ở production.
+- Trang yêu cầu đặt lại mật khẩu mặc định bị chặn khi PASSWORD_RESET_ENABLED=false và hiển thị trạng thái chưa sẵn sàng; cấu hình ứng dụng chưa có dịch vụ email được thiết lập trong mã. Cần thiết kế xác minh địa chỉ email, vận hành gửi thư và cách khôi phục an toàn cho tài khoản cũ trước khi giới thiệu chức năng khôi phục. Không giả định việc gửi email đã hoạt động ở production.
 - Đăng nhập mạng xã hội chưa kích hoạt, nhưng tài khoản chỉ dùng OAuth không có mật khẩu dùng được để xác nhận xuất/xóa dữ liệu. Cần cơ chế xác thực lại qua provider hoặc phương án an toàn tương đương, kiểm thử trước khi bật OAuth. Không hạ yêu cầu xác thực để khắc phục tạm.
 
 ## Công việc kế tiếp

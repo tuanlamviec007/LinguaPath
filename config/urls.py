@@ -19,12 +19,14 @@ from django.urls import include, path
 from learning import views as learning_views
 from config.health import liveness, readiness
 from learning.privacy import privacy_center
+from config.password_recovery import password_reset
 
 urlpatterns = [
     path('healthz/', readiness, name='readiness'),
     path('livez/', liveness, name='liveness'),
     path('admin/', admin.site.urls),
     path('', learning_views.home, name='home'),
+    path('accounts/password_reset/', password_reset, name='password_reset'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/register/', learning_views.register, name='register'),
     path('learn/', include('learning.urls')),
