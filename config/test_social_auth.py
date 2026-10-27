@@ -23,15 +23,24 @@ from unittest.mock import patch
 from django.core.management import call_command
 from django.test import Client
 from django.urls import resolve
+from urllib.parse import parse_qs, urlsplit
 django.setup()
+from allauth.socialaccount.internal.statekit import STATES_SESSION_KEY
 call_command('migrate',verbosity=0)
 c=Client(enforce_csrf_checks=True)
+page=c.get('/accounts/login/', {'next':'/learn/quiz/'})
+assert page.content.decode().count('name="next" value="/learn/quiz/"') == 2
 assert c.get('/social/google/login/').status_code == 200
 assert c.post('/social/google/login/').status_code == 403
 token=c.cookies['csrftoken'].value
 with patch('requests.sessions.Session.request',side_effect=AssertionError('Unexpected network')):
- r=c.post('/social/google/login/',{'csrfmiddlewaretoken':token})
+ r=c.post('/social/google/login/',{'csrfmiddlewaretoken':token,'next':'/learn/quiz/'})
  assert r.status_code==302 and 'accounts.google.com' in r['Location']
+ state_id=parse_qs(urlsplit(r['Location']).query)['state'][0]
+ assert c.session[STATES_SESSION_KEY][state_id][0]['next']=='/learn/quiz/'
+ r=c.post('/social/google/login/',{'csrfmiddlewaretoken':token,'next':'https://evil.invalid/'})
+ state_id=parse_qs(urlsplit(r['Location']).query)['state'][0]
+ assert 'next' not in c.session[STATES_SESSION_KEY][state_id][0]
  r=c.get('/social/google/login/callback/',{'state':'invalid','code':'synthetic'})
  assert '_auth_user_id' not in c.session
 assert resolve('/accounts/login/').url_name=='login'
