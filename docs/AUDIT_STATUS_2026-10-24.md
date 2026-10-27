@@ -38,6 +38,15 @@
 | O06 | Đã sửa · M1 | Một lệnh aggregate chạy mọi scripts/test_*.cjs và Django suite, dùng trong CI. |
 | G01 | Đã có giải thích/đường quay lại · M4 | Script-only Listening vẫn không vào retry DTO; sổ lỗi giải thích và link bài gốc/TTS khi có script. |
 
+
+## Cập nhật sau M14 (27/10/2026)
+
+- Lộ trình người mới có trang hướng dẫn, minh họa và ba bước theo hoạt động của từng tài khoản. Quiz đầu tiên được gợi ý ở mức 5 câu; nguồn từ và bộ lọc vẫn do người học chọn.
+- Thẻ từ có phần HTML dự phòng khi tắt JavaScript; đã kiểm tra biểu mẫu và gửi đánh giá bằng test, chưa nghiệm thu bằng trình duyệt tắt JavaScript hoặc screen reader.
+- Quiz hiển thị số từ của nguồn tại thời điểm tải trang trước bộ lọc; nút thử lại vẫn dùng được khi người học thay đổi lựa chọn, và máy chủ kiểm tra nguồn thực tế khi tạo quiz.
+- Google/Facebook đã có tích hợp và trang xử lý lỗi, nhưng chưa cấu hình OAuth hoặc kiểm thử với tài khoản thật. Trước kích hoạt công khai cần xử lý và nghiệm thu việc xác nhận danh tính khi xuất/xóa dữ liệu cho tài khoản mạng xã hội không có mật khẩu LinguaPath; hiện các thao tác này yêu cầu mật khẩu.
+- Các thay đổi trên không thay thế nghiệm thu thiết bị, duyệt học liệu hoặc diễn tập vận hành trong bảng.
+
 ## Công việc kế tiếp
 
 1. Giữ regression đầy đủ cho các thay đổi M4 và thực hiện migration/backfill/gate theo tài liệu khi nâng cấp máy khác; giữ bản sao dữ liệu trước thay đổi schema.

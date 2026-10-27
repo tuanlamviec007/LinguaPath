@@ -32,6 +32,9 @@ class GettingStartedTests(TestCase):
         FlashcardReview.objects.create(user=self.user, flashcard=self.card, rating='known', due_at=now)
         page = self.client.get(reverse('learning:getting_started'))
         self.assertContains(page, 'Thử quiz từ vựng')
+        self.assertEqual(page.context['starter']['next']['href'], reverse('learning:quiz_hub') + '?count=5#quiz-builder')
+        hub = self.client.get(page.context['starter']['next']['href'].split('#')[0])
+        self.assertEqual(hub.context['selected_count'], 5)
         self.assertEqual(page.context['starter']['completed'], 2)
         future.submitted_at = now
         future.save(update_fields=['submitted_at'])

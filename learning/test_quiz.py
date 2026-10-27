@@ -25,6 +25,17 @@ class VocabularyQuizTests(TestCase):
     def answers(self, quiz):
         return {f'answer_{q["number"]}': q['correct_key'] for q in quiz.snapshot}
 
+    def test_empty_source_allows_retry_and_explains_server_validation(self):
+        page = self.client.get(reverse('learning:quiz_hub'), {'source': 'saved', 'mode': 'recall'})
+        self.assertEqual(page.context['available_count'], 0)
+        self.assertContains(page, 'trước bộ lọc')
+        self.assertNotContains(page, 'class="button primary lp-quiz-start" type="submit" disabled')
+        response = self.client.post(reverse('learning:quiz_start'),
+                                    {'source': 'saved', 'mode': 'recall', 'count': '5'}, follow=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Chưa đủ từ có gợi ý rõ')
+        self.assertFalse(VocabularyQuizSession.objects.filter(user=self.user).exists())
+
     def test_authentication_and_post_only_start(self):
         self.client.logout()
         self.assertEqual(self.client.get(reverse('learning:quiz_hub')).status_code, 302)

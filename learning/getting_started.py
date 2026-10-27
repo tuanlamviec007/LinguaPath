@@ -21,7 +21,7 @@ def starter_progress(user, profile):
         {'title': 'Thử một thẻ từ', 'description': 'Xem nghĩa, rồi tự đánh giá mức nhớ.',
          'done': activity['tried_word'], 'href': reverse('learning:flashcards'), 'action': 'Học từ đầu tiên'},
         {'title': 'Làm quiz đầu tiên', 'description': 'Trả lời câu hỏi và xem lời giải sau khi nộp.',
-         'done': activity['tried_quiz'], 'href': reverse('learning:quiz_hub'), 'action': 'Thử quiz từ vựng'},
+         'done': activity['tried_quiz'], 'href': reverse('learning:quiz_hub') + '?count=5#quiz-builder', 'action': 'Thử quiz từ vựng'},
     ]
     completed = sum(step['done'] for step in steps)
     return {'steps': steps, 'completed': completed, 'total': len(steps),
