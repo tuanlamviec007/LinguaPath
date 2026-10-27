@@ -1,0 +1,15 @@
+.lumi-companion{position:relative;isolation:isolate;display:flex;align-items:center;gap:14px;margin:22px 0;padding:12px 22px 12px 8px;border:1px solid #dce4fc;border-radius:25px;background:radial-gradient(ellipse at 8% 70%,#e0e7ff,transparent 58%),linear-gradient(120deg,#f5f8ff,#faf5ff);box-shadow:0 14px 36px #5166ba0c;max-width:560px;min-width:0}
+.lumi-character{flex:none;position:relative;border:0;padding:0;background:transparent;cursor:pointer;width:130px;transition:transform .25s ease;filter:drop-shadow(0 10px 7px #7475b323)}
+.lumi-character img{display:block;width:100%;height:auto;aspect-ratio:448/480;object-fit:contain}
+.lumi-character:focus-visible{outline:3px solid #4162d9;outline-offset:4px;border-radius:20px}
+.lumi-character:hover{transform:translateY(-4px) rotate(-3deg)}
+.lumi-character.is-waving{animation:lumi-wave .7s ease-in-out 2}
+.lumi-message{min-width:0}.lumi-label{font-size:10px;font-weight:800;letter-spacing:1px;color:#5967ac}.lumi-message p{font-size:15px;line-height:1.55;font-weight:650;color:#354166;margin:8px 0}.lumi-message small{font-size:11px;color:#65718b;line-height:1.5;display:block}
+.lumi-orbit{position:absolute;top:14px;right:18px;color:#a797df;font-size:22px;pointer-events:none}
+.lumi-companion{animation:lumi-enter .65s ease both}.lumi-character{animation:lumi-arrive 1.4s ease-in-out 3}
+@keyframes lumi-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes lumi-arrive{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-6px) rotate(2deg)}}
+@keyframes lumi-wave{0%,100%{transform:rotate(0)}30%{transform:rotate(-7deg)}65%{transform:rotate(5deg)}}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.welcome-demo,.lp-discovery-card{transition:transform .2s ease,box-shadow .2s ease;transform:perspective(1000px) rotateX(var(--lumi-rx,0deg)) rotateY(var(--lumi-ry,0deg));will-change:auto}.lp-discovery-card:hover{box-shadow:0 15px 28px #5667b21c}}
+@media(max-width:600px){.lumi-companion{padding:8px 14px 8px 3px;gap:6px;border-radius:20px}.lumi-character{width:100px}.lumi-message p{font-size:13px}.lumi-label{font-size:9px}.lumi-orbit{font-size:16px;right:10px;top:8px}}
+@media(prefers-reduced-motion:reduce){.lumi-companion,.lumi-character,.lumi-character.is-waving{animation:none!important;transition:none!important}.lumi-character:hover{transform:none}}

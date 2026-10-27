@@ -11,6 +11,7 @@
       <p>Chưa biết học tiếng Anh từ đâu? Thử một từ, một câu hỏi. Rồi xây dựng nhịp học phù hợp với chính bạn.</p>
       <div class="landing-actions"><a class="button primary landing-start-button" href="#quick-demo">Thử học ngay <span aria-hidden="true">→</span></a><a class="landing-text-link" href="{% url 'learning:getting_started' %}">Mình nên bắt đầu thế nào? <span aria-hidden="true">↗</span></a></div>
       <div class="welcome-reassurance"><span><b aria-hidden="true">✓</b> Học thử không cần tài khoản</span><span><b aria-hidden="true">✓</b> Tự chọn thời gian học</span></div>
+      {% include 'learning/_companion.html' %}
       <div class="welcome-mini-path" aria-label="Một vòng học đơn giản"><span><b>01</b> Gặp một từ</span><i aria-hidden="true">→</i><span><b>02</b> Thử nhớ lại</span><i aria-hidden="true">→</i><span><b>03</b> Học đều hơn</span></div>
     </div>
     <section class="landing-preview welcome-demo" id="quick-demo" tabindex="-1" aria-labelledby="demo-title" data-welcome-demo>

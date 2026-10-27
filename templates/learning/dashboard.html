@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
 <link rel="stylesheet" href="{% static 'css/getting-started.css' %}">
 <div class="dashboard-home">
+{% include 'learning/_companion.html' %}
 {% if not starter.complete %}
 <header class="dashboard-new-welcome"><div><span class="eyebrow">KHÔNG GIAN HỌC CỦA BẠN</span><h1>Chào {{ user.first_name|default:user.username }}, bắt đầu nhẹ thôi.</h1><p>Kế hoạch, bộ từ và công cụ sẽ ở đây khi bạn cần.</p></div><a href="?view=all">Xem toàn bộ tổng quan ↗</a></header>
 {% endif %}
