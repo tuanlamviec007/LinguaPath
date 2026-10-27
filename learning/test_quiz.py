@@ -1,4 +1,6 @@
 from datetime import timedelta
+from unittest.mock import patch
+from django.db import IntegrityError
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
@@ -126,6 +128,65 @@ class VocabularyQuizTests(TestCase):
         for data in ({'level': 'C9'}, {'count': '-1'}, {'count': '30000'}, {'topic': 'x' * 81}):
             self.assertEqual(self.client.post(reverse('learning:quiz_start'), data).status_code, 400)
         self.assertFalse(VocabularyQuizSession.objects.exists())
+
+    def test_replace_requires_confirmation_and_starts_selected_new_quiz(self):
+        old = self.start()
+        old.draft_answers = {'1': old.snapshot[0]['options'][0]['key']}
+        old.draft_revision = 1
+        old.save(update_fields=['draft_answers', 'draft_revision'])
+        params = {'replace_quiz': str(old.pk), 'count': '10', 'level': 'A2', 'topic': 'Business', 'mode': 'meaning'}
+        page = self.client.get(reverse('learning:quiz_hub'))
+        self.assertContains(page, 'Tạo quiz mới')
+        confirmation = self.client.post(reverse('learning:quiz_start'), params)
+        self.assertEqual(confirmation.status_code, 200)
+        self.assertContains(confirmation, 'Dừng bài đang làm?')
+        old.refresh_from_db()
+        self.assertEqual(old.status, 'in_progress')
+        response = self.client.post(reverse('learning:quiz_start'), params | {'confirm_replace': 'yes', 'replace_revision': '1'})
+        new = VocabularyQuizSession.objects.get(user=self.user, status='in_progress')
+        old.refresh_from_db()
+        self.assertEqual(old.status, 'abandoned')
+        self.assertEqual(old.draft_revision, 1)
+        self.assertNotEqual(new.pk, old.pk)
+        self.assertEqual((new.question_count, new.cefr_level, new.topic), (10, 'A2', 'Business'))
+        self.assertRedirects(response, reverse('learning:quiz_take', args=[new.pk]), fetch_redirect_response=False)
+        repeated = self.client.post(reverse('learning:quiz_start'), params | {'confirm_replace': 'yes', 'replace_revision': '1'})
+        self.assertRedirects(repeated, reverse('learning:quiz_hub'), fetch_redirect_response=False)
+        self.assertEqual(VocabularyQuizSession.objects.filter(user=self.user, status='in_progress').count(), 1)
+
+    def test_replace_keeps_old_quiz_when_selection_is_empty_or_draft_changed(self):
+        old = self.start()
+        params = {'replace_quiz': str(old.pk), 'confirm_replace': 'yes', 'replace_revision': '0', 'count': '5'}
+        self.client.post(reverse('learning:quiz_start'), params | {'topic': 'Missing topic'})
+        old.refresh_from_db()
+        self.assertEqual(old.status, 'in_progress')
+        old.draft_revision = 1
+        old.save(update_fields=['draft_revision'])
+        response = self.client.post(reverse('learning:quiz_start'), params)
+        self.assertRedirects(response, reverse('learning:quiz_hub'), fetch_redirect_response=False)
+        old.refresh_from_db()
+        self.assertEqual(old.status, 'in_progress')
+        self.assertEqual(VocabularyQuizSession.objects.filter(user=self.user).count(), 1)
+
+    def test_replace_rolls_back_old_quiz_if_new_creation_fails(self):
+        old = self.start()
+        with patch('learning.quiz_views.VocabularyQuizSession.objects.create', side_effect=IntegrityError('synthetic')):
+            response = self.client.post(reverse('learning:quiz_start'), {
+                'replace_quiz': str(old.pk), 'confirm_replace': 'yes',
+                'replace_revision': '0', 'count': '5',
+            })
+        old.refresh_from_db()
+        self.assertEqual(old.status, 'in_progress')
+        self.assertRedirects(response, reverse('learning:quiz_take', args=[old.pk]), fetch_redirect_response=False)
+
+    def test_replace_cannot_target_another_users_quiz(self):
+        old = self.start()
+        self.client.force_login(self.other)
+        response = self.client.post(reverse('learning:quiz_start'), {'replace_quiz': str(old.pk), 'count': '5'})
+        self.assertRedirects(response, reverse('learning:quiz_hub'), fetch_redirect_response=False)
+        old.refresh_from_db()
+        self.assertEqual(old.status, 'in_progress')
+        self.assertFalse(VocabularyQuizSession.objects.filter(user=self.other).exists())
 
     def test_duplicate_start_resumes_existing_session(self):
         first = self.start()
