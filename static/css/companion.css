@@ -13,3 +13,8 @@
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.welcome-demo,.lp-discovery-card{transition:transform .2s ease,box-shadow .2s ease;transform:perspective(1000px) rotateX(var(--lumi-rx,0deg)) rotateY(var(--lumi-ry,0deg));will-change:auto}.lp-discovery-card:hover{box-shadow:0 15px 28px #5667b21c}}
 @media(max-width:600px){.lumi-companion{padding:8px 14px 8px 3px;gap:6px;border-radius:20px}.lumi-character{width:100px}.lumi-message p{font-size:13px}.lumi-label{font-size:9px}.lumi-orbit{font-size:16px;right:10px;top:8px}}
 @media(prefers-reduced-motion:reduce){.lumi-companion,.lumi-character,.lumi-character.is-waving{animation:none!important;transition:none!important}.lumi-character:hover{transform:none}}
+
+.lumi-review-filters{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:18px 0}.lumi-review-filters[hidden],[data-result-card][hidden]{display:none!important}.lumi-review-filters [aria-pressed=true]{background:#edf1ff;border-color:#697fce;color:#344b99}.lumi-review-filters [role=status]{font-size:13px;color:#52617b}
+.lp-quiz-result-page .lumi-companion{max-width:650px;margin:18px auto 24px}.lp-quiz-result-page .lp-quiz-result-hero{animation:lumi-enter .55s ease both}.lp-quiz-result-page .lp-quiz-result-sparkles{animation:lumi-finish 1.1s ease 2}
+@keyframes lumi-finish{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.12);opacity:.65}}
+@media(prefers-reduced-motion:reduce){.lp-quiz-result-page .lp-quiz-result-hero,.lp-quiz-result-page .lp-quiz-result-sparkles{animation:none!important}}

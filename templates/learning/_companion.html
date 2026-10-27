@@ -5,6 +5,6 @@
   <button class="lumi-character" type="button" data-lumi-greet aria-label="Nhận một lời động viên từ Lumi">
     <img src="{% static 'images/lumi-owl.webp' %}" alt="Lumi, chú cú xanh cầm sách và vẫy cánh" width="449" height="480" decoding="async">
   </button>
-  <div class="lumi-message"><span class="lumi-label">LUMI · BẠN ĐỒNG HÀNH</span><p data-lumi-message aria-live="polite">Một chút mỗi ngày. Mình cùng bắt đầu nhé!</p><small>Chạm vào Lumi để nhận lời động viên.</small></div>
+  <div class="lumi-message"><span class="lumi-label">LUMI · BẠN ĐỒNG HÀNH</span><p data-lumi-message aria-live="polite">{{ companion_message|default:"Một chút mỗi ngày. Mình cùng bắt đầu nhé!" }}</p><small>Chạm vào Lumi để nhận lời động viên.</small></div>
 </aside>
 <script src="{% static 'js/companion.js' %}" defer></script>
