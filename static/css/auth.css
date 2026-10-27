@@ -35,3 +35,5 @@
 .social-login-button:disabled {cursor:not-allowed;background:#f7f9ff;color:#66748d;}
 .social-login p {margin:0;font-size:11px;line-height:1.7;color:#62718a;}
 .social-login-divider {font-size:11px;text-align:center;color:#63718a;margin:5px 0;}
+
+.auth-layout .auth-card > .auth-recovery-note {margin:0 0 20px; padding:12px 14px; border:1px solid #d5e1f4; border-radius:10px; background:#f2f6ff; color:#314464; font-size:13px; line-height:1.6;}

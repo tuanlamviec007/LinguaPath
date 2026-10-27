@@ -21,12 +21,18 @@ class LearningFlowTests(TestCase):
         self.correct = AnswerOption.objects.create(question=self.question, label='A', text='Monday', is_correct=True)
         self.wrong = AnswerOption.objects.create(question=self.question, label='B', text='Tuesday', is_correct=False)
 
+    def test_register_explains_current_password_recovery_limit(self):
+        page = self.client.get(reverse('register'))
+        self.assertContains(page, 'chưa hỗ trợ khôi phục mật khẩu qua email')
+
     def test_register_creates_profile_and_logs_in(self):
         response = self.client.post(reverse('register'), {
             'username': 'new-learner', 'password1': 'A-strong-password-447!', 'password2': 'A-strong-password-447!',
         })
         self.assertRedirects(response, reverse('learning_goal'))
-        self.assertTrue(get_user_model().objects.get(username='new-learner').learner_profile)
+        user = get_user_model().objects.get(username='new-learner')
+        self.assertTrue(user.learner_profile)
+        self.assertEqual(user.email, '')
 
     def test_learning_goal_form_validates_toeic_range_and_updates_plan_preferences(self):
         self.client.force_login(self.user)
