@@ -29,6 +29,20 @@ class WorkspaceFixture(TestCase):
 
 
 class FlashcardWorkspaceTests(WorkspaceFixture):
+    def test_scriptless_cards_offer_meaning_and_record_rating(self):
+        page = self.client.get(reverse('learning:flashcards'), {'topic': 'Work'})
+        card = list(page.context['cards'])[0]
+        fallback = page.content.decode().split('<noscript>', 1)[1].split('</noscript>', 1)[0]
+        self.assertIn('<details', fallback)
+        self.assertIn(card.term, fallback)
+        self.assertIn(card.meaning_vi, fallback)
+        self.assertIn('name="csrfmiddlewaretoken"', fallback)
+        self.assertIn(reverse('learning:review_flashcard', args=[card.pk]), fallback)
+        response = self.client.post(reverse('learning:review_flashcard', args=[card.pk]),
+                                    {'rating': 'hard', 'next': card.rating_return_url})
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(card.reviews.filter(user=self.user, rating='hard').exists())
+
     def test_library_rating_keeps_cross_deck_filters_page_and_position(self):
         page = self.client.get(reverse('learning:flashcards'), {
             'all': 1, 'level': 'A1', 'topic': 'Work', 'q': 'word', 'page': 2,
