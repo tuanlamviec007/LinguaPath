@@ -1,6 +1,6 @@
 # Trạng thái thực hiện audit LinguaPath
 
-Đối chiếu **33 mã phát hiện** trong `AUDIT_PLAN_2026-10-23.md`, cập nhật **26/10/2026** sau M1–M14 và triển khai Render + Neon. **Chưa hoàn tất toàn bộ audit.** “Đã sửa cục bộ” là có mã và regression đạt, không thay cho các điều kiện PostgreSQL, thiết bị thật, chuyên môn hoặc production ghi riêng.
+Đối chiếu **33 mã phát hiện** trong `AUDIT_PLAN_2026-10-23.md`, cập nhật **27/10/2026** sau M1–M14 và các bản cải tiến tiếp theo trên Render + Neon. **Chưa hoàn tất toàn bộ audit.** “Đã sửa cục bộ” là có mã và regression đạt, không thay cho các điều kiện PostgreSQL, thiết bị thật, chuyên môn hoặc production ghi riêng.
 
 | Mã | Trạng thái | Bằng chứng / việc còn lại |
 |---|---|---|
@@ -31,10 +31,10 @@
 | U02 | Đã sửa cục bộ · M2 | Rating flashcard giữ filter/page/context, allowlist redirect. |
 | U03 | Đã sửa cục bộ · M2 | Đổi nguồn quiz giữ mode/level/topic/count, có no-JS hướng dẫn. |
 | O01 | Render live; CI smoke đạt; vận hành còn mở | HTTPS/trang chủ/form/health đã kiểm tra trên Render + Neon. CI PostgreSQL/Docker/CSRF/login/cookie/session sau restart đạt. Chưa auth/quiz/restart production, backup/restore PostgreSQL, load, rollback biên bản hoặc Cloudflare staging. |
-| O02 | Repository/CI thực đã đạt | GitHub tuanlamviec007/LinguaPath; CI 40306276885 trên 57e422be:869 Django PostgreSQL,109 Node, migration/static/Worker dry-run/Docker/runtime smoke đạt. Render đã live M14 tại57e422be, auto-deploy vẫn tắt; biên bản trong DEPLOY_RENDER_NEON_STATUS.md. |
+| O02 | Repository/CI thực đã đạt | CI 40441793648 trên 8a6aaa0 đạt kiểm tra Django/Node trên PostgreSQL, migration, static, Worker, build Docker và smoke session sau restart trên dữ liệu CI tạm. Không chứng minh backup/restore hay nghiệp vụ production. Render auto-deploy tắt. |
 | O03 | Đã sửa cục bộ · M1/M4/M8 | Tách livez/healthz; startup bắt buộc check_release cho config production/schema/projection trước Gunicorn. Có test chặn khởi động khi gate lỗi; không tự migrate/backfill. |
 | O04 | Mã log/runbook có · M4; collector còn mở | UUID và allowlist/redaction Django/Gunicorn/Worker, probe/ngưỡng đề xuất. Chưa collector/retention/alert owner/delivery. |
-| O05 | Lock/hash, build/run Docker đã đạt; digest còn mở | 25 package Linux/Python3.12; hash install, Docker build và runtime smoke đạt trong CI 40294128144. Chưa pin base/service image digest. |
+| O05 | Lock/hash, build/run Docker đã đạt; digest còn mở | Lock hiện có 34 package Linux/Python3.12; hash install, Docker build và runtime smoke đạt trong CI 40441793648. Chưa pin base/service image digest. |
 | O06 | Đã sửa · M1 | Một lệnh aggregate chạy mọi scripts/test_*.cjs và Django suite, dùng trong CI. |
 | G01 | Đã có giải thích/đường quay lại · M4 | Script-only Listening vẫn không vào retry DTO; sổ lỗi giải thích và link bài gốc/TTS khi có script. |
 
@@ -44,7 +44,7 @@
 - Lộ trình người mới có trang hướng dẫn, minh họa và ba bước theo hoạt động của từng tài khoản. Quiz đầu tiên được gợi ý ở mức 5 câu; nguồn từ và bộ lọc vẫn do người học chọn.
 - Thẻ từ có phần HTML dự phòng khi tắt JavaScript; đã kiểm tra biểu mẫu và gửi đánh giá bằng test, chưa nghiệm thu bằng trình duyệt tắt JavaScript hoặc screen reader.
 - Quiz hiển thị số từ của nguồn tại thời điểm tải trang trước bộ lọc; nút thử lại vẫn dùng được khi người học thay đổi lựa chọn, và máy chủ kiểm tra nguồn thực tế khi tạo quiz.
-- Google/Facebook đã có tích hợp và trang xử lý lỗi, nhưng chưa cấu hình OAuth hoặc kiểm thử với tài khoản thật. Trước kích hoạt công khai cần xử lý và nghiệm thu việc xác nhận danh tính khi xuất/xóa dữ liệu cho tài khoản mạng xã hội không có mật khẩu LinguaPath; hiện các thao tác này yêu cầu mật khẩu.
+- Google/Facebook đã có tích hợp và trang xử lý lỗi, nhưng chưa cấu hình OAuth hoặc kiểm thử với tài khoản thật. Trước kích hoạt công khai cần xử lý và nghiệm thu việc xác nhận danh tính khi xuất/xóa dữ liệu cho tài khoản mạng xã hội không có mật khẩu LinguaPath; hiện các thao tác này yêu cầu mật khẩu; trang dữ liệu giải thích khi tài khoản chưa có mật khẩu dùng được.
 - Các thay đổi trên không thay thế nghiệm thu thiết bị, duyệt học liệu hoặc diễn tập vận hành trong bảng.
 
 ### Phát hiện mới: khôi phục tài khoản (27/10/2026)

@@ -93,6 +93,21 @@ class PrivacyCenterTests(TestCase):
         self.assertIn('no-store', page['Cache-Control'])
         self.assertEqual(counts, (get_user_model().objects.count(), TutorTurn.objects.count(), PracticeAttempt.objects.count()))
 
+    def test_unusable_password_shows_limit_and_does_not_bypass_reauthentication(self):
+        self.user.set_unusable_password()
+        self.user.save(update_fields=['password'])
+        self.client.force_login(self.user)
+        page = self.client.get(reverse('privacy_center'))
+        self.assertContains(page, 'chưa có mật khẩu LinguaPath', count=2)
+        self.assertNotContains(page, 'name="password"')
+        for action in ('export', 'delete'):
+            response = self.client.post(reverse('privacy_center'), {
+                'action': action, 'password': 'anything',
+                'confirm_delete': 'XOA', 'confirm_understood': 'yes',
+            })
+            self.assertEqual(response.status_code, 403)
+        self.assertTrue(get_user_model().objects.filter(pk=self.user.pk).exists())
+
     def test_export_is_owned_allowlisted_complete_for_saved_sections(self):
         response = self._export()
         self.assertEqual(response.status_code, 200)

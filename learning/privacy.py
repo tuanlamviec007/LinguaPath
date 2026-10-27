@@ -249,6 +249,7 @@ def _limited(message, status, retry_after):
 def _page(request, error='', status=200):
     return render(request, 'learning/privacy.html', {
         'privacy_error': error, 'privileged_account': request.user.is_staff or request.user.is_superuser,
+        'can_confirm_password': request.user.has_usable_password(),
         'export_size_mb': MAX_EXPORT_BYTES // (1024 * 1024),
     }, status=status)
 
