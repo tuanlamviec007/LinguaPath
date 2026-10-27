@@ -5,7 +5,7 @@ import unicodedata
 from urllib.parse import urlencode
 
 from django.urls import reverse
-from django.db.models import prefetch_related_objects
+from django.db.models import Count, prefetch_related_objects
 
 from .models import Flashcard, Question
 from .tutor_provenance import (
@@ -366,27 +366,20 @@ def retrieve_context(query, exam='TOEIC', limit=3, question_id=None, user=None, 
             item['_literal_sense'] = _literal_meaning_context(query) == _meaning_key(card.meaning_vi)
             candidates.append(item)
 
-    # Learner question history is usually small; scan the eligible set so
-    # accent-folded queries are not lost to database collation behavior.
-    questions = _submitted_questions(exam, user).only(
-        *QUESTION_FIELDS, *('content__' + field for field in CONTENT_FIELDS),
-    ).order_by('id')
-    for question in (questions if unquoted_terms else ()):
-        searchable = ' '.join((
-            question.prompt, question.passage, question.audio_script,
-            question.transcript, question.explanation_vi, question.explanation,
-        ))
-        matched = unquoted_terms & (set(_tokens(searchable)) - STOP_WORDS)
-        if len(matched) < 2:
-            continue
-        score = 25.0 + 10.0 * len(matched) / max(len(unquoted_terms), 1)
-        candidates.append({
-            'score': score,
-            'kind': 'question',
-            'source_id': question.pk,
-            'question': question,
-            'match_type': 'token',
-        })
+    # Match postings first; never download/tokenize unrelated historical text.
+    # The ownership/exam/publication constraints still apply before hydration.
+    from .models import QuestionSearchToken
+    from .question_search import token_hashes
+    if len(unquoted_terms) >= 2:
+        postings = QuestionSearchToken.objects.filter(
+            token_hash__in=token_hashes(' '.join(unquoted_terms)),
+        ).values('question_id').annotate(hits=Count('token_hash')).filter(hits__gte=2)
+        hits = dict(postings.filter(question_id__in=_submitted_questions(exam, user).values('pk'))
+                    .order_by('-hits', 'question_id').values_list('question_id', 'hits')[:limit])
+        for question_id, matched in hits.items():
+            score = 25.0 + 10.0 * matched / len(unquoted_terms)
+            candidates.append({'score': score, 'kind': 'question',
+                               'source_id': question_id, 'match_type': 'token'})
 
     # Deterministic ties make benchmark results repeatable.
     # Bare duplicate headwords are ambiguous by nature. Return all senses as
@@ -462,9 +455,15 @@ def retrieve_context(query, exam='TOEIC', limit=3, question_id=None, user=None, 
     for item in selected:
         item.pop('_sense_support', None)
         item.pop('_literal_sense', None)
-    # Load answer evidence in one bounded query only after ranking. Scanning
-    # eligible history must not fetch every question's options or use N+1.
-    selected_questions = [item['question'] for item in selected if item['kind'] == 'question']
+    # Recheck access and load full evidence only for the final bounded result.
+    selected_ids = [item['source_id'] for item in selected if item['kind'] == 'question']
+    selected_questions = list(_submitted_questions(exam, user).filter(pk__in=selected_ids).only(
+        *QUESTION_FIELDS, *('content__' + field for field in CONTENT_FIELDS))) if selected_ids else []
+    questions_by_id = {question.pk: question for question in selected_questions}
+    selected = [item for item in selected if item['kind'] != 'question' or item['source_id'] in questions_by_id]
+    for item in selected:
+        if item['kind'] == 'question':
+            item['question'] = questions_by_id[item['source_id']]
     if selected_questions:
         prefetch_related_objects(selected_questions, option_prefetch())
     return [

@@ -7,7 +7,10 @@ class LearningConfig(AppConfig):
 
     def ready(self):
         from django.db.models.signals import post_delete, post_save
-        from .models import VocabularyQuizSession
+        from .models import VocabularyQuizSession, Question
+        from .question_search import question_saved
+        post_save.connect(question_saved, sender=Question,
+                          dispatch_uid="learning.question_search_saved")
         from .weak_word_outcomes import quiz_outcomes_deleted, quiz_outcomes_saved
         post_save.connect(quiz_outcomes_saved, sender=VocabularyQuizSession,
                           dispatch_uid='learning.quiz_weak_word_outcomes_saved')
