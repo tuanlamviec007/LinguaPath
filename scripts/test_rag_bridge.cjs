@@ -35,6 +35,13 @@ test('concurrent requests cannot exceed the durable minute budget',async()=>{
  const result=await Promise.all(Array.from({length:12},()=>reserve(s.storage,'infer',[],1700000000000)));
  assert.equal(result.filter(Boolean).length,3);
 });
+test('existing editor draft contract uses its separate fixed schema and bounded output',async()=>{
+ const {handleRag}=await modulePromise,s=setup();
+ const response=await handleRag(request('infer',{query:'Draft practice',context:'Original note',task:'draft_part5'}),s.env);
+ assert.equal(response.status,200);assert.equal(s.calls[0].payload.max_tokens,1200);
+ assert.match(s.calls[0].payload.messages[0].content,/Return ONLY JSON/);
+ assert.equal((await response.json()).prompt_version,'cloudflare-draft-v1');
+});
 test('vector search returns references only, not stored text or arbitrary URLs',async()=>{
  const {handleRag}=await modulePromise,s=setup();const response=await handleRag(request('search',{query:'passive'}),s.env);
  const data=await response.json();assert.equal(data.matches[0].id,'knowledge:passive');assert.deepEqual(Object.keys(data.matches[0]).sort(),['id','score','version']);

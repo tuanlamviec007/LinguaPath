@@ -1,4 +1,5 @@
 // Private service endpoints. Public callers never receive an AI or indexing capability.
+import { DRAFT_INSTRUCTIONS } from './ai-gateway.js';
 export const MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
 export const EMBEDDING = '@cf/baai/bge-m3';
 const MAX_BODY = 24576;
@@ -63,9 +64,11 @@ export async function handleRag(request, env) {
   try {
     data=await payload(request);
     if(kind==='infer'){
-      if(!keys(data,['query','context','history'])||!string(data.query,500)||!string(data.context,5400))throw Error();
+      if(!keys(data,['query','context','history','task'])||!string(data.query,500)||!string(data.context,5400)||
+         (data.task!==undefined&&!['explain','draft_part5'].includes(data.task)))throw Error();
       const history=data.history||[];
       if(!Array.isArray(history)||history.length>6||history.some(m=>!m||!keys(m,['role','content'])||!['user','assistant'].includes(m.role)||!string(m.content,1000)))throw Error();
+      if(data.task==='draft_part5'&&history.length)throw Error();
     }else if(kind==='search'){
       if(!keys(data,['query'])||!string(data.query,500))throw Error();
     }else{
@@ -77,10 +80,11 @@ export async function handleRag(request, env) {
   try{
     if(!await env.BUDGET.getByName('rag-capacity').reserve(kind,kind==='index'?data.documents.map(d=>d.id):[]))return reply({error:'AI capacity reached'},429);
     if(kind==='infer'){
-      const response=await env.AI.run(MODEL,{messages:[{role:'system',content:instruction},...(data.history||[]),
-        {role:'user',content:JSON.stringify({learning_sources:data.context,learner_question:data.query})}],max_tokens:450,temperature:0.2,stream:false});
+      const draft=data.task==='draft_part5';
+      const response=await env.AI.run(MODEL,{messages:[{role:'system',content:draft?DRAFT_INSTRUCTIONS:instruction},...(data.history||[]),
+        {role:'user',content:JSON.stringify({learning_sources:data.context,learner_question:data.query})}],max_tokens:draft?1200:450,temperature:0.2,stream:false});
       if(!string(response?.response,30000))throw Error();
-      return reply({answer:response.response.trim().slice(0,6000),model:MODEL,prompt_version:'lumi-chat-rag-v1'});
+      return reply({answer:response.response.trim().slice(0,6000),model:MODEL,prompt_version:draft?'cloudflare-draft-v1':'lumi-chat-rag-v1'});
     }
     const texts=kind==='search'?[data.query]:data.documents.map(d=>d.text);
     const vectors=embedding(await env.AI.run(EMBEDDING,{text:texts}),texts.length);
