@@ -16,7 +16,7 @@ from django.utils import timezone
 from django.views.decorators.cache import never_cache
 from django.views.decorators.http import require_http_methods
 from planner.models import LearnerProfile
-from .ai import answer_tutor_question
+from .chat_brain import answer_chat_question
 from .ai_provider import tutor_ai_available
 from .locking import nonkey_row_lock
 from .models import TutorTurn
@@ -58,6 +58,10 @@ def current_memory(turns, user, exam):
     """Never replay tool data, withdrawn sources, old tutor sessions or private exam answers."""
     history, previous = [], ''
     for turn in list(reversed(turns))[-3:]:
+        if turn.result.get('mode') in ('llm_chat', 'conversation') and turn.result.get('chat_intent') in ('motivation', 'greeting', 'thanks', 'learning'):
+            history += [{'role': 'user', 'content': turn.question[:500]},
+                        {'role': 'assistant', 'content': str(turn.result.get('answer', ''))[:1000]}]
+            continue
         if turn.result.get('mode') not in ('llm_rag', 'retrieval_only'):
             continue
         result, notice = revalidate_tutor_history(turn.result, user, exam, turn.created_at)
@@ -131,10 +135,11 @@ def chat(request):
                 result = daily_tasks(request.user, profile)
             else:
                 memory, previous = current_memory([t for t in turns if _in_thread(t, thread)], request.user, profile.exam_goal)
-                result = answer_tutor_question(query, exam=profile.exam_goal, user=request.user, use_ai=use_ai,
+                result = answer_chat_question(query, exam=profile.exam_goal, user=request.user, use_ai=use_ai,
                     public_context_only=True, retrieval_query=_retrieval_query(query, previous),
-                    chat_history=memory if use_ai else None, semantic=use_ai)
-            result.update(chat_thread=thread, chat_request=request_id, tool=tool)
+                    chat_history=memory, semantic=use_ai)
+            result.update(chat_thread=thread, chat_request=request_id, tool=tool,
+                          chat_ai_choice='ai' if request.POST.get('response_mode') == 'ai' else 'basic')
         except Exception:
             logger.warning('Chat turn failed; no exception or prompt details logged.')
             result = {'chat_thread': thread, 'chat_request': request_id, 'tool': tool, 'mode': 'unavailable',
@@ -156,5 +161,5 @@ def chat(request):
             threads.append({'title': turn.question, 'href': _url(key), 'active': key == thread})
     return render(request, 'learning/chat.html', {'conversation': conversation, 'threads': threads[:8],
         'thread': thread, 'llm_enabled': tutor_ai_available(),
-        'use_ai': bool(conversation and next((t for t in turns if _in_thread(t, thread)), None).response_mode == 'ai'),
+        'use_ai': not conversation or next((t for t in turns if _in_thread(t, thread)), None).result.get('chat_ai_choice') != 'basic',
         'token': signing.dumps({'user': request.user.pk, 'thread': thread, 'request': str(uuid4())}, salt=SALT)})

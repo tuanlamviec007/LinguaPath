@@ -21,7 +21,7 @@ def _keep_capacity_for_web(function):
             return function(*args, **kwargs)
         if not _live_inference.acquire(blocking=False):
             result = function(*args, **dict(kwargs, use_ai=False))
-            result['answer'] += '\n\nLumi đang xử lý một yêu cầu AI khác. Đây là kết quả tra cứu; bạn có thể thử AI lại sau ít giây.'
+            result['answer'] += '\n\nLumi đang xử lý một yêu cầu AI khác. Đây là phản hồi không dùng AI; bạn có thể thử AI lại sau ít giây.'
             return result
         try:
             return function(*args, **kwargs)

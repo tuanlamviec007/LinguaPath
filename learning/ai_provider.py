@@ -78,7 +78,7 @@ def generate_cloudflare_answer(query, context, *, task='explain', include_metada
         while payload['history'] and len(json.dumps(payload, ensure_ascii=False).encode('utf-8')) > 24576:
             payload['history'] = payload['history'][2:]
     if task != 'explain':
-        if task != 'draft_part5':
+        if task not in ('draft_part5', 'chat'):
             raise ValueError('Unknown AI task')
         payload['task'] = task
     payload = json.dumps(payload, ensure_ascii=False).encode('utf-8')

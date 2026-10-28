@@ -41,7 +41,7 @@ class ChatTests(TestCase):
 
     def test_same_send_token_cannot_repeat_ai_or_create_duplicate_turn(self):
         page = self.client.get(self.url)
-        with patch('learning.chat_views.answer_tutor_question', return_value={'answer':'Hi', 'sources':[], 'mode':'retrieval_only'}) as answer:
+        with patch('learning.chat_views.answer_chat_question', return_value={'answer':'Hi', 'sources':[], 'mode':'retrieval_only'}) as answer:
             first = self.send(page)
             self.send(page)
         self.assertEqual(answer.call_count, 1)
@@ -73,13 +73,13 @@ class ChatTests(TestCase):
         page = self.client.get(self.url)
         turn = TutorTurn.objects.create(user=self.user, question='Interrupted', result={
             'chat_thread':page.context['thread'], 'mode':'chat_pending', 'answer':'Pending', 'sources':[]})
-        with patch('learning.chat_views.answer_tutor_question') as answer:
+        with patch('learning.chat_views.answer_chat_question') as answer:
             self.send(page)
             answer.assert_not_called()
         TutorTurn.objects.filter(pk=turn.pk).update(created_at=timezone.now()-timedelta(seconds=100))
         page = self.client.get(self.url+'?thread='+page.context['thread'])
         self.assertContains(page, 'Lượt trước chưa hoàn thành')
-        with patch('learning.chat_views.answer_tutor_question',return_value={'answer':'Recovered','sources':[],'mode':'retrieval_only'}) as answer:
+        with patch('learning.chat_views.answer_chat_question',return_value={'answer':'Recovered','sources':[],'mode':'retrieval_only'}) as answer:
             self.send(page)
             answer.assert_called_once()
 
@@ -112,12 +112,12 @@ class ChatTests(TestCase):
     def test_followup_retrieves_previous_topic_but_stays_inside_this_thread(self):
         first = self.send()
         page = self.client.get(first.url)
-        with patch('learning.chat_views.answer_tutor_question', return_value={'answer':'Example','mode':'retrieval_only','sources':[]}) as answer:
+        with patch('learning.chat_views.answer_chat_question', return_value={'answer':'Example','mode':'retrieval_only','sources':[]}) as answer:
             self.send(page, question='Cho mình ví dụ khác')
         self.assertIn('consistent', answer.call_args.kwargs['retrieval_query'])
         self.assertTrue(answer.call_args.kwargs['public_context_only'])
         new = self.client.get(self.url)
-        with patch('learning.chat_views.answer_tutor_question', return_value={'answer':'No context','mode':'no_match','sources':[]}) as answer:
+        with patch('learning.chat_views.answer_chat_question', return_value={'answer':'No context','mode':'no_match','sources':[]}) as answer:
             self.send(new, question='Cho mình ví dụ khác')
         self.assertEqual(answer.call_args.kwargs['retrieval_query'], 'Cho mình ví dụ khác')
 

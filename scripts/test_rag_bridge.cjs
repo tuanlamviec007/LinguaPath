@@ -42,6 +42,17 @@ test('existing editor draft contract uses its separate fixed schema and bounded 
  assert.match(s.calls[0].payload.messages[0].content,/Return ONLY JSON/);
  assert.equal((await response.json()).prompt_version,'cloudflare-draft-v1');
 });
+test('social chat has conversational instructions and does not pretend to have RAG evidence',async()=>{
+ const {handleRag}=await modulePromise,s=setup();
+ const response=await handleRag(request('infer',{query:'tôi ko muốn học nữa',context:'General conversation, no retrieved source',task:'chat',history:[{role:'user',content:'mình thấy mệt'}]}),s.env);
+ assert.equal(response.status,200);
+ const messages=s.calls[0].payload.messages;
+ assert.match(messages[0].content,/Không bắt mọi câu nói phải là từ khóa TOEIC/);
+ assert.match(messages[0].content,/không phán xét hay ép học/);
+ assert.ok(JSON.parse(messages.at(-1).content).conversation_context);
+ assert.equal(JSON.parse(messages.at(-1).content).learning_sources,undefined);
+ assert.equal((await response.json()).prompt_version,'lumi-conversation-v1');
+});
 test('vector search returns references only, not stored text or arbitrary URLs',async()=>{
  const {handleRag}=await modulePromise,s=setup();const response=await handleRag(request('search',{query:'passive'}),s.env);
  const data=await response.json();assert.equal(data.matches[0].id,'knowledge:passive');assert.deepEqual(Object.keys(data.matches[0]).sort(),['id','score','version']);

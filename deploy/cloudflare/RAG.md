@@ -2,7 +2,9 @@
 
 The Django application remains the authority for authentication, learner-owned chat history, source visibility and learning tools. The standalone `rag-worker.js` uses Workers AI and Vectorize; it does not move Django or Neon into a container.
 
-Flow: signed Django chat POST → public lexical lookup → semantic fallback when AI is selected → current-source/version validation in Django → bounded prompt → Llama explanation → source cards and stored answer. A follow-up can reuse at most three current, public-source turns from the same conversation. Old tutor history is not automatically imported. Progress and plan results are excluded from model memory.
+Flow: signed Django chat POST → conversational routing. Greetings and learning motivation use the conversational prompt, without requiring a matching TOEIC source. Learning questions use public lexical lookup → semantic fallback → current-source/version validation → bounded Llama explanation with source cards. When no source matches, general English help can use the separate conversational prompt; it is labeled as general conversation and cannot invent retrieved citations. Basic empathetic replies remain available when AI is off, busy or exhausted.
+
+A follow-up can reuse at most three recent conversational turns or validated public-source turns from the same conversation. Withdrawn-source turns, private exam answers, progress and plan results are excluded from model memory. Old tutor history is not automatically imported. New and legacy threads default to the clearly labeled AI option; an explicit opt-out on the new form is retained. Sending is still a deliberate POST and the form explains the bounded history shared with the provider.
 
 Models are fixed in `rag-runtime.js`: `@cf/meta/llama-3.3-70b-instruct-fp8-fast` for generation and multilingual `@cf/baai/bge-m3` (1024 dimensions) for embeddings. Vectorize stores embeddings and source version hashes; retrieval returns pointers only. Django reloads the actual public source. A score threshold is a retrieval heuristic, not a guarantee of relevance or factual correctness. Keyword lookup remains the first path.
 

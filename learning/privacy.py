@@ -101,7 +101,7 @@ def _mistake_result(value):
 
 
 def _tutor_result(value):
-    result = _pick(value, ('answer', 'mode', 'provider', 'retrieval_mode', 'chat_thread', 'tool'))
+    result = _pick(value, ('answer', 'mode', 'provider', 'retrieval_mode', 'chat_thread', 'tool', 'chat_intent', 'chat_ai_choice'))
     if not isinstance(value, dict):
         return result
     for key in ('sources', 'clarification_prompts'):
