@@ -1,8 +1,9 @@
 from django.urls import path
-from . import views, quiz_views, saved_words, quiz_weak_words, quiz_history
+from . import views, quiz_views, saved_words, quiz_weak_words, quiz_history, chat_views
 
 app_name = 'learning'
 urlpatterns = [
+    path('chat/', chat_views.chat, name='chat'),
     path('start/', views.getting_started, name='getting_started'),
     path('words/', saved_words.saved_words, name='saved_words'),
     path('words/review/', quiz_weak_words.weak_words, name='weak_words'),

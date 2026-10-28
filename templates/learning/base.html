@@ -56,7 +56,7 @@
           <a class="app-sidebar__link{% if route == 'practice_list' or route == 'practice' or route == 'take_attempt' or route == 'submit_attempt' or route == 'attempt_result' %} is-active{% endif %}" href="{% url 'learning:practice_list' %}"{% if route == 'practice_list' or route == 'practice' or route == 'take_attempt' or route == 'submit_attempt' or route == 'attempt_result' %} aria-current="page"{% endif %}><span class="nav-mark" aria-hidden="true">✓</span><span>Luyện tập</span></a>
           <a class="app-sidebar__link{% if route == 'mistake_notebook' or route == 'update_mistake_entry' or route == 'start_mistake_review' or route == 'take_mistake_review' or route == 'submit_mistake_review' or route == 'mistake_review_result' or route == 'abandon_mistake_review' %} is-active{% endif %}" href="{% url 'learning:mistake_notebook' %}"{% if route == 'mistake_notebook' or route == 'update_mistake_entry' or route == 'start_mistake_review' or route == 'take_mistake_review' or route == 'submit_mistake_review' or route == 'mistake_review_result' or route == 'abandon_mistake_review' %} aria-current="page"{% endif %}><span class="nav-mark" aria-hidden="true">↻</span><span>Sổ lỗi</span></a>
           <a class="app-sidebar__link{% if route == 'progress' %} is-active{% endif %}" href="{% url 'progress' %}"{% if route == 'progress' %} aria-current="page"{% endif %}><span class="nav-mark" aria-hidden="true">▤</span><span>Tiến độ</span></a>
-          <a class="app-sidebar__link{% if route == 'tutor' %} is-active{% endif %}" href="{% url 'tutor' %}"{% if route == 'tutor' %} aria-current="page"{% endif %}><span class="nav-mark" aria-hidden="true">✳</span><span>Trợ lý học tập</span></a>
+          <a class="app-sidebar__link{% if route == 'tutor' or route == 'chat' %} is-active{% endif %}" href="{% url 'learning:chat' %}"{% if route == 'tutor' or route == 'chat' %} aria-current="page"{% endif %}><span class="nav-mark" aria-hidden="true">✳</span><span>Trợ lý học tập</span></a>
           </nav>
         <div class="sidebar-divider"></div>
         <div class="sidebar-caption">CÁ NHÂN</div>
@@ -89,7 +89,7 @@
             <a href="{% url 'learning:practice_list' %}"{% if route == 'practice_list' or route == 'practice' or route == 'take_attempt' or route == 'submit_attempt' or route == 'attempt_result' %} aria-current="page"{% endif %}>Luyện tập</a>
             <a href="{% url 'learning:mistake_notebook' %}"{% if route == 'mistake_notebook' or route == 'update_mistake_entry' or route == 'start_mistake_review' or route == 'take_mistake_review' or route == 'submit_mistake_review' or route == 'mistake_review_result' or route == 'abandon_mistake_review' %} aria-current="page"{% endif %}>Sổ lỗi</a>
             <a href="{% url 'progress' %}"{% if route == 'progress' %} aria-current="page"{% endif %}>Tiến độ</a>
-            <a href="{% url 'tutor' %}"{% if route == 'tutor' %} aria-current="page"{% endif %}>Trợ lý học tập</a>
+            <a href="{% url 'learning:chat' %}"{% if route == 'tutor' or route == 'chat' %} aria-current="page"{% endif %}>Trợ lý học tập</a>
             <a href="{% url 'learning_goal' %}"{% if route == 'learning_goal' or route == 'placement_test' or route == 'placement_result' or route == 'apply_placement_result' %} aria-current="page"{% endif %}>Mục tiêu & trình độ</a>
             <a href="{% url 'privacy_center' %}"{% if route == 'privacy_center' %} aria-current="page"{% endif %}>Dữ liệu & quyền riêng tư</a>
             {% if user.is_staff %}<a href="{% url 'admin:index' %}">Quản trị nội dung</a>{% endif %}

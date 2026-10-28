@@ -73,12 +73,16 @@ def answer_description_candidate(card_id, version, exam='TOEIC'):
 
 
 def answer_tutor_question(query, exam='TOEIC', question_id=None, user=None, *, use_ai=False,
-                          public_context_only=False, evidence_observer=None, retrieval_mode='auto'):
+                          public_context_only=False, evidence_observer=None, retrieval_mode='auto',
+                          retrieval_query=None, chat_history=None, semantic=False):
     # Evaluation can use the real quota principal while excluding their private
     # submitted questions. Web requests never derive these controls from input.
     retrieval_options = {'retrieval_mode': retrieval_mode} if retrieval_mode != 'auto' else {}
-    evidence = retrieve_learning_context(query, exam=exam, question_id=question_id,
+    evidence = retrieve_learning_context(retrieval_query or query, exam=exam, question_id=question_id,
                                         user=None if public_context_only else user, **retrieval_options)
+    if not evidence and semantic and use_ai and tutor_ai_available() and question_id is None and retrieval_mode == 'auto':
+        from .semantic_retrieval import retrieve_semantic_context
+        evidence = retrieve_semantic_context(retrieval_query or query, exam)
     packed = None
     if evidence_observer is not None:
         if not callable(evidence_observer):
@@ -151,7 +155,8 @@ def answer_tutor_question(query, exam='TOEIC', question_id=None, user=None, *, u
     try:
         context = packed.text
         if provider == 'cloudflare':
-            generated = generate_cloudflare_answer(query, context, include_metadata=True)
+            history_options = {'history': chat_history} if chat_history else {}
+            generated = generate_cloudflare_answer(query, context, include_metadata=True, **history_options)
             # A legacy bridge (or integration) can still return only text.
             answer = generated['answer'] if isinstance(generated, dict) else generated
             actual_model = generated.get('model') if isinstance(generated, dict) else None

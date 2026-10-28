@@ -84,6 +84,7 @@ jobs:
         run: |
           npm ci --no-audit --no-fund
           npx wrangler deploy --dry-run --containers-rollout=none --outdir "$RUNNER_TEMP/worker-build"
+          npx wrangler deploy --config wrangler.rag.jsonc --dry-run --outdir "$RUNNER_TEMP/rag-worker-build"
       - name: Build production image without deployment
         run: docker build --tag "linguapath-ci:$GITHUB_SHA" .
       - name: Container runtime, CSRF and session persistence after restart

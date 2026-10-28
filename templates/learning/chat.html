@@ -1,0 +1,33 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}Chat với Lumi · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/chat.css' %}">
+<div class="lumi-chat">
+  <header class="chat-heading"><div><span class="eyebrow">HỎI · HIỂU · HỌC TIẾP</span><h1>Trò chuyện với Lumi<span aria-hidden="true">✦</span></h1><p>Một câu chưa hiểu? Mình cùng tìm lời giải từ học liệu.</p></div><a class="button secondary" href="{% url 'learning:chat' %}">＋ Cuộc trò chuyện mới</a></header>
+  {% if threads %}<details class="chat-mobile-threads"><summary>Cuộc trò chuyện gần đây</summary><nav>{% for item in threads %}<a href="{{ item.href }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.title|truncatechars:48 }}</a>{% endfor %}</nav></details>{% endif %}
+  <div class="chat-layout">
+    <aside class="chat-sidebar" aria-label="Các cuộc trò chuyện"><img src="{% static 'images/lumi-owl.webp' %}" width="90" height="96" alt="Lumi, bạn đồng hành học tập"><h2>Lumi ở đây để giúp bạn</h2><p>Tra kiến thức, xem tiến độ hoặc tìm việc học tiếp theo.</p><a href="{% url 'tutor' %}">Mở tra cứu & sổ tay →</a><h3>Gần đây</h3><nav>{% for item in threads %}<a href="{{ item.href }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.title|truncatechars:48 }}</a>{% empty %}<p>Cuộc trò chuyện đầu tiên bắt đầu từ câu hỏi của bạn.</p>{% endfor %}</nav></aside>
+    <section class="chat-main" aria-label="Hội thoại với Lumi">
+      <div class="chat-messages" id="chat-messages">
+        {% if not conversation %}<div class="chat-intro"><span class="chat-avatar" aria-hidden="true">✦</span><h2>Chào bạn, mình là Lumi!</h2><p>Thử hỏi “Khi nào dùng despite và although?”. Sau đó bạn có thể hỏi tiếp “Cho mình ví dụ khác nhé”.</p><p>Mình cũng có thể lấy tiến độ và kế hoạch thật của bạn bằng các nút bên dưới.</p></div>{% endif %}
+        {% for turn in conversation %}
+          <article class="chat-exchange"><div class="chat-user"><span class="chat-speaker">Bạn</span><p>{{ turn.question }}</p></div><div class="chat-assistant"{% if forloop.last %} id="latest-response"{% endif %}><span class="chat-speaker"><span aria-hidden="true">✦</span> Lumi <small>{% if turn.result.mode == 'llm_rag' %}AI · dựa trên học liệu{% elif turn.result.mode == 'learning_data' %}Công cụ tiến độ{% elif turn.result.mode == 'daily_plan' %}Công cụ kế hoạch{% elif turn.result.mode == 'chat_pending' %}Đang xử lý{% else %}Tra cứu học liệu{% endif %}</small></span><div class="chat-answer">{{ turn.result.answer|linebreaksbr }}</div>
+            {% if turn.notice.severity == 'warning' and turn.result.evidence_sources %}<p class="chat-source-warning">Nguồn của câu trả lời này đã đổi hoặc không còn khả dụng. Hãy hỏi lại để lấy học liệu hiện tại.</p>{% endif %}
+            {% if turn.result.evidence_sources %}<details class="chat-sources"><summary>{{ turn.result.evidence_sources|length }} nguồn học liệu</summary><ol>{% for source in turn.result.evidence_sources %}<li>{% if source.href and source.link_available != False %}<a href="{{ source.href }}">{{ source.label|default:source.title }} · {{ source.title }}</a>{% else %}{{ source.title }} · nguồn không còn mở được{% endif %}<small>{% if source.current_review_status == 'teacher_approved' %}Đã duyệt chuyên môn{% else %}Học liệu tham khảo · chưa xác nhận duyệt chuyên môn{% endif %}</small></li>{% endfor %}</ol></details>{% endif %}
+            {% if turn.result.actions %}<div class="chat-actions">{% for action in turn.result.actions %}{% if action.href %}<a class="button secondary" href="{{ action.href }}">{{ action.title }} →</a>{% endif %}{% endfor %}</div>{% endif %}
+          </div></article>
+        {% endfor %}
+      </div>
+      <form method="post" class="chat-compose" data-chat-form>{% csrf_token %}<input type="hidden" name="token" value="{{ token }}">
+        <div class="chat-tools"><button type="submit" name="tool" value="progress" formnovalidate>↗ Tiến độ của tôi</button><button type="submit" name="tool" value="plan" formnovalidate>✓ Kế hoạch hôm nay</button></div>
+        <label for="chat-question">Bạn muốn hỏi gì?</label><textarea name="question" id="chat-question" rows="3" maxlength="500" required placeholder="Hỏi về từ vựng, ngữ pháp hoặc hỏi tiếp ý vừa trao đổi…"></textarea>
+        <div class="chat-compose-bottom"><label class="chat-ai-choice">{% if llm_enabled %}<input type="checkbox" name="response_mode" value="ai"{% if use_ai %} checked{% endif %}> Dùng AI để giải thích{% else %}<span>Đang dùng tra cứu học liệu · AI chưa sẵn sàng</span>{% endif %}</label><button class="button primary" type="submit" name="tool" value="question">Gửi câu hỏi <span aria-hidden="true">↑</span></button></div>
+        <p class="chat-status" role="status" data-chat-status></p><p class="chat-privacy">Khi bật AI, câu hỏi, nguồn liên quan và tối đa 3 lượt hỏi đáp còn nguồn hợp lệ của cuộc chat này được gửi tới Cloudflare. Dữ liệu công cụ tiến độ/kế hoạch không được đưa vào bộ nhớ AI. Tránh nhập thông tin cá nhân. Lịch sử trợ lý lưu tối đa 50 lượt; ở đây hiển thị 12 lượt gần nhất của cuộc chat.</p>
+      </form>
+      {% if conversation %}<form method="post" class="chat-delete">{% csrf_token %}<input type="hidden" name="token" value="{{ token }}"><button type="submit" name="tool" value="clear">Xóa cuộc trò chuyện này</button></form>{% endif %}
+    </section>
+  </div>
+</div>
+<script src="{% static 'js/chat.js' %}" defer></script>
+{% endblock %}

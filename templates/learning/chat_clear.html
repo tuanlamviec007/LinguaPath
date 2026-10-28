@@ -1,0 +1,3 @@
+{% extends 'learning/base.html' %}
+{% block title %}Xóa cuộc trò chuyện · LinguaPath{% endblock %}
+{% block content %}<section class="panel"><h1>Xóa cuộc trò chuyện này?</h1><p>Các câu hỏi và câu trả lời trong cuộc chat này sẽ bị xóa và không thể mở lại. Các cuộc trò chuyện khác vẫn được giữ.</p><a class="button primary" href="{{ thread_url }}">Giữ lại cuộc trò chuyện</a><form method="post">{% csrf_token %}<input type="hidden" name="token" value="{{ token }}"><button class="button secondary" type="submit" name="tool" value="confirm_clear">Xác nhận xóa cuộc trò chuyện</button></form></section>{% endblock %}

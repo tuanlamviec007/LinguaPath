@@ -225,6 +225,8 @@ AUTH_RATE_LIMIT_CLIENT_IP_HEADER = os.environ.get('DJANGO_AUTH_CLIENT_IP_HEADER'
 
 # Limit paid model requests per signed-in learner. No prompts are stored here.
 AI_TUTOR_ENABLED = env_bool('AI_TUTOR_ENABLED', True)
+AI_SEMANTIC_SEARCH_ENABLED = env_bool('AI_SEMANTIC_SEARCH_ENABLED', False)
+CLOUDFLARE_AI_ALLOWED_HOSTS = [host.strip() for host in os.environ.get('CLOUDFLARE_AI_ALLOWED_HOSTS', '').split(',') if host.strip()]
 AI_TUTOR_DAILY_LIMIT = max(0, int(os.environ.get('AI_TUTOR_DAILY_LIMIT', '20')))
 AI_TUTOR_MINUTE_LIMIT = max(0, int(os.environ.get('AI_TUTOR_MINUTE_LIMIT', '3')))
 AI_TUTOR_GLOBAL_DAILY_LIMIT = int(os.environ.get('AI_TUTOR_GLOBAL_DAILY_LIMIT', '200'))
