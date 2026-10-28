@@ -27,20 +27,28 @@
     const message = companion.querySelector('[data-lumi-message]');
     if (!button || !message) return;
     let index = 0;
-    button.addEventListener('click', () => {
-      message.textContent = greetings[index++ % greetings.length];
+    const wave = () => {
       button.classList.remove('is-waving');
-      if (!reduced.matches) {
+      if (!reduced.matches && !document.documentElement.classList.contains('motion-paused')) {
         void button.offsetWidth;
         button.classList.add('is-waving');
       }
+    };
+    button.addEventListener('click', () => {
+      message.textContent = greetings[index++ % greetings.length];
+      wave();
+    });
+    document.addEventListener('linguapath:celebrate', (event) => {
+      if (!event.target.closest('[data-welcome-demo]')) return;
+      message.textContent = 'Đúng rồi! Bạn vừa học được một từ. Lumi vỗ cánh cổ vũ bạn!';
+      wave();
     });
   });
   const fine = window.matchMedia('(hover: hover) and (pointer: fine)');
   document.querySelectorAll('.welcome-demo, .lp-discovery-card').forEach((card) => {
     const reset = () => { card.style.removeProperty('--lumi-rx'); card.style.removeProperty('--lumi-ry'); };
     card.addEventListener('pointermove', (event) => {
-      if (reduced.matches || !fine.matches) return reset();
+      if (reduced.matches || !fine.matches || document.documentElement.classList.contains('motion-paused')) return reset();
       const rect = card.getBoundingClientRect();
       if (!rect.width || !rect.height) return;
       card.style.setProperty('--lumi-rx', `${(0.5 - (event.clientY - rect.top) / rect.height) * 3}deg`);

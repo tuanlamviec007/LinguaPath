@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{% static 'css/saved-words.css' %}">
   {% endif %}
   <link rel="stylesheet" href="{% static 'css/bright-theme.css' %}">
+  <link rel="stylesheet" href="{% static 'css/motion.css' %}">
 </head>
 <body class="lingua-body">
   <a class="skip-link" href="#main-content">Bỏ qua đến nội dung</a>
@@ -101,9 +102,10 @@
         {% if messages %}<div class="messages" aria-live="polite">{% for message in messages %}<div class="message {{ message.tags }}">{{ message }}</div>{% endfor %}</div>{% endif %}
         {% block content %}{% endblock %}
       </main>
-      <footer class="footer"><span>LinguaPath</span><span aria-hidden="true">·</span><span>Luyện tập cá nhân hóa, tiến bộ từng ngày.</span></footer>
+      <footer class="footer"><span>LinguaPath</span><span aria-hidden="true">·</span><span>Luyện tập cá nhân hóa, tiến bộ từng ngày.</span><button type="button" class="motion-toggle" data-motion-toggle aria-pressed="false" hidden>Tắt hiệu ứng</button></footer>
     </div>
   </div>
+  <script src="{% static 'js/motion.js' %}" defer></script>
   <script src="{% static 'js/app.js' %}" defer></script>
   <script src="{% static 'js/navigation.js' %}" defer></script>
   {% if user.is_authenticated %}<script src="{% static 'js/saved-words.js' %}" defer></script>{% endif %}

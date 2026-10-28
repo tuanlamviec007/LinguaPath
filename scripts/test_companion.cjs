@@ -7,7 +7,7 @@ function setup({stored='false',blocked=false}={}){
  const classes=new Set();
  const companion={classList:{toggle(k,on){if(on)classes.add(k);else classes.delete(k);}},querySelector(s){return {'[data-lumi-toggle]':toggle,'[data-lumi-greet]':greet,'[data-lumi-message]':message}[s];}};
  let saved;
- vm.runInNewContext(script,{window:{matchMedia:()=>({matches:false}),localStorage:{getItem(){if(blocked)throw Error();return stored;},setItem(_,v){if(blocked)throw Error();saved=v;}}},document:{querySelectorAll:s=>s==='[data-lumi]'?[companion]:[]}});
+ vm.runInNewContext(script,{window:{matchMedia:()=>({matches:false}),localStorage:{getItem(){if(blocked)throw Error();return stored;},setItem(_,v){if(blocked)throw Error();saved=v;}}},document:{documentElement:{classList:{contains(){return false;}}},addEventListener(){},querySelectorAll:s=>s==='[data-lumi]'?[companion]:[]}});
  return {toggle,greet,message,classes,get saved(){return saved;}};
 }
 test('Lumi collapse is reversible and restores a saved preference',()=>{

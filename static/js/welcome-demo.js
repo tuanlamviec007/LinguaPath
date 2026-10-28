@@ -9,6 +9,7 @@
   root.addEventListener('click', (event) => {
     if (event.target.closest('.flash-front [data-flip]')) {
       root.querySelector('.welcome-quiz').open = true;
+      root.querySelector('[data-demo-step="word"]')?.classList.add('is-done');
     }
   });
   form.addEventListener('submit', (event) => {
@@ -25,5 +26,7 @@
     feedback.classList.toggle('is-correct', correct);
     finish.hidden = !correct;
     root.classList.toggle('is-complete', correct);
+    root.querySelector('[data-demo-step="recall"]')?.classList.toggle('is-done', correct);
+    if (correct) root.dispatchEvent(new CustomEvent('linguapath:celebrate', { bubbles: true }));
   });
 })();
