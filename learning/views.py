@@ -97,6 +97,9 @@ def dashboard(request):
     weak_summary = weak_word_summary(request.user, profile.exam_goal)
     from .getting_started import starter_progress
     starter = starter_progress(request.user, profile)
+    active_quiz = active_quiz_for_user(request.user, profile.exam_goal)
+    from .daily_focus import daily_focus
+    focus = daily_focus(active_quiz, list(resume_attempts), next_task, tasks) if starter['complete'] else None
     return render(request, 'learning/dashboard.html', {
         'profile': profile, 'tasks': tasks, 'recent_attempts': recent_attempts,
         'due_cards': due_cards, 'today': today,
@@ -106,7 +109,7 @@ def dashboard(request):
         'task_progress_percent': task_progress_percent,
         'new_error_count': new_error_count,
         'next_task': next_task, 'resume_attempts': resume_attempts,
-        'active_quiz': active_quiz_for_user(request.user, profile.exam_goal),
+        'active_quiz': active_quiz, 'daily_focus': focus,
         'activity': build_activity_summary(request.user, profile.exam_goal),
         'rewards': get_learning_rewards(request.user),
         'saved_word_count': visible_saved_words(request.user).count(),
