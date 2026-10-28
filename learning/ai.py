@@ -1,5 +1,7 @@
 import os
 import logging
+from functools import wraps
+from threading import BoundedSemaphore
 from copy import deepcopy
 from django.utils import timezone
 
@@ -9,6 +11,23 @@ from .ai_provider import generate_cloudflare_answer, provider_name, tutor_ai_ava
 
 logger = logging.getLogger(__name__)
 PROMPT_VERSION = 'toeic-evidence-v3'
+_live_inference = BoundedSemaphore(1)
+
+
+def _keep_capacity_for_web(function):
+    @wraps(function)
+    def limited(*args, **kwargs):
+        if not kwargs.get('use_ai'):
+            return function(*args, **kwargs)
+        if not _live_inference.acquire(blocking=False):
+            result = function(*args, **dict(kwargs, use_ai=False))
+            result['answer'] += '\n\nLumi đang xử lý một yêu cầu AI khác. Đây là kết quả tra cứu; bạn có thể thử AI lại sau ít giây.'
+            return result
+        try:
+            return function(*args, **kwargs)
+        finally:
+            _live_inference.release()
+    return limited
 
 
 def OpenAI(**kwargs):
@@ -72,6 +91,7 @@ def answer_description_candidate(card_id, version, exam='TOEIC'):
         'mode': 'no_match', 'retrieval_mode': 'description', 'sources': [], 'evidence_sources': []})
 
 
+@_keep_capacity_for_web
 def answer_tutor_question(query, exam='TOEIC', question_id=None, user=None, *, use_ai=False,
                           public_context_only=False, evidence_observer=None, retrieval_mode='auto',
                           retrieval_query=None, chat_history=None, semantic=False):

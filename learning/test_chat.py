@@ -1,9 +1,14 @@
 from unittest.mock import patch
 from uuid import uuid4
+from datetime import timedelta
+from concurrent.futures import ThreadPoolExecutor
+from threading import Event
 from django.contrib.auth import get_user_model
 from django.test import TestCase, override_settings
 from django.urls import reverse
+from django.utils import timezone
 from .ai import _lookup
+from .ai import answer_tutor_question
 from .chat_views import current_memory
 from .models import Flashcard, LearningContent, TutorTurn
 from .retrieval import _card_result
@@ -42,6 +47,41 @@ class ChatTests(TestCase):
         self.assertEqual(answer.call_count, 1)
         self.assertEqual(TutorTurn.objects.filter(user=self.user).count(), 1)
         self.assertEqual(self.client.get(first.url).status_code, 200)
+
+    def test_busy_inference_returns_lookup_instead_of_waiting_or_spending_a_second_call(self):
+        entered, release = Event(), Event()
+        def generate(*args, **kwargs):
+            entered.set(); release.wait(2)
+            return {'answer':'Explanation', 'model':'test-model'}
+        with patch('learning.ai.tutor_ai_available',return_value=True), patch('learning.ai.provider_name',return_value='cloudflare'), \
+             patch('learning.ai.reserve_tutor_call',return_value=(True,'')) as budget, \
+             patch('learning.ai.generate_cloudflare_answer',side_effect=generate) as provider:
+            with ThreadPoolExecutor(max_workers=1) as pool:
+                first=pool.submit(answer_tutor_question,'despite và although',use_ai=True)
+                self.assertTrue(entered.wait(1))
+                try:
+                    second=answer_tutor_question('despite và although',use_ai=True)
+                    self.assertEqual(second['mode'],'retrieval_only')
+                    self.assertIn('yêu cầu AI khác',second['answer'])
+                    self.assertEqual(budget.call_count,1)
+                finally:
+                    release.set()
+                self.assertEqual(first.result()['mode'],'llm_rag')
+                self.assertEqual(provider.call_count,1)
+
+    def test_interrupted_pending_turn_does_not_lock_the_thread_forever(self):
+        page = self.client.get(self.url)
+        turn = TutorTurn.objects.create(user=self.user, question='Interrupted', result={
+            'chat_thread':page.context['thread'], 'mode':'chat_pending', 'answer':'Pending', 'sources':[]})
+        with patch('learning.chat_views.answer_tutor_question') as answer:
+            self.send(page)
+            answer.assert_not_called()
+        TutorTurn.objects.filter(pk=turn.pk).update(created_at=timezone.now()-timedelta(seconds=100))
+        page = self.client.get(self.url+'?thread='+page.context['thread'])
+        self.assertContains(page, 'Lượt trước chưa hoàn thành')
+        with patch('learning.chat_views.answer_tutor_question',return_value={'answer':'Recovered','sources':[],'mode':'retrieval_only'}) as answer:
+            self.send(page)
+            answer.assert_called_once()
 
     def test_other_user_cannot_read_thread_or_reuse_signed_send_token(self):
         page = self.client.get(self.url)

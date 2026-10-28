@@ -12,6 +12,7 @@ from django.db import transaction
 from django.http import Http404, HttpResponseBadRequest
 from django.shortcuts import redirect, render
 from django.urls import reverse
+from django.utils import timezone
 from django.views.decorators.cache import never_cache
 from django.views.decorators.http import require_http_methods
 from planner.models import LearnerProfile
@@ -43,6 +44,10 @@ def _recent(user):
 
 def _in_thread(turn, thread):
     return isinstance(turn.result, dict) and turn.result.get('chat_thread') == thread
+
+
+def _pending_expired(turn):
+    return (timezone.now() - turn.created_at).total_seconds() >= 90
 
 
 def _url(thread):
@@ -112,7 +117,7 @@ def chat(request):
             turns = _recent(request.user)
             if any(t.result.get('chat_request') == request_id for t in turns):
                 return redirect(_url(thread))
-            if any(_in_thread(t, thread) and t.result.get('mode') == 'chat_pending' for t in turns):
+            if any(_in_thread(t, thread) and t.result.get('mode') == 'chat_pending' and not _pending_expired(t) for t in turns):
                 messages.info(request, 'Câu hỏi trước đang được xử lý. Hãy mở lại chat sau ít giây.')
                 return redirect(_url(thread))
             turn = TutorTurn.objects.create(user=request.user, question=query, response_mode='ai' if use_ai else 'lookup',
@@ -140,6 +145,8 @@ def chat(request):
     conversation = []
     for turn in reversed([t for t in turns if _in_thread(t, thread)][:12]):
         result, notice = revalidate_tutor_history(turn.result, request.user, profile.exam_goal, turn.created_at)
+        if result['mode'] == 'chat_pending' and _pending_expired(turn):
+            result.update(mode='unavailable', answer='Lượt trước chưa hoàn thành. Bạn có thể gửi một câu hỏi mới; Lumi không tự gửi lại yêu cầu AI cũ.')
         conversation.append({'question': turn.question, 'result': result, 'notice': notice})
     threads, seen = [], set()
     for turn in turns:
