@@ -107,7 +107,7 @@ class SavedWordsJourneyTests(TestCase):
         for card in self.cards[:4]:
             self.act(card)
         result = self.client.post(reverse('learning:quiz_start'), {'source':'saved','count':'5'})
-        self.assertRedirects(result, reverse('learning:quiz_hub')+'?source=saved')
+        self.assertRedirects(result, reverse('learning:quiz_hub')+'?source=saved&mode=meaning&level=&topic=&count=5')
         self.assertFalse(VocabularyQuizSession.objects.exists())
         self.assertEqual(self.client.post(reverse('learning:quiz_start'), {'source':'other','count':'5'}).status_code, 400)
         self.client.force_login(self.other)

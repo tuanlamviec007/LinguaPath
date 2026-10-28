@@ -1,0 +1,22 @@
+{% extends 'learning/base.html' %}
+{% block title %}Bắt đầu quiz mới · LinguaPath{% endblock %}
+{% block content %}
+<section class="panel" aria-labelledby="replace-title">
+  <span class="eyebrow">BẮT ĐẦU QUIZ MỚI</span>
+  <h1 id="replace-title">Dừng bài đang làm?</h1>
+  <p>Bài hiện tại có {{ quiz.saved_count }} / {{ quiz.question_count }} câu đã lưu. Nếu tiếp tục, bài đó sẽ bị dừng và bạn không thể làm tiếp bài cũ. Các bài đã nộp vẫn được giữ.</p>
+  <p>Quiz mới: {{ count }} câu tối đa{% if level %} · mức {{ level }}{% endif %}{% if topic %} · {{ topic }}{% endif %}. Nếu không đủ từ phù hợp, bài cũ vẫn được giữ.</p>
+  <form method="post" action="{% url 'learning:quiz_start' %}" class="form-stack">
+    {% csrf_token %}
+    <input type="hidden" name="replace_quiz" value="{{ quiz.pk }}">
+    <input type="hidden" name="replace_revision" value="{{ quiz.draft_revision }}">
+    <input type="hidden" name="mode" value="{{ mode }}">
+    <input type="hidden" name="source" value="{{ source }}">
+    <input type="hidden" name="level" value="{{ level }}">
+    <input type="hidden" name="topic" value="{{ topic }}">
+    <input type="hidden" name="count" value="{{ count }}">
+    <button class="button primary" name="confirm_replace" value="yes" type="submit">Dừng bài cũ và bắt đầu quiz mới</button>
+  </form>
+  <p><a href="{% url 'learning:quiz_take' quiz.pk %}">Tiếp tục bài cũ</a> · <a href="{% url 'learning:quiz_hub' %}">Quay lại lựa chọn quiz</a></p>
+</section>
+{% endblock %}

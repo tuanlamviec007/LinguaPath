@@ -124,6 +124,74 @@ class RetrievalTests(TestCase):
         self.assertFalse(any(item['kind'] == 'question' for item in anonymous_result))
         self.assertFalse(any(item['kind'] == 'question' for item in other_result))
 
+    def test_long_history_hydrates_only_ranked_questions_and_keeps_old_matches(self):
+        from unittest.mock import patch
+        old = self.make_submitted_question('Rare cobalt lantern request')
+        content = old.content
+        irrelevant = Question.objects.bulk_create([
+            Question(content=content, prompt=f'Unrelated history {i}', explanation='Nothing relevant')
+            for i in range(1000)
+        ])
+        attempt = PracticeAttempt.objects.filter(user=self.user).first()
+        AttemptAnswer.objects.bulk_create([
+            AttemptAnswer(attempt=attempt, question=question, is_correct=False)
+            for question in irrelevant
+        ])
+        with patch.object(Question, 'from_db', wraps=Question.from_db) as hydrated:
+            result = retrieve_context('cobalt lantern', user=self.user)
+        self.assertEqual([item['source_id'] for item in result if item['kind'] == 'question'], [old.pk])
+        self.assertEqual(hydrated.call_count, 1)
+        with patch.object(Question, 'from_db', wraps=Question.from_db) as hydrated:
+            self.assertEqual(retrieve_context('nonexistent keyword', user=self.user), [])
+        self.assertEqual(hydrated.call_count, 0)
+
+    def test_search_postings_follow_save_update_bulk_update_and_delete(self):
+        from .models import QuestionSearchToken
+        question = self.make_submitted_question('cobalt lantern')
+        question.prompt = 'silver compass'
+        question.save(update_fields=['prompt'])
+        self.assertFalse(any(row['kind'] == 'question' for row in retrieve_context('cobalt lantern', user=self.user)))
+        self.assertTrue(any(row['kind'] == 'question' for row in retrieve_context('silver compass', user=self.user)))
+        Question.objects.filter(pk=question.pk).update(prompt='hộp thư')
+        self.assertTrue(any(row['kind'] == 'question' for row in retrieve_context('hop thu', user=self.user)))
+        question.refresh_from_db()
+        question.prompt = 'unsaved words'
+        question.order = 2
+        question.save(update_fields=['order'])
+        self.assertFalse(any(row['kind'] == 'question' for row in retrieve_context('unsaved words', user=self.user)))
+        question.prompt = 'bronze telescope'
+        Question.objects.bulk_update([question], ['prompt'])
+        self.assertTrue(any(row['kind'] == 'question' for row in retrieve_context('bronze telescope', user=self.user)))
+        # Protected answer rows are removed only in this disposable test DB.
+        AttemptAnswer.objects.filter(question=question).delete()
+        question_id = question.pk
+        question.delete()
+        self.assertFalse(QuestionSearchToken.objects.filter(question_id=question_id).exists())
+
+    def test_migration_backfill_rebuilds_existing_question_postings(self):
+        import importlib
+        from types import SimpleNamespace
+        from django.apps import apps
+        from .models import QuestionSearchToken
+        from .question_search import token_hashes, SEARCH_FIELDS
+        question = self.make_submitted_question('Những hộp thư cũ')
+        QuestionSearchToken.objects.all().delete()
+        migration = importlib.import_module('learning.migrations.0024_questionsearchtoken')
+        migration.backfill_tokens(apps, SimpleNamespace(connection=connection))
+        self.assertEqual(set(QuestionSearchToken.objects.filter(question=question).values_list('token_hash', flat=True)),
+                         token_hashes(' '.join(getattr(question, field) for field in SEARCH_FIELDS)))
+        self.assertTrue(any(row['kind'] == 'question' for row in retrieve_context('hop thu', user=self.user)))
+
+    def test_index_failure_rolls_back_question_change(self):
+        from unittest.mock import patch
+        question = self.make_submitted_question('cobalt lantern')
+        with patch('learning.question_search.sync_questions', side_effect=RuntimeError('synthetic')):
+            with self.assertRaises(RuntimeError):
+                Question.objects.filter(pk=question.pk).update(prompt='silver compass')
+        question.refresh_from_db()
+        self.assertEqual(question.prompt, 'cobalt lantern')
+        self.assertTrue(any(row['kind'] == 'question' for row in retrieve_context('cobalt lantern', user=self.user)))
+
     def test_exact_question_id_requires_own_submitted_attempt_and_never_falls_back(self):
         question = self.make_submitted_question('When did the hộp mực arrive?', status='in_progress')
         self.make_card('hộp mực')

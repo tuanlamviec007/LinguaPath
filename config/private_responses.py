@@ -17,7 +17,7 @@ class PrivateResponseMiddleware:
         response = self.get_response(request)
         match = getattr(request, 'resolver_match', None)
         user = getattr(request, 'user', None)
-        if (getattr(user, 'is_authenticated', False)
+        if (request.path.startswith('/social/') or getattr(user, 'is_authenticated', False)
                 or (match and (match.view_name in PRIVATE_VIEWS
                                or 'learning' in match.namespaces or 'admin' in match.namespaces))):
             add_never_cache_headers(response)

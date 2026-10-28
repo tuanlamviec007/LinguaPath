@@ -6,7 +6,41 @@
 {% include 'learning/_weak_words_pending.html' %}
 <link rel="stylesheet" href="{% static 'css/learning-journey.css' %}">
 <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+<link rel="stylesheet" href="{% static 'css/getting-started.css' %}">
 <div class="dashboard-home">
+{% include 'learning/_companion.html' %}
+{% if not starter.complete %}
+<header class="dashboard-new-welcome"><div><span class="eyebrow">KHÔNG GIAN HỌC CỦA BẠN</span><h1>Chào {{ user.first_name|default:user.username }}, bắt đầu nhẹ thôi.</h1><p>Kế hoạch, bộ từ và công cụ sẽ ở đây khi bạn cần.</p></div><a href="?view=all">Xem toàn bộ tổng quan ↗</a></header>
+{% endif %}
+{% if daily_focus %}
+<section class="daily-focus daily-focus--{{ daily_focus.kind }}" aria-labelledby="daily-focus-title">
+  <div class="daily-focus-copy"><span class="eyebrow">{{ daily_focus.eyebrow }}</span><h1 id="daily-focus-title">{{ daily_focus.title }}</h1><p>{{ daily_focus.description }}</p><a class="button primary" href="{{ daily_focus.href }}">{{ daily_focus.action }} <span aria-hidden="true">→</span></a></div>
+  <div class="daily-focus-progress"><span class="daily-focus-spark" aria-hidden="true">{% if daily_focus.kind == 'complete' %}✓{% else %}✦{% endif %}</span><strong>{{ completed_task_count }}/{{ tasks|length }}</strong><span>nhiệm vụ hôm nay</span><progress value="{{ completed_task_count }}" max="{{ tasks|length|default:1 }}" aria-label="Nhiệm vụ hôm nay đã hoàn thành"></progress><a href="?view=all#today-tasks-title">Xem kế hoạch hôm nay</a></div>
+</section>
+{% else %}
+{% include 'learning/_starter_path.html' %}
+{% endif %}
+{% if stale_attempt_count %}<aside class="message" role="status">Học liệu của {{ stale_attempt_count }} lượt đang dở đã thay đổi. <a href="{% url 'learning:practice_list' %}">Chọn bài hiện có</a> để bắt đầu một lượt hợp lệ.</aside>{% endif %}
+{% if active_quiz and daily_focus.kind != 'quiz' %}
+<section class="panel lp-dashboard-quiz-resume" aria-labelledby="quiz-resume-title">
+  <div><span class="eyebrow">THỬ THÁCH ĐANG DỞ</span><h2 id="quiz-resume-title">{% if active_quiz.is_retry %}Tiếp tục ôn từ từng nhầm{% else %}Quiz đang chờ bạn{% endif %}</h2><p>{{ active_quiz.saved_count }} / {{ active_quiz.question_count }} câu đã lưu{% if active_quiz.last_saved_at %} · lúc {{ active_quiz.last_saved_at|date:'H:i d/m' }}{% endif %}</p></div>
+  <a class="button primary" href="{% url 'learning:quiz_take' active_quiz.pk %}">Tiếp tục quiz <span aria-hidden="true">→</span></a>
+</section>
+{% endif %}
+{% if resume_attempts %}
+<section class="journey-resume-section" aria-labelledby="resume-title">
+  <div class="journey-section-heading"><div><span class="eyebrow">LƯU TIẾN ĐỘ CỦA BẠN</span><h2 id="resume-title">Tiếp tục bài đang làm</h2></div><span>{{ resume_attempts|length }} lượt đang dở gần nhất</span></div>
+  <div class="resume-grid">
+    {% for resume in resume_attempts %}
+      <article class="resume-card">
+        <div class="resume-card-copy"><span class="resume-card-kicker">{{ resume.content.get_skill_display }} · {{ resume.content.exam_type }}</span><h3>{{ resume.content.title }}</h3><p>{{ resume.saved_count }} / {{ resume.question_count }} câu đã trả lời{% if resume.last_saved_at %}<span> · Lưu lúc {{ resume.last_saved_at|date:'d/m H:i' }}</span>{% endif %}</p></div>
+        <a href="{% url 'learning:take_attempt' resume.id %}" aria-label="Tiếp tục bài {{ resume.content.title }}">Tiếp tục <span aria-hidden="true">→</span></a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+<details class="dashboard-explore"{% if show_dashboard_details %} open{% endif %}><summary><span>Kế hoạch và công cụ học tập<small>Mở khi bạn muốn xem nhiệm vụ, thành tích và các lựa chọn khác</small></span><span aria-hidden="true">＋</span></summary>
 <section class="welcome dashboard-welcome">
   <div class="dashboard-welcome-copy">
     <span class="eyebrow">{{ today|date:'d/m/Y' }}</span>
@@ -26,12 +60,7 @@
   {% endif %}
 </section>
 
-{% if active_quiz %}
-<section class="panel lp-dashboard-quiz-resume" aria-labelledby="quiz-resume-title">
-  <div><span class="eyebrow">THỬ THÁCH ĐANG DỞ</span><h2 id="quiz-resume-title">{% if active_quiz.is_retry %}Tiếp tục ôn từ từng nhầm{% else %}Quiz đang chờ bạn{% endif %}</h2><p>{{ active_quiz.saved_count }} / {{ active_quiz.question_count }} câu đã lưu{% if active_quiz.last_saved_at %} · lúc {{ active_quiz.last_saved_at|date:'H:i d/m' }}{% endif %}</p></div>
-  <a class="button primary" href="{% url 'learning:quiz_take' active_quiz.pk %}">Tiếp tục quiz <span aria-hidden="true">→</span></a>
-</section>
-{% endif %}
+
 
 {% if rewards %}
 <section class="lp-reward-strip" aria-label="Thành tích học tập của bạn">
@@ -45,24 +74,12 @@
   <div class="lp-section-heading"><div><span class="eyebrow">CHỌN MỘT CUỘC PHIÊU LƯU</span><h2 id="discovery-title">Hôm nay học theo cách của bạn</h2></div><span class="lp-mini-note">Một chút tò mò là đủ để bắt đầu</span></div>
   <div class="lp-discovery-grid">
     <a class="lp-discovery-card lp-discovery-quiz" href="{% url 'learning:quiz_hub' %}"><span class="lp-discovery-icon" aria-hidden="true">⚡</span><span class="lp-card-kicker">THỬ THÁCH NHANH</span><h3>Quiz từ vựng</h3><p>Chọn chủ đề, thử sức và nhận XP.</p><span class="lp-discovery-link">Vào thử thách <span aria-hidden="true">↗</span></span></a>
-    <a class="lp-discovery-card lp-discovery-words" href="{% url 'learning:flashcards' %}"><span class="lp-discovery-icon" aria-hidden="true">Aa</span><span class="lp-card-kicker">NHỚ LÂU HƠN</span><h3>Khu vườn từ vựng</h3><p>{{ due_cards }} từ đến hạn đang đợi bạn ôn.</p><span class="lp-discovery-link">Mở flashcard <span aria-hidden="true">↗</span></span></a>
-    <a class="lp-discovery-card lp-discovery-listen" href="{% url 'learning:practice_list' %}?skill=listening"><span class="lp-discovery-icon" aria-hidden="true">♫</span><span class="lp-card-kicker">LẮNG NGHE THẾ GIỚI</span><h3>Listening & Reading</h3><p>Luyện từng bài nhỏ, hiểu từng lời giải.</p><span class="lp-discovery-link">Khám phá bài luyện <span aria-hidden="true">↗</span></span></a>
+    <a class="lp-discovery-card lp-discovery-words" href="{% url 'learning:flashcards' %}"><span class="lp-discovery-icon" aria-hidden="true">Aa</span><span class="lp-card-kicker">NHỚ LÂU HƠN</span><h3>Khu vườn từ vựng</h3><p>{{ due_cards }} từ đã học đến lịch ôn · {{ new_cards }} từ mới có thể khám phá.</p><span class="lp-discovery-link">Mở flashcard <span aria-hidden="true">↗</span></span></a>
+    <a class="lp-discovery-card lp-discovery-listen" href="{% url 'learning:practice_list' %}"><span class="lp-discovery-icon" aria-hidden="true">♫</span><span class="lp-card-kicker">LẮNG NGHE THẾ GIỚI</span><h3>Listening & Reading</h3><p>Luyện từng bài nhỏ, hiểu từng lời giải.</p><span class="lp-discovery-link">Khám phá bài luyện <span aria-hidden="true">↗</span></span></a>
   </div>
 </section>
 
-{% if resume_attempts %}
-<section class="journey-resume-section" aria-labelledby="resume-title">
-  <div class="journey-section-heading"><div><span class="eyebrow">LƯU TIẾN ĐỘ CỦA BẠN</span><h2 id="resume-title">Tiếp tục bài đang làm</h2></div><span>{{ resume_attempts|length }} lượt đang dở gần nhất</span></div>
-  <div class="resume-grid">
-    {% for resume in resume_attempts %}
-      <article class="resume-card">
-        <div class="resume-card-copy"><span class="resume-card-kicker">{{ resume.content.get_skill_display }} · {{ resume.content.exam_type }}</span><h3>{{ resume.content.title }}</h3><p>{{ resume.saved_count }} / {{ resume.question_count }} câu đã trả lời{% if resume.last_saved_at %}<span> · Lưu lúc {{ resume.last_saved_at|date:'d/m H:i' }}</span>{% endif %}</p></div>
-        <a href="{% url 'learning:take_attempt' resume.id %}" aria-label="Tiếp tục bài {{ resume.content.title }}">Tiếp tục <span aria-hidden="true">→</span></a>
-      </article>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
+
 
 
 
@@ -91,7 +108,7 @@
         {% for task in tasks %}
           <article class="task">
             <span class="task-check" aria-hidden="true">{% if task.status == 'done' %}✓{% else %}{{ forloop.counter|stringformat:'02d' }}{% endif %}</span>
-            <div class="task-info"><b>{{ task.content.title }}</b><span>{{ task.reason|default:task.content.get_skill_display }} · {{ task.estimated_minutes }} phút</span></div>
+            <div class="task-info"><b>{{ task.content.title }}</b><span>{{ task.reason|default:task.content.get_skill_display }} · {{ task.estimated_minutes }} phút</span>{% if task.vocabulary_goal %}<span>Tự đánh giá {{ task.vocabulary_reviewed }}/{{ task.vocabulary_goal }} thẻ khác nhau hôm nay · không cần học hết bộ</span>{% endif %}</div>
             {% if task.status == 'done' %}
               <span class="task-done">Đã hoàn thành</span>
             {% else %}
@@ -143,5 +160,6 @@
     <p class="muted">Bạn chưa có lượt luyện nào. Hãy làm một bài ngắn để bắt đầu theo dõi tiến bộ.</p>
   {% endif %}
 </section>
+</details>
 </div>
 {% endblock %}

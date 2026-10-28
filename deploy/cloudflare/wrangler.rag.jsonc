@@ -1,0 +1,12 @@
+{
+  "name": "linguapath-rag",
+  "main": "rag-worker.js",
+  "compatibility_date": "2026-10-28",
+  "compatibility_flags": ["nodejs_compat"],
+  "ai": {"binding": "AI"},
+  "vectorize": [{"binding": "VECTORIZE", "index_name": "linguapath-learning-v1"}],
+  "durable_objects": {"bindings": [{"name":"BUDGET", "class_name":"RagBudget"}]},
+  "migrations": [{"tag":"v1", "new_sqlite_classes":["RagBudget"]}],
+  "vars": {"AI_TUTOR_ENABLED":"false"},
+  "observability": {"enabled":true, "head_sampling_rate":0.1}
+}

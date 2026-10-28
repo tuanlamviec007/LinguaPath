@@ -83,7 +83,17 @@ def find_knowledge(query):
         return []
     matches = []
     for note in KNOWLEDGE:
-        if any(re.search(r'(?<!\w)' + re.escape(trigger) + r'(?!\w)', normalized) for trigger in note['triggers']):
+        # Ignore explicitly excluded topics, while retaining questions such as
+        # 'I do not understand passive voice' that still ask about that topic.
+        def requested(trigger):
+            pattern = r'(?<!\w)' + re.escape(trigger) + r'(?!\w)'
+            for match in re.finditer(pattern, normalized):
+                prefix = normalized[:match.start()]
+                if not re.search(r'(?:\bnot\s+|\brather than\s+|\bkhong (?:hoi|noi|ban) (?:ve )?|\bkhong phai )$', prefix):
+                    return True
+            return False
+
+        if any(requested(trigger) for trigger in note['triggers']):
             if note['id'] in ('reading-strategy', 'listening-strategy') and not re.search(
                 r'\b(?:learn|learning|practice|practise|improve|train|study|prepare|strategy|strategies|tips|luyen|chien thuat|cach|hoc|ky nang)\b', normalized
             ):

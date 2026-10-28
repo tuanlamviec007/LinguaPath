@@ -4,16 +4,54 @@ from decimal import Decimal
 from django.contrib.auth import get_user_model
 from learning.locking import nonkey_row_lock
 from django.db import transaction
-from django.db.models import Exists, OuterRef, Q, Sum
+from django.db.models import Exists, OuterRef, Q, Sum, Count
 from django.utils import timezone
 
-from learning.models import CEFR_LEVELS, LEARNER_REVIEW_STATUSES, Flashcard, LearningContent, PracticeAttempt, UserFlashcardState
+from learning.models import CEFR_LEVELS, LEARNER_REVIEW_STATUSES, Flashcard, FlashcardReview, LearningContent, PracticeAttempt, UserFlashcardState
 from .models import StudyTask
 
 
 RECOMMENDATION_VERSION = 'rule-v2-cefr'
 KNOWN_SELF_RATING_THRESHOLD = 0.8
 PLAN_INPUT_FIELDS = frozenset({'exam_goal', 'current_cefr', 'target_cefr', 'daily_minutes'})
+
+
+def ensure_vocabulary_goal(task, exam):
+    """Called under the learner lock; freeze a small activity goal once."""
+    if task.content.content_type != 'vocabulary' or task.vocabulary_goal or task.status == 'done':
+        return
+    cards = Flashcard.objects.learner_visible(exam).filter(content_id=task.content_id)
+    if task.cefr_level:
+        cards = cards.filter(cefr_level=task.cefr_level)
+    task.vocabulary_goal = min(10, max(1, task.estimated_minutes), cards.count())
+    if task.vocabulary_goal:
+        updates = {'vocabulary_goal': task.vocabulary_goal}
+        if vocabulary_reviews_today(task.user_id, task, task.scheduled_for) >= task.vocabulary_goal:
+            task.status, task.completed_at = 'done', timezone.now()
+            updates.update(status=task.status, completed_at=task.completed_at)
+        StudyTask.objects.filter(pk=task.pk, vocabulary_goal=0).update(**updates)
+
+
+def vocabulary_reviews_today(user, task, today=None):
+    reviews = FlashcardReview.objects.filter(user=user, flashcard__content_id=task.content_id,
+        reviewed_at__date=today or timezone.localdate(), reviewed_at__lte=timezone.now())
+    if task.cefr_level:
+        reviews = reviews.filter(flashcard__cefr_level=task.cefr_level)
+    return reviews.values('flashcard_id').distinct().count()
+
+
+def attach_vocabulary_progress(tasks, user, today=None):
+    today = today or timezone.localdate()
+    ids = {task.content_id for task in tasks if task.content.content_type == 'vocabulary'}
+    counts = {(row['flashcard__content_id'], row['flashcard__cefr_level']): row['total']
+              for row in FlashcardReview.objects.filter(user=user, flashcard__content_id__in=ids,
+                  reviewed_at__date=today, reviewed_at__lte=timezone.now()).order_by()
+              .values('flashcard__content_id', 'flashcard__cefr_level').annotate(total=Count('flashcard_id', distinct=True))}
+    for task in tasks:
+        count = counts.get((task.content_id, task.cefr_level), 0) if task.cefr_level else sum(
+            value for (content_id, _), value in counts.items() if content_id == task.content_id)
+        task.vocabulary_reviewed = min(count, task.vocabulary_goal)
+    return tasks
 
 
 def _visible_tasks(user, profile, today):
@@ -66,10 +104,13 @@ def _generate_daily_plan(user, profile, today=None, *, replan=False):
     # Completing a task must not silently refill the plan and grow its budget.
     # Only an explicit input-change replan may add work after completed tasks.
     if not replan and StudyTask.objects.filter(user=user, scheduled_for=today).exists():
+        for task in existing.filter(content__content_type='vocabulary', vocabulary_goal=0).exclude(status='done'):
+            ensure_vocabulary_goal(task, profile.exam_goal)
         return existing
     now = timezone.now()
     attempts = PracticeAttempt.objects.filter(
-        user=user, status='submitted', submitted_at__gte=now - timedelta(days=30),
+        user=user, status='submitted', content__exam_type=profile.exam_goal,
+        submitted_at__gte=now - timedelta(days=30), submitted_at__lte=now,
     )
     recent_content_ids = set(attempts.order_by('-submitted_at').values_list('content_id', flat=True)[:20])
     skill_accuracy = {
@@ -174,7 +215,7 @@ def _generate_daily_plan(user, profile, today=None, *, replan=False):
                 break
 
     for score, item, level, reason in chosen:
-        StudyTask.objects.get_or_create(
+        task, _ = StudyTask.objects.get_or_create(
             user=user, content=item, scheduled_for=today, cefr_level=level,
             defaults={
                 'estimated_minutes': item.estimated_minutes,
@@ -183,6 +224,7 @@ def _generate_daily_plan(user, profile, today=None, *, replan=False):
                 'recommendation_version': RECOMMENDATION_VERSION,
             },
         )
+        ensure_vocabulary_goal(task, profile.exam_goal)
     return _visible_tasks(user, profile, today)
 
 

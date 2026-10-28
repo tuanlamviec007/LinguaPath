@@ -100,7 +100,8 @@ class ContentReviewPacketTests(TestCase):
                 packet = build_review_packet([self.content.pk])
         self.assertEqual(len(queries), 4)
         for query in queries:
-            self.assertTrue(query['sql'].lstrip().upper().startswith('SELECT'))
+            # PostgreSQL iterator() declares a read-only server-side SELECT cursor.
+            self.assertRegex(query['sql'].lstrip().upper(), r'^(?:SELECT\b|DECLARE "[^"]+"(?: NO SCROLL| SCROLL)? CURSOR(?: WITH HOLD)? FOR SELECT\b)')
             self.assertNotIn('learning_tutorturn', query['sql'])
             self.assertNotIn('auth_user', query['sql'])
         self.assertNotIn('PRIVATE LEARNER', json.dumps(packet, ensure_ascii=False))

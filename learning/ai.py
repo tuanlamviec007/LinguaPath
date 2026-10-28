@@ -1,7 +1,8 @@
 import os
 import logging
+from functools import wraps
+from threading import BoundedSemaphore
 from copy import deepcopy
-from openai import OpenAI
 from django.utils import timezone
 
 from .ai_context import CONTEXT_VERSION, pack_evidence
@@ -10,6 +11,29 @@ from .ai_provider import generate_cloudflare_answer, provider_name, tutor_ai_ava
 
 logger = logging.getLogger(__name__)
 PROMPT_VERSION = 'toeic-evidence-v3'
+_live_inference = BoundedSemaphore(1)
+
+
+def _keep_capacity_for_web(function):
+    @wraps(function)
+    def limited(*args, **kwargs):
+        if not kwargs.get('use_ai'):
+            return function(*args, **kwargs)
+        if not _live_inference.acquire(blocking=False):
+            result = function(*args, **dict(kwargs, use_ai=False))
+            result['answer'] += '\n\nLumi đang xử lý một yêu cầu AI khác. Đây là phản hồi không dùng AI; bạn có thể thử AI lại sau ít giây.'
+            return result
+        try:
+            return function(*args, **kwargs)
+        finally:
+            _live_inference.release()
+    return limited
+
+
+def OpenAI(**kwargs):
+    """Keep the provider SDK out of ordinary page imports and inference-off boots."""
+    from openai import OpenAI as Client
+    return Client(**kwargs)
 
 
 def retrieve_learning_context(query, exam='TOEIC', limit=3, question_id=None, user=None, *, retrieval_mode='auto'):
@@ -67,13 +91,18 @@ def answer_description_candidate(card_id, version, exam='TOEIC'):
         'mode': 'no_match', 'retrieval_mode': 'description', 'sources': [], 'evidence_sources': []})
 
 
+@_keep_capacity_for_web
 def answer_tutor_question(query, exam='TOEIC', question_id=None, user=None, *, use_ai=False,
-                          public_context_only=False, evidence_observer=None, retrieval_mode='auto'):
+                          public_context_only=False, evidence_observer=None, retrieval_mode='auto',
+                          retrieval_query=None, chat_history=None, semantic=False):
     # Evaluation can use the real quota principal while excluding their private
     # submitted questions. Web requests never derive these controls from input.
     retrieval_options = {'retrieval_mode': retrieval_mode} if retrieval_mode != 'auto' else {}
-    evidence = retrieve_learning_context(query, exam=exam, question_id=question_id,
+    evidence = retrieve_learning_context(retrieval_query or query, exam=exam, question_id=question_id,
                                         user=None if public_context_only else user, **retrieval_options)
+    if not evidence and semantic and use_ai and tutor_ai_available() and question_id is None and retrieval_mode == 'auto':
+        from .semantic_retrieval import retrieve_semantic_context
+        evidence = retrieve_semantic_context(retrieval_query or query, exam)
     packed = None
     if evidence_observer is not None:
         if not callable(evidence_observer):
@@ -146,7 +175,8 @@ def answer_tutor_question(query, exam='TOEIC', question_id=None, user=None, *, u
     try:
         context = packed.text
         if provider == 'cloudflare':
-            generated = generate_cloudflare_answer(query, context, include_metadata=True)
+            history_options = {'history': chat_history} if chat_history else {}
+            generated = generate_cloudflare_answer(query, context, include_metadata=True, **history_options)
             # A legacy bridge (or integration) can still return only text.
             answer = generated['answer'] if isinstance(generated, dict) else generated
             actual_model = generated.get('model') if isinstance(generated, dict) else None

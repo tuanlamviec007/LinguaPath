@@ -27,6 +27,21 @@ class DailyPlanTests(TestCase):
         self.assertIn('Reading', tasks.first().reason)
         self.assertEqual(tasks.first().recommendation_version, 'rule-v2-cefr')
 
+    def test_plan_ignores_other_exam_and_future_attempts(self):
+        from datetime import timedelta
+        from .models import StudyTask
+        self.profile.daily_minutes = 20
+        self.profile.save(update_fields=['daily_minutes'])
+        baseline = list(generate_daily_plan(self.user, self.profile).values_list('content_id', 'reason'))
+        StudyTask.objects.filter(user=self.user).delete()
+        other_exam = LearningContent.objects.create(title='Other exam', exam_type='IELTS',
+                     content_type='reading', skill='reading', is_published=True)
+        PracticeAttempt.objects.create(user=self.user, content=other_exam, status='submitted',
+                     submitted_at=timezone.now(), correct_count=0, question_count=5)
+        PracticeAttempt.objects.create(user=self.user, content=self.listening, status='submitted',
+                     submitted_at=timezone.now() + timedelta(days=5), correct_count=0, question_count=5)
+        self.assertEqual(list(generate_daily_plan(self.user, self.profile).values_list('content_id', 'reason')), baseline)
+
     def test_only_published_content_for_profile_exam_is_selected(self):
         self.reading.is_published = False
         self.reading.save(update_fields=['is_published'])

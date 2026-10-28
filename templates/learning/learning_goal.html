@@ -1,29 +1,19 @@
 {% extends 'learning/base.html' %}
-{% block title %}Trình độ và mục tiêu · LinguaPath{% endblock %}
+{% load static %}
+{% block title %}Chọn nhịp học · LinguaPath{% endblock %}
 {% block content %}
-<section class="page-heading">
-  <span class="eyebrow">HỒ SƠ NGƯỜI HỌC</span>
-  <h1>Trình độ và mục tiêu</h1>
-  <p>Chọn trình độ hiện tại và cấp độ bạn muốn hướng tới. Website dùng thông tin này để chọn nội dung phù hợp.</p>
-  <p><a class="subtle-link" href="{% url 'learning:placement_test' %}">Chưa chắc trình độ? Làm bài kiểm tra xếp mức từ vựng →</a></p>
-</section>
-
-<section class="panel goal-panel">
-  <form method="post" class="form-stack">
-    {% csrf_token %}
-    {{ form.non_field_errors }}
-    {% for field in form %}
-      <div class="goal-field{% if field.errors %} has-errors{% endif %}">
-        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-        {{ field }}
-        {% if field.help_text %}<small class="field-help">{{ field.help_text }}</small>{% endif %}
-        {% for error in field.errors %}<p class="field-error">{{ error }}</p>{% endfor %}
-      </div>
-    {% endfor %}
-    <div class="notice" role="note">
-      CEFR A1–C1 là mức tham khảo để chọn nội dung học, không phải chứng chỉ hay điểm TOEIC/IELTS chính thức. Nếu chưa chắc trình độ, hãy chọn mức gần đúng; bạn có thể điều chỉnh sau.
-    </div>
-    <button class="button primary" type="submit">Lưu hồ sơ học tập</button>
+<link rel="stylesheet" href="{% static 'css/getting-started.css' %}">
+<header class="goal-welcome"><span class="eyebrow">{% if not profile.onboarding_complete %}BƯỚC 1 · LÀM QUEN VỚI NHAU{% else %}ĐIỀU CHỈNH NHỊP HỌC{% endif %}</span><h1>Một kế hoạch vừa với bạn.</h1><p>Chọn mức gần với mình và thời gian có thể dành mỗi ngày. Bạn không cần biết chính xác mọi thứ để bắt đầu.</p><div class="goal-welcome-note">Bạn có thể thay đổi các lựa chọn này bất kỳ lúc nào. <a href="{% url 'learning:getting_started' %}">Xem hướng dẫn →</a></div></header>
+<section class="panel goal-panel goal-welcome-panel">
+  <form method="post" class="form-stack">{% csrf_token %}{{ form.non_field_errors }}
+    {% for field in form %}{% if field.name == 'current_cefr' or field.name == 'target_cefr' or field.name == 'daily_minutes' %}
+      <div class="goal-field{% if field.errors %} has-errors{% endif %}"><label for="{{ field.id_for_label }}">{{ field.label }}</label>{{ field }}{% if field.help_text %}<small class="field-help" id="{{ field.auto_id }}_helptext">{{ field.help_text }}</small>{% endif %}{% if field.errors %}<div id="{{ field.auto_id }}_error">{% for error in field.errors %}<p class="field-error">{{ error }}</p>{% endfor %}</div>{% endif %}</div>
+    {% endif %}{% endfor %}
+    <details class="goal-optional"{% if form.target_score.errors or form.target_date.errors %} open{% endif %}><summary>Điểm số và ngày thi · không bắt buộc <span aria-hidden="true">＋</span></summary>
+      {% for field in form %}{% if field.name == 'target_score' or field.name == 'target_date' %}<div class="goal-field{% if field.errors %} has-errors{% endif %}"><label for="{{ field.id_for_label }}">{{ field.label }}</label>{{ field }}{% if field.help_text %}<small class="field-help" id="{{ field.auto_id }}_helptext">{{ field.help_text }}</small>{% endif %}{% if field.errors %}<div id="{{ field.auto_id }}_error">{% for error in field.errors %}<p class="field-error">{{ error }}</p>{% endfor %}</div>{% endif %}</div>{% endif %}{% endfor %}
+    </details>
+    <div class="notice" role="note">A1–C1 là các mức tham khảo để chọn từ vựng, không phải chứng chỉ hoặc quy đổi điểm TOEIC. <a href="{% url 'learning:placement_test' %}">Chưa chắc? Thử bài xếp mức tham khảo →</a></div>
+    <button class="button primary" type="submit">{% if not profile.onboarding_complete %}Tạo kế hoạch đầu tiên{% else %}Lưu thay đổi{% endif %} <span aria-hidden="true">→</span></button>
   </form>
 </section>
 {% endblock %}

@@ -166,7 +166,7 @@ class TutorProvenanceTests(TestCase):
         with CaptureQueriesContext(connection) as queries:
             result = retrieve_context('explain deadline', user=self.user, limit=10)
         self.assertEqual(len(result), 10)
-        self.assertEqual(len(queries), 2)  # cards and submitted-question scan
+        self.assertEqual(len(queries), 1)  # one card query; one term cannot match two question tokens
 
     def test_saved_turn_get_is_owner_scoped_read_only_and_handles_bad_shapes(self):
         turn = TutorTurn.objects.create(user=self.user, question='deadline', result=self.result)

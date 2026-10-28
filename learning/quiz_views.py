@@ -3,6 +3,7 @@ from datetime import timedelta
 from copy import deepcopy
 import random
 import re
+from urllib.parse import urlencode
 
 from django.contrib import messages
 from django.contrib.auth import get_user_model
@@ -49,6 +50,7 @@ def _play_context(quiz, answers=None, error='', conflict=False):
     answers = saved if answers is None else answers
     safe_quiz = {
         'pk': quiz.pk, 'id': quiz.pk, 'question_count': quiz.question_count,
+        'expires_at': quiz.started_at + timedelta(days=1),
         'cefr_level': quiz.cefr_level, 'topic': quiz.topic, 'started_at': quiz.started_at,
         'draft_revision': quiz.draft_revision, 'last_saved_at': quiz.last_saved_at,
         'saved_count': len(saved), 'is_retry': quiz.is_retry, 'parent_quiz_id': quiz.parent_quiz_id,
@@ -68,6 +70,7 @@ def _play_context(quiz, answers=None, error='', conflict=False):
     return {
         'quiz': safe_quiz, 'questions': safe_questions, 'quiz_error': error,
         'quiz_conflict': conflict, 'quiz_has_unsaved': answers != saved,
+        'answered_count': len(answers), 'answered_percent': round(100 * len(answers) / quiz.question_count) if quiz.question_count else 0,
     }
 
 
@@ -226,8 +229,26 @@ def quiz_start(request):
         return HttpResponseBadRequest('Bộ lọc quiz không hợp lệ.')
     if source == 'due' and mode != 'recall':
         return HttpResponseBadRequest('Nguồn đến lịch ôn yêu cầu cách luyện Gõ từ.')
+    replace_id = request.POST.get('replace_quiz', '')
+    if replace_id and (len(request.POST.getlist('replace_quiz')) != 1 or
+                       not re.fullmatch(r'[1-9][0-9]{0,18}', replace_id)):
+        return HttpResponseBadRequest('Lượt quiz cần thay thế không hợp lệ.')
     active = VocabularyQuizSession.objects.filter(user=request.user, status='in_progress').first()
-    if active and not _expire_unavailable(active):
+    if active and _expire_unavailable(active):
+        active = None
+    if replace_id:
+        if not active or active.pk != int(replace_id):
+            messages.warning(request, 'Lượt quiz đang làm đã thay đổi. Hãy kiểm tra lại trước khi tạo bài mới.')
+            return redirect('learning:quiz_hub')
+        if request.POST.get('confirm_replace') != 'yes':
+            return render(request, 'learning/quiz_replace_confirm.html', {
+                'quiz': active, 'mode': mode, 'source': source, 'level': level,
+                'topic': topic, 'count': raw_count,
+            })
+        revision = request.POST.get('replace_revision', '')
+        if len(request.POST.getlist('replace_revision')) != 1 or not re.fullmatch(r'[0-9]{1,10}', revision):
+            return HttpResponseBadRequest('Phiên bản quiz không hợp lệ.')
+    elif active:
         messages.info(request, 'Tiếp tục lượt quiz đang làm trước khi bắt đầu lượt mới.')
         return redirect('learning:quiz_take', quiz_id=active.pk)
     fields = ('id', 'content_id', 'term', 'meaning_vi', 'part_of_speech', 'cefr_level', 'topic',
@@ -297,15 +318,42 @@ def quiz_start(request):
         else:
             message = 'Chưa có từ cần ôn phù hợp với đủ phương án khác nghĩa. Hãy chọn bộ lọc khác hoặc làm quiz để tìm từ cần luyện.' if source == 'weak' else 'Cần ít nhất 5 từ phù hợp và bốn nghĩa khác nhau để tạo quiz. Hãy chọn chủ đề hoặc cấp độ khác.'
         messages.warning(request, message)
-        query = ([f'source={source}'] if source in ('saved', 'weak', 'due') else []) + (['mode=recall'] if mode == 'recall' else [])
-        return redirect(reverse('learning:quiz_hub') + ('?' + '&'.join(query) if query else ''))
+        query = urlencode({'source': source, 'mode': mode, 'level': level, 'topic': topic, 'count': raw_count})
+        return redirect(reverse('learning:quiz_hub') + '?' + query)
     try:
         with transaction.atomic():
-            if source == 'due':
+            if replace_id or source == 'due':
                 nonkey_row_lock(get_user_model().objects.all()).get(pk=request.user.pk)
+            if replace_id:
+                current = VocabularyQuizSession.objects.select_for_update().filter(
+                    pk=int(replace_id), user=request.user, status='in_progress').first()
+                if not current or current.draft_revision != int(revision):
+                    messages.warning(request, 'Quiz đang làm đã thay đổi. Hãy kiểm tra lại trước khi tạo bài mới.')
+                    return redirect('learning:quiz_hub')
+            if source == 'due':
                 if not selection_is_current(request.user, _exam(request.user), questions):
                     messages.info(request, 'Lịch ôn hoặc nguồn vừa thay đổi ở một tab khác. Hãy chọn lại từ đến lịch ôn.')
                     return redirect(reverse('learning:quiz_hub') + '?source=due&mode=recall')
+            if source != 'due':
+                # Use the same parent/card lock order as source editors. Validate
+                # the prepared snapshot before changing the learner's old quiz.
+                locked = lock_due_cards(questions)
+                selected = {card['id']: card for card in all_cards if card['id'] in locked}
+                visible_ids = set(_cards(request.user).filter(pk__in=locked).values_list('pk', flat=True))
+                unchanged = all(
+                    q['card_id'] in visible_ids and q['card_id'] in selected
+                    and all(getattr(locked[q['card_id']], field) == selected[q['card_id']][field]
+                            for field in fields)
+                    for q in questions
+                )
+                prepared = VocabularyQuizSession(exam_type=_exam(request.user), mode=mode,
+                                                 question_count=len(questions), snapshot=questions)
+                if not unchanged or not _available(prepared):
+                    messages.warning(request, 'Học liệu vừa thay đổi. Bài đang làm được giữ lại; hãy chọn lại quiz mới.')
+                    return redirect('learning:quiz_hub')
+            if replace_id:
+                current.status = 'abandoned'
+                current.save(update_fields=['status'])
             quiz = VocabularyQuizSession.objects.create(user=request.user, exam_type=_exam(request.user), cefr_level=level, topic=topic, vocabulary_source=source, mode=mode, is_retry=source == 'weak', question_count=len(questions), snapshot=questions)
     except IntegrityError:
         quiz = VocabularyQuizSession.objects.filter(user=request.user, status='in_progress').first()
@@ -398,10 +446,24 @@ def quiz_result(request, quiz_id):
 @require_POST
 @never_cache
 def quiz_abandon(request, quiz_id):
-    quiz = get_object_or_404(VocabularyQuizSession, pk=quiz_id, user=request.user)
-    changed = VocabularyQuizSession.objects.filter(pk=quiz.pk, user=request.user, status='in_progress').update(status='abandoned')
-    if changed:
-        messages.info(request, 'Đã dừng lượt quiz. Bạn có thể chọn một thử thách mới.')
+    with transaction.atomic():
+        nonkey_row_lock(get_user_model().objects.all()).get(pk=request.user.pk)
+        quiz = get_object_or_404(VocabularyQuizSession.objects.select_for_update(), pk=quiz_id, user=request.user)
+        if quiz.status != 'in_progress':
+            return redirect('learning:quiz_hub')
+        if request.POST.get('confirm_abandon') != 'yes':
+            return render(request, 'learning/quiz_abandon_confirm.html', {'quiz': _play_context(quiz)['quiz']})
+        try:
+            revision = _revision(request.POST, required=True)
+        except ValueError as exc:
+            return HttpResponseBadRequest(str(exc))
+        if revision != quiz.draft_revision:
+            return render(request, 'learning/quiz_abandon_confirm.html', {
+                'quiz': _play_context(quiz)['quiz'], 'changed': True,
+            }, status=409)
+        quiz.status = 'abandoned'
+        quiz.save(update_fields=['status'])
+    messages.info(request, 'Đã dừng lượt quiz. Bạn có thể chọn một thử thách mới.')
     return redirect('learning:quiz_hub')
 
 

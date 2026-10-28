@@ -1,7 +1,7 @@
 from datetime import timedelta
 from django.contrib.auth import get_user_model
 from django.core.management import call_command
-from django.test import TestCase
+from django.test import TestCase, override_settings
 from django.urls import reverse
 from django.utils import timezone
 from pathlib import Path
@@ -21,12 +21,18 @@ class LearningFlowTests(TestCase):
         self.correct = AnswerOption.objects.create(question=self.question, label='A', text='Monday', is_correct=True)
         self.wrong = AnswerOption.objects.create(question=self.question, label='B', text='Tuesday', is_correct=False)
 
+    def test_register_explains_current_password_recovery_limit(self):
+        page = self.client.get(reverse('register'))
+        self.assertContains(page, 'chưa hỗ trợ khôi phục mật khẩu qua email')
+
     def test_register_creates_profile_and_logs_in(self):
         response = self.client.post(reverse('register'), {
             'username': 'new-learner', 'password1': 'A-strong-password-447!', 'password2': 'A-strong-password-447!',
         })
         self.assertRedirects(response, reverse('learning_goal'))
-        self.assertTrue(get_user_model().objects.get(username='new-learner').learner_profile)
+        user = get_user_model().objects.get(username='new-learner')
+        self.assertTrue(user.learner_profile)
+        self.assertEqual(user.email, '')
 
     def test_learning_goal_form_validates_toeic_range_and_updates_plan_preferences(self):
         self.client.force_login(self.user)
@@ -57,7 +63,7 @@ class LearningFlowTests(TestCase):
         self.assertEqual(page.status_code, 200)
         self.assertEqual(len(page.context['questions']), 15)
         session = self.client.session
-        post_data = {f'q_{index}': item['correct'] for index, item in enumerate(session['placement_questions'])}
+        post_data = {'placement_token': session['placement_token'], **{f'q_{index}': item['correct'] for index, item in enumerate(session['placement_questions'])}}
         response = self.client.post(reverse('learning:placement_test'), post_data)
         self.assertRedirects(response, reverse('learning:placement_result'))
         result = self.client.get(reverse('learning:placement_result'))
@@ -371,6 +377,7 @@ class TutorRetrievalTests(TestCase):
         self.assertEqual(evidence[0]['source'], 'Cartridge schedule')
         self.assertIn('Thursday', evidence[0]['text'])
 
+    @override_settings(AI_TUTOR_ENABLED=True)
     def test_llm_receives_limited_lesson_context_and_returns_source(self):
         from . import ai
         AnswerOption.objects.create(question=self.question, label='A', text='Thursday', is_correct=True,

@@ -105,3 +105,11 @@
 }
 /* Rating returns to the current deck beneath the fixed navigation. */
 .flash-card[id] { scroll-margin-top: 92px; }
+
+/* Readable, keyboard-operable cards when scripts are disabled. */
+.flash-fallback {display:grid; gap:12px; margin:20px 0;}
+.flash-fallback-card {background:#fff; border:1px solid #c8d5e8; border-radius:16px; padding:18px;}
+.flash-fallback-card summary {cursor:pointer; color:#293650; font-size:1.1rem;}
+.flash-fallback-card summary span {font-size:.85rem; color:#52637c; margin-left:8px;}
+.flash-fallback-card summary:focus-visible {outline:3px solid #4162d9; outline-offset:4px;}
+.flash-fallback-card .rating-row {display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}

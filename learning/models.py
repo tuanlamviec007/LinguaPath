@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.db import models
+from django.db import models, transaction
 
 
 CEFR_LEVELS = [('A1', 'A1'), ('A2', 'A2'), ('B1', 'B1'), ('B2', 'B2'), ('C1', 'C1')]
@@ -76,6 +76,29 @@ class LearningContent(models.Model):
         return issues
 
 
+class QuestionQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        from .question_search import SEARCH_FIELDS, sync_questions
+        if not set(kwargs).intersection(SEARCH_FIELDS):
+            return super().update(**kwargs)
+        with transaction.atomic(using=self.db):
+            ids = list(self.select_for_update().order_by('pk').values_list('pk', flat=True))
+            count = super().update(**kwargs)
+            sync_questions(self.model.objects.using(self.db).filter(pk__in=ids).iterator(), self.db)
+            return count
+
+    def bulk_create(self, objs, batch_size=None, ignore_conflicts=False,
+                    update_conflicts=False, update_fields=None, unique_fields=None):
+        from .question_search import sync_questions
+        # Conflict-ignore cannot reliably return the affected primary keys.
+        if ignore_conflicts or update_conflicts:
+            raise ValueError('Question bulk conflicts require explicit update_or_create.')
+        with transaction.atomic(using=self.db):
+            created = super().bulk_create(objs, batch_size=batch_size)
+            sync_questions(created, self.db)
+            return created
+
+
 class Question(models.Model):
     content = models.ForeignKey(LearningContent, on_delete=models.CASCADE, related_name='questions')
     prompt = models.TextField()
@@ -86,12 +109,28 @@ class Question(models.Model):
     explanation = models.TextField()
     explanation_vi = models.TextField(blank=True)
     order = models.PositiveSmallIntegerField(default=1)
+    objects = QuestionQuerySet.as_manager()
+
+    def save(self, *args, **kwargs):
+        from django.db import router
+        using = kwargs.get('using') or router.db_for_write(type(self), instance=self)
+        with transaction.atomic(using=using):
+            return super().save(*args, **kwargs)
 
     class Meta:
         ordering = ['order', 'id']
 
     def __str__(self):
         return f'{self.content.title} – Câu {self.order}'
+
+
+class QuestionSearchToken(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name='search_tokens')
+    token_hash = models.CharField(max_length=64)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=['question', 'token_hash'], name='unique_question_search_token')]
+        indexes = [models.Index(fields=['token_hash', 'question'], name='question_search_lookup')]
 
 
 class AnswerOption(models.Model):

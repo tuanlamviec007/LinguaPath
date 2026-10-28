@@ -15,14 +15,18 @@
 </section>
 <section class="panel" aria-labelledby="privacy-export-title">
   <h2 id="privacy-export-title">Tải bản sao dữ liệu của tôi</h2>
-  <p>Bản JSON chứa dữ liệu của tài khoản đang đăng nhập. Không có mật khẩu/hash, session, token, khóa dịch vụ hay dữ liệu tài khoản khác. Quiz chưa nộp chỉ xuất đề được phép xem và đáp án bạn đã nhập; không mở khóa chấm.</p>
+  <p>Bản JSON chứa dữ liệu của tài khoản đang đăng nhập. Nếu tài khoản có dữ liệu đăng nhập hoặc email do dịch vụ xác thực quản lý, hệ thống tạm dừng xuất để tránh tạo bản thiếu dữ liệu. Không có mật khẩu/hash, session, token, khóa dịch vụ hay dữ liệu tài khoản khác. Quiz chưa nộp chỉ xuất đề được phép xem và đáp án bạn đã nhập; không mở khóa chấm.</p>
   <p>Bản tải có thể chứa nội dung riêng tư bạn từng nhập vào trợ lý hoặc ghi chú. Giữ file ở nơi riêng; tránh gửi nguyên file công khai. Giới hạn tải trực tiếp {{ export_size_mb }} MiB; nếu vượt giới hạn, hệ thống báo lỗi và không tạo bản xuất thiếu dữ liệu.</p>
+  {% if can_confirm_password %}
   <form method="post" class="form-stack">
     {% csrf_token %}<input type="hidden" name="action" value="export">
     <label for="privacy-export-password">Mật khẩu hiện tại</label>
     <input id="privacy-export-password" name="password" type="password" autocomplete="current-password" maxlength="1024" required>
     <button class="button primary" type="submit">Xác nhận và tải dữ liệu JSON</button>
   </form>
+  {% else %}
+    <p class="notice" role="note">Tài khoản này chưa có mật khẩu LinguaPath. Chức năng xác nhận danh tính để tải dữ liệu chưa hỗ trợ loại tài khoản này.</p>
+  {% endif %}
 </section>
 <section class="panel" aria-labelledby="privacy-delete-title">
   <h2 id="privacy-delete-title">Xóa tài khoản</h2>
@@ -30,6 +34,8 @@
   <p>Thao tác không tự xóa mọi bản sao lưu, bản đã tải trên thiết bị hoặc dữ liệu đã gửi tới nhà cung cấp AI. Vòng đời backup, log hạ tầng và chính sách lưu giữ của nhà cung cấp cần được quản trị viên xử lý riêng; chưa có cơ chế xóa tức thì các bản sao đó.</p>
   {% if privileged_account %}
     <div class="notice" role="note">Tài khoản có quyền quản trị không được tự xóa ở đây. Cần quy trình quản trị riêng để bàn giao quyền và kiểm tra nhật ký.</div>
+  {% elif not can_confirm_password %}
+    <p class="notice" role="note">Tài khoản này chưa có mật khẩu LinguaPath. Chức năng xác nhận danh tính để xóa tài khoản chưa hỗ trợ loại tài khoản này.</p>
   {% else %}
     <form method="post" class="form-stack">
       {% csrf_token %}<input type="hidden" name="action" value="delete">

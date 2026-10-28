@@ -90,6 +90,36 @@ class WeakWordOutcomeTests(TestCase):
         other.delete()
         self.assertEqual(self.summary()['count'], 0)
 
+    def test_subset_bank_cannot_hide_a_current_recall_ambiguity(self):
+        self.quiz(time=self.now - timedelta(days=1))
+        self.quiz(correct=True, mode='recall', time=self.now)
+        Flashcard.objects.create(content=self.content, term='date', meaning_vi='hạn chót',
+            part_of_speech='noun', cefr_level='B1')
+        result = self.summary(visible_bank=[self.card])
+        self.assertEqual(result['count'], 1)
+        self.assertEqual(result['words'][0]['wrong_count'], 1)
+
+    def test_read_hydrates_only_projected_words_and_retains_bookmarks(self):
+        from django.db.models.signals import post_init
+        from .models import SavedWord
+        Flashcard.objects.bulk_create([Flashcard(content=self.content, term=f'unrelated-{i}',
+            meaning_vi=f'nghĩa khác {i}', cefr_level='B1') for i in range(100)])
+        self.quiz()
+        SavedWord.objects.create(user=self.user, flashcard=self.card)
+        hydrated = []
+
+        def record_card(sender, instance, **kwargs):
+            hydrated.append(instance.pk)
+
+        post_init.connect(record_card, sender=Flashcard, weak=False)
+        try:
+            result = self.summary()
+        finally:
+            post_init.disconnect(record_card, sender=Flashcard)
+        self.assertEqual(hydrated, [self.card.pk])
+        self.assertEqual(result['count'], 1)
+        self.assertTrue(result['words'][0]['card'].is_saved)
+
     def test_session_internal_ambiguity_remains_invalid_after_other_card_disappears(self):
         other = Flashcard.objects.create(content=self.content, term='date', meaning_vi='hạn chót', part_of_speech='noun')
         first, second = self.question(), self.question(other, number=2)

@@ -136,7 +136,7 @@ class AuthClientIPTests(TestCase):
 
 @override_settings(MIDDLEWARE=MIDDLEWARE, AUTH_RATE_LIMITS=SMALL_LIMITS,
                    PASSWORD_HASHERS=['django.contrib.auth.hashers.MD5PasswordHasher'],
-                   EMAIL_BACKEND='django.core.mail.backends.locmem.EmailBackend')
+                   EMAIL_BACKEND='django.core.mail.backends.locmem.EmailBackend', PASSWORD_RESET_ENABLED=True)
 class AuthThrottleIntegrationTests(TestCase):
     def setUp(self):
         clock = patch('learning.auth_limits.timezone.now', return_value=NOW)

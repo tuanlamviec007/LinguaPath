@@ -1,53 +1,72 @@
 {% extends 'learning/base.html' %}
 {% load static %}
-{% block title %}LinguaPath · Một nhịp học, nhiều bước tiến{% endblock %}
+{% block title %}LinguaPath · Bắt đầu học tiếng Anh từ một từ{% endblock %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/landing.css' %}">
-<div class="landing">
+<div class="landing landing-welcome">
   <section class="landing-hero" aria-labelledby="landing-title">
     <div class="landing-hero__copy">
-      <span class="landing-kicker"><span aria-hidden="true">✦</span> KHÔNG GIAN HỌC TIẾNG ANH CỦA BẠN</span>
-      <h1 id="landing-title">Một nhịp học.<br><span>Nhiều bước tiến.</span></h1>
-      <p>Học từ trong ngữ cảnh, luyện nghe và đọc, rồi quay lại những câu còn sai. Một kế hoạch rõ ràng cho mỗi ngày học TOEIC.</p>
-      <div class="landing-actions"><a class="button primary" href="{% url 'register' %}">Bắt đầu hành trình <span aria-hidden="true">↗</span></a><a class="landing-text-link" href="#how-it-works">Khám phá cách học <span aria-hidden="true">↓</span></a></div>
-      <div class="landing-scope"><span aria-hidden="true">✓</span> Bản thử nghiệm TOEIC · Học theo thời gian của bạn</div>
+      <div class="word-orbit" aria-hidden="true"><span>grow <i>↗</i></span><span>curious <i>✧</i></span><span>every day <i>☀</i></span></div>
+      <span class="landing-kicker"><span aria-hidden="true">✦</span> TOEIC NỀN TẢNG · TỪNG BƯỚC MỘT</span>
+      <h1 id="landing-title">Bạn chỉ cần<br><span>bắt đầu một từ.</span></h1>
+      <p>Chưa biết học tiếng Anh từ đâu? Thử một từ, một câu hỏi. Rồi xây dựng nhịp học phù hợp với chính bạn.</p>
+      <div class="landing-actions"><a class="button primary landing-start-button" href="#quick-demo">Thử học ngay <span aria-hidden="true">→</span></a><a class="landing-text-link" href="{% url 'learning:getting_started' %}">Mình nên bắt đầu thế nào? <span aria-hidden="true">↗</span></a></div>
+      <div class="welcome-reassurance"><span><b aria-hidden="true">✓</b> Học thử không cần tài khoản</span><span><b aria-hidden="true">✓</b> Tự chọn thời gian học</span></div>
+      {% include 'learning/_companion.html' %}
+      <div class="welcome-mini-path" aria-label="Một vòng học đơn giản"><span><b>01</b> Gặp một từ</span><i aria-hidden="true">→</i><span><b>02</b> Thử nhớ lại</span><i aria-hidden="true">→</i><span><b>03</b> Học đều hơn</span></div>
     </div>
-    <div class="landing-preview">
-      <div class="landing-preview__heading"><span>MỘT CHÚT TIẾNG ANH MỖI NGÀY</span><span aria-hidden="true">Aa</span></div>
+    <section class="landing-preview welcome-demo" id="quick-demo" tabindex="-1" aria-labelledby="demo-title" data-welcome-demo>
+      <div class="landing-preview__heading"><span class="welcome-live-dot">KHÔNG CẦN ĐĂNG KÝ</span><span aria-hidden="true">✦</span></div>
+      <div class="welcome-demo-title"><div><span class="eyebrow">MỘT VÒNG HỌC THỬ</span><h2 id="demo-title">Một từ. Một khởi đầu.</h2></div><span class="welcome-demo-number" aria-hidden="true">Aa</span></div>
+      <ol class="demo-journey" aria-label="Hai bước học thử"><li data-demo-step="word"><span aria-hidden="true">01</span> Khám phá từ</li><li data-demo-step="recall"{% if demo_correct %} class="is-done"{% endif %}><span aria-hidden="true">02</span> Thử nhớ lại</li></ol>
       <article class="landing-sample" data-flashcard aria-label="Thẻ từ vựng minh họa, có thể lật">
         <div class="landing-sample__inner">
           <section class="landing-sample__face flash-front" aria-label="Mặt trước thẻ minh họa">
-            <div class="landing-sample__meta"><span>THẺ MINH HỌA</span><span>Học tập</span></div>
-            <div><span class="landing-sample__hint">Hôm nay, thử nhớ một từ</span><h2 lang="en">consistent</h2><p lang="en">/kənˈsɪstənt/ <span>· adjective</span></p></div>
+            <div class="landing-sample__meta"><span>01 · GẶP MỘT TỪ</span><span>Thẻ học thử</span></div>
+            <div><h2 lang="en">consistent</h2><p lang="en">/kənˈsɪstənt/ <span>· adjective</span></p><p class="welcome-word-prompt">Bạn đã biết nghĩa của từ này chưa?</p></div>
             <button type="button" class="landing-flip" data-flip aria-controls="sample-answer" aria-expanded="false"><span>Tự nhớ nghĩa, rồi lật thẻ</span><span aria-hidden="true">↻</span></button>
           </section>
           <section class="landing-sample__face flash-back" id="sample-answer" aria-label="Nghĩa của thẻ minh họa" aria-hidden="true" inert>
-            <span class="landing-sample__hint">NGHĨA TRONG NGỮ CẢNH</span><h2>đều đặn,<br>nhất quán</h2><p lang="en">A consistent routine makes practice easier.</p><p class="landing-sample__translation">Thói quen đều đặn giúp việc luyện tập dễ dàng hơn.</p><button type="button" class="landing-flip" data-flip aria-controls="sample-answer" aria-expanded="true"><span>Quay lại từ</span><span aria-hidden="true">↩</span></button>
+            <span class="landing-sample__hint">NGHĨA TRONG NGỮ CẢNH</span><h2>đều đặn, nhất quán</h2><p lang="en">A consistent routine makes practice easier.</p><p class="landing-sample__translation">Thói quen đều đặn giúp việc luyện tập dễ dàng hơn.</p><button type="button" class="landing-flip" data-flip aria-controls="sample-answer" aria-expanded="true"><span>Quay lại từ</span><span aria-hidden="true">↩</span></button>
           </section>
         </div>
       </article>
-      <div class="landing-preview__foot"><span class="landing-preview__symbol" aria-hidden="true">↻</span><div><strong>Học một từ. Gặp lại đúng lúc.</strong><p>Lịch ôn điều chỉnh theo cách bạn nhớ từ.</p></div></div>
-    </div>
+      <noscript><p class="welcome-demo-note">Consistent: đều đặn, nhất quán. Mở câu hỏi bên dưới để thử; kết quả hiển thị sau khi gửi.</p></noscript>
+      <details class="welcome-quiz"{% if demo_answer %} open{% endif %}>
+        <summary><span><b>02</b> Thử một câu để nhớ hơn</span><span aria-hidden="true">＋</span></summary>
+        <form method="get" action="{% url 'home' %}#quick-demo" data-demo-quiz>
+          <fieldset><legend>“A consistent routine” là một thói quen như thế nào?</legend>
+            <div class="welcome-options"><button type="submit" name="demo_answer" value="A" data-demo-choice="A"{% if demo_answer == 'A' %} aria-pressed="true"{% endif %}><span>A</span> Nhanh chóng</button><button type="submit" name="demo_answer" value="B" data-demo-choice="B"{% if demo_answer == 'B' %} aria-pressed="true"{% endif %}><span>B</span> Đều đặn</button><button type="submit" name="demo_answer" value="C" data-demo-choice="C"{% if demo_answer == 'C' %} aria-pressed="true"{% endif %}><span>C</span> Mới mẻ</button></div>
+          </fieldset>
+          <p class="welcome-feedback{% if demo_correct %} is-correct{% endif %}" role="status" data-demo-feedback>{% if demo_correct %}Đúng rồi! “Consistent” là đều đặn, nhất quán. Bạn vừa thử xong một vòng học nhỏ.{% elif demo_answer %}Chưa đúng lần này. “Consistent” là đều đặn, nhất quán — chọn B để thử lại nhé.{% endif %}</p>
+          <a class="button primary welcome-demo-finish" href="{% url 'register' %}" data-demo-finish{% if not demo_correct %} hidden{% endif %}>Tạo lộ trình của tôi <span aria-hidden="true">→</span></a>
+        </form>
+      </details>
+      <p class="welcome-demo-note">Bài minh họa · Không lưu điểm hoặc cộng XP.</p>
+    </section>
   </section>
 
+  <section class="welcome-bridge" aria-label="Cách LinguaPath giúp bạn bắt đầu"><span class="welcome-bridge-icon" aria-hidden="true">↗</span><p><strong>Không cần hiểu hết mọi chức năng ngay.</strong> Bắt đầu với từ vựng. Quiz, bài nghe và công cụ ôn tập sẽ luôn ở đó khi bạn sẵn sàng.</p><a href="{% url 'learning:getting_started' %}">Xem bản hướng dẫn <span aria-hidden="true">→</span></a></section>
+
   <section class="landing-path" id="how-it-works" aria-labelledby="learning-path-title">
-    <div class="landing-section-heading"><div><span class="eyebrow">NHỎ, RÕ RÀNG, ĐỀU ĐẶN</span><h2 id="learning-path-title">Biết hôm nay nên học gì.</h2></div><p>Từ mục tiêu của bạn đến một việc học cụ thể.</p></div>
+    <div class="landing-section-heading"><div><span class="eyebrow">MỘT ĐIỂM BẮT ĐẦU RÕ RÀNG</span><h2 id="learning-path-title">Hôm nay, chỉ một bước nhỏ.</h2></div><p>Khám phá từng chút, theo nhịp của bạn.</p></div>
     <div class="landing-path__grid">
-      <article><span class="landing-step">01</span><h3>Chọn nhịp học</h3><p>Đặt mục tiêu, mức hiện tại và thời gian bạn có mỗi ngày. Kế hoạch bắt đầu từ chính những điều đó.</p><span class="landing-tag">Mục tiêu cá nhân</span></article>
-      <article><span class="landing-step">02</span><h3>Tập trung luyện tập</h3><p>Lật thẻ từ vựng, làm bài đọc hoặc nghe audio. Xem lời giải để hiểu vì sao một lựa chọn phù hợp.</p><span class="landing-tag">Từ vựng · Reading · Listening</span></article>
-      <article><span class="landing-step">03</span><h3>Quay lại để nhớ hơn</h3><p>Ôn từ đến hạn, làm lại câu sai và nhìn lại lịch học. Bạn luôn có một bước tiếp theo rõ ràng.</p><span class="landing-tag">Lịch ôn &amp; Sổ lỗi</span></article>
+      <article><span class="landing-step">01</span><h3>Chọn nhịp học</h3><p>Chọn thời gian bạn có và mức gần với mình. Bạn có thể đổi lại sau.</p><span class="landing-tag">Không cần biết chính xác trình độ</span></article>
+      <article><span class="landing-step">02</span><h3>Học một từ trước</h3><p>Lật thẻ, xem ví dụ rồi tự đánh giá mức nhớ. Một thẻ cũng là một khởi đầu.</p><span class="landing-tag">Một việc cụ thể để làm ngay</span></article>
+      <article><span class="landing-step">03</span><h3>Thử nhớ, rồi quay lại</h3><p>Làm quiz ngắn để xem phần còn nhầm. Quay lại ôn và mở thêm bài nghe, bài đọc khi sẵn sàng.</p><span class="landing-tag">Đi từng bước, không cần vội</span></article>
     </div>
   </section>
 
   <section class="landing-features" aria-labelledby="learning-space-title">
-    <div class="landing-section-heading"><div><span class="eyebrow">CÙNG BẠN TRÊN MỘT HÀNH TRÌNH</span><h2 id="learning-space-title">Mọi việc học, trong một không gian.</h2></div></div>
+    <div class="landing-section-heading"><div><span class="eyebrow">CÒN NHIỀU ĐIỀU ĐỂ KHÁM PHÁ</span><h2 id="learning-space-title">Bắt đầu đơn giản. Mở rộng dần.</h2></div></div>
     <div class="landing-feature-grid">
-      <article class="landing-feature landing-feature--dark"><span class="landing-feature__icon" aria-hidden="true">Aa</span><h3>Từ mới có ngữ cảnh.</h3><p>Hai mặt flashcard, ví dụ tiếng Anh và nghĩa tiếng Việt. Tự đánh giá để lên lịch gặp lại từ.</p><a href="{% url 'register' %}">Bắt đầu với từ vựng <span aria-hidden="true">↗</span></a></article>
-      <article class="landing-feature"><span class="landing-feature__icon" aria-hidden="true">♫</span><h3>Nghe, đọc và hiểu.</h3><p>Bài luyện theo mức tham khảo, audio có sẵn và giải thích sau khi nộp. Lưu nháp để tiếp tục bài đang dở.</p></article>
-      <article class="landing-feature"><span class="landing-feature__icon" aria-hidden="true">✦</span><h3>Có nguồn để kiểm tra.</h3><p>Tra cứu học liệu hoặc chủ động chọn AI diễn giải. Câu trả lời đi kèm nguồn và nhãn trạng thái rà soát.</p></article>
+      <article class="landing-feature landing-feature--dark"><span class="landing-feature__icon" aria-hidden="true">Aa</span><span class="welcome-feature-stage">BẮT ĐẦU Ở ĐÂY</span><h3>Từ mới có ngữ cảnh.</h3><p>Thẻ từ với nghĩa tiếng Việt và ví dụ. Lịch ôn giúp bạn biết khi nào nên gặp lại từ.</p><a href="#quick-demo">Thử một thẻ ngay <span aria-hidden="true">↗</span></a></article>
+      <article class="landing-feature"><span class="landing-feature__icon" aria-hidden="true">⚡</span><span class="welcome-feature-stage">KHI ĐÃ QUEN</span><h3>Thử sức với quiz.</h3><p>Tự chọn lượt luyện ngắn. Sau khi nộp, xem đáp án và lời giải để hiểu phần còn nhầm.</p><a href="{% url 'learning:getting_started' %}#guide-quiz">Tìm hiểu cách làm quiz <span aria-hidden="true">↗</span></a></article>
+      <article class="landing-feature"><span class="landing-feature__icon" aria-hidden="true">♫</span><span class="welcome-feature-stage">KHÁM PHÁ THÊM</span><h3>Nghe, đọc và ôn lại.</h3><p>Bài luyện TOEIC, sổ lỗi và trợ lý tra cứu học liệu. Mỗi công cụ có một việc rõ ràng.</p><a href="{% url 'learning:getting_started' %}#guide-explore">Mở bản đồ tính năng <span aria-hidden="true">↗</span></a></article>
     </div>
   </section>
-  <section class="landing-final"><div><span class="eyebrow">BẮT ĐẦU TỪ MỘT BƯỚC NHỎ</span><h2>Dành một khoảng thời gian<br>cho tiếng Anh hôm nay.</h2></div><a class="button primary" href="{% url 'register' %}">Tạo tài khoản miễn phí <span aria-hidden="true">→</span></a></section>
-  <p class="landing-editorial-note">LinguaPath đang phát triển với trọng tâm TOEIC nền tảng. Học liệu tự biên soạn, một phần có AI hỗ trợ; chưa phải đề thi ETS chính thức. IELTS và luyện Writing/Speaking chưa có trong bản này.</p>
+  <section class="landing-final"><div><span class="eyebrow">KHỞI ĐẦU CỦA RIÊNG BẠN</span><h2>Một kế hoạch nhỏ.<br>Một nhịp học phù hợp.</h2><p>Đăng ký để lưu tiến độ và nhận hướng dẫn từng bước.</p></div><a class="button primary" href="{% url 'register' %}">Tạo lộ trình miễn phí <span aria-hidden="true">→</span></a></section>
+  <p class="landing-editorial-note">Bản thử nghiệm TOEIC nền tảng. Học liệu tự biên soạn, một phần có AI hỗ trợ; chưa phải đề ETS chính thức hoặc đánh giá CEFR đã hiệu chuẩn. Chưa có IELTS, Writing/Speaking trong bản này.</p>
 </div>
+<script src="{% static 'js/welcome-demo.js' %}" defer></script>
 {% endblock %}

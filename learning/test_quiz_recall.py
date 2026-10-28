@@ -306,7 +306,7 @@ class TypedRecallQuizJourneyTests(TestCase):
         self.assertNotIn('email', terms)
         self.assertNotIn('piano', terms)
         self.assertIn('car', terms)
-        self.client.post(reverse('learning:quiz_abandon', args=[recall.pk]))
+        self.client.post(reverse('learning:quiz_abandon', args=[recall.pk]), {'confirm_abandon':'yes', 'revision': VocabularyQuizSession.objects.get(pk=recall.pk).draft_revision})
         meaning = self.start(mode='meaning', topic='Prompt audit', count='15')
         self.assertEqual({q['card_id'] for q in meaning.snapshot}, {card.pk for card in cards})
 
@@ -339,7 +339,7 @@ class TypedRecallQuizJourneyTests(TestCase):
         retry = VocabularyQuizSession.objects.get(user=self.user, status='in_progress')
         self.assertEqual((retry.mode, retry.question_count), ('recall', 4))
         self.assertNotIn(unsafe_id, {q['card_id'] for q in retry.snapshot})
-        self.client.post(reverse('learning:quiz_abandon', args=[retry.pk]))
+        self.client.post(reverse('learning:quiz_abandon', args=[retry.pk]), {'confirm_abandon':'yes', 'revision': VocabularyQuizSession.objects.get(pk=retry.pk).draft_revision})
         for question in parent.snapshot:
             question['meaning_vi'] = f"một cách gọi {question['term']}"
         parent.save(update_fields=['snapshot'])

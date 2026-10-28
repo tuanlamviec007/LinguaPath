@@ -1,12 +1,13 @@
 """Explicit, reauthenticated self-service privacy actions for learner accounts."""
 import json
 
+from django.apps import apps
 from django.contrib import messages
 from django.contrib.auth import get_user_model, logout
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ImproperlyConfigured
 from django.core.serializers.json import DjangoJSONEncoder
-from django.db import DatabaseError, transaction
+from django.db import DatabaseError, connection, transaction
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.utils import timezone
@@ -19,7 +20,6 @@ from config.auth_throttle import client_ip
 from planner.models import LearnerProfile, StudyTask
 from .auth_limits import AuthReservationConflict, reserve_auth_request
 from .gamification import get_learning_rewards
-from .locking import nonkey_row_lock
 from .models import (
     DueRecallObservation, AttemptAnswer, AttemptDraftAnswer, ErrorNotebookEntry, FlashcardReview,
     MistakeReviewAnswer, MistakeReviewItem, MistakeReviewSession, PracticeAttempt,
@@ -37,6 +37,23 @@ _QUESTION_FIELDS = ('id', 'order', 'prompt', 'passage', 'audio_url', 'audio_scri
 
 class ExportTooLarge(Exception):
     pass
+
+
+class SocialDataNotReady(Exception):
+    pass
+
+
+def _has_social_data(user):
+    # Social tables may remain after the optional allauth app is disabled.
+    # Inspect by fixed table name so a rollback cannot silently omit records.
+    with connection.cursor() as cursor:
+        tables = set(connection.introspection.table_names(cursor))
+        for table in ('socialaccount_socialaccount', 'account_emailaddress'):
+            if table in tables:
+                cursor.execute(f'SELECT 1 FROM {connection.ops.quote_name(table)} WHERE user_id = %s LIMIT 1', [user.pk])
+                if cursor.fetchone() is not None:
+                    return True
+    return False
 
 
 def _pick(value, fields):
@@ -84,9 +101,12 @@ def _mistake_result(value):
 
 
 def _tutor_result(value):
-    result = _pick(value, ('answer', 'sources', 'mode', 'provider', 'clarification_prompts', 'retrieval_mode'))
+    result = _pick(value, ('answer', 'mode', 'provider', 'retrieval_mode', 'chat_thread', 'tool', 'chat_intent', 'chat_ai_choice'))
     if not isinstance(value, dict):
         return result
+    for key in ('sources', 'clarification_prompts'):
+        values = value.get(key)
+        result[key] = [item for item in values if isinstance(item, str)] if isinstance(values, list) else []
     result['generation'] = _pick(value.get('generation'), (
         'provider', 'model', 'prompt_version', 'context_version', 'generated_at',
         'bridge_prompt_version', 'requested_model', 'attempted_provider', 'attempted_model'))
@@ -140,7 +160,7 @@ def _export_sections(user):
     yield 'profile', _rows(LearnerProfile, owner, ('id', 'exam_goal', 'target_score', 'current_cefr', 'target_cefr',
         'daily_minutes', 'target_date', 'timezone', 'onboarding_complete', 'created_at', 'updated_at'))
     yield 'study_tasks', _rows(StudyTask, owner, ('id', 'content_id', 'cefr_level', 'scheduled_for', 'estimated_minutes',
-        'status', 'reason', 'recommendation_score', 'recommendation_version', 'created_at', 'completed_at'))
+        'status', 'vocabulary_goal', 'reason', 'recommendation_score', 'recommendation_version', 'created_at', 'completed_at'))
     attempts = _rows(PracticeAttempt, owner, ('id', 'content_id', 'status', 'started_at', 'submitted_at', 'correct_count',
         'question_count', 'question_ids', 'last_saved_at', 'draft_revision', 'result_snapshot'))
     def practice_rows():
@@ -210,6 +230,8 @@ def _export_sections(user):
 
 def personal_data_response(user):
     """Build bounded JSON without silently omitting records or persisting a file."""
+    if _has_social_data(user):
+        raise SocialDataNotReady
     chunks, size = [], 0
     def append(value):
         nonlocal size
@@ -249,6 +271,7 @@ def _limited(message, status, retry_after):
 def _page(request, error='', status=200):
     return render(request, 'learning/privacy.html', {
         'privacy_error': error, 'privileged_account': request.user.is_staff or request.user.is_superuser,
+        'can_confirm_password': request.user.has_usable_password(),
         'export_size_mb': MAX_EXPORT_BYTES // (1024 * 1024),
     }, status=status)
 
@@ -276,7 +299,9 @@ def privacy_center(request):
     password = request.POST.get('password', '')
     try:
         with transaction.atomic():
-            user = nonkey_row_lock(get_user_model().objects.all()).get(pk=request.user.pk)
+            # Full row lock blocks concurrent FK attachments until the export or
+            # deletion commits; NO KEY UPDATE would allow those inserts.
+            user = get_user_model().objects.select_for_update().get(pk=request.user.pk)
             if action == 'delete' and (user.is_staff or user.is_superuser):
                 return _page(request, 'Tài khoản có quyền quản trị cần được xử lý qua quy trình quản trị riêng.', 403)
             if not user.is_active or not password or len(password) > 1024 or not user.check_password(password):
@@ -285,10 +310,14 @@ def privacy_center(request):
                 return personal_data_response(user)
             if request.POST.get('confirm_delete') != 'XOA' or request.POST.get('confirm_understood') != 'yes':
                 return _page(request, 'Hãy nhập đúng XOA và đánh dấu ô xác nhận trước khi xóa tài khoản.', 400)
+            if not apps.is_installed('allauth.socialaccount') and _has_social_data(user):
+                raise SocialDataNotReady
             user.delete()
     except get_user_model().DoesNotExist:
         logout(request)
         return redirect('login')
+    except SocialDataNotReady:
+        return _page(request, 'Tài khoản có dữ liệu liên kết đăng nhập hoặc email do dịch vụ xác thực quản lý. Chức năng xử lý đầy đủ dữ liệu này chưa sẵn sàng; yêu cầu chưa được thực hiện.', 409)
     except ExportTooLarge:
         return _page(request, 'Dữ liệu vượt giới hạn tải trực tiếp. Chưa tạo bản xuất; hãy liên hệ quản trị để xuất đầy đủ qua quy trình đã xác thực.', 413)
     except DatabaseError:

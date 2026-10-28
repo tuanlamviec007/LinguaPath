@@ -189,7 +189,7 @@ class LearningEvidenceTests(TestCase):
 
 from concurrent.futures import ThreadPoolExecutor
 from threading import Barrier
-from django.db import close_old_connections
+from django.db import close_old_connections, connections
 from django.test import RequestFactory, TransactionTestCase, skipUnlessDBFeature
 from .practice_sessions import DraftConflictError, save_draft
 
@@ -215,7 +215,7 @@ class LearningWriterConcurrencyTests(TransactionTestCase):
                 barrier.wait(timeout=5)
                 return action(user)
             finally:
-                close_old_connections()
+                connections.close_all()
         with ThreadPoolExecutor(max_workers=2) as pool:
             futures = [pool.submit(run, action) for action in (first, second)]
             return [future.result(timeout=15) for future in futures]

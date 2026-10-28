@@ -8,22 +8,26 @@
   <p class="learner-level-note">Hồ sơ hiện tại: <strong>{{ profile.current_cefr }}</strong> · mục tiêu: <strong>{{ profile.target_cefr }}</strong></p>
 </section>
 <p class="content-review-note" role="note">Một phần học liệu có thể được AI hỗ trợ tạo; nội dung dạng này chỉ để tham khảo và chưa được giáo viên duyệt.</p>
-{% if ready %}
+{% if confirm_restart %}<section class="panel"><h2>Bắt đầu lại bài xếp mức?</h2><p>Bộ câu hỏi và lựa chọn đã lưu của lượt hiện tại sẽ được thay bằng một lượt mới.</p><a class="button primary" href="{% url 'learning:placement_test' %}">Giữ lượt hiện tại</a><form method="post">{% csrf_token %}<input type="hidden" name="placement_token" value="{{ placement_token }}"><button class="button secondary" name="action" value="confirm_restart">Xác nhận bắt đầu lại</button></form></section>
+{% elif ready %}
 <form method="post" class="placement-form">
-  {% csrf_token %}
+  {% csrf_token %}<input type="hidden" name="placement_token" value="{{ placement_token }}">
+  <p class="content-review-note">Bộ câu hỏi được giữ khi tải lại. Chọn “Lưu nháp” trước khi rời trang để giữ các lựa chọn đang làm.</p>
   {% for question in questions %}
   <fieldset class="panel placement-question">
     <legend><span class="eyebrow">CÂU {{ forloop.counter }}</span><strong>{{ question.term }}</strong></legend>
     <p>Chọn nghĩa phù hợp nhất:</p>
     <div class="placement-options">
       {% for option in question.options %}
-      <label class="placement-option"><input type="radio" name="q_{{ question.index }}" value="{{ option.label }}" required><span><b>{{ option.label }}.</b> {{ option.meaning }}</span></label>
+      <label class="placement-option"><input type="radio" name="q_{{ question.index }}" value="{{ option.label }}"{% if option.label == question.selected %} checked{% endif %} required><span><b>{{ option.label }}.</b> {{ option.meaning }}</span></label>
       {% endfor %}
     </div>
   </fieldset>
   {% endfor %}
+  <button class="button secondary" type="submit" name="action" value="save_draft" formnovalidate>Lưu nháp</button>
   <button class="button primary" type="submit">Nộp bài và xem kết quả</button>
 </form>
+<form method="post">{% csrf_token %}<input type="hidden" name="placement_token" value="{{ placement_token }}"><button class="button secondary" type="submit" name="action" value="restart">Bắt đầu lại bài xếp mức…</button></form>
 {% else %}
 <section class="panel empty-state">
   <h2>Chưa đủ học liệu cho bài xếp mức</h2>

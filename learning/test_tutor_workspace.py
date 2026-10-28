@@ -3,7 +3,7 @@ from unittest.mock import patch, Mock
 from urllib.parse import parse_qs, urlsplit
 
 from django.contrib.auth import get_user_model
-from django.test import TestCase
+from django.test import TestCase, override_settings
 from django.urls import reverse
 from django.utils import timezone
 
@@ -71,6 +71,7 @@ class TutorWorkspaceTests(TestCase):
         client.assert_not_called()
         self.assertFalse(TutorUsageBudget.objects.exists())
 
+    @override_settings(AI_TUTOR_ENABLED=True)
     def test_llm_sources_match_context_and_fallback_only_lists_displayed_evidence(self):
         second = Flashcard.objects.create(content=self.content, term='project', meaning_vi='dự án')
         client = Mock()
@@ -100,6 +101,7 @@ class TutorWorkspaceTests(TestCase):
         client.assert_not_called()
         self.assertFalse(TutorUsageBudget.objects.exists())
 
+    @override_settings(AI_TUTOR_ENABLED=True)
     def test_only_explicit_ai_form_choice_can_reserve_call(self):
         client = Mock()
         client.responses.create.return_value.output_text = 'A referenced explanation.'
@@ -115,6 +117,7 @@ class TutorWorkspaceTests(TestCase):
         self.assertEqual(TutorUsageBudget.objects.get(user=self.user).day_count, 1)
         factory.assert_called_once()
 
+    @override_settings(AI_TUTOR_ENABLED=True)
     def test_ai_controls_only_available_when_service_enabled(self):
         with patch.dict('os.environ', {'OPENAI_API_KEY': ''}):
             page = self.client.get(reverse('tutor'))

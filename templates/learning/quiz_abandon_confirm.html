@@ -1,0 +1,7 @@
+{% extends 'learning/base.html' %}
+{% block title %}Xác nhận dừng quiz · LinguaPath{% endblock %}
+{% block content %}<section class="panel"><span class="eyebrow">BẢN NHÁP CỦA BẠN</span><h1>Dừng lượt quiz này?</h1>
+{% if changed %}<p class="message error" role="alert">Bản nháp vừa thay đổi ở tab khác. Hãy kiểm tra lại trước khi xác nhận.</p>{% endif %}
+<p>Đã lưu {{ quiz.saved_count }}/{{ quiz.question_count }} câu. Sau khi dừng, bạn không thể tiếp tục lượt này và lượt chưa nộp không được chấm hoặc cộng XP.</p>
+<a class="button primary" href="{% url 'learning:quiz_take' quiz.pk %}">Giữ bài và tiếp tục</a>
+<form method="post" action="{% url 'learning:quiz_abandon' quiz.pk %}">{% csrf_token %}<input type="hidden" name="confirm_abandon" value="yes"><input type="hidden" name="revision" value="{{ quiz.draft_revision }}"><button class="button secondary" type="submit">Xác nhận dừng lượt này</button></form></section>{% endblock %}

@@ -65,6 +65,8 @@ jobs:
       - name: Rehearse migrations on the disposable CI database
         run: |
           python manage.py migrate --noinput
+          python manage.py bootstrap_learning_content --if-empty
+          python manage.py bootstrap_learning_content --if-empty
           python manage.py check_schema
           python manage.py check_weak_word_outcomes
       - name: Production settings and static assets
@@ -82,7 +84,10 @@ jobs:
         run: |
           npm ci --no-audit --no-fund
           npx wrangler deploy --dry-run --containers-rollout=none --outdir "$RUNNER_TEMP/worker-build"
+          npx wrangler deploy --config wrangler.rag.jsonc --dry-run --outdir "$RUNNER_TEMP/rag-worker-build"
       - name: Build production image without deployment
         run: docker build --tag "linguapath-ci:$GITHUB_SHA" .
       - name: Container runtime, CSRF and session persistence after restart
         run: python scripts/smoke-production.py --image "linguapath-ci:$GITHUB_SHA"
+      - name: Rehearse PostgreSQL backup and restore on disposable CI data
+        run: python scripts/rehearse-restore.py

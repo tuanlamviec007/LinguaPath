@@ -15,7 +15,7 @@ def bridge_configuration():
     endpoint = os.environ.get('CLOUDFLARE_AI_ENDPOINT', '').strip()
     secret = os.environ.get('AI_BRIDGE_SECRET', '').strip()
     parts = urlsplit(endpoint)
-    allowed_hosts = set(settings.ALLOWED_HOSTS) - {'*'}
+    allowed_hosts = (set(settings.ALLOWED_HOSTS) | set(getattr(settings, 'CLOUDFLARE_AI_ALLOWED_HOSTS', []))) - {'*'}
     valid = (
         parts.scheme == 'https' and parts.hostname in allowed_hosts
         and parts.path == '/internal/tutor/infer' and parts.port in (None, 443)
@@ -42,19 +42,49 @@ class NoRedirect(HTTPRedirectHandler):
         return None
 
 
-def generate_cloudflare_answer(query, context, *, task='explain', include_metadata=False):
+def cloudflare_rag_request(operation, payload, *, index=False):
+    if operation not in ('infer', 'search', 'index') or index != (operation == 'index'):
+        raise ValueError('Invalid bridge operation')
+    endpoint, secret = bridge_configuration()
+    if index:
+        secret = os.environ.get('AI_INDEX_SECRET', '').strip()
+    if not endpoint or not 32 <= len(secret) <= 256:
+        raise ValueError('Workers AI bridge is not configured')
+    endpoint = endpoint.removesuffix('/internal/tutor/infer') + '/internal/tutor/' + operation
+    encoded = json.dumps(payload, ensure_ascii=False).encode('utf-8')
+    if len(encoded) > 24576:
+        raise ValueError('Bridge request too large')
+    request = Request(endpoint, data=encoded, method='POST', headers={
+        'Authorization': f'Bearer {secret}', 'Content-Type': 'application/json', 'Accept': 'application/json',
+        'User-Agent': 'LinguaPath-Tutor-Service/1.0',
+    })
+    with build_opener(NoRedirect()).open(request, timeout=25) as response:
+        raw = response.read(32769)
+    if len(raw) > 32768:
+        raise ValueError('Workers AI response is too large')
+    result = json.loads(raw)
+    if not isinstance(result, dict):
+        raise ValueError('Invalid bridge response')
+    return result
+
+
+def generate_cloudflare_answer(query, context, *, task='explain', include_metadata=False, history=None):
     endpoint, secret = bridge_configuration()
     if not endpoint:
         raise ValueError('Workers AI bridge is not configured')
     payload = {'query': query[:500], 'context': context[:5400]}
+    if history:
+        payload['history'] = [{'role': m['role'], 'content': m['content'][:1000]} for m in history[-6:]]
+        while payload['history'] and len(json.dumps(payload, ensure_ascii=False).encode('utf-8')) > 24576:
+            payload['history'] = payload['history'][2:]
     if task != 'explain':
-        if task != 'draft_part5':
+        if task not in ('draft_part5', 'chat'):
             raise ValueError('Unknown AI task')
         payload['task'] = task
     payload = json.dumps(payload, ensure_ascii=False).encode('utf-8')
     request = Request(endpoint, data=payload, method='POST', headers={
         'Authorization': f'Bearer {secret}', 'Content-Type': 'application/json',
-        'Accept': 'application/json',
+        'Accept': 'application/json', 'User-Agent': 'LinguaPath-Tutor-Service/1.0',
     })
     with build_opener(NoRedirect()).open(request, timeout=45 if task == 'draft_part5' else 25) as response:
         raw = response.read(32769)

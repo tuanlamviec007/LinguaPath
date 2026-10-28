@@ -262,13 +262,13 @@ class WeakWordsJourneyTests(TestCase):
 
     def test_empty_or_filtered_weak_pool_never_falls_back_and_tampering_rejected(self):
         response = self.client.post(reverse('learning:quiz_start'), {'source': 'weak', 'count': '5'})
-        self.assertRedirects(response, reverse('learning:quiz_hub') + '?source=weak')
+        self.assertRedirects(response, reverse('learning:quiz_hub') + '?source=weak&mode=meaning&level=&topic=&count=5')
         self.assertFalse(VocabularyQuizSession.objects.exists())
         self.completed()
         response = self.client.post(reverse('learning:quiz_start'), {'source': 'weak', 'count': '5', 'level': 'C2'})
         self.assertEqual(response.status_code, 400)
         response = self.client.post(reverse('learning:quiz_start'), {'source': 'weak', 'count': '5', 'level': 'B2'})
-        self.assertRedirects(response, reverse('learning:quiz_hub') + '?source=weak')
+        self.assertRedirects(response, reverse('learning:quiz_hub') + '?source=weak&mode=meaning&level=B2&topic=&count=5')
         self.assertFalse(VocabularyQuizSession.objects.filter(status='in_progress').exists())
         for source in (['weak', 'all'], 'someone-else'):
             self.assertEqual(self.client.post(reverse('learning:quiz_start'), {'source': source, 'count': '5'}).status_code, 400)

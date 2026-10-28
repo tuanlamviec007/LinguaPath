@@ -2,6 +2,7 @@ from datetime import timedelta
 import json
 import hashlib
 import random
+import secrets
 
 from django.contrib import messages
 from django.contrib.auth import login
@@ -22,7 +23,7 @@ from django.views.decorators.http import require_GET, require_POST
 from django.views.decorators.cache import never_cache
 
 from planner.models import LearnerProfile, StudyTask
-from planner.services import generate_daily_plan, replan_daily_plan
+from planner.services import generate_daily_plan, replan_daily_plan, ensure_vocabulary_goal, vocabulary_reviews_today, attach_vocabulary_progress
 from .ai import answer_description_candidate, answer_tutor_question
 from .ai_provider import tutor_ai_available
 from .tutor_knowledge import KNOWLEDGE
@@ -43,7 +44,22 @@ from .practice_sessions import DraftConflictError, DraftValidationError, Practic
 def home(request):
     if request.user.is_authenticated:
         return redirect('dashboard')
-    return render(request, 'learning/home.html')
+    # A GET-only sample works without JavaScript and never records a grade/XP.
+    answer = request.GET.get('demo_answer', '')
+    answer = answer if answer in {'A', 'B', 'C'} else ''
+    return render(request, 'learning/home.html', {'demo_answer': answer,
+        'demo_correct': answer == 'B'})
+
+
+@require_GET
+def getting_started(request):
+    starter = None
+    if request.user.is_authenticated:
+        profile = LearnerProfile.objects.filter(user=request.user).first()
+        if profile:
+            from .getting_started import starter_progress
+            starter = starter_progress(request.user, profile)
+    return render(request, 'learning/getting_started.html', {'starter': starter})
 
 
 def register(request):
@@ -54,7 +70,7 @@ def register(request):
         with transaction.atomic():
             user = form.save()
             LearnerProfile.objects.create(user=user)
-        login(request, user)
+        login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         messages.success(request, 'Tài khoản đã sẵn sàng. Hãy bắt đầu với mục tiêu học của bạn.')
         return redirect('learning_goal')
     return render(request, 'registration/register.html', {'form': form})
@@ -67,7 +83,7 @@ def dashboard(request):
     if not profile.onboarding_complete:
         return redirect('learning_goal')
     today = timezone.localdate()
-    tasks = list(generate_daily_plan(request.user, profile, today))
+    tasks = attach_vocabulary_progress(list(generate_daily_plan(request.user, profile, today)), request.user, today)
     completed_task_count = sum(task.status == 'done' for task in tasks)
     task_progress_percent = round(100 * completed_task_count / len(tasks)) if tasks else 0
     next_task = next((task for task in tasks if task.status in {'todo', 'in_progress'}), None)
@@ -76,30 +92,40 @@ def dashboard(request):
         user=request.user, status='in_progress', content__exam_type=profile.exam_goal,
         content__is_published=True, content__review_status__in=LEARNER_REVIEW_STATUSES,
     ).select_related('content').annotate(saved_count=Count('draft_answers')).order_by('-started_at', '-id')[:3]
-    pending_states = UserFlashcardState.objects.filter(user=request.user, due_at__gt=timezone.now()).values_list('flashcard_id', flat=True)
-    due_cards = Flashcard.objects.learner_visible(profile.exam_goal).exclude(id__in=pending_states).count()
+    resume_attempts, stale_attempt_count = _valid_resume_attempts(list(resume_attempts))
+    visible_vocab = Flashcard.objects.learner_visible(profile.exam_goal)
+    due_cards = visible_vocab.filter(user_states__user=request.user, user_states__due_at__lte=timezone.now(), user_states__reviewed_at__lte=timezone.now()).count()
+    new_cards = visible_vocab.exclude(user_states__user=request.user).count()
     new_error_count = _notebook_entries(request.user, profile.exam_goal).filter(reviewed_at__isnull=True).count()
     weak_summary = weak_word_summary(request.user, profile.exam_goal)
+    from .getting_started import starter_progress
+    starter = starter_progress(request.user, profile)
+    active_quiz = active_quiz_for_user(request.user, profile.exam_goal)
+    from .daily_focus import daily_focus
+    focus = daily_focus(active_quiz, list(resume_attempts), next_task, tasks) if starter['complete'] else None
     return render(request, 'learning/dashboard.html', {
         'profile': profile, 'tasks': tasks, 'recent_attempts': recent_attempts,
-        'due_cards': due_cards, 'today': today,
+        'due_cards': due_cards, 'new_cards': new_cards, 'stale_attempt_count': stale_attempt_count, 'today': today,
         'current_cefr': profile.current_cefr,
         'target_cefr': profile.target_cefr,
         'completed_task_count': completed_task_count,
         'task_progress_percent': task_progress_percent,
         'new_error_count': new_error_count,
         'next_task': next_task, 'resume_attempts': resume_attempts,
-        'active_quiz': active_quiz_for_user(request.user, profile.exam_goal),
+        'active_quiz': active_quiz, 'daily_focus': focus,
         'activity': build_activity_summary(request.user, profile.exam_goal),
         'rewards': get_learning_rewards(request.user),
         'saved_word_count': visible_saved_words(request.user).count(),
         'weak_word_count': weak_summary['count'], 'weak_words_ready': weak_summary.get('ready', True),
+        'starter': starter,
+        'show_dashboard_details': starter['complete'] or request.GET.get('view') == 'all',
     })
 
 
 @login_required
 def learning_goal(request):
     profile, _ = LearnerProfile.objects.get_or_create(user=request.user)
+    first_setup = not profile.onboarding_complete
     form = LearningGoalForm(request.POST or None, instance=profile)
     if request.method == 'POST' and form.is_valid():
         with transaction.atomic():
@@ -108,7 +134,10 @@ def learning_goal(request):
             profile.onboarding_complete = True
             profile.save(update_fields=['onboarding_complete', 'updated_at'])
             replan_daily_plan(request.user, profile, changed_fields=form.changed_data)
-        messages.success(request, 'Đã lưu mục tiêu. Các nhiệm vụ đã hoàn thành hôm nay vẫn được giữ lại; kế hoạch mới sẽ tính phần thời gian còn lại.')
+        if first_setup:
+            messages.success(request, 'Kế hoạch đầu tiên đã sẵn sàng. Bắt đầu với một thẻ từ nhé!')
+        else:
+            messages.success(request, 'Đã lưu mục tiêu. Các nhiệm vụ đã hoàn thành hôm nay vẫn được giữ lại; kế hoạch mới sẽ tính phần thời gian còn lại.')
         return redirect('dashboard')
     return render(request, 'learning/learning_goal.html', {'form': form, 'profile': profile})
 
@@ -219,6 +248,16 @@ def _placement_sources_current(questions, exam):
 def placement_test(request):
     """Offer a short vocabulary placement estimate from reviewed lesson content."""
     profile, _ = LearnerProfile.objects.get_or_create(user=request.user)
+    if request.method == 'POST' and request.POST.get('action') in ('restart', 'confirm_restart'):
+        if request.POST.get('placement_token') != request.session.get('placement_token') or not request.session.get('placement_token'):
+            messages.warning(request, 'Bài xếp mức đã thay đổi ở tab khác. Hãy mở lại lượt hiện tại.')
+            return redirect('learning:placement_test')
+        if request.POST.get('action') == 'restart':
+            return render(request, 'learning/placement.html', {'profile': profile, 'confirm_restart': True,
+                          'placement_token': request.session['placement_token']})
+        for key in ('placement_questions', 'placement_rendered', 'placement_answers', 'placement_token'):
+            request.session.pop(key, None)
+        return redirect('learning:placement_test')
     levels = [value for value, _ in CEFR_LEVELS]
     cards_by_level = {}
     seen_terms = set()
@@ -244,9 +283,18 @@ def placement_test(request):
         questions = request.session.get('placement_questions')
         with transaction.atomic():
             nonkey_row_lock(get_user_model().objects.all()).get(pk=request.user.pk)
+            if not request.session.get('placement_token') or request.POST.get('placement_token') != request.session['placement_token']:
+                messages.error(request, 'Bài xếp mức đã thay đổi ở tab khác. Hãy mở lại lượt hiện tại.')
+                return redirect('learning:placement_test')
             if not _placement_sources_current(questions, profile.exam_goal):
                 request.session.pop('placement_questions', None)
                 messages.error(request, 'Bài kiểm tra đã hết hiệu lực hoặc học liệu đã thay đổi. Hãy bắt đầu lại.')
+                return redirect('learning:placement_test')
+            request.session['placement_answers'] = {str(index): request.POST.get(f'q_{index}')
+                for index in range(len(questions)) if len(request.POST.getlist(f'q_{index}')) == 1
+                and request.POST.get(f'q_{index}') in {'A', 'B', 'C', 'D'}}
+            if request.POST.get('action') == 'save_draft':
+                messages.success(request, 'Đã lưu lựa chọn của bài xếp mức. Bạn có thể tải lại hoặc quay lại sau.')
                 return redirect('learning:placement_test')
             if any(len(request.POST.getlist(f'q_{index}')) != 1 or request.POST.get(f'q_{index}') not in {'A', 'B', 'C', 'D'} for index in range(len(questions))):
                 messages.error(request, 'Hãy trả lời đủ 15 câu trước khi nộp bài.')
@@ -263,7 +311,8 @@ def placement_test(request):
                     break
             request.session['placement_estimate'] = estimate
             request.session['placement_scores'] = scores
-            request.session.pop('placement_questions', None)
+            for key in ('placement_questions', 'placement_rendered', 'placement_answers', 'placement_token'):
+                request.session.pop(key, None)
         return redirect('learning:placement_result')
     if request.method == 'POST':
         request.session.pop('placement_questions', None)
@@ -271,24 +320,39 @@ def placement_test(request):
         return redirect('learning:placement_test')
 
     if request.method == 'GET':
-        all_cards = [card for level_cards in cards_by_level.values() for card in level_cards]
-        questions, rendered = [], []
-        for level in levels:
-            for card in random.sample(cards_by_level[level], 3) if ready else []:
-                decoys = list({item.meaning_vi: item for item in all_cards if item.id != card.id and item.meaning_vi != card.meaning_vi}.values())
-                choices = random.sample(decoys, 3) + [card]
-                random.shuffle(choices)
-                labels = ['A', 'B', 'C', 'D']
-                option_data = [{'label': label, 'meaning': choice.meaning_vi} for label, choice in zip(labels, choices)]
-                correct = next(label for label, choice in zip(labels, choices) if choice.id == card.id)
-                questions.append({'level': level, 'correct': correct, 'target_id': card.pk,
-                    'source_versions': [{'id': choice.pk, 'version': _placement_card_version(choice)} for choice in choices]})
-                rendered.append({'term': card.term, 'index': len(questions) - 1, 'options': option_data})
-        if ready:
-            request.session['placement_questions'] = questions
+        with transaction.atomic():
+            nonkey_row_lock(get_user_model().objects.all()).get(pk=request.user.pk)
+            cached = request.session.get('placement_rendered')
+            reusable = (ready and isinstance(cached, list) and len(cached) == 15
+                        and request.session.get('placement_token')
+                        and _placement_sources_current(request.session.get('placement_questions'), profile.exam_goal))
+        if reusable:
+            rendered = cached
+        else:
+            all_cards = [card for level_cards in cards_by_level.values() for card in level_cards]
+            questions, rendered = [], []
+            for level in levels:
+                for card in random.sample(cards_by_level[level], 3) if ready else []:
+                    decoys = list({item.meaning_vi: item for item in all_cards if item.id != card.id and item.meaning_vi != card.meaning_vi}.values())
+                    choices = random.sample(decoys, 3) + [card]
+                    random.shuffle(choices)
+                    labels = ['A', 'B', 'C', 'D']
+                    option_data = [{'label': label, 'meaning': choice.meaning_vi} for label, choice in zip(labels, choices)]
+                    correct = next(label for label, choice in zip(labels, choices) if choice.id == card.id)
+                    questions.append({'level': level, 'correct': correct, 'target_id': card.pk,
+                        'source_versions': [{'id': choice.pk, 'version': _placement_card_version(choice)} for choice in choices]})
+                    rendered.append({'term': card.term, 'index': len(questions) - 1, 'options': option_data})
+            if ready:
+                request.session['placement_questions'] = questions
+            if ready:
+                request.session['placement_rendered'] = rendered
+                request.session['placement_answers'] = {}
+                request.session['placement_token'] = secrets.token_urlsafe(18)
+        saved = request.session.get('placement_answers', {})
+        rendered = [{**question, 'selected': saved.get(str(question['index']), '')} for question in rendered]
     return render(request, 'learning/placement.html', {
         'profile': profile, 'questions': rendered if request.method == 'GET' else [],
-        'ready': ready, 'levels': levels,
+        'ready': ready, 'levels': levels, 'placement_token': request.session.get('placement_token', ''),
     })
 
 
@@ -469,8 +533,12 @@ def flashcards(request, content_id=None):
         level=requested_level if requested_level in valid_levels else '',
         topic=requested_topic, query=search_term,
     )
+    task = StudyTask.objects.filter(user=request.user, content_id=content_id, cefr_level=requested_level,
+        scheduled_for=timezone.localdate(), vocabulary_goal__gt=0).select_related('content').first() if content_id else None
+    if task:
+        attach_vocabulary_progress([task], request.user)
     return render(request, 'learning/flashcards.html', {
-        'cards': page, 'page_obj': page, 'card_count': cards.count(),
+        'cards': page, 'page_obj': page, 'card_count': cards.count(), 'vocabulary_task': task,
         'selected_level': requested_level if requested_level in valid_levels else '',
         'selected_topic': requested_topic, 'available_topics': available_topics,
         'search_term': search_term, 'show_all': show_all,
@@ -509,15 +577,14 @@ def review_flashcard(request, card_id):
             setattr(state, field, value)
         state.save(update_fields=list(scheduled))
         FlashcardReview.objects.create(user=request.user, flashcard=card, rating=rating, due_at=state.due_at)
-        pending_states = UserFlashcardState.objects.filter(user=request.user, due_at__gt=now).values_list('flashcard_id', flat=True)
-        still_due = Flashcard.objects.learner_visible(profile.exam_goal).filter(
-            content_id=card.content_id, cefr_level=card.cefr_level,
-        ).exclude(id__in=pending_states).exists()
-        if not still_due:
-            StudyTask.objects.filter(
-                user=request.user, content=card.content, cefr_level=card.cefr_level,
-                scheduled_for=timezone.localdate(), status__in=['todo', 'in_progress'],
-            ).update(status='done', completed_at=now)
+        tasks = StudyTask.objects.filter(user=request.user, content=card.content,
+            scheduled_for=timezone.localdate(), status__in=['todo', 'in_progress']).filter(
+            Q(cefr_level=card.cefr_level) | Q(cefr_level='')).select_related('content')
+        for task in tasks:
+            ensure_vocabulary_goal(task, profile.exam_goal)
+            if task.vocabulary_goal and vocabulary_reviews_today(request.user, task) >= task.vocabulary_goal:
+                task.status, task.completed_at = 'done', now
+                task.save(update_fields=['status', 'completed_at'])
     next_review = timezone.localtime(state.due_at).strftime('%H:%M %d/%m')
     messages.success(request, f'Đã lưu đánh giá “{card.term}”. Lịch ôn tiếp theo: {next_review}.')
     return redirect(destination)
@@ -587,7 +654,9 @@ def practice(request, content_id):
         StudyTask.objects.filter(user=request.user, content=content, scheduled_for=timezone.localdate(), status='todo').update(status='in_progress')
         return redirect('learning:take_attempt', attempt_id=attempt.id)
     active_attempt = PracticeAttempt.objects.filter(user=request.user, content=content, status='in_progress').annotate(draft_count=Count('draft_answers')).first()
-    return render(request, 'learning/practice_start.html', {'content': content, 'question_count': len(question_ids), 'active_attempt': active_attempt})
+    valid, changed = _valid_resume_attempts([active_attempt] if active_attempt else [])
+    active_attempt = valid[0] if valid else None
+    return render(request, 'learning/practice_start.html', {'content': content, 'question_count': len(question_ids), 'active_attempt': active_attempt, 'changed_attempt': bool(changed)})
 
 
 @login_required
@@ -634,6 +703,14 @@ def abandon_attempt(request, attempt_id):
     attempt.save(update_fields=['status'])
     messages.success(request, 'Đã dừng lượt làm và xóa bản nháp. Bạn có thể bắt đầu lại khi sẵn sàng.')
     return redirect('learning:practice_list')
+
+
+def _valid_resume_attempts(attempts):
+    by_content = {}
+    for question in Question.objects.filter(content_id__in={a.content_id for a in attempts}).prefetch_related('options').order_by('content_id', 'order', 'id'):
+        by_content.setdefault(question.content_id, []).append(question)
+    valid = [attempt for attempt in attempts if _attempt_content_available(attempt, by_content.get(attempt.content_id, []))]
+    return valid, len(attempts) - len(valid)
 
 
 def _attempt_content_available(attempt, questions):

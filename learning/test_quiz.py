@@ -1,4 +1,6 @@
 from datetime import timedelta
+from unittest.mock import patch
+from django.db import IntegrityError
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
@@ -24,6 +26,17 @@ class VocabularyQuizTests(TestCase):
 
     def answers(self, quiz):
         return {f'answer_{q["number"]}': q['correct_key'] for q in quiz.snapshot}
+
+    def test_empty_source_allows_retry_and_explains_server_validation(self):
+        page = self.client.get(reverse('learning:quiz_hub'), {'source': 'saved', 'mode': 'recall'})
+        self.assertEqual(page.context['available_count'], 0)
+        self.assertContains(page, 'trước bộ lọc')
+        self.assertNotContains(page, 'class="button primary lp-quiz-start" type="submit" disabled')
+        response = self.client.post(reverse('learning:quiz_start'),
+                                    {'source': 'saved', 'mode': 'recall', 'count': '5'}, follow=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Chưa đủ từ có gợi ý rõ')
+        self.assertFalse(VocabularyQuizSession.objects.filter(user=self.user).exists())
 
     def test_authentication_and_post_only_start(self):
         self.client.logout()
@@ -116,6 +129,97 @@ class VocabularyQuizTests(TestCase):
             self.assertEqual(self.client.post(reverse('learning:quiz_start'), data).status_code, 400)
         self.assertFalse(VocabularyQuizSession.objects.exists())
 
+    def test_replace_requires_confirmation_and_starts_selected_new_quiz(self):
+        old = self.start()
+        old.draft_answers = {'1': old.snapshot[0]['options'][0]['key']}
+        old.draft_revision = 1
+        old.save(update_fields=['draft_answers', 'draft_revision'])
+        params = {'replace_quiz': str(old.pk), 'count': '10', 'level': 'A2', 'topic': 'Business', 'mode': 'meaning'}
+        page = self.client.get(reverse('learning:quiz_hub'))
+        self.assertContains(page, 'Tạo quiz mới')
+        confirmation = self.client.post(reverse('learning:quiz_start'), params)
+        self.assertEqual(confirmation.status_code, 200)
+        self.assertContains(confirmation, 'Dừng bài đang làm?')
+        old.refresh_from_db()
+        self.assertEqual(old.status, 'in_progress')
+        response = self.client.post(reverse('learning:quiz_start'), params | {'confirm_replace': 'yes', 'replace_revision': '1'})
+        new = VocabularyQuizSession.objects.get(user=self.user, status='in_progress')
+        old.refresh_from_db()
+        self.assertEqual(old.status, 'abandoned')
+        self.assertEqual(old.draft_revision, 1)
+        self.assertNotEqual(new.pk, old.pk)
+        self.assertEqual((new.question_count, new.cefr_level, new.topic), (10, 'A2', 'Business'))
+        self.assertRedirects(response, reverse('learning:quiz_take', args=[new.pk]), fetch_redirect_response=False)
+        repeated = self.client.post(reverse('learning:quiz_start'), params | {'confirm_replace': 'yes', 'replace_revision': '1'})
+        self.assertRedirects(repeated, reverse('learning:quiz_hub'), fetch_redirect_response=False)
+        self.assertEqual(VocabularyQuizSession.objects.filter(user=self.user, status='in_progress').count(), 1)
+
+    def test_replace_keeps_old_quiz_when_selection_is_empty_or_draft_changed(self):
+        old = self.start()
+        params = {'replace_quiz': str(old.pk), 'confirm_replace': 'yes', 'replace_revision': '0', 'count': '5'}
+        self.client.post(reverse('learning:quiz_start'), params | {'topic': 'Missing topic'})
+        old.refresh_from_db()
+        self.assertEqual(old.status, 'in_progress')
+        old.draft_revision = 1
+        old.save(update_fields=['draft_revision'])
+        response = self.client.post(reverse('learning:quiz_start'), params)
+        self.assertRedirects(response, reverse('learning:quiz_hub'), fetch_redirect_response=False)
+        old.refresh_from_db()
+        self.assertEqual(old.status, 'in_progress')
+        self.assertEqual(VocabularyQuizSession.objects.filter(user=self.user).count(), 1)
+
+    def test_replace_preserves_old_quiz_if_prepared_source_changes(self):
+        from .quiz_due import lock_due_cards
+        old = self.start()
+        new_content = LearningContent.objects.create(
+            title='New selection', exam_type='TOEIC', content_type='vocabulary',
+            skill='vocabulary', is_published=True, review_status='language_checked')
+        cards = [Flashcard.objects.create(content=new_content, term=f'fresh{i}',
+                 meaning_vi=f'mới {i}', cefr_level='A2', topic='Fresh') for i in range(5)]
+        for change in ('withdraw', 'edit', 'hold'):
+            with self.subTest(change=change):
+                LearningContent.objects.filter(pk=new_content.pk).update(is_published=True)
+                Flashcard.objects.filter(pk=cards[0].pk).update(term='fresh0', is_available=True)
+
+                def change_before_lock(questions):
+                    if change == 'withdraw':
+                        LearningContent.objects.filter(pk=new_content.pk).update(is_published=False)
+                    elif change == 'edit':
+                        Flashcard.objects.filter(pk=cards[0].pk).update(term='revised')
+                    else:
+                        Flashcard.objects.filter(pk=cards[0].pk).update(is_available=False)
+                    return lock_due_cards(questions)
+
+                with patch('learning.quiz_views.lock_due_cards', side_effect=change_before_lock):
+                    response = self.client.post(reverse('learning:quiz_start'), {
+                        'replace_quiz': str(old.pk), 'confirm_replace': 'yes',
+                        'replace_revision': '0', 'count': '5', 'topic': 'Fresh',
+                    })
+                self.assertRedirects(response, reverse('learning:quiz_hub'), fetch_redirect_response=False)
+                old.refresh_from_db()
+                self.assertEqual(old.status, 'in_progress')
+                self.assertEqual(VocabularyQuizSession.objects.filter(user=self.user).count(), 1)
+
+    def test_replace_rolls_back_old_quiz_if_new_creation_fails(self):
+        old = self.start()
+        with patch('learning.quiz_views.VocabularyQuizSession.objects.create', side_effect=IntegrityError('synthetic')):
+            response = self.client.post(reverse('learning:quiz_start'), {
+                'replace_quiz': str(old.pk), 'confirm_replace': 'yes',
+                'replace_revision': '0', 'count': '5',
+            })
+        old.refresh_from_db()
+        self.assertEqual(old.status, 'in_progress')
+        self.assertRedirects(response, reverse('learning:quiz_take', args=[old.pk]), fetch_redirect_response=False)
+
+    def test_replace_cannot_target_another_users_quiz(self):
+        old = self.start()
+        self.client.force_login(self.other)
+        response = self.client.post(reverse('learning:quiz_start'), {'replace_quiz': str(old.pk), 'count': '5'})
+        self.assertRedirects(response, reverse('learning:quiz_hub'), fetch_redirect_response=False)
+        old.refresh_from_db()
+        self.assertEqual(old.status, 'in_progress')
+        self.assertFalse(VocabularyQuizSession.objects.filter(user=self.other).exists())
+
     def test_duplicate_start_resumes_existing_session(self):
         first = self.start()
         response = self.client.post(reverse('learning:quiz_start'), {'count': '15'})
@@ -130,7 +234,7 @@ class VocabularyQuizTests(TestCase):
     def test_fewer_than_four_distinct_meanings_prevents_quiz(self):
         Flashcard.objects.filter(content=self.content).update(meaning_vi='same meaning')
         response = self.client.post(reverse('learning:quiz_start'), {'count': '5'})
-        self.assertRedirects(response, reverse('learning:quiz_hub'), fetch_redirect_response=False)
+        self.assertRedirects(response, reverse('learning:quiz_hub')+'?source=all&mode=meaning&level=&topic=&count=5', fetch_redirect_response=False)
         self.assertFalse(VocabularyQuizSession.objects.exists())
 
     def test_unpublished_and_draft_cards_cannot_start_quiz(self):
@@ -198,7 +302,10 @@ class VocabularyQuizTests(TestCase):
         self.client.force_login(self.other)
         self.assertEqual(self.client.post(url).status_code, 404)
         self.client.force_login(self.user)
-        self.assertEqual(self.client.post(url).status_code, 302)
+        self.assertEqual(self.client.post(url).status_code, 200)
+        quiz.refresh_from_db()
+        self.assertEqual(quiz.status, 'in_progress')
+        self.assertEqual(self.client.post(url, {'confirm_abandon':'yes','revision':quiz.draft_revision}).status_code, 302)
         quiz.refresh_from_db()
         self.assertEqual(quiz.status, 'abandoned')
         self.assertFalse(VocabularyQuizDailyReward.objects.exists())
@@ -217,5 +324,5 @@ class VocabularyQuizTests(TestCase):
     def test_filter_with_fewer_than_five_valid_cards_creates_no_session(self):
         Flashcard.objects.filter(content=self.content).exclude(pk__in=[c.pk for c in self.cards[:4]]).delete()
         response = self.client.post(reverse('learning:quiz_start'), {'count': '5'})
-        self.assertRedirects(response, reverse('learning:quiz_hub'), fetch_redirect_response=False)
+        self.assertRedirects(response, reverse('learning:quiz_hub')+'?source=all&mode=meaning&level=&topic=&count=5', fetch_redirect_response=False)
         self.assertFalse(VocabularyQuizSession.objects.exists())

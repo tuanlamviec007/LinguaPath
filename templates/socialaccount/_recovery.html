@@ -1,0 +1,13 @@
+{% extends 'learning/base.html' %}
+{% load static %}
+{% block title %}{% block recovery_title %}Đăng nhập{% endblock %} · LinguaPath{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}">
+<section class="auth-card" aria-labelledby="recovery-heading">
+  <span class="eyebrow">TÀI KHOẢN LINGUAPATH</span>
+  <h1 id="recovery-heading">{% block recovery_heading %}{% endblock %}</h1>
+  <p>{% block recovery_message %}{% endblock %}</p>
+  <a class="button primary" href="{% url 'login' %}">Quay lại đăng nhập</a>
+  <p class="auth-foot"><a href="{% url 'home' %}">Về trang chủ</a></p>
+</section>
+{% endblock %}

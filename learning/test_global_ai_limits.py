@@ -5,7 +5,7 @@ from threading import Barrier
 from unittest.mock import patch
 
 from django.contrib.auth import get_user_model
-from django.db import close_old_connections
+from django.db import close_old_connections, connections
 from django.test import TestCase, TransactionTestCase, override_settings, skipUnlessDBFeature
 from django.utils import timezone
 
@@ -144,7 +144,7 @@ class GlobalTutorConcurrencyTests(TransactionTestCase):
                 barrier.wait(timeout=10)
                 return reserve_tutor_call(user, now)
             finally:
-                close_old_connections()
+                connections.close_all()
 
         with ThreadPoolExecutor(max_workers=4) as pool:
             results = list(pool.map(reserve, [user.pk for user in users]))

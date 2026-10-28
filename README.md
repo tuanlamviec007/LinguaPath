@@ -1,5 +1,15 @@
 # LinguaPath — website luyện TOEIC có lộ trình cá nhân
 
+**Website Django đang chạy:** https://linguapath-app.onrender.com/ — [Render Free + Neon Free](docs/DEPLOY_RENDER_NEON.md).
+Cấu hình gồm `render.yaml`, build có dependency hash và nhập học liệu một lần khi database trống.
+Startup chỉ kiểm tra release rồi phục vụ, không tự seed mỗi lần khởi động.
+Đã kiểm tra HTTPS, trang chủ, lật thẻ mẫu, trang đăng nhập/đăng ký và hai health endpoint.
+Xem [trạng thái nghiệm thu và giới hạn còn lại](docs/DEPLOY_RENDER_NEON_STATUS.md).
+
+**26/10/2026 — M14:** [tối ưu reader, tài nguyên khách và nạp SDK](docs/PERFORMANCE_M14.md): chỉ hydrate thẻ liên quan cho meaning, giữ toàn cue recall khi cần; khách giảm3 tài nguyên, OpenAI SDK nạp khi inference. CI869 Django +109 Node đạt. [Dự toán duy trì website](docs/HOSTING_COSTS_2026-10-26.md) nêu rõ Free, web7USD và ví dụ web+database luôn hoạt động.
+
+**26/10/2026 — M13:** [giao diện Daylight và bằng chứng PostgreSQL](docs/DAYLIGHT_AUDIT_M13.md): trắng–xanh dương sáng, thẻ pastel, viền ô nhập rõ; CI 866 Django + 109 Node đạt, đo read path 5.000 phiên tổng hợp. Theme đã live trên Render; tải đồng thời và nghiệm thu thiết bị/người duyệt vẫn mở.
+
 **26/10/2026 — M12:** thêm [tìm từ theo mô tả](docs/STABILITY_M12.md) trong Tutor: tối đa3 ứng viên theo từ ngữ nguồn, chọn từ trước khi giải thích, không dùng lượt AI và có nút chọn khi tắt JavaScript. Luồng mặc định M11 giữ nguyên; khả năng diễn đạt lại còn thấp (2/20 ca ứng viên trên regression cũ), chưa nghiệm thu semantic search. Không có migration mới sau0023.
 
 **26/10/2026 — M11:** cải thiện [truy xuất Tutor và đo theo nghĩa](docs/STABILITY_M11.md). Nhận yêu cầu tra rõ hơn, giảm trùng từ tình cờ, hỏi lại khi ngữ cảnh nghĩa yếu; thêm fixture/metric nghĩa với ghi báo cáo an toàn. Trên regression v2 đã biết:61/80 mục từ và16/16 ca âm, nhưng paraphrase chỉ1/20; chưa phải nghiệm thu độc lập. Không có migration mới sau0023.
@@ -140,7 +150,7 @@ Xem [báo cáo audit](docs/AUDIT_2026-10-19.md) để biết phạm vi, lỗi đ
 
 ## Cấu hình trước khi triển khai
 
-Đã bổ sung cấu hình Django production, Gunicorn, WhiteNoise, PostgreSQL qua `DATABASE_URL`, Dockerfile chạy non-root và Worker Cloudflare Containers. Xem [hướng dẫn triển khai Cloudflare](docs/DEPLOY_CLOUDFLARE.md) và `.env.production.example`. Production từ chối secret thiếu/ngắn và database khác PostgreSQL. SSL redirect/cookie Secure mặc định bật; HSTS mặc định một năm, mẫu triển khai đặt 0 trong giai đoạn xác minh HTTPS. Chưa có deployment hoặc URL production được xác nhận; cần hoàn tất xác thực tài khoản, PostgreSQL và kiểm thử hạ tầng thật.
+Đã bổ sung cấu hình Django production, Gunicorn, WhiteNoise, PostgreSQL qua `DATABASE_URL`, Dockerfile chạy non-root và Worker Cloudflare Containers. Xem [hướng dẫn triển khai Cloudflare](docs/DEPLOY_CLOUDFLARE.md) và `.env.production.example`. Production từ chối secret thiếu/ngắn và database khác PostgreSQL. SSL redirect/cookie Secure mặc định bật; HSTS mặc định một năm, mẫu triển khai đặt 0 trong giai đoạn xác minh HTTPS. Bản Django đã chạy trên Render + Neon; Cloudflare Containers chưa triển khai. Xem trạng thái nghiệm thu Render ở đầu tài liệu.
 
 ## Kiểm tra
 

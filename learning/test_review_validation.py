@@ -218,7 +218,9 @@ class ReviewValidationTests(TestCase):
             with CaptureQueriesContext(connection) as queries:
                 report = validate_review_packet(packet)
         self.assertEqual(len(queries), 4)
-        self.assertTrue(all(query['sql'].lstrip().upper().startswith('SELECT') for query in queries))
+        for query in queries:
+            # PostgreSQL iterator() declares a read-only server-side SELECT cursor.
+            self.assertRegex(query['sql'].lstrip().upper(), r'^(?:SELECT\b|DECLARE "[^"]+"(?: NO SCROLL| SCROLL)? CURSOR(?: WITH HOLD)? FOR SELECT\b)')
         self.assertEqual(before, LearningContent.objects.values().get(pk=self.content.pk))
         text = json.dumps(report)
         for private_text in ('SECRET SOURCE', 'SECRET OPTION', 'SECRET DISTRACTOR', 'Named reviewer', 'Relevant qualification', 'Reviewer notes'):
