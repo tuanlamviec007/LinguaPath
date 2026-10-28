@@ -49,7 +49,8 @@ document.addEventListener('click', async (event) => {
     if (front) front.inert = showBack;
     if (back) back.inert = !showBack;
     card.querySelectorAll('[data-flip]').forEach((control) => control.setAttribute('aria-expanded', String(showBack)));
-    (showBack ? back : front)?.querySelector('[data-flip]')?.focus();
+    const focusTarget = showBack ? (back?.querySelector('[data-flashcard-meaning]') || back?.querySelector('[data-flip]')) : front?.querySelector('[data-flip]');
+    focusTarget?.focus();
     return;
   }
 

@@ -12,13 +12,14 @@
     <p>Nhìn mặt trước, tự nhớ nghĩa rồi lật thẻ để kiểm tra. Nhớ tốt qua các lần ôn sẽ giãn lịch; “Chưa nhớ” hẹn bạn thử lại sau 10 phút.</p>
     <div class="learner-level-note">Lộ trình của bạn <strong>{{ profile.current_cefr }}</strong><span aria-hidden="true">→</span><strong>{{ profile.target_cefr }}</strong><span>CEFR trên thẻ chỉ mang tính tham khảo.</span></div>
   </div>
-  <aside class="deck-count" aria-label="{% if show_all %}Số thẻ theo bộ lọc trong thư viện{% else %}Số thẻ đang đến hạn{% endif %}">
+  <aside class="deck-count" aria-label="{% if show_all %}Số thẻ theo bộ lọc trong thư viện{% else %}Số từ mới hoặc đến lịch ôn{% endif %}">
     <span class="deck-count-icon" aria-hidden="true">↻</span>
-    <span class="deck-count-label">{% if show_all %}THẺ TRONG KHO{% else %}THẺ CẦN ÔN{% endif %}</span>
+    <span class="deck-count-label">{% if show_all %}THẺ TRONG KHO{% else %}THẺ CÓ THỂ HỌC{% endif %}</span>
     <strong>{{ card_count }}</strong>
-    <span>{% if show_all %}theo bộ lọc{% else %}đến hạn ôn{% endif %}</span>
+    <span>{% if show_all %}theo bộ lọc{% else %}từ mới hoặc đến lịch ôn{% endif %}</span>
   </aside>
 </section>
+{% if vocabulary_task %}<aside class="content-review-note" role="status"><strong>Nhiệm vụ hôm nay: {{ vocabulary_task.vocabulary_reviewed }}/{{ vocabulary_task.vocabulary_goal }} thẻ đã tự đánh giá.</strong> Bạn chỉ cần đánh giá {{ vocabulary_task.vocabulary_goal }} thẻ khác nhau trong bộ này, không cần học hết bộ. Mọi mức đánh giá đều tính vào hoạt động; đây không phải xác nhận đã nhớ từ. <a href="{% url 'dashboard' %}">Xem tiến độ hôm nay →</a></aside>{% endif %}
 <p class="content-review-note" role="note">Một phần học liệu có thể được AI hỗ trợ tạo; nội dung dạng này chỉ để tham khảo và chưa được giáo viên duyệt.</p>
 <aside class="discovery-strip discovery-strip--vocab" aria-label="Quiz từ vựng">
   <span class="discovery-mark" aria-hidden="true">✦</span>
@@ -29,8 +30,8 @@
 <section class="flash-tools" aria-label="Điều khiển bộ flashcard">
   <div class="flash-tools-copy"><span class="eyebrow">{% if show_all %}THƯ VIỆN TỪ VỰNG{% else %}BỘ THẺ HÔM NAY{% endif %}</span><span>{% if page_obj.has_other_pages %}Trang {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}{% else %}{{ cards|length }} thẻ trong trang{% endif %}</span></div>
   <nav class="flash-view-tabs" aria-label="Chế độ flashcard">
-    {% if show_all %}<a href="?{% if selected_level %}level={{ selected_level }}&amp;{% endif %}{% if selected_topic %}topic={{ selected_topic|urlencode }}&amp;{% endif %}{% if search_term %}q={{ search_term|urlencode }}{% endif %}" aria-label="Chỉ xem thẻ đến hạn">Thẻ đến hạn</a><a href="?all=1{% if selected_level %}&amp;level={{ selected_level }}{% endif %}{% if selected_topic %}&amp;topic={{ selected_topic|urlencode }}{% endif %}{% if search_term %}&amp;q={{ search_term|urlencode }}{% endif %}" aria-current="page">Toàn bộ từ vựng</a>
-    {% else %}<a href="?{% if selected_level %}level={{ selected_level }}&amp;{% endif %}{% if selected_topic %}topic={{ selected_topic|urlencode }}&amp;{% endif %}{% if search_term %}q={{ search_term|urlencode }}{% endif %}" aria-current="page">Thẻ đến hạn</a><a href="?all=1{% if selected_level %}&amp;level={{ selected_level }}{% endif %}{% if selected_topic %}&amp;topic={{ selected_topic|urlencode }}{% endif %}{% if search_term %}&amp;q={{ search_term|urlencode }}{% endif %}">Toàn bộ từ vựng</a>{% endif %}
+    {% if show_all %}<a href="?{% if selected_level %}level={{ selected_level }}&amp;{% endif %}{% if selected_topic %}topic={{ selected_topic|urlencode }}&amp;{% endif %}{% if search_term %}q={{ search_term|urlencode }}{% endif %}" aria-label="Xem từ mới và thẻ đến lịch ôn">Thẻ hôm nay</a><a href="?all=1{% if selected_level %}&amp;level={{ selected_level }}{% endif %}{% if selected_topic %}&amp;topic={{ selected_topic|urlencode }}{% endif %}{% if search_term %}&amp;q={{ search_term|urlencode }}{% endif %}" aria-current="page">Toàn bộ từ vựng</a>
+    {% else %}<a href="?{% if selected_level %}level={{ selected_level }}&amp;{% endif %}{% if selected_topic %}topic={{ selected_topic|urlencode }}&amp;{% endif %}{% if search_term %}q={{ search_term|urlencode }}{% endif %}" aria-current="page">Thẻ hôm nay</a><a href="?all=1{% if selected_level %}&amp;level={{ selected_level }}{% endif %}{% if selected_topic %}&amp;topic={{ selected_topic|urlencode }}{% endif %}{% if search_term %}&amp;q={{ search_term|urlencode }}{% endif %}">Toàn bộ từ vựng</a>{% endif %}
   </nav>
   <form method="get" class="level-filter" aria-label="Tìm và lọc flashcard">
     {% if show_all %}<input type="hidden" name="all" value="1">{% endif %}
@@ -78,7 +79,7 @@
           <section class="flash-face flash-back" id="answer-{{ card.id }}" aria-label="Mặt sau của thẻ {{ card.term }}" aria-hidden="true" inert>
             <div class="flash-back-content">
               <div class="flash-back-top"><span class="flash-back-label">NGHĨA CỦA TỪ</span><span class="cefr-badge">{{ card.cefr_level }}</span></div>
-              <h2 lang="vi">{{ card.meaning_vi }}</h2>
+              <h2 lang="vi" tabindex="-1" data-flashcard-meaning>{{ card.meaning_vi }}</h2>
               {% if card.example_en %}<p class="example-en" lang="en">“{{ card.example_en }}”</p>{% endif %}
               {% if card.example_vi %}<p class="example-vi" lang="vi">{{ card.example_vi }}</p>{% endif %}
               <div class="card-provenance"><span>{{ card.source_name|default:'Từ và ví dụ tự biên soạn' }}</span>{% if card.source_url %}<a href="{{ card.source_url }}" target="_blank" rel="noopener noreferrer">Nguồn ↗</a>{% endif %}<a href="https://dictionary.cambridge.org/search/english/direct/?q={{ card.term|urlencode }}" target="_blank" rel="noopener noreferrer" aria-label="Mở từ điển Cambridge để tra {{ card.term }}">Tra Cambridge ↗</a></div>

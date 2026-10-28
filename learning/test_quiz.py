@@ -234,7 +234,7 @@ class VocabularyQuizTests(TestCase):
     def test_fewer_than_four_distinct_meanings_prevents_quiz(self):
         Flashcard.objects.filter(content=self.content).update(meaning_vi='same meaning')
         response = self.client.post(reverse('learning:quiz_start'), {'count': '5'})
-        self.assertRedirects(response, reverse('learning:quiz_hub'), fetch_redirect_response=False)
+        self.assertRedirects(response, reverse('learning:quiz_hub')+'?source=all&mode=meaning&level=&topic=&count=5', fetch_redirect_response=False)
         self.assertFalse(VocabularyQuizSession.objects.exists())
 
     def test_unpublished_and_draft_cards_cannot_start_quiz(self):
@@ -302,7 +302,10 @@ class VocabularyQuizTests(TestCase):
         self.client.force_login(self.other)
         self.assertEqual(self.client.post(url).status_code, 404)
         self.client.force_login(self.user)
-        self.assertEqual(self.client.post(url).status_code, 302)
+        self.assertEqual(self.client.post(url).status_code, 200)
+        quiz.refresh_from_db()
+        self.assertEqual(quiz.status, 'in_progress')
+        self.assertEqual(self.client.post(url, {'confirm_abandon':'yes','revision':quiz.draft_revision}).status_code, 302)
         quiz.refresh_from_db()
         self.assertEqual(quiz.status, 'abandoned')
         self.assertFalse(VocabularyQuizDailyReward.objects.exists())
@@ -321,5 +324,5 @@ class VocabularyQuizTests(TestCase):
     def test_filter_with_fewer_than_five_valid_cards_creates_no_session(self):
         Flashcard.objects.filter(content=self.content).exclude(pk__in=[c.pk for c in self.cards[:4]]).delete()
         response = self.client.post(reverse('learning:quiz_start'), {'count': '5'})
-        self.assertRedirects(response, reverse('learning:quiz_hub'), fetch_redirect_response=False)
+        self.assertRedirects(response, reverse('learning:quiz_hub')+'?source=all&mode=meaning&level=&topic=&count=5', fetch_redirect_response=False)
         self.assertFalse(VocabularyQuizSession.objects.exists())

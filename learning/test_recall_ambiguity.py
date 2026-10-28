@@ -111,7 +111,7 @@ class RecallAmbiguityJourneyTests(TestCase):
         self.client.post(reverse('learning:quiz_start'), {'mode': 'recall', 'count': '15'})
         quiz = VocabularyQuizSession.objects.get(user=self.user, status='in_progress')
         self.assertEqual({q['card_id'] for q in quiz.snapshot}, {card.pk for card in self.safe})
-        self.client.post(reverse('learning:quiz_abandon', args=[quiz.pk]))
+        self.client.post(reverse('learning:quiz_abandon', args=[quiz.pk]), {'confirm_abandon':'yes', 'revision': VocabularyQuizSession.objects.get(pk=quiz.pk).draft_revision})
         meaning = self.client.get(reverse('learning:quiz_hub'), {'mode': 'meaning', 'count': 'bogus'})
         self.assertEqual((meaning.context['available_count'], meaning.context['selected_count']), (13, 10))
         self.client.post(reverse('learning:quiz_start'), {'mode': 'meaning', 'count': '15'})
@@ -127,7 +127,7 @@ class RecallAmbiguityJourneyTests(TestCase):
         self.client.post(reverse('learning:quiz_start'), {'mode': 'recall', 'source': 'saved', 'count': '15'})
         quiz = VocabularyQuizSession.objects.get(user=self.user, status='in_progress')
         self.assertNotIn(a.pk, {q['card_id'] for q in quiz.snapshot})
-        self.client.post(reverse('learning:quiz_abandon', args=[quiz.pk]))
+        self.client.post(reverse('learning:quiz_abandon', args=[quiz.pk]), {'confirm_abandon':'yes', 'revision': VocabularyQuizSession.objects.get(pk=quiz.pk).draft_revision})
         response = self.client.post(reverse('learning:quiz_start'),
             {'mode': 'recall', 'count': '5', 'level': 'A1', 'topic': 'Target'})
         self.assertEqual(response.status_code, 302)

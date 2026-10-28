@@ -160,7 +160,7 @@ def _export_sections(user):
     yield 'profile', _rows(LearnerProfile, owner, ('id', 'exam_goal', 'target_score', 'current_cefr', 'target_cefr',
         'daily_minutes', 'target_date', 'timezone', 'onboarding_complete', 'created_at', 'updated_at'))
     yield 'study_tasks', _rows(StudyTask, owner, ('id', 'content_id', 'cefr_level', 'scheduled_for', 'estimated_minutes',
-        'status', 'reason', 'recommendation_score', 'recommendation_version', 'created_at', 'completed_at'))
+        'status', 'vocabulary_goal', 'reason', 'recommendation_score', 'recommendation_version', 'created_at', 'completed_at'))
     attempts = _rows(PracticeAttempt, owner, ('id', 'content_id', 'status', 'started_at', 'submitted_at', 'correct_count',
         'question_count', 'question_ids', 'last_saved_at', 'draft_revision', 'result_snapshot'))
     def practice_rows():

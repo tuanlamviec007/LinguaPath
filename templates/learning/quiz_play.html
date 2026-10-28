@@ -16,8 +16,8 @@
     <input type="hidden" name="draft_revision" value="{{ quiz.draft_revision|default:0 }}" data-quiz-revision>
     <div class="lp-quiz-savebar" data-quiz-savebar hidden><span class="lp-quiz-save-status" data-quiz-save-status role="status" aria-live="polite" data-state="{% if quiz.last_saved_at %}saved{% else %}idle{% endif %}">{% if quiz.last_saved_at %}Đã lưu {{ quiz.saved_count }} câu · {{ quiz.last_saved_at|date:'H:i' }}{% else %}Câu trả lời sẽ tự động lưu khi bạn nhập hoặc chọn đáp án.{% endif %}</span><div><button class="lp-quiz-save-button" type="button" data-quiz-save>Lưu ngay</button><button class="lp-quiz-save-button lp-quiz-reload" type="button" data-quiz-reload hidden>Tải lại bản đã lưu</button></div></div>
     <noscript><p class="lp-quiz-noscript">Bạn vẫn có thể trả lời tất cả câu hỏi và nộp bài. Tự lưu và chuyển từng câu cần bật JavaScript.</p></noscript>
-    <div class="lp-quiz-progress-head"><span data-quiz-position>Bộ quiz · {{ quiz.question_count }} câu</span><span data-quiz-answered aria-live="polite">Chưa trả lời câu nào</span></div>
-    <div class="lp-quiz-progress-track" role="progressbar" aria-label="Số câu đã trả lời" aria-valuemin="0" aria-valuemax="{{ quiz.question_count }}" aria-valuenow="0" data-quiz-progress><span></span></div>
+    <div class="lp-quiz-progress-head"><span data-quiz-position>Bộ quiz · {{ quiz.question_count }} câu</span><span data-quiz-answered aria-live="polite">{% if answered_count %}{{ answered_count }}/{{ quiz.question_count }} câu đã chọn{% else %}Chưa trả lời câu nào{% endif %}</span></div>
+    <div class="lp-quiz-progress-track" role="progressbar" aria-label="Số câu đã trả lời" aria-valuemin="0" aria-valuemax="{{ quiz.question_count }}" aria-valuenow="{{ answered_count }}" data-quiz-progress><span style="width:{{ answered_percent }}%"></span></div>
     <nav class="lp-quiz-question-nav" aria-label="Chuyển câu hỏi" data-quiz-nav hidden>{% for question in questions %}<button type="button" class="lp-quiz-number" data-quiz-goto="{{ forloop.counter0 }}" aria-label="Đến câu {{ question.number }}">{{ question.number }}</button>{% endfor %}</nav>
     <div class="lp-quiz-question-stack">
       {% for question in questions %}
@@ -36,7 +36,7 @@
     <p class="lp-quiz-feedback" role="status" aria-live="polite" data-quiz-feedback></p>
     <div class="lp-quiz-controls"><button class="button secondary" type="button" data-quiz-prev hidden>← Câu trước</button><span class="lp-quiz-controls-note">Bạn có thể sửa câu trả lời trước khi nộp.</span><button class="button primary" type="button" data-quiz-next hidden>Câu tiếp <span aria-hidden="true">→</span></button><button class="button primary lp-quiz-submit" type="submit" data-quiz-submit{% if quiz_conflict %} disabled{% endif %}>Nộp bài & xem kết quả <span aria-hidden="true">✦</span></button></div>
   </form>
-  <p class="lp-quiz-footer-note">Không có giới hạn thời gian. Bản nháp không chấm điểm; hãy kiểm tra trạng thái lưu trước khi rời trang.</p>
+  <p class="lp-quiz-footer-note">Không đếm giờ từng câu. Lượt này có thể tiếp tục đến {{ quiz.expires_at|date:"H:i d/m/Y" }} (24 giờ từ lúc bắt đầu). Bản nháp không chấm điểm; hãy kiểm tra trạng thái lưu trước khi rời trang.</p>
 </div>
 <script src="{% static 'js/quiz.js' %}" defer></script>
 {% endblock %}

@@ -179,7 +179,7 @@ class QuizJourneyIntegrationTests(TestCase):
         retry = VocabularyQuizSession.objects.get(user=self.user, status='in_progress')
         self.assertEqual(retry.question_count, 1)
         self.assertEqual([q['card_id'] for q in retry.snapshot], [parent.snapshot[1]['card_id']])
-        self.client.post(reverse('learning:quiz_abandon', args=[retry.pk]))
+        self.client.post(reverse('learning:quiz_abandon', args=[retry.pk]), {'confirm_abandon':'yes', 'revision': VocabularyQuizSession.objects.get(pk=retry.pk).draft_revision})
 
         LearnerProfile.objects.filter(user=self.user).update(exam_goal='IELTS')
         before = VocabularyQuizSession.objects.filter(user=self.user).count()

@@ -36,7 +36,8 @@ class CardHoldLearnerViewsTests(TestCase):
         self.assertNotContains(page, 'heldword')
         self.assertNotIn('Held-only topic', page.context['available_topics'])
         dashboard = self.client.get(reverse('dashboard'))
-        self.assertEqual(dashboard.context['due_cards'], 1)
+        self.assertEqual(dashboard.context['due_cards'], 0)
+        self.assertEqual(dashboard.context['new_cards'], 1)
         tutor = self.client.get(reverse('tutor'))
         self.assertTrue(any('publicword' in prompt for prompt in tutor.context['suggested_prompts']))
         self.assertTrue(all('heldword' not in prompt for prompt in tutor.context['suggested_prompts']))
@@ -139,7 +140,7 @@ class CardHoldPlacementTests(TestCase):
         return deepcopy(self.client.session['placement_questions'])
 
     def post_answers(self,questions):
-        return self.client.post(self.url,{f'q_{index}':question['correct'] for index,question in enumerate(questions)})
+        return self.client.post(self.url,{'placement_token': self.client.session.get('placement_token',''), **{f'q_{index}':question['correct'] for index,question in enumerate(questions)}})
 
     def test_current_versioned_placement_still_scores_without_updating_profile(self):
         questions=self.prepare()

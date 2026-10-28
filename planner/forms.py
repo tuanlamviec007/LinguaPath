@@ -19,7 +19,12 @@ class LearningGoalForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['current_cefr'].help_text = 'Chọn mức gần nhất với khả năng hiện tại; có thể thay đổi sau.'
+        descriptions = {'A1': 'Mới bắt đầu', 'A2': 'Các tình huống quen thuộc', 'B1': 'Chủ đề thông dụng', 'B2': 'Nội dung đa dạng hơn', 'C1': 'Từ vựng nâng cao'}
+        for name in ('current_cefr', 'target_cefr'):
+            self.fields[name].choices = [(value, f'{value} · {descriptions[value]}') for value, _ in CEFR_LEVELS]
+        self.fields['daily_minutes'].widget.attrs.update(min=5, max=240)
+        self.fields['daily_minutes'].help_text = 'Chọn từ 5 đến 240 phút mỗi ngày; có thể điều chỉnh sau.'
+        self.fields['current_cefr'].help_text = 'Chưa chắc mình ở mức nào? Có thể bắt đầu với A1 rồi điều chỉnh sau. Đây là lựa chọn nội dung khởi đầu, không phải chứng nhận CEFR.'
         self.fields['target_cefr'].help_text = 'Mức mục tiêu dùng để giới hạn từ vựng được gợi ý; không phải quy đổi điểm TOEIC.'
         self.fields['target_score'].help_text = 'Mốc cá nhân để theo dõi; hiện chưa được dùng để suy ra trình độ hoặc thay đổi độ khó kế hoạch.'
         self.fields['target_date'].help_text = 'Thông tin theo dõi; phiên bản hiện tại chưa tự chia lộ trình ngược từ ngày thi.'

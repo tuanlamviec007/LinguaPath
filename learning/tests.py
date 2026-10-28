@@ -63,7 +63,7 @@ class LearningFlowTests(TestCase):
         self.assertEqual(page.status_code, 200)
         self.assertEqual(len(page.context['questions']), 15)
         session = self.client.session
-        post_data = {f'q_{index}': item['correct'] for index, item in enumerate(session['placement_questions'])}
+        post_data = {'placement_token': session['placement_token'], **{f'q_{index}': item['correct'] for index, item in enumerate(session['placement_questions'])}}
         response = self.client.post(reverse('learning:placement_test'), post_data)
         self.assertRedirects(response, reverse('learning:placement_result'))
         result = self.client.get(reverse('learning:placement_result'))

@@ -29,6 +29,7 @@ class StudyTask(models.Model):
     scheduled_for = models.DateField()
     estimated_minutes = models.PositiveSmallIntegerField(default=10)
     status = models.CharField(max_length=12, choices=STATUS, default='todo')
+    vocabulary_goal = models.PositiveSmallIntegerField(default=0, help_text='Số thẻ khác nhau cần tự đánh giá hôm nay; 0 khi chưa khởi tạo hoặc không phải nhiệm vụ từ vựng.')
     reason = models.CharField(max_length=240, blank=True)
     recommendation_score = models.DecimalField(max_digits=5, decimal_places=4, null=True, blank=True)
     recommendation_version = models.CharField(max_length=30, blank=True)

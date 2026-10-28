@@ -3,6 +3,7 @@ from datetime import timedelta
 from copy import deepcopy
 import random
 import re
+from urllib.parse import urlencode
 
 from django.contrib import messages
 from django.contrib.auth import get_user_model
@@ -49,6 +50,7 @@ def _play_context(quiz, answers=None, error='', conflict=False):
     answers = saved if answers is None else answers
     safe_quiz = {
         'pk': quiz.pk, 'id': quiz.pk, 'question_count': quiz.question_count,
+        'expires_at': quiz.started_at + timedelta(days=1),
         'cefr_level': quiz.cefr_level, 'topic': quiz.topic, 'started_at': quiz.started_at,
         'draft_revision': quiz.draft_revision, 'last_saved_at': quiz.last_saved_at,
         'saved_count': len(saved), 'is_retry': quiz.is_retry, 'parent_quiz_id': quiz.parent_quiz_id,
@@ -68,6 +70,7 @@ def _play_context(quiz, answers=None, error='', conflict=False):
     return {
         'quiz': safe_quiz, 'questions': safe_questions, 'quiz_error': error,
         'quiz_conflict': conflict, 'quiz_has_unsaved': answers != saved,
+        'answered_count': len(answers), 'answered_percent': round(100 * len(answers) / quiz.question_count) if quiz.question_count else 0,
     }
 
 
@@ -315,8 +318,8 @@ def quiz_start(request):
         else:
             message = 'Chưa có từ cần ôn phù hợp với đủ phương án khác nghĩa. Hãy chọn bộ lọc khác hoặc làm quiz để tìm từ cần luyện.' if source == 'weak' else 'Cần ít nhất 5 từ phù hợp và bốn nghĩa khác nhau để tạo quiz. Hãy chọn chủ đề hoặc cấp độ khác.'
         messages.warning(request, message)
-        query = ([f'source={source}'] if source in ('saved', 'weak', 'due') else []) + (['mode=recall'] if mode == 'recall' else [])
-        return redirect(reverse('learning:quiz_hub') + ('?' + '&'.join(query) if query else ''))
+        query = urlencode({'source': source, 'mode': mode, 'level': level, 'topic': topic, 'count': raw_count})
+        return redirect(reverse('learning:quiz_hub') + '?' + query)
     try:
         with transaction.atomic():
             if replace_id or source == 'due':
@@ -443,10 +446,24 @@ def quiz_result(request, quiz_id):
 @require_POST
 @never_cache
 def quiz_abandon(request, quiz_id):
-    quiz = get_object_or_404(VocabularyQuizSession, pk=quiz_id, user=request.user)
-    changed = VocabularyQuizSession.objects.filter(pk=quiz.pk, user=request.user, status='in_progress').update(status='abandoned')
-    if changed:
-        messages.info(request, 'Đã dừng lượt quiz. Bạn có thể chọn một thử thách mới.')
+    with transaction.atomic():
+        nonkey_row_lock(get_user_model().objects.all()).get(pk=request.user.pk)
+        quiz = get_object_or_404(VocabularyQuizSession.objects.select_for_update(), pk=quiz_id, user=request.user)
+        if quiz.status != 'in_progress':
+            return redirect('learning:quiz_hub')
+        if request.POST.get('confirm_abandon') != 'yes':
+            return render(request, 'learning/quiz_abandon_confirm.html', {'quiz': _play_context(quiz)['quiz']})
+        try:
+            revision = _revision(request.POST, required=True)
+        except ValueError as exc:
+            return HttpResponseBadRequest(str(exc))
+        if revision != quiz.draft_revision:
+            return render(request, 'learning/quiz_abandon_confirm.html', {
+                'quiz': _play_context(quiz)['quiz'], 'changed': True,
+            }, status=409)
+        quiz.status = 'abandoned'
+        quiz.save(update_fields=['status'])
+    messages.info(request, 'Đã dừng lượt quiz. Bạn có thể chọn một thử thách mới.')
     return redirect('learning:quiz_hub')
 
 

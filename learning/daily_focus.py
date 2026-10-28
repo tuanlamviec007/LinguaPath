@@ -25,7 +25,7 @@ def daily_focus(active_quiz, resume_attempts, next_task, tasks):
             href += '?' + urlencode({'level': next_task.cefr_level})
         return {'kind': 'task', 'eyebrow': 'MỘT BƯỚC NHỎ HÔM NAY',
                 'title': next_task.content.title,
-                'description': f'{next_task.estimated_minutes} phút theo kế hoạch của bạn. {next_task.reason}',
+                'description': (f'{next_task.estimated_minutes} phút · tự đánh giá {getattr(next_task, "vocabulary_goal", 0)} thẻ khác nhau, không cần học hết bộ. ' if vocabulary and getattr(next_task, 'vocabulary_goal', 0) else f'{next_task.estimated_minutes} phút theo kế hoạch của bạn. ') + next_task.reason,
                 'action': 'Bắt đầu nhiệm vụ', 'href': href}
     complete = bool(tasks) and all(task.status == 'done' for task in tasks)
     return {'kind': 'complete' if complete else 'explore',
